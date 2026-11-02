@@ -1,0 +1,14 @@
+--- base/play_v608.py	2026-11-01 14:40:10.171410793 +0000
++++ new/play_v608.py	2026-11-02 04:25:05.442116279 +0000
+@@ -58,6 +58,11 @@
+         if l.startswith('{"version"'): return json.loads(l)
+     raise SystemExit('no PASTE JSON line in ' + p)
+ PJ = _paste_json()
++for _w, _v in [('verses.rest.' + k, PJ['verses']['rest'][k]) for k in ('ref', 'en', 'th', 'enSource', 'thSource')] + [('jesusWords[0].' + k, PJ['jesusWords'][0][k]) for k in ('ref', 'en', 'th')]:   # Watchman gate f778b0bf B1: a blank verse field fails loudly, never renders blank
++    if not isinstance(_v, str) or not _v.strip(): raise SystemExit('PASTE ' + _w + ' is missing or blank')
++for _i, _wv in enumerate(PJ['verses']['weekly']):   # QM critique: weekly[] gets the same B1 guard (verse() reads it); a blank field fails loudly
++    for _f in ('ref', 'en', 'th', 'enSource', 'thSource'):
++        if not isinstance(_wv.get(_f), str) or not _wv[_f].strip(): raise SystemExit('PASTE verses.weekly[%d].%s is missing or blank' % (_i, _f))
+ def verse(ref):   # the one PASTE verse with this ref: verses.rest or verses.weekly[]
+     vs = [v for v in [PJ['verses']['rest']] + PJ['verses']['weekly'] if v['ref'] == ref]; assert len(vs) == 1, ref; return vs[0]
+ def vtx(t, cls, extra=''):   # a verse string exactly as in the file; a '\n' poetry break shows as a line break

@@ -1,0 +1,38 @@
+PASS chars 188172 delta 165 bank 28 (<=188200)
+PASS lines 429 == base 429
+PASS changed lines [223, 227, 236, 350, 362, 364, 375, 427] == [223,227,236,350,362,364,375,427]
+PASS line 427 parses (json)
+PASS 212 cards, 212 unique ids
+  computed {'totalCards': 212, 'writtenCards': 212, 'sayItWritten': 38, 'personalWritten': 81, 'sayItTotal': 38, 'personalCards': 81} | meta {'totalCards': 212, 'writtenCards': 212, 'sayItWritten': 38, 'sayItTotal': 38, 'personalCards': 81, 'personalWritten': 81}
+  zones keys/prefix: [('phonics', 'ph'), ('colors-shapes', 'cs'), ('numbers', 'nm'), ('sight-words', 'sw'), ('baby-hospital', 'bh'), ('maxwell-says', 'ms'), ('kitchen', 'fd cv')]
+PASS meta counts == computed from cards (6 keys; written = non-empty en, as base emptySlots [])
+PASS verses byte-equal to base
+PASS jesusWords byte-equal to base
+PASS jesusWordsFallback byte-equal to base
+PASS boss scrolls byte-equal
+PASS only cards+meta top-level keys differ
+PASS meta keys changed ['outings', 'personalCards', 'personalWritten', 'sayItTotal', 'sayItWritten', 'totalCards', 'writtenCards']
+  outings ['ms-01', 'ms-02', 'ms-05', 'fd-29', 'fd-30', 'fd-31', 'bh-01', 'bh-02', 'bh-05', 'ms-11', 'ms-12'] -> ['ms-13', 'ms-29', 'ms-05', 'fd-29', 'fd-30', 'fd-31', 'bh-01', 'bh-02', 'bh-05', 'ms-28', 'ms-12']
+PASS cards whose content changed ['ms-03', 'ms-06', 'ms-33'] == ms-03, ms-06, ms-33
+PASS ms-03/06/33 equal to hotel 1B 7c178da0 cards
+PASS hotel 1B file md5 7c178da0
+PASS hotel order ['ms-06', 'ms-03', 'ms-28', 'ms-33', 'ms-05', 'ms-04']
+PASS card order == PROOF 321ddb1a with ms-33 after ms-28
+PASS ms-06 4 unique choices incl answer+trap; ['One hundred twelve dollars a night.', 'Two hundred twenty dollars a night.', 'One hundred twenty dollars a night.', 'One hundred dollars a night.']
+  ms-06 th base==cand True
+  ms-06 pic base==cand True
+  ms-06 trapNote base==cand True
+  ms-06 tag base==cand True
+  ms-06 fill base==cand True
+PASS lines differing from hotel 1B file: [223, 227, 363, 427] == [223,227,363,427]
+PASS line 363 == base (no hotel 1B order rule)
+  "page 30" mentions at lines [] | any changed: False
+PASS page 30 lines untouched
+PASS privacy email: base 0 cand 0 (no new)
+PASS privacy phone: base 0 cand 0 (no new)
+PASS privacy inn: base 0 cand 0 (no new)
+PASS privacy street: base 0 cand 0 (no new)
+PASS new strings carry no surname (only ms-03/06/33 + spec counts changed; checked by eye)
+  spec positional/file-order mentions: [(173, 'file order'), (223, 'file order'), (351, 'file order')]
+ALL PASS
+selfcheck rc=0

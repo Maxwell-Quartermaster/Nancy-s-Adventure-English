@@ -1,0 +1,15 @@
+source: 5e1666fe6f7189d3886686749335b3ee  -
+cat part1.md part2.md: 5e1666fe6f7189d3886686749335b3ee  -
+cmp: identical (exit 0)
+headers stripped: 5e1666fe6f7189d3886686749335b3ee  -
+cmp stripped: identical (exit 0)
+part1.md chars=83727 bytes=83938 lines=419 md5=2f96ecf10e6a3e5f426dd7408862e002
+part2.md chars=104280 bytes=129303 lines=9 md5=e2f7ece8019c401c7fded8108a33ab65
+part1-with-header.md chars=83838 bytes=84049 lines=420 md5=d4c296f9ca9c842100115e758bfbc4ac
+part2-with-header.md chars=104427 bytes=129450 lines=10 md5=31c0fc31d697786a39e4c914bf68fbba
+## CARD FILE
+
+All card data is in the JSON block below (save it in the build exactly as `cards.json`). Treat the card fi
+0000020       i   t       t   o       h   e   a   r       t   h   e   m
+0000040   .  \n  \n   -   -   -  \n  \n
+0000050

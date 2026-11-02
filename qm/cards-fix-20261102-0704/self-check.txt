@@ -1,0 +1,17 @@
+lines 429 429
+differing lines [289, 375, 427]
+verses equal
+jesusWords equal
+jesusWordsFallback equal
+meta equal
+zones equal
+needsMaxwell equal
+cards 211 unique 211
+changed cards ['ms-28']
+ms-28 {'id': 'ms-28', 'type': 'say-it', 'en': 'Your room is ready.', 'th': 'ห้องของคุณพร้อมแล้วค่ะ', 'respell': 'yor ROOM iz RED-ee', 'personal': True}
+written 211 NEEDS NANCY 205
+other keys equal: True
+verse-bytes: verses obj sha True
+contact scan False words 4
+nm-04 choices ['Here is your chain.', 'Here is your receipt.', 'Here is your key.', 'Here is your change.']
+reverse-patch byte-identical to source: True

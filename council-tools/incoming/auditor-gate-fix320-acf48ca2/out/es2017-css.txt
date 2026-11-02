@@ -1,0 +1,13 @@
+render/after/34-echo-forest-sound-duel-320x568.html {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/after/34-echo-forest-sound-duel.html {'(?<': 0, '\\p{': 0, '<script': 1, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/after/35-sound-duel-right-320x568.html {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/after/35-sound-duel-right.html {'(?<': 0, '\\p{': 0, '<script': 1, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/after/36-sound-duel-round-done-320x568.html {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/after/36-sound-duel-round-done.html {'(?<': 0, '\\p{': 0, '<script': 1, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/before/34-echo-forest-sound-duel-320x568.html {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/before/34-echo-forest-sound-duel.html {'(?<': 0, '\\p{': 0, '<script': 1, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/before/35-sound-duel-right-320x568.html {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/before/35-sound-duel-right.html {'(?<': 0, '\\p{': 0, '<script': 1, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/before/36-sound-duel-round-done-320x568.html {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+render/before/36-sound-duel-round-done.html {'(?<': 0, '\\p{': 0, '<script': 1, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 3}
+added lines: {'(?<': 0, '\\p{': 0, '<script': 0, 'inset:': 0, 'aspect-ratio': 0, ':is(': 0, ':where(': 0, 'gap:': 0} non-ascii 0

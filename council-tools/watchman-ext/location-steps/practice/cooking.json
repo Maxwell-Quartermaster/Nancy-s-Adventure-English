@@ -1,0 +1,196 @@
+{
+ "practiceOnly": true,
+ "location": "cooking",
+ "cards": [
+  {
+   "id": "prac-cooking-01",
+   "en": "What should we cook tonight?",
+   "th": "คืนนี้เราทำอะไรกินดีคะ",
+   "respell": "WUT shood wee KOOK tuh-NAIT",
+   "choices": [
+    "What should we cook tonight?",
+    "What should we look tonight?",
+    "What should we cook today?",
+    "Where should we eat tonight?"
+   ],
+   "trap": "What should we look tonight?",
+   "trapNote": "look = มอง · cook = ทำอาหาร",
+   "hint": [
+    "What should we c___ t______?",
+    "c",
+    "cook"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-cooking-02",
+   "en": "Wash your hands first.",
+   "th": "ล้างมือก่อนนะคะ",
+   "respell": "WAHSH yor HANDZ FERST",
+   "choices": [
+    "Wash your hands first.",
+    "Watch your hands first.",
+    "Wash your hair first.",
+    "Wash the plates first."
+   ],
+   "trap": "Watch your hands first.",
+   "trapNote": "watch = ดู · wash = ล้าง",
+   "hint": [
+    "W___ your h____ first.",
+    "w",
+    "wash"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-cooking-03",
+   "en": "onion",
+   "th": "หัวหอม",
+   "respell": "UN-yun",
+   "choices": [
+    "onion",
+    "orange",
+    "egg",
+    "garlic"
+   ],
+   "trap": "orange",
+   "trapNote": "orange = ส้ม · onion = หัวหอม",
+   "hint": "o",
+   "type": "picture",
+   "personal": true,
+   "pic": "🧅"
+  },
+  {
+   "id": "prac-cooking-04",
+   "en": "Chop the onion, please.",
+   "th": "ช่วยหั่นหัวหอมหน่อยค่ะ",
+   "respell": "CHOP thee UN-yun PLEEZ",
+   "choices": [
+    "Chop the onion, please.",
+    "Shop the onion, please.",
+    "Chop the orange, please.",
+    "Cook the rice, please."
+   ],
+   "trap": "Shop the onion, please.",
+   "trapNote": "shop = ซื้อของ · chop = หั่น",
+   "hint": [
+    "C___ the o____, please.",
+    "ch",
+    "chop"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-cooking-05",
+   "en": "Turn on the stove.",
+   "th": "เปิดเตาค่ะ",
+   "respell": "TERN on thuh STOHV",
+   "choices": [
+    "Turn on the stove.",
+    "Turn off the stove.",
+    "Turn on the TV.",
+    "Turn on the store."
+   ],
+   "trap": "Turn off the stove.",
+   "trapNote": "off = ปิด · on = เปิด",
+   "hint": [
+    "Turn o_ the s____.",
+    "on",
+    "on"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-cooking-06",
+   "en": "Stir it slowly, please.",
+   "th": "ค่อยๆ คนนะคะ",
+   "respell": "STER it SLOH-lee PLEEZ",
+   "choices": [
+    "Stir it slowly, please.",
+    "Stare it slowly, please.",
+    "Stir it quickly, please.",
+    "Pour it slowly, please."
+   ],
+   "trap": "Stir it quickly, please.",
+   "trapNote": "quickly = เร็ว · slowly = ช้าๆ",
+   "hint": [
+    "S___ it s_____, please.",
+    "sl",
+    "slowly"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-cooking-07",
+   "en": "rice",
+   "th": "ข้าวสวย",
+   "respell": "RAIS",
+   "choices": [
+    "rice",
+    "ice",
+    "rose",
+    "race"
+   ],
+   "trap": "ice",
+   "trapNote": "ice = น้ำแข็ง · rice = ข้าว",
+   "hint": "r",
+   "type": "picture",
+   "personal": true,
+   "pic": "🍚"
+  },
+  {
+   "id": "prac-cooking-08",
+   "en": "Dinner is ready!",
+   "th": "อาหารเย็นพร้อมแล้วค่ะ",
+   "respell": "DIN-er iz RED-ee",
+   "choices": [
+    "Dinner is ready!",
+    "Dinner is hot!",
+    "Dinner is early!",
+    "Breakfast is ready!"
+   ],
+   "trap": "Dinner is early!",
+   "trapNote": "early = เช้า / ก่อนเวลา · ready = พร้อม",
+   "hint": [
+    "D_____ is r____!",
+    "r",
+    "ready"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-cooking-09",
+   "en": "Put leftovers in the fridge.",
+   "th": "เก็บอาหารที่เหลือเข้าตู้เย็นค่ะ",
+   "respell": "POOT LEFT-oh-verz in thuh FRIJ",
+   "choices": [
+    "Put leftovers in the fridge.",
+    "Put leftovers in the bridge.",
+    "Put leftovers on the stove.",
+    "Put lettuce in the fridge."
+   ],
+   "trap": "Put leftovers on the stove.",
+   "trapNote": "stove = เตา · fridge = ตู้เย็น",
+   "hint": [
+    "Put l________ in the f_____.",
+    "f",
+    "fridge"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  }
+ ]
+}

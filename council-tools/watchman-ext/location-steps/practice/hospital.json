@@ -1,0 +1,200 @@
+{
+ "practiceOnly": true,
+ "location": "hospital",
+ "cards": [
+  {
+   "id": "prac-hospital-01",
+   "en": "I think I am in labor.",
+   "th": "ฉันคิดว่าฉันกำลังจะคลอดค่ะ",
+   "respell": "ai THINK ai am in LAY-ber",
+   "choices": [
+    "I think I am in labor.",
+    "I think I am in the lobby.",
+    "I think I am late.",
+    "I think I am hungry."
+   ],
+   "trap": "I think I am in the lobby.",
+   "trapNote": "lobby = ล็อบบี้ · labor = เจ็บท้องคลอด",
+   "hint": [
+    "I t____ I am in l____.",
+    "l",
+    "labor"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-02",
+   "en": "My water broke.",
+   "th": "น้ำคร่ำของฉันแตกแล้วค่ะ",
+   "respell": "mai WAH-ter BROHK",
+   "choices": [
+    "My water broke.",
+    "My waiter broke.",
+    "My watch broke.",
+    "My water is cold."
+   ],
+   "trap": "My waiter broke.",
+   "trapNote": "waiter = พนักงานเสิร์ฟ · water = น้ำ",
+   "hint": [
+    "My w____ b____.",
+    "w",
+    "water"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-03",
+   "en": "My pains are close together.",
+   "th": "เจ็บท้องถี่ขึ้นแล้วค่ะ",
+   "respell": "mai PAYNZ ar KLOHS tuh-GETH-er",
+   "choices": [
+    "My pains are close together.",
+    "My pants are close together.",
+    "My pains are far apart.",
+    "My plans are close together."
+   ],
+   "trap": "My pants are close together.",
+   "trapNote": "pants = กางเกง · pains = อาการเจ็บ",
+   "hint": [
+    "My p____ are c____ t_______.",
+    "p",
+    "pains"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-04",
+   "en": "Can Sam stay with me?",
+   "th": "แซมอยู่กับฉันได้ไหมคะ",
+   "respell": "kan SAM STAY with MEE",
+   "choices": [
+    "Can Sam stay with me?",
+    "Can Sam stand with me?",
+    "Can Sam play with me?",
+    "Can Sam eat with me?"
+   ],
+   "trap": "Can Sam play with me?",
+   "trapNote": "play = เล่น · stay = อยู่ด้วย",
+   "hint": [
+    "Can Sam s___ with me?",
+    "st",
+    "stay"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-05",
+   "en": "Can I have some water?",
+   "th": "ขอน้ำหน่อยได้ไหมคะ",
+   "respell": "kan ai HAV sum WAH-ter",
+   "choices": [
+    "Can I have some water?",
+    "Can I have some waffles?",
+    "Can I have some help?",
+    "Can I have my watch?"
+   ],
+   "trap": "Can I have some waffles?",
+   "trapNote": "waffle = วาฟเฟิล · water = น้ำ",
+   "hint": [
+    "Can I h___ some w____?",
+    "w",
+    "water"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-06",
+   "en": "baby",
+   "th": "ลูกน้อย",
+   "respell": "BAY-bee",
+   "choices": [
+    "baby",
+    "bottle",
+    "bed",
+    "boy"
+   ],
+   "trap": "bottle",
+   "trapNote": "bottle = ขวดนม · baby = ลูกน้อย",
+   "hint": "b",
+   "type": "picture",
+   "personal": true,
+   "pic": "👶"
+  },
+  {
+   "id": "prac-hospital-07",
+   "en": "Can I hold my baby?",
+   "th": "ฉันขออุ้มลูกได้ไหมคะ",
+   "respell": "kan ai HOHLD mai BAY-bee",
+   "choices": [
+    "Can I hold my baby?",
+    "Can I hold my bag?",
+    "Can I help my baby?",
+    "Can I fold my baby?"
+   ],
+   "trap": "Can I fold my baby?",
+   "trapNote": "fold = พับ · hold = อุ้ม",
+   "hint": [
+    "Can I h___ my b___?",
+    "h",
+    "hold"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-08",
+   "en": "Thank you for your help.",
+   "th": "ขอบคุณที่ช่วยนะคะ",
+   "respell": "THANK yoo for yor HELP",
+   "choices": [
+    "Thank you for your help.",
+    "Thank you for your hat.",
+    "Thank you for your hello.",
+    "Thank you for coming."
+   ],
+   "trap": "Thank you for your hat.",
+   "trapNote": "hat = หมวก · help = ความช่วยเหลือ",
+   "hint": [
+    "Thank you for your h___.",
+    "h",
+    "help"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-hospital-09",
+   "en": "We are going home!",
+   "th": "เรากำลังจะกลับบ้านแล้วค่ะ",
+   "respell": "wee ar GOH-ing HOHM",
+   "choices": [
+    "We are going home!",
+    "We are going out!",
+    "We are coming home!",
+    "We are going hungry!"
+   ],
+   "trap": "We are coming home!",
+   "trapNote": "coming = กำลังมา · going = กำลังไป",
+   "hint": [
+    "We are g____ h___!",
+    "h",
+    "home"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  }
+ ]
+}

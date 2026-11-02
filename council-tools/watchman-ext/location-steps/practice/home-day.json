@@ -1,0 +1,218 @@
+{
+ "practiceOnly": true,
+ "location": "home-day",
+ "cards": [
+  {
+   "id": "prac-home-day-01",
+   "en": "Good morning, Sam!",
+   "th": "อรุณสวัสดิ์ค่ะ แซม",
+   "respell": "good MOR-ning SAM",
+   "choices": [
+    "Good morning, Sam!",
+    "Good evening, Sam!",
+    "Good night, Sam!",
+    "Good afternoon, Sam!"
+   ],
+   "trap": "Good evening, Sam!",
+   "trapNote": "evening = ตอนเย็น · morning = ตอนเช้า",
+   "hint": [
+    "Good m______, Sam!",
+    "m",
+    "morning"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-02",
+   "en": "toothbrush",
+   "th": "แปรงสีฟัน",
+   "respell": "TOOTH-brush",
+   "choices": [
+    "toothbrush",
+    "hairbrush",
+    "toothpaste",
+    "towel"
+   ],
+   "trap": "hairbrush",
+   "trapNote": "hairbrush = แปรงหวีผม · toothbrush = แปรงสีฟัน",
+   "hint": "t",
+   "type": "picture",
+   "personal": true,
+   "pic": "🪥"
+  },
+  {
+   "id": "prac-home-day-03",
+   "en": "I do the laundry.",
+   "th": "ฉันซักผ้าค่ะ",
+   "respell": "ai DOO thuh LAWN-dree",
+   "choices": [
+    "I do the laundry.",
+    "I do the dishes.",
+    "I do the library.",
+    "I go the laundry."
+   ],
+   "trap": "I do the library.",
+   "trapNote": "library = ห้องสมุด · laundry = ซักผ้า",
+   "hint": [
+    "I do the l______.",
+    "l",
+    "laundry"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-04",
+   "en": "Can you help me, Sam?",
+   "th": "แซม ช่วยฉันหน่อยได้ไหมคะ",
+   "respell": "kan yoo HELP mee SAM",
+   "choices": [
+    "Can you help me, Sam?",
+    "Can you hold me, Sam?",
+    "Can you hear me, Sam?",
+    "Can you call me, Sam?"
+   ],
+   "trap": "Can you hear me, Sam?",
+   "trapNote": "hear = ได้ยิน · help = ช่วย",
+   "hint": [
+    "Can you h___ me, Sam?",
+    "h",
+    "help"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-05",
+   "en": "Where are my keys?",
+   "th": "กุญแจของฉันอยู่ไหนคะ",
+   "respell": "WAIR ar mai KEEZ",
+   "choices": [
+    "Where are my keys?",
+    "Where are my kids?",
+    "Where are my shoes?",
+    "Who are my keys?"
+   ],
+   "trap": "Where are my kids?",
+   "trapNote": "kids = เด็กๆ · keys = กุญแจ",
+   "hint": [
+    "Where are my k___?",
+    "k",
+    "keys"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-06",
+   "en": "church",
+   "th": "โบสถ์",
+   "respell": "CHERCH",
+   "choices": [
+    "church",
+    "chair",
+    "house",
+    "store"
+   ],
+   "trap": "chair",
+   "trapNote": "chair = เก้าอี้ · church = โบสถ์",
+   "hint": "ch",
+   "type": "picture",
+   "personal": true,
+   "pic": "⛪"
+  },
+  {
+   "id": "prac-home-day-07",
+   "en": "This is my first time.",
+   "th": "นี่เป็นครั้งแรกของฉันค่ะ",
+   "respell": "THIS iz mai FERST TAIM",
+   "choices": [
+    "This is my first time.",
+    "This is my fast time.",
+    "This is my last time.",
+    "This is my first name."
+   ],
+   "trap": "This is my last time.",
+   "trapNote": "last = ครั้งสุดท้าย · first = ครั้งแรก",
+   "hint": [
+    "This is my f____ time.",
+    "f",
+    "first"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-08",
+   "en": "I like this song.",
+   "th": "ฉันชอบเพลงนี้ค่ะ",
+   "respell": "ai LAIK THIS SAWNG",
+   "choices": [
+    "I like this song.",
+    "I like this soup.",
+    "I like this sun.",
+    "I lick this song."
+   ],
+   "trap": "I like this soup.",
+   "trapNote": "soup = ซุป · song = เพลง",
+   "hint": [
+    "I like this s___.",
+    "s",
+    "song"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-09",
+   "en": "Let's pray before bed.",
+   "th": "อธิษฐานก่อนนอนกันนะคะ",
+   "respell": "lets PRAY bee-FOR BED",
+   "choices": [
+    "Let's pray before bed.",
+    "Let's play before bed.",
+    "Let's pray before bread.",
+    "Let's eat before bed."
+   ],
+   "trap": "Let's play before bed.",
+   "trapNote": "play = เล่น · pray = อธิษฐาน",
+   "hint": [
+    "Let's p___ before b__.",
+    "pr",
+    "pray"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-home-day-10",
+   "en": "Good night, Sam.",
+   "th": "ฝันดีนะคะ แซม",
+   "respell": "good NAIT SAM",
+   "choices": [
+    "Good night, Sam.",
+    "Good job, Sam.",
+    "Good morning, Sam.",
+    "Good light, Sam."
+   ],
+   "trap": "Good light, Sam.",
+   "trapNote": "light = แสงไฟ · night = กลางคืน",
+   "hint": [
+    "Good n____, Sam.",
+    "n",
+    "night"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  }
+ ]
+}

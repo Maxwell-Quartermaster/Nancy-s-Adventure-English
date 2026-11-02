@@ -1,0 +1,12 @@
+control-redump exit=0 ::  :: 390 31 pages; 0 errors; 52 reads; 0 writes; 0 other events
+jw0-ref-space exit=1 :: PASTE jesusWords[0].ref is missing or blank :: 
+rest-ref-blank exit=1 :: PASTE verses.rest.ref is missing or blank :: 
+rest-th-missing exit=1 :: KeyError: 'th' :: 
+wk-empty-list exit=0 ::  :: 390 31 pages; 0 errors; 52 reads; 0 writes; 0 other events
+wk-key-missing exit=1 :: KeyError: 'weekly' :: 
+wk0-en-blank exit=1 :: PASTE verses.weekly[0].en is missing or blank :: 
+wk0-null-entry exit=1 :: AttributeError: 'NoneType' object has no attribute 'get' :: 
+wk0-ref-missing exit=1 :: PASTE verses.weekly[0].ref is missing or blank :: 
+wk3-th-space exit=1 :: PASTE verses.weekly[3].th is missing or blank :: 
+wk5-thSource-missing exit=1 :: PASTE verses.weekly[5].thSource is missing or blank :: 
+wk9-enSource-null exit=1 :: PASTE verses.weekly[9].enSource is missing or blank :: 

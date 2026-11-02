@@ -1,0 +1,2 @@
+out/all-new-390 pages 31 pages with inline flex-gap or <style> gap (flex,grid,styleblock): {'30-new-weapon-gift.html': (3, 0, 0)}
+out/all-new-320 pages 31 pages with inline flex-gap or <style> gap (flex,grid,styleblock): {'30-new-weapon-gift.html': (3, 0, 0)}

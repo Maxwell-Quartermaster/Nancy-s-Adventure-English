@@ -1,0 +1,12 @@
+base written 207 NEEDS NANCY 201
+new written 211 NEEDS NANCY 205
+911 0
+Call Max 0
+Show the Nurse 0
+phone 0
+email/url 0
+(?< 0
+\p{ 0
+/s flag 0
+non-Thai non-ASCII chars in 4 cards: []
+words [('bh-30', 4), ('ms-28', 4), ('ms-29', 4), ('ms-30', 3)]

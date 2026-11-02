@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/council-tools/incoming/auditor-gate-verse-split-a2871d0a/tools/build.py", line 21, in <module>
+    import play_v608 as PV
+  File "/workspace/council-tools/incoming/auditor-gate-verse-split-a2871d0a/src-new/play_v608.py", line 63, in <module>
+    for _i, _wv in enumerate(PJ['verses']['weekly']):   # QM critique: weekly[] gets the same B1 guard (verse() reads it); a blank field fails loudly
+                             ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'weekly'

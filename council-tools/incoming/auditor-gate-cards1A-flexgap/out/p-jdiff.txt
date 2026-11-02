@@ -1,0 +1,41 @@
+CHANGE .cards[155].en | "" -> "The baby is kicking."
+CHANGE .cards[155].fill | true -> "<absent>"
+CHANGE .cards[155].respell | "" -> "thuh BAY-bee iz KIK-ing"
+CHANGE .cards[155].slot | "baby" -> "<absent>"
+CHANGE .cards[155].th | "" -> "ลูกดิ้นค่ะ"
+CHANGE .cards[156].en | "" -> "Here is your key."
+CHANGE .cards[156].fill | true -> "<absent>"
+CHANGE .cards[156].respell | "" -> "HEER iz yor KEE"
+CHANGE .cards[156].slot | "hotel" -> "<absent>"
+CHANGE .cards[156].th | "" -> "นี่กุญแจของคุณค่ะ"
+CHANGE .cards[157].en | "" -> "This is my husband."
+CHANGE .cards[157].fill | true -> "<absent>"
+CHANGE .cards[157].respell | "" -> "THIS iz mai HUZ-bund"
+CHANGE .cards[157].slot | "husband" -> "<absent>"
+CHANGE .cards[157].th | "" -> "นี่สามีของฉันค่ะ"
+CHANGE .cards[158].en | "" -> "God is good."
+CHANGE .cards[158].fill | true -> "<absent>"
+CHANGE .cards[158].respell | "" -> "GOD iz GUD"
+CHANGE .cards[158].slot | "faith" -> "<absent>"
+CHANGE .cards[158].th | "" -> "พระเจ้าทรงดีครับ"
+CHANGE .meta.emptySlots[len] | 4 -> 0
+CHANGE .meta.personalWritten | 76 -> 80
+CHANGE .meta.sayItWritten | 33 -> 37
+CHANGE .meta.writtenCards | 207 -> 211
+equal verses True
+equal jesusWords True
+equal jesusWordsFallback True
+top keys ['cards', 'encouragement', 'gotItText', 'jesusWords', 'jesusWordsFallback', 'mapLayout', 'meta', 'needsMaxwell', 'pantry', 'picPlan', 'restScreen', 'rewardClips', 'rewardText', 'soundDuel', 'trophies', 'trophyRules', 'uiText', 'verses', 'version', 'welcomeBack', 'wrongText', 'zones']
+cards 211 unique 211
+recount {'written': 211, 'personalWritten': 80, 'sayItWritten': 37, 'sayit': 37}
+meta {'writtenCards': 211, 'sayItWritten': 37, 'personalWritten': 80, 'emptySlots': [], 'cardThStatusDefault': 'NEEDS NANCY', 'needsMaxwell': None}
+bh-30 CHANGED {"id": "bh-30", "type": "say-it", "en": "The baby is kicking.", "th": "ลูกดิ้นค่ะ", "respell": "thuh BAY-bee iz KIK-ing", "personal": true}
+ms-28 CHANGED {"id": "ms-28", "type": "say-it", "en": "Here is your key.", "th": "นี่กุญแจของคุณค่ะ", "respell": "HEER iz yor KEE", "personal": true}
+ms-29 CHANGED {"id": "ms-29", "type": "say-it", "en": "This is my husband.", "th": "นี่สามีของฉันค่ะ", "respell": "THIS iz mai HUZ-bund", "personal": true}
+ms-30 CHANGED {"id": "ms-30", "type": "say-it", "en": "God is good.", "th": "พระเจ้าทรงดีครับ", "respell": "GOD iz GUD", "faith": true, "personal": true}
+ms-04 same {"id": "ms-04", "en": "Check-out is at eleven.", "th": "เช็คเอาท์สิบเอ็ดโมงค่ะ", "respell": "CHEK-owt iz at ee-LEV-en", "choices": ["Check-out is at ten.", "Check-out is at eleven.", "Check-out is at seven.", "Check-out is at noon."], "trap": "Check-out is at seven.", "trapNote": "seven = เจ็ด · สองคำนี้เสียงคล้ายกัน", "fill": true, "tag": "Example", "personal": true, "pic": "svg:clock-1100", "hin
+ms-05 same {"id": "ms-05", "en": "Breakfast is at seven thirty.", "th": "อาหารเช้าเจ็ดโมงครึ่งค่ะ", "respell": "BREK-fust iz at SEV-en THER-tee", "choices": ["Breakfast is at eight.", "Breakfast is at seven thirty.", "Breakfast is at six thirty.", "Breakfast is at seven thirteen."], "trap": "Breakfast is at seven thirteen.", "trapNote": "thirteen = สิบสาม · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า", "fill": tr
+ms-06 same {"id": "ms-06", "en": "One night is one hundred twenty dollars.", "th": "คืนละ 120 ดอลลาร์ค่ะ", "respell": "WUN NAIT iz WUN HUN-dred TWEN-tee DOL-erz", "choices": ["One night is one hundred twelve dollars.", "One night is two hundred twenty dollars.", "One night is one hundred twenty dollars.", "One night is one hundred dollars."], "trap": "One night is one hundred twelve dollars.", "trapNote": "t
+nm-04 same {"id": "nm-04", "en": "Here is your change.", "th": "นี่เงินทอนค่ะ", "respell": "HEER iz yor CHAYNJ", "choices": ["Here is your chain.", "Here is your receipt.", "Here is your key.", "Here is your change."], "trap": "Here is your chain.", "trapNote": "chain = โซ่ / สร้อย · ฟังเสียงท้ายคำให้ครบ", "personal": true, "pic": "🪙", "hint": ["H___ i_ y___ c_____.", "ch", "change"]}
+fill true remaining ['ms-04', 'ms-05', 'ms-06']
+slot remaining []

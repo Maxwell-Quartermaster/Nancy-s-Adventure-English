@@ -1,0 +1,45 @@
+:223 (+94 chars)
+   insert: -'n, the rest seen longest ago. Never 4 sa'
+          +'n, the rest seen longest ago. In `bh` and `ms`, file order (places in time) replaces personal-first and fewest-words order. Never 4 sa'
+:227 (-20 chars)
+   delete: -' Maxwell Says `ms-03`–`ms-06` and `ms-21`–`ms-23` play in a '
+          +' Maxwell Says `ms-03`–`ms-06` play in a '
+:236 (+0 chars)
+   replace: -'74 cards are'
+          +'75 cards are'
+:350 (+0 chars)
+   replace: -'- **211 cards** i'
+          +'- **212 cards** i'
+:362 (+0 chars)
+   replace: -'- **Personal cards:** 80 are `pers'
+          +'- **Personal cards:** 81 are `pers'
+:364 (-13 chars)
+   delete: -'- **Approved 7-word exceptions:** `ms-06'
+          +'- **Approved 7-word exception:** `bh-14'
+   delete: -'*Approved 7-word exceptions:** `ms-06` and `bh-14` ('
+          +'**Approved 7-word exception:** `bh-14` ('
+:375 (+0 chars)
+   replace: -'thing starts `NEEDS NANCY`: 205 of the 21'
+          +'thing starts `NEEDS NANCY`: 206 of the 21'
+   replace: -'s `NEEDS NANCY`: 205 of the 211 written c'
+          +'s `NEEDS NANCY`: 206 of the 212 written c'
+:427 (+104 chars)
+   card ms-06:
+     - {"id":"ms-06","en":"One night is one hundred twenty dollars.","th":"คืนละ 120 ดอลลาร์ค่ะ","respell":"WUN NAIT iz WUN HUN-dred TWEN-tee DOL-erz","choices":["One night is one hundred twelve dollars.","One night is two hundred twenty dollars.","One night is one hundred twenty dollars.","One night is one hundred dollars."],"trap":"One night is one hundred twelve dollars.","trapNote":"twelve = สิบสอง · สองคำนี้เสียงคล้ายกัน","fill":true,"tag":"Example","personal":true,"pic":"svg:money-120","hint":["O__ n____ i_ o__ h______ t_____ d______.","t","twenty"]}
+     + {"id":"ms-06","en":"One hundred twenty dollars a night.","th":"คืนละ 120 ดอลลาร์ค่ะ","respell":"WUN HUN-dred TWEN-tee DOL-erz uh NAIT","choices":["One hundred twelve dollars a night.","Two hundred twenty dollars a night.","One hundred twenty dollars a night.","One hundred dollars a night."],"trap":"One hundred twelve dollars a night.","trapNote":"twelve = สิบสอง · สองคำนี้เสียงคล้ายกัน","fill":true,"tag":"Example","personal":true,"pic":"svg:money-120","hint":["O__ h______ t_____ d______ a n____.","t","twenty"]}
+   card ms-03:
+     - {"id":"ms-03","en":"Welcome to our hotel.","th":"ยินดีต้อนรับสู่โรงแรมของเราค่ะ","respell":"WEL-kum too OW-er hoh-TEL","personal":true,"type":"say-it"}
+     + {"id":"ms-03","en":"I have a reservation.","th":"ฉันจองห้องไว้ค่ะ","respell":"ai HAV uh rez-er-VAY-shun","personal":true,"type":"say-it","syl":"res·er·va·tion"}
+   card ms-33:
+     - (new)
+     + {"id":"ms-33","type":"say-it","en":"I need more towels.","th":"ขอผ้าเช็ดตัวเพิ่มค่ะ","respell":"ai NEED mor TOW-ulz","personal":true}
+   meta.totalCards: 211 -> 212
+   meta.writtenCards: 211 -> 212
+   meta.sayItWritten: 37 -> 38
+   meta.sayItTotal: 37 -> 38
+   meta.personalCards: 80 -> 81
+   meta.personalWritten: 80 -> 81
+   meta.outings: ["ms-01","ms-02","ms-05","fd-29","fd-30","fd-31","bh-01","bh-02","bh-05","ms-11","ms-12"] -> ["ms-13","ms-29","ms-05","fd-29","fd-30","fd-31","bh-01","bh-02","bh-05","ms-28","ms-12"]
+   bh+ms order before: bh-01 bh-02 bh-03 bh-04 bh-05 bh-06 bh-07 bh-08 bh-09 bh-10 bh-11 bh-12 bh-13 bh-14 bh-15 bh-16 bh-17 bh-18 bh-19 bh-20 bh-21 bh-22 bh-23 bh-24 bh-25 bh-26 bh-27 ms-01 ms-02 ms-03 ms-04 ms-05 ms-06 ms-07 ms-08 ms-09 ms-10 ms-11 ms-12 ms-13 ms-14 ms-15 ms-16 ms-17 ms-18 ms-19 ms-20 ms-21 ms-22 ms-23 ms-24 ms-25 ms-26 ms-27 bh-28 bh-31 bh-29 bh-30 ms-28 ms-29 ms-30 ms-31 ms-32
+   bh+ms order after:  bh-07 bh-01 bh-25 bh-11 bh-14 bh-30 bh-08 bh-24 bh-02 bh-03 bh-04 bh-09 bh-06 bh-10 bh-05 bh-29 bh-22 bh-17 bh-15 bh-16 bh-13 bh-18 bh-23 bh-27 bh-26 bh-20 bh-19 bh-12 bh-21 bh-31 bh-28 ms-07 ms-20 ms-32 ms-21 ms-22 ms-16 ms-08 ms-09 ms-10 ms-01 ms-02 ms-11 ms-15 ms-18 ms-12 ms-31 ms-17 ms-27 ms-26 ms-24 ms-25 ms-23 ms-19 ms-13 ms-29 ms-14 ms-30 ms-06 ms-03 ms-28 ms-33 ms-05 ms-04
+   all other cards keep their relative order: True

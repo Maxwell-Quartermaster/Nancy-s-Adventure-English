@@ -1,0 +1,12 @@
+34-echo-forest-sound-duel png size (640, 1136)
+  knight pixels in cross-strip x192-197 y158-172 : 0
+  knight pixels in plate right 10pt x186-197 y122-172 : 0
+  leftmost drawn knight pixel within plate rows (CSS px): 222.0
+35-sound-duel-right png size (640, 1136)
+  knight pixels in cross-strip x192-197 y158-172 : 0
+  knight pixels in plate right 10pt x186-197 y122-172 : 0
+  leftmost drawn knight pixel within plate rows (CSS px): 222.0
+36-sound-duel-round-done png size (640, 1136)
+  knight pixels in cross-strip x192-197 y158-172 : 0
+  knight pixels in plate right 10pt x186-197 y122-172 : 0
+  leftmost drawn knight pixel within plate rows (CSS px): 234.0

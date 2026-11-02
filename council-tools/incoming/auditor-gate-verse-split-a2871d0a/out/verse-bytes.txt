@@ -1,0 +1,15 @@
+weekly entries 10
+26-guardian-hint-jesus-words-320x568.html jesusWords[0].en count=1 PASS d0e5d0de 
+26-guardian-hint-jesus-words-320x568.html jesusWords[0].th count=1 PASS 7aaa8d80 thai
+26-guardian-hint-jesus-words-320x568.html jesusWords[0].ref count=1 PASS e41ea3e3 
+26-guardian-hint-jesus-words-390x844.html jesusWords[0].en count=1 PASS d0e5d0de 
+26-guardian-hint-jesus-words-390x844.html jesusWords[0].th count=1 PASS 7aaa8d80 thai
+26-guardian-hint-jesus-words-390x844.html jesusWords[0].ref count=1 PASS e41ea3e3 
+30-new-weapon-gift-320x568.html Steadfast · Isaiah 41:10 count 1
+30-new-weapon-gift-390x844.html Steadfast · Isaiah 41:10 count 1
+37-rest-screen-320x568.html verses.rest.en count=1 PASS f6e598a6 
+37-rest-screen-320x568.html verses.rest.th count=1 PASS c26cc788 thai
+37-rest-screen-320x568.html verses.rest.ref count=1 PASS 2f840d7d 
+37-rest-screen-390x844.html verses.rest.en count=1 PASS f6e598a6 
+37-rest-screen-390x844.html verses.rest.th count=1 PASS c26cc788 thai
+37-rest-screen-390x844.html verses.rest.ref count=1 PASS 2f840d7d 

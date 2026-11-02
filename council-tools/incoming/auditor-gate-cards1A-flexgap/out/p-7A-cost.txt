@@ -1,0 +1,3 @@
+old occurs 1
+scratch 7A variant len 187997 bank 203 delta 10
+:375 "201 of the 207" occurs 1 ; same-length fix "205 of the 211" True

@@ -175,3 +175,11 @@
 
 **Maxwell (t584u, QM chat, Nov 1, 2026 7:20 PM MST):** "Maxwell chose option 1B for the 320px fix: fix a game screen at 320px width (not the checking tool)." ... "Note that the checker-measurement fix (option 1A) is deferred as a follow-up after freeze. Do not start building the fix itself — just record the decision and queue it."
 **Quartermaster:** Queue: (a) verse split (a4 b565920e, Watchman SECONDED) first, then the 320px game-screen fix. Known candidate is the Echo Knight plate overlapping the helmet on screens 34-36 (snap-r2c-2159MDT/showcase/INDEX.md :52); page 30 Thai stays HELD for its own 1A/1B/1C pick. Not started.
+
+**Maxwell (t617u, Nov 1, 2026):** "Yes sounds excellent" (approving the GitHub branch workflow and the tips: tiny changes get one quick Auditor check instead of the full three-layer gate; one small task per handoff with full context; decisions batched in numbered sheets; early test on Nancy's real phone; scope locked until the freeze).
+**Quartermaster:** Effective at the Nov 5 RESUME.
+
+**Maxwell:** (t646u, Nov 2, 2026) "Keep the phrases really simple, but just use what you would do for a normal hotel procedures." The order of steps for each place guides its cards. (t647u) Loose guide, not hard rules; hotel first, then it becomes the model for every place.
+**Maxwell:** (t650 card) "She is a guest and can be alone". (t652u) "No that's okay don't add me, just Sam and Nancy".
+**Maxwell:** (t656u, Nov 2, 2026) "Ok save that, that's a good idea. Let's continue to build on the continuity of zones and get everything ready so we can blast when we actually get full usage."
+**Quartermaster:** The plan approved at t656u is /workspace/qm/zone-map-20261102-0736/MAP.md (a88874a5): story order for bh and ms (1A, +74 chars), X4 and X6. The hotel 1A/1B pick is still open.

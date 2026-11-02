@@ -1,0 +1,51 @@
+:236 -74 cards are `type: "say-it"`, `mode: "english-first"`.
+:236 +75 cards are `type: "say-it"`, `mode: "english-first"`.
+:350 -- **211 cards** in `cards.json`. Format:
+:350 +- **212 cards** in `cards.json`. Format:
+:362 -- **Personal cards:** 80 are `personal:true`. Written ones sort first (7.8).
+:362 +- **Personal cards:** 81 are `personal:true`. Written ones sort first (7.8).
+:363 -- **Inn examples:** `ms-04`, `ms-05`, `ms-06` are hypothetical (Example tag, `fill:true`) until Maxwell confirms them.
+:363 +- **Inn examples:** `ms-04`, `ms-05`, `ms-06` are hypothetical (Example tag, `fill:true`) until Maxwell confirms them. Hotel cards in one run keep stay order: `ms-06`, `ms-03`, `ms-28`, `ms-33`, `ms-05`, `ms-04`.
+:364 -- **Approved 7-word exceptions:** `ms-06` and `bh-14` ("Is it a boy or a girl?").
+:364 +- **Approved 7-word exception:** `bh-14` ("Is it a boy or a girl?").
+:375 -Everything starts `NEEDS NANCY`: 205 of the 211 written cards, the 18 `thDef` hints, `gotItText`, `rewardText`, `wrongText`, `welcomeBack`, `restScreen`, the 7 zone `nameTh` (`nameThStatus`), all 98 `uiText` entries, the 4 map region names (`instructorChecked` marks Instructor's), the 5 boss names, the 7 encouragement lines, 25 trophy names, the 12 gear `thGloss` and `word` Thai, the 3 shirt names, the 6 Jesus-word `thGloss`, the 2 `jesusWordsFallback` lines, and any slot Maxwell fills. The 6 Thai dish names (`fd-01`–`fd-06`, `thStatus: "SIGNED OFF"`) are Maxwell's recorded exception (8:01 PM MT), `th` only; Nancy may still review them. Not in the queue: the 16 verses, the Jesus-word verse text, and `verses.attribution`, which are verified THSV11/ESV text (`status: "VERIFIED"`), never drafts. The Backup view lists the drafts; Nancy taps ✓ (confirm) or ✎ (Maxwell edits). Review the 10 `nursePhrase` cards first, then the `thDef` hints; gear and Jesus-word glosses go in Instructor's nightly batches after launch. The 3 sleepy and nap cards (`ph-25`, `ph-26`, `bh-31`) and the two-answer card `ms-31` are new drafts for Instructor's nightly batches after launch, not the first review. The tie card `ms-32` joins the same after-launch nightly batch; the Thai fixes from Instructor's 6:31 PM audit stay `NEEDS NANCY` too.
+:375 +Everything starts `NEEDS NANCY`: 206 of the 212 written cards, the 18 `thDef` hints, `gotItText`, `rewardText`, `wrongText`, `welcomeBack`, `restScreen`, the 7 zone `nameTh` (`nameThStatus`), all 98 `uiText` entries, the 4 map region names (`instructorChecked` marks Instructor's), the 5 boss names, the 7 encouragement lines, 25 trophy names, the 12 gear `thGloss` and `word` Thai, the 3 shirt names, the 6 Jesus-word `thGloss`, the 2 `jesusWordsFallback` lines, and any slot Maxwell fills. The 6 Thai dish names (`fd-01`–`fd-06`, `thStatus: "SIGNED OFF"`) are Maxwell's recorded exception (8:01 PM MT), `th` only; Nancy may still review them. Not in the queue: the 16 verses, the Jesus-word verse text, and `verses.attribution`, which are verified THSV11/ESV text (`status: "VERIFIED"`), never drafts. The Backup view lists the drafts; Nancy taps ✓ (confirm) or ✎ (Maxwell edits). Review the 10 `nursePhrase` cards first, then the `thDef` hints; gear and Jesus-word glosses go in Instructor's nightly batches after launch. The 3 sleepy and nap cards (`ph-25`, `ph-26`, `bh-31`) and the two-answer card `ms-31` are new drafts for Instructor's nightly batches after launch, not the first review. The tie card `ms-32` joins the same after-launch nightly batch; the Thai fixes from Instructor's 6:31 PM audit stay `NEEDS NANCY` too.
+:427 -"en":"Welcome to our hotel.",
+:427 -"th":"ยินดีต้อนรับสู่โรงแรมของเราค่ะ",
+:427 -"respell":"WEL-kum too OW-er hoh-TEL",
+:427 -"personal":true,
+:427 -"type":"say-it"}
+:427 +"en":"I have a reservation.",
+:427 +"th":"ฉันจองห้องไว้ค่ะ",
+:427 +"respell":"ai HAV uh rez-er-VAY-shun",
+:427 +"personal":true,
+:427 +"type":"say-it",
+:427 +"syl":"res·er·va·tion"}
+:427 -"en":"One night is one hundred twenty dollars.",
+:427 +"en":"One hundred twenty dollars a night.",
+:427 -"respell":"WUN NAIT iz WUN HUN-dred TWEN-tee DOL-erz",
+:427 -"choices":["One night is one hundred twelve dollars.","One night is two hundred twenty dollars.","One night is one hundred twenty dollars.","One night is one hundred dollars."],
+:427 -"trap":"One night is one hundred twelve dollars.",
+:427 +"respell":"WUN HUN-dred TWEN-tee DOL-erz uh NAIT",
+:427 +"choices":["One hundred twelve dollars a night.","Two hundred twenty dollars a night.","One hundred twenty dollars a night.","One hundred dollars a night."],
+:427 +"trap":"One hundred twelve dollars a night.",
+:427 -"hint":["O__ n____ i_ o__ h______ t_____ d______.","t","twenty"]}
+:427 +"hint":["O__ h______ t_____ d______ a n____.","t","twenty"]}
+:427 +{"id":"ms-33",
+:427 +"type":"say-it",
+:427 +"en":"I need more towels.",
+:427 +"th":"ขอผ้าเช็ดตัวเพิ่มค่ะ",
+:427 +"respell":"ai NEED mor TOW-ulz",
+:427 +"personal":true}
+:427 -"meta":{"totalCards":211,
+:427 -"writtenCards":211,
+:427 +"meta":{"totalCards":212,
+:427 +"writtenCards":212,
+:427 -"sayItWritten":37,
+:427 -"sayItTotal":37,
+:427 +"sayItWritten":38,
+:427 +"sayItTotal":38,
+:427 -"personalCards":80,
+:427 -"personalWritten":80,
+:427 +"personalCards":81,
+:427 +"personalWritten":81,

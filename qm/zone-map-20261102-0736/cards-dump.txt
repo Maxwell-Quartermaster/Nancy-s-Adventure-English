@@ -1,0 +1,225 @@
+{"key": "phonics", "name": "Phonics", "nameTh": "เสียงพื้นฐาน", "order": 1, "startZone": true, "prefix": "ph", "zoneClip": "audio/maxwell-phonics.m4a"}
+ boss {"cards": ["ph-15", "ph-16", "ph-17", "ph-18", "ph-19", "ph-20", "ph-21", "ph-22", "ph-23", "ph-24"], "clip": "audio/maxwell-boss-phonics.m4a", "scroll": {"ref": "Genesis 1:1", "en": "In the beginning, God created the heavens and the earth.", "th": "ในปฐมกาล พระเจ้าทรงเนรมิตสร้างฟ้าและแผ่นดิน", "enS
+{"key": "colors-shapes", "name": "Colors and Shapes", "nameTh": "สีและรูปทรง", "order": 2, "prefix": "cs", "zoneClip": "audio/maxwell-colors-shapes.m4a"}
+ boss {"cards": ["cs-15", "cs-16", "cs-17", "cs-18", "cs-19", "cs-20", "cs-21", "cs-22", "cs-23", "cs-24"], "clip": "audio/maxwell-boss-colors-shapes.m4a", "scroll": {"ref": "Genesis 9:13", "en": "I have set my bow in the cloud, and it shall be a sign of the covenant between me and the earth.", "th": "คือ
+{"key": "numbers", "name": "Numbers", "nameTh": "ตัวเลข", "order": 3, "prefix": "nm", "zoneClip": "audio/maxwell-numbers.m4a"}
+ boss {"cards": ["nm-15", "nm-16", "nm-17", "nm-18", "nm-19", "nm-20", "nm-21", "nm-22", "nm-23", "nm-24"], "clip": "audio/maxwell-boss-numbers.m4a", "scroll": {"ref": "John 6:9", "en": "“There is a boy here who has five barley loaves and two fish, but what are they for so many?”", "th": "“ที่นี่มีเด็กชาย
+{"key": "sight-words", "name": "Sight Words", "nameTh": "คำง่ายๆ", "order": 4, "prefix": "sw", "zoneClip": "audio/maxwell-sight-words.m4a"}
+ boss {"cards": ["sw-15", "sw-16", "sw-17", "sw-18", "sw-19", "sw-20", "sw-21", "sw-22", "sw-23", "sw-24"], "clip": "audio/maxwell-boss-sight-words.m4a", "scroll": {"ref": "1 Samuel 17:45", "en": "Then David said to the Philistine, “You come to me with a sword and with a spear and with a javelin, but I co
+{"key": "baby-hospital", "name": "Baby and Hospital", "nameTh": "ลูกและโรงพยาบาล", "order": 5, "prefix": "bh", "zoneClip": "audio/maxwell-baby-hospital.m4a"}
+ boss {"cards": ["bh-12", "bh-16", "bh-18", "bh-19", "bh-21", "bh-22", "bh-24", "bh-26", "bh-27", "bh-28"], "clip": "audio/maxwell-boss-baby-hospital.m4a", "scroll": {"ref": "Isaiah 40:11", "en": "He will tend his flock like a shepherd;\nhe will gather the lambs in his arms;\nhe will carry them in his bos
+{"key": "maxwell-says", "name": "Maxwell Says", "nameTh": "แม็กซ์เวลล์พูดว่า", "order": 6, "prefix": "ms", "zoneClip": "audio/maxwell-maxwell-says.m4a"}
+ boss null
+{"key": "kitchen", "name": "Nancy's Kitchen", "nameTh": "ครัวของแนนซี่", "order": 7, "prefix": "fd cv", "zoneClip": "audio/maxwell-kitchen.m4a", "emblem": "svg:chef-hat"}
+ boss null
+ph-01 | crib | เปลเด็ก | ['bottle', 'crib', 'toy', 'blanket'] | svg:crib | ที่นอนของลูกน้อย | True
+ph-02 | sleep | นอนหลับ | ['sleep', 'cry', 'slip', 'eat'] | 😴 |  | True
+ph-25 | I'm sleepy. | ฉันง่วงนอนค่ะ | ["I'm hungry.", "I'm sleepy.", "I'm sleeping.", "I'm happy."] | 🥱 |  | True
+ph-26 | I need a nap. | ฉันอยากงีบสักหน่อยค่ะ | ['I need a map.', 'I need a snack.', 'I need a nap.', 'I need a bath.'] | 🛋️💤 |  | True
+ph-03 | bed | เตียง | ['desk', 'bad', 'lamp', 'bed'] | 🛏️ | นอนบนนี้ | True
+ph-04 | desk | เคาน์เตอร์ / โต๊ะ | ['desk', 'chair', 'door', 'lamp'] | svg:front-desk |  | True
+ph-05 | towel | ผ้าเช็ดตัว | ['key', 'soap', 'towel', 'tower'] | svg:towel |  | True
+ph-06 | wife | ภรรยา | ['wife', 'friend', 'wipe', 'sister'] | 👰‍♀️ |  | True
+ph-07 | hug | กอด | ['clap', 'hug', 'wave', 'hut'] | 🫂 |  | True
+ph-08 | pray | อธิษฐาน | ['read', 'sing', 'play', 'pray'] | svg:pray-kneel |  | True
+ph-09 | grace | พระคุณ | ['song', 'grace', 'race', 'prayer'] | None | ของขวัญที่ไม่ต้องจ่าย | True
+ph-10 | faith | ความเชื่อ | ['hope', 'love', 'faith', 'face'] | None | วางใจในพระเจ้า | True
+ph-11 | right | ขวา | ['right', 'light', 'up', 'left'] | ➡️ |  | None
+ph-12 | rock | ก้อนหิน | ['lock', 'stick', 'rock', 'leaf'] | 🪨 |  | None
+ph-13 | road | ถนน | ['road', 'load', 'river', 'house'] | 🛣️ |  | None
+ph-14 | rain | ฝน | ['lane', 'rain', 'wind', 'sun'] | 🌧️ |  | None
+ph-15 | glass | แก้ว | ['grass', 'spoon', 'glass', 'plate'] | svg:glass |  | None
+ph-16 | three | สาม | ['tree', 'three', 'two', 'four'] | 3️⃣ |  | None
+ph-17 | they | พวกเขา | ['you', 'they', 'day', 'he'] | svg:they | คนกลุ่มนั้น | None
+ph-18 | mouth | ปาก | ['mouse', 'mouth', 'nose', 'ear'] | 👄 |  | None
+ph-19 | vest | เสื้อกั๊ก | ['hat', 'west', 'vest', 'shoe'] | 🦺 |  | None
+ph-20 | shop | ร้านค้า | ['chop', 'shop', 'school', 'farm'] | 🏪 |  | None
+ph-21 | wash | ล้าง | ['sweep', 'wash', 'cook', 'watch'] | 🧼 |  | None
+ph-22 | ship | เรือ | ['train', 'bus', 'ship', 'sheep'] | 🚢 |  | None
+ph-23 | bread | ขนมปัง | ['bed', 'egg', 'cheese', 'bread'] | 🍞 |  | None
+ph-24 | cold | หนาว | ['coal', 'hot', 'cold', 'happy'] | 🥶 |  | None
+cs-01 | a white blanket | ผ้าห่มสีขาว | ['a blue blanket', 'a white shoe', 'a white blanket', 'a pink blanket'] | svg:blanket-white |  | True
+cs-02 | a round ball | ลูกบอลกลม | ['a round ball', 'a round bowl', 'a square box', 'a long stick'] | ⚽ |  | True
+cs-03 | a white towel | ผ้าเช็ดตัวสีขาว | ['a white towel', 'a white shoe', 'a white cup', 'a white tower'] | svg:towel-white |  | True
+cs-04 | a long line | แถวยาว | ['a wrong line', 'a short line', 'a long line', 'a long table'] | svg:line-queue |  | True
+cs-05 | God made the light. | พระเจ้าทรงสร้างแสงสว่าง | ['God made the light.', 'God made the night.', 'God made the sea.', 'God made the trees.'] | svg:light-rays |  | True
+cs-06 | God made the rainbow. | พระเจ้าทรงสร้างสายรุ้ง | ['God made the rainbow.', 'God made the moon.', 'God made the sun.', 'God made the stars.'] | 🌈 |  | True
+cs-07 | God made the colors. | พระเจ้าทรงสร้างสีสันต่างๆ ค่ะ | None | None |  | True
+cs-08 | red | สีแดง | ['green', 'led', 'blue', 'red'] | 🟥 |  | None
+cs-09 | blue | สีน้ำเงิน | ['yellow', 'brew', 'blue', 'red'] | 🟦 |  | None
+cs-10 | green | สีเขียว | ['green', 'gray', 'grin', 'brown'] | 🟩 |  | None
+cs-11 | black | สีดำ | ['white', 'black', 'back', 'pink'] | ⬛ |  | None
+cs-12 | brown | สีน้ำตาล | ['blown', 'brown', 'blue', 'white'] | 🟫 |  | None
+cs-13 | purple | สีม่วง | ['green', 'yellow', 'people', 'purple'] | 🟪 |  | None
+cs-14 | pink | สีชมพู | ['green', 'black', 'pink', 'pin'] | svg:swatch-pink |  | None
+cs-15 | gold | สีทอง | ['goal', 'silver', 'gold', 'green'] | svg:swatch-gold |  | None
+cs-16 | a black hat | หมวกสีดำ | ['a black hut', 'a brown hat', 'a black cat', 'a black hat'] | 🎩 |  | None
+cs-17 | triangle | สามเหลี่ยม | ['square', 'triangle', 'circle', 'tangle'] | 🔺 |  | None
+cs-18 | heart | รูปหัวใจ | ['star', 'circle', 'heart', 'hard'] | ❤️ |  | None
+cs-19 | star | ดาว | ['star', 'heart', 'store', 'moon'] | ⭐ |  | None
+cs-20 | circle | วงกลม | ['circle', 'triangle', 'square', 'circus'] | 🔵 |  | None
+cs-21 | line | เส้น | ['line', 'nine', 'square', 'dot'] | svg:shape-line |  | None
+cs-22 | long | ยาว | ['short', 'round', 'wrong', 'long'] | svg:size-long |  | None
+cs-23 | big | ใหญ่ | ['small', 'hot', 'big', 'bit'] | svg:size-big |  | None
+cs-24 | small | เล็ก | ['smell', 'small', 'big', 'long'] | svg:size-small |  | None
+sw-01 | Here is your card. | นี่บัตรของคุณค่ะ | ['Here is your car.', 'Here is your bag.', 'Here is your card.', 'Here is your map.'] | 💳 |  | True
+sw-02 | Please wait here. | กรุณารอตรงนี้ค่ะ | ['Please wait here.', 'Please sign here.', 'Please pay here.', 'Please eat here.'] | ⏳ |  | True
+sw-03 | Can I help you? | มีอะไรให้ช่วยไหมคะ | None | None |  | True
+sw-04 | He is my husband. | เขาเป็นสามีของฉันค่ะ | None | None |  | True
+sw-05 | I love my baby. | ฉันรักลูกค่ะ | None | None |  | True
+sw-06 | It is a free gift. | เป็นของขวัญที่ให้ฟรี | ['It is a free cup.', 'Here are three gifts.', 'It is a free gift.', 'It is a free car.'] | 🎁 | ของขวัญไม่ต้องจ่าย | True
+sw-07 | God loves you. | พระเจ้าทรงรักคุณค่ะ | None | None |  | True
+sw-08 | I cannot do it alone. | ฉันทำคนเดียวไม่ได้ค่ะ | None | None |  | True
+sw-09 | his | ของเขา (ผู้ชาย) | ['her', 'my', 'his', "he's"] | None | ของผู้ชายคนนั้น | None
+sw-10 | her | ของเธอ (ผู้หญิง) | ['our', 'her', 'his', 'hair'] | None | ของผู้หญิงคนนั้น | None
+sw-11 | It is mine. | นี่ของฉันค่ะ | ['It is mine.', 'It is his.', 'It is nine.', 'It is hers.'] | None | เป็นของตัวฉันเอง | None
+sw-12 | This is yours. | นี่ของคุณค่ะ | ['This is yours.', 'This is his.', 'This is mine.', 'This is ours.'] | None | คุณเป็นเจ้าของ | None
+sw-13 | this | นี่ | ['this', 'that', 'then', 'with'] | None | อันที่อยู่ใกล้ | None
+sw-14 | where | ที่ไหน | ['were', 'where', 'when', 'what'] | None | ถามหาสถานที่ | None
+sw-15 | walk | เดิน | ['sit', 'walk', 'eat', 'work'] | 🚶 |  | None
+sw-16 | I want it. | ฉันอยากได้ค่ะ | ['I want it.', 'I like it.', "I won't.", 'I see it.'] | None | บอกสิ่งที่อยากได้ | None
+sw-17 | I can. | ฉันทำได้ค่ะ | ["I can't.", 'I sleep.', 'I eat.', 'I can.'] | 💪 |  | None
+sw-18 | she | เธอ (ผู้หญิง) | ['he', 'she', 'see', 'we'] | 👩 |  | None
+sw-19 | think | คิด | ['eat', 'sink', 'three', 'think'] | 🤔 |  | None
+sw-20 | now | ตอนนี้ | ['now', 'later', 'no', 'soon'] | None | เวลานี้เลย | None
+sw-21 | it | มัน | ['is', 'eat', 'in', 'it'] | None | ใช้แทนสิ่งของ | None
+sw-22 | there | ที่นั่น | ['near', 'dare', 'there', 'here'] | None | ที่ที่ไกลออกไป | None
+sw-23 | come | มา | ['go', 'comb', 'come', 'stay'] | None | เดินเข้ามาหา | None
+sw-24 | look | ดู | ['touch', 'look', 'lock', 'listen'] | 👀 |  | None
+nm-01 | Room thirteen. | ห้องสิบสามค่ะ | ['Room twelve.', 'Room thirty.', 'Room three.', 'Room thirteen.'] | svg:door-13 |  | True
+nm-02 | Fourth floor. | ชั้นสี่ค่ะ | ['Fourth floor.', 'Tenth floor.', 'First floor.', 'Fifth floor.'] | svg:floor-4 |  | True
+nm-03 | Cash or card? | เงินสดหรือบัตรคะ | ['Cash or check?', 'Cash or card?', 'Card or check?', 'Cash or car?'] | 💵💳 |  | True
+nm-04 | Here is your change. | นี่เงินทอนค่ะ | ['Here is your chain.', 'Here is your receipt.', 'Here is your key.', 'Here is your change.'] | 🪙 |  | True
+nm-05 | Eight pounds. | หนักแปดปอนด์ | ['Six pounds.', 'Eighty pounds.', 'Eight pounds.', 'Seven pounds.'] | svg:baby-scale-8 |  | True
+nm-06 | I'm home at five thirty. | ผมจะกลับถึงบ้านห้าโมงครึ่งครับ | ["I'm home at five thirty.", "I'm home at six thirty.", "I'm home at five thirteen.", "I'm home at four thirty."] | svg:clock-530 |  | True
+nm-07 | Jesus fed five thousand. | พระเยซูทรงเลี้ยงคนห้าพันคน | ['Jesus fed fifty thousand.', 'Jesus fed five hundred.', 'Jesus fed five thousand.', 'Jesus fed one thousand.'] | svg:crowd-5000 |  | True
+nm-08 | There is one God. | มีพระเจ้าองค์เดียวค่ะ | None | None |  | True
+nm-09 | Jesus rose on day three. | พระเยซูทรงเป็นขึ้นมาในวันที่สามค่ะ | None | None |  | True
+nm-10 | three | สาม | ['tree', 'five', 'three', 'two'] | 3️⃣ |  | None
+nm-11 | two | สอง | ['four', 'two', 'tooth', 'one'] | 2️⃣ |  | None
+nm-12 | five | ห้า | ['nine', 'four', 'five', 'fine'] | 5️⃣ |  | None
+nm-13 | six | หก | ['eight', 'sick', 'seven', 'six'] | 6️⃣ |  | None
+nm-14 | nine | เก้า | ['nine', 'five', 'ten', 'line'] | 9️⃣ |  | None
+nm-15 | ten | สิบ | ['ten', 'tin', 'two', 'one'] | 🔟 |  | None
+nm-16 | four | สี่ | ['four', 'six', 'fork', 'three'] | 4️⃣ |  | None
+nm-17 | eight | แปด | ['eight', 'aid', 'nine', 'seven'] | 8️⃣ |  | None
+nm-18 | fourteen | สิบสี่ | ['fourteen', 'forty', 'eleven', 'four'] | svg:number-14 |  | None
+nm-19 | fifteen | สิบห้า | ['twelve', 'five', 'fifty', 'fifteen'] | svg:number-15 |  | None
+nm-20 | sixteen | สิบหก | ['eleven', 'sixteen', 'six', 'sixty'] | svg:number-16 |  | None
+nm-21 | seventeen | สิบเจ็ด | ['seventeen', 'twelve', 'seventy', 'seven'] | svg:number-17 |  | None
+nm-22 | nineteen | สิบเก้า | ['ninety', 'nineteen', 'twenty', 'nine'] | svg:number-19 |  | None
+nm-23 | It is fifty dollars. | ห้าสิบดอลลาร์ค่ะ | ['It is twenty dollars.', 'It is fifteen dollars.', 'It is fifty dollars.', 'It is five dollars.'] | svg:money-50 |  | None
+nm-24 | Nine thirty. | เก้าโมงครึ่ง | ['Nine thirteen.', 'Ten thirty.', 'Nine thirty.', "Nine o'clock."] | svg:clock-930 |  | None
+bh-01 | I need a Thai interpreter. | ฉันต้องการล่ามภาษาไทยค่ะ | None | None |  | True
+bh-02 | My water broke. | น้ำคร่ำแตกแล้วค่ะ | None | None |  | True
+bh-03 | I have contractions. | ฉันเจ็บท้องคลอดค่ะ | None | None |  | True
+bh-04 | I am bleeding. | ฉันมีเลือดออกค่ะ | None | None |  | True
+bh-05 | The baby is coming. | ลูกจะคลอดแล้วค่ะ | None | None |  | True
+bh-06 | Please call my husband. | กรุณาโทรหาสามีของฉันค่ะ | None | None |  | True
+bh-07 | I am pregnant. | ฉันตั้งครรภ์ค่ะ | None | None |  | True
+bh-08 | It hurts here. | เจ็บตรงนี้ค่ะ | None | None |  | True
+bh-09 | The baby is not moving. | ลูกไม่ดิ้นค่ะ | None | None |  | True
+bh-10 | Where is Labor and Delivery? | ห้องคลอดอยู่ที่ไหนคะ | None | None |  | True
+bh-11 | When is my due date? | กำหนดคลอดของฉันวันไหนคะ | None | None |  | True
+bh-12 | Wash the baby. | อาบน้ำให้ลูก | ['Hold the baby.', 'Watch the baby.', 'Wash the baby.', 'Feed the baby.'] | 👶🛁 |  | True
+bh-13 | I need to rest. | ฉันต้องพักค่ะ | None | None |  | True
+bh-14 | Is it a boy or a girl? | ผู้ชายหรือผู้หญิงคะ | None | None |  | True
+bh-15 | Thank you, God, for my baby. | ขอบคุณพระเจ้าสำหรับลูกของฉันค่ะ | None | None |  | True
+bh-16 | God made my baby. | พระเจ้าทรงสร้างลูกของฉัน | ['God made my baby.', 'God made the sun.', 'God made the sea.', 'God made my body.'] | 👶 |  | True
+bh-17 | God is with us. | พระเจ้าทรงอยู่กับเราค่ะ | None | None |  | True
+bh-18 | Please bring a blanket. | ขอผ้าห่มหน่อยค่ะ | ['Please bring a cup.', 'Please bring a basket.', 'Please bring a spoon.', 'Please bring a blanket.'] | svg:blanket |  | True
+bh-19 | Change the diaper. | เปลี่ยนผ้าอ้อม | ['Change the dipper.', 'Change the shirt.', 'Change the diaper.', 'Change the sheet.'] | svg:diaper |  | True
+bh-20 | Feed the baby. | ให้นมลูก | ['Feel the baby.', 'Wash the baby.', 'Hold the baby.', 'Feed the baby.'] | 🍼 |  | True
+bh-21 | The baby is crying. | ลูกกำลังร้องไห้ | ['The baby is sleeping.', 'The baby is trying.', 'The baby is crying.', 'The baby is eating.'] | 👶😢 |  | True
+bh-22 | Call the doctor. | เรียกหมอหน่อยค่ะ | ['Call the daughter.', 'Call the school.', 'Call the doctor.', 'Call the taxi.'] | 🩺 |  | None
+bh-23 | I need water. | ขอน้ำหน่อยค่ะ | ['I need water.', 'I need ice.', 'I need a waiter.', 'I need a towel.'] | 🚰 |  | None
+bh-24 | Where is the bathroom? | ห้องน้ำอยู่ที่ไหนคะ | ['Where is the exit?', 'Where is the bedroom?', 'Where is the bathroom?', 'Where is the door?'] | 🚻 |  | None
+bh-25 | Please speak slowly. | กรุณาพูดช้าๆ ค่ะ | None | None |  | None
+bh-26 | Take this pill. | กินยาเม็ดนี้นะ | ['Take this cup.', 'Take this card.', 'Take this pill.', 'Take this pillow.'] | 💊 |  | None
+bh-27 | I am hungry. | ฉันหิวค่ะ | ['I am angry.', 'I am tall.', 'I am cold.', 'I am hungry.'] | svg:hungry |  | None
+ms-01 | I am proud of you. | ผมภูมิใจในตัวคุณนะครับ | None | None |  | True
+ms-02 | Our baby is coming soon. | อีกไม่นานลูกของเราก็จะมาแล้วนะครับ | None | None |  | True
+ms-03 | Welcome to our hotel. | ยินดีต้อนรับสู่โรงแรมของเราค่ะ | None | None |  | True
+ms-04 | Check-out is at eleven. | เช็คเอาท์สิบเอ็ดโมงค่ะ | ['Check-out is at ten.', 'Check-out is at eleven.', 'Check-out is at seven.', 'Check-out is at noon.'] | svg:clock-1100 |  | True
+ms-05 | Breakfast is at seven thirty. | อาหารเช้าเจ็ดโมงครึ่งค่ะ | ['Breakfast is at eight.', 'Breakfast is at seven thirty.', 'Breakfast is at six thirty.', 'Breakfast is at seven thirteen.'] | svg:clock-730 |  | True
+ms-06 | One night is one hundred twenty dollars. | คืนละ 120 ดอลลาร์ค่ะ | ['One night is one hundred twelve dollars.', 'One night is two hundred twenty dollars.', 'One night is one hundred twenty dollars.', 'One night is one hundred dollars.'] | svg:money-120 |  | True
+ms-07 | Good morning, honey. | อรุณสวัสดิ์ครับ ที่รัก | ['Good morning, honey.', 'Thank you, honey.', 'Good night, honey.', 'I love you, honey.'] | ☀️☕ |  | True
+ms-08 | I love you. | ผมรักคุณครับ | None | None |  | True
+ms-09 | Good job! | เก่งมากครับ | None | None |  | True
+ms-10 | Your English is good. | คุณพูดภาษาอังกฤษเก่งนะครับ | None | None |  | True
+ms-11 | I will pray for you. | ผมจะอธิษฐานเผื่อคุณครับ | ['I will cook for you.', 'I will pray for you.', 'I will pay for you.', 'I will wait for you.'] | svg:pray-kneel |  | True
+ms-12 | Let's pray before we eat. | อธิษฐานก่อนกินข้าวกันนะครับ | ["Let's pray before we eat.", "Let's cook before we eat.", "Let's wash before we eat.", "Let's play before we eat."] | svg:pray-meal |  | True
+ms-13 | Let's go to church. | ไปโบสถ์กันนะครับ | None | None |  | True
+ms-14 | Jesus is my friend. | พระเยซูทรงเป็นเพื่อนของผมครับ | None | None |  | True
+ms-15 | Are you hungry? | หิวไหมครับ | ['Are you tired?', 'Are you hungry?', 'Are you cold?', 'Are you angry?'] | svg:hungry |  | None
+ms-16 | See you soon. | แล้วเจอกันนะครับ | ['I am cold.', 'Wash the cups.', 'Close the book.', 'See you soon.'] | 👋 |  | None
+ms-17 | Wash the dishes. | ล้างจานหน่อยนะครับ | ['Watch the dishes.', 'Wash the car.', 'Make the bed.', 'Wash the dishes.'] | 🧽🍽️ |  | None
+ms-18 | Wash your hands. | ล้างมือนะครับ | ['Dry your hands.', 'Wash your hands.', 'Wash your face.', 'Watch your hands.'] | 🧼👐 |  | None
+ms-19 | Time for bed. | ได้เวลานอนแล้วครับ | ['Time for lunch.', 'Time for bread.', 'Time for bed.', 'Time for work.'] | 🛏️🌙 |  | None
+ms-20 | Make the bed. | ปูเตียงหน่อยครับ | ['Make the soup.', 'Make the bed.', 'Make the bread.', 'Make the tea.'] | 🛏️ |  | None
+ms-21 | Where are the keys? | กุญแจอยู่ไหนครับ | ['Where are the shoes?', 'Where are the keys?', 'Where are the cups?', 'Where are the kids?'] | 🔑 |  | None
+ms-22 | The truck is outside. | รถกระบะอยู่ข้างนอกครับ | ['The cat is outside.', 'The dog is outside.', 'The truck is outside.', 'The track is outside.'] | 🛻 |  | None
+ms-23 | Close the door. | ปิดประตูหน่อยครับ | ['Close the door.', 'Close the drawer.', 'Close the window.', 'Close the book.'] | 🚪 |  | None
+ms-24 | Let's walk. | ไปเดินเล่นกันครับ | ["Let's walk.", "Let's rest.", "Let's work.", "Let's eat."] | 🚶 |  | None
+ms-25 | Let's read together. | อ่านหนังสือด้วยกันนะครับ | ["Let's eat together.", "Let's sing together.", "Let's read together.", "Let's lead together."] | 📖 |  | None
+ms-26 | Put it there. | วางไว้ตรงนั้นนะครับ | ['Put it there.', 'Put it here.', 'Put it back.', 'Put it down.'] | None | วางไว้ไกลตัว | None
+ms-27 | Thank you, honey. | ขอบคุณนะครับ ที่รัก | None | None |  | None
+bh-28 | The baby is sleeping. | ลูกกำลังหลับ | ['The baby is crying.', 'The baby is sleeping.', 'The baby is eating.', 'The baby is smiling.'] | 👶💤 |  | True
+bh-31 | The baby is taking a nap. | ลูกกำลังงีบหลับ | ['The baby is drinking milk.', 'The baby is taking a bath.', 'The baby is getting a hug.', 'The baby is taking a nap.'] | ☀️👶🛏️ |  | True
+bh-29 | I need a nurse. | ฉันต้องการพยาบาลค่ะ | ['farmer', 'nurse', 'daughter', 'teacher'] | svg:nurse |  | True
+bh-30 | The baby is kicking. | ลูกดิ้นค่ะ | None | None |  | True
+ms-28 | Your room is ready. | ห้องของคุณพร้อมแล้วค่ะ | None | None |  | True
+ms-29 | This is my husband. | นี่สามีของฉันค่ะ | None | None |  | True
+ms-30 | God is good. | พระเจ้าทรงดีครับ | None | None |  | True
+ms-31 | Let's pray. / High five! | มาอธิษฐานกันนะครับ / แปะมือครับ! | [{'en': 'Pray', 'key': 'pray', 'pic': '🙏'}, {'en': 'High five', 'key': 'highFive', 'pic': '🙌'}] | None |  | True
+ms-32 | Let me fix your tie, honey. | เดี๋ยวฉันจัดเนคไทให้นะคะ ที่รัก | ['Let me fix your tea, honey.', 'Let me fix your tie, honey.', 'Let me fix your hair, honey.', 'Let me fix your shoe, honey.'] | svg:tie |  | True
+fd-01 | Pad thai | ผัดไทย | None | None |  | None
+fd-02 | Tom yum | ต้มยำ | None | 🍲 |  | None
+fd-03 | Green curry | แกงเขียวหวาน | None | 🍛 |  | None
+fd-04 | Pad see ew | ผัดซีอิ๊ว | None | None |  | None
+fd-05 | Tom kha gai | ต้มข่าไก่ | None | None |  | None
+fd-06 | Massaman curry | แกงมัสมั่น | None | None |  | None
+fd-07 | spaghetti | เส้นพาสต้าซอสมะเขือเทศ | ['spaghetti', 'salad', 'soup', 'sandwich'] | 🍝 |  | None
+fd-08 | croissant | ขนมปังเนยรูปพระจันทร์เสี้ยว | ['croissant', 'cracker', 'cookie', 'carrot'] | 🥐 |  | None
+fd-09 | ice cream sundae | ไอศกรีมถ้วยราดซอส | ['ice cream sundae', 'ice cream sandwich', 'iced coffee', 'rice pudding'] | 🍨 |  | None
+fd-10 | Can I get pad see ew? | ขอผัดซีอิ๊วได้ไหมคะ | None | None |  | None
+fd-11 | Is the tom yum spicy? | ต้มยำเผ็ดไหมคะ | None | 🌶️ |  | None
+fd-12 | Green curry, mild, please. | แกงเขียวหวาน เผ็ดน้อยค่ะ | None | None |  | None
+fd-13 | One pad thai to go, please. | ผัดไทยหนึ่งที่ ใส่กล่องกลับบ้านค่ะ | None | 🥡 |  | None
+fd-14 | Does the massaman have peanuts? | แกงมัสมั่นมีถั่วลิสงไหมคะ | None | 🥜 |  | None
+fd-15 | Tom kha gai, not spicy, please. | ต้มข่าไก่ ไม่เผ็ดค่ะ | None | None |  | None
+fd-16 | Can I see the menu? | ขอดูเมนูได้ไหมคะ | None | None |  | None
+fd-17 | A slice of pizza, please. | ขอพิซซ่าหนึ่งชิ้นค่ะ | None | 🍕 |  | None
+fd-18 | Two tacos, no onions, please. | ทาโก้สองชิ้น ไม่ใส่หัวหอมค่ะ | None | 🌮 |  | None
+fd-19 | Steak, medium, please. | สเต๊กสุกปานกลางค่ะ | None | 🥩 |  | None
+fd-20 | A slice of chocolate cake, please. | ขอเค้กช็อกโกแลตหนึ่งชิ้นค่ะ | None | None |  | None
+fd-21 | Check, please. | เช็กบิลด้วยค่ะ | None | 🧾 |  | None
+fd-22 | Bake the bread. | อบขนมปังค่ะ | None | 🍞 |  | None
+fd-23 | Roast the chicken. | อบไก่ในเตาค่ะ | None | 🍗 |  | None
+fd-24 | Grill the fish. | ย่างปลาค่ะ | None | 🐟 |  | None
+fd-25 | Whisk the eggs. | ตีไข่ให้เข้ากันค่ะ | None | 🥚 |  | None
+fd-26 | Fold in the cream. | ค่อยๆ ตะล่อมครีมลงไปค่ะ | None | None |  | None
+fd-27 | Crispy outside, tender inside. | ข้างนอกกรอบ ข้างในนุ่มค่ะ | None | None |  | None
+fd-28 | This aged cheese is sharp. | ชีสบ่มนานนี้รสเข้มค่ะ | None | 🧀 |  | None
+fd-29 | How spicy? Two stars or three? | เผ็ดแค่ไหน สองดาวหรือสามดาว | ['Two stars, please.', 'Two straws, please.', 'Table for two.', "It's Tuesday."] | None |  | None
+fd-30 | Regular or large? | ขนาดปกติหรือใหญ่ | ['Regular, please.', 'Rice, please.', 'By the window.', 'No onions.'] | None |  | None
+fd-31 | Rice or noodles with that? | รับข้าวหรือเส้นดี | ['Rice, please.', 'Ice, please.', 'For here.', 'Medium.'] | None |  | None
+fd-32 | Something to drink? | รับเครื่องดื่มอะไรดี | ['Water, please.', 'Waiter, please.', 'Two tacos.', 'Separate checks.'] | None |  | None
+fd-33 | Do you have any food allergies? | แพ้อาหารอะไรไหม | ["Yes, I can't eat peanuts.", 'Yes, I can eat peanuts.', 'Table for two.', 'To go, please.'] | None |  | None
+fd-34 | Can I refill your water? | เติมน้ำให้ไหม | ['Yes, please. Thank you.', 'Yes, the bill, please.', 'Spicy, please.', 'Large, please.'] | None |  | None
+fd-35 | For here or to go? | ทานที่นี่หรือกลับบ้าน | ['To go, please.', 'For her, please.', 'Rice, please.', 'Three stars.'] | None |  | None
+fd-36 | Our green curry is popular today. | วันนี้แกงเขียวหวานขายดี | ["I'll try the green curry!", "I'll try the green tea!", 'Two straws, please.', 'For here.'] | None |  | None
+fd-37 | Together or separate checks? | จ่ายรวมหรือแยกบิล | ['Separate checks, please.', 'Separate chairs, please.', 'Mild, please.', 'No onions.'] | None |  | None
+fd-38 | Table for two? Window or inside? | โต๊ะสองที่ ริมหน้าต่างหรือข้างใน | ['By the window, please.', 'By the winter, please.', 'Regular, please.', 'Water, please.'] | None |  | None
+cv-01 | Funnel cake | ฟันเนลเค้ก | None | None |  | None
+cv-02 | One cotton candy, please! | ขอสายไหมหนึ่งอันค่ะ | None | None |  | None
+cv-03 | A corn dog with mustard, please. | ขอคอร์นดอกใส่มัสตาร์ดค่ะ | None | None |  | None
+cv-04 | Churros | ชูโรส | None | None |  | None
+cv-05 | A cherry slushie, please. | ขอน้ำแข็งปั่นรสเชอร์รี่ค่ะ | None | 🍒 |  | None
+cv-06 | Kettle corn | ป๊อปคอร์นหวานเค็ม | None | None |  | None
+cv-07 | A blue snow cone, please. | ขอน้ำแข็งไสสีฟ้าค่ะ | None | 🍧 |  | None
+cv-08 | Deep-fried Oreos | โอรีโอชุบแป้งทอด | None | None |  | None
+cv-09 | Caramel apple | แอปเปิ้ลเคลือบคาราเมล | None | 🍎 |  | None
+cv-10 | Soft pretzel | เพรตเซลนุ่ม | None | 🥨 |  | None
+cv-11 | Can I get extra powdered sugar? | ขอน้ำตาลไอซิ่งเพิ่มได้ไหมคะ | None | None |  | None
+cv-12 | Is the kettle corn sweet? | ป๊อปคอร์นหวานไหมคะ | None | None |  | None

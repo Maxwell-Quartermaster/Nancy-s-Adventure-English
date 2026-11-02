@@ -1,0 +1,204 @@
+{
+ "practiceOnly": true,
+ "location": "eating",
+ "cards": [
+  {
+   "id": "prac-eating-01",
+   "en": "Please set the table.",
+   "th": "ช่วยจัดโต๊ะหน่อยค่ะ",
+   "respell": "PLEEZ SET thuh TAY-bul",
+   "choices": [
+    "Please set the table.",
+    "Please sit the table.",
+    "Please set the cable.",
+    "Please clean the table."
+   ],
+   "trap": "Please sit the table.",
+   "trapNote": "sit = นั่ง · set the table = จัดโต๊ะ",
+   "hint": [
+    "Please s__ the t____.",
+    "s",
+    "set"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-02",
+   "en": "Let's pray before we eat.",
+   "th": "อธิษฐานก่อนกินข้าวกันนะคะ",
+   "respell": "lets PRAY bee-FOR wee EET",
+   "choices": [
+    "Let's pray before we eat.",
+    "Let's play before we eat.",
+    "Let's pray after we eat.",
+    "Let's wait before we eat."
+   ],
+   "trap": "Let's play before we eat.",
+   "trapNote": "play = เล่น · pray = อธิษฐาน",
+   "hint": [
+    "Let's p___ before we e__.",
+    "pr",
+    "pray"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-03",
+   "en": "Table for two, please.",
+   "th": "ขอโต๊ะสำหรับสองคนค่ะ",
+   "respell": "TAY-bul for TOO PLEEZ",
+   "choices": [
+    "Table for two, please.",
+    "Table for ten, please.",
+    "Cable for two, please.",
+    "Tea for two, please."
+   ],
+   "trap": "Table for ten, please.",
+   "trapNote": "ten = สิบ · two = สอง",
+   "hint": [
+    "T____ for t__, please.",
+    "tw",
+    "two"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-04",
+   "en": "Water for me, please.",
+   "th": "ขอน้ำเปล่าค่ะ",
+   "respell": "WAH-ter for MEE PLEEZ",
+   "choices": [
+    "Water for me, please.",
+    "Waiter for me, please.",
+    "Coffee for me, please.",
+    "Water for him, please."
+   ],
+   "trap": "Waiter for me, please.",
+   "trapNote": "waiter = พนักงานเสิร์ฟ · water = น้ำ",
+   "hint": [
+    "W____ for me, please.",
+    "w",
+    "water"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-05",
+   "en": "I'd like the chicken, please.",
+   "th": "ขอไก่ค่ะ",
+   "respell": "aid LAIK thuh CHIK-in PLEEZ",
+   "choices": [
+    "I'd like the chicken, please.",
+    "I'd like the kitchen, please.",
+    "I'd like the fish, please.",
+    "I like the chicken."
+   ],
+   "trap": "I'd like the kitchen, please.",
+   "trapNote": "kitchen = ห้องครัว · chicken = ไก่",
+   "hint": [
+    "I'd like the c______, please.",
+    "ch",
+    "chicken"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-06",
+   "en": "Not too spicy, please.",
+   "th": "ไม่เผ็ดมากนะคะ",
+   "respell": "NOT too SPAI-see PLEEZ",
+   "choices": [
+    "Not too spicy, please.",
+    "Not too spacey, please.",
+    "Very spicy, please.",
+    "Not too salty, please."
+   ],
+   "trap": "Not too salty, please.",
+   "trapNote": "salty = เค็ม · spicy = เผ็ด",
+   "hint": [
+    "Not too s_____, please.",
+    "sp",
+    "spicy"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-07",
+   "en": "fork and knife",
+   "th": "ส้อมกับมีด",
+   "respell": "FORK and NAIF",
+   "choices": [
+    "fork and knife",
+    "fork and spoon",
+    "cup and plate",
+    "pork and knife"
+   ],
+   "trap": "fork and spoon",
+   "trapNote": "spoon = ช้อน · knife = มีด",
+   "hint": [
+    "f___ and k____",
+    "kn",
+    "knife"
+   ],
+   "type": "picture",
+   "personal": true,
+   "pic": "🍴"
+  },
+  {
+   "id": "prac-eating-08",
+   "en": "Everything is great, thank you.",
+   "th": "ทุกอย่างดีมากค่ะ ขอบคุณค่ะ",
+   "respell": "EV-ree-thing iz GRAYT THANK yoo",
+   "choices": [
+    "Everything is great, thank you.",
+    "Everything is gray, thank you.",
+    "Nothing is great, thank you.",
+    "Everything is late, thank you."
+   ],
+   "trap": "Everything is gray, thank you.",
+   "trapNote": "gray = สีเทา · great = ดีมาก",
+   "hint": [
+    "Everything is g____, thank you.",
+    "gr",
+    "great"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-eating-09",
+   "en": "Could we have the check?",
+   "th": "ขอเช็กบิลได้ไหมคะ",
+   "respell": "kood wee HAV thuh CHEK",
+   "choices": [
+    "Could we have the check?",
+    "Could we have the chick?",
+    "Could we have the menu?",
+    "Could we have the cheese?"
+   ],
+   "trap": "Could we have the chick?",
+   "trapNote": "chick = ลูกเจี๊ยบ · check = บิล",
+   "hint": [
+    "Could we have the c____?",
+    "ch",
+    "check"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  }
+ ]
+}

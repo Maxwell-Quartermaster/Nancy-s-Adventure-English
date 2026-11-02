@@ -1,0 +1,168 @@
+b1 control SE=0 exit=0 :: 
+b1 control SE=1 exit=0 :: 
+b1 jw-empty-list SE=0 exit=1 :: IndexError: list index out of range
+b1 jw-empty-list SE=1 exit=1 :: IndexError: list index out of range
+b1 jw-en-empty SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-empty SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-missing SE=0 exit=1 :: KeyError: 'en'
+b1 jw-en-missing SE=1 exit=1 :: KeyError: 'en'
+b1 jw-en-null SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-null SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-space SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-space SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-wsmix SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-en-wsmix SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+b1 jw-ref-empty SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-empty SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-missing SE=0 exit=1 :: KeyError: 'ref'
+b1 jw-ref-missing SE=1 exit=1 :: KeyError: 'ref'
+b1 jw-ref-null SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-null SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-space SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-space SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-wsmix SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-ref-wsmix SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+b1 jw-th-empty SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-empty SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-missing SE=0 exit=1 :: KeyError: 'th'
+b1 jw-th-missing SE=1 exit=1 :: KeyError: 'th'
+b1 jw-th-null SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-null SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-space SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-space SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-wsmix SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 jw-th-wsmix SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+b1 rest-en-empty SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-empty SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-missing SE=0 exit=1 :: KeyError: 'en'
+b1 rest-en-missing SE=1 exit=1 :: KeyError: 'en'
+b1 rest-en-null SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-null SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-number SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-number SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-space SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-space SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-wsmix SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-en-wsmix SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+b1 rest-enSource-empty SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-empty SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-missing SE=0 exit=1 :: KeyError: 'enSource'
+b1 rest-enSource-missing SE=1 exit=1 :: KeyError: 'enSource'
+b1 rest-enSource-null SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-null SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-space SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-space SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-wsmix SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-enSource-wsmix SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+b1 rest-missing SE=0 exit=1 :: KeyError: 'rest'
+b1 rest-missing SE=1 exit=1 :: KeyError: 'rest'
+b1 rest-ref-empty SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-empty SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-missing SE=0 exit=1 :: KeyError: 'ref'
+b1 rest-ref-missing SE=1 exit=1 :: KeyError: 'ref'
+b1 rest-ref-null SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-null SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-space SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-space SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-wsmix SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-ref-wsmix SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+b1 rest-th-empty SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-empty SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-missing SE=0 exit=1 :: KeyError: 'th'
+b1 rest-th-missing SE=1 exit=1 :: KeyError: 'th'
+b1 rest-th-null SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-null SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-space SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-space SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-wsmix SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-th-wsmix SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+b1 rest-thSource-empty SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-empty SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-missing SE=0 exit=1 :: KeyError: 'thSource'
+b1 rest-thSource-missing SE=1 exit=1 :: KeyError: 'thSource'
+b1 rest-thSource-null SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-null SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-space SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-space SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-wsmix SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 rest-thSource-wsmix SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+b1 weekly0-en-empty SE=0 exit=0 :: 
+b1 weekly0-en-empty SE=1 exit=0 :: 
+b1 weekly0-en-missing SE=0 exit=0 :: 
+b1 weekly0-en-missing SE=1 exit=0 :: 
+b1 weekly0-en-null SE=0 exit=0 :: 
+b1 weekly0-en-null SE=1 exit=0 :: 
+b1 weekly0-en-space SE=0 exit=0 :: 
+b1 weekly0-en-space SE=1 exit=0 :: 
+b1 weekly0-enSource-empty SE=0 exit=0 :: 
+b1 weekly0-enSource-empty SE=1 exit=0 :: 
+b1 weekly0-enSource-missing SE=0 exit=0 :: 
+b1 weekly0-enSource-missing SE=1 exit=0 :: 
+b1 weekly0-enSource-null SE=0 exit=0 :: 
+b1 weekly0-enSource-null SE=1 exit=0 :: 
+b1 weekly0-enSource-space SE=0 exit=0 :: 
+b1 weekly0-enSource-space SE=1 exit=0 :: 
+b1 weekly0-ref-empty SE=0 exit=0 :: 
+b1 weekly0-ref-empty SE=1 exit=0 :: 
+b1 weekly0-ref-missing SE=0 exit=0 :: 
+b1 weekly0-ref-missing SE=1 exit=0 :: 
+b1 weekly0-ref-null SE=0 exit=0 :: 
+b1 weekly0-ref-null SE=1 exit=0 :: 
+b1 weekly0-ref-space SE=0 exit=0 :: 
+b1 weekly0-ref-space SE=1 exit=0 :: 
+b1 weekly0-th-empty SE=0 exit=0 :: 
+b1 weekly0-th-empty SE=1 exit=0 :: 
+b1 weekly0-th-missing SE=0 exit=0 :: 
+b1 weekly0-th-missing SE=1 exit=0 :: 
+b1 weekly0-th-null SE=0 exit=0 :: 
+b1 weekly0-th-null SE=1 exit=0 :: 
+b1 weekly0-th-space SE=0 exit=0 :: 
+b1 weekly0-th-space SE=1 exit=0 :: 
+b1 weekly0-thSource-empty SE=0 exit=0 :: 
+b1 weekly0-thSource-empty SE=1 exit=0 :: 
+b1 weekly0-thSource-missing SE=0 exit=0 :: 
+b1 weekly0-thSource-missing SE=1 exit=0 :: 
+b1 weekly0-thSource-null SE=0 exit=0 :: 
+b1 weekly0-thSource-null SE=1 exit=0 :: 
+b1 weekly0-thSource-space SE=0 exit=0 :: 
+b1 weekly0-thSource-space SE=1 exit=0 :: 
+b1 weekly9-en-empty SE=0 exit=0 :: 
+b1 weekly9-en-empty SE=1 exit=0 :: 
+b1 weekly9-en-missing SE=0 exit=0 :: 
+b1 weekly9-en-missing SE=1 exit=0 :: 
+b1 weekly9-en-null SE=0 exit=0 :: 
+b1 weekly9-en-null SE=1 exit=0 :: 
+b1 weekly9-en-space SE=0 exit=0 :: 
+b1 weekly9-en-space SE=1 exit=0 :: 
+b1 weekly9-enSource-empty SE=0 exit=0 :: 
+b1 weekly9-enSource-empty SE=1 exit=0 :: 
+b1 weekly9-enSource-missing SE=0 exit=0 :: 
+b1 weekly9-enSource-missing SE=1 exit=0 :: 
+b1 weekly9-enSource-null SE=0 exit=0 :: 
+b1 weekly9-enSource-null SE=1 exit=0 :: 
+b1 weekly9-enSource-space SE=0 exit=0 :: 
+b1 weekly9-enSource-space SE=1 exit=0 :: 
+b1 weekly9-ref-empty SE=0 exit=0 :: 
+b1 weekly9-ref-empty SE=1 exit=0 :: 
+b1 weekly9-ref-missing SE=0 exit=0 :: 
+b1 weekly9-ref-missing SE=1 exit=0 :: 
+b1 weekly9-ref-null SE=0 exit=0 :: 
+b1 weekly9-ref-null SE=1 exit=0 :: 
+b1 weekly9-ref-space SE=0 exit=0 :: 
+b1 weekly9-ref-space SE=1 exit=0 :: 
+b1 weekly9-th-empty SE=0 exit=0 :: 
+b1 weekly9-th-empty SE=1 exit=0 :: 
+b1 weekly9-th-missing SE=0 exit=0 :: 
+b1 weekly9-th-missing SE=1 exit=0 :: 
+b1 weekly9-th-null SE=0 exit=0 :: 
+b1 weekly9-th-null SE=1 exit=0 :: 
+b1 weekly9-th-space SE=0 exit=0 :: 
+b1 weekly9-th-space SE=1 exit=0 :: 
+b1 weekly9-thSource-empty SE=0 exit=0 :: 
+b1 weekly9-thSource-empty SE=1 exit=0 :: 
+b1 weekly9-thSource-missing SE=0 exit=0 :: 
+b1 weekly9-thSource-missing SE=1 exit=0 :: 
+b1 weekly9-thSource-null SE=0 exit=0 :: 
+b1 weekly9-thSource-null SE=1 exit=0 :: 
+b1 weekly9-thSource-space SE=0 exit=0 :: 
+b1 weekly9-thSource-space SE=1 exit=0 :: 

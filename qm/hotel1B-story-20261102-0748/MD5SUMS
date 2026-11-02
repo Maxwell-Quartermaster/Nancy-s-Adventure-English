@@ -1,0 +1,12 @@
+40c35ed540963dccc6db61e76ecce406  nancys-adventure-english-v6-08-1B-v32-hotel1B-story-PASTE.md
+58cf0a2b51e173ae432d5f3b092144d6  GATE-REQUEST.md
+1ad6595f211ddcb7154f217792ea7bf9  build.py
+d1e9d6e85f2c1227960a1c1e2f50a93d  selfcheck.py
+d27c8d4ce25b46b602f2d607775dc631  self-check.txt
+9afec18d4042f975a255359ec8fa58bf  p-diff.txt
+acc7622f66a3f45c8121be0edacb4a69  diff-base-5e1666fe-to-candidate.diff
+dc14c49b3a7bd656d835900ac501b3fd  diff-hotel1B-7c178da0-to-candidate.diff
+02e84e93826ff2c7f3c832e50e5e86bb  checks/run_checks.sh
+c4b62244ef00ae9a901d100710d0e5c3  checks/compare.txt
+f5b79c9c1182a8e0191190c8ce519cf7  checks/text_check.out
+0fc11641013dd03e8d6b367d471af1e8  checks/text_check-base.out

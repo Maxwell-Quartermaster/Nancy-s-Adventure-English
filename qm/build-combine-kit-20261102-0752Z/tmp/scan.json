@@ -1,0 +1,5200 @@
+{
+"xrefs": [
+[
+7,
+"HOW TO USE THIS PROMPT",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+7,
+"HOW TO USE THIS PROMPT",
+"picPlan.svg",
+"data path",
+"picPlan.svg"
+],
+[
+7,
+"HOW TO USE THIS PROMPT",
+"picPlan.inlineSvg",
+"data path",
+"picPlan.inlineSvg"
+],
+[
+7,
+"HOW TO USE THIS PROMPT",
+"picPlan.trophySvg",
+"data path",
+"picPlan.trophySvg"
+],
+[
+7,
+"HOW TO USE THIS PROMPT",
+"picPlan.trophyInlineSvg",
+"data path",
+"picPlan.trophyInlineSvg"
+],
+[
+7,
+"HOW TO USE THIS PROMPT",
+"picPlan.uiSvg",
+"data path",
+"picPlan.uiSvg"
+],
+[
+19,
+"0. Why this exists",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+27,
+"1. Rules",
+"mapLayout",
+"data path",
+"mapLayout"
+],
+[
+27,
+"1. Rules",
+"uiText.comingNext",
+"data path",
+"uiText.comingNext"
+],
+[
+27,
+"1. Rules",
+"uiText.guardianLast",
+"data path",
+"uiText.guardianLast"
+],
+[
+27,
+"1. Rules",
+"boss.name",
+"data path (partial)",
+"zones[].boss.name"
+],
+[
+27,
+"1. Rules",
+"uiText.regionOpen",
+"data path",
+"uiText.regionOpen"
+],
+[
+30,
+"1. Rules",
+"uiText",
+"data path",
+"uiText"
+],
+[
+30,
+"1. Rules",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+30,
+"1. Rules",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+30,
+"1. Rules",
+"welcomeBack",
+"data path",
+"welcomeBack"
+],
+[
+30,
+"1. Rules",
+"restScreen",
+"data path",
+"restScreen"
+],
+[
+30,
+"1. Rules",
+"gotItText",
+"data path",
+"gotItText"
+],
+[
+34,
+"1. Rules",
+"uiText",
+"data path",
+"uiText"
+],
+[
+42,
+"2. Permanent standards (public web app)",
+"bh-11",
+"card id",
+"cards[] id=bh-11"
+],
+[
+42,
+"2. Permanent standards (public web app)",
+"reply",
+"data key",
+"cards[].reply"
+],
+[
+44,
+"2. Permanent standards (public web app)",
+"verses.graceRule",
+"data path",
+"verses.graceRule"
+],
+[
+45,
+"2. Permanent standards (public web app)",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+54,
+"3. Look: rugged, serious hand-inked adventure style",
+"picPlan.uiInlineSvg.tex",
+"data path",
+"picPlan.uiInlineSvg.tex"
+],
+[
+55,
+"3. Look: rugged, serious hand-inked adventure style",
+"tex",
+"data key",
+"picPlan.uiInlineSvg.tex"
+],
+[
+55,
+"3. Look: rugged, serious hand-inked adventure style",
+"title",
+"data key",
+"picPlan.uiInlineSvg.title | trophyRules.defaults.title"
+],
+[
+57,
+"3. Look: rugged, serious hand-inked adventure style",
+"picPlan",
+"data path",
+"picPlan"
+],
+[
+72,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.toMap",
+"data path",
+"uiText.toMap"
+],
+[
+72,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.back",
+"data path",
+"uiText.back"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.titleMap",
+"data path",
+"uiText.titleMap"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.character",
+"data path",
+"uiText.character"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.soundDuel",
+"data path",
+"uiText.soundDuel"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.scrolls",
+"data path",
+"uiText.scrolls"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"restScreen",
+"data path",
+"restScreen"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"name",
+"data key",
+"zones[].boss.name | zones[].name"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"nameTh",
+"data key",
+"zones[].nameTh"
+],
+[
+73,
+"3. Look: rugged, serious hand-inked adventure style",
+"zones[].boss.name",
+"data path",
+"zones[].boss.name"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.chooseHero",
+"data path",
+"uiText.chooseHero"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.heroName",
+"data path",
+"uiText.heroName"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.heroNancy",
+"data path",
+"uiText.heroNancy"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"sword",
+"data key",
+"picPlan.uiInlineSvg.sword"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"stone",
+"data key",
+"picPlan.uiInlineSvg.stone"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"picPlan.uiInlineSvg.aura",
+"data path",
+"picPlan.uiInlineSvg.aura"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"picPlan.uiInlineSvg.sam",
+"data path",
+"picPlan.uiInlineSvg.sam"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"nancy",
+"data key",
+"picPlan.uiInlineSvg.nancy"
+],
+[
+76,
+"3. Look: rugged, serious hand-inked adventure style",
+"color",
+"data key",
+"mapLayout.regions[].color"
+],
+[
+105,
+"3. Look: rugged, serious hand-inked adventure style",
+"svg:coin",
+"svg id",
+"picPlan svg lists / pic value svg:coin"
+],
+[
+121,
+"3. Look: rugged, serious hand-inked adventure style",
+"boss.name",
+"data path (partial)",
+"zones[].boss.name"
+],
+[
+121,
+"3. Look: rugged, serious hand-inked adventure style",
+"encouragement",
+"data path",
+"encouragement"
+],
+[
+121,
+"3. Look: rugged, serious hand-inked adventure style",
+"welcomeBack",
+"data path",
+"welcomeBack"
+],
+[
+121,
+"3. Look: rugged, serious hand-inked adventure style",
+"restSky",
+"data key",
+"trophyRules.defaults.restSky"
+],
+[
+123,
+"3. Look: rugged, serious hand-inked adventure style",
+"uiText.toMap",
+"data path",
+"uiText.toMap"
+],
+[
+131,
+"4. Tech",
+"uiText.useBackup",
+"data path",
+"uiText.useBackup"
+],
+[
+133,
+"4. Tech",
+"uiText.openFromHome",
+"data path",
+"uiText.openFromHome"
+],
+[
+134,
+"4. Tech",
+"uiText.updateReady",
+"data path",
+"uiText.updateReady"
+],
+[
+135,
+"4. Tech",
+"uiText.slowMode",
+"data path",
+"uiText.slowMode"
+],
+[
+136,
+"4. Tech",
+"uiText.continue",
+"data path",
+"uiText.continue"
+],
+[
+138,
+"4. Tech",
+"uiText.continue",
+"data path",
+"uiText.continue"
+],
+[
+142,
+"5. Pictures",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+143,
+"5. Pictures",
+"ph-07",
+"card id",
+"cards[] id=ph-07"
+],
+[
+143,
+"5. Pictures",
+"ph-12",
+"card id",
+"cards[] id=ph-12"
+],
+[
+143,
+"5. Pictures",
+"nm-04",
+"card id",
+"cards[] id=nm-04"
+],
+[
+143,
+"5. Pictures",
+"ms-22",
+"card id",
+"cards[] id=ms-22"
+],
+[
+143,
+"5. Pictures",
+"frame-oak",
+"trophy id",
+"trophies[] id=frame-oak"
+],
+[
+143,
+"5. Pictures",
+"ph-06",
+"card id",
+"cards[] id=ph-06"
+],
+[
+144,
+"5. Pictures",
+"picPlan.svg",
+"data path",
+"picPlan.svg"
+],
+[
+144,
+"5. Pictures",
+"high-five",
+"data key",
+"picPlan.svgNotes.high-five"
+],
+[
+144,
+"5. Pictures",
+"ms-31",
+"card id",
+"cards[] id=ms-31"
+],
+[
+144,
+"5. Pictures",
+"svg:hungry",
+"svg id",
+"picPlan svg lists / pic value svg:hungry"
+],
+[
+144,
+"5. Pictures",
+"svg:pray-kneel",
+"svg id",
+"picPlan svg lists / pic value svg:pray-kneel"
+],
+[
+144,
+"5. Pictures",
+"svg:tie",
+"svg id",
+"picPlan svg lists / pic value svg:tie"
+],
+[
+144,
+"5. Pictures",
+"ms-32",
+"card id (plain text)",
+"cards[] id=ms-32"
+],
+[
+146,
+"5. Pictures",
+"picPlan.svgNotes",
+"data path",
+"picPlan.svgNotes"
+],
+[
+146,
+"5. Pictures",
+"tex",
+"data key",
+"picPlan.uiInlineSvg.tex"
+],
+[
+147,
+"5. Pictures",
+"picPlan.inlineSvg",
+"data path",
+"picPlan.inlineSvg"
+],
+[
+147,
+"5. Pictures",
+"picPlan.trophyInlineSvg",
+"data path",
+"picPlan.trophyInlineSvg"
+],
+[
+149,
+"5. Pictures",
+"picPlan.inlineSvg",
+"data path",
+"picPlan.inlineSvg"
+],
+[
+150,
+"5. Pictures",
+"picPlan.svg",
+"data path",
+"picPlan.svg"
+],
+[
+150,
+"5. Pictures",
+"picPlan.inlineSvg",
+"data path",
+"picPlan.inlineSvg"
+],
+[
+150,
+"5. Pictures",
+"svgDrawnCount",
+"data key",
+"picPlan.svgDrawnCount"
+],
+[
+150,
+"5. Pictures",
+"picPlan.trophySvg",
+"data path",
+"picPlan.trophySvg"
+],
+[
+150,
+"5. Pictures",
+"picPlan.trophyInlineSvg",
+"data path",
+"picPlan.trophyInlineSvg"
+],
+[
+150,
+"5. Pictures",
+"trophySvgDrawnCount",
+"data key",
+"picPlan.trophySvgDrawnCount"
+],
+[
+150,
+"5. Pictures",
+"picPlan.uiSvg",
+"data path",
+"picPlan.uiSvg"
+],
+[
+150,
+"5. Pictures",
+"svg:chef-hat",
+"svg id",
+"picPlan svg lists / pic value svg:chef-hat"
+],
+[
+150,
+"5. Pictures",
+"zones[].emblem",
+"data path",
+"zones[].emblem"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"a",
+"data key",
+"soundDuel.pairs[].a"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"n",
+"data key",
+"trophies[].unlock.n"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"picPlan.uiInlineSvg.title",
+"data path",
+"picPlan.uiInlineSvg.title"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"uiText.letsGo",
+"data path",
+"uiText.letsGo"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"picPlan.uiInlineSvg.nancy",
+"data path",
+"picPlan.uiInlineSvg.nancy"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"uiText.greetMorning",
+"data path",
+"uiText.greetMorning"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"greetAfternoon",
+"uiText key",
+"uiText.greetAfternoon"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"greetEvening",
+"uiText key",
+"uiText.greetEvening"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"greetNight",
+"uiText key",
+"uiText.greetNight"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+157,
+"6.1 Sword screen (every launch)",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+159,
+"6.1 Sword screen (every launch)",
+"startZone",
+"data key",
+"zones[].startZone"
+],
+[
+164,
+"6.2 Main menu (the hub)",
+"uiText.gear",
+"data path",
+"uiText.gear"
+],
+[
+164,
+"6.2 Main menu (the hub)",
+"uiText.pantry",
+"data path",
+"uiText.pantry"
+],
+[
+164,
+"6.2 Main menu (the hub)",
+"uiText.titleMap",
+"data path",
+"uiText.titleMap"
+],
+[
+166,
+"6.2 Main menu (the hub)",
+"streakFlame",
+"data key",
+"picPlan.trophyStyle.streakFlame"
+],
+[
+166,
+"6.2 Main menu (the hub)",
+"encouragement",
+"data path",
+"encouragement"
+],
+[
+166,
+"6.2 Main menu (the hub)",
+"verses",
+"data path",
+"verses"
+],
+[
+166,
+"6.2 Main menu (the hub)",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+170,
+"6.3 Map (linear path, zero scroll)",
+"uiText.titleMap",
+"data path",
+"uiText.titleMap"
+],
+[
+171,
+"6.3 Map (linear path, zero scroll)",
+"uiText.back",
+"data path",
+"uiText.back"
+],
+[
+171,
+"6.3 Map (linear path, zero scroll)",
+"uiText.daysWithEnglish",
+"data path",
+"uiText.daysWithEnglish"
+],
+[
+171,
+"6.3 Map (linear path, zero scroll)",
+"picPlan.trophyStyle.streakFlame",
+"data path",
+"picPlan.trophyStyle.streakFlame"
+],
+[
+171,
+"6.3 Map (linear path, zero scroll)",
+"uiText.goldStars",
+"data path",
+"uiText.goldStars"
+],
+[
+173,
+"6.3 Map (linear path, zero scroll)",
+"mapLayout.regions",
+"data path",
+"mapLayout.regions"
+],
+[
+173,
+"6.3 Map (linear path, zero scroll)",
+"pathStyle",
+"data key",
+"mapLayout.pathStyle"
+],
+[
+174,
+"6.3 Map (linear path, zero scroll)",
+"uiText.boss",
+"data path",
+"uiText.boss"
+],
+[
+174,
+"6.3 Map (linear path, zero scroll)",
+"uiText.playAgain",
+"data path",
+"uiText.playAgain"
+],
+[
+174,
+"6.3 Map (linear path, zero scroll)",
+"uiText.updateReady",
+"data path",
+"uiText.updateReady"
+],
+[
+175,
+"6.3 Map (linear path, zero scroll)",
+"uiText.echoKnight",
+"data path",
+"uiText.echoKnight"
+],
+[
+175,
+"6.3 Map (linear path, zero scroll)",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"picPlan.uiInlineSvg.sam",
+"data path",
+"picPlan.uiInlineSvg.sam"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"nancy",
+"data key",
+"picPlan.uiInlineSvg.nancy"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"sword",
+"data key",
+"picPlan.uiInlineSvg.sword"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"stone",
+"data key",
+"picPlan.uiInlineSvg.stone"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"uiText.heroName",
+"data path",
+"uiText.heroName"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"uiText.heroNancy",
+"data path",
+"uiText.heroNancy"
+],
+[
+176,
+"6.3 Map (linear path, zero scroll)",
+"chooseHero",
+"uiText key",
+"uiText.chooseHero"
+],
+[
+177,
+"6.3 Map (linear path, zero scroll)",
+"mapTheme",
+"data key",
+"trophyRules.defaults.mapTheme"
+],
+[
+177,
+"6.3 Map (linear path, zero scroll)",
+"mapLanterns",
+"data key",
+"trophyRules.defaults.mapLanterns"
+],
+[
+177,
+"6.3 Map (linear path, zero scroll)",
+"mapPet",
+"data key",
+"trophyRules.defaults.mapPet"
+],
+[
+177,
+"6.3 Map (linear path, zero scroll)",
+"arrowTrail",
+"data key",
+"trophyRules.defaults.arrowTrail"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"thDef",
+"data key",
+"cards[].thDef"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"thDef",
+"data key",
+"cards[].thDef"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"ph-01",
+"card id (plain text)",
+"cards[] id=ph-01"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"ph-03",
+"card id (plain text)",
+"cards[] id=ph-03"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"ph-17",
+"card id (plain text)",
+"cards[] id=ph-17"
+],
+[
+185,
+"6.4 Question screen (picture-recall cards)",
+"sw-06",
+"card id (plain text)",
+"cards[] id=sw-06"
+],
+[
+187,
+"6.4 Question screen (picture-recall cards)",
+"uiText.wordsForYou",
+"data path",
+"uiText.wordsForYou"
+],
+[
+187,
+"6.4 Question screen (picture-recall cards)",
+"uiText.hintButton",
+"data path",
+"uiText.hintButton"
+],
+[
+191,
+"6.5 Reveal screen (after every picture-card answer)",
+"encouragement",
+"data path",
+"encouragement"
+],
+[
+191,
+"6.5 Reveal screen (after every picture-card answer)",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+191,
+"6.5 Reveal screen (after every picture-card answer)",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+192,
+"6.5 Reveal screen (after every picture-card answer)",
+"trapNote",
+"data key",
+"cards[].trapNote | meta.cardDefaults.trapNote"
+],
+[
+192,
+"6.5 Reveal screen (after every picture-card answer)",
+"faith",
+"data key",
+"cards[].faith | meta.cardDefaults.faith"
+],
+[
+193,
+"6.5 Reveal screen (after every picture-card answer)",
+"uiText.sayItOutLoud",
+"data path",
+"uiText.sayItOutLoud"
+],
+[
+194,
+"6.5 Reveal screen (after every picture-card answer)",
+"uiText.replay",
+"data path",
+"uiText.replay"
+],
+[
+194,
+"6.5 Reveal screen (after every picture-card answer)",
+"gotItText",
+"data path",
+"gotItText"
+],
+[
+199,
+"6.6 Character",
+"uiText.character",
+"data path",
+"uiText.character"
+],
+[
+199,
+"6.6 Character",
+"uiText.back",
+"data path",
+"uiText.back"
+],
+[
+199,
+"6.6 Character",
+"uiText.backup",
+"data path",
+"uiText.backup"
+],
+[
+199,
+"6.6 Character",
+"uiText.yourHero",
+"data path",
+"uiText.yourHero"
+],
+[
+199,
+"6.6 Character",
+"uiText.heroName",
+"data path",
+"uiText.heroName"
+],
+[
+199,
+"6.6 Character",
+"uiText.slowMode",
+"data path",
+"uiText.slowMode"
+],
+[
+199,
+"6.6 Character",
+"uiText.restWeeks",
+"data path",
+"uiText.restWeeks"
+],
+[
+199,
+"6.6 Character",
+"uiText.earnedShelf",
+"data path",
+"uiText.earnedShelf"
+],
+[
+199,
+"6.6 Character",
+"uiText.gems",
+"data path",
+"uiText.gems"
+],
+[
+199,
+"6.6 Character",
+"gear",
+"data key",
+"meta.trophiesByCat.gear | uiText.gear"
+],
+[
+199,
+"6.6 Character",
+"themes",
+"data key",
+"meta.trophiesByCat.themes | uiText.themes"
+],
+[
+199,
+"6.6 Character",
+"titles",
+"data key",
+"meta.trophiesByCat.titles | uiText.titles"
+],
+[
+199,
+"6.6 Character",
+"trophies[].cat",
+"data path",
+"trophies[].cat"
+],
+[
+199,
+"6.6 Character",
+"uiText.scrolls",
+"data path",
+"uiText.scrolls"
+],
+[
+199,
+"6.6 Character",
+"uiText.pantry",
+"data path",
+"uiText.pantry"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"uiText.backup",
+"data path",
+"uiText.backup"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"backup",
+"uiText key",
+"uiText.backup"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"needsMaxwell",
+"data path",
+"needsMaxwell"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"thaiReview",
+"uiText key",
+"uiText.thaiReview"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"uiText.restore",
+"data path",
+"uiText.restore"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"uiText.useBackup",
+"data path",
+"uiText.useBackup"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"uiText.backupCompare",
+"data path",
+"uiText.backupCompare"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"uiText.restore",
+"data path",
+"uiText.restore"
+],
+[
+203,
+"6.7 Backup view (for Maxwell)",
+"uiText.back",
+"data path",
+"uiText.back"
+],
+[
+207,
+"6.8 Scrolls",
+"uiText.scrolls",
+"data path",
+"uiText.scrolls"
+],
+[
+207,
+"6.8 Scrolls",
+"uiText.scrollsEmpty",
+"data path",
+"uiText.scrollsEmpty"
+],
+[
+207,
+"6.8 Scrolls",
+"verses.attribution",
+"data path",
+"verses.attribution"
+],
+[
+216,
+"7. Core loop",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+217,
+"7. Core loop",
+"pipFills",
+"data key",
+"trophyRules.unlockTypes.pipFills"
+],
+[
+219,
+"7. Core loop",
+"uiText.itStartsWith",
+"data path",
+"uiText.itStartsWith"
+],
+[
+220,
+"7. Core loop",
+"encouragement",
+"data path",
+"encouragement"
+],
+[
+220,
+"7. Core loop",
+"jesusWords",
+"data path",
+"jesusWords"
+],
+[
+220,
+"7. Core loop",
+"ref",
+"data key",
+"jesusWords[].ref | trophies[].ref | verses.rest.ref | verses.weekly[].ref | zones[].boss.scroll.ref"
+],
+[
+220,
+"7. Core loop",
+"uiText.jesusWords",
+"data path",
+"uiText.jesusWords"
+],
+[
+220,
+"7. Core loop",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+220,
+"7. Core loop",
+"uiText.jesusAllHeard",
+"data path",
+"uiText.jesusAllHeard"
+],
+[
+220,
+"7. Core loop",
+"jesusWordsFallback",
+"data path",
+"jesusWordsFallback"
+],
+[
+222,
+"7. Core loop",
+"meta.outings",
+"data path",
+"meta.outings"
+],
+[
+223,
+"7. Core loop",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+223,
+"7. Core loop",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.tapPrompt",
+"data path",
+"uiText.tapPrompt"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"bh-12",
+"card id (plain text)",
+"cards[] id=bh-12"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-01",
+"card id (plain text)",
+"cards[] id=cs-01"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-02",
+"card id (plain text)",
+"cards[] id=cs-02"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-04",
+"card id (plain text)",
+"cards[] id=cs-04"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-08",
+"card id (plain text)",
+"cards[] id=cs-08"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-11",
+"card id (plain text)",
+"cards[] id=cs-11"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-15",
+"card id (plain text)",
+"cards[] id=cs-15"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-22",
+"card id (plain text)",
+"cards[] id=cs-22"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-23",
+"card id (plain text)",
+"cards[] id=cs-23"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-24",
+"card id (plain text)",
+"cards[] id=cs-24"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"fd-02",
+"card id (plain text)",
+"cards[] id=fd-02"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ms-19",
+"card id (plain text)",
+"cards[] id=ms-19"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"nm-02",
+"card id (plain text)",
+"cards[] id=nm-02"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"nm-05",
+"card id (plain text)",
+"cards[] id=nm-05"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"nm-06",
+"card id (plain text)",
+"cards[] id=nm-06"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"nm-14",
+"card id (plain text)",
+"cards[] id=nm-14"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-02",
+"card id (plain text)",
+"cards[] id=ph-02"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-07",
+"card id (plain text)",
+"cards[] id=ph-07"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-08",
+"card id (plain text)",
+"cards[] id=ph-08"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-11",
+"card id (plain text)",
+"cards[] id=ph-11"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-17",
+"card id (plain text)",
+"cards[] id=ph-17"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-21",
+"card id (plain text)",
+"cards[] id=ph-21"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ph-24",
+"card id (plain text)",
+"cards[] id=ph-24"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"sw-15",
+"card id (plain text)",
+"cards[] id=sw-15"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"sw-18",
+"card id (plain text)",
+"cards[] id=sw-18"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"sw-19",
+"card id (plain text)",
+"cards[] id=sw-19"
+],
+[
+226,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"sw-24",
+"card id (plain text)",
+"cards[] id=sw-24"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.back",
+"data path",
+"uiText.back"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"mapLayout",
+"data path",
+"mapLayout"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"boss.name",
+"data path (partial)",
+"zones[].boss.name"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.replay",
+"data path",
+"uiText.replay"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"a",
+"data key",
+"soundDuel.pairs[].a"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"a",
+"data key",
+"soundDuel.pairs[].a"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"n",
+"data key",
+"trophies[].unlock.n"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ms-03",
+"card id",
+"cards[] id=ms-03"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ms-06",
+"card id",
+"cards[] id=ms-06"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ms-21",
+"card id",
+"cards[] id=ms-21"
+],
+[
+227,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"ms-23",
+"card id",
+"cards[] id=ms-23"
+],
+[
+228,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.listenFind",
+"data path",
+"uiText.listenFind"
+],
+[
+229,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.howMany",
+"data path",
+"uiText.howMany"
+],
+[
+229,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.howManyCows",
+"data path",
+"uiText.howManyCows"
+],
+[
+230,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"meta.sizeSort",
+"data path",
+"meta.sizeSort"
+],
+[
+230,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-23",
+"card id",
+"cards[] id=cs-23"
+],
+[
+230,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-24",
+"card id",
+"cards[] id=cs-24"
+],
+[
+230,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.bigOrSmall",
+"data path",
+"uiText.bigOrSmall"
+],
+[
+230,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-23",
+"card id",
+"cards[] id=cs-23"
+],
+[
+230,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"cs-24",
+"card id",
+"cards[] id=cs-24"
+],
+[
+231,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+231,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"uiText.spellIt",
+"data path",
+"uiText.spellIt"
+],
+[
+232,
+"7.1 Find and tap (t312u/t313u, council 3:52 AM)",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+238,
+"8. Say-it cards",
+"reply",
+"data key",
+"cards[].reply"
+],
+[
+238,
+"8. Say-it cards",
+"bh-11",
+"card id",
+"cards[] id=bh-11"
+],
+[
+239,
+"8. Say-it cards",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+239,
+"8. Say-it cards",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+244,
+"8.1 Two-answer card (pray or high five)",
+"ms-31",
+"card id",
+"cards[] id=ms-31"
+],
+[
+244,
+"8.1 Two-answer card (pray or high five)",
+"type",
+"data key",
+"cards[].type | jesusWords[].given.type | meta.cardDefaults.type | trophies[].unlock.type"
+],
+[
+246,
+"8.1 Two-answer card (pray or high five)",
+"prompts",
+"data key",
+"cards[].prompts"
+],
+[
+246,
+"8.1 Two-answer card (pray or high five)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+246,
+"8.1 Two-answer card (pray or high five)",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+247,
+"8.1 Two-answer card (pray or high five)",
+"choices",
+"data key",
+"cards[].choices | meta.cardDefaults.choices"
+],
+[
+247,
+"8.1 Two-answer card (pray or high five)",
+"uiText.pray",
+"data path",
+"uiText.pray"
+],
+[
+247,
+"8.1 Two-answer card (pray or high five)",
+"uiText.highFive",
+"data path",
+"uiText.highFive"
+],
+[
+247,
+"8.1 Two-answer card (pray or high five)",
+"picPlan.svgNotes",
+"data path",
+"picPlan.svgNotes"
+],
+[
+247,
+"8.1 Two-answer card (pray or high five)",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+247,
+"8.1 Two-answer card (pray or high five)",
+"key",
+"data key",
+"cards[].choices[].key | cards[].prompts[].key | zones[].key"
+],
+[
+248,
+"8.1 Two-answer card (pray or high five)",
+"uiText.done",
+"data path",
+"uiText.done"
+],
+[
+249,
+"8.1 Two-answer card (pray or high five)",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"fd-29",
+"card id",
+"cards[] id=fd-29"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"fd-38",
+"card id",
+"cards[] id=fd-38"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"uiText.serverAsks",
+"data path",
+"uiText.serverAsks"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"choices",
+"data key",
+"cards[].choices | meta.cardDefaults.choices"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+254,
+"8.2 Server Talk (`type: \"server-talk\"`, Nancy's Kitchen)",
+"trap",
+"data key",
+"cards[].trap | meta.cardDefaults.trap"
+],
+[
+260,
+"9. XP, levels, rewards",
+"zones[].boss.cards",
+"data path",
+"zones[].boss.cards"
+],
+[
+260,
+"9. XP, levels, rewards",
+"uiText.boss",
+"data path",
+"uiText.boss"
+],
+[
+260,
+"9. XP, levels, rewards",
+"boss.name",
+"data path (partial)",
+"zones[].boss.name"
+],
+[
+260,
+"9. XP, levels, rewards",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+260,
+"9. XP, levels, rewards",
+"uiText.toMap",
+"data path",
+"uiText.toMap"
+],
+[
+261,
+"9. XP, levels, rewards",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+261,
+"9. XP, levels, rewards",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+261,
+"9. XP, levels, rewards",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+261,
+"9. XP, levels, rewards",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+261,
+"9. XP, levels, rewards",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+262,
+"9. XP, levels, rewards",
+"trophies",
+"data path",
+"trophies"
+],
+[
+264,
+"9. XP, levels, rewards",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+268,
+"10. State, awards, resume",
+"goldStars",
+"uiText key",
+"uiText.goldStars"
+],
+[
+272,
+"10. State, awards, resume",
+"zones",
+"data path",
+"zones"
+],
+[
+272,
+"10. State, awards, resume",
+"mapLayout",
+"data path",
+"mapLayout"
+],
+[
+273,
+"10. State, awards, resume",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+281,
+"11. Character",
+"trophies",
+"data path",
+"trophies"
+],
+[
+281,
+"11. Character",
+"wt",
+"data key",
+"trophies[].wt"
+],
+[
+285,
+"11.1 Character screen (6.6)",
+"uiText.earnedShelf",
+"data path",
+"uiText.earnedShelf"
+],
+[
+285,
+"11.1 Character screen (6.6)",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+286,
+"11.1 Character screen (6.6)",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+286,
+"11.1 Character screen (6.6)",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+286,
+"11.1 Character screen (6.6)",
+"picPlan.trophyStyle",
+"data path",
+"picPlan.trophyStyle"
+],
+[
+286,
+"11.1 Character screen (6.6)",
+"gems",
+"data key",
+"meta.trophiesByCat.gems | picPlan.trophyStyle.gems | uiText.gems"
+],
+[
+286,
+"11.1 Character screen (6.6)",
+"enlarged",
+"data key",
+"picPlan.trophyStyle.enlarged"
+],
+[
+287,
+"11.1 Character screen (6.6)",
+"uiText.wearing",
+"data path",
+"uiText.wearing"
+],
+[
+288,
+"11.1 Character screen (6.6)",
+"uiText.unlocksAtLevel",
+"data path",
+"uiText.unlocksAtLevel"
+],
+[
+288,
+"11.1 Character screen (6.6)",
+"unlocksPips",
+"uiText key",
+"uiText.unlocksPips"
+],
+[
+288,
+"11.1 Character screen (6.6)",
+"unlocksZoneRight",
+"uiText key",
+"uiText.unlocksZoneRight"
+],
+[
+288,
+"11.1 Character screen (6.6)",
+"unlocksBosses",
+"uiText key",
+"uiText.unlocksBosses"
+],
+[
+288,
+"11.1 Character screen (6.6)",
+"unlock.type",
+"data path (partial)",
+"trophies[].unlock.type"
+],
+[
+289,
+"11.1 Character screen (6.6)",
+"unlock.type",
+"data path (partial)",
+"trophies[].unlock.type"
+],
+[
+292,
+"11.1 Character screen (6.6)",
+"uiText.wearIt",
+"data path",
+"uiText.wearIt"
+],
+[
+292,
+"11.1 Character screen (6.6)",
+"slot",
+"data key",
+"pantry.items[].slot | trophies[].slot"
+],
+[
+292,
+"11.1 Character screen (6.6)",
+"cardFrame",
+"data key",
+"trophyRules.defaults.cardFrame"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"meta.weaponTiers",
+"data path",
+"meta.weaponTiers"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.gear",
+"data path",
+"uiText.gear"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.nextWeapon",
+"data path",
+"uiText.nextWeapon"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.weaponEarnAt",
+"data path",
+"uiText.weaponEarnAt"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.weaponInShop",
+"data path",
+"uiText.weaponInShop"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"trophyRules.tierStars",
+"data path",
+"trophyRules.tierStars"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"getFor",
+"uiText key",
+"uiText.getFor"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.getFor",
+"data path",
+"uiText.getFor"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.weaponUse",
+"data path",
+"uiText.weaponUse"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.weaponInUse",
+"data path",
+"uiText.weaponInUse"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"sword-iron",
+"trophy id",
+"trophies[] id=sword-iron"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.weaponNew",
+"data path",
+"uiText.weaponNew"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"cleaver-bloodtide",
+"trophy id",
+"trophies[] id=cleaver-bloodtide"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"greatsword-dragonbane",
+"trophy id",
+"trophies[] id=greatsword-dragonbane"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"uiText.weaponNew",
+"data path",
+"uiText.weaponNew"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"sword-sunforged",
+"trophy id",
+"trophies[] id=sword-sunforged"
+],
+[
+293,
+"11.1 Character screen (6.6)",
+"meta.bonusGems",
+"data path",
+"meta.bonusGems"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"trophyRules.theme",
+"data path",
+"trophyRules.theme"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"2",
+"data key",
+"meta.weaponTiers.2"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"meta.weaponBonus",
+"data path",
+"meta.weaponBonus"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"uiText.weapon",
+"data path",
+"uiText.weapon"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"bonusRespell",
+"uiText key",
+"uiText.bonusRespell"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"bonusHint",
+"uiText key",
+"uiText.bonusHint"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"2",
+"data key",
+"meta.weaponTiers.2"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"bonusRetry",
+"uiText key",
+"uiText.bonusRetry"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"2",
+"data key",
+"meta.weaponTiers.2"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"bonusStar",
+"uiText key",
+"uiText.bonusStar"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"2",
+"data key",
+"meta.weaponTiers.2"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"bonusStreak",
+"uiText key",
+"uiText.bonusStreak"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"2",
+"data key",
+"meta.weaponTiers.2"
+],
+[
+294,
+"11.1 Character screen (6.6)",
+"bonusSlow",
+"uiText key",
+"uiText.bonusSlow"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"uiText.gear",
+"data path",
+"uiText.gear"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"trophyRules.rows",
+"data path",
+"trophyRules.rows"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"sword-iron",
+"trophy id",
+"trophies[] id=sword-iron"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"typeNames",
+"data key",
+"trophyRules.typeNames"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"tier",
+"data key",
+"trophies[].tier"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"weaponParts",
+"data key",
+"picPlan.weaponParts"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"tierColor",
+"data key",
+"trophyRules.tierColor"
+],
+[
+295,
+"11.1 Character screen (6.6)",
+"uiText.getFor",
+"data path",
+"uiText.getFor"
+],
+[
+296,
+"11.1 Character screen (6.6)",
+"trophyRules.giftOf",
+"data path",
+"trophyRules.giftOf"
+],
+[
+296,
+"11.1 Character screen (6.6)",
+"uiText.weaponNew",
+"data path",
+"uiText.weaponNew"
+],
+[
+296,
+"11.1 Character screen (6.6)",
+"unlock.type",
+"data path (partial)",
+"trophies[].unlock.type"
+],
+[
+296,
+"11.1 Character screen (6.6)",
+"guardian",
+"data key",
+"trophyRules.unlockTypes.guardian"
+],
+[
+296,
+"11.1 Character screen (6.6)",
+"uiText.giftFrom",
+"data path",
+"uiText.giftFrom"
+],
+[
+296,
+"11.1 Character screen (6.6)",
+"boss.name",
+"data path (partial)",
+"zones[].boss.name"
+],
+[
+297,
+"11.1 Character screen (6.6)",
+"word",
+"data key",
+"trophies[].word"
+],
+[
+297,
+"11.1 Character screen (6.6)",
+"ref",
+"data key",
+"jesusWords[].ref | trophies[].ref | verses.rest.ref | verses.weekly[].ref | zones[].boss.scroll.ref"
+],
+[
+298,
+"11.1 Character screen (6.6)",
+"uiText.gear",
+"data path",
+"uiText.gear"
+],
+[
+299,
+"11.1 Character screen (6.6)",
+"trophyRules.hands",
+"data path",
+"trophyRules.hands"
+],
+[
+299,
+"11.1 Character screen (6.6)",
+"one",
+"data key",
+"trophyRules.hands.one"
+],
+[
+299,
+"11.1 Character screen (6.6)",
+"shield-sunrise",
+"trophy id",
+"trophies[] id=shield-sunrise"
+],
+[
+299,
+"11.1 Character screen (6.6)",
+"two",
+"data key",
+"trophyRules.hands.two"
+],
+[
+299,
+"11.1 Character screen (6.6)",
+"picPlan.weaponParts",
+"data path",
+"picPlan.weaponParts"
+],
+[
+301,
+"11.1 Character screen (6.6)",
+"wt",
+"data key",
+"trophies[].wt"
+],
+[
+301,
+"11.1 Character screen (6.6)",
+"trophyRules.classes",
+"data path",
+"trophyRules.classes"
+],
+[
+301,
+"11.1 Character screen (6.6)",
+"uiText.classDefender",
+"data path",
+"uiText.classDefender"
+],
+[
+301,
+"11.1 Character screen (6.6)",
+"classKnight",
+"data key",
+"trophyRules.classes.classKnight | uiText.classKnight"
+],
+[
+301,
+"11.1 Character screen (6.6)",
+"classWarrior",
+"data key",
+"trophyRules.classes.classWarrior | uiText.classWarrior"
+],
+[
+301,
+"11.1 Character screen (6.6)",
+"title",
+"data key",
+"picPlan.uiInlineSvg.title | trophyRules.defaults.title"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"weapon",
+"data key",
+"trophyRules.defaults.weapon | uiText.weapon"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"cape",
+"data key",
+"trophyRules.defaults.cape"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"tunic",
+"data key",
+"trophyRules.defaults.tunic"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"avatarFrame",
+"data key",
+"trophyRules.defaults.avatarFrame"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"featuredGem",
+"data key",
+"trophyRules.defaults.featuredGem"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"title",
+"data key",
+"picPlan.uiInlineSvg.title | trophyRules.defaults.title"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"mapTheme",
+"data key",
+"trophyRules.defaults.mapTheme"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"mapLanterns",
+"data key",
+"trophyRules.defaults.mapLanterns"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"mapPet",
+"data key",
+"trophyRules.defaults.mapPet"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"arrowTrail",
+"data key",
+"trophyRules.defaults.arrowTrail"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"cardFrame",
+"data key",
+"trophyRules.defaults.cardFrame"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"restSky",
+"data key",
+"trophyRules.defaults.restSky"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"auraRing",
+"data key",
+"trophyRules.defaults.auraRing"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"swordSplash",
+"data key",
+"trophyRules.defaults.swordSplash"
+],
+[
+302,
+"11.1 Character screen (6.6)",
+"sparkle",
+"trophy id",
+"trophies[] id=sparkle"
+],
+[
+303,
+"11.1 Character screen (6.6)",
+"sling-shepherd",
+"trophy id",
+"trophies[] id=sling-shepherd"
+],
+[
+303,
+"11.1 Character screen (6.6)",
+"staff-shepherd",
+"trophy id",
+"trophies[] id=staff-shepherd"
+],
+[
+303,
+"11.1 Character screen (6.6)",
+"hammer-builder",
+"trophy id",
+"trophies[] id=hammer-builder"
+],
+[
+303,
+"11.1 Character screen (6.6)",
+"uiText.weaponGift",
+"data path",
+"uiText.weaponGift"
+],
+[
+304,
+"11.1 Character screen (6.6)",
+"sword-sunforged",
+"trophy id",
+"trophies[] id=sword-sunforged"
+],
+[
+304,
+"11.1 Character screen (6.6)",
+"unlock.type",
+"data path (partial)",
+"trophies[].unlock.type"
+],
+[
+304,
+"11.1 Character screen (6.6)",
+"secret",
+"data key",
+"trophyRules.unlockTypes.secret"
+],
+[
+304,
+"11.1 Character screen (6.6)",
+"uiText.secretCaption",
+"data path",
+"uiText.secretCaption"
+],
+[
+304,
+"11.1 Character screen (6.6)",
+"uiText.secretReveal",
+"data path",
+"uiText.secretReveal"
+],
+[
+309,
+"11.2 Unlocks",
+"trophies[].unlock",
+"data path",
+"trophies[].unlock"
+],
+[
+309,
+"11.2 Unlocks",
+"start",
+"data key",
+"trophyRules.unlockTypes.start"
+],
+[
+309,
+"11.2 Unlocks",
+"level",
+"data key",
+"trophyRules.unlockTypes.level"
+],
+[
+309,
+"11.2 Unlocks",
+"pipFills",
+"data key",
+"trophyRules.unlockTypes.pipFills"
+],
+[
+309,
+"11.2 Unlocks",
+"zoneRight",
+"data key",
+"trophyRules.unlockTypes.zoneRight"
+],
+[
+309,
+"11.2 Unlocks",
+"n",
+"data key",
+"trophies[].unlock.n"
+],
+[
+309,
+"11.2 Unlocks",
+"zone",
+"data key",
+"meta.audioClips.zone | trophies[].unlock.zone"
+],
+[
+309,
+"11.2 Unlocks",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+309,
+"11.2 Unlocks",
+"guardian",
+"data key",
+"trophyRules.unlockTypes.guardian"
+],
+[
+309,
+"11.2 Unlocks",
+"zone",
+"data key",
+"meta.audioClips.zone | trophies[].unlock.zone"
+],
+[
+309,
+"11.2 Unlocks",
+"secret",
+"data key",
+"trophyRules.unlockTypes.secret"
+],
+[
+310,
+"11.2 Unlocks",
+"uiText.wearIt",
+"data path",
+"uiText.wearIt"
+],
+[
+310,
+"11.2 Unlocks",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+315,
+"11.3 Reconcile on launch",
+"trophies",
+"data path",
+"trophies"
+],
+[
+315,
+"11.3 Reconcile on launch",
+"pantry.items",
+"data path",
+"pantry.items"
+],
+[
+319,
+"11.4 Shop",
+"uiText.pantry",
+"data path",
+"uiText.pantry"
+],
+[
+319,
+"11.4 Shop",
+"pantry.items",
+"data path",
+"pantry.items"
+],
+[
+319,
+"11.4 Shop",
+"tint",
+"data key",
+"pantry.items[].tint"
+],
+[
+319,
+"11.4 Shop",
+"uiText.wearIt",
+"data path",
+"uiText.wearIt"
+],
+[
+319,
+"11.4 Shop",
+"uiText.getFor",
+"data path",
+"uiText.getFor"
+],
+[
+319,
+"11.4 Shop",
+"stars",
+"data key",
+"pantry.items[].stars"
+],
+[
+319,
+"11.4 Shop",
+"slot",
+"data key",
+"pantry.items[].slot | trophies[].slot"
+],
+[
+319,
+"11.4 Shop",
+"pantry.earn",
+"data path",
+"pantry.earn"
+],
+[
+323,
+"12. Sound Duel",
+"uiText.echoKnight",
+"data path",
+"uiText.echoKnight"
+],
+[
+323,
+"12. Sound Duel",
+"pics",
+"data key",
+"meta.pics | soundDuel.pairs[].pics"
+],
+[
+323,
+"12. Sound Duel",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+324,
+"12. Sound Duel",
+"uiText.hearItAgain",
+"data path",
+"uiText.hearItAgain"
+],
+[
+325,
+"12. Sound Duel",
+"uiText.roundDone",
+"data path",
+"uiText.roundDone"
+],
+[
+325,
+"12. Sound Duel",
+"uiText.toMap",
+"data path",
+"uiText.toMap"
+],
+[
+329,
+"13. Day streak",
+"uiText.daysWithEnglish",
+"data path",
+"uiText.daysWithEnglish"
+],
+[
+329,
+"13. Day streak",
+"welcomeBack",
+"data path",
+"welcomeBack"
+],
+[
+329,
+"13. Day streak",
+"uiText.restWeeks",
+"data path",
+"uiText.restWeeks"
+],
+[
+333,
+"14. Rest screen (optional victory lap)",
+"restScreen",
+"data path",
+"restScreen"
+],
+[
+333,
+"14. Rest screen (optional victory lap)",
+"verses.rest",
+"data path",
+"verses.rest"
+],
+[
+333,
+"14. Rest screen (optional victory lap)",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+333,
+"14. Rest screen (optional victory lap)",
+"uiText.keepGoing",
+"data path",
+"uiText.keepGoing"
+],
+[
+333,
+"14. Rest screen (optional victory lap)",
+"uiText.restNow",
+"data path",
+"uiText.restNow"
+],
+[
+338,
+"15. Bible verses",
+"zones[].boss.scroll",
+"data path",
+"zones[].boss.scroll"
+],
+[
+339,
+"15. Bible verses",
+"verses.weeklyStart",
+"data path",
+"verses.weeklyStart"
+],
+[
+339,
+"15. Bible verses",
+"meta.dailyVerses",
+"data path",
+"meta.dailyVerses"
+],
+[
+339,
+"15. Bible verses",
+"verses.weekly",
+"data path",
+"verses.weekly"
+],
+[
+339,
+"15. Bible verses",
+"rule",
+"data key",
+"picPlan.rule"
+],
+[
+339,
+"15. Bible verses",
+"verses[]",
+"data path",
+"verses"
+],
+[
+339,
+"15. Bible verses",
+"ref",
+"data key",
+"jesusWords[].ref | trophies[].ref | verses.rest.ref | verses.weekly[].ref | zones[].boss.scroll.ref"
+],
+[
+339,
+"15. Bible verses",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+339,
+"15. Bible verses",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+339,
+"15. Bible verses",
+"enUrl",
+"data key",
+"jesusWords[].enUrl | verses.rest.enUrl | verses.weekly[].enUrl | zones[].boss.scroll.enUrl"
+],
+[
+339,
+"15. Bible verses",
+"thUrl",
+"data key",
+"jesusWords[].thUrl | verses.rest.thUrl | verses.weekly[].thUrl | zones[].boss.scroll.thUrl"
+],
+[
+339,
+"15. Bible verses",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+339,
+"15. Bible verses",
+"verses.rotation",
+"data path",
+"verses.rotation"
+],
+[
+339,
+"15. Bible verses",
+"verifiedBy",
+"data key",
+"jesusWords[].verifiedBy"
+],
+[
+341,
+"15. Bible verses",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+341,
+"15. Bible verses",
+"uiText.askMax",
+"data path",
+"uiText.askMax"
+],
+[
+342,
+"15. Bible verses",
+"uiText.verseOfDay",
+"data path",
+"uiText.verseOfDay"
+],
+[
+342,
+"15. Bible verses",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+342,
+"15. Bible verses",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+342,
+"15. Bible verses",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+342,
+"15. Bible verses",
+"uiText.replay",
+"data path",
+"uiText.replay"
+],
+[
+342,
+"15. Bible verses",
+"gotItText",
+"data path",
+"gotItText"
+],
+[
+342,
+"15. Bible verses",
+"welcomeBack",
+"data path",
+"welcomeBack"
+],
+[
+343,
+"15. Bible verses",
+"uiText.dailyGift",
+"data path",
+"uiText.dailyGift"
+],
+[
+344,
+"15. Bible verses",
+"enSource",
+"data key",
+"jesusWords[].enSource | verses.rest.enSource | verses.weekly[].enSource | zones[].boss.scroll.enSource"
+],
+[
+344,
+"15. Bible verses",
+"enUrl",
+"data key",
+"jesusWords[].enUrl | verses.rest.enUrl | verses.weekly[].enUrl | zones[].boss.scroll.enUrl"
+],
+[
+344,
+"15. Bible verses",
+"thUrl",
+"data key",
+"jesusWords[].thUrl | verses.rest.thUrl | verses.weekly[].thUrl | zones[].boss.scroll.thUrl"
+],
+[
+344,
+"15. Bible verses",
+"verses.decided",
+"data path",
+"verses.decided"
+],
+[
+344,
+"15. Bible verses",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+344,
+"15. Bible verses",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+344,
+"15. Bible verses",
+"verses.textRule",
+"data path",
+"verses.textRule"
+],
+[
+344,
+"15. Bible verses",
+"verses.ttsRule",
+"data path",
+"verses.ttsRule"
+],
+[
+345,
+"15. Bible verses",
+"jesusWords",
+"data path",
+"jesusWords"
+],
+[
+345,
+"15. Bible verses",
+"verifiedBy",
+"data key",
+"jesusWords[].verifiedBy"
+],
+[
+345,
+"15. Bible verses",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+346,
+"15. Bible verses",
+"verses.attribution",
+"data path",
+"verses.attribution"
+],
+[
+346,
+"15. Bible verses",
+"esv",
+"data key",
+"verses.attribution.esv"
+],
+[
+346,
+"15. Bible verses",
+"thsv11",
+"data key",
+"verses.attribution.thsv11"
+],
+[
+346,
+"15. Bible verses",
+"esvSource",
+"data key",
+"verses.attribution.esvSource"
+],
+[
+346,
+"15. Bible verses",
+"thsv11Source",
+"data key",
+"verses.attribution.thsv11Source"
+],
+[
+346,
+"15. Bible verses",
+"verses.attribution.esvTag",
+"data path",
+"verses.attribution.esvTag"
+],
+[
+346,
+"15. Bible verses",
+"thsv11Tag",
+"data key",
+"verses.attribution.thsv11Tag"
+],
+[
+346,
+"15. Bible verses",
+"tagRule",
+"data key",
+"verses.attribution.tagRule"
+],
+[
+351,
+"16. Cards",
+"zones[]",
+"data path",
+"zones"
+],
+[
+351,
+"16. Cards",
+"prefix",
+"data key",
+"zones[].prefix"
+],
+[
+351,
+"16. Cards",
+"id",
+"data key",
+"cards[].id | mapLayout.regions[].id | pantry.items[].id | trophies[].id"
+],
+[
+351,
+"16. Cards",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+351,
+"16. Cards",
+"hint",
+"data key",
+"cards[].hint"
+],
+[
+351,
+"16. Cards",
+"word",
+"data key",
+"trophies[].word"
+],
+[
+351,
+"16. Cards",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+351,
+"16. Cards",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+351,
+"16. Cards",
+"type",
+"data key",
+"cards[].type | jesusWords[].given.type | meta.cardDefaults.type | trophies[].unlock.type"
+],
+[
+351,
+"16. Cards",
+"meta.typeByZone",
+"data path",
+"meta.typeByZone"
+],
+[
+351,
+"16. Cards",
+"picture",
+"data key",
+"meta.modeByType.picture"
+],
+[
+352,
+"16. Cards",
+"meta.cardDefaults",
+"data path",
+"meta.cardDefaults"
+],
+[
+352,
+"16. Cards",
+"fill",
+"data key",
+"cards[].fill | meta.cardDefaults.fill"
+],
+[
+352,
+"16. Cards",
+"easy",
+"data key",
+"cards[].easy | meta.cardDefaults.easy"
+],
+[
+352,
+"16. Cards",
+"faith",
+"data key",
+"cards[].faith | meta.cardDefaults.faith"
+],
+[
+352,
+"16. Cards",
+"nursePhrase",
+"data key",
+"cards[].nursePhrase | meta.cardDefaults.nursePhrase"
+],
+[
+352,
+"16. Cards",
+"personal",
+"data key",
+"cards[].personal | meta.cardDefaults.personal"
+],
+[
+352,
+"16. Cards",
+"tag",
+"data key",
+"cards[].tag | meta.cardDefaults.tag"
+],
+[
+352,
+"16. Cards",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+352,
+"16. Cards",
+"trap",
+"data key",
+"cards[].trap | meta.cardDefaults.trap"
+],
+[
+352,
+"16. Cards",
+"trapNote",
+"data key",
+"cards[].trapNote | meta.cardDefaults.trapNote"
+],
+[
+352,
+"16. Cards",
+"choices",
+"data key",
+"cards[].choices | meta.cardDefaults.choices"
+],
+[
+352,
+"16. Cards",
+"type",
+"data key",
+"cards[].type | jesusWords[].given.type | meta.cardDefaults.type | trophies[].unlock.type"
+],
+[
+352,
+"16. Cards",
+"picture",
+"data key",
+"meta.modeByType.picture"
+],
+[
+352,
+"16. Cards",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+352,
+"16. Cards",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+352,
+"16. Cards",
+"meta.modeByType",
+"data path",
+"meta.modeByType"
+],
+[
+352,
+"16. Cards",
+"thStatus",
+"data key",
+"cards[].reply.thStatus | cards[].thStatus"
+],
+[
+352,
+"16. Cards",
+"meta.cardThStatusDefault",
+"data path",
+"meta.cardThStatusDefault"
+],
+[
+352,
+"16. Cards",
+"pantry",
+"data path",
+"pantry"
+],
+[
+352,
+"16. Cards",
+"thStatus",
+"data key",
+"cards[].reply.thStatus | cards[].thStatus"
+],
+[
+352,
+"16. Cards",
+"meta.thStatusDefault",
+"data path",
+"meta.thStatusDefault"
+],
+[
+353,
+"16. Cards",
+"trapNote",
+"data key",
+"cards[].trapNote | meta.cardDefaults.trapNote"
+],
+[
+353,
+"16. Cards",
+"uiText.example",
+"data path",
+"uiText.example"
+],
+[
+354,
+"16. Cards",
+"picture",
+"data key",
+"meta.modeByType.picture"
+],
+[
+354,
+"16. Cards",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+354,
+"16. Cards",
+"hint",
+"data key",
+"cards[].hint"
+],
+[
+354,
+"16. Cards",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+354,
+"16. Cards",
+"trap",
+"data key",
+"cards[].trap | meta.cardDefaults.trap"
+],
+[
+355,
+"16. Cards",
+"say-it",
+"data key",
+"meta.modeByType.say-it"
+],
+[
+356,
+"16. Cards",
+"two-answer",
+"data key",
+"meta.modeByType.two-answer"
+],
+[
+356,
+"16. Cards",
+"choices",
+"data key",
+"cards[].choices | meta.cardDefaults.choices"
+],
+[
+356,
+"16. Cards",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+356,
+"16. Cards",
+"key",
+"data key",
+"cards[].choices[].key | cards[].prompts[].key | zones[].key"
+],
+[
+356,
+"16. Cards",
+"pic",
+"data key",
+"cards[].choices[].pic | cards[].pic | pantry.items[].pic | trophies[].pic"
+],
+[
+356,
+"16. Cards",
+"prompts",
+"data key",
+"cards[].prompts"
+],
+[
+356,
+"16. Cards",
+"key",
+"data key",
+"cards[].choices[].key | cards[].prompts[].key | zones[].key"
+],
+[
+356,
+"16. Cards",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+356,
+"16. Cards",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+356,
+"16. Cards",
+"respell",
+"data key",
+"cards[].prompts[].respell | cards[].respell"
+],
+[
+356,
+"16. Cards",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+357,
+"16. Cards",
+"bh-01",
+"card id",
+"cards[] id=bh-01"
+],
+[
+357,
+"16. Cards",
+"bh-10",
+"card id",
+"cards[] id=bh-10"
+],
+[
+358,
+"16. Cards",
+"zones",
+"data path",
+"zones"
+],
+[
+358,
+"16. Cards",
+"emblem",
+"data key",
+"zones[].emblem"
+],
+[
+358,
+"16. Cards",
+"zoneClip",
+"data key",
+"zones[].zoneClip"
+],
+[
+358,
+"16. Cards",
+"startZone",
+"data key",
+"zones[].startZone"
+],
+[
+358,
+"16. Cards",
+"prefix",
+"data key",
+"zones[].prefix"
+],
+[
+358,
+"16. Cards",
+"boss",
+"data key",
+"meta.audioClips.boss | uiText.boss | zones[].boss"
+],
+[
+358,
+"16. Cards",
+"name",
+"data key",
+"zones[].boss.name | zones[].name"
+],
+[
+358,
+"16. Cards",
+"cards",
+"data path",
+"cards"
+],
+[
+358,
+"16. Cards",
+"clip",
+"data key",
+"zones[].boss.clip"
+],
+[
+358,
+"16. Cards",
+"scroll",
+"data key",
+"zones[].boss.scroll"
+],
+[
+358,
+"16. Cards",
+"soundDuel.pairs",
+"data path",
+"soundDuel.pairs"
+],
+[
+358,
+"16. Cards",
+"a",
+"data key",
+"soundDuel.pairs[].a"
+],
+[
+358,
+"16. Cards",
+"b",
+"data key",
+"soundDuel.pairs[].b"
+],
+[
+358,
+"16. Cards",
+"verses",
+"data path",
+"verses"
+],
+[
+358,
+"16. Cards",
+"jesusWords",
+"data path",
+"jesusWords"
+],
+[
+358,
+"16. Cards",
+"given",
+"data key",
+"jesusWords[].given"
+],
+[
+358,
+"16. Cards",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+358,
+"16. Cards",
+"thGlossStatus",
+"data key",
+"jesusWords[].thGlossStatus"
+],
+[
+358,
+"16. Cards",
+"thGlossBy",
+"data key",
+"jesusWords[].thGlossBy"
+],
+[
+358,
+"16. Cards",
+"jesusWordsFallback",
+"data path",
+"jesusWordsFallback"
+],
+[
+358,
+"16. Cards",
+"picPlan",
+"data path",
+"picPlan"
+],
+[
+358,
+"16. Cards",
+"inlineSvg",
+"data key",
+"picPlan.inlineSvg"
+],
+[
+358,
+"16. Cards",
+"trophyInlineSvg",
+"data key",
+"picPlan.trophyInlineSvg"
+],
+[
+358,
+"16. Cards",
+"uiInlineSvg",
+"data key",
+"picPlan.uiInlineSvg"
+],
+[
+358,
+"16. Cards",
+"svgDrawnCount",
+"data key",
+"picPlan.svgDrawnCount"
+],
+[
+358,
+"16. Cards",
+"trophySvgDrawnCount",
+"data key",
+"picPlan.trophySvgDrawnCount"
+],
+[
+358,
+"16. Cards",
+"trophies",
+"data path",
+"trophies"
+],
+[
+358,
+"16. Cards",
+"trophyRules",
+"data path",
+"trophyRules"
+],
+[
+358,
+"16. Cards",
+"mapLayout",
+"data path",
+"mapLayout"
+],
+[
+358,
+"16. Cards",
+"regions",
+"data key",
+"mapLayout.regions | trophies[].unlock.regions"
+],
+[
+358,
+"16. Cards",
+"zones",
+"data path",
+"zones"
+],
+[
+358,
+"16. Cards",
+"color",
+"data key",
+"mapLayout.regions[].color"
+],
+[
+358,
+"16. Cards",
+"accent",
+"data key",
+"mapLayout.regions[].accent"
+],
+[
+358,
+"16. Cards",
+"paths",
+"data key",
+"mapLayout.paths"
+],
+[
+358,
+"16. Cards",
+"pathStyle",
+"data key",
+"mapLayout.pathStyle"
+],
+[
+358,
+"16. Cards",
+"uiText",
+"data path",
+"uiText"
+],
+[
+358,
+"16. Cards",
+"encouragement",
+"data path",
+"encouragement"
+],
+[
+358,
+"16. Cards",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+358,
+"16. Cards",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+358,
+"16. Cards",
+"welcomeBack",
+"data path",
+"welcomeBack"
+],
+[
+358,
+"16. Cards",
+"restScreen",
+"data path",
+"restScreen"
+],
+[
+358,
+"16. Cards",
+"gotItText",
+"data path",
+"gotItText"
+],
+[
+358,
+"16. Cards",
+"rewardClips",
+"data path",
+"rewardClips"
+],
+[
+358,
+"16. Cards",
+"needsMaxwell",
+"data path",
+"needsMaxwell"
+],
+[
+358,
+"16. Cards",
+"meta",
+"data path",
+"meta"
+],
+[
+360,
+"16. Cards",
+"syl",
+"data key",
+"cards[].syl"
+],
+[
+363,
+"16. Cards",
+"ms-04",
+"card id",
+"cards[] id=ms-04"
+],
+[
+363,
+"16. Cards",
+"ms-05",
+"card id",
+"cards[] id=ms-05"
+],
+[
+363,
+"16. Cards",
+"ms-06",
+"card id",
+"cards[] id=ms-06"
+],
+[
+364,
+"16. Cards",
+"ms-06",
+"card id",
+"cards[] id=ms-06"
+],
+[
+364,
+"16. Cards",
+"bh-14",
+"card id",
+"cards[] id=bh-14"
+],
+[
+369,
+"17. Personal card slots",
+"bh-30",
+"card id",
+"cards[] id=bh-30"
+],
+[
+369,
+"17. Personal card slots",
+"ms-28",
+"card id",
+"cards[] id=ms-28"
+],
+[
+369,
+"17. Personal card slots",
+"ms-29",
+"card id",
+"cards[] id=ms-29"
+],
+[
+369,
+"17. Personal card slots",
+"ms-30",
+"card id",
+"cards[] id=ms-30"
+],
+[
+371,
+"17. Personal card slots",
+"needsMaxwell",
+"data path",
+"needsMaxwell"
+],
+[
+371,
+"17. Personal card slots",
+"ms-04",
+"card id",
+"cards[] id=ms-04"
+],
+[
+371,
+"17. Personal card slots",
+"ms-05",
+"card id",
+"cards[] id=ms-05"
+],
+[
+371,
+"17. Personal card slots",
+"ms-06",
+"card id",
+"cards[] id=ms-06"
+],
+[
+371,
+"17. Personal card slots",
+"bh-30",
+"card id",
+"cards[] id=bh-30"
+],
+[
+371,
+"17. Personal card slots",
+"ms-28",
+"card id",
+"cards[] id=ms-28"
+],
+[
+371,
+"17. Personal card slots",
+"ms-29",
+"card id",
+"cards[] id=ms-29"
+],
+[
+371,
+"17. Personal card slots",
+"ms-30",
+"card id",
+"cards[] id=ms-30"
+],
+[
+375,
+"18. Thai Review Queue",
+"thDef",
+"data key",
+"cards[].thDef"
+],
+[
+375,
+"18. Thai Review Queue",
+"gotItText",
+"data path",
+"gotItText"
+],
+[
+375,
+"18. Thai Review Queue",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+375,
+"18. Thai Review Queue",
+"wrongText",
+"data path",
+"wrongText"
+],
+[
+375,
+"18. Thai Review Queue",
+"welcomeBack",
+"data path",
+"welcomeBack"
+],
+[
+375,
+"18. Thai Review Queue",
+"restScreen",
+"data path",
+"restScreen"
+],
+[
+375,
+"18. Thai Review Queue",
+"nameTh",
+"data key",
+"zones[].nameTh"
+],
+[
+375,
+"18. Thai Review Queue",
+"uiText",
+"data path",
+"uiText"
+],
+[
+375,
+"18. Thai Review Queue",
+"instructorChecked",
+"data key",
+"uiText.done.instructorChecked | uiText.earnedShelf.instructorChecked | uiText.highFive.instructorChecked | uiText.jesusAllHeard.instructorChecked | uiText.jesusWords.instructorChecked | uiText.pray.instructorChecked …"
+],
+[
+375,
+"18. Thai Review Queue",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+375,
+"18. Thai Review Queue",
+"word",
+"data key",
+"trophies[].word"
+],
+[
+375,
+"18. Thai Review Queue",
+"thGloss",
+"data key",
+"jesusWords[].thGloss | trophies[].thGloss"
+],
+[
+375,
+"18. Thai Review Queue",
+"jesusWordsFallback",
+"data path",
+"jesusWordsFallback"
+],
+[
+375,
+"18. Thai Review Queue",
+"fd-01",
+"card id",
+"cards[] id=fd-01"
+],
+[
+375,
+"18. Thai Review Queue",
+"fd-06",
+"card id",
+"cards[] id=fd-06"
+],
+[
+375,
+"18. Thai Review Queue",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+375,
+"18. Thai Review Queue",
+"verses.attribution",
+"data path",
+"verses.attribution"
+],
+[
+375,
+"18. Thai Review Queue",
+"nursePhrase",
+"data key",
+"cards[].nursePhrase | meta.cardDefaults.nursePhrase"
+],
+[
+375,
+"18. Thai Review Queue",
+"thDef",
+"data key",
+"cards[].thDef"
+],
+[
+375,
+"18. Thai Review Queue",
+"ph-25",
+"card id",
+"cards[] id=ph-25"
+],
+[
+375,
+"18. Thai Review Queue",
+"ph-26",
+"card id",
+"cards[] id=ph-26"
+],
+[
+375,
+"18. Thai Review Queue",
+"bh-31",
+"card id",
+"cards[] id=bh-31"
+],
+[
+375,
+"18. Thai Review Queue",
+"ms-31",
+"card id",
+"cards[] id=ms-31"
+],
+[
+375,
+"18. Thai Review Queue",
+"ms-32",
+"card id",
+"cards[] id=ms-32"
+],
+[
+382,
+"19. Build order: one paste, four stages",
+"answer",
+"data key",
+"cards[].answer | cards[].prompts[].answer | meta.cardDefaults.answer"
+],
+[
+382,
+"19. Build order: one paste, four stages",
+"trap",
+"data key",
+"cards[].trap | meta.cardDefaults.trap"
+],
+[
+386,
+"19. Build order: one paste, four stages",
+"uiText.jesusAllHeard",
+"data path",
+"uiText.jesusAllHeard"
+],
+[
+387,
+"19. Build order: one paste, four stages",
+"pipFills",
+"data key",
+"trophyRules.unlockTypes.pipFills"
+],
+[
+388,
+"19. Build order: one paste, four stages",
+"uiText.letsGo",
+"data path",
+"uiText.letsGo"
+],
+[
+390,
+"19. Build order: one paste, four stages",
+"ms-31",
+"card id",
+"cards[] id=ms-31"
+],
+[
+390,
+"19. Build order: one paste, four stages",
+"prompts",
+"data key",
+"cards[].prompts"
+],
+[
+390,
+"19. Build order: one paste, four stages",
+"uiText.done",
+"data path",
+"uiText.done"
+],
+[
+394,
+"19. Build order: one paste, four stages",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+395,
+"19. Build order: one paste, four stages",
+"trophies",
+"data path",
+"trophies"
+],
+[
+395,
+"19. Build order: one paste, four stages",
+"ref",
+"data key",
+"jesusWords[].ref | trophies[].ref | verses.rest.ref | verses.weekly[].ref | zones[].boss.scroll.ref"
+],
+[
+395,
+"19. Build order: one paste, four stages",
+"uiText.weaponGift",
+"data path",
+"uiText.weaponGift"
+],
+[
+396,
+"19. Build order: one paste, four stages",
+"uiText.toMap",
+"data path",
+"uiText.toMap"
+],
+[
+399,
+"19. Build order: one paste, four stages",
+"uiText.toMap",
+"data path",
+"uiText.toMap"
+],
+[
+400,
+"19. Build order: one paste, four stages",
+"pics",
+"data key",
+"meta.pics | soundDuel.pairs[].pics"
+],
+[
+404,
+"19. Build order: one paste, four stages",
+"uiText.scrollsEmpty",
+"data path",
+"uiText.scrollsEmpty"
+],
+[
+407,
+"19. Build order: one paste, four stages",
+"en",
+"data key",
+"cards[].choices[].en | cards[].en | cards[].prompts[].en | cards[].reply.en | encouragement[].en | gotItText.en …"
+],
+[
+407,
+"19. Build order: one paste, four stages",
+"th",
+"data key",
+"cards[].prompts[].th | cards[].reply.th | cards[].th | encouragement[].th | gotItText.th | jesusWordsFallback[].th …"
+],
+[
+408,
+"19. Build order: one paste, four stages",
+"bossesWon",
+"data key",
+"trophyRules.unlockTypes.bossesWon"
+],
+[
+410,
+"19. Build order: one paste, four stages",
+"verses.attribution.esv",
+"data path",
+"verses.attribution.esv"
+],
+[
+411,
+"19. Build order: one paste, four stages",
+"uiText.verseGift",
+"data path",
+"uiText.verseGift"
+],
+[
+411,
+"19. Build order: one paste, four stages",
+"rewardText",
+"data path",
+"rewardText"
+],
+[
+411,
+"19. Build order: one paste, four stages",
+"ms-31",
+"card id",
+"cards[] id=ms-31"
+]
+],
+"unresolved": {
+"cards.json": [
+5,
+12,
+34,
+41,
+134,
+350,
+371,
+411,
+422
+],
+"svg:<id>": [
+7,
+144
+],
+"null": [
+7,
+145
+],
+"PASS": [
+8,
+379
+],
+"region:<id>": [
+27,
+269
+],
+"ledger": [
+27,
+269
+],
+"cost": [
+47,
+411
+],
+"price": [
+47,
+411
+],
+"<!-- Private family use. Original art. -->": [
+52
+],
+"index.html": [
+52
+],
+"<body>": [
+54,
+126
+],
+"display:none": [
+54
+],
+"zs": [
+54
+],
+"zp": [
+54,
+172
+],
+"zw": [
+54
+],
+"zt": [
+54
+],
+"zc": [
+54
+],
+"zf": [
+54
+],
+"<img>": [
+54,
+157
+],
+"#10170F": [
+56,
+96
+],
+"#3D7FD9": [
+57
+],
+"#3E5A7A": [
+59
+],
+"#2C3F56": [
+59
+],
+"#5A7699": [
+59
+],
+"#B9C2CA": [
+60
+],
+"#2C3238": [
+60
+],
+"#D9DEE3": [
+60,
+92
+],
+"translateY(3px)": [
+60
+],
+"#1A1F24": [
+61
+],
+"#FFD100": [
+62,
+87
+],
+"paint-order: stroke fill": [
+62
+],
+"0 2px 0 #000": [
+62
+],
+"#FFCC33": [
+65,
+85,
+171,
+289
+],
+"#B7860B": [
+65,
+86
+],
+"display:grid; grid-template-columns:repeat(N,1fr); gap:8pt; padding:0 max(16pt,env(safe-area-inset-right)) 0 max(16pt,env(safe-area-inset-left))": [
+68
+],
+"prefers-reduced-motion": [
+70
+],
+"rewardQueue": [
+72,
+261,
+271,
+276
+],
+"state.hero": [
+76,
+157,
+176
+],
+"#au": [
+76
+],
+"#rH": [
+76
+],
+".wp": [
+76,
+300
+],
+".ar": [
+76
+],
+".hd": [
+76
+],
+"#0E3B22": [
+82,
+130
+],
+"#17633A": [
+83
+],
+"#2FA84F": [
+84
+],
+"#2B1752": [
+88
+],
+"#6D3CC9": [
+89
+],
+"#B79BFF": [
+90,
+117
+],
+"#FFF8E1": [
+91
+],
+"#5B6670": [
+92
+],
+"#6B4423": [
+93
+],
+"#3E2612": [
+93
+],
+"#C8A26A": [
+93
+],
+"#E9D9AE": [
+94
+],
+"#8A6A3A": [
+94
+],
+"#9DB4CC": [
+95
+],
+"prefers-contrast: more": [
+98
+],
+"/fonts/": [
+100
+],
+"Kanit, \"Sukhumvit Set\", Thonburi, \"Noto Sans Thai\", sans-serif": [
+100
+],
+"#0B1B33": [
+112
+],
+"#0F3B4A": [
+113
+],
+"#123F35": [
+113
+],
+"#F6E9C8": [
+115,
+121
+],
+"#2E7D32": [
+115
+],
+"#7FE0D0": [
+116
+],
+"#3A9C8F": [
+116
+],
+"#7FD38B": [
+117
+],
+"#F5A3C7": [
+117
+],
+"#7FB8F5": [
+117
+],
+"#F5D06B": [
+117
+],
+"#F2B8A0": [
+117
+],
+"#FFC48A": [
+117
+],
+"owned": [
+125,
+292,
+295,
+310,
+315,
+406
+],
+"data-theme=\"menu\"": [
+126,
+389
+],
+"data-theme=\"arena\"": [
+126,
+389
+],
+"manifest.json": [
+130
+],
+"display: standalone": [
+130
+],
+"apple-mobile-web-app-capable": [
+130
+],
+"viewport-fit=cover": [
+130
+],
+"env(safe-area-inset-*)": [
+130
+],
+"lang=\"th\"": [
+131
+],
+"line-height: 1.7": [
+131
+],
+"overflow:hidden": [
+131,
+172
+],
+"kv": [
+132
+],
+"state": [
+132,
+221,
+411
+],
+"naeState": [
+132
+],
+"kv/state": [
+132,
+268
+],
+"schema": [
+132,
+203,
+268,
+268,
+268
+],
+"navigator.storage.persist()": [
+132
+],
+"cache.addAll": [
+134
+],
+"/audio/": [
+134
+],
+"speechSynthesis": [
+135,
+407
+],
+"speechSynthesis.cancel()": [
+135
+],
+"visibilitychange": [
+138
+],
+"pagehide": [
+138
+],
+"asset-library/assets/props/": [
+149
+],
+"mode: \"english-first\"": [
+151,
+236,
+355
+],
+".ti": [
+157,
+157,
+157
+],
+"data-tod": [
+157,
+227
+],
+"m": [
+157,
+227,
+227,
+227
+],
+"e": [
+157,
+227
+],
+"title.svg": [
+157
+],
+"nancys-adventure-english-v6-08-title.svg": [
+157
+],
+"<object>": [
+157
+],
+"#th": [
+157
+],
+"#tn": [
+157
+],
+"#gE": [
+157
+],
+"aria-label": [
+157
+],
+"#A3211A": [
+157
+],
+"#B8261A": [
+157
+],
+"#F2CF6A": [
+157
+],
+"#C9962E": [
+157
+],
+"#8A5F16": [
+157
+],
+"#5A3A0C": [
+157
+],
+"#E8B84A": [
+157
+],
+"rgba(26,10,8,.82)": [
+157
+],
+".ti svg{stroke:#10170F;stroke-width:3;stroke-linejoin:round}.ti{touch-action:manipulation}.ti *{animation:none!important;transition:none!important}": [
+157
+],
+"#fr": [
+166
+],
+"run:": [
+174
+],
+"#8A939C": [
+199
+],
+"transform": [
+199,
+295
+],
+"overflow-y:auto": [
+199
+],
+"giftGems": [
+203,
+268,
+343,
+411
+],
+"hero": [
+203
+],
+"zoneRuns": [
+203
+],
+"naeState.bak": [
+203,
+397
+],
+"prefers-contrast": [
+203
+],
+"hint.letters": [
+219,
+294,
+384
+],
+"hint.sound": [
+219,
+353
+],
+"given.type: \"start\"": [
+220
+],
+"naeReviewQueue": [
+221
+],
+"faith:true": [
+223,
+240,
+250
+],
+"fill:true": [
+223,
+363
+],
+"easy:true": [
+223
+],
+"personal:true": [
+223,
+362
+],
+"seen": [
+223
+],
+"zoneRuns[zone]": [
+227
+],
+"d": [
+227,
+227
+],
+"card:<runId>:<index>": [
+230,
+269
+],
+"type: \"say-it\"": [
+236
+],
+"rightByZone": [
+239
+],
+"mode": [
+244,
+352
+],
+"\"two-answer\"": [
+244
+],
+"type: \"server-talk\"": [
+252
+],
+"boss:<zone>": [
+261,
+269
+],
+"unlock: {type: \"level\", n}": [
+262
+],
+"{xp, level, pipFills, goldStars, pantryOwned[], rightByZone{}, bossesWon[], owned[], equipped{}, ledger{}, rewardQueue[], scrolls[], seen[], run{id, cards, index, phase}, pips, streak, giftGems, hero, zoneRuns{}, settings{slowMode, restWeeks}}": [
+268
+],
+"schema: 5020": [
+268
+],
+"say:<runId>:<index>": [
+269
+],
+"pips:<n>": [
+269
+],
+"duel:<roundId>:<pair>": [
+269
+],
+"round:<roundId>": [
+269
+],
+"run:<local date>:<zone>:<runId>": [
+269
+],
+"buy:<id>": [
+269,
+293,
+319
+],
+"level:<N>": [
+269
+],
+"day:<local date>": [
+269
+],
+"verse:<local date>": [
+269
+],
+"gift:<local date>": [
+269,
+343
+],
+"unlock:<trophyId>": [
+269
+],
+"run.phase": [
+275
+],
+"question": [
+275
+],
+"reveal": [
+275
+],
+"#00D26A": [
+289
+],
+"#4FA3FF": [
+289
+],
+"#8A6200": [
+290,
+297
+],
+"uiText.bonus<word>": [
+294
+],
+"tierNames[t]": [
+295
+],
+"<type>-t<t>": [
+295
+],
+"axe1-t2": [
+295
+],
+"equipped": [
+295,
+315
+],
+"--b": [
+295,
+298
+],
+".sil": [
+295
+],
+"#3A2618": [
+298
+],
+"#241A12": [
+298
+],
+".wq": [
+299,
+300
+],
+"#wb": [
+299
+],
+"classTitle": [
+301,
+301,
+358
+],
+"#5E6468": [
+304
+],
+".sil *{fill:#5E6468;stroke:#5E6468}.sil{--b:#5E6468;--d:#5E6468;--g:#5E6468;--h:#5E6468}": [
+304
+],
+"unlock.type: \"start\"": [
+305
+],
+"state.equipped": [
+305
+],
+"unlock:<id>": [
+310
+],
+"pantryOwned[]": [
+319
+],
+"speechSynthesis.getVoices()": [
+323
+],
+"lang": [
+323
+],
+"voiceschanged": [
+323
+],
+"verse:<local date it opened for>": [
+339
+],
+"daily-verses.json": [
+339
+],
+"nancys-adventure-english-v6-08-daily-verses.json": [
+339
+],
+"enGloss": [
+339
+],
+"thSource: \"THSV11\"": [
+344
+],
+"status: \"VERIFIED\"": [
+344,
+345,
+375
+],
+"\\n": [
+344,
+346,
+404
+],
+"[letters, sound, word]": [
+351
+],
+"sound": [
+351
+],
+"letters": [
+351
+],
+"_": [
+351
+],
+"{id, zone, type, mode, en, th, thDef?, thDefStatus?, respell, pic, choices:[{en}×4], answer, hint{letters, sound, word}, trap, trapNote, fill?, tag?, easy?, faith?, personal, prompts?, reply?, syl?, nursePhrase?, thStatus?}": [
+352
+],
+"NEEDS NANCY": [
+352,
+361,
+375,
+375
+],
+"thDefStatus": [
+352
+],
+"nameThStatus": [
+352,
+358,
+375
+],
+"hint.word": [
+353
+],
+"tag: \"Example\"": [
+353
+],
+"mode: \"picture-recall\"": [
+354
+],
+"choices: []": [
+355
+],
+"answer: null": [
+355,
+356
+],
+"mode: \"two-answer\"": [
+356
+],
+"nursePhrase: true": [
+357
+],
+"spa·ghet·ti": [
+360
+],
+"maxwell-<zone>.m4a": [
+365
+],
+"maxwell-reward-1..5.m4a": [
+365
+],
+"maxwell-boss-<zone>.m4a": [
+365
+],
+"thStatus: \"SIGNED OFF\"": [
+375
+],
+"window.__test()": [
+379
+],
+"(ESV)": [
+407
+],
+"(THSV11)": [
+407
+],
+".thsv11": [
+410
+],
+"gift:": [
+411
+],
+"tel": [
+412
+],
+"/(^|\\D)(\\+?1[\\s.-]?)?\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}(?!\\d)/": [
+412
+],
+"/(tel:|\\+1)\\d{10}/": [
+412
+],
+"/[\\w.+-]+@[\\w-]+\\.[\\w.]+/": [
+412
+]
+}
+}

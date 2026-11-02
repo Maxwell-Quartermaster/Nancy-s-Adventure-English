@@ -1,0 +1,174 @@
+{
+ "practiceOnly": true,
+ "location": "grocery",
+ "cards": [
+  {
+   "id": "prac-grocery-01",
+   "en": "We need rice and eggs.",
+   "th": "เราต้องซื้อข้าวกับไข่ค่ะ",
+   "respell": "wee NEED RAIS and EGZ",
+   "choices": [
+    "We need rice and eggs.",
+    "We need ice and eggs.",
+    "We need rice and legs.",
+    "We need milk and bread."
+   ],
+   "trap": "We need ice and eggs.",
+   "trapNote": "ice = น้ำแข็ง · rice = ข้าว",
+   "hint": [
+    "We n___ r___ and e___.",
+    "r",
+    "rice"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-grocery-02",
+   "en": "cart",
+   "th": "รถเข็น",
+   "respell": "KART",
+   "choices": [
+    "cart",
+    "card",
+    "cat",
+    "car"
+   ],
+   "trap": "card",
+   "trapNote": "card = บัตร · cart = รถเข็นของ",
+   "hint": "c",
+   "type": "picture",
+   "personal": true,
+   "pic": "🛒"
+  },
+  {
+   "id": "prac-grocery-03",
+   "en": "Where is the rice?",
+   "th": "ข้าวอยู่ตรงไหนคะ",
+   "respell": "WAIR iz thuh RAIS",
+   "choices": [
+    "Where is the rice?",
+    "Where is the ice?",
+    "When is the rice?",
+    "Where is the bus?"
+   ],
+   "trap": "Where is the ice?",
+   "trapNote": "ice = น้ำแข็ง · rice = ข้าว",
+   "hint": [
+    "W____ is the r___?",
+    "r",
+    "rice"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-grocery-04",
+   "en": "How much is this?",
+   "th": "อันนี้ราคาเท่าไหร่คะ",
+   "respell": "HOW MUCH iz THIS",
+   "choices": [
+    "How much is this?",
+    "How many is this?",
+    "Who is this?",
+    "How much is that?"
+   ],
+   "trap": "How many is this?",
+   "trapNote": "many ใช้กับของที่นับได้ · how much = ราคาเท่าไหร่",
+   "hint": [
+    "How m___ is this?",
+    "m",
+    "much"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-grocery-05",
+   "en": "eggs",
+   "th": "ไข่",
+   "respell": "EGZ",
+   "choices": [
+    "eggs",
+    "legs",
+    "bags",
+    "apples"
+   ],
+   "trap": "legs",
+   "trapNote": "legs = ขา · eggs = ไข่",
+   "hint": "e",
+   "type": "picture",
+   "personal": true,
+   "pic": "🥚"
+  },
+  {
+   "id": "prac-grocery-06",
+   "en": "I brought my own bags.",
+   "th": "ฉันเอาถุงมาเองค่ะ",
+   "respell": "ai BRAWT mai OHN BAGZ",
+   "choices": [
+    "I brought my own bags.",
+    "I bought my own bags.",
+    "I brought my own bugs.",
+    "I need some bags."
+   ],
+   "trap": "I brought my own bugs.",
+   "trapNote": "bug = แมลง · bag = ถุง",
+   "hint": [
+    "I b______ my own b___.",
+    "b",
+    "bags"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-grocery-07",
+   "en": "I'll pay by card.",
+   "th": "ฉันจ่ายด้วยบัตรค่ะ",
+   "respell": "ail PAY bai KARD",
+   "choices": [
+    "I'll pay by card.",
+    "I'll pay by cart.",
+    "I'll play by card.",
+    "I'll pay with cash."
+   ],
+   "trap": "I'll pay by cart.",
+   "trapNote": "cart = รถเข็น · card = บัตร",
+   "hint": [
+    "I'll p__ by c___.",
+    "c",
+    "card"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-grocery-08",
+   "en": "The milk goes in the fridge.",
+   "th": "นมต้องเก็บในตู้เย็นค่ะ",
+   "respell": "thuh MILK gohz in thuh FRIJ",
+   "choices": [
+    "The milk goes in the fridge.",
+    "The milk goes in the bridge.",
+    "The milk goes on the table.",
+    "The meat goes in the fridge."
+   ],
+   "trap": "The milk goes in the bridge.",
+   "trapNote": "bridge = สะพาน · fridge = ตู้เย็น",
+   "hint": [
+    "The m___ goes in the f_____.",
+    "f",
+    "fridge"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  }
+ ]
+}

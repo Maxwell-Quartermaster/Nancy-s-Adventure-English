@@ -1,0 +1,200 @@
+{
+ "practiceOnly": true,
+ "location": "clinic",
+ "cards": [
+  {
+   "id": "prac-clinic-01",
+   "en": "I have an appointment.",
+   "th": "ฉันมีนัดค่ะ",
+   "respell": "ai HAV an uh-POINT-ment",
+   "choices": [
+    "I have an appointment.",
+    "I have an apartment.",
+    "I have a question.",
+    "I have a cold."
+   ],
+   "trap": "I have an apartment.",
+   "trapNote": "apartment = อพาร์ตเมนต์ · appointment = นัดหมาย",
+   "hint": [
+    "I h___ an a__________.",
+    "a",
+    "appointment"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-02",
+   "en": "I need a Thai interpreter.",
+   "th": "ฉันต้องการล่ามภาษาไทยค่ะ",
+   "respell": "ai NEED uh TAI in-TER-pri-ter",
+   "choices": [
+    "I need a Thai interpreter.",
+    "I need a tiny printer.",
+    "I need a Thai teacher.",
+    "I need a taxi."
+   ],
+   "trap": "I need a tiny printer.",
+   "trapNote": "printer = เครื่องพิมพ์ · interpreter = ล่าม",
+   "hint": [
+    "I n___ a T___ i__________.",
+    "i",
+    "interpreter"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-03",
+   "en": "Is my weight okay?",
+   "th": "น้ำหนักของฉันโอเคไหมคะ",
+   "respell": "iz mai WAYT oh-KAY",
+   "choices": [
+    "Is my weight okay?",
+    "Is my wait okay?",
+    "Is my white okay?",
+    "Is my bed okay?"
+   ],
+   "trap": "Is my white okay?",
+   "trapNote": "white = สีขาว · weight = น้ำหนัก",
+   "hint": [
+    "I_ my w_____ o___?",
+    "w",
+    "weight"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-04",
+   "en": "Where is the bathroom?",
+   "th": "ห้องน้ำอยู่ที่ไหนคะ",
+   "respell": "WAIR iz thuh BATH-room",
+   "choices": [
+    "Where is the bathroom?",
+    "Where is the bedroom?",
+    "Where is the bus?",
+    "When is the bathroom?"
+   ],
+   "trap": "Where is the bedroom?",
+   "trapNote": "bedroom = ห้องนอน · bathroom = ห้องน้ำ",
+   "hint": [
+    "W____ is the b_______?",
+    "b",
+    "bathroom"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-05",
+   "en": "heartbeat",
+   "th": "เสียงหัวใจเต้น",
+   "respell": "HART-beet",
+   "choices": [
+    "heartbeat",
+    "heart",
+    "head",
+    "heat"
+   ],
+   "trap": "heat",
+   "trapNote": "heat = ความร้อน · heartbeat = หัวใจเต้น",
+   "hint": "h",
+   "type": "picture",
+   "personal": true,
+   "pic": "💓"
+  },
+  {
+   "id": "prac-clinic-06",
+   "en": "Is my baby okay?",
+   "th": "ลูกของฉันโอเคไหมคะ",
+   "respell": "iz mai BAY-bee oh-KAY",
+   "choices": [
+    "Is my baby okay?",
+    "Is my bag okay?",
+    "Is my body okay?",
+    "Is my bed okay?"
+   ],
+   "trap": "Is my body okay?",
+   "trapNote": "body = ร่างกาย · baby = ลูก",
+   "hint": [
+    "I_ my b___ o___?",
+    "b",
+    "baby"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-07",
+   "en": "The baby kicks a lot.",
+   "th": "ลูกดิ้นบ่อยมากค่ะ",
+   "respell": "thuh BAY-bee KIKS uh LOT",
+   "choices": [
+    "The baby kicks a lot.",
+    "The baby kisses a lot.",
+    "The baby sleeps a lot.",
+    "The baby cooks a lot."
+   ],
+   "trap": "The baby kisses a lot.",
+   "trapNote": "kiss = จูบ · kick = เตะ / ดิ้น",
+   "hint": [
+    "The b___ k____ a l__.",
+    "k",
+    "kicks"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-08",
+   "en": "Please speak more slowly.",
+   "th": "กรุณาพูดช้าลงหน่อยค่ะ",
+   "respell": "pleez SPEEK mor SLOH-lee",
+   "choices": [
+    "Please speak more slowly.",
+    "Please sleep more slowly.",
+    "Please speak more loudly.",
+    "Please eat more slowly."
+   ],
+   "trap": "Please sleep more slowly.",
+   "trapNote": "sleep = นอน · speak = พูด",
+   "hint": [
+    "Please s____ more s_____.",
+    "sp",
+    "speak"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  },
+  {
+   "id": "prac-clinic-09",
+   "en": "Can I come Tuesday morning?",
+   "th": "ฉันมาวันอังคารตอนเช้าได้ไหมคะ",
+   "respell": "kan ai KUM TOOZ-day MOR-ning",
+   "choices": [
+    "Can I come Tuesday morning?",
+    "Can I come Thursday morning?",
+    "Can I come Tuesday evening?",
+    "Can I cook Tuesday morning?"
+   ],
+   "trap": "Can I come Thursday morning?",
+   "trapNote": "Thursday = วันพฤหัสบดี · Tuesday = วันอังคาร",
+   "hint": [
+    "Can I c___ T______ m______?",
+    "T",
+    "Tuesday"
+   ],
+   "type": "say-it",
+   "personal": true,
+   "pic": null
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+(() => { document.getAnimations().forEach(a => { a.pause(); a.currentTime = 0; }); const o = []; for (const e of document.querySelectorAll('*')) { const r = e.getBoundingClientRect(); o.push([e.tagName, r.left, r.top, r.width, r.height].join(',')); } return o; })()

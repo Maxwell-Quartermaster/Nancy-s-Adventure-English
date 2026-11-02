@@ -1,0 +1,11 @@
+320 12-reveal-right.html diffpx 0 bbox None rects equal True 284 284 flexGap base 3 new 0 [] scrollW 320
+320 14-reveal-gentle-retry.html diffpx 0 bbox None rects equal True 328 328 flexGap base 3 new 0 [] scrollW 320
+320 24-guardian-run-entry.html diffpx 0 bbox None rects equal True 304 304 flexGap base 2 new 0 [] scrollW 320
+320 25-guardian-hint-letters.html diffpx 0 bbox None rects equal True 307 307 flexGap base 3 new 0 [] scrollW 320
+320 30-new-weapon-gift.html diffpx 0 bbox None rects equal True 247 247 flexGap base 3 new 3 ['display:flex;gap:6px;align-items:baseline', 'left:8px;top:78px;border-radius:10px;background:rgba(255,248,225,.92);', 'display:flex;gap:10px;justify-content:center;margin-top:8px'] scrollW 320
+320 34-echo-forest-sound-duel.html diffpx 0 bbox None rects equal True 310 310 flexGap base 3 new 0 [] scrollW 320
+320 37-rest-screen.html diffpx 0 bbox None rects equal True 247 247 flexGap base 3 new 0 [] scrollW 320
+390 16-say-it-maxwell-says-day1.html diffpx 0 bbox None rects equal True 356 356 flexGap base 3 new 0 scrollW 390
+390 26-guardian-hint-jesus-words.html diffpx 0 bbox None rects equal True 310 310 flexGap base 2 new 0 scrollW 390
+390 28-guardian-win.html diffpx 0 bbox None rects equal True 295 295 flexGap base 3 new 0 scrollW 390
+390 35-sound-duel-right.html diffpx 0 bbox None rects equal True 307 307 flexGap base 4 new 0 scrollW 390

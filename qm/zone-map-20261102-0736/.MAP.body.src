@@ -1,0 +1,57 @@
+# Zone map: places in time order (PLAN ONLY, not gated, no game file touched)
+Written Mon Nov 2, 2026, about 12:45 AM MST. Folder stamp 20261102-0736 is UTC.
+Source: cards1A-fix PASTE 5e1666fe6f7189d3886686749335b3ee (188,007 chars, cap 188,200, bank 193), re-hashed this turn. line427.json is line 427 copied out (it round-trips byte-exact with separators , :).
+Maxwell t651u (verbatim): "Do your best to make sure that the zones make practical sense and all the things being said in the zones make sense. […QM cut…] maybe she should have just multiple locations within each of the zones, or something like that, where, you know, she would just go through stuff chronologically. […QM cut…] I don't want you to do crazy changes".
+Maxwell (card answer, relayed by QM): "She is a guest and can be alone". Maxwell t652u: "No that's okay don't add me, just Sam and Nancy". Kitchen: QM relay says Maxwell called it already a great location, so it stays as is.
+## 0) How in-zone order works today (read this turn)
+Play order is computed, not file order. Spec :223: at most 2 faith cards per run, skip fill cards, one easy opener, up to 2 review cards, then written personal:true cards, then never-seen cards by fewest English words, then seen-longest-ago. Spec :222 drops one meta.outings card in after the opener. Spec :226 puts 5 pic cards per scene and plays no-pic cards between scenes.
+No location or sub-group field exists. Cards have no zone field (zone = id prefix, spec :351). The only sub-place today is spec :227's hotel front desk scene (ms-03 to ms-06 and ms-21 to ms-23).
+Result: almost every bh and ms card is personal:true, so file order does not drive play. Reordering cards alone changes nothing on screen.
+## 1) Places per scene zone (time order)
+### Baby and Hospital (bh, 31)
+B1 Clinic checkup (8): bh-07 I am pregnant. / bh-01 I need a Thai interpreter. / bh-25 Please speak slowly. / bh-11 When is my due date? / bh-14 Is it a boy or a girl? / bh-30 The baby is kicking. / bh-08 It hurts here. / bh-24 Where is the bathroom?
+B2 Labor starts (6): bh-02 My water broke. / bh-03 I have contractions. / bh-04 I am bleeding. / bh-09 The baby is not moving. / bh-06 Please call my husband. / bh-10 Where is Labor and Delivery?
+B3 Delivery room (4): bh-05 The baby is coming. / bh-29 I need a nurse. / bh-22 Call the doctor. / bh-17 God is with us.
+B4 Recovery room (7): bh-15 Thank you, God, for my baby. / bh-16 God made my baby. / bh-13 I need to rest. / bh-18 Please bring a blanket. / bh-23 I need water. / bh-27 I am hungry. / bh-26 Take this pill.
+B5 Home with baby (6): bh-20 Feed the baby. / bh-19 Change the diaper. / bh-12 Wash the baby. / bh-21 The baby is crying. / bh-31 The baby is taking a nap. / bh-28 The baby is sleeping.
+### Maxwell Says (ms, 32): one normal day, then Sunday, then a trip
+M1 Morning at home (6): ms-07 Good morning, honey. / ms-20 Make the bed. / ms-32 Let me fix your tie, honey. / ms-21 Where are the keys? / ms-22 The truck is outside. / ms-16 See you soon.
+M2 Kind words through the day (6): ms-08 I love you. / ms-09 Good job! / ms-10 Your English is good. / ms-01 I am proud of you. / ms-02 Our baby is coming soon. / ms-11 I will pray for you.
+M3 Dinner (7): ms-15 Are you hungry? / ms-18 Wash your hands. / ms-12 Let's pray before we eat. / ms-31 Let's pray. / High five! / ms-17 Wash the dishes. / ms-27 Thank you, honey. / ms-26 Put it there.
+M4 Evening and bedtime (4): ms-24 Let's walk. / ms-25 Let's read together. / ms-23 Close the door. / ms-19 Time for bed.
+M5 Sunday at church (4): ms-13 Let's go to church. / ms-29 This is my husband. / ms-14 Jesus is my friend. / ms-30 God is good.
+M6 Hotel stay, Nancy a guest (5): ms-06 One night is one hundred twenty dollars. / ms-03 Welcome to our hotel. / ms-28 Your room is ready. / ms-05 Breakfast is at seven thirty. / ms-04 Check-out is at eleven. (Same order as hotel-steps-20261102-0732 PLAN.md; its wording work stays there. Its 1B ms-33 "I need more towels." would go after ms-28.)
+### Nancy's Kitchen (fd 38 + cv 12): keep as is
+Its file blocks already read as places: Thai dishes fd-01 to 06, foods fd-07 to 09, Thai restaurant fd-10 to 16, American diner fd-17 to 21, cooking at home fd-22 to 28, server talk fd-29 to 38, county fair cv-01 to 12.
+Order check: in real life, "Can I see the menu?" (fd-16) comes before ordering (fd-10), and "Table for two?" (fd-38) comes first in server talk. Kitchen plays by fewest words, though, so file order doesn't show. No change proposed.
+## 2) Misfits and minimal fixes
+X1 ms-03 "Welcome to our hotel." is a say-it card (Nancy says it), but it's a staff line and she's a guest. Fix: the hotel-steps 1B reword to "I have a reservation." (owned there).
+X2 ms-28 "Your room is ready." is a staff line on a say-it card. Maxwell accepted it (t642u). Keep.
+X3 ms-04, ms-05, ms-06 are staff lines on picture cards, which fits a guest who hears them. Keep. They are fill:true Examples, and spec :223 "skip unwritten cards (fill:true, empty en)" may skip them until Maxwell confirms. UNVERIFIED which reading Build uses.
+X4 Spec :227's front desk scene also holds ms-21 keys, ms-22 truck and ms-23 door. Those are Maxwell's home lines (ครับ) staged at a hotel desk. Fix: delete " and `ms-21`–`ms-23`" from :227 (-20 chars), so they play at home (M1, M4). The desk keeps its key rack and door 13 as scenery.
+X5 Speaker mix in Maxwell Says: 25 lines are Maxwell (ครับ), ms-29 and ms-32 are Nancy (ฉัน…ค่ะ/คะ), and ms-03 to 06 and ms-28 are hotel staff (ค่ะ). Fix: none. As home life with Maxwell, it reads fine once the lines sit in their places (ms-32 in Morning, ms-29 at Church).
+X6 meta.outings ("practical phrases for shops, the clinic, church and the restaurant") lists ms-01 "I am proud of you", ms-02 "Our baby is coming soon" and ms-11 "I will pray for you". Those are home lines, and one outing gets pushed into every ms run after the opener. Fix, 0 chars: swap ms-01 to ms-13, ms-02 to ms-29 and ms-11 to ms-28.
+X7 bh-28, bh-31, bh-29 and bh-30 sit in the JSON between ms-27 and ms-28, which splits both blocks. The reorder fixes this at 0 chars.
+X8 bh-26 "Take this pill." is the nurse's voice on a picture card, so it's something she hears. Fits Recovery. Keep.
+X9 Faith cap: M5 has 3 faith cards and M3 has 2, with a limit of 2 per run, so Church shows only part of itself each run. Keep. It's a loose guide.
+X10 Kitchen and fair lines play in the home room set (spec :227). Keep, per Maxwell.
+## 3) Skill zones (no restructure)
+ph (26): sound pairs plus home and hotel words. Sensible.
+cs (24): colors, then shapes, then sizes. Sensible.
+nm (24): number phrases (nm-01 to 04 hotel, nm-06 Maxwell ครับ), then 2 to 19. Sensible. A voice mix only, no fix.
+sw (24): phrases, then single sight words. Sensible. sw-01 to 03 are staff lines, and sw-03 "Can I help you?" is say-it. Flag only.
+## 4) Implement: 1A vs 1B
+1A Story order (recommended): reorder the bh and ms cards in line 427 to the lists above, at 0 chars. Proof: PROOF-line427-reordered.json is 103,870 chars, the same as the source, and its md5 is in MD5SUMS. Then add one spec sentence to :223 before "Never 4 say-it": " In `bh` and `ms`, file order (places in time) replaces personal-first and fewest-words order." (+94). Also X4 (-20) and X6 (0). Net +74, total 188,081, bank 119.
+1A and hotel-steps: this sentence replaces the hotel 1A order rule (+85), because the hotel's order is now in the file. Hotel 1A plus this: +74 (bank 119). Hotel 1B minus its +94 order rule, plus this: +165 (bank 28).
+1A impacts: card indexes move (ms-28 goes from cards[156] to cards[158]). Any tool that pins an index (play_v608.py, checks_v608.py, text_check) needs a re-check, UNVERIFIED. needsMaxwell, outings, boss lists and nursePhrase use ids, so they're safe. No new Thai, no new UI, no 320 risk. The easy opener, review cards, the one outing and the faith cap still cut in, which is fine for a loose guide.
+1B Place labels: 1A plus meta.places (11 places, en+th, first id) and a zone-chip place label. Measured: data +354, spec sentence +177, about +531 in total, so it's over bank 193 by about 340. A per-card tag would be about +693. It also adds 11 new Thai strings (NEEDS NANCY before the Nov 7 sign-off), a chip layout change at 320 (it needs Safari 14 and 320 renders) and a uiText/meta count change. Not recommended before the freeze. Revisit after Nov 10 if he wants labels.
+## 5) Open questions only Maxwell can answer
+Q1 Maxwell Says order: a normal day (morning to bedtime), then Sunday church, then the hotel trip. OK, or should the hotel come somewhere else?
+Q2 Should Nancy's own lines (ms-29 "This is my husband.", ms-32 "Let me fix your tie, honey.") stay in Maxwell Says?
+Q3 Spec :18 says "her hotel work". Does Nancy really work at a hotel? The game cards are now guest-side.
+Q4 The outings swap (X6) and dropping ms-21 to 23 from the hotel desk (X4): yes or no?
+Q5 1A (story order, +74) or 1B (labels, over the bank)?
+## Files
+MAP.md (this file), line427.json (copy of source line 427), cards-dump.txt (card list), PROOF-line427-reordered.json (1A reorder proof, not a PASTE), MD5SUMS. Nothing was deleted. The scratch line427 was written as /workspace/qm/.zm.json and then moved here with mv.
+Based on: snap-r2h-0021MDT, pointer f6dac2d0, PASTE 317e91ce
+Ready to paste: none yet. CURRENT stays v5-37, `nancys-adventure-english-v5-37-PASTE.md` (acc534a51a922102ee37844e04d17955)

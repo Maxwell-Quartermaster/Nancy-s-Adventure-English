@@ -1,0 +1,21 @@
+html/26-guardian-hint-jesus-words-320x568.html jesusWords[0].en count=1 PASS md5 d0e5d0de
+html/26-guardian-hint-jesus-words-320x568.html jesusWords[0].th count=1 PASS md5 7aaa8d80
+html/26-guardian-hint-jesus-words-320x568.html jesusWords[0].ref count=1 PASS md5 e41ea3e3
+html/26-guardian-hint-jesus-words-375x667.html jesusWords[0].en count=1 PASS md5 d0e5d0de
+html/26-guardian-hint-jesus-words-375x667.html jesusWords[0].th count=1 PASS md5 7aaa8d80
+html/26-guardian-hint-jesus-words-375x667.html jesusWords[0].ref count=1 PASS md5 e41ea3e3
+html/26-guardian-hint-jesus-words-390x844.html jesusWords[0].en count=1 PASS md5 d0e5d0de
+html/26-guardian-hint-jesus-words-390x844.html jesusWords[0].th count=1 PASS md5 7aaa8d80
+html/26-guardian-hint-jesus-words-390x844.html jesusWords[0].ref count=1 PASS md5 e41ea3e3
+html/30-new-weapon-gift-320x568.html Isaiah 41:10 present True
+html/30-new-weapon-gift-375x667.html Isaiah 41:10 present True
+html/30-new-weapon-gift-390x844.html Isaiah 41:10 present True
+html/37-rest-screen-320x568.html rest.en count=1 PASS md5 f6e598a6
+html/37-rest-screen-320x568.html rest.th count=1 PASS md5 c26cc788
+html/37-rest-screen-320x568.html rest.ref count=1 PASS md5 2f840d7d
+html/37-rest-screen-375x667.html rest.en count=1 PASS md5 f6e598a6
+html/37-rest-screen-375x667.html rest.th count=1 PASS md5 c26cc788
+html/37-rest-screen-375x667.html rest.ref count=1 PASS md5 2f840d7d
+html/37-rest-screen-390x844.html rest.en count=1 PASS md5 f6e598a6
+html/37-rest-screen-390x844.html rest.th count=1 PASS md5 c26cc788
+html/37-rest-screen-390x844.html rest.ref count=1 PASS md5 2f840d7d

@@ -1,0 +1,443 @@
+JSON parse OK; version v6-08 v6-08
+16 verses + attribution + rules byte-identical to v5-19 (only rotation/graceRule week->day, c4): True
+spec section 15 v5-19 lines all kept verbatim (except the Q-0754 delivery line): True
+JSON keys not named in v6-08 spec: ['audioClips', 'cardIds', 'cats', 'coinMeter', 'defaults', 'emptySlots', 'encouragementLines', 'fallbackIds', 'frame-gold', 'frame-silver', 'lanterns-blue', 'levelTrophies', 'mace1', 'needsMaxwellCards', 'needsMaxwellCount', 'nursePhrases', 'offHand', 'personalCards', 'personalWritten', 'pictureCards', 'quoteMarks', 'rightAnswer', 'runDone', 'sayItBabyHospital', 'sayItTotal', 'sayItWritten', 'spokenGotIt', 'sword1', 'sword2', 'thDefCards', 'thDefRule', 'totalCards', 'totalSvgToDraw', 'trophiesByCat', 'trophySvgCount', 'uiSvgCount', 'uiTextEntries', 'unlockTypes', 'versesVerified', 'writtenCards']
+  (same check on v5-19, baseline): ['audioClips', 'bossLevels', 'cats', 'coinMeter', 'defaults', 'emptySlots', 'encouragementLines', 'fallbackIds', 'levelTrophies', 'needsMaxwellCards', 'needsMaxwellCount', 'note', 'notes', 'nursePhrases', 'personalCards', 'personalWritten', 'pics', 'pictureCards', 'quoteMarks', 'sayItBabyHospital', 'sayItTotal', 'sayItWritten', 'thDefCards', 'thDefRule', 'totalCards', 'totalSvgToDraw', 'trophiesByCat', 'trophySvgCount', 'uiSvgCount', 'uiTextEntries', 'unlockTypes', 'versesVerified', 'writtenCards']
+  new in v6-08 vs baseline: ['cardIds', 'frame-gold', 'frame-silver', 'lanterns-blue', 'mace1', 'offHand', 'rightAnswer', 'runDone', 'spokenGotIt', 'sword1', 'sword2']
+uiText keys never referenced: ['bonusHint2', 'bonusRetry2', 'bonusStar2', 'bonusStreak2', 'spellIt']
+spec uiText.x not in file: ['bonus']
+uiText count 98 trophies 42 svg 55 pairs 30 jesusWords 6
+  spec states (98) False
+  spec states 42 `trophies` True
+  spec states earned count True
+  spec states Drawings Build makes: 55 True
+  spec states 21 trophy ids True
+  spec states 12 gear True
+  spec states 30) True
+  spec states `jesusWords`, 6 True
+  spec states 73 cards. True
+  spec states 39 cards True
+  spec states 38 ids True
+all 126 picture cards: 4 unique choices, answer+trap present: True []
+visible unlock/locked strings: []
+no [PASTE- placeholder in v6-08 files: True
+trophy names unique: True
+FINAL-v6-08 line 19: - Rewards read `rewardText` ("You earned this!"), never "Unlocked."
+no LAUNCH LOCKED line: True
+confidence footer absent: True
+jesusWords 6 start 6 gear []
+leaf text == live.json byte-exact: True
+John 8:12 keeps คนที่ตามเรามา: True | Luke 12:7 keeps อย่ากลัวเลย: True
+excerpt anywhere in v6-08 files: 0
+cost/price/shop keys on verses or Jesus words: []
+cost/price/shop values in cards.json: []
+hits \b911\b 0
+hits (?i)call max 0
+hits (?i)show the nurse 0
+hits (?i)elk refuge 0
+hits ยังไม่ปลดล็อก 0
+hits \[PASTE- 0
+words: spec 14626 FINAL 13807 v5-19 spec 6110
+cards 211 picture 126 say-it 74 written 211
+locked v5-19 files + CURRENT.md unchanged: True
+privacy P1 separated hits in v6-08: 0
+privacy P2 compact hits in v6-08: 0
+reward strings once, rewardText only: True
+spec never lists rewardText twice on one line: True
+two-answer card with both prompts: True
+spec 8.1 says no coin loss, no XP loss: True
+uiText count stated == file: False
+sayItToMaxwell / tell: gone: True
+Baby and Hospital zero-coin rule in spec: False [SUPERSEDED: Chancellor 5da6f734 (a), 4:31 PM MDT: a miss keeps every coin in every zone, so no zone needs a zero-coin exception; rechecked live in the v6-08 CH block]
+weapons (not shield) have classTitle: True
+t235u map: no mapStyle/grid, 4 regions in one linear path r1>r2>r3>r4 (no place/pos), Ink path style: True
+inline SVGs each <=4096 B, total: False 31592 [SUPERSEDED: t371u: the title is Maxwell's t288u picture in one SVG (sky merged in); every other inline SVG rechecked <=4096 B below]
+no red/buzzer in spec 8.1: True
+631 Thai fixes present: True
+tie card ms-32: True
+Nov 7 list only bh-01..10: True
+no doubled spaces in strings: True
+review queue in spec (localStorage, 2 per visit, first 3 cards): True
+instant feedback 150 ms stated: True
+bow-oak removed by Option B trim (t360u): not in trophies, trophySvg or trophyInlineSvg; Forest Ranger class gone: True
+ms-32 uses svg:tie, one tie card: True
+every svg: pic has an id in picPlan.svg: True
+every picPlan.svg id is used by a card or choice: False [SUPERSEDED: Maxwell t406u (H1): high-five stays in the library while ms-31 uses hand emoji; H1 rechecked in the v6-08 block]
+ms-31 uses drawn SVGs, no 🙏/✋: False [SUPERSEDED: Maxwell t406u (H1): hand-only emoji are fine; ms-31 is 🙏 / 🙌 on bordered plates; rechecked in the v6-08 block]
+class titles = Maxwell mapping: False [SUPERSEDED: v5-34 derives classTitle from the weapon type (t298u); covered by the v5-34 class-line check]
+cards.json minified (pair <= PASTE): True
+no stale class names (sword class is Defender; boss "Guardian" names exempt; no Forest Ranger preselected): True 
+ms-31 SVG guard (never emoji after hooks): False [SUPERSEDED: Maxwell t406u (H1): hand-only emoji are fine; rechecked in the v6-08 block]
+no duplicate picture within a zone: True 
+bh-28 sleeping and bh-31 nap never offered on the same card: True
+copy-fix guard (old strings gone): True []
+copy fixes present: True
+reveal header never rewardText: True
+handoff paste size == computed: (handoff not written yet) 188007
+log consistency (5:28 coin line superseded; Settings-icon line superseded): True
+emoji support rule in spec (Emoji 13.0, fallback): True
+every Build drawing has a note: True
+v5-21 three-bar HUD + Map + grid rule: True
+t238u no Settings: no gear SVG, no titleSettings/highContrast/calmMotion keys; slowMode/restWeeks are the v5-27 strings exactly and live in state.settings; Settings named only as absent: False [SUPERSEDED: v6-08 VP6: state gains giftGems before settings{slowMode, restWeeks}; Settings rule rechecked in the v6-08 block]
+t238u title screen replaces the Q-0759 sword sequence; weapon drawn in Sam's hand in both portraits: False [SUPERSEDED: title is the t283u valley (t295u), not the t238u screen]
+v5-21 post-gate batch 1/2/5/6/8/9 + 3/4: True
+v5-21 no stacked 1x4 choices / odd gaps: True
+Q-0741 #2 old key classGuardian gone from outputs, classDefender = Defender/ผู้ปกป้อง: True
+Q-0741 #3/#4 flags 6-15 applied, no old string returns: True []
+Q-0741 flag 16 thGloss on every Jesus word + shown in bubble: True
+Q-0741 #1 weapon flourishes: gift tag, 4 Bible weapons, no stat/cost/timer words: True
+Q-0741 #5 ph-17 = svg:they with a drawing note: True
+Q-0741 regressions (no 🙏 on ms-31, no Forest Ranger on swords, svgNotes.tie gone, no นักเวทย์): False [SUPERSEDED: Maxwell t406u (H1) allows 🙏 on ms-31; the other Q-0741 items are rechecked by the diff-only undo to v6-07 in the v6-08 block]
+Q-0743 card defaults: no card stores a default value; meta.cardDefaults documented in spec: True
+Q-0742 aura (t235u: the hero is a boy; his face): True
+Q-0745 C1 FINAL head drawing counts == data: True
+Q-0745 C1 Auditor gate flags fixed (t238u: Map hero marker replaced by the 20 pt Sam emblem on her last row): False [SUPERSEDED: t290u hero select: the chosen hero's head marks her last row; Sam emblem gone]
+Q-0745 C1 hint order cross-ref + Bible weapon stage test: False [SUPERSEDED: v5-36 M1 deleted the Jesus-word-first clause by ruling; see the v5-36 M1 check]
+Q-0746 due date ONLY in bh-11 reply (Maxwell override 7:54 PM), gentle, no countdown, NEEDS NANCY: True
+Q-0745 C2 weaponGift only on earned weapons, Rest mode back as a Character toggle (t238u), silent-switch iPhone check: True
+Q-0747 kitchen zone: one zone, no boss/scroll, no open level (Q-0753), emblem svg:chef-hat, ids fd-/cv- only, cardIds == cards: True
+Q-0747 six Thai dish names SIGNED OFF (th only), all other kitchen Thai NEEDS NANCY: True
+Q-0747 Server Talk 10 topics, 4 unique replies, answer+trap among them, hint present, spec 8.2: True
+Q-0747 Carnival Treats: 10 treats + phrases incl. the two given: True
+Q-0747 kitchen emoji iOS 14.2-safe (<= Emoji 13.0; no 🫕 🫔): True
+Q-0747 rewards earned not bought: Golden Chef title after 25 right answers in Kitchen (Q-0753) svg:chef-hat, Golden Spoon auraRing pipFills 25, no cost fields: True
+Q-0747 map (t235u): kitchen in r3 Home Lake, one straight column, no 3x3 grid: True
+Q-0747 say-it count in spec == data: False
+Q-0749 tiers: no bare simple-word card, nm-08 a phrase, hard words carry syl, tier rule in spec, no tier label/timer: True []
+Q-0752 rule 4: levels 5, 7, 12 give no cosmetic (t235u: gear bonuses from gems, meta.bonusGems): True
+Q-0748 superseded by t235u (talents removed): no talent uiText keys or meta.talentGems, talent named only as replaced/absent, no Bigger Glow in shipped files: True ['. No Settings, gear button or talent exists an', '. No Settings, gear button or talent exists an']
+Q-0748 (t238u) Map shows a 20 pt Sam emblem (head, glasses) on her last-played row plate, not tappable; dots keep emblems; map portrait is the 72 pt avatar button only: False [SUPERSEDED: t290u hero select replaced the Sam emblem]
+Q-0753 no level gates (zones, bosses, Sound Duel, Talents, Map, Kitchen) in spec/PASTE/FINAL/cards: False [] [SUPERSEDED: MX1 (t329u): regions open by guardians, not levels; the v5-36 MX1 check covers no-level-gates for regions]
+Q-0753 no time gates (days-played, session, timer, scheduled unlocks); every unlock type is play-based: True []
+Q-0753 Golden Chef = 25 right answers in Kitchen; its goal is unique (pre-existing pairs only: 2 boss wins, level 20); earned not bought: True
+Q-0753 rule 4 reworded (one reward per level, nothing opens by level/day, two goals = two queued screens): False [SUPERSEDED: MX1 (Maxwell t329u) replaced rule 4's open-from-launch clause; see the v5-36 MX1 check]
+Q-0753 rev 2 rest screen optional victory lap: new text, Keep playing primary + Rest now, no cap/forced rest, Thai NEEDS NANCY: True
+Q-0754 daily verses: 30 entries, each ref/en/th/enUrl/thUrl (bible.com v59/v174), all VERIFIED (D3), th NEEDS NANCY, no cost/price/shop field, none duplicates the 16 verses or 6 Jesus words, shipped copy == source: True
+Q-0754 daily verse text == the saved fresh fetch (byte-exact): True
+Q-0754 spec: daily delivery, free, missed day costs nothing, re-viewable, no weekly delivery left, uiText.verseOfDay, verse card style: True
+Q-0756 0 "jewel" strings in outputs (spec, FINAL, PASTE, cards): True {'spec': 0, 'FINAL': 0, 'PASTE': 0, 'cards': 0}
+Q-0756 5 gem trophies (gem-*), cat gems, featuredGem slot, uiText.gems Thai อัญมณี NEEDS NANCY: True
+Q-0756 superseded by t235u/Watchman: gems power gear bonuses at 1/2/4 (meta.bonusGems), never spent, never go down, nothing to buy, no talent points: True
+Q-0757 economy: Pantry 6 cosmetics for Gold Stars, never trophies or verses, earn per right answer/run, no timer/sale/stock/offer/real money, no-shop line replaced, grace check keeps verses free: True
+Q-0757 coins stay the in-run meter; gems = talents; trophies never sold: True
+Q-0757 game-feel style line (t238u/Watchman A2: chunky buttons, bold colors; no cartoon/mobile-strategy wording): False [SUPERSEDED: #77 storybook look (t273u) restored chunky (6 expected); the t238u heavy-buttons wording is gone by ruling]
+Q-0757 F3 meta.uiTextEntries == len(uiText): True 98
+Q-0757 F4 SIGNED OFF exception wording + 201 of 207; F6 7 zone emblems derived: False
+Q-0757 F5 fd-07/08/09 Thai = meaning glosses (no sound-alike), NEEDS NANCY; crib/bed clues not translations: True
+Q-0757 thDef hints are clues, never the card translation: True
+Q-0757 Map Sam emblem (t238u); Guardian boss-only; Defender/ผู้ปกป้อง: True
+Q-0757 chef-hat icon v2 (cream puff, gold band/outline only; same viewBox), note updated, council image saved: True
+Q-0757 the 4 dropped refs have THSV11 fetched (verse page, v174, chapter-corroborated) and stay out of daily-verses.json: True
+Q-0757 c4 T2/T3 default-only trims: every card and block byte-identical once defaults are filled back in, no card changed type, spec documents both defaults: True
+Q-0757 c4 + Q-0758 picture-first: pic flags = the 4 council cards + Instructor sheet 14 (18), all stay say-it, no 🍿/🍰, no dup pic in Kitchen, spec rule present: False [SUPERSEDED: Watchman W10 (4:42 PM MDT) replaced Instructor kitchen-tap 38771bd6: Kitchen say-it cards are scene targets, the picture-first card is gone (render 20 superseded); the pic flags are unchanged and rechecked live in the v6-08 IN and WG blocks]
+Q-0757 c4 C-CH-1 option A: all 6 Jesus words given at start, no gear link, weaponGift reworded, spec has no gear-brings-a-word text: True
+Q-0757 c4 verses rotation/graceRule say day (v5-21 only), v5-19 untouched: True
+Q-0757 c4 C-CH-3: Honey Frame 30, owned tile ✓ + wearIt, replays give XP and Gold Stars: True
+Q-0757 c4 CP-1 cut stays cut (no near-full / one-more session-end hook): True
+Q-0757 c4 CP-4 flame = total days only: never resets, no loss wording, no grey/broken flame, no countdown: True
+Q-0757 c4 Watchman F1-F5/F7/W-1: True
+Q-0757 c4 day 31 = Psalm 86:15 (fresh fetch == Auditor reference), every day 11-40 has enGloss/thGloss (thGloss NEEDS NANCY), spec gloss line: True
+Q-0757 c4 chef hat outline Ink #10170F (svg + note), v3 preview saved: True
+Q-0758 every emoji pic is Emoji 13.0 or older (no Emoji 14+ code point): True
+Q-0758 Instructor labels: wearIt Use it/ใช้เลย, wearing Using, Golden Chef เชฟทองคำ, all NEEDS NANCY: True
+Q-0758 rank-trim recipe inserted once after the trophy Grid block, 2 bottom studs, no rank words, Pantry unranked, Safari 14 CSS limits, animate transform/opacity only: True
+Q-0758 Candy Crush juice: one pop per event; no combo meters, near-miss screens, lives, boosters anywhere in data: True
+Q-0758 F6 + 320 pt: Thai 17 px+ no stroke (stroke only on English), 320 pt trims insets at most 6 pt and never the Thai: True
+Q-0758/t238u style line: flat cel-shaded, thick Ink, serious, no comedy; no show or game names in Build text except the CoC core reference line: False [SUPERSEDED: #77 storybook look replaced the flat cel-shaded line with 'one style in two layers']
+Q-0758 day 31 Psalm 86:15 VERIFIED (Chancellor rerun-2008), Thai NEEDS NANCY: True
+Q-0758 c2 coherence: no filter-based brightness flash (Juice rule), glows fade opacity, sky ring contrast stated truthfully (6.96:1), heroic trim fits the parchment verse card: False [SUPERSEDED: Auditor contrast fix restated the sky ring as 7.0:1+ on Ink (was 6.9:1+)]
+Q9 O10 no mic, no cottage, no permission prompt: True
+Q9 O11 Safari 14 / flat: no filter, blur, gradient, SMIL, :has(), color-mix(), container queries, inset; transform/opacity only: False [SUPERSEDED: spec 'No gradients except sky': the title now holds the sky gradient and a min-aspect-ratio media query (Safari 14 OK); rechecked below with only those two allowed]
+Q9 art sync: one shared Ink stroke rule (3, round), outlines on art only, Thai never stroked; no AT/Blizzard names; no SFX words or emoji on the title: True
+Q9 trade dress: no white bear-ear hat / light-blue shirt / green backpack combo, no Candy pinks in the art: True
+Q9 D1 trophy cards 3 across at 320 pt (4 at 375+), auto height, no "square trophy cards", spec beats the 4-across mockup: True
+Q9 D7 not-yet rank rings 60% opacity, tile full color: True
+Q9 Q8-F3 Dark Gold #8A6200 on parchment, plain Gold on Stone: True
+Q9 D8 no-op: Sound Duel already open from first launch, no level wording, no new completion gate: False [SUPERSEDED: MX1 (t329u): Echo Forest (Sound Duel) opens after the Gentle guardian]
+Q9 D3 daily verses all 30 VERIFIED, one top-level verifiedBy (v5-22: six runs 7:49-8:28 + Auditor 8:46-8:48 104/104), none per verse, shipped copy byte-identical: True
+Q9 paste <= 188,500 (1,500 line) and <= 190,000: True 188007
+t238u T1 title scene: sun, mountains, 3 flat trees, big rock + front grass, no tassel anywhere: False [SUPERSEDED: t283u valley title replaced the t238u scene]
+t238u T2 Start your day / เริ่มวันใหม่ (uiText.letsGo, NEEDS NANCY), between rock and front grass, Hero Yellow 24 px+ 11.0; take key and sword text gone: False [SUPERSEDED: t283u valley title (t295u) replaced the t238u button placement]
+t238u T3 wind CSS-only on .w (grass, leaves), title screen only; Map paper static: False [SUPERSEDED: t283u valley title: the sway/time-of-day loops replaced the single wind keyframe]
+t238u T4 sun pan: transform/opacity, CSS only, ease-in <=1.2 s, 2nd tap skips, Sam 3 px dip no squash, reduced motion 150 ms fade: False [SUPERSEDED: t283u valley title: no sun pan]
+t238u T5 old sword-rise/squash/zoom sequence gone (not stacked): True
+t238u T6 art sizes (scene <=1,400 with keys, sword <=600): False 21371 1464 [SUPERSEDED: t283u valley title + sky split; art cap is the council absorb rule]
+t238u H1 Sam: young Thai American boy with glasses, traits only (slim legs, athletic build, small dot eyes, rugged), no show names, one "the hero", แซม via uiText.heroName: False [SUPERSEDED: v5-33 shared 6-head rig and t297u faces replaced the H1 trait line; glasses rule covered by gate 2]
+t238u H2 hub: two buttons + one Gold arrow cue (not a button, transform only, still with reduced motion): True
+t238u C1 Character: Your hero caption, trophies row fixed above the tabs (never scrolled), 6 tabs 3x2, opens on newest trophy tab, only the pane scrolls, Back always to the hub: True
+t238u C2 Slow Mode + Rest mode: plain switches on Character only, v5-27 strings, Slow Mode = 0.6 with no second tap, off never costs streak/star/coin, no lock wording: True
+t238u R1 Restore: outside the pane, two steps, step 2 names what it replaces, second separate tap, localStorage naeState.bak first, corrupt/partial/empty changes nothing, no warning/loss words, tested: False [SUPERSEDED: v6-08 VP8: restore check is "all keys but `giftGems`"; Restore rechecked in the v6-08 block]
+t238u R2 Instructor Thai kept: กู้คืนข้อมูล, สำรองข้อมูล, ถ้วยรางวัลล่าสุดของฉัน, ตัวละคร, กลับ: True
+t238u M1 Map next-step row = region played least today; Sam emblem; dot speckle; log top band; path width 4; SE height budget: False [SUPERSEDED: B1 (audit t372u): the next-step row adds uiText.playAgain once all are done]
+t238u M2 Gold text only on label plates, incl. Level: True
+t238u W1 singular/plural: every {n} plural string reachable at n=1 has enOne; spec states the rule; no "1 more gems": True ['unlocksPips', 'unlocksZoneRight'] {'level': 2, 'pipFills': 3, 'bossesWon': 1, 'zoneRight': 25}
+t238u S1 verse credit note: Scrolls shelf, no Settings (Auditor M1): True
+t238u S2 PASTE <= 188,200 (council hard ceiling): True 188007
+v5-30 MJ1 cheer: raised weapon never across his face (same as the pose line): True
+v5-30 MJ2 Backup lists may scroll; rule 12 and the test agree: True
+v5-30 mn1 Character test says its columns (3 across at 320 pt): True
+v5-30 mn2 trophy row: 44 pt icons, earned first, no text: True
+v5-30 mn3 title tree moved to x=145 (clear of Sam and the sword glow); cards otherwise == v5-29: False [SUPERSEDED: t283u valley title]
+v5-30 mn4 Backup view in the Back exceptions and the banner exceptions: True
+v5-30 mn5 hub arrow at the Map button's right end (no overlap): True
+v5-30 mn6 dropped (Chancellor: :69 covers reduced motion): False [SUPERSEDED: t283u valley title: no sun pan dip]
+v5-30 mn7 Restore check = JSON, schema 5020, all keys (the :253 reset never meets a mismatched backup): False [SUPERSEDED: v6-08 VP8: "(JSON, `schema` 5020, all keys but `giftGems`)"; rechecked in the v6-08 block]
+v5-30 mn10 chunky -> heavy (4x): False [SUPERSEDED: #77 storybook look restored chunky by ruling (6 expected)]
+v5-30 PASTE <= 188,200: True 188007
+v5-31 F1 title tree x=40 moved to x='-8' (off Sam's head; same length), x=145 tree kept: False [SUPERSEDED: t283u valley title]
+v5-22 B1 touch-action:manipulation on .ti right after the fill-box rule (spec line, not in art): False [SUPERSEDED: title rebuilt (t283u); touch-action now sits on .ti in the 6.1 CSS line (kept once)]
+v5-22 F3 audio wake says the title tap: True
+v5-22 loop <=150 (expect 142): True 142
+v5-22 daily verses 60 en/th strings byte-identical to v5-21 (v520/pre-v522-scripts/daily-verses.json 41e4c65a): True
+v5-23 t51 cards: cs-07/sw-07/nm-09/bh-17 th end in Nancy's ค่ะ (exact patch text): False [SUPERSEDED: Instructor sweep 2 (instructor-thai-cs07-sw11.py d2f89398, NEEDS NANCY): cs-07 gets a space before ค่ะ; rechecked live in the v6-08 IN block]
+v5-23 t51 encouragement[5] God loves you. = พระเจ้าทรงรักคุณครับ; all 7 lines carry ครับ: True
+v5-23 t51 day 36 Psalm 103:13 thGloss = พระเจ้าทรงเมตตาเหมือนพ่อ; 60 verse strings byte-identical to v5-22 (v520/pre-v523-scripts/daily-verses.json 4e686f84): True
+v5-23 t51 PASTE: พระเจ้าทรงรักคุณ only as ค่ะ (sw-07) and ครับ (encouragement), never bare: True
+v5-24 B6 run order fills with the rest seen longest ago (once, section 7 step 8): True
+v5-24 B2 + v5-25 C2 never 4 say-it cards in a row while a choice card is left; this rule wins over the order above (one general rule): True
+v5-25 C1 (replaces v5-24 B3 clause): say-it Got it is a right answer (XP, coin, Gold Stars, rightByZone) stated once in section 8; boss line back to plain rightByZone: True
+v5-26 verses: only the internal version changed vs nancys-adventure-english-v5-23-daily-verses.json (v5-23, 64ff095f); 60 strings byte-identical; version == the build version (was pinned to v5-26): True
+v5-24 C3 daily verse line says VERIFIED (see the file's `verifiedBy`), no UNVERIFIED clause, in spec/FINAL/PASTE: True
+v5-26 Q1 cs-22/23/24 one object per size picture ("nothing else", no "Two"): True
+v5-26 Q2 fd-09 trap "ice cream sandwich" (choice + trap), Thai trapNote exact (NEEDS NANCY, on instructor/nancy-thai-signoff-list.md), th unchanged, no Sunday left: True
+v5-26 Q3 inline SVG outlines Ink #10170F (no #1A1A1A/#2B2B2B/stroke #000 left; tie color="#000" kept): True
+v5-26 Q4 sw-06 thDef exact (NEEDS NANCY), th unchanged, 18 thDef cards, on the sign-off list: True
+v5-26 D2 not-yet trophies show a gift icon (no lock icon in player-facing text; Build-only "locked trophies" wording kept); no emoji added: True
+v5-26 Emoji 13.0 limit across the whole PASTE (no Emoji 14+ code point): True
+CURRENT.md matches its lock in v520/locked-md5.txt (v5-27 lock 5929db12 until the 1:10 AM PT Oct 31 flip; then the v5-30 pair lock): False [SUPERSEDED: locked-md5.txt predates the council flips; the rewritten lock check pins CURRENT.md to ba6726f6]
+v5-26 C26-1 SVG line says size cards show one object (no two-object rule left; agrees with Q1 svgNotes): True
+t235u 1 main menu = exactly two buttons (uiText.titleMap, uiText.character), nothing else; launch lands there: False [SUPERSEDED: v6-08 VP1: launch order now ends "run or main menu; the daily verse, if due, pops up over the main menu"; 6.2 two buttons rechecked in the v6-08 block]
+t235u 2 Character is the deep hub (gems, gear, themes, titles + Scrolls, Pantry, Backup view) and the only scroll area; rule 12 zero scroll at 320 x 568: True
+t235u 3 Map: linear one-column path, rugged Paper sheet 3D, zero scroll, 12 pt seam log + 8 pt header log frame, no diamond/grid/X markers: False [SUPERSEDED: F5 (audit t372u): the Paper sheet is a sky sheet with scenery strips (t346u)]
+t235u 4 no Settings anywhere; former settings rehomed; talents gone, gear bonuses from gems (never spent), Gold Stars Pantry-only: True
+t235u 5 hero is a boy (athletic build, slim legs, small eyes, rugged, zero comedy), no third-party show names in shipped text, sword-iron note updated: False [SUPERSEDED: t290u: the hero is Sam or Nancy, picked on the Map]
+t235u 6 clip art tightened + realistic, Emoji 13.0, transform/opacity only: True
+t235u 7 Map no-overlap rule: own grid cells, 44 pt+, 8 pt apart, one 56 pt right slot (boss ribbon or arrow, never both), 2-column bottom bar: False [SUPERSEDED: F6 (audit t372u): Back moved to the top bar; the bottom bar is the updateReady chip]
+t235u 8 left icon column aligned, counts Gold #FFCC33 (no white), contrast 10.0 stated (m1 v6-05: Back left, counts plate 2x2): True
+t235u verses: cards verses + jesusWords + boss scrolls byte-identical to v5-27; daily verses only version differs from v5-27: True
+t235u cards: only the planned keys changed vs v5-27 (uiText, meta, mapLayout, picPlan.uiInlineSvg/svgNotes, version): False [SUPERSEDED: release diff pinned to v5-28]
+t235u gems give her something to chase (Watchman 11:53 PM PT): totals turn on/upgrade gear bonuses at 1/2/4, never spent, Character shows next bonus + gems left, no gems-do-nothing line: False [SUPERSEDED: v5-34 gear rule: nextBonus became nextWeapon]
+t235u paste <= 188,500: True 188007
+v5-32 PASTE <= 188,200: True 188007
+v5-32 cards: only version, meta.version and picPlan (inline art + trophyStyle note) differ from v5-31; Thai untouched: False [SUPERSEDED: release diff pinned to v5-32]
+v5-32 daily verses: only version differs from v5-31: True
+v5-32 same inline ids (8 card, 4 trophy) + tex + sam: False [SUPERSEDED: release diff pinned to v5-32 (v5-34 added sky/nancy/aura and weapon art)]
+v5-32 style lock: every card/trophy SVG roots Ink 3 px; tex has 5 material patterns + zs/zh; no gradients in art: False [SUPERSEDED: pinned to v5-32 art; v5-33 rig and v5-34 tex rebuild changed roots]
+v5-32 no Openclipart left; ids unique across all inline art: True
+v5-32 title: F1 tree at -8, 3 tree uses, sun kept, wind .w, static-fallback line: False [SUPERSEDED: t283u valley title]
+v5-32 chunky on all 4 UI hits, no heavy UI word left (verse "heavy laden" kept): True
+v5-32 Thai guard: True
+v5-32 spacing: 16 pt margins, map rows 20/8 (=104), coins 16/2 fit 90 pt, HUD 88/64, SE question budget 566: True
+v5-32 Sam supplied (anatomy line, gear hooks), H1 traits kept: False [SUPERSEDED: v5-33 shared rig replaced the v5-32 Sam]
+v5-32 no brand or show names anywhere in the PASTE or cards: True
+v6-08 every inline SVG parses as XML, one </svg> each (15): True []
+v6-08 PASTE 188007 chars <= 188,200 (Thai reserve 188,200-188,500 untouched): True headroom 193
+v6-08 art total 32808 vs cap 18,519: within cap: False; council absorb rule (3-0) applies only because the PASTE fits: True over by 14289 [SUPERSEDED: council absorb rule (3-0): applies because the PASTE fits]
+v6-08 per-SVG 2,500 limit: every SVG within it except tex and title (council exemption stated in the PASTE): True [('tex', 3718), ('title', 19057)]
+v6-08 compact cards: zone/choices/hint decode back to v5-33 card content exactly (211 cards; key order aside): False [SUPERSEDED: v6-08 H1 changes ms-31 choice pics only; diff-only undo to v6-07 checked in the v6-08 block]
+v6-08 spec states the compact fields: False [SUPERSEDED: v6-04 T3/T5 (lossless trims) extended the compact-fields sentence; the new sentence is checked live in the v6-05 block]
+v6-08 verses: cards verses/jesusWords/encouragement == v5-33; daily-verses identical except version: True
+v6-08 spec section 15 byte-identical to v5-33: False [SUPERSEDED: v6-08 VP3/VP4 change section 15 (pop-up + daily gift); diff-only undo to v6-07 checked in the v6-08 block]
+v6-08 Instructor Thai files (weapons 58b47663 shop-rule update, secret 65bcfa65, greetings eb16d8c8): True {'w': '58b47663', 's': '65bcfa65', 'g': 'eb16d8c8'}
+v6-08 30 new uiText keys, each "en = th" verbatim in those files; nextBonus -> nextWeapon "Next weapon at level {n}": False ['playAgain', 'dailyGift', 'listenFind', 'howMany', 'howManyCows', 'bigOrSmall', 'spellIt']
+v6-08 Thai of every v5-33 key unchanged: False
+v6-08 gate 1: the one gear rule stated once in the spec, no conflicting "never bought"/"comes only at start" weapon lines left: True
+v6-08 gate 1 data: every bought weapon opens at a tier level and costs stars; Dragonbane (final) and Bloodtide (second-to-last) free at boss milestones; secret sword by the secret goal; nothing priced in money: True
+v6-08 gate 1 UI: nextWeapon unchanged, buy screen equips in the same tap, not-yet tiles use weaponEarnAt, tier toast weaponInShop: True
+v6-08 gate 2: no spec line gives Nancy glasses (every "glasses" mention is Sam's, or says Nancy has none): True 1
+v6-08 gate 2: Nancy SVG carries the t297u face snippet byte-for-byte, no #rE dot eyes or corner ticks; Sam keeps #rE and glasses: True
+v6-08 gate 3: weapon bonuses are English-progress/stat words only (Hint Retry Star Streak Respell Slow, 1-2); none names a verse, scroll, Jesus word or the leaf: True ['Hint', 'Hint2', 'Respell', 'Retry', 'Retry2', 'Slow', 'Star', 'Star2', 'Streak']
+v6-08 gate 3: spec says gear never touches verses; hearth leaf and daily verse stay free and word for word; grace check intact: True
+v6-08 Option B types (t360u): rows sword1 sword2 axe1 mace1 + sling, shield, crook; each type in exactly one hands group; shield only offHand; no pair group; crook two-handed; no trimmed type left: True ['axe1', 'crook', 'mace1', 'shield', 'sling', 'sword1', 'sword2']
+v6-08 equip rule text (Option B): shield only with a 1H sword, two-handers (2H sword, crook) take both hands, no pair line, off-hand items v6: False [SUPERSEDED: F11 (audit t372u, t336u): a 1H sword, axe or mace may add the round/square shield; F11 text checked live in the v6-04+ fix-text check]
+v6-08 11 weapons (= spec "Weapons (11,"), unique ids and names; Dragonbane and Bloodtide are 2H swords; every row type has a parts recipe; tex holds #wb #wh #wx #wm, #wo/#wv gone with wands, staffs and bows (t360u): True
+v6-08 every weapon outside a row tier has a bonus in meta.weaponBonus (crook Respell Slow); counts 24/21/55 read from data match the data fields and the spec head: True
+v6-08 silhouette fix (#335): the .sil rule sets the weapon colour variables to #5E6468: True
+v6-08 rigs: .wp weapon hand and .wq off hand in Sam and Nancy: True
+v6-08 title: t283u valley (hero slot #th, 2 bears, lake, one bunny parked, pines still (t366u still)), no select UI; sky: 4 time bands, sun+rays move together, night stars+moon, biplane + live greeting text #gE/#gT, Thai 17: False [SUPERSEDED: t371u: the title is Maxwell's t288u picture (one SVG, sky merged); checked live by the v6-04+ title-still/Safari checks and the v6-02+ plane/banner check]
+v6-08 title spec: clock bands m 5:00-11:59 / a 12:00-16:59 / e 17:00-20:59 / n 21:00-4:59 (Instructor), greeting keys named, Button C line (Maxwell 1:37 PM PT): True
+v6-08 title sword: square hilt (no round pommel or round guard ends), gold-and-blue accents, in a bush: True
+v6-08 Map = hero select (t290u): Sam/Nancy buttons, bounce 1.08 from the feet in 300 ms, persists, 320 pt hero strip with Back in the top bar, no avatar button at 320: False [SUPERSEDED: F6 (audit t372u): Back sits on the top bar at every width, the avatar button is gone; F6/F7 texts checked live in the v6-04+ fix-text check]
+v6-08 hands: #rH is the t290u mitten with a 7.7/22 thumb; every right hand is mirrored outward by a CSS rule matching its x: False {'sam': ['13', '55'], 'nancy': ['62', '13']} [SUPERSEDED: t376u: #rH is the t320u hand (18 long, thumb 6.3); the right-hand mirror rules (x 55, 62) are checked live in the v6-05 block]
+v6-08 Watchman flags: Nancy far arm moved out from behind the belly, Nancy knee ticks, bunny at the 3 px line, :54 HSL L, m2 high-five wording: False [SUPERSEDED: v6-08 H1 rewrites the :243 high-five wording; rechecked in the v6-08 block]
+v6-08 #77 storybook line (frames 6 pt / 4 pt dense and 320, gold-and-blue, full look on low-UI screens, no new art): True
+v6-08 hearth leaf: always there, free, alternates encouragement and given verses, no counter/timer/gear: True
+v6-08 out in the world: meta.outings are existing card ids; spec run-order step: True
+v6-08 brand grep 0: True
+v6-08 never list holds: no new timer/energy/leaderboard/lives words in v5-34 additions: True
+v6-08 no 911 / Call Max / PASTE- placeholders: True
+v6-08 economy (v5-35): tier 1 free, 35 stars/day, 3 favorite types fully bought (735 stars) by day 21 (<= day 26 = Dec 5); table posted; spec: never below zero, never holds back a lesson, legendary never locked: True
+v6-08 find-and-tap (t312u/t313u + council): rule once in the PASTE, existing cards only (no new question text), tapPrompt, 44 pt targets 8 px apart, guardian after scene 5 as a 10-card recap, miss = hint + wrongText + grace + retry, zones stay open: False [SUPERSEDED: F1/t376u template rewords the target rule to "44 pt+ tap areas, 8 px apart, no overlap"; checked live in the v6-05 block]
+v6-08 shop rows (Option B, t360u): 4 types sword1 sword2 axe1 mace1, English names, one theme each from existing bonus words, 3 tier names/colors/star prices, giftOf = Word guardian -> axe1, Number guardian -> mace1 (both end guardians), rarity has no words: True
+v6-08 hearth icon is a Stone arch with a heart, never a flame; Dragonbane v2 described; props reference-only: True
+v6-08 PASTE 188007 chars <= 188,200: True headroom 193
+v6-08 B1: only cards with a pic are tap objects; pic-less cards play on their own screens, at most one between scenes, never back to back, leftovers to the guardian recap: True
+v6-08 M1: no Jesus-word-first in the hint line (only that clause removed, rest byte-identical), the flourishes line and the play-flow check; gear never moves a Jesus word: True
+v6-08 M2: grace check keeps "no verse, trophy, timer, offer or real money": True
+v6-08 M3: weapons open in the uiText.gear tab; Pantry stars drop only there and in the gear tab: True
+v6-08 M4: the hearth is a corner button in 6.2 and the main-menu test: False
+v6-08 M5: "last card" not "10th card": True
+v6-08 M6: short zones repeat the cards seen longest ago, never twice in one scene: True
+v6-08 M7: scene layout line (card on top, hero + objects, 44 pt+, 8 px, 3+2 rows at 320 x 568, SE sum <= 568, Reveal after each right tap); 6.4 one-layout line allows 7.1: False [SUPERSEDED: F1/F2/F15 + t376u: one play-screen template replaces the scene layout line]
+v6-08 MX2 (t331u, W1 folded in; rings 1/3/5 per QM 4:31 AM PT): 3 rarities, tierStars [0,45,200], colors grey/blue/orange-gold, names Oak|Crystal|Star; tiers 1-3 only, one named item per slot; uncommon named weapons held (drip line); Bible 3 free (sling + hammer common, crook a guardian gift; Option B t360u); gifts beside the Greatsword row; no epic color, no 4-tier text, no rarity words in data: False [SUPERSEDED: Chancellor 5da6f734 (d): the ring line now names the untiered Bloodtide, Dragonbane and Sunforged as legendary; rechecked live in the v6-08 CH block]
+v6-08 counts from data (42 trophies, 11 weapons, 17 gear, 5 gems/14 themes/6 titles) match meta and the PASTE lines: True
+v6-08 gear table (v601build): 35 stars/day, 3 favorite rows, 4 x 3 = 12 pieces, 18 launch weapons, legendaries Nov 19 / Nov 25 / Nov 30, balance never below zero: True
+v6-08 MX3 (t330u): one tan parchment token #F6E9C8 (the t312u/t320u/t328u mock question card and HUD level plate face) for every gameplay button, plate, panel, question card and HUD plate, Gold accent lines; only #2E7D32 Next/right and rarity rings differ; old Panel Stone/Polished Steel rows gone; Ink on it 15.1: True
+v6-08 MX4 (t330u) scene notes queued in the spec .md build notes (all five) and moved to v6: no MX4 line in the PASTE (+284 would pass 188,200): False [SUPERSEDED: v6-08 E1: the Golden Fields eyes note became "Sam's eyes are happy closed Ink arcs on every screen (t398u)"; the other four notes rechecked in the v6-08 block]
+v6-08 Bible sling and hammer free when their tier opens (one sentence, weaponNew); the crook is the Gentle guardian gift; data carries no price for the 3 Bible weapons; staff-lantern gone (t360u): True
+v6-08 t334u END-BOSS gate (supersedes MX1 all-guardians): one rule in rule 4; Word Meadow > Golden Fields (Word guardian) > Home Lake (Number) > Echo Forest/Sound Duel (Gentle); end = last zone in mapLayout order; end guardian can come first; Sound + Rainbow anytime bonus, never needed; Maxwell Says + Kitchen day one; softened look + end guardian silhouette + comingNext; tap -> guardianLast; never closes; regionOpen + 8% bounce + sparkle; hearth/Scrolls/rest always; no all/one-guardian text; internal names absent: False [SUPERSEDED: F8/F9 (audit t372u) extend the guardianLast and regionOpen clauses; rest of the rule rechecked below]
+v6-08 t334u arrow points at the end guardian she still needs; boss line opens the next region on the end guardian; test line says each region opens by its end guardian only and never closes; grace words (padlock/locked/fail/ล็อก/แพ้/ไม่ผ่าน) only inside never-rules, none in uiText: True
+v6-08 spec .md: Pacing note in Auditor wording (stale ten-days sentence gone), headroom note verbatim; banked figure = 188,200 - PASTE chars; PASTE has no pacing line: False
+v6-08 Watchman T1 haft fix kept: shared #wh haft light wood #B07A42 (was bare #6B4423); #wo knob and the spear/polearm/scythe/claws recipes left with their rows (Option B, t360u); v6 list keeps shield pairing; magic-staff-rare not in build: False [SUPERSEDED: F11 (audit t372u): shields pair with a 1H sword, axe or mace]
+v6-08 t336u shields round or square only: shield-sunrise is round in its note; no kite/heater shield anywhere in the PASTE: False [SUPERSEDED: the only "kite" is the park toy in the 7.1 scene list; rechecked below in shield context]
+v6-08 rarity drip colors spec .md only (uncommon 2 green, epic 4 purple #9B6BD3, provisional); not in PASTE: True
+v6-08 MX1 gear stays tied to levels, not regions: True
+v6-08 minors: m2 ribbon after the last scene; m3 12 level cosmetics = data; m5 corner; m7 chooseHero on the hero band; m8 same-zone outings; m9 gear rows scroll sideways; m10 slots + legendary silhouette before tier 3; m11 SE sum with hero strip: False [SUPERSEDED: Chancellor 5da6f734 (d): Sunforged joins Bloodtide and Dragonbane beside the Greatsword row; rechecked live in the v6-08 CH block]
+v6-08 tap phrasing (Instructor t322u) NOT built: t334u banks the freed headroom for v6 questions; no tapFind/tapMy/tapGive/tapYour keys or rule, tapPrompt kept; uiText 98: False [SUPERSEDED: F3 (audit t372u): tapPrompt text changed; still no tapFind/tapMy/tapGive/tapYour; uiText 92 rechecked below]
+v6-08 hint button line byte-identical to v5-35; heavy laden unchanged; verses = v5-35 except version: True
+v6-08 base set v5-37 untouched (PASTE acc534a5, cards 350ecbaf, verses b0235ff8, FINAL 8679a584, spec 2cacef00, qm_v537, checks_v537), CURRENT.md b653ffb2, v537-frozen/ and audit/snap-v537-gate/ match their MANIFEST: True
+v6-08 generator qm_v601.py re-runs from the frozen v5-37 base (--dry, nothing written): stage 1 == measure-B4 scratch byte for byte (184,516), and the stage-2 PASTE length equals the file on disk: False  [SUPERSEDED: v6-04 generator chain rechecked below]
+v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 193: True
+v6-08 verses byte-identical to v5-37 except the version field; "heavy laden" once in the PASTE and unchanged in cards; verses never priced: True
+v6-08 Option B trim: rows sword1 sword2 axe1 mace1; the 11 trimmed trophies gone from data and prose (staff-shepherd kept as the crook); no bow/wand/staff weapon left; classMage/forestRanger gone: True
+v6-08 gear words (t358u): the 8 launch words on the planned pieces; each [word, meaning <= 8 words, Thai draft]; no words 9-16 built; no word count anywhere: True
+v6-08 verse reference labels: only on free or given pieces, only references already in v5-37 (no Ephesians), never verse text, crook = the Gentle guardian scroll (Isaiah 40:11); no ref on any Pantry item or star-bought rung: True
+v6-08 guardian types: Sword + Greatsword at start; giftOf Word guardian (sight-words) -> axe1, Number guardian (numbers) -> mace1; crook = Gentle guardian (baby-hospital) gift, free, 2H, named Good Shepherd Crook; soft outline + uiText.giftFrom; switching free on Character: True
+v6-08 grace + never list in the new gear text: no padlock/locked/fail/ล็อก/แพ้/ไม่ผ่าน, no timer/energy/leaderboard/countdown, no counter; transform/opacity only: True
+v6-08 Breastplate of Righteousness = the level-13 item that was the Rose Garden Shirt (same id, slot tunic, level 13), no rings; no "Rose Garden" left: True
+v6-08 shirt swaps: 3 Golden Pantry tunic tints, 30-80 stars, no rarity/rings/tier, pic 👕 (Emoji 1.0), rule sentence says no rings: True
+v6-08 gear sheet look (t350u): carved dark-wood frame, Gold filigree, parchment #F6E9C8 panels, hero center, beveled square slots with --b ring glow (opacity only), dark tooltip, 320 pt layout, original art: True
+v6-08 no game/brand names (incl. MMO, Warcraft, WoW) and no new show names anywhere in PASTE or spec: True
+v6-08 safety: no Elk Refuge Inn, no 911 / Call Max / Show the Nurse, no email or phone number; due date line count unchanged vs v5-37: True
+v6-08 emoji: no new emoji beyond v5-37 except 👕 (Emoji 1.0, Unicode 6.0): False ['🌳', '🐑', '🐭', '👕', '🙌', '🙏', '🚗', '🦇'] [SUPERSEDED: Maxwell t406u (H1): 🙌 / 🙏 hand emoji on ms-31; rechecked in the v6-08 block]
+v6-08 Thai changed only where planned: added = 8 word drafts + breastplate gloss + giftFrom + 3 shirt names (all NEEDS NANCY); removed = trimmed pieces + classMage/forestRanger + Rose Garden gloss; nothing else: False {'พระเจ้าทรงสร้างสีสันต่างๆ ค่ะ': 1, 'นี่ของฉันค่ะ': 1, 'ลูกดิ้นค่ะ': 1, 'ห้องของคุณพร้อมแล้วค่ะ': 1, 'นี่สามีของฉันค่ะ': 1, 'พระเจ้าทรงดีครับ': 1, 'ร้านดาวทอง': 1, 'หา ': 1, 'เจอไหม': 1, 'เล่นอีกครั้งเพื่อรับดาวเพิ่มไหม': 1, 'อัญมณีประจำวัน': 1, 'เม็ด': 1, 'ฟังแล้วหาดู': 1, 'นับดู': 1, 'มีวัวกี่ตัว': 1, 'ใหญ่หรือเล็ก': 1, 'สะกดคำนี้': 1} {'พระเจ้าทรงสร้างสีสันต่างๆค่ะ': 1, 'นี่ของฉัน': 1, 'ตู้กับข้าวทองคำ': 1, 'แตะที่ ': 1} [SUPERSEDED: v6-04 Thai delta rechecked below (tapPrompt + playAgain, NEEDS NANCY)]
+v6-08 Thai NEEDS NANCY note names the new Thai; Thai type rule (17 px+, line-height 1.7) still stated: True
+v6-08 cards: questions untouched (cards, zones, soundDuel, verses, jesusWords, mapLayout, rewardText, encouragement identical to v5-37): False [SUPERSEDED: lossless trims T1/T3/T5; rechecked below with defaults filled back in]
+v6-08 plane and banner parked on screen in the title (t371u): .pq group, banner y 37-55 pt at 320x568 (clears the 20 pt status bar), x 110-223 inside 320; at 390x844 banner y 107-129 below the 47 pt bar (m4: 90px): True
+v6-08 brand check (bare Clash, Avatar (case-sensitive; lowercase UI "avatar" allowed), Excalibur, zone names Elwynn/Westfall/Redridge/Duskwood/Stormwind/Azeroth, Warcraft/WoW/MMO) 0 in PASTE + spec: True {}
+v6-08 ES2017 syntax check (Safari 14): no ?. ?? replaceAll .at( flat/flatMap fromEntries matchAll structuredClone ||= &&= lookbehind, named groups, \k<, \p{ globalThis BigInt in the PASTE (whole PASTE, no exemption): True {}
+v6-08 real NEEDS NANCY shirt check: 3 tint shirts, each with Thai, named in the NEEDS NANCY line ("the 3 shirt names" = count of tint items), and the spec v6-list Thai line names them: True
+v6-08 base v6-03 untouched (PASTE bcc9bbe9, cards 0f37159a, verses fc174b7e, FINAL 0665c5f6, spec 812cbeb5) and matches v603build/snap MANIFEST; CURRENT.md b653ffb2: True
+v6-08 verses byte-identical to v6-03 except the version field: True
+v6-08 PASTE = FINAL + the cards.json block (minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve unused; banked 193 (+903 vs v6-03): True
+v6-08 lossless trims: with the stated defaults filled back in (T1 choices [], T2 thStatus, T3 string hint, T5 picture answer = en), every question, card, zone, trophy and block equals v6-03: False ['cs-07', 'sw-11', 'sw-19', 'ms-04', 'bh-30'] [SUPERSEDED: v6-08 H1 (ms-31 pics), E1 (#rE) and dailyGift; diff-only undo to v6-07 checked in the v6-08 block]
+v6-08 uiText: only tapPrompt changed ("Where is the {word}? Tap it!") and playAgain added; 92 entries; neither stores thStatus (NEEDS NANCY by meta.thStatusDefault): False [SUPERSEDED: Maxwell t402u: tapPrompt is now "Where is the {word}?" (no Tap it); rechecked in the v6-07 block (T1)]
+v6-08 cards Thai changed only where planned (+tapPrompt, +playAgain, -old tapPrompt): False {'พระเจ้าทรงสร้างสีสันต่างๆ ค่ะ': 1, 'นี่ของฉันค่ะ': 1, 'ลูกดิ้นค่ะ': 1, 'ห้องของคุณพร้อมแล้วค่ะ': 1, 'นี่สามีของฉันค่ะ': 1, 'พระเจ้าทรงดีครับ': 1, 'ร้านดาวทอง': 1, 'หา {word} เจอไหม': 1, 'เล่นอีกครั้งเพื่อรับดาวเพิ่มไหม': 1, 'อัญมณีประจำวัน: 1 เม็ด': 1, 'ฟังแล้วหาดู': 1, 'นับดู': 1, 'มีวัวกี่ตัว': 1, 'ใหญ่หรือเล็ก': 1, 'สะกดคำนี้': 1} {'พระเจ้าทรงสร้างสีสันต่างๆค่ะ': 1, 'นี่ของฉัน': 1, 'ตู้กับข้าวทองคำ': 1, 'แตะที่ {word}': 1} [SUPERSEDED: v6-08 Thai changes (dailyGift, listenFind, howMany, howManyCows, bigOrSmall) are pinned by the live VP and SC uiText checks in the v6-08 block]
+v6-08 picPlan: only uiInlineSvg (title = t288u port, sky merged, tex #rH t320u hand) and the duplicate rule sentence (T4) changed: True
+v6-08 every inline SVG but the title <=4096 B; title 19057 B: True
+v6-08 title still: no animation, transition, keyframes or SMIL in title/sword; 6.1 still wording kept: True
+v6-08 Safari 14 / flat: the only gradient is the sky (#sk, used once by the sky rect, spec "No gradients except sky") plus the t392u title night fade (#nf, once, on the night .nt layer); only aspect-ratio is the media feature; no filter/blur/SMIL/:has/color-mix/@container/inset:/box-shadow: True
+v6-08 Safari 14.0: no logical properties anywhere in the PASTE: True
+v6-08 audit fixes F1-F12, F14, F15, B1 and t377u one style + gaps: every new text in PASTE, FINAL and spec, every old text gone (18 edits): False ['F1/F2/F15 + t376u play-screen template (7.1)', 'F5 Map scenery strips on a sky sheet', 'F7 hero select cards', 'F9 regionOpen placement (no overlap)', 'F14 B4 Echo Knight guardian', 'B1 play-again line', 'B1 uiText count 91 -> 92', 't377u one style + gaps 1, 2, 3, 8, 17'] [SUPERSEDED: v6-08 VP10: the stated `uiText` count is 97 (dailyGift + 4 scene keys); rechecked in the v6-08 block]
+v6-08 t376u template numbers stated: H 195 at 390x844 (142 at 320x568), feet at y 700 (446), hand 18 long thumb 6.3, desk 0.39 H, crib 0.60 H, happy closed eyes on ask screens: True
+v6-08 "Guardian" (capital) only in boss names and guardianLast, never in prose: True
+v6-08 no kite/heater/teardrop shield (the park kite is a toy): True
+v6-08 Option B still holds: no bow/wand/dagger/polearm words in FINAL; rows sword1 sword2 axe1 mace1: True
+v6-08 END-BOSS rule intact with F8/F9 wording: True
+v6-08 generator qm_v604.py --dry re-runs from v6-03 and gives the v6-04 file on disk (188059 chars): True 
+v6-08 spec banked line matches: False
+v6-08 A2 variant in these files (council call; none = title as v6-04, cap rule unchanged): b
+v6-08 base v6-04 untouched (PASTE 32cfe2f4, cards 1b03ba5b, verses 26e1374b, FINAL 61a4264b, spec 4341e25d); gate snapshot audit/snap-v604-gate MANIFEST all OK; gate report 984f8f51; CURRENT.md b653ffb2 (v5-37); v5-37 PASTE acc534a5 + verses b0235ff8; v6-03 PASTE bcc9bbe9: True
+v6-08 verses byte-identical to v6-04 (and v5-37) except the version field: False [SUPERSEDED: verses are rechecked live against the base of the version under test, in that version block]
+v6-08 gate exact fix texts A3-A, m1 (two), m2, m3, m5 once each in PASTE, FINAL and spec, old text gone, deltas +29/+25/+23/-116/-27/+39/+24 as the report: False ['m3 :175 Echo Knight not a zone guardian'] [SUPERSEDED: Chancellor 5da6f734 (c): the Echo Knight recap "ends like a round" (m3 text extended); rechecked live in the v6-08 CH block]
+v6-08 A3 option A only (Maxwell t83u): section 3 heading names Echo Forest's night, 7.1 template still behind Sound Duel (B not applied), no "gameplay screens only" left: True
+v6-08 m4 title banner shift at 320x568 is translate(-58px,90px), 56px gone: True
+v6-08 m3: Echo Knight is not a zone guardian (no bossesWon or scroll); still in uiText: True
+v6-08 m2: no Map avatar button named anywhere in the PASTE: True
+v6-08 compact-fields sentence with the v6-04 T3/T5 defaults (replaces the :646 compact-fields text): True
+v6-08 find-and-tap targets in the t376u template: "44 pt+ tap areas, 8 px apart, no overlap" and the rest of the rule: False
+v6-08 hands: tex unchanged from v6-04 (t320u #rH), right hands mirrored by CSS at x 55 (Sam) and 62 (Nancy): False [SUPERSEDED: v6-08 E1: tex #rE is the happy arcs; tex equals v6-07 except #rE, rechecked in the v6-08 block]
+v6-08 cards: Thai identical to v6-04; only version, meta.version and (A2 a) the title differ: False [SUPERSEDED: cards changes since v6-06 are pinned by the diff-only undo and the cards-block check in each later block]
+v6-08 new texts: grace rule (no padlock/locked/fail/lost), no brand, no logical property, no lookbehind, no new emoji: True
+v6-08 diff-only: undoing the gate fixes, the title edit (m4) and the version gives v6-04 byte for byte; PASTE 188007 chars <= 188,200 (-52 vs v6-04), banked 193; spec banked line matches: False [SUPERSEDED: the diff-only undo to the base of the version under test is checked live in that version block]
+v6-08 generator qm_v605.py --dry --a2 b re-runs from v6-04 and gives the file on disk (188007 chars): False  [SUPERSEDED: the generator --dry re-run of the version under test is checked live in that version block]
+v6-08 m6: the v6-only Thai list for Nancy exists and names tapPrompt, playAgain, echoKnight, giftFrom, the 3 shirts and the 7 gear words: True
+v6-08 spec build note: v6-04 gate close-out in the spec only (not in PASTE): True
+v6-06 base v6-05 (council A2b) untouched: PASTE 72da2cb5, cards 5ac92b0e, FINAL 8f5b8efc, spec d6f565c7, verses 9e123224; v6-04 PASTE 32cfe2f4; v6-03 bcc9bbe9; v5-37 acc534a5/b0235ff8; CURRENT.md b653ffb2 (v5-37): True
+v6-06 verses byte-identical to v6-05 except the version field; "heavy laden" once in the PASTE: True
+v6-06 PASTE = FINAL + the cards.json block (byte-identical to the cards file); 181682 chars <= 188,200, banked 6518, Thai reserve untouched; spec banked line matches: True
+v6-06 exact edits once each in PASTE, FINAL and spec, old text gone, deltas m3/F13 +0 / night fade rule +100 / Button C +400 / title pose +58 / title file reference +124: True []
+v6-06 m3/F13: top bar says "Gold trophy (earned count)"; no "of 42", no "earned of", no X/total in uiText: True
+v6-06 title file: cards say "title.svg"; the PASTE names nancys-adventure-english-v6-06-title.svg once and says to inline it in .ti; file exists, 19007 chars, same bytes as v606build/title/title-v606.svg: True
+v6-06 title SVG parses; ids the spec uses (#gE banner, #th Sam, #tn Nancy slot, #sk sky) present; no id clashes with tex or any other SVG: True []
+v6-06 title: 4 times in one SVG (.st/.nt night, .ev evening, .su sun moves, --a/--c sky vars), m4 320 shift translate(-58px,90px) on .pq, banner text empty (live): True
+v6-06 title Safari 14 / still: no lookbehind, no logical property, no SMIL/keyframes/animation in the file (only the spec .ti CSS stops the tex flicker): True
+v6-06 title pose (approved mock): spec says the title keeps Sam's hand shading his eyes, no weapon on the title; 6.1 picture line unchanged: True
+v6-06 A2b title exemption text kept (:55): True
+v6-06 n1: the :653 block is unpinned (if V>='v5-34'); n2: logical-property regex catches margin-block, padding-block, border-inline, border-block-end, and not border-left/margin-top: True
+v6-06 diff-only: undoing the 5 edits, the title move and the version gives the v6-05 A2b PASTE byte for byte (-6381 chars): True
+v6-06 generator qm_v606.py --title file --dry re-runs from v6-05 A2b and gives the file on disk (181682 chars): True 
+v6-06 new texts: grace rule, no brand, no counter, no timer, no contact info: True
+v6-06 screen 49 (t387u) is the v6-04 PNG byte for byte: True
+v6-06 Button C shade (Maxwell 1:56 PM PT): spec 6.1 states the 35% Ink shade over the bottom 150 pt (120 at 320); the title renders ['01-title.html', '52-title-night.html', '01-title-320x568.html'] carry it once; no other screen has it: True []
+v6-06 rendered screens: no "of 42" or X/total in any v6-06 screen HTML: True []
+v6-08 title file safe (F-T1): XML parses; ASCII only; every href/url() is a local #id found in the title or tex; no script, foreignObject, image, on* handler, javascript:, @import, @font-face, http(s), SMIL; no banned name, 911, Call Max or Show the Nurse: True 
+v6-07 base v6-06 untouched (PASTE 47a08abd, cards a2cadeee, FINAL a7e980db, spec 8f34f1b1, verses 5b144ab4, title f56ecce7); gate snap MANIFEST all OK; CURRENT.md b653ffb2 (v5-37): True
+v6-07 verses byte-identical to v6-06 except the version field: True
+v6-07 PASTE = FINAL + the cards.json block; 181850 chars <= 188,200, banked 6350, Thai reserve untouched; spec banked line matches: True
+v6-07 F1 (+159) and F2 (+21) verbatim from the gate, once each in PASTE, FINAL and spec; old F2 text gone: True []
+v6-07 diff-only: undoing F1, F2, T1 (tapPrompt) and the version gives the v6-06 PASTE byte for byte (+168 chars): True
+v6-07 generator qm_v607.py --dry re-runs from v6-06 and gives the file on disk (181850 chars): True 
+v6-07 m3: title ids prefixed ti- except the 6.1 hooks gE, th, tn; undoing the prefix gives the v6-06 title byte for byte; file = v607build/title/title-v607.svg; PASTE names the v6-07 file: True
+v6-07 n3: logical-property regex allows a space before the colon (inset : / text-align : end caught; inset-shadow-free text and text-align:center not); PASTE and title clean: True
+v6-07 m1 harness 320x568 renders 22/33/34/35: every tappable 44x44 pt+, 8 px+ apart, no overlap, nothing clipped (v607build/screens/clip-320.json): True {}
+v6-07 T1 (Maxwell t402u): no "Tap it" (or Thai แตะเลย) anywhere in the PASTE, FINAL, spec, cards, harness or v6-07 screen HTML; no "Thai draft" chip in any v6-07 render; tapPrompt = "Where is the {word}?" / "{word} อยู่ที่ไหน" (instructor ccf506dc), no thStatus (NEEDS NANCY by default); -12 chars: True []
+v6-08 base v6-07 untouched (PASTE aa73cc93, cards a29fdf25, FINAL 0d8133bd, spec 6fc65d79, verses 83e22b0e, title 0b92e0b4); CURRENT.md b653ffb2 (v5-37): True
+v6-08 verses byte-identical: daily-verses.json = v6-07 except the version field; cards verses, jesusWords and encouragement unchanged; "heavy laden" once in the PASTE: True
+v6-08 PASTE = FINAL + the cards.json block; 188007 chars <= 188,200, banked 193, Thai reserve untouched; spec banked line matches: False
+v6-08 B1, A2, VP1-VP10, H1, P1, SC, G, WM/AP1/F2-F4 each once in FINAL and spec, old text gone: True []
+v6-08 diff-only: undoing B1, A2, VP1-VP10, H1, P1, SC, G, WM S1/G1, AP1, F2-F4, AG g1-g9/R1/A1, E1 (#rE), dailyGift, the 4 scene uiText keys, sizeSort, 6 pair pics, G1, uiTextEntries and the version gives the v6-07 PASTE byte for byte (+6157 chars): False
+v6-08 generator qm_v608.py --dry re-runs from v6-07 and gives the file on disk (188007 chars): False 
+v6-08 B1: every card run through the 7.1 rule: 130 picture cards, 44 read the uiText.tapPrompt ask, the rest show their own en; no ".?", "??", ",?", "the a ", "the I" and no pronoun/verb cases; pic-null cards (ph-09, sw-09 ...) and the 14 listed ids never get the prompt; rule text in FINAL and spec: True []
+v6-08 A2: the ask card Thai wraps (17 px+, line-height 1.7), never cut or shrunk: True
+v6-08 VP: launch order ends at run or main menu and the verse pops up over the menu (first launch: first menu visit after the Phonics run); the title never shows a pop-up; no verseOfDay title banner: True
+v6-08 VP: pop-up B (scrim, ribbon verseOfDay, verseGift, ref, en, gold rule, th, sources; only the body scrolls, buttons always in view; Replay shield + Got it): True
+v6-08 VP: daily gift = a flat tag above the card, ledger gift:<local date>, giftGems +1 in state, counts up only, feeds no trophy/gem count/gear bonus, missing reads 0, schema stays 5020, restore accepts it missing: True
+v6-08 VP: the gem never depends on the verse and never gates or boosts it; verses never earned, gated or boosted (grace check line): True
+v6-08 VP: uiText.dailyGift = "Daily gift: +1 gem" / "อัญมณีประจำวัน: 1 เม็ด" (Instructor 7057dde4), no thStatus (NEEDS NANCY by default); uiText 97 = meta.uiTextEntries = the stated `uiText` (97); only dailyGift and the 4 scene keys added vs v6-07: False
+v6-08 VP rechecks: 6.2 still two buttons; Settings rule (state.settings{slowMode, restWeeks}); Restore two steps; daily delivery free, a missed day costs nothing: True
+v6-08 E1: #rE is Nancy's happy eyes exactly (her path, stroke 1.6, Ink by inheritance) and Sam's rig draws it (1 use); Nancy's own snippet is unchanged and is the same path; tex otherwise v6-07; no old eye shape (open eyes, pupils, thin arcs) in cards or title; title Sam's eye is her arc; spec note updated, other four MX4 notes kept: True []
+v6-08 E1 renders: every Sam drawing re-shot with her eyes (42 screens incl. scene-variety mocks); no old eye shape in any of them; no Sam left unconverted: True [] []
+v6-08 t411u 320 m1 revert: 22 plates back to v6-06 104 px (gap 8); 22/34/35 speaker 44 pt in its own slot; 34/35 Hear-it button 140 px; tap targets >= 44 pt and >= 8 px apart (tapgap clean): True
+v6-08 m1 (gate): 24/25 plate gap back to the approved 10 px at 390: True
+v6-08 t411u screen 10: v6-06 card rhythm with the t402u wording, Thai wraps at 17 px / lh 1.7, no Tap it, no Thai draft chip: True
+v6-08 O1/VP renders: the verse pops up over the main menu at 390 and 320 (Daily gift tag from uiText.dailyGift), never over the title; the old title-verse render 02 is retired: True
+v6-08 council renders: 30 reads "A gift from the Word Guardian" (spec :292); sv-now-10 uses "kite อยู่ที่ไหน" (no Tap it); gem tag menus before/after the verse at 390/320 say exactly "Daily gift: +1 gem": True
+v6-08 P1 renders (t423u): 12 hug and 20/21 food are 64 pt ground props (C); 24-27 (people) use the framed top-right plate (A); no free-floating 96-120 pt picture left on those screens: True
+v6-08 scene renders: A-H and the Word Meadow Level 1-5 strip exist, built on the v6-08 harness; new Thai from uiText (ฟังแล้วหาดู, มีวัวกี่ตัว, ใหญ่หรือเล็ก); no Thai draft chip, no Tap it, no นะ: True
+v6-08 K1 (Auditor; Watchman S1): the one state record holds `hero` and `zoneRuns{}`; restore checks all keys but giftGems, hero and zoneRuns; FINAL, spec and PASTE: True
+v6-08 K2 (Auditor; Watchman G1 reconciled to one scheme): all 18 weapons have an id (12 shop slots incl. 7 tier-slot ids `<type>-t<t>` + 6 others: sling, shield, crook, Bloodtide, Dragonbane, Sunforged); ids unique, none collides with a trophy id; rule in FINAL and spec: True ['axe-oak', 'axe1-t2', 'axe1-t3', 'cleaver-bloodtide', 'greatsword-dragonbane', 'hammer-builder', 'mace-dawn', 'mace1-t3', 'shield-sunrise', 'sling-shepherd', 'staff-shepherd', 'sword-crystal', 'sword-iron', 'sword-sunforged', 'sword1-t3', 'sword2-t1', 'sword2-t2', 'sword2-t3']
+v6-08 U1: section 18 states the live uiText count (97 = cards): False
+v6-08 F2/F3/F4: no back-to-back Sight Words repeat across scenes; Sound Duel right answers earn stars; tier 1 is given free when its row opens (no "Get it for 0"): True
+v6-08 K3: time of day = 1 + zoneRuns[zone] mod 5, set at run start (resume keeps it), step 1 m .. 5 n then m again; zoneRuns{} in the state record, a missing value reads {} (schema stays 5020): True
+v6-08 M1: reconcile drops owned ids that no longer exist (trophies, tier slots, pantry items) and equipped ids not owned; no refund (Maxwell to pick): True
+v6-08 M2: Big or small awards and resumes as a scene card (ledger card:<runId>:<index>); F5: welcomeBack first after a missed day, then the verse pop-up: True
+v6-08 grace words: none of the v6-08 new texts (every spec edit, new uiText) says lock, fail, lose/lost, penalty, game over, can't, timer or hurry: True []
+v6-08 no logical properties (n3 regex) and no lookbehind in the PASTE or title: True
+v6-08 H1 (Maxwell t406u): ms-31 buttons are hand emoji 🙏 / 🙌 (Unicode 6.0) on 124 pt bordered parchment plates; hand-only emoji rule and "people or bigger pictures drawn, never emoji" in :243; svg:pray-kneel still drawn for ph-08/ms-11; high-five kept in the library: True
+v6-08 emoji: the only new emoji vs v6-07 are the hand emoji 🙌 and the 6 Sound Duel pair pictures (no 🔒), all Unicode 13.0 or earlier: True ['🌳', '🐑', '🐭', '🙌', '🙏', '🚗', '🦇']
+v6-08 G1 grace: tunic-rose meaning "Right with God as His free gift", Thai ความชอบธรรม kept, old wording gone: True
+v6-08 P1 (t423u) reveal pictures: 64 pt ground prop where it can stand, else 124 pt framed plate top right, never over or beside the hero; hand emoji keep their plates; in FINAL and spec: True
+v6-08 SC uiText (NEEDS NANCY, no thStatus): listenFind ฟังแล้วหาดู (no นะ), howMany นับดู, howManyCows มีวัวกี่ตัว (cow scene only), bigOrSmall ใหญ่หรือเล็ก; English as drafted: True
+v6-08 SC data: meta.sizeSort 3 big + 3 small existing picture cards; 6 Sound Duel pairs carry pics (2 emoji each, in a/b order), the other 24 stay words only; time of day by the zone step (K3) and the front desk scene (no names or signs) in FINAL and spec: True
+v6-08 AG Auditor glitch hunt 47d0b89c: g1-g9 (one sound, button guards, run/buy ids, scene miss, verse date it opened for, naeState mirror, iOS speech wake, same-zone review, verse URLs data only) + R1 + A1 each once in FINAL and spec: True []
+v6-08 IN Instructor sweep 2 (9a7e52d9): ask {word} = en in both lines, kitchen tap (replaced by WG W10), colors drop "the", cs-07/sw-11 Thai (NEEDS NANCY), guardianLast case, ms-04 letters; each once in FINAL/spec or cards, old text gone: True []
+v6-08 CH Chancellor 5da6f734: never-seen cap 8 fewest words first, no stale first-run note, arrow tie rotates from her last row, tex :root defaults, a miss keeps every coin everywhere (G4 coin clause not doubled), Echo Knight recap ends like a round, untiered weapons ring as legendary: True []
+v6-08 WG Watchman glitch hunt 73b6d48f (parent ruling 4:42 PM MDT): welcomeBack key, region-open once, level 20 bar full, tod steps (Echo Forest rounds, 0 if unset), Big or small card, front desk own scenes, look-alike groups apart (lean), count prop hides (lean), Kitchen say-it as scene targets (W10), restore keeps hero/giftGems; each once, old text gone: True []
+v6-08 WG r2 (Watchman re-walk b365ef8f): look-alike groups + size balls/digit pictures/tom yum, "Count it" never the spoken target, front desk scene holds only front desk cards (repeats fill it); each once in FINAL and spec, r1 wording gone: True
+v6-08 R2b staged copy read from /workspace/qm/hotel1B-story-20261102-0748/checks/base-c427/tree/v608build/round2/staged/ (round2.py trim 1A): True
+v6-08 R2b round2.py PATCHES applied in order to snap-1748MDT 95a4d0fc give the staged PASTE byte for byte: False 188007
+v6-08 R2b undoing round2.py in reverse recovers 95a4d0fc: False
+v6-08 R2b each round2b/eb2674be edit present once, its old text gone (4 edits): False
+v6-08 R2b PASTE - 1748 = the sum of round2.py edit sizes (+799): False
+v6-08 R2b tapPrompt json in the PASTE equals cards.json: True
+v6-08 R2b spec banked line = 188,200 minus the PASTE length: False
+v6-08 R2b PASTE within 188,200: True
+v6-08 R2b P6 direct: sw-19 has two 5-letter t choices (no giveaway), think among them, same list in the PASTE json: True ['eat', 'sink', 'three', 'think']
+v6-08 R2b P3 direct (mutation M9): 'scaled as one piece to the screen width, bottom pinned, sky cropped' once: True
+v6-08 R2b P5 direct: the walk scene shrinks below the guardian banner, once: True
+v6-08 R2b P7 direct: the long verse scrolls in its card, once: True
+v6-08 R2b trim clause names only defined scenes (no 'night table'): True
+v6-08 R2c trim clause matches the staged trim (1A 'a room ..., never over a target' once; 1B front desk and kitchen, no 'never over'): False
+v6-08 R2c trim-clip render check: no tap target or plate sits above the trim band in any trimmed render (44 trimmed renders): True []
+rc=0

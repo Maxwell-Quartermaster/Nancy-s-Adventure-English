@@ -1,0 +1,78 @@
+== base-paste vs cand-paste: live False base 15 cand 15; NEW in cand 7; gone 7
+  NEW: v6-08 PASTE = FINAL + the cards.json block (minified, byte-identical to the cards file); 188172 chars <= 188,200; Thai reserve unused; banked 28 (+1068 vs v6-03): False
+  NEW: v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188172 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 28: False
+  NEW: v6-08 PASTE = FINAL + the cards.json block; 188172 chars <= 188,200, banked 28, Thai reserve untouched; spec banked line matches: False
+  NEW: v6-08 R2b PASTE - 1748 = the sum of round2.py edit sizes (+964): False
+  NEW: v6-08 R2b round2.py PATCHES applied in order to snap-1748MDT 95a4d0fc give the staged PASTE byte for byte: False 188172
+  NEW: v6-08 diff-only: undoing B1, A2, VP1-VP10, H1, P1, SC, G, WM S1/G1, AP1, F2-F4, AG g1-g9/R1/A1, E1 (#rE), dailyGift, the 4 scene uiText keys, sizeSort, 6 pair pics, G1, uiTextEntries and the version gives the v6-07 PASTE byte for byte (+6322 chars): False
+  NEW: v6-08 generator qm_v608.py --dry re-runs from v6-07 and gives the file on disk (188172 chars): False
+  GONE: v6-08 PASTE = FINAL + the cards.json block (minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve unused; banked 193 (+903 vs v6-03): False
+  GONE: v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 193: False
+  GONE: v6-08 PASTE = FINAL + the cards.json block; 188007 chars <= 188,200, banked 193, Thai reserve untouched; spec banked line matches: False
+  GONE: v6-08 R2b PASTE - 1748 = the sum of round2.py edit sizes (+799): False
+  GONE: v6-08 R2b round2.py PATCHES applied in order to snap-1748MDT 95a4d0fc give the staged PASTE byte for byte: False 188007
+  GONE: v6-08 diff-only: undoing B1, A2, VP1-VP10, H1, P1, SC, G, WM S1/G1, AP1, F2-F4, AG g1-g9/R1/A1, E1 (#rE), dailyGift, the 4 scene uiText keys, sizeSort, 6 pair pics, G1, uiTextEntries and the version gives the v6-07 PASTE byte for byte (+6157 chars): False
+  GONE: v6-08 generator qm_v608.py --dry re-runs from v6-07 and gives the file on disk (188007 chars): False
+  differing output lines: 19
+   - handoff paste size == computed: (handoff not written yet) 188007
+   + handoff paste size == computed: (handoff not written yet) 188172
+   - Q9 paste <= 188,500 (1,500 line) and <= 190,000: True 188007
+   + Q9 paste <= 188,500 (1,500 line) and <= 190,000: True 188172
+   - t238u S2 PASTE <= 188,200 (council hard ceiling): True 188007
+   + t238u S2 PASTE <= 188,200 (council hard ceiling): True 188172
+   - v5-30 PASTE <= 188,200: True 188007
+   + v5-30 PASTE <= 188,200: True 188172
+   - t235u paste <= 188,500: True 188007
+   + t235u paste <= 188,500: True 188172
+   - v5-32 PASTE <= 188,200: True 188007
+   + v5-32 PASTE <= 188,200: True 188172
+   - v6-08 PASTE 188007 chars <= 188,200 (Thai reserve 188,200-188,500 untouched): True headroom 193
+   + v6-08 PASTE 188172 chars <= 188,200 (Thai reserve 188,200-188,500 untouched): True headroom 28
+   - v6-08 PASTE 188007 chars <= 188,200: True headroom 193
+   + v6-08 PASTE 188172 chars <= 188,200: True headroom 28
+   - v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 193: False
+   + v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188172 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 28: False
+   - v6-08 Thai changed only where planned: added = 8 word drafts + breastplate gloss + giftFrom + 3 shirt names (all NEEDS NANCY); removed = trimmed pieces + classMage/forestRanger + Rose Garden gloss; nothing else: False {'พระเจ้าทรงสร้างสีสันต่างๆ ค่ะ': 1, 'นี่ของฉันค่ะ': 1, 'ลูกดิ้นค่ะ': 1, 'ห้องของค
+   + v6-08 Thai changed only where planned: added = 8 word drafts + breastplate gloss + giftFrom + 3 shirt names (all NEEDS NANCY); removed = trimmed pieces + classMage/forestRanger + Rose Garden gloss; nothing else: False {'พระเจ้าทรงสร้างสีสันต่างๆ ค่ะ': 1, 'นี่ของฉันค่ะ': 1, 'ลูกดิ้นค่ะ': 1, 'นี่สามีข
+   - v6-08 PASTE = FINAL + the cards.json block (minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve unused; banked 193 (+903 vs v6-03): False
+   + v6-08 PASTE = FINAL + the cards.json block (minified, byte-identical to the cards file); 188172 chars <= 188,200; Thai reserve unused; banked 28 (+1068 vs v6-03): False
+   - v6-08 diff-only: undoing the gate fixes, the title edit (m4) and the version gives v6-04 byte for byte; PASTE 188007 chars <= 188,200 (-52 vs v6-04), banked 193; spec banked line matches: False [SUPERSEDED: the diff-only undo to the base of the version under test is checked live in that version bloc
+   + v6-08 diff-only: undoing the gate fixes, the title edit (m4) and the version gives v6-04 byte for byte; PASTE 188172 chars <= 188,200 (+113 vs v6-04), banked 28; spec banked line matches: False [SUPERSEDED: the diff-only undo to the base of the version under test is checked live in that version bloc
+== base-c427-r3 vs cand-c427-r3: live False base 20 cand 22; NEW in cand 7; gone 5
+  NEW: Nov 7 list only bh-01..10: False
+  NEW: Q-0757 c4 T2/T3 default-only trims: every card and block byte-identical once defaults are filled back in, no card changed type, spec documents both defaults: False
+  NEW: v6-08 PASTE = FINAL + the cards.json block; 188172 chars <= 188,200, banked 28, Thai reserve untouched; spec banked line matches: False
+  NEW: v6-08 R2b PASTE - 1748 = the sum of round2.py edit sizes (+964): False
+  NEW: v6-08 R2b round2.py PATCHES applied in order to snap-1748MDT 95a4d0fc give the staged PASTE byte for byte: False 188172
+  NEW: v6-08 diff-only: undoing B1, A2, VP1-VP10, H1, P1, SC, G, WM S1/G1, AP1, F2-F4, AG g1-g9/R1/A1, E1 (#rE), dailyGift, the 4 scene uiText keys, sizeSort, 6 pair pics, G1, uiTextEntries and the version gives the v6-07 PASTE byte for byte (+6322 chars): False
+  NEW: v6-08 generator qm_v608.py --dry re-runs from v6-07 and gives the file on disk (188172 chars): False
+  GONE: v6-08 PASTE = FINAL + the cards.json block; 188007 chars <= 188,200, banked 193, Thai reserve untouched; spec banked line matches: False
+  GONE: v6-08 R2b PASTE - 1748 = the sum of round2.py edit sizes (+799): False
+  GONE: v6-08 R2b round2.py PATCHES applied in order to snap-1748MDT 95a4d0fc give the staged PASTE byte for byte: False 188007
+  GONE: v6-08 diff-only: undoing B1, A2, VP1-VP10, H1, P1, SC, G, WM S1/G1, AP1, F2-F4, AG g1-g9/R1/A1, E1 (#rE), dailyGift, the 4 scene uiText keys, sizeSort, 6 pair pics, G1, uiTextEntries and the version gives the v6-07 PASTE byte for byte (+6157 chars): False
+  GONE: v6-08 generator qm_v608.py --dry re-runs from v6-07 and gives the file on disk (188007 chars): False
+  differing output lines: 24
+   - cards 211 picture 126 say-it 74 written 211
+   + cards 212 picture 126 say-it 75 written 212
+   - Nov 7 list only bh-01..10: True
+   + Nov 7 list only bh-01..10: False
+   - handoff paste size == computed: (handoff not written yet) 188007
+   + handoff paste size == computed: (handoff not written yet) 188172
+   - Q-0757 c4 T2/T3 default-only trims: every card and block byte-identical once defaults are filled back in, no card changed type, spec documents both defaults: True
+   + Q-0757 c4 T2/T3 default-only trims: every card and block byte-identical once defaults are filled back in, no card changed type, spec documents both defaults: False
+   - Q9 paste <= 188,500 (1,500 line) and <= 190,000: True 188007
+   + Q9 paste <= 188,500 (1,500 line) and <= 190,000: True 188172
+   - t238u S2 PASTE <= 188,200 (council hard ceiling): True 188007
+   + t238u S2 PASTE <= 188,200 (council hard ceiling): True 188172
+   - v5-30 PASTE <= 188,200: True 188007
+   + v5-30 PASTE <= 188,200: True 188172
+   - t235u paste <= 188,500: True 188007
+   + t235u paste <= 188,500: True 188172
+   - v5-32 PASTE <= 188,200: True 188007
+   + v5-32 PASTE <= 188,200: True 188172
+   - v6-08 PASTE 188007 chars <= 188,200 (Thai reserve 188,200-188,500 untouched): True headroom 193
+   + v6-08 PASTE 188172 chars <= 188,200 (Thai reserve 188,200-188,500 untouched): True headroom 28
+   - v6-08 PASTE 188007 chars <= 188,200: True headroom 193
+   + v6-08 PASTE 188172 chars <= 188,200: True headroom 28
+   - v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188007 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 193: True
+   + v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188172 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 28: True

@@ -1,0 +1,11 @@
+--- base/play_v608.py	2026-11-02 04:25:05.442116279 +0000
++++ new/play_v608.py	2026-11-02 05:05:51.361175177 +0000
+@@ -317,6 +317,8 @@
+     sd = D['soundDuel']['pairs'][0]
+     for n_ in ('mushroom', 'bridge', 'tent'): b = b.replace(f"data-tap=1 role='button' data-name='{n_}'", f"data-name='{n_}'")   # R6: Sound Duel scenery is not a target
+     out = b + (guardian('echo', W - 120, g['feet']) if SE else guardian('echo', 236, 640)) + top('forest') + nameplate(*u('echoKnight'), TINT['echo'], 122 if SE else 150)   # Auditor r2b-2051 #3: at 320 the plate sits 11 pt under the chip, clear of the helmet
++    if SE:   # QM 320 fix (t584u 1B, t629u): the fit-to-width 320 knight's helmet reached 6-12 pt into the plate (124..304); the plate moves to the 16 pt left edge, same top, same size
++        _np = nameplate(*u('echoKnight'), TINT['echo'], 122); assert out.count(_np) == 1 and _np.count(f'left:{W-196}px;top:122px') == 1; out = out.replace(_np, _np.replace(f'left:{W-196}px;top:122px', 'left:16px;top:122px'))
+     if state == 'done':
+         if SE: return out + card([tx(u('roundDone')[0] + ' +30 XP', 'e22'), tx(u('roundDone')[1], 't17', 'line-height:1.7')], 170, [gbtn(*D['gotItText'].values(), 130)])   # at 320 the ribbon would sit on the heroes, so roundDone heads the card
+         return out + ribbon(*u('roundDone'), 212) + card([tx('+30 XP', 'e22')], 170, [gbtn(*D['gotItText'].values(), 130)])

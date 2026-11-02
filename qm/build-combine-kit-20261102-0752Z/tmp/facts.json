@@ -1,0 +1,472 @@
+{
+ "src": {
+  "md5": "5e1666fe6f7189d3886686749335b3ee",
+  "chars": 188007,
+  "bytes": 213241,
+  "lines": 428
+ },
+ "p1": {
+  "lines": "1-419",
+  "chars": 83727,
+  "bytes": 83938,
+  "md5": "2f96ecf10e6a3e5f426dd7408862e002"
+ },
+ "p2": {
+  "lines": "420-428",
+  "chars": 104280,
+  "bytes": 129303,
+  "md5": "e2f7ece8019c401c7fded8108a33ab65"
+ },
+ "h1": {
+  "chars": 111,
+  "md5": "d4c296f9ca9c842100115e758bfbc4ac"
+ },
+ "h2": {
+  "chars": 147,
+  "md5": "31c0fc31d697786a39e4c914bf68fbba"
+ },
+ "json": {
+  "line": 427,
+  "chars": 103870,
+  "bytes": 128893,
+  "md5": "8d209ec5d2701b4d1f77e73457dd8fcb",
+  "md5nl": "12d973cf0af5c6edc7dbbffa828bd481"
+ },
+ "spec": {
+  "chars": 83727,
+  "lines_1_426_chars": 84132
+ },
+ "cards": 211,
+ "unique": 211,
+ "dupes": [],
+ "byzone": {
+  "phonics": 26,
+  "colors-shapes": 24,
+  "sight-words": 24,
+  "numbers": 24,
+  "baby-hospital": 31,
+  "maxwell-says": 32,
+  "kitchen": 50
+ },
+ "bytype": {
+  "picture": 126,
+  "say-it": 74,
+  "two-answer": 1,
+  "server-talk": 10
+ },
+ "personal": 80,
+ "nurse": [
+  "bh-01",
+  "bh-02",
+  "bh-03",
+  "bh-04",
+  "bh-05",
+  "bh-06",
+  "bh-07",
+  "bh-08",
+  "bh-09",
+  "bh-10"
+ ],
+ "fill": [
+  "ms-04",
+  "ms-05",
+  "ms-06"
+ ],
+ "thDef": 18,
+ "signedoff": [
+  "fd-01",
+  "fd-02",
+  "fd-03",
+  "fd-04",
+  "fd-05",
+  "fd-06"
+ ],
+ "zones": [
+  [
+   1,
+   "phonics",
+   "Phonics",
+   "ph",
+   true,
+   10,
+   "Genesis 1:1"
+  ],
+  [
+   2,
+   "colors-shapes",
+   "Colors and Shapes",
+   "cs",
+   true,
+   10,
+   "Genesis 9:13"
+  ],
+  [
+   3,
+   "numbers",
+   "Numbers",
+   "nm",
+   true,
+   10,
+   "John 6:9"
+  ],
+  [
+   4,
+   "sight-words",
+   "Sight Words",
+   "sw",
+   true,
+   10,
+   "1 Samuel 17:45"
+  ],
+  [
+   5,
+   "baby-hospital",
+   "Baby and Hospital",
+   "bh",
+   true,
+   10,
+   "Isaiah 40:11"
+  ],
+  [
+   6,
+   "maxwell-says",
+   "Maxwell Says",
+   "ms",
+   false,
+   0,
+   null
+  ],
+  [
+   7,
+   "kitchen",
+   "Nancy's Kitchen",
+   "fd cv",
+   false,
+   0,
+   null
+  ]
+ ],
+ "startZone": [
+  "phonics"
+ ],
+ "verses": [
+  [
+   "weekly",
+   "Psalm 23:1",
+   "81c2b0d99c395e7fec4df3a6c6f6d873",
+   "e55a9088e886ca764ac1d3522b432a59",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Philippians 4:13",
+   "b1135eb9d78519c4991d33fc727cbe21",
+   "34233be6d065948520f296b18657388d",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Isaiah 41:10",
+   "97c86baeeaf5103eb4e6c66d39ecce9a",
+   "bb776087648fe1e0fb06485595b102fb",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Proverbs 3:5",
+   "a3917a767dbad27b2c4edcde83df4c91",
+   "1ce7e6c4b87269feeadf6a4438ba3428",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "John 3:16",
+   "c2b043f1b9d9729f995e2b2185040978",
+   "2c9260af0306558b97aab1648bf92f0f",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Psalm 139:14",
+   "eee66a06a1fbcc08aa590ec7626d08e9",
+   "0af5058fcdf5b5fdc0ea54b94f550f22",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Joshua 1:9",
+   "426984a13ff2d879deb6793789e331d1",
+   "f59df7e7fb97804035d6f34443a4bce2",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Luke 2:11",
+   "15b2615989919705b3779aef722861f8",
+   "bbbfcb7021e8461aca0282b55e8f6284",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Romans 8:28",
+   "4bf779f373bc018ba4e2f2ef30909f30",
+   "500a30db08c67903c41fbaa08e9400cb",
+   "VERIFIED"
+  ],
+  [
+   "weekly",
+   "Psalm 46:1",
+   "b761bb6fd9689bffdd6d081091f87710",
+   "4a3311c75752f5e3c74038a82a0aeb7f",
+   "VERIFIED"
+  ],
+  [
+   "rest",
+   "Matthew 11:28",
+   "f6e598a60cfe361e95e4b5cab0e5a34c",
+   "c26cc788f75eccbb6e4dddad7c0df007",
+   "VERIFIED"
+  ],
+  [
+   "boss:phonics",
+   "Genesis 1:1",
+   "32653d2ff5fe5603aec400878531f48c",
+   "b437d40cc0407ff9dc46bd97fafb0f87",
+   "VERIFIED"
+  ],
+  [
+   "boss:colors-shapes",
+   "Genesis 9:13",
+   "6bf482643d272325a214ae0033fe9acb",
+   "5ccaa106706756e6505768f9485d6886",
+   "VERIFIED"
+  ],
+  [
+   "boss:numbers",
+   "John 6:9",
+   "6ad0ab905504eb82cd06fac766a98ead",
+   "a0cefe715a3cd73a9441e92104b651d8",
+   "VERIFIED"
+  ],
+  [
+   "boss:sight-words",
+   "1 Samuel 17:45",
+   "ba92b5d34d4a33eb09f0a484f6bef838",
+   "996094444ecfa3c896a8bbec6abf240f",
+   "VERIFIED"
+  ],
+  [
+   "boss:baby-hospital",
+   "Isaiah 40:11",
+   "7ee88194c6eae7bc4e836f4ed5037af5",
+   "67d7f706d96eefa27e341a65ac70c602",
+   "VERIFIED"
+  ]
+ ],
+ "jw": [
+  [
+   "John 15:9",
+   "d0e5d0de9c1503426bc3e86d6dffc73c",
+   "7aaa8d80c7408dc6089c705589a7e22a"
+  ],
+  [
+   "Luke 12:7",
+   "c8908d71ecb99d212cf504953aa041a8",
+   "071ed7214bb8aafd2a6f97600fb04f25"
+  ],
+  [
+   "John 14:1",
+   "8f34e2510bc4de428779229a6f8a0dba",
+   "ca149457b28db93c009f9cc1191061a2"
+  ],
+  [
+   "John 10:11",
+   "ae49509a1e11d0610e0ed526df936bf6",
+   "277f8204d6cd163f4aeeb12d67c50fd5"
+  ],
+  [
+   "John 8:12",
+   "39a1bf75106f385e582af6dc3fe71040",
+   "562aaed0f25c41b3d54bdb68028139f4"
+  ],
+  [
+   "John 15:11",
+   "b2162df252cb2ab5aa3351bb4dbd3298",
+   "b40e76e1f8105e0b1e97a95a3e418e84"
+  ]
+ ],
+ "attr": {
+  "esv": "9a15b1eb57b299621ff2354eff60bf12",
+  "thsv11": "cfaf39280d7b8bb41ba487a1400332a7",
+  "esvTag": "abd076b589e016f4502fa95a03f61956",
+  "thsv11Tag": "b6e9c6bbf8df03c07aa4c39f86915f68"
+ },
+ "needsMaxwell": [
+  "ms-04",
+  "ms-05",
+  "ms-06",
+  "bh-30",
+  "ms-28",
+  "ms-29",
+  "ms-30"
+ ],
+ "ui": 98,
+ "enc": 7,
+ "troph": 42,
+ "trophcat": {
+  "gear": 6,
+  "themes": 14,
+  "gems": 5,
+  "titles": 6,
+  "(none)": 11
+ },
+ "duel": 30,
+ "duelpics": 6,
+ "jwn": 6,
+ "jwf": 2,
+ "clips": 5,
+ "pic": {
+  "svg": 38,
+  "trophySvg": 24,
+  "uiSvg": 1,
+  "inline": [
+   "crib",
+   "front-desk",
+   "tie",
+   "towel",
+   "towel-white"
+  ],
+  "trophyInline": [
+   "frame-gold",
+   "frame-silver",
+   "lanterns-blue"
+  ],
+  "uiInline": [
+   "aura",
+   "nancy",
+   "sam",
+   "stone",
+   "sword",
+   "tex",
+   "title"
+  ],
+  "svgDrawn": 33,
+  "trophyDrawn": 21
+ },
+ "regions": [
+  [
+   "r1",
+   "Word Meadow",
+   [
+    "phonics",
+    "sight-words"
+   ]
+  ],
+  [
+   "r2",
+   "Golden Fields",
+   [
+    "colors-shapes",
+    "numbers"
+   ]
+  ],
+  [
+   "r3",
+   "Home Lake",
+   [
+    "maxwell-says",
+    "kitchen",
+    "baby-hospital"
+   ]
+  ],
+  [
+   "r4",
+   "Echo Forest",
+   [
+    "soundDuel"
+   ]
+  ]
+ ],
+ "topkeys": [
+  "version",
+  "rewardText",
+  "wrongText",
+  "welcomeBack",
+  "restScreen",
+  "needsMaxwell",
+  "zones",
+  "soundDuel",
+  "cards",
+  "rewardClips",
+  "gotItText",
+  "meta",
+  "trophies",
+  "trophyRules",
+  "picPlan",
+  "uiText",
+  "encouragement",
+  "verses",
+  "jesusWords",
+  "jesusWordsFallback",
+  "mapLayout",
+  "pantry"
+ ],
+ "meta": {
+  "totalCards": 211,
+  "writtenCards": 211,
+  "sayItTotal": 37,
+  "sayItWritten": 37,
+  "personalCards": 80,
+  "personalWritten": 80,
+  "pictureCards": 126,
+  "thDefCards": 18,
+  "uiTextEntries": 98,
+  "needsMaxwellCount": 7,
+  "versesVerified": 16,
+  "jesusWords": 6,
+  "trophies": 42,
+  "encouragementLines": 7,
+  "version": "v6-08"
+ },
+ "outings": [
+  "ms-01",
+  "ms-02",
+  "ms-05",
+  "fd-29",
+  "fd-30",
+  "fd-31",
+  "bh-01",
+  "bh-02",
+  "bh-05",
+  "ms-11",
+  "ms-12"
+ ],
+ "pantry": 9,
+ "emoji": 91,
+ "svgcards": 39,
+ "xref_unique": 401,
+ "xref_occ": 711,
+ "xref_cats": {
+  "attached file": 10,
+  "data key": 111,
+  "id pattern": 3,
+  "data path": 76,
+  "uiText key": 94,
+  "card id": 57,
+  "must-not-exist": 2,
+  "svg id": 6,
+  "trophy id": 10,
+  "data value": 21,
+  "derived": 7,
+  "defaulted field": 4
+ },
+ "missing": [],
+ "spec_only": 176,
+ "secrefs": 49,
+ "ui_unnamed": [
+  "bonusHint2",
+  "bonusRetry2",
+  "bonusStar2",
+  "bonusStreak2"
+ ]
+}
