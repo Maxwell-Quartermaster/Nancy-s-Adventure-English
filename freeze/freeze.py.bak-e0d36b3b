@@ -1,0 +1,605 @@
+#!/usr/bin/env python3
+"""freeze.py - Quartermaster's one-button freeze for Nancy's Adventure English (Maxwell t510u/t511u). Owner: Quartermaster.
+
+  python3 freeze.py --stage DIR --paste FILE --snap-name NAME [--note "what changed"] [--dry-run] [--sandbox DIR]
+  python3 freeze.py --hold "reason"      stop everyone now (writes freeze/HOLD)
+  python3 freeze.py --release            release a HOLD (refused while a freeze is running)
+  python3 freeze.py --status             HOLD / lock / pointer state (exit 0 no HOLD, 1 HOLD)
+
+Steps (stop on the first failure, exit 1, one-line REASON naming step, file and what failed):
+ 0 HOLD   1 preflight   2 content gates   3 render gates   4 snapshot (tmp dir + rename)
+ 5 pointer (backup, atomic write, re-read)   6 current_snap self-check   7 messages   8 release HOLD (success only)
+A failure after the pointer moved rolls the pointer back from CURRENT-SNAP.txt.pre-<snap> automatically and says so in HOLD.reason.
+Exit codes: 0 frozen (or dry run clean), 1 a gate failed (HOLD kept + HOLD.reason), 2 refused (HOLD present, another freeze running, bad usage).
+Never deletes anything: old HOLDs and reasons are moved to freeze/holds/, failed tmp snapshots are left in place and named in the reason."""
+import argparse, datetime, errno, fcntl, glob, hashlib, json, os, re, shutil, stat, subprocess, sys, time
+
+LIVE_B = '/workspace/v608build'
+TOOLS = os.environ.get('FREEZE_TOOLS', '/workspace/council-tools')   # override only to test a patched copy (selftest)
+WS = '/workspace'
+CEIL = 188200
+DISK_MAX = 80.0
+SNAP_PASTE = 'trim-1B/nancys-adventure-english-v6-08-PASTE.md'
+CHECKS = os.path.join(LIVE_B, 'round2/checks/checks_v608.py')      # staged checks (snap README D5)
+TRIM_CLIP = os.path.join(LIVE_B, 'snap-r2h-0021MDT/checks/trim_clip_check.py')
+SEND_GUARD = os.path.join(TOOLS, 'send-guard/send_guard.py')
+FIT_CHECK = os.path.join(TOOLS, 'fit-table/fit_sheet_check.py')
+THAI_DIFF = os.path.join(TOOLS, 'thai-diff/thai_diff.py')
+WATCHER = '/workspace/watchman/watcher/watcher.py'
+HOLD_REASON_TXT = 'freeze in progress, stop work, do not edit build or post sends'
+FAULTS = ('step6_bad_pointer', 'paste_copy_corrupt', 'manifest_enospc', 'pointer_handmove', 'crash_after_hold', 'rollback_fails', 'sendguard_exit3', 'plain_copy')
+
+os.environ['NAE_FREEZE_RUNNING'] = '1'   # the freeze is the one process allowed past its own HOLD (see qm-hold-check.diff)
+sys.path.insert(0, TOOLS)
+import current_snap as cs  # noqa: E402  (read-only use; Chancellor owns it)
+
+def md5(p):
+    h = hashlib.md5()
+    with open(p, 'rb') as f:
+        for b in iter(lambda: f.read(1 << 20), b''): h.update(b)
+    return h.hexdigest()
+
+def now_mt():
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.datetime.now(ZoneInfo('America/Denver'))
+    except Exception:
+        return datetime.datetime.now()
+
+def stamp_mt(d=None):
+    d = d or now_mt(); return d.strftime('%Y-%m-%d %H:%M ') + (d.tzname() or 'MT')
+
+class Fail(Exception):
+    def __init__(self, step, name, path, what):
+        self.step, self.name, self.path, self.what = step, name, path, what
+        super().__init__(f'step {step} {name}: {path}: {what}')
+
+class Refuse(Exception): pass
+
+class Ctx:
+    def __init__(self, base, sandbox):
+        self.B = os.path.abspath(base); self.sandbox = sandbox
+        self.ptr = os.path.join(self.B, 'CURRENT-SNAP.txt')
+        self.F = os.path.join(self.B, 'freeze')
+        self.hold = os.path.join(self.F, 'HOLD'); self.reason = self.hold + '.reason'
+        self.holds = os.path.join(self.F, 'holds'); self.work = os.path.join(self.F, 'work')
+        self.lockf = os.path.join(self.F, 'freeze.lock'); self._lock = None
+        for d in (self.F, self.holds, self.work): os.makedirs(d, exist_ok=True)
+    def env(self, pointer=None):
+        return dict(os.environ, CURRENT_SNAP=pointer or self.ptr, WATCH_POINTER=pointer or self.ptr, NAE_FREEZE_RUNNING='1')
+    def lock(self):
+        self._lock = open(self.lockf, 'a+')
+        try: fcntl.flock(self._lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            self._lock.close(); self._lock = None
+            raise Refuse(f'another freeze is running (lock {self.lockf} is held); wait for it or check --status')
+        self._lock.seek(0); self._lock.truncate(); self._lock.write(f'{os.getpid()} {stamp_mt()}\n'); self._lock.flush()
+    def lock_held_by_other(self):
+        f = open(self.lockf, 'a+')
+        try: fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB); fcntl.flock(f, fcntl.LOCK_UN); return False
+        except OSError: return True
+        finally: f.close()
+
+def atomic_write(path, text):
+    tmp = f'{path}.tmp-{os.getpid()}'
+    with open(tmp, 'w', encoding='utf-8') as f:
+        f.write(text); f.flush(); os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+def archive(ctx, path, tag):
+    if not os.path.exists(path): return None
+    dst = os.path.join(ctx.holds, f'{os.path.basename(path)}-{tag}-{now_mt().strftime("%Y%m%d-%H%M%S")}-{os.getpid()}')
+    os.rename(path, dst); return dst
+
+def write_hold(ctx, snap, reason, manual=False):
+    h = {'started': stamp_mt(), 'started_epoch': time.time(), 'snap': snap, 'reason': reason, 'by': 'Quartermaster',
+         'manual': manual, 'pid': os.getpid(), 'pointer_md5_at_hold': md5(ctx.ptr) if os.path.isfile(ctx.ptr) else None}
+    atomic_write(ctx.hold, json.dumps(h, indent=1) + '\n'); return h
+
+def hold_msg(snap=None, reason=None):
+    if reason: return f'QM HOLD: {reason}. Stop work now. No edits, no sends, no patches past this point until RESUME.'
+    return f'QM HOLD: freeze {snap} in progress. Stop work now. No edits, no sends, no patches past this point until RESUME.'
+
+def read_ptr(path):
+    d = {}; order = []
+    for line in open(path, encoding='utf-8'):
+        if '=' in line:
+            k, v = line.rstrip('\n').split('=', 1); d[k.strip()] = v.strip(); order.append(k.strip())
+    return d, order
+
+def disk_pct(p):
+    u = shutil.disk_usage(p); return 100.0 * (u.total - u.free) / u.total, u
+
+def run(cmd, env, timeout=900, cwd=None):
+    try: r = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=timeout, cwd=cwd)
+    except subprocess.TimeoutExpired: return 124, f'TIMEOUT after {timeout}s'
+    return r.returncode, (r.stdout or '') + (r.stderr or '')
+
+def live_false(out):
+    return sorted(set(l.strip() for l in out.splitlines() if re.search(r':\s*False\b', l) and 'SUPERSEDED' not in l))
+
+def file_map(root):
+    out = {}
+    for r, ds, fs in os.walk(root):
+        ds.sort()
+        for f in sorted(fs):
+            p = os.path.join(r, f); out['./' + os.path.relpath(p, root)] = p
+    return out
+
+def manifest_text(entries):   # entries: {'./rel': md5}; same format as `find . -type f ! -name MANIFEST.md5 | sort | xargs md5sum`
+    return ''.join(f'{entries[k]}  {k}\n' for k in sorted(entries))
+
+def say(msg): print(msg, flush=True)
+
+# ---------------------------------------------------------------- the freeze
+def freeze(a, ctx, fault):
+    snap = a.snap_name; dry = a.dry_run; started = now_mt(); NOW = started.strftime('%-I:%M %p ') + (started.tzname() or 'MT')
+    res = {'snap': snap, 'dry_run': dry, 'sandbox': ctx.sandbox, 'started': stamp_mt(started), 'steps': {}}
+    st = {'step': 0, 'moved': False, 'tmp_snap': None, 'new_md5': None}
+
+    # ---- step 0 HOLD
+    if os.path.exists(ctx.hold):
+        h = ctx.hold; age = (time.time() - os.path.getmtime(h)) / 60
+        if not a.force_clear:
+            raise Refuse(f'HOLD already present ({h}, {age:.0f} min old): {open(ctx.reason).read().strip() if os.path.isfile(ctx.reason) else json.load(open(h)).get("reason")}; fix it and run with --force-clear, or --release')
+        say(f'step 0 --force-clear: old HOLD ({age:.0f} min) moved to {archive(ctx, ctx.hold, "cleared")}')
+        archive(ctx, ctx.reason, 'cleared')
+    if not dry:
+        h = write_hold(ctx, snap, HOLD_REASON_TXT)
+        open(os.path.join(ctx.F, 'hold-msg.txt'), 'w').write(hold_msg(snap) + '\n')
+        st['hold_ptr'] = h['pointer_md5_at_hold']
+        say('step 0 HOLD written: ' + ctx.hold)
+        say('SEND NOW (HOLD broadcast to the Council): ' + hold_msg(snap))
+    else:
+        st['hold_ptr'] = md5(ctx.ptr) if os.path.isfile(ctx.ptr) else None
+        say('step 0 DRY RUN: no HOLD written (a dry run stops nobody). Real run would broadcast: ' + hold_msg(snap))
+    if 'crash_after_hold' in fault: os._exit(9)   # simulates a crash: HOLD stays, no reason, lock dies with the process
+    try:
+        return _steps(a, ctx, fault, snap, dry, NOW, res, st)
+    except Fail as e:
+        _on_fail(ctx, st, e, res, dry); return 1
+    except Exception as e:  # anything unexpected is a failure of the step it happened in
+        _on_fail(ctx, st, Fail(st['step'], 'unexpected', '-', f'{type(e).__name__}: {e}'), res, dry); return 1
+
+def _on_fail(ctx, st, e, res, dry):
+    extra = ''
+    if st['moved']:
+        extra = rollback(ctx, st)
+    if st.get('tmp_snap') and os.path.exists(st['tmp_snap']): extra += f' Half-built snapshot left (not deleted, never pointed at): {st["tmp_snap"]}.'
+    line = f'REASON: step {e.step} {e.name}: {e.path}: {e.what}'
+    say(line + (' ' + extra.strip() if extra else ''))
+    res['result'] = 'FAIL'; res['reason'] = line; res['pointer'] = extra.strip() or 'pointer not moved'
+    if not dry:
+        atomic_write(ctx.reason, f'{line}{(" " + extra.strip()) if extra else ""}\nHOLD kept: everyone stays stopped until QM fixes this and re-runs (--force-clear) or runs --release.\nAt {stamp_mt()}. Pointer now {md5(ctx.ptr)}.\n')
+        say(f'HOLD kept ({ctx.hold}); reason in {ctx.reason}. Everyone stays stopped.')
+    json.dump(res, open(os.path.join(ctx.F, 'last-freeze-attempt.json'), 'w'), indent=1)
+
+def rollback(ctx, st):
+    pre = st['pre']; moved_to = st.get('new_md5') or md5(ctx.ptr)
+    try:
+        if 'rollback_fails' in st.get('fault', set()): raise OSError('planted: rollback write refused')
+        if md5(pre) != st['hold_ptr']: raise OSError(f'backup {pre} md5 {md5(pre)} is not the pre-freeze pointer {st["hold_ptr"]}')
+        atomic_write(ctx.ptr, open(pre, encoding='utf-8').read())
+        back = md5(ctx.ptr); d = cs.read(ctx.ptr); probs = cs.verify(d)
+        if back != st['hold_ptr'] or probs or not os.path.isdir(d['snap_dir']):
+            raise OSError(f'restored pointer {back} does not verify: {probs or "snap dir missing"}')
+        st['moved'] = False
+        return f'POINTER MOVED to {moved_to}; ROLLED BACK to {back} from {pre} (verified: md5 matches the pre-freeze pointer, current_snap.verify clean, snap {d["snap"]} on disk).'
+    except Exception as e:
+        return f'POINTER MOVED to {moved_to}; NOT ROLLED BACK ({e}). Restore by hand: cp {pre} {ctx.ptr} (expect md5 {st["hold_ptr"]}).'
+
+def _steps(a, ctx, fault, snap, dry, NOW, res, st):
+    st['fault'] = fault
+    # ---- step 1 preflight
+    st['step'] = 1; S1 = 'preflight'
+    if not re.fullmatch(r'snap-[A-Za-z0-9][A-Za-z0-9-]*', snap): raise Fail(1, S1, snap, 'snap name must look like snap-<round>-<HHMM>MDT')
+    try: old = cs.read(ctx.ptr); probs = cs.verify(old)
+    except Exception as e: raise Fail(1, S1, ctx.ptr, f'pointer does not parse: {e}')
+    if probs: raise Fail(1, S1, ctx.ptr, 'pointer disagrees with disk: ' + '; '.join(probs))
+    oldp, order = read_ptr(ctx.ptr)
+    for k in ('paste_1b_md5', 'paste_1b_path', 'paste_1b_chars', 'renders_manifest_md5'):
+        if k not in oldp: raise Fail(1, S1, ctx.ptr, f'pointer missing {k}')
+    old_paste = os.path.join(ctx.B, oldp['paste_1b_path'].split()[0])
+    if not os.path.isfile(old_paste): raise Fail(1, S1, old_paste, "pointer's paste_1b file is missing")
+    if md5(old_paste) != oldp['paste_1b_md5']: raise Fail(1, S1, old_paste, f"md5 {md5(old_paste)} != pointer paste_1b_md5 {oldp['paste_1b_md5']}")
+    paste = os.path.abspath(a.paste)
+    if not os.path.isfile(paste): raise Fail(1, S1, paste, 'new PASTE not found')
+    text = open(paste, encoding='utf-8').read(); chars = len(text); pmd5 = md5(paste)
+    if chars > CEIL: raise Fail(1, S1, paste, f'{chars:,} chars is over the {CEIL:,} ceiling by {chars - CEIL:,}')
+    pct, _ = disk_pct(ctx.B)
+    if pct >= DISK_MAX: raise Fail(1, S1, ctx.B, f'disk {pct:.1f}% used (must be < {DISK_MAX:.0f}%)')
+    stage = os.path.abspath(a.stage)
+    if not os.path.isdir(stage): raise Fail(1, S1, stage, 'stage dir not found')
+    if os.path.exists(os.path.join(ctx.B, snap)): raise Fail(1, S1, os.path.join(ctx.B, snap), 'snapshot dir already exists (refusing to overwrite)')
+    res['steps']['1'] = f'pointer {old["pointer_md5"]} {old["snap"]} OK; old PASTE {oldp["paste_1b_md5"][:8]} on disk; new PASTE {pmd5[:8]} {chars:,} chars, bank {CEIL - chars}; disk {pct:.1f}%'
+    say('step 1 preflight OK: ' + res['steps']['1'])
+
+    # ---- step 2 content gates
+    st['step'] = 2; S2 = 'content'
+    names = re.findall(r'nancys-adventure-english-v\d+-\d\d-daily-verses\.json', text)
+    if not names: raise Fail(2, S2, paste, 'PASTE names no daily-verses JSON file')
+    vname = max(set(names), key=names.count)
+    cands = sorted(glob.glob(os.path.join(stage, '**', vname), recursive=True)) + [os.path.join(ctx.B, old['snap'], vname), os.path.join(LIVE_B, old['snap'], vname), os.path.join(WS, vname)]
+    vnew = next((c for c in cands if os.path.isfile(c)), None)
+    if not vnew: raise Fail(2, S2, vname, 'verses file named by the PASTE not found in stage, snapshot or /workspace')
+    m = re.search(r'v(\d+)-(\d\d)', vname); prevname = f'nancys-adventure-english-v{m.group(1)}-{int(m.group(2)) - 1:02d}-daily-verses.json'
+    vbase = a.verses_base or os.path.join(WS, prevname)
+    if not os.path.isfile(vbase): raise Fail(2, S2, vbase, "previous build's verses file not found (use --verses-base)")
+    vr = re.compile(rb'"version"\s*:\s*"[^"]*"')
+    bn, bb = open(vnew, 'rb').read(), open(vbase, 'rb').read()
+    if len(vr.findall(bn)) != 1 or len(vr.findall(bb)) != 1: raise Fail(2, S2, vnew, 'verses JSON must carry exactly one "version" field')
+    if vr.sub(b'"version":"X"', bn, 1) != vr.sub(b'"version":"X"', bb, 1):
+        x, y = vr.sub(b'"version":"X"', bn, 1), vr.sub(b'"version":"X"', bb, 1)
+        i = next((k for k in range(min(len(x), len(y))) if x[k] != y[k]), min(len(x), len(y)))
+        raise Fail(2, S2, vnew, f'verses not byte-identical to {os.path.basename(vbase)} apart from version (first difference at byte ~{i})')
+    want_v = f'v{m.group(1)}-{m.group(2)}'
+    if f'"{want_v}"'.encode() not in vr.search(bn).group(0): raise Fail(2, S2, vnew, f'verses version field is not {want_v}')
+    if 'if due' not in text: raise Fail(2, S2, paste, 'the daily verse "if due" gate is missing')
+    for lab, pat in (('911', r'\b911\b'), ('"Call Max"', r'(?i)call max'), ('"Show the Nurse"', r'(?i)show the nurse')):
+        mm = re.search(pat, text)
+        if mm: raise Fail(2, S2, paste, f'banned {lab} at char {mm.start()}')
+    pii = {'phone number': r'(?<![\w.:#/-])(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}(?!\w)',
+           'email address': r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}',
+           'street address': r'\b\d{1,5}\s+(?:[A-Z][a-z]+\s+){1,3}(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr|Court|Ct|Way|Highway|Hwy)\b'}
+    for lab, pat in pii.items():
+        mm = re.search(pat, text)
+        if mm: raise Fail(2, S2, paste, f'{lab} pattern at char {mm.start()}: {mm.group(0)!r}')
+    rc, out = run([sys.executable, THAI_DIFF, old_paste, paste], ctx.env())
+    if rc not in (0, 1): raise Fail(2, S2, THAI_DIFF, f'thai_diff exit {rc}: {out.strip().splitlines()[-1] if out.strip() else "no output"}')
+    open(os.path.join(ctx.work, f'thai-diff-{snap}.txt'), 'w').write(out)
+    tl = [l for l in out.splitlines() if l.strip()]
+    res['thai_diff'] = {'exit': rc, 'lines': len(tl), 'head': tl[:1], 'file': os.path.join(ctx.work, f'thai-diff-{snap}.txt')}
+    res['steps']['2'] = f'verses {os.path.basename(vnew)} = {os.path.basename(vbase)} except version; "if due" present; no 911/Call Max/Show the Nurse; no phone/email/street; thai-diff exit {rc} ({"no Thai change" if rc == 0 else "Thai changed, report " + res["thai_diff"]["file"]})'
+    say('step 2 content OK: ' + res['steps']['2'])
+
+    # ---- step 3 render gates
+    st['step'] = 3; S3 = 'render'
+    notes = []
+    if a.skip_checks_v608:
+        notes.append('checks_v608 SKIPPED (sandbox test flag)')
+    else:
+        notes.append(checks_gate(ctx, old, oldp, old_paste, paste, stage))
+    htmls = sorted(p for p in glob.glob(os.path.join(stage, '**', '*.html'), recursive=True))
+    if htmls and os.path.isfile(TRIM_CLIP):
+        rc, out = run([sys.executable, TRIM_CLIP] + htmls, ctx.env(), timeout=1800)
+        tot = re.search(r'TOTAL clipped targets:\s*(\d+)', out)
+        if rc != 0 or not tot or int(tot.group(1)) != 0:
+            bad = [l for l in out.splitlines() if 'CLIPPED' in l][:3]
+            raise Fail(3, S3, TRIM_CLIP, f'trim-clip (DOM) check exit {rc}, {tot.group(0) if tot else "no TOTAL line"} {bad}')
+        notes.append(f'trim-clip DOM check {len(htmls)} html, 0 clipped')
+    else: notes.append('trim-clip DOM check: no html in stage')
+    # candidate snapshot manifests (same bytes the real snapshot will get) + a candidate pointer, so send_guard and
+    # fit_sheet_check judge the NEW build without the live pointer moving
+    plan = plan_snapshot(ctx, stage, paste, snap, old, NOW, carry=not a.no_carry)
+    pre = os.path.join(ctx.work, f'precheck-{snap}-{int(time.time())}-{os.getpid()}'); os.makedirs(os.path.join(pre, snap, 'trim-1B'))
+    for n in ('MANIFEST.md5', 'renders-MANIFEST.md5'): open(os.path.join(pre, snap, n), 'w').write(plan[n])
+    shutil.copy2(paste, os.path.join(pre, snap, SNAP_PASTE))
+    newp = new_pointer_fields(oldp, snap, plan, pmd5, chars, a.note)
+    cand_ptr = os.path.join(pre, 'CURRENT-SNAP.txt'); open(cand_ptr, 'w').write(ptr_text(newp, order))
+    sends = [p for sub in ('sheets', 'showcase') for p in sorted(glob.glob(os.path.join(stage, sub, '**', '*'), recursive=True)) if os.path.isfile(p)]
+    if sends:
+        cmd = [sys.executable, SEND_GUARD, '--only', 'sheets/,showcase/'] + (['--no-ground'] if 'sendguard_exit3' in fault else []) + sends
+        rc, out = run(cmd, ctx.env(cand_ptr), timeout=1800)
+        open(os.path.join(ctx.work, f'send-guard-{snap}.txt'), 'w').write(out)
+        if rc != 0:
+            why = {1: 'BLOCK', 2: 'ERROR', 3: 'ground skipped (3 is not valid for a send)'}.get(rc, f'exit {rc}')
+            first = next((l for l in out.splitlines() if l.startswith(('MISS', 'GRND', 'ERROR', 'STALE'))), out.strip().splitlines()[-1] if out.strip() else '')
+            raise Fail(3, S3, SEND_GUARD, f'send_guard exit {rc} ({why}): {first}')
+        notes.append(f'send_guard CLEAR on {len(sends)} sheets/showcase files')
+    else: notes.append('send_guard: no sheets/ or showcase/ files in stage')
+    fits = [p for p in sorted(glob.glob(os.path.join(stage, '**', '*.md'), recursive=True)) if 'fit' in os.path.basename(p).lower()]
+    if fits:
+        rc, out = run([sys.executable, FIT_CHECK] + fits, ctx.env(cand_ptr))
+        if rc != 0:
+            first = next((l for l in out.splitlines() if l.startswith(('STALE', 'POINTER', 'ERROR'))), out.strip().splitlines()[-1] if out.strip() else '')
+            raise Fail(3, S3, FIT_CHECK, f'fit_sheet_check exit {rc} (only 0 passes): {first}')
+        notes.append(f'fit_sheet_check CURRENT on {len(fits)} sheet(s)')
+    else: notes.append('fit_sheet_check: no fit sheet in stage')
+    res['steps']['3'] = '; '.join(notes); say('step 3 render OK: ' + res['steps']['3'])
+
+    # ---- step 4 snapshot (tmp dir, verify, rename)
+    st['step'] = 4; S4 = 'snapshot'
+    final = os.path.join(ctx.B, snap)
+    if os.path.exists(final): raise Fail(4, S4, final, 'snapshot dir already exists (refusing to overwrite)')
+    need = plan['bytes'] * 2
+    pct, u = disk_pct(ctx.B)
+    if u.free < need or 100.0 * (u.total - u.free + plan['bytes']) / u.total >= DISK_MAX:
+        raise Fail(4, S4, ctx.B, f'not enough disk: snapshot needs {plan["bytes"]:,} B and must keep the disk under {DISK_MAX:.0f}%')
+    tmp = os.path.join(ctx.work if dry else ctx.B, f'.tmp-{snap}-{os.getpid()}' if not dry else f'dryrun-{snap}-{int(time.time())}')
+    try:
+        os.makedirs(tmp); st['tmp_snap'] = tmp
+        for rel, src in plan['files'].items():
+            dst = os.path.join(tmp, rel[2:]); os.makedirs(os.path.dirname(dst), exist_ok=True)
+            (shutil.copyfile if 'plain_copy' in fault else shutil.copy2)(src, dst)   # copy2 keeps mtimes (Auditor fault 9); plain copy only as a planted fault
+        if 'paste_copy_corrupt' in fault: open(os.path.join(tmp, SNAP_PASTE), 'a').write(' ')
+        open(os.path.join(tmp, 'renders-MANIFEST.md5'), 'w').write(plan['renders-MANIFEST.md5'])
+        open(os.path.join(tmp, 'DELTA.md'), 'w').write(plan['DELTA.md'])
+        if 'manifest_enospc' in fault: raise OSError(errno.ENOSPC, 'No space left on device (planted)', os.path.join(tmp, 'MANIFEST.md5'))
+        open(os.path.join(tmp, 'MANIFEST.md5'), 'w').write(plan['MANIFEST.md5'])
+    except OSError as e:
+        raise Fail(4, S4, getattr(e, 'filename', None) or tmp, f'write failed ({e.strerror or e}); nothing renamed into {final}')
+    # re-verify every md5
+    if md5(os.path.join(tmp, SNAP_PASTE)) != pmd5: raise Fail(4, S4, os.path.join(tmp, SNAP_PASTE), f'PASTE copy md5 {md5(os.path.join(tmp, SNAP_PASTE))} != source {pmd5}')
+    for line in plan['MANIFEST.md5'].splitlines():
+        h, rel = line.split('  ', 1)
+        if md5(os.path.join(tmp, rel[2:])) != h: raise Fail(4, S4, os.path.join(tmp, rel[2:]), f'copy md5 {md5(os.path.join(tmp, rel[2:]))} != MANIFEST {h}')
+    for rel, src in plan['files'].items():   # Auditor fault 9: every copied file keeps its source mtime
+        dst = os.path.join(tmp, rel[2:])
+        if os.stat(dst).st_mtime_ns != os.stat(src).st_mtime_ns:
+            raise Fail(4, S4, dst, f'mtime not preserved ({os.stat(dst).st_mtime:.0f} != source {os.stat(src).st_mtime:.0f}); copies must use copy2 / cp -p')
+    have = set(file_map(tmp)) - {'./MANIFEST.md5'}
+    want = set(l.split('  ', 1)[1] for l in plan['MANIFEST.md5'].splitlines())
+    if have != want: raise Fail(4, S4, tmp, f'snapshot files != MANIFEST (extra {sorted(have - want)[:3]}, missing {sorted(want - have)[:3]})')
+    for rel, h in plan['stage_renders'].items():   # carried renders-MANIFEST lines are the previous freeze's record, carried verbatim
+        if md5(os.path.join(WS, rel)) != h: raise Fail(4, S4, os.path.join(WS, rel), 'render changed on disk while freezing')
+    if md5(os.path.join(tmp, 'MANIFEST.md5')) != newp['manifest_md5']: raise Fail(4, S4, os.path.join(tmp, 'MANIFEST.md5'), 'MANIFEST differs from the one the render gates checked (stage changed mid-freeze?)')
+    if md5(paste) != pmd5: raise Fail(4, S4, paste, 'source PASTE changed during the freeze')
+    if dry:
+        res['steps']['4'] = f'DRY RUN snapshot built and verified in {tmp} ({len(want)} files: {plan["delta_counts"]}; MANIFEST {newp["manifest_md5"][:8]}, renders-MANIFEST {newp["renders_manifest_md5"][:8]}); not renamed into place'
+        say('step 4 ' + res['steps']['4']); st['tmp_snap'] = None
+        say('steps 5-8 DRY RUN: pointer NOT touched. Would write:\n' + ptr_text(newp, order).rstrip())
+        res['result'] = 'DRY-RUN CLEAN'; res['would_pointer'] = newp
+        json.dump(res, open(os.path.join(ctx.F, 'last-dry-run.json'), 'w'), indent=1)
+        say(f'DRY RUN CLEAN: {snap} would freeze PASTE {pmd5[:8]} {chars:,} chars bank {CEIL - chars}. No HOLD, no pointer change.')
+        return 0
+    if os.path.exists(final): raise Fail(4, S4, final, 'snapshot dir appeared during the freeze (refusing to overwrite)')
+    os.rename(tmp, final); st['tmp_snap'] = None
+    for r, ds, fs in os.walk(final):
+        for n in ds + fs:
+            p = os.path.join(r, n); os.chmod(p, os.stat(p).st_mode & ~(stat.S_IWUSR | stat.S_IWGRP | stat.S_IWOTH))
+    os.chmod(final, os.stat(final).st_mode & ~(stat.S_IWUSR | stat.S_IWGRP | stat.S_IWOTH))
+    res['carry'] = plan['counts']
+    res['steps']['4'] = f'{final} ({len(want)} files: {plan["delta_counts"]}; MANIFEST {newp["manifest_md5"][:8]}, renders-MANIFEST {newp["renders_manifest_md5"][:8]} {plan["rlines"]} lines), every md5 re-verified, read-only'
+    say('step 4 snapshot OK: ' + res['steps']['4'])
+
+    # ---- step 5 pointer
+    st['step'] = 5; S5 = 'pointer'
+    if 'pointer_handmove' in fault: open(ctx.ptr, 'a').write('working=hand-edited during HOLD (planted)\n')
+    if md5(ctx.ptr) != st['hold_ptr']:
+        raise Fail(5, S5, ctx.ptr, f'pointer was moved by hand during the HOLD ({st["hold_ptr"]} -> {md5(ctx.ptr)}); refusing to write over it')
+    pre = os.path.join(ctx.B, f'CURRENT-SNAP.txt.pre-{snap}')
+    if os.path.exists(pre): pre = f'{pre}-{os.getpid()}'
+    shutil.copy2(ctx.ptr, pre); st['pre'] = pre
+    if md5(pre) != st['hold_ptr']: raise Fail(5, S5, pre, 'pointer backup md5 does not match the pointer')
+    if 'step6_bad_pointer' in fault: newp['renders_manifest_md5'] = '0' * 32
+    txt = ptr_text(newp, order)
+    st['moved'] = True; atomic_write(ctx.ptr, txt); st['new_md5'] = md5(ctx.ptr)
+    back, _ = read_ptr(ctx.ptr)
+    if back != newp or open(ctx.ptr, encoding='utf-8').read() != txt: raise Fail(5, S5, ctx.ptr, 're-read pointer differs from what was written')
+    res['steps']['5'] = f'backup {pre} ({st["hold_ptr"][:8]}); new pointer {st["new_md5"]} written atomically and re-read'
+    say('step 5 pointer OK: ' + res['steps']['5'])
+
+    # ---- step 6 self-check with Chancellor's current_snap (subprocess, the new pointer)
+    st['step'] = 6; S6 = 'current_snap'
+    code = ('import sys,os,hashlib;sys.path.insert(0,%r);import current_snap as cs;d=cs.read();p=cs.verify(d);'
+            'f=os.path.join(os.path.dirname(d["snap_dir"]),d["paste_1b_path"].split()[0]);'
+            'p+=[] if os.path.isfile(f) and cs.md5(f)==d["paste_1b_md5"] else ["paste_1b missing or md5 mismatch at "+f];'
+            'p+=[] if int(d["bank"])==%d-int(d["paste_1b_chars"]) else ["bank != ceiling - chars"];'
+            'print("current_snap", d["pointer_md5"], d["snap"], "problems:", p);sys.exit(1 if p else 0)') % (TOOLS, CEIL)
+    rc, out = run([sys.executable, '-c', code], ctx.env())
+    if rc != 0: raise Fail(6, S6, ctx.ptr, f'current_snap self-check failed on the new pointer: {out.strip().splitlines()[-1] if out.strip() else rc}')
+    res['steps']['6'] = out.strip(); say('step 6 self-check OK: ' + out.strip())
+
+    # ---- step 7 messages
+    st['step'] = 7
+    p8 = st['new_md5'][:8]; d_old = int(oldp['paste_1b_chars'])
+    changed = f'PASTE {oldp["paste_1b_md5"][:8]} -> {pmd5[:8]} ({chars - d_old:+,} chars); {plan["delta_counts"]} vs {old["snap"]}' + (f'; {a.note}' if a.note else '')
+    resume = (f'QM RESUME+SYNC: freeze {snap} done, HOLD released. New pointer {st["new_md5"]} (was {st["hold_ptr"][:8]}). '
+              f'Snap {snap}, MANIFEST {newp["manifest_md5"][:8]}, renders-MANIFEST {newp["renders_manifest_md5"][:8]}. '
+              f'PASTE 1B {pmd5} ({chars:,} chars, bank {CEIL - chars}). What changed: {changed}. '
+              f'Re-base now, before any work. Sync proof: your next Council post opens with "Based on: {snap}, pointer {p8}, PASTE {pmd5[:8]}." '
+              f'Backstop only, now that HOLD is released: run `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. '
+              f'Work toward this pointer only; anything based on {st["hold_ptr"][:8]} is stale.')
+    wm = f'FREEZE {st["new_md5"]} {snap}'
+    open(os.path.join(ctx.F, 'resume-msg.txt'), 'w').write(resume + '\n'); open(os.path.join(ctx.F, 'watchman-msg.txt'), 'w').write(wm + '\n')
+    res.update(result='FROZEN', pointer_md5=st['new_md5'], pointer_was=st['hold_ptr'], pointer_backup=pre, paste_md5=pmd5, chars=chars,
+               bank=CEIL - chars, manifest_md5=newp['manifest_md5'], renders_manifest_md5=newp['renders_manifest_md5'], messages={'hold': hold_msg(snap), 'resume': resume, 'watchman': wm})
+
+    # ---- step 8 release HOLD (only after the pointer is verified and still ours)
+    st['step'] = 8
+    if md5(ctx.ptr) != st['new_md5']: raise Fail(8, 'release', ctx.ptr, f'pointer changed after the freeze wrote it ({st["new_md5"]} -> {md5(ctx.ptr)})')
+    st['moved'] = False   # committed: from here a problem is not a rollback case
+    res['finished'] = stamp_mt()
+    json.dump(res, open(os.path.join(ctx.F, 'last-freeze.json'), 'w'), indent=1)
+    arch = archive(ctx, ctx.hold, f'released-{snap}'); archive(ctx, ctx.reason, f'released-{snap}')
+    say(f'step 8 HOLD released (moved to {arch}).')
+    say('\nSEND (Council, RESUME+SYNC):\n' + resume)
+    say('\nSEND (agent message to Grok 1: Watchman):\n' + wm)
+    return 0
+
+def checks_gate(ctx, old, oldp, old_paste, paste, stage):
+    """checks_v608 (staged, via mktree.sh): FAIL only on live-False lines the old pointer's PASTE does not already have."""
+    N = 'nancys-adventure-english'
+    snapdir = next((d for d in (os.path.join(ctx.B, old['snap']), os.path.join(LIVE_B, old['snap'])) if os.path.isfile(os.path.join(d, 'trim-1B', f'{N}-v6-08-cards.json'))), None)
+    mk = os.path.join(LIVE_B, old['snap'], 'checks', 'mktree.sh')
+    if not snapdir or not os.path.isfile(mk) or not os.path.isfile(CHECKS):
+        raise Fail(3, 'render', CHECKS, 'checks_v608 inputs missing (trim-1B FINAL/spec/cards, mktree.sh)')
+    r2 = os.path.join(stage, 'round2.py') if os.path.isfile(os.path.join(stage, 'round2.py')) else os.path.join(snapdir, 'round2.py')
+    def one(p, tag):
+        w = os.path.join(ctx.work, f'checks-{tag}-{os.getpid()}-{int(time.time() * 1000)}'); v = os.path.join(w, 'var'); os.makedirs(v)
+        for f in (f'{N}-FINAL-v6-08.md', f'{N}-v6-08.md', f'{N}-v6-08-cards.json'):
+            src = os.path.join(stage, 'trim-1B', f) if os.path.isfile(os.path.join(stage, 'trim-1B', f)) else os.path.join(snapdir, 'trim-1B', f)
+            shutil.copy2(src, os.path.join(v, f))
+        shutil.copy2(p, os.path.join(v, f'{N}-v6-08-PASTE.md'))
+        rc, out = run(['bash', mk, os.path.join(w, 'tree') + '/', v, r2], ctx.env())
+        if rc != 0: raise Fail(3, 'render', mk, f'mktree exit {rc}: {out.strip()[-200:]}')
+        rc, out = run([sys.executable, CHECKS], dict(ctx.env(), NAE_W=os.path.join(w, 'tree') + '/', NAE_VERSION='v6-08'), timeout=900, cwd='/workspace/v520')
+        open(os.path.join(w, 'checks.out'), 'w').write(out)
+        if rc != 0: raise Fail(3, 'render', CHECKS, f'checks_v608 exit {rc} on {tag} ({w}/checks.out)')
+        return live_false(out), w
+    key = os.path.join(ctx.work, f'checks-baseline-{oldp["paste_1b_md5"][:8]}-{md5(CHECKS)[:8]}-{md5(r2)[:8]}.json')
+    if os.path.isfile(key): base = json.load(open(key))
+    else: base, _ = one(old_paste, 'baseline'); json.dump(base, open(key, 'w'), indent=1)
+    new, w = one(paste, 'new')
+    regress = [l for l in new if l not in base]
+    if regress: raise Fail(3, 'render', CHECKS, f'checks_v608: {len(regress)} new live False vs the pointer PASTE, first: {regress[0][:160]} ({w}/checks.out)')
+    return f'checks_v608 0 new live False ({len(new)} live False already on the pointer PASTE {oldp["paste_1b_md5"][:8]}, unchanged)'
+
+def plan_snapshot(ctx, stage, paste, snap, old, NOW, carry=True):
+    """Default (QM 01:06): new snap = the previous COMPLETE snap (from the pointer) + stage files overlaid + the PASTE.
+    Carried files are checked against the previous MANIFEST before anything is copied; --no-carry builds stage + PASTE only."""
+    prev_dir = os.path.join(ctx.B, old['snap']); oldm = os.path.join(prev_dir, 'MANIFEST.md5')
+    prev = {}
+    for l in open(oldm, encoding='utf-8'):
+        mm = re.match(r'^([0-9a-f]{32})\s+\*?(\./.+)$', l.rstrip('\n'))
+        if mm: prev[mm.group(2)] = mm.group(1)
+    REGEN = ('./MANIFEST.md5', './renders-MANIFEST.md5', './DELTA.md')
+    sfiles = file_map(stage)
+    for k in REGEN:
+        if k in sfiles: raise Fail(3, 'render', sfiles[k], f'stage must not carry its own {k[2:]} (freeze writes it)')
+    files, status = {}, {}
+    prev_rend = {}
+    if carry:
+        on_disk = set(file_map(prev_dir)) - {'./MANIFEST.md5'}
+        unlisted = sorted(on_disk - set(prev)); missing = sorted(set(prev) - on_disk)
+        if unlisted: raise Fail(3, 'carry', os.path.join(prev_dir, unlisted[0][2:]), f'{len(unlisted)} file(s) in {old["snap"]} not in its MANIFEST')
+        if missing: raise Fail(3, 'carry', os.path.join(prev_dir, missing[0][2:]), f'{len(missing)} file(s) in the MANIFEST missing from {old["snap"]}')
+        for rel, h in sorted(prev.items()):
+            src = os.path.join(prev_dir, rel[2:])
+            if md5(src) != h: raise Fail(3, 'carry', src, f'carried file md5 {md5(src)} != previous MANIFEST {h} (corrupted or edited in a frozen snapshot)')
+            if rel not in REGEN: files[rel] = src; status[rel] = 'carried'
+        rp = os.path.join(prev_dir, 'renders-MANIFEST.md5')
+        if os.path.isfile(rp):
+            for l in open(rp, encoding='utf-8'):
+                mm = re.match(r'^([0-9a-f]{32})\s+\*?(.+)$', l.rstrip('\n'))
+                if mm: prev_rend[mm.group(2)] = mm.group(1)
+    k = './' + SNAP_PASTE
+    if k in sfiles and md5(sfiles[k]) != md5(paste): raise Fail(3, 'render', sfiles[k], 'stage carries a different trim-1B PASTE than --paste')
+    sfiles[k] = paste
+    sums = {}
+    for rel, src in sfiles.items():
+        h = md5(src); sums[rel] = h
+        if rel in files: status[rel] = 'stage-same' if h == prev.get(rel) else 'stage-overrides'
+        else: status[rel] = 'stage-new'
+        files[rel] = src
+    for rel in files:
+        if rel not in sums: sums[rel] = prev[rel]
+    stage_rend = {}
+    for rel, src in sfiles.items():
+        if src.endswith(('.png', '.html')) and rel != k:
+            rp = os.path.relpath(os.path.realpath(src), WS)
+            if rp.startswith('..'): raise Fail(3, 'render', src, 'render outside /workspace cannot be listed in renders-MANIFEST')
+            stage_rend[rp] = sums[rel]
+    rend = dict(prev_rend); rend.update(stage_rend)
+    rman = ''.join(f'{rend[r]}  {r}\n' for r in sorted(rend))
+    sums['./renders-MANIFEST.md5'] = hashlib.md5(rman.encode()).hexdigest(); status['./renders-MANIFEST.md5'] = 'regenerated'
+    cmp_prev = {p: h for p, h in prev.items() if p not in ('./DELTA.md', './MANIFEST.md5')}
+    gone = sorted(p for p in cmp_prev if p not in sums)
+    cnt = lambda st_: sum(1 for p in status if status[p] == st_)
+    counts = {'carried': cnt('carried'), 'stage-new': cnt('stage-new'), 'stage-overrides': cnt('stage-overrides'), 'stage-same': cnt('stage-same'), 'not-carried': len(gone)}
+    L = [f'# DELTA: {snap} vs {old["snap"]} (MANIFEST {old["manifest_md5"]}; DELTA.md itself excluded)', '',
+         f'Frozen {NOW} by freeze.py ({"carry: previous complete snapshot + stage overlay + PASTE" if carry else "--no-carry: stage + PASTE only"}). Copies only (copy2, mtimes kept); nothing deleted. PASTE 1B at ./{SNAP_PASTE} = {md5(paste)}.', '',
+         f'Carried: {counts["carried"]}. Stage new: {counts["stage-new"]}. Stage overrides (changed): {counts["stage-overrides"]}. Stage same as carried: {counts["stage-same"]}. Not carried: {counts["not-carried"]}. renders-MANIFEST: {len(prev_rend)} carried lines, {len(stage_rend)} stage lines, {len(rend)} total.', '',
+         '## Changed (old md5 -> new md5)', '']
+    L += [f'- {p}: {prev[p]} -> {sums[p]}' for p in sorted(sums) if p in cmp_prev and sums[p] != cmp_prev[p]]
+    L += ['', '## New', ''] + [f'- {p}: {sums[p]}' for p in sorted(sums) if p not in cmp_prev]
+    L += ['', '## Not carried', ''] + ([f'- {p}: {prev[p]}' for p in gone] or ['- none'])
+    L += ['', '## Per-file status', ''] + [f'- {status[p]}: {p} {sums[p]}' for p in sorted(status)] + ['']
+    delta = '\n'.join(L); sums['./DELTA.md'] = hashlib.md5(delta.encode()).hexdigest()
+    man = manifest_text(sums)
+    return {'files': files, 'renders-MANIFEST.md5': rman, 'DELTA.md': delta, 'MANIFEST.md5': man, 'rlines': len(rend), 'stage_renders': stage_rend,
+            'status': status, 'counts': counts, 'carry': carry,
+            'bytes': sum(os.path.getsize(p) for p in files.values()) + len(man) + len(rman) + len(delta),
+            'delta_counts': f'{counts["carried"]} carried, {counts["stage-new"]} new, {counts["stage-overrides"]} changed by the stage, {counts["not-carried"]} not carried'}
+
+def new_pointer_fields(oldp, snap, plan, pmd5, chars, note):
+    p = dict(oldp)
+    p.update(snap=snap, manifest_md5=hashlib.md5(plan['MANIFEST.md5'].encode()).hexdigest(),
+             renders_manifest_md5=hashlib.md5(plan['renders-MANIFEST.md5'].encode()).hexdigest(),
+             paste_1b_md5=pmd5, paste_1b_path=f'{snap}/{SNAP_PASTE}', paste_1b_chars=str(chars), bank=str(CEIL - chars),
+             working=f'{snap} frozen (freeze.py)', updated=stamp_mt())
+    if pmd5 != oldp.get('paste_1b_md5'):
+        p['paste_1b_chain'] = f'{oldp.get("paste_1b_chain", "")} > {pmd5[:8]} ({snap}, freeze.py{"; " + note if note else ""})'.strip(' >')
+    return p
+
+def ptr_text(p, order):
+    keys = list(order) + [k for k in p if k not in order]
+    return ''.join(f'{k}={p[k]}\n' for k in keys if k in p)
+
+# ---------------------------------------------------------------- manual commands
+def cmd_hold(a, ctx):
+    if os.path.exists(ctx.hold) and not a.force_clear: raise Refuse(f'HOLD already present ({ctx.hold}); see --status')
+    if os.path.exists(ctx.hold): archive(ctx, ctx.hold, 'cleared'); archive(ctx, ctx.reason, 'cleared')
+    write_hold(ctx, None, a.hold, manual=True); m = hold_msg(reason=a.hold)
+    open(os.path.join(ctx.F, 'hold-msg.txt'), 'w').write(m + '\n')
+    say(f'HOLD written: {ctx.hold}\nSEND NOW (Council): {m}'); return 0
+
+def cmd_release(a, ctx):
+    # main() already took the freeze lock, so a running freeze makes this exit 2 before we get here
+    if not os.path.exists(ctx.hold): say('no HOLD to release'); return 0
+    h = json.load(open(ctx.hold)); why = open(ctx.reason).read().strip().splitlines()[0] if os.path.isfile(ctx.reason) else h.get('reason')
+    try: d = cs.read(ctx.ptr); probs = cs.verify(d)
+    except Exception as e: probs = [str(e)]; d = {'pointer_md5': md5(ctx.ptr) if os.path.isfile(ctx.ptr) else '?', 'snap': '?'}
+    if probs and not a.force_clear: raise Refuse(f'pointer does not verify ({"; ".join(probs)}); fix it first or --release --force-clear')
+    moved = h.get('pointer_md5_at_hold') and h['pointer_md5_at_hold'] != d['pointer_md5']
+    archive(ctx, ctx.hold, 'released'); archive(ctx, ctx.reason, 'released')
+    m = (f'QM RESUME: hold released ({why}). Pointer {d["pointer_md5"]} {d["snap"]} ' + ('MOVED since the HOLD: re-base now. ' if moved else 'unchanged since the HOLD. ') +
+         f'Sync proof: your next Council post opens with "Based on: {d["snap"]}, pointer {d["pointer_md5"][:8]}". Backstop only: `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. Work toward this pointer only.')
+    open(os.path.join(ctx.F, 'resume-msg.txt'), 'w').write(m + '\n'); say('HOLD released.\nSEND (Council): ' + m); return 0
+
+def cmd_status(a, ctx):
+    lock = ctx.lock_held_by_other()
+    try: d = cs.read(ctx.ptr); probs = cs.verify(d); ps = f'pointer {d["pointer_md5"]} snap {d["snap"]} ' + ('verifies' if not probs else 'PROBLEMS: ' + '; '.join(probs))
+    except Exception as e: ps = f'pointer unreadable: {e}'
+    say(ps); say(f'freeze lock: {"HELD (a freeze is running)" if lock else "free"}')
+    lf = os.path.join(ctx.F, 'last-freeze.json')
+    if os.path.isfile(lf): j = json.load(open(lf)); say(f'last freeze: {j.get("snap")} {j.get("result")} at {j.get("finished")} pointer {j.get("pointer_md5")}')
+    if not os.path.exists(ctx.hold): say('HOLD: none (clear to work)'); return 0
+    try: h = json.load(open(ctx.hold))
+    except Exception: h = {}
+    age = (time.time() - (h.get('started_epoch') or os.path.getmtime(ctx.hold))) / 60
+    stale = not lock and not h.get('manual') and not os.path.isfile(ctx.reason)
+    say(f'HOLD: IN PLACE since {h.get("started")} ({age:.0f} min), snap {h.get("snap")}, {"manual" if h.get("manual") else "freeze"}: {h.get("reason")}')
+    if os.path.isfile(ctx.reason): say('HOLD.reason: ' + open(ctx.reason).read().strip().replace('\n', ' | '))
+    if stale: say(f'STALE HOLD: no freeze is running and no failure reason was written (a crash?). Age {age:.0f} min. Re-run the freeze with --force-clear, or --release.')
+    return 1
+
+def seed_sandbox(sb):
+    """Copy the live pointer, its complete snapshot and its paste_1b into the sandbox (reads live, writes only sandbox)."""
+    sb = os.path.abspath(sb); os.makedirs(sb, exist_ok=True)
+    if os.path.isfile(os.path.join(sb, 'CURRENT-SNAP.txt')): return
+    live = os.path.join(LIVE_B, 'CURRENT-SNAP.txt'); p, _ = read_ptr(live)
+    shutil.copy2(live, os.path.join(sb, 'CURRENT-SNAP.txt'))
+    shutil.copytree(os.path.join(LIVE_B, p['snap']), os.path.join(sb, p['snap']), copy_function=shutil.copy2, symlinks=True)   # the complete previous snapshot (carry source)
+    dst = os.path.join(sb, p['paste_1b_path'].split()[0]); os.makedirs(os.path.dirname(dst), exist_ok=True)
+    shutil.copy2(os.path.join(LIVE_B, p['paste_1b_path'].split()[0]), dst)
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter, allow_abbrev=False)
+    ap.add_argument('--stage'); ap.add_argument('--paste'); ap.add_argument('--snap-name'); ap.add_argument('--note', default='')
+    ap.add_argument('--dry-run', action='store_true'); ap.add_argument('--no-carry', action='store_true', help='build the snapshot from stage + PASTE only (default carries the previous complete snapshot)'); ap.add_argument('--sandbox')
+    ap.add_argument('--force-clear', action='store_true', help='replace an existing HOLD (it is archived to freeze/holds/, never deleted)')
+    ap.add_argument('--hold', metavar='REASON'); ap.add_argument('--release', action='store_true'); ap.add_argument('--status', action='store_true')
+    ap.add_argument('--verses-base', help="previous build's daily-verses JSON (default /workspace/<previous version>-daily-verses.json)")
+    ap.add_argument('--skip-checks-v608', action='store_true', help='sandbox tests only: skip the 2x25 s checks_v608 run')
+    a = ap.parse_args()
+    live_before = md5(os.path.join(LIVE_B, 'CURRENT-SNAP.txt'))
+    if a.sandbox:
+        sb = os.path.realpath(a.sandbox)
+        if sb == os.path.realpath(LIVE_B): say('ERROR --sandbox must not be the live v608build'); return 2
+        seed_sandbox(sb); ctx = Ctx(sb, True)
+    else: ctx = Ctx(LIVE_B, False)
+    fault = set(x for x in os.environ.get('FREEZE_FAULT', '').split(',') if x)
+    bad = fault - set(FAULTS)
+    if bad: say(f'ERROR unknown FREEZE_FAULT {sorted(bad)}'); return 2
+    if fault and not a.sandbox: say('ERROR FREEZE_FAULT is honoured only with --sandbox'); return 2
+    if os.environ.get('FREEZE_TOOLS') and not a.sandbox: say('ERROR FREEZE_TOOLS is honoured only with --sandbox'); return 2
+    if a.skip_checks_v608 and not a.sandbox: say('ERROR --skip-checks-v608 is for sandbox tests only'); return 2
+    try:
+        if a.status: return cmd_status(a, ctx)
+        if a.hold is not None or a.release:
+            try: ctx.lock()
+            except Refuse: raise Refuse('a freeze is running (lock held); it releases its own HOLD on success, or keeps it with HOLD.reason on failure')
+            return cmd_hold(a, ctx) if a.hold is not None else cmd_release(a, ctx)
+        if not (a.stage and a.paste and a.snap_name): ap.print_usage(); say('ERROR --stage, --paste and --snap-name are required'); return 2
+        ctx.lock()
+        return freeze(a, ctx, fault)
+    except Refuse as e:
+        say(f'REFUSED: {e}'); return 2
+    finally:
+        if a.sandbox:
+            after = md5(os.path.join(LIVE_B, 'CURRENT-SNAP.txt'))
+            say(f'live pointer {after} ' + ('unchanged (sandbox run)' if after == live_before else f'CHANGED from {live_before} (not by this sandbox run; check!)'))
+
+if __name__ == '__main__':
+    sys.exit(main())

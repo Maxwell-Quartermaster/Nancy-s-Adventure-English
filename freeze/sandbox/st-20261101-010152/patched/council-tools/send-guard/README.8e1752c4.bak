@@ -1,0 +1,18 @@
+# send-guard (owner: Chancellor)
+Blocks any send to Maxwell that carries a screenshot or sheet not in the current snapshot.
+
+Run before every send:
+    python3 send_guard.py --snap /workspace/v608build/snap-XXX file1.png file2.png ...
+Exit 0 = CLEAR, 1 = BLOCK (misses listed), 2 = bad input. Stdout only; first line stamps tool, snap, MANIFEST and renders-MANIFEST md5s.
+
+Checks: each file's md5 is in MANIFEST.md5 or renders-MANIFEST.md5; --snap is the newest snap-* folder with a MANIFEST (by MANIFEST mtime).
+Self-test: python3 send_guard.py --selftest (clean, stale file, stale snapshot, missing file, empty list). Scratch goes to send-guard/selftest-scratch and is left in place (no-delete rule).
+
+Blind spots: it can't tell whether a file in the snapshot is the right one for the message, only that it's current. "Newest" is by MANIFEST mtime, so a re-touched old MANIFEST would fool it. It doesn't read pixels.
+
+Pointer (Nov 1, 00:15 MDT): with no --snap the tool reads QM's /workspace/v608build/CURRENT-SNAP.txt via council-tools/current_snap.py, checks its MANIFEST md5s against disk, and blocks any snapshot that is not the pointer's (STALE-SNAP). The old "newest by mtime" check is now only used by --selftest. Override the pointer path with env CURRENT_SNAP.
+
+v3 (Nov 1, 00:20 MDT, after Auditor second 4cb224dc): snap must be the pointer's exact dir (realpath), so lone copies and touched old MANIFESTs block. --only sheets/,showcase/ restricts which snapshot folders count. A WARN prints when the same file name has other md5s in the snapshot. Stamp line prints on every path. Selftest is 8/8, including renders-MANIFEST, --only and touched-MANIFEST cases, and its scratch is kept in send-guard/selftest-scratch/ (a few bytes, no-delete rule).
+Still a blind spot: being in the current snapshot is not the same as being the approved look. The sender has to pick tiles from the r2h freeze.
+
+v4 (Nov 1, 00:26 MDT): runs Watchman's ground_check f46a2d29 on every PNG by default. A path stroke, a floating tree or an unreadable PNG each count as a GRND BLOCK. --no-ground exists for testing only and is never used for a send to Maxwell. The stamp line names all three tools. Selftest is 18/18, using ground_check's own clean and planted tile-6 PNGs. ground_check's blind spots (dimmed scenes, trunks under 2 px, pines, tufts) are still unverified, not PASS.

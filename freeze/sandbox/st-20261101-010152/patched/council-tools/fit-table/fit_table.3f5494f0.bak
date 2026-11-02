@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Enumerate every R2 combination that fits the PASTE bank. Owner: Chancellor.
+Usage: python3 fit_table.py [--paste PATH] [--costs costs.json] > table.md
+  With no --paste, uses the 1A PASTE in QM's CURRENT-SNAP.txt pointer.
+  A --paste whose md5 isn't the pointer's paste_1a_md5 is refused unless --what-if.
+       python3 fit_table.py --selftest
+The bank is computed as ceiling - len(PASTE text); the tool refuses to run if
+costs.json's 'bank' disagrees, so a stale pinned number can't slip through."""
+import json,sys,itertools,hashlib,argparse,os
+HERE=os.path.dirname(os.path.abspath(__file__))
+md=lambda f: hashlib.md5(open(f,"rb").read()).hexdigest()[:8]
+def rows(c,bank0):
+    out=[];sv=list(c["savings"].items())
+    for s26,k in c["screen26"].items():
+        bank=bank0-k
+        for ask,a in c["asks"].items():
+            for ramp in (True,False):
+                for picks in itertools.product((False,True),repeat=len(sv)):
+                    left=bank+sum(v for (n,v),p in zip(sv,picks) if p)-a-(c["ramp"] if ramp else 0)
+                    out.append((s26,bank,ask,ramp,tuple(n for (n,_),p in zip(sv,picks) if p),left))
+    return out
+def selftest():
+    c=json.load(open(os.path.join(HERE,"costs.json")))
+    r={(s,a,rp,p):l for s,_,a,rp,p,l in rows(c,403)}
+    assert r[("A","letter game",True,("night title B",))]==10
+    assert r[("A","state pairs",True,())]==-4
+    assert r[("C'","state pairs",False,("night title B",))]==14
+    assert max(l for s,_,a,rp,p,l in rows(c,403) if s=="C'" and rp)<0
+    bad=dict(c,ramp=0)
+    assert {(s,a,rp,p):l for s,_,a,rp,p,l in rows(bad,403)}[("A","state pairs",True,())]!=-4
+    # planted fault: stale bank must be refused
+    try: check_bank(dict(c,bank=999),187797); raise SystemExit("selftest FAIL: stale bank not refused")
+    except ValueError: pass
+    print("selftest PASS")
+def check_bank(c,length):
+    bank=c["ceiling"]-length
+    if c.get("bank") is not None and c["bank"]!=bank:
+        raise ValueError(f"costs.json bank {c['bank']} != computed {bank} (ceiling {c['ceiling']} - PASTE {length}). Update costs.json.")
+    return bank
+if __name__=="__main__":
+    ap=argparse.ArgumentParser(description=__doc__,formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--paste");ap.add_argument("--costs",default=os.path.join(HERE,"costs.json"));ap.add_argument("--selftest",action="store_true");ap.add_argument("--what-if",action="store_true",help="allow a PASTE that isn't the pointer's (output marked WHAT-IF)")
+    a=ap.parse_args()
+    if a.selftest: selftest(); sys.exit()
+    sys.path.insert(0,os.path.dirname(HERE)); import current_snap as cs
+    ptr=cs.read(); probs=cs.verify(ptr)
+    if probs: sys.exit("REFUSED: pointer disagrees with disk: "+"; ".join(probs))
+    if not a.paste: a.paste=os.path.join(ptr["snap_dir"],"nancys-adventure-english-v6-08-PASTE.md")
+    tag=""
+    ok_md5={ptr["paste_1a_md5"][:8]}|({ptr["paste_1b_md5"][:8]} if ptr.get("paste_1b_md5") else set())
+    if md(a.paste) not in ok_md5:
+        if not a.what_if: sys.exit(f"REFUSED: PASTE {md(a.paste)} is not the pointer's 1A {ptr['paste_1a_md5'][:8]} or 1B {ptr.get('paste_1b_md5','unset')[:8]} ({ptr['snap']}). Use --what-if for a non-build PASTE.")
+        tag=" WHAT-IF (not the build base)"
+    c=json.load(open(a.costs))
+    if not str(c.get("manifest","")).startswith(ptr["manifest_md5"][:8]): sys.exit(f"REFUSED: costs.json manifest {c.get('manifest')} != pointer {ptr['manifest_md5'][:8]} ({ptr['snap']}). Update costs.json.")
+    length=len(open(a.paste,encoding="utf-8").read())
+    try: bank=check_bank(c,length)
+    except ValueError as e: sys.exit(f"REFUSED: {e}")
+    print(f"tool {md(__file__)} costs {md(a.costs)} paste {md(a.paste)} ({length} chars) manifest {c.get('manifest','unset')} pointer {ptr['pointer_md5'][:8]}{tag}\n")
+    print(f"# R2 fit table (bank {bank})\n");cur=None
+    for s,b,ask,rp,p,l in rows(c,bank):
+        if l<0: continue
+        if s!=cur: print(f"\n## Screen 26 {s}: {b} banked\n"); cur=s
+        print(f"- {ask}, ramp {'yes' if rp else 'no'}, savings: {', '.join(p) or 'none'}: {l} left\n")

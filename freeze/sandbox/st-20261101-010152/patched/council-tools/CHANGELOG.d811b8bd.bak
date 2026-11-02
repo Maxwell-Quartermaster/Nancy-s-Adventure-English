@@ -1,0 +1,16 @@
+# council-tools CHANGELOG (owner: Chancellor; only Chancellor edits live files; others send diffs)
+Rule: one change at a time; each entry = old md5 -> new md5, what changed, selftest result, base (snap/pointer).
+
+## Live set as of Nov 01 00:38 MDT (base snap-r2h-0021MDT, pointer 907062f0)
+- send-guard/send_guard.py 80615576 (README 6a7d2831)
+- ground-check/ground_check.py 13fc304c
+- current_snap.py ee1d3180
+- fit-table/fit_table.py e95adcd6
+- fit-table/fit_sheet_check.py c9ead841
+
+## History
+- send_guard 96dd84ae -> 80615576: Auditor g4 diff 2309cd53 (header-based image check, no abbrev options, --no-ground exit 3). selftest 23/23. README 8e1752c4 -> 6a7d2831.
+- ground_check f46a2d29 -> e6873c57: UNANNOUNCED edit at 00:33:59 MDT; owner of change to post what changed. send_guard selftest 23/23 with it.
+- fit_table 3f5494f0 -> e95adcd6: default PASTE = pointer paste_1b_path (relative to v608build). selftest PASS. Refuses until costs.json re-cut on r2h.
+- fit_sheet_check NEW c9ead841: refuses a sheet not naming the pointer's paste_1b md5.
+- ground_check e6873c57 -> 13fc304c (Watchman v2 written live 00:35, unseconded) -> RESTORED f46a2d29 as live at 00:39; v2 kept as ground-check/ground_check.v2-13fc304c.py for gate; e6873c57 has no surviving copy.

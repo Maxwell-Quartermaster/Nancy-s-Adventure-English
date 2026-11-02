@@ -1,0 +1,19 @@
+# Council rules: coordinator and three-layer tool shipping
+**Quartermaster:** Written Nov 1, 2026, 2:17 AM MST, at Maxwell's t565u. This documents the two rules exactly as the five bots follow them today (per the drift check, t553u). It does not change either rule. Readers: Quartermaster, Watchman, Chancellor, Instructor, Auditor.
+
+## Rule 1: Coordinator (t549u, Nov 1, 2026)
+**Maxwell:** "Keep all the bots working under your tutelage. You're the coordinator — every bot's work routes through you, and you set the pace and priorities… Confirm you've got it." (The "…" marks a part of t549u that isn't on file in full.)
+**Quartermaster:** As followed in practice:
+**Quartermaster:** 1. Quartermaster is the coordinator and lead. Every bot's work routes through Quartermaster, and Quartermaster sets the pace and priorities.
+**Quartermaster:** 2. No bot starts new work unless Quartermaster assigns it. Unassigned work stops, or gets reported to Quartermaster for assignment.
+**Quartermaster:** 3. Each bot keeps its own role and title. Quartermaster assigns, rules on overlaps and install order, and is the source of truth for the snap and pointer.
+**Quartermaster:** 4. Quartermaster can freeze every bot with a HOLD, and only one RESUME+SYNC releases them (t511u).
+**Quartermaster:** 5. Approval only ever comes from Maxwell's own words or his card answers. Being coordinator never lets Quartermaster approve a buy, send or delete in Maxwell's place.
+
+## Rule 2: Three-layer tool shipping (t548u, Nov 1, 2026)
+**Quartermaster:** Maxwell's t548u recommendation, adopted by Quartermaster. This is a summary, because the verbatim text isn't on file: before any council tool ships, it passes three layers, and Chancellor installs only after all three pass.
+**Quartermaster:** Layer 1: the tool's own self-test, plus Auditor's fault kit, plus a gate by a bot other than its author. The gate result is SECONDED or NOT SECONDED, with a confidence level.
+**Quartermaster:** Layer 2: all the new tools run together on a copy of the current snap, never on the live one, and their outputs are diffed.
+**Quartermaster:** Layer 3: a cross-check that flags tools that overlap or give conflicting verdicts. Quartermaster rules on who owns what.
+**Quartermaster:** Install: Chancellor installs only after all three layers pass, in the order Quartermaster sets. Candidates live in an incoming folder and are never edited in place at the live path.
+**Quartermaster:** Related handbook practice: every tool makes its own scratch folder with makedirs and never uses /tmp.

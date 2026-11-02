@@ -1,0 +1,22 @@
+**Quartermaster:** Settled rulings (backfill, every past ruling with its source label): [SETTLED-RULINGS.md](SETTLED-RULINGS.md). Before any ask: `python3 /workspace/v608build/council-tools-incoming/ask_lookup.py "question"`, then QM, then Maxwell (Maxwell t542u, Council room).
+**Quartermaster:** Open and closed asks to Maxwell. Check here before asking him anything; add a row when an ask goes out or he answers.
+
+| Ask | Status | Answer (verbatim, t-number) | Asked by |
+|---|---|---|---|
+| Red Start button on title (spec rule 9) | CLOSED | **Maxwell (t152u, to Watchman):** "Red is fine, not a hard rule. Converge with quartermaster and make sure he doesn't let you fall behind and ask questions about things addressed already lol" | Watchman |
+| t527u circles to tufts scope | CLOSED | **Maxwell (t527u):** "...This applies to similar scenes throughout the game, not just the tiles already fixed." (Auditor is verifying this quote against Maxwell's original; full QM-cut quote in SETTLED-RULINGS A26) | QM |
+| Tufts on bare grass that never had circles (24-390, M2 window) | OPEN, not yet sent | | QM |
+| Gray pebbles on title hill (rocks question) | OPEN, not yet sent; asker: QM (with the bare-grass tufts ask); goes alongside the night-title sheet | | QM |
+| Build-state Page (t521u offer) | OPEN, sent | | QM |
+| audit/ 20 GB cleanup | OPEN, not yet sent (after freeze) | | QM |
+| /dev/shm/qm-fill 106 MB delete | OPEN, not yet sent (after freeze) | | QM |
+| PASTE text: 72pt menu buttons; :397 Gear conflict | OPEN, not yet sent | | QM |
+| Spec rule 9 vs t152u "Red is fine". Current PASTE 317e91ce line 32 exactly: `9. **Nothing red or alarming** anywhere but boss bars.` Proposed 1B: `9. **Nothing alarming** anywhere.` (33 chars, saves 21: bank 84 to 105). Line 388 `No red fills but boss bars.` must be cut with it (28 more chars): both cuts take the PASTE to 188,067, bank 133 (QM measured, Nov 1). Lines 203, 249 and 411 are about wrong taps and stay. Chancellor still checks any other spec line that says red only in boss bars and posts the fit number. One 1A/1B pick. | OPEN, not yet sent | | QM (from Auditor) |
+| Trophy tally format "12 of 42" vs "12" (spec: "Gold trophy (earned of 42)"); opened by **Ara (relay, t102u, Auditor DM):** "Maxwell doesn't remember ever saying anything about trophies or a 0/85 counter" (also **Ara (relay, t70u, Instructor DM)**; Chancellor t76u: no quote exists, from his mislabeled :131 line, corrected in b530b72b) | OPEN, sent (Auditor card t102s351); no other bot asks | | Auditor |
+| Screen 26 options A/B/C′/D (council-images/picks-20261101/screen26-options-A-B-Cprime-D.png 056d00fc), from t74u | OPEN, not yet sent (after freeze + send_guard + Auditor pre-check; re-check vs frozen build) | | Chancellor |
+| Night title "Good night!" vs "Good evening!" (instructor/v608/nightB/night-title-1A-1B.png 75c7906e), from t74u | OPEN, not yet sent (same gates) | | Chancellor |
+| Spoken-target bar off vs on (spoken-target-bar-1A-off-vs-1B-on.png c6a201b6), from t74u | OPEN, not yet sent (same gates) | | Chancellor |
+| Lookup order before asking Maxwell | CLOSED | **Maxwell (t542u, Council room):** "Let's do that, should we tack on anything else to that rule? Maybe they can look it up, ask you, then me?" Order: lookup, then QM, then Maxwell. Approved: "Perfect, please execute on that" | QM |
+| Delete /tmp/qmtmp (15G, QM scratch) | CLOSED | **Maxwell (t160s541 card answer, to Watchman, relayed by Watchman):** "Yes, delete /tmp/qmtmp". **Quartermaster:** Watchman deleted it 1:48 AM MST; df 88% to 76% (31G free), verified by QM. Still open: audit/ (20G), /dev/shm/qm-fill, /workspace/audit/layout-export (630 MB), Chancellor freeze-perpanel-run and freeze-nested-run (awaiting Chancellor all-clear) | Watchman |
+| One cleanup ask: delete test copies (Chancellor freeze-perpanel-run/sandbox ~24G and freeze-nested-run 8.7G after his all-clear; Auditor audit/freeze-gate-e0d36b3b ~20G and audit/layout-export/runs 630 MB; /dev/shm/qm-fill) (Watchman LIST.md Tier 1 removed: 0 GB left on box, per Watchman 1:53 AM MST) | OPEN, not yet sent (not urgent: disk 77% after /tmp/qmtmp) | | QM |
+| What "(b) the 320px screen-size fix" (t581u) means: 1A checker viewport fix (Watchman A3 plus Instructor F5 finding 1, tool work, needs its own gate) or 1B a named game-screen fix at 320 (candidates: page 30 Thai, which is HELD, or the Echo Knight plate on screens 34-36) | OPEN, sent to Maxwell DM Nov 1 2:40 PM MST | | QM |

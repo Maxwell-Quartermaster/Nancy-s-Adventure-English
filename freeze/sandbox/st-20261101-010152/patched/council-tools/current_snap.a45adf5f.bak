@@ -1,0 +1,29 @@
+"""Shared reader for QM's build pointer /workspace/v608build/CURRENT-SNAP.txt. Owner: Chancellor.
+QM (build lead) updates the pointer on every freeze; tools refuse anything that disagrees with it."""
+import os, hashlib
+POINTER = os.environ.get('CURRENT_SNAP', '/workspace/v608build/CURRENT-SNAP.txt')
+def md5(p):
+    h = hashlib.md5()
+    with open(p, 'rb') as f:
+        for b in iter(lambda: f.read(1 << 20), b''): h.update(b)
+    return h.hexdigest()
+def read(path=POINTER):
+    d = {}
+    for line in open(path, encoding='utf-8'):
+        if '=' in line:
+            k, v = line.rstrip('\n').split('=', 1); d[k.strip()] = v.strip()
+    for k in ('snap', 'manifest_md5', 'paste_1a_md5', 'paste_1a_chars', 'bank'):
+        if k not in d: raise ValueError(f'pointer {path} missing {k}')
+    d['snap_dir'] = os.path.join(os.path.dirname(os.path.abspath(path)), d['snap'])
+    d['pointer_md5'] = md5(path)
+    return d
+def verify(d):
+    """Return list of problems between pointer and disk."""
+    probs = []
+    m = os.path.join(d['snap_dir'], 'MANIFEST.md5')
+    if not os.path.isfile(m): return [f'{m} missing']
+    if md5(m) != d['manifest_md5']: probs.append(f'MANIFEST {md5(m)[:8]} != pointer {d["manifest_md5"][:8]}')
+    r = os.path.join(d['snap_dir'], 'renders-MANIFEST.md5')
+    if d.get('renders_manifest_md5') and os.path.isfile(r) and md5(r) != d['renders_manifest_md5']:
+        probs.append(f'renders-MANIFEST {md5(r)[:8]} != pointer {d["renders_manifest_md5"][:8]}')
+    return probs
