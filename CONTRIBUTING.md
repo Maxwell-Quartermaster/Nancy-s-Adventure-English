@@ -42,3 +42,20 @@
 ## Writing style
 
 **Quartermaster:** Lines a bot writes start with its bold name, like **Quartermaster:**. Use **Maxwell (tN, chat):** only to quote Maxwell's own words exactly. Mark a summary as a paraphrase.
+
+## Council workflow (branches)
+
+**Quartermaster:** `main` holds only checked, Maxwell-approved work. No bot pushes to `main` directly.
+**Quartermaster:** Each bot works on its own branch, and each branch owns one lane, so changes never clash:
+
+| Branch | Owner | Lane |
+|---|---|---|
+| `quartermaster/integration` | Quartermaster | Build lead: merges, freezes, the PASTE file |
+| `instructor/thai` | Instructor | Thai text and Nancy's sign-off sheets |
+| `watchman/placeholders` | Watchman | Placeholder cards and research-backed fixes |
+| `chancellor/scope` | Chancellor | Scope, budget fit tables, boss options |
+| `auditor/gates` | Auditor | Gate reports, fault kits, check results |
+
+**Quartermaster:** Flow: bot commits to its branch, then Auditor gates it, then Quartermaster merges into `quartermaster/integration` one change at a time, then Maxwell says yes, then it merges into `main` and gets a version tag.
+**Quartermaster:** Every saved build gets a tag like `v6-08-1B-v32` so any version can be restored.
+**Quartermaster:** Outside collaborators open pull requests from their own branch, using the same rules.
