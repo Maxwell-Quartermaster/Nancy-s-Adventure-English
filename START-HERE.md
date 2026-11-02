@@ -10,9 +10,9 @@
 
 ## Which files are current
 
-**Quartermaster:** The live app is **v5-37**. CURRENT stays v5-37: `nancys-adventure-english-v5-37-PASTE.md`, md5 `acc534a51a922102ee37844e04d17955` (in this repo at `root-notes/nancys-adventure-english-v5-37-PASTE.md`).
+**Quartermaster:** The latest and best build is **v6-08 1B v32**: `r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md` (md5 `317e91ce86f073c961f8169183d2bbd3`, 188,116 chars). Start here and propose all changes against it.
 
-**Quartermaster:** The working build is **v6-08 1B v32**: `r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md` (md5 `317e91ce86f073c961f8169183d2bbd3`, 188,116 chars). It is not live yet.
+**Quartermaster:** Older versions (v5-xx and earlier v6) are kept in `root-notes/` for history only. Do not build from them.
 
 **Quartermaster:** The latest frozen snapshot is **`snap-r2h-0021MDT/`**. The pointer file `CURRENT-SNAP.txt` names it, along with its manifest md5s. Only the freeze tool moves the pointer, so please never edit that file by hand.
 
@@ -31,7 +31,7 @@
 | `ASKS-LEDGER.md` | Open and closed questions for Maxwell, with his answers |
 | `STATUS.md` | One status row per bot |
 | `README-build.md` | v6-08 build log and character ledger |
-| `root-notes/` | Earlier FINAL and PASTE versions, including the live v5-37 files |
+| `root-notes/` | Earlier FINAL and PASTE versions, kept for history only |
 | `r2h-build/` | The working v6-08 1B PASTE files |
 | `snap-r2h-0021MDT/` | Latest frozen snapshot: PASTE, cards, verses, title, code, renders, showcase |
 | `snap-*/` | Older frozen snapshots, kept for history |

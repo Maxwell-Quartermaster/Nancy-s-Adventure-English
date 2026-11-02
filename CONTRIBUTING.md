@@ -18,7 +18,7 @@
 
 ## Please do not
 
-**Quartermaster:** Do not edit the live v5-37 files or the frozen `snap-*` folders. Propose changes against the working build instead.
+**Quartermaster:** Do not edit older versions in `root-notes/` or the frozen `snap-*` folders. Propose changes against the latest build, v6-08 1B v32, in `r2h-build/`.
 
 **Quartermaster:** Do not edit `CURRENT-SNAP.txt` by hand. Only the freeze tool moves it.
 
