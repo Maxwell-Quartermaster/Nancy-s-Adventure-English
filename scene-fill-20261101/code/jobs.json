@@ -1,0 +1,947 @@
+{
+ "pointer_md5": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "paste_md5": "317e91ce86f073c961f8169183d2bbd3",
+ "pond_evening_skipped": true,
+ "jobs": [
+  {
+   "tag": "park-d-390x844",
+   "loc": "meadow-park",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/meadow-step2-390.html",
+   "src_md5": "4cdbe39481f068b179b5d6e16e55d5fe",
+   "html_md5": "6e47563a1ab7cad993feba2fb15c8647",
+   "note": "",
+   "fixes": [
+    "park-d-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-d-390x844: brush-stroke walkway removed (16/16S look)",
+    "park-d-390x844: 3 ground dots -> tufts (t527u)",
+    "park-d-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-d-320x568",
+   "loc": "meadow-park",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/meadow-step2-320x568.html",
+   "src_md5": "a92c2bcc2f607681b837a452425b100a",
+   "html_md5": "6e8e1a289e8e4689692fe0cdfb2621e2",
+   "note": "",
+   "fixes": [
+    "park-d-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-d-320x568: brush-stroke walkway removed (16/16S look)",
+    "park-d-320x568: 3 ground dots -> tufts (t527u)",
+    "park-d-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-a-390x844",
+   "loc": "meadow-park",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/meadow-step3-390.html",
+   "src_md5": "2f9a4055210811f5fb8cf145564c4ffd",
+   "html_md5": "1ddf470ecfe5f9064b0888873600b84b",
+   "note": "",
+   "fixes": [
+    "park-a-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-a-390x844: brush-stroke walkway removed (16/16S look)",
+    "park-a-390x844: 3 ground dots -> tufts (t527u)",
+    "park-a-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-a-320x568",
+   "loc": "meadow-park",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/meadow-step3-320x568.html",
+   "src_md5": "b377cc0a6c51fcf3c5d930fda4955a4f",
+   "html_md5": "366302012bfc4eba29ea9a0a900000c3",
+   "note": "",
+   "fixes": [
+    "park-a-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-a-320x568: brush-stroke walkway removed (16/16S look)",
+    "park-a-320x568: 3 ground dots -> tufts (t527u)",
+    "park-a-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-e-390x844",
+   "loc": "meadow-park",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/meadow-step4-390.html",
+   "src_md5": "4fa5b1b9a6f41a1500d8e2a9b11c0bee",
+   "html_md5": "53feb6b9307cfb1fc5050bfbfb32ba5e",
+   "note": "",
+   "fixes": [
+    "park-e-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-e-390x844: brush-stroke walkway removed (16/16S look)",
+    "park-e-390x844: 3 ground dots -> tufts (t527u)",
+    "park-e-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-e-320x568",
+   "loc": "meadow-park",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/meadow-step4-320x568.html",
+   "src_md5": "d6019d8f3a3fa78131eaed9fd14624d7",
+   "html_md5": "4c3d0457d00425106b67e3366e9a19ef",
+   "note": "",
+   "fixes": [
+    "park-e-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-e-320x568: brush-stroke walkway removed (16/16S look)",
+    "park-e-320x568: 3 ground dots -> tufts (t527u)",
+    "park-e-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-n-390x844",
+   "loc": "meadow-park",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/meadow-step5-390.html",
+   "src_md5": "d03e919b4ab1b7239f0ac4dfd0b94075",
+   "html_md5": "dbbde506a259caafa7479349e9c90328",
+   "note": "",
+   "fixes": [
+    "park-n-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-n-390x844: brush-stroke walkway removed (16/16S look)",
+    "park-n-390x844: 3 ground dots -> tufts (t527u)",
+    "park-n-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "park-n-320x568",
+   "loc": "meadow-park",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/meadow-step5-320x568.html",
+   "src_md5": "965f41e090c55c04197aebcc0beeed3c",
+   "html_md5": "66e2bed19e76ece6d3520a2f2463b7a8",
+   "note": "",
+   "fixes": [
+    "park-n-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "park-n-320x568: brush-stroke walkway removed (16/16S look)",
+    "park-n-320x568: 3 ground dots -> tufts (t527u)",
+    "park-n-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ]
+  },
+  {
+   "tag": "pond-m-390x844",
+   "loc": "meadow-pond",
+   "tod": "m",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-390x844.html",
+   "src_md5": "8fc6d31c3b23222f9ac83b35edc814fa",
+   "html_md5": "e3ce0b4ca2a88fe69285701fad1b73f9",
+   "note": "",
+   "fixes": [
+    "pond-m-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-m-390x844: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-m-320x568",
+   "loc": "meadow-pond",
+   "tod": "m",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-320x568.html",
+   "src_md5": "8f1f8986cbf2af50dd45f190193916d7",
+   "html_md5": "7c3ebf0ea112be49146669fff6f645ba",
+   "note": "",
+   "fixes": [
+    "pond-m-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-m-320x568: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-d-390x844",
+   "loc": "meadow-pond",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-390x844.html",
+   "src_md5": "8fc6d31c3b23222f9ac83b35edc814fa",
+   "html_md5": "232cb8894044eabde62b2cd1b105eab6",
+   "note": "",
+   "fixes": [
+    "pond-d-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-d-390x844: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-d-320x568",
+   "loc": "meadow-pond",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-320x568.html",
+   "src_md5": "8f1f8986cbf2af50dd45f190193916d7",
+   "html_md5": "87110a93cfdf28405f70ae01ea5a2f33",
+   "note": "",
+   "fixes": [
+    "pond-d-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-d-320x568: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-a-390x844",
+   "loc": "meadow-pond",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-390x844.html",
+   "src_md5": "8fc6d31c3b23222f9ac83b35edc814fa",
+   "html_md5": "0acb8df6faf93e3a8fe4934cad4a4cb5",
+   "note": "",
+   "fixes": [
+    "pond-a-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-a-390x844: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-a-320x568",
+   "loc": "meadow-pond",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-320x568.html",
+   "src_md5": "8f1f8986cbf2af50dd45f190193916d7",
+   "html_md5": "dabc31e0fd954d073a78286b91bfdf41",
+   "note": "",
+   "fixes": [
+    "pond-a-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-a-320x568: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-n-390x844",
+   "loc": "meadow-pond",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-390x844.html",
+   "src_md5": "8fc6d31c3b23222f9ac83b35edc814fa",
+   "html_md5": "a8007376d6b949e429bf68825beb7d5c",
+   "note": "",
+   "fixes": [
+    "pond-n-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-n-390x844: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "pond-n-320x568",
+   "loc": "meadow-pond",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/A-meadow-evening-pond-320x568.html",
+   "src_md5": "8f1f8986cbf2af50dd45f190193916d7",
+   "html_md5": "3bff807c56a5878bd82cd19603483821",
+   "note": "",
+   "fixes": [
+    "pond-n-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "pond-n-320x568: brush-stroke walkway removed (16/16S look)"
+   ]
+  },
+  {
+   "tag": "home-m-390x844",
+   "loc": "lake-home",
+   "tod": "m",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/lake-step1-390.html",
+   "src_md5": "ea86d5f3e047faa0d5d571142440bfdf",
+   "html_md5": "aaa3db12db285855fcc16c4c74a4789b",
+   "note": "",
+   "fixes": [
+    "home-m-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-m-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-m-390x844: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-m-320x568",
+   "loc": "lake-home",
+   "tod": "m",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/lake-step1-320x568.html",
+   "src_md5": "e565beaabb19b39bc41a22613dc7586a",
+   "html_md5": "9196a86468cca34da2be6a2ac74146c5",
+   "note": "",
+   "fixes": [
+    "home-m-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-m-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-m-320x568: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-d-390x844",
+   "loc": "lake-home",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/lake-step2-390.html",
+   "src_md5": "fa10f25a9c35386e12fac652cad14232",
+   "html_md5": "d57676f2980c9285ad9b24d58215f706",
+   "note": "",
+   "fixes": [
+    "home-d-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-d-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-d-390x844: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-d-320x568",
+   "loc": "lake-home",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/lake-step2-320x568.html",
+   "src_md5": "ce756aeb758b93822146efe5e26bbeef",
+   "html_md5": "c6c1db8175287aa42049caef69105f29",
+   "note": "",
+   "fixes": [
+    "home-d-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-d-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-d-320x568: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-a-390x844",
+   "loc": "lake-home",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/lake-step3-390.html",
+   "src_md5": "d2e5a9ccc07ba22567478228debe0115",
+   "html_md5": "5eacd98dbffd55262c5984e59504732a",
+   "note": "",
+   "fixes": [
+    "home-a-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-a-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-a-390x844: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-a-320x568",
+   "loc": "lake-home",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/lake-step3-320x568.html",
+   "src_md5": "459dbdeb5c4aa2e5110d184f66d3076d",
+   "html_md5": "bd84f55f110fd4f98c665f5cb1e3fc24",
+   "note": "",
+   "fixes": [
+    "home-a-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-a-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-a-320x568: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-e-390x844",
+   "loc": "lake-home",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/lake-step4-390.html",
+   "src_md5": "e87fabdd960278432a452ba6ebd8f254",
+   "html_md5": "1096dd9b0e9d3774e2d80ebb03212fc4",
+   "note": "",
+   "fixes": [
+    "home-e-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-e-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-e-390x844: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-e-320x568",
+   "loc": "lake-home",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/lake-step4-320x568.html",
+   "src_md5": "14c021a93ff2d4454248dab677a7efa3",
+   "html_md5": "cb3b65774695f01cb5a99da6c04ed375",
+   "note": "",
+   "fixes": [
+    "home-e-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-e-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-e-320x568: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-n-390x844",
+   "loc": "lake-home",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/lake-step5-390.html",
+   "src_md5": "a6111eedf99af9287a9e6b381896fc7f",
+   "html_md5": "b4651c55c16b6708e0181a5cf2863132",
+   "note": "",
+   "fixes": [
+    "home-n-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-n-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-n-390x844: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "home-n-320x568",
+   "loc": "lake-home",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/lake-step5-320x568.html",
+   "src_md5": "b50be4f09b25bdc1ae24fab4368a8235",
+   "html_md5": "3ad8627a67251a02df6a066c9c1352c4",
+   "note": "",
+   "fixes": [
+    "home-n-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "home-n-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "home-n-320x568: tie x1 hangs straight from the peg"
+   ]
+  },
+  {
+   "tag": "F-kitchen-m-390x844",
+   "loc": "lake-kitchen",
+   "tod": "m",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-390x844.html",
+   "src_md5": "57292717f8ea2a159385873a5f8777e9",
+   "html_md5": "2aae4d5c6072705eb6a03c7e23259b4c",
+   "note": "",
+   "fixes": [
+    "F-kitchen-m-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-m-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-m-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-m-320x568",
+   "loc": "lake-kitchen",
+   "tod": "m",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-320x568.html",
+   "src_md5": "be3ecd0dd596f3b8e56deea9fa560d0c",
+   "html_md5": "bf24dbd7d9669c43534670cbc314e292",
+   "note": "",
+   "fixes": [
+    "F-kitchen-m-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-m-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-m-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-d-390x844",
+   "loc": "lake-kitchen",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-390x844.html",
+   "src_md5": "57292717f8ea2a159385873a5f8777e9",
+   "html_md5": "87a0d0a4f80409825e8e049b6d479346",
+   "note": "",
+   "fixes": [
+    "F-kitchen-d-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-d-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-d-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-d-320x568",
+   "loc": "lake-kitchen",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-320x568.html",
+   "src_md5": "be3ecd0dd596f3b8e56deea9fa560d0c",
+   "html_md5": "9c6e7b0b84a05c3e2ee9d5fcc90c1073",
+   "note": "",
+   "fixes": [
+    "F-kitchen-d-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-d-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-d-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-a-390x844",
+   "loc": "lake-kitchen",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-390x844.html",
+   "src_md5": "57292717f8ea2a159385873a5f8777e9",
+   "html_md5": "49d18e04a21fe5029edc7be8800ca36b",
+   "note": "",
+   "fixes": [
+    "F-kitchen-a-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-a-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-a-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-a-320x568",
+   "loc": "lake-kitchen",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-320x568.html",
+   "src_md5": "be3ecd0dd596f3b8e56deea9fa560d0c",
+   "html_md5": "e245091a267dd530f93a6ac5a3c1411f",
+   "note": "",
+   "fixes": [
+    "F-kitchen-a-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-a-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-a-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-e-390x844",
+   "loc": "lake-kitchen",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-390x844.html",
+   "src_md5": "57292717f8ea2a159385873a5f8777e9",
+   "html_md5": "3848cdc354f17c26612c526ba5065906",
+   "note": "",
+   "fixes": [
+    "F-kitchen-e-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-e-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-e-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-e-320x568",
+   "loc": "lake-kitchen",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-320x568.html",
+   "src_md5": "be3ecd0dd596f3b8e56deea9fa560d0c",
+   "html_md5": "31719120c4ed303635562bc53788de9a",
+   "note": "",
+   "fixes": [
+    "F-kitchen-e-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-e-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-e-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-n-390x844",
+   "loc": "lake-kitchen",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-390x844.html",
+   "src_md5": "57292717f8ea2a159385873a5f8777e9",
+   "html_md5": "79ca6cb28917e7acf1961cb529393f65",
+   "note": "",
+   "fixes": [
+    "F-kitchen-n-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-n-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-n-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "F-kitchen-n-320x568",
+   "loc": "lake-kitchen",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/F-lake-night-table-320x568.html",
+   "src_md5": "be3ecd0dd596f3b8e56deea9fa560d0c",
+   "html_md5": "46c190f19f521dc02728bbc925539ff8",
+   "note": "",
+   "fixes": [
+    "F-kitchen-n-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)",
+    "F-kitchen-n-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "F-kitchen-n-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-base-390x844",
+   "loc": "lake-front-desk",
+   "tod": "base",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "3936ddf17607ea1d6c6ef521c6f7af5d",
+   "note": "",
+   "fixes": [
+    "E-front-desk-base-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-base-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-base-320x568",
+   "loc": "lake-front-desk",
+   "tod": "base",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "8d8f52e3f4ff7a4025c8512b0c4db0cf",
+   "note": "",
+   "fixes": [
+    "E-front-desk-base-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-base-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-m-390x844",
+   "loc": "lake-front-desk",
+   "tod": "m",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "f31e70ed49d82738b4329f32ecfe4b9a",
+   "note": "",
+   "fixes": [
+    "E-front-desk-m-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-m-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-m-320x568",
+   "loc": "lake-front-desk",
+   "tod": "m",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "2eded43f2eb6e6becd8a031331d3f8f5",
+   "note": "",
+   "fixes": [
+    "E-front-desk-m-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-m-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-d-390x844",
+   "loc": "lake-front-desk",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "e933deae55e442e1234a98e939f28231",
+   "note": "",
+   "fixes": [
+    "E-front-desk-d-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-d-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-d-320x568",
+   "loc": "lake-front-desk",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "a9b5581478808615d161a9ac3e3ba068",
+   "note": "",
+   "fixes": [
+    "E-front-desk-d-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-d-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-a-390x844",
+   "loc": "lake-front-desk",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "88c0b199adec7d609584d0d90dc1ba7c",
+   "note": "",
+   "fixes": [
+    "E-front-desk-a-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-a-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-a-320x568",
+   "loc": "lake-front-desk",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "f3d39e351b22dc9c0679427bfdcfee5d",
+   "note": "",
+   "fixes": [
+    "E-front-desk-a-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-a-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-e-390x844",
+   "loc": "lake-front-desk",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "a38e39939feb6a406fe4210f158848e2",
+   "note": "",
+   "fixes": [
+    "E-front-desk-e-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-e-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-e-320x568",
+   "loc": "lake-front-desk",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "13211a196f137d1c02174722afc37ae7",
+   "note": "",
+   "fixes": [
+    "E-front-desk-e-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-e-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-n-390x844",
+   "loc": "lake-front-desk",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "be1c433e92a86219a4dae924a52874ef",
+   "note": "",
+   "fixes": [
+    "E-front-desk-n-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-n-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-n-320x568",
+   "loc": "lake-front-desk",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "1ac1d5650b3e7da570c864cfb4983f20",
+   "note": "",
+   "fixes": [
+    "E-front-desk-n-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-n-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "farm-m-390x844",
+   "loc": "fields-farm",
+   "tod": "m",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/fields-step1-390.html",
+   "src_md5": "81ef511e09b13cfc2fbe014ed186b652",
+   "html_md5": "0219782ce447e0a96f99e925c0c6fd06",
+   "note": "",
+   "fixes": [
+    "farm-m-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-m-320x568",
+   "loc": "fields-farm",
+   "tod": "m",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/fields-step1-320x568.html",
+   "src_md5": "fe63a109387b4775787febb5afea357f",
+   "html_md5": "e585100bee57fbc39b179e18e52ec8a9",
+   "note": "",
+   "fixes": [
+    "farm-m-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-d-390x844",
+   "loc": "fields-farm",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/fields-step2-390.html",
+   "src_md5": "775af144354f60bfffed33b8ebca0524",
+   "html_md5": "9ae072e4ea10f04d6aa18e0878245be7",
+   "note": "",
+   "fixes": [
+    "farm-d-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-d-320x568",
+   "loc": "fields-farm",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/fields-step2-320x568.html",
+   "src_md5": "e529af550cd89dd7d60dc1687683d98a",
+   "html_md5": "0733415fc2ae49051d484b698df480fd",
+   "note": "",
+   "fixes": [
+    "farm-d-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-e-390x844",
+   "loc": "fields-farm",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/fields-step4-390.html",
+   "src_md5": "c57501596d7f7987558adfb08a2903b5",
+   "html_md5": "acb335d213377844ce095821ebe2537c",
+   "note": "",
+   "fixes": [
+    "farm-e-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-e-320x568",
+   "loc": "fields-farm",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/fields-step4-320x568.html",
+   "src_md5": "abf12d20fe7f623754002cb8183ea805",
+   "html_md5": "cd889014db6781756de31aba4a6832eb",
+   "note": "",
+   "fixes": [
+    "farm-e-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-n-390x844",
+   "loc": "fields-farm",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/tod/fields-step5-390.html",
+   "src_md5": "ca483c120fa58118bb80a18049ad3529",
+   "html_md5": "15d0a7d2b59ad2c528b00d2c85955cb2",
+   "note": "",
+   "fixes": [
+    "farm-n-390x844: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "farm-n-320x568",
+   "loc": "fields-farm",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/tod/fields-step5-320x568.html",
+   "src_md5": "2b5455d9901dbc934fe7befce50dd513",
+   "html_md5": "981b04db1c3c4fcf974d5f13a39f1454",
+   "note": "",
+   "fixes": [
+    "farm-n-320x568: r2tp ask wording (Can you find the X? / หา X เจอไหม)"
+   ]
+  },
+  {
+   "tag": "title-a-390x844",
+   "loc": "TITLE",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/screens-v608/html/01-title.html",
+   "src_md5": "52baea126aa2e2cd6d47d8c0f14b360d",
+   "html_md5": "8cf609c0aabf82613aac5707aeb902d5",
+   "note": "clean afternoon (no home-screen hint card)",
+   "fixes": []
+  },
+  {
+   "tag": "title-e-390x844",
+   "loc": "TITLE",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/screens-v608/html/01-title.html",
+   "src_md5": "52baea126aa2e2cd6d47d8c0f14b360d",
+   "html_md5": "e9dc331b8d181098dd3485df4822e98d",
+   "note": "evening greeting uiText.greetEvening",
+   "fixes": []
+  },
+  {
+   "tag": "title-a-320x568",
+   "loc": "TITLE",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/screens-v608/html/01-title-320x568.html",
+   "src_md5": "24eef9bb8729bcd3fbcc68c16e088f48",
+   "html_md5": "01514fb2d7896ecfc4a788f6ce2c551a",
+   "note": "clean afternoon (no home-screen hint card)",
+   "fixes": []
+  },
+  {
+   "tag": "title-e-320x568",
+   "loc": "TITLE",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/screens-v608/html/01-title-320x568.html",
+   "src_md5": "24eef9bb8729bcd3fbcc68c16e088f48",
+   "html_md5": "18057fbb9ad5a488c38da280b62fe0af",
+   "note": "evening greeting uiText.greetEvening",
+   "fixes": []
+  },
+  {
+   "tag": "title-n-A-320x568",
+   "loc": "TITLE",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/screens-v608/html/01-title-320x568.html",
+   "src_md5": "24eef9bb8729bcd3fbcc68c16e088f48",
+   "html_md5": "28accb2702cc25e8741f9c22c2bf5bfa",
+   "note": "night A: uiText.greetNight \"Good night!\" (PASTE 317e91ce)",
+   "fixes": []
+  },
+  {
+   "tag": "title-n-B-320x568",
+   "loc": "TITLE",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/screens-v608/html/01-title-320x568.html",
+   "src_md5": "24eef9bb8729bcd3fbcc68c16e088f48",
+   "html_md5": "94b697c04c5074198c5ec583fd8eb285",
+   "note": "INTERNAL night B: \"Good evening!\" (instructor-night-b1-picks.py --night, addf7973; not in PASTE 317e91ce)",
+   "fixes": []
+  }
+ ]
+}

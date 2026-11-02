@@ -1,0 +1,14 @@
+ground_check 13fc304c4980d04236dfcdda34de92ce | folder /workspace/v608build/r2h-rerun-stage/sheets | MANIFEST none
+instructor/v608/nightB/B.png  843444a53aebb5af0b550c2070b8783e  PASS
+instructor/v608/nightB/night-title-1A-1B.png  75c7906e676c7bff66de6cfbaeb18aa9  PASS
+r2h-M-menus.png  667c8d637157e3520333c24d5f286d21  PASS
+r2h-after.png  b5f63e4a5246cd29ac77e3a5e035bd3f  PASS
+r2h-map-extended.png  65dbfe486fdf7bb002af8140efb06f2e  PASS
+summary: 5 images, 0 BLOCK, 5 PASS
+ground_check 13fc304c4980d04236dfcdda34de92ce | folder /workspace/v608build/r2h-rerun-stage/showcase | MANIFEST none
+showcase-1-opening.png  7e6e0c2fd47b83307e9d3382835cee5e  PASS
+showcase-2-zones.png  6369fca40ca2f4f62bb271d08f9770f3  PASS
+showcase-3-asking.png  7dade5ee4a93ae61f4fd7aebe3d70f5c  PASS
+showcase-4-walk-guardian.png  8aaf33178f2b80d416acd1ad7beed95c  PASS
+showcase-5-rewards-pause.png  b3afa34a611563899fbcdc212ed232a5  BLOCK | path stroke: 1906 px (min 1210) in box x71-1232 y596-2082 [dimmed x0.65]
+summary: 5 images, 1 BLOCK, 4 PASS

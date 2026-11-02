@@ -1,0 +1,7 @@
+send-guard 80615576 current_snap ee1d3180 ground_check f46a2d29 snap snap-st-0100MDT MANIFEST a5e2e30b renders-MANIFEST c58bc56d
+pointer c11abae6 snap snap-st-0100MDT
+OK   2b14fcd0 /workspace/v608build/freeze/sandbox/st-20261101-065833/sendguard-block/stage/sheets/05-map-day1-390x844.png = MANIFEST.md5:./sheets/05-map-day1-390x844.png
+OK   25a3af06 /workspace/v608build/freeze/sandbox/st-20261101-065833/sendguard-block/stage/sheets/r2h-before-after.png = MANIFEST.md5:./sheets/r2h-before-after.png
+GRND 25a3af06 /workspace/v608build/freeze/sandbox/st-20261101-065833/sendguard-block/stage/sheets/r2h-before-after.png: path stroke: 4813 px (min 2409) in box x17-1276 y216-4397
+OK   8dcce473 /workspace/v608build/freeze/sandbox/st-20261101-065833/sendguard-block/stage/showcase/showcase-1-opening.png = MANIFEST.md5:./showcase/showcase-1-opening.png
+RESULT BLOCK: 3 files, 1 problems

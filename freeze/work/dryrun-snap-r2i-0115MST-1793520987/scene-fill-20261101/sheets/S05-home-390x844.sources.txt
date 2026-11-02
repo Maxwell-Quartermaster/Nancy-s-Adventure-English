@@ -1,0 +1,17 @@
+cc7f27af84fd909e4760757fce04c020  /workspace/v608build/scene-fill-20261101/renders/home-m-390x844.png
+aaa3db12db285855fcc16c4c74a4789b  /workspace/v608build/scene-fill-20261101/html/home-m-390x844.html
+2ee71f3bb1977abd071e56d03fda5744  /workspace/v608build/scene-fill-20261101/renders/home-d-390x844.png
+d57676f2980c9285ad9b24d58215f706  /workspace/v608build/scene-fill-20261101/html/home-d-390x844.html
+691166ff423017b8004f29f178187c60  /workspace/v608build/scene-fill-20261101/renders/home-a-390x844.png
+5eacd98dbffd55262c5984e59504732a  /workspace/v608build/scene-fill-20261101/html/home-a-390x844.html
+477ed2b68cb0767096163176fb010a80  /workspace/v608build/scene-fill-20261101/renders/home-e-390x844.png
+1096dd9b0e9d3774e2d80ebb03212fc4  /workspace/v608build/scene-fill-20261101/html/home-e-390x844.html
+a21c5eb441aa4422b0c96a36602b72ed  /workspace/v608build/scene-fill-20261101/renders/home-n-390x844.png
+b4651c55c16b6708e0181a5cf2863132  /workspace/v608build/scene-fill-20261101/html/home-n-390x844.html
+caption S05 · Home Lake · Home room · 390x844
+caption 1. Morning
+caption 2. Midday
+caption 3. Afternoon
+caption 4. Evening
+caption 5. Night
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

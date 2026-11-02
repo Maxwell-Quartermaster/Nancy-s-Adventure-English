@@ -1,0 +1,28 @@
+send-guard 80615576 current_snap ee1d3180 ground_check f46a2d29 snap snap-r2h-0021MDT MANIFEST 7b7c357f renders-MANIFEST 62e41535
+pointer f6dac2d0 snap snap-r2h-0021MDT
+MISS 843444a5 sheets/instructor/v608/nightB/B.png: not in this snapshot
+MISS 8a3fb6ca sheets/instructor/v608/nightB/B.png.sources.txt: not in this snapshot
+MISS 75c7906e sheets/instructor/v608/nightB/night-title-1A-1B.png: not in this snapshot
+MISS 8a624cb9 sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt: not in this snapshot
+MISS 69a9ba16 sheets/r2h-M-menus.md: not in this snapshot
+MISS 667c8d63 sheets/r2h-M-menus.png: not in this snapshot
+MISS b6b414ed sheets/r2h-M-menus.png.sources.txt: not in this snapshot
+MISS b5f63e4a sheets/r2h-after.png: not in this snapshot
+MISS 037247ed sheets/r2h-after.sources.txt: not in this snapshot
+MISS 66562d2b sheets/r2h-map-extended.md: not in this snapshot
+MISS 65dbfe48 sheets/r2h-map-extended.png: not in this snapshot
+MISS 3baa9856 sheets/r2h-map-extended.png.sources.txt: not in this snapshot
+MISS ab2bc421 showcase/INDEX.md: not in this snapshot
+MISS 7e6e0c2f showcase/showcase-1-opening.png: not in this snapshot
+MISS a8b195d6 showcase/showcase-1-opening.png.sources.txt: not in this snapshot
+MISS 6369fca4 showcase/showcase-2-zones.png: not in this snapshot
+MISS 632d1183 showcase/showcase-2-zones.png.sources.txt: not in this snapshot
+MISS 7dade5ee showcase/showcase-3-asking.png: not in this snapshot
+MISS baa21eb1 showcase/showcase-3-asking.png.sources.txt: not in this snapshot
+MISS 8aaf3317 showcase/showcase-4-walk-guardian.png: not in this snapshot
+MISS f597b113 showcase/showcase-4-walk-guardian.png.sources.txt: not in this snapshot
+MISS b3afa34a showcase/showcase-5-rewards-pause.png: not in this snapshot
+MISS 4ca2579a showcase/showcase-5-rewards-pause.png.sources.txt: not in this snapshot
+MISS eead918d showcase/tiles.txt: not in this snapshot
+RESULT BLOCK: 24 files, 24 problems
+GROUND SKIPPED (--no-ground): test only, NOT valid for a send to Maxwell

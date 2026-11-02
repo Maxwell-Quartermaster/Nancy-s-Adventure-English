@@ -1,0 +1,28 @@
+send-guard 80615576 current_snap ee1d3180 ground_check f46a2d29 snap snap-r2i-0115MST MANIFEST cad21ab5 renders-MANIFEST 6db638bd
+pointer 2773a43f snap snap-r2i-0115MST
+OK   843444a5 /workspace/v608build/r2i-stage/sheets/instructor/v608/nightB/B.png = MANIFEST.md5:./sheets/instructor/v608/nightB/B.png
+OK   8a3fb6ca /workspace/v608build/r2i-stage/sheets/instructor/v608/nightB/B.png.sources.txt = MANIFEST.md5:./sheets/instructor/v608/nightB/B.png.sources.txt
+OK   75c7906e /workspace/v608build/r2i-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png = MANIFEST.md5:./sheets/instructor/v608/nightB/night-title-1A-1B.png
+OK   8a624cb9 /workspace/v608build/r2i-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt = MANIFEST.md5:./sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt
+OK   ddcc8345 /workspace/v608build/r2i-stage/sheets/r2h-M-menus.md = MANIFEST.md5:./sheets/r2h-M-menus.md
+OK   571b4c77 /workspace/v608build/r2i-stage/sheets/r2h-M-menus.png = MANIFEST.md5:./sheets/r2h-M-menus.png
+OK   0ab5addc /workspace/v608build/r2i-stage/sheets/r2h-M-menus.png.sources.txt = MANIFEST.md5:./sheets/r2h-M-menus.png.sources.txt
+OK   662807a2 /workspace/v608build/r2i-stage/sheets/r2h-after.png = MANIFEST.md5:./sheets/r2h-after.png
+OK   6e044cda /workspace/v608build/r2i-stage/sheets/r2h-after.png.sources.txt = MANIFEST.md5:./sheets/r2h-after.png.sources.txt
+OK   6e044cda /workspace/v608build/r2i-stage/sheets/r2h-after.sources.txt = MANIFEST.md5:./sheets/r2h-after.png.sources.txt
+OK   87a05b79 /workspace/v608build/r2i-stage/sheets/r2h-map-extended.md = MANIFEST.md5:./sheets/r2h-map-extended.md
+OK   0aa27de9 /workspace/v608build/r2i-stage/sheets/r2h-map-extended.png = MANIFEST.md5:./sheets/r2h-map-extended.png
+OK   001f8f54 /workspace/v608build/r2i-stage/sheets/r2h-map-extended.png.sources.txt = MANIFEST.md5:./sheets/r2h-map-extended.png.sources.txt
+OK   5eace60f /workspace/v608build/r2i-stage/showcase/INDEX.md = MANIFEST.md5:./showcase/INDEX.md
+OK   4422ff64 /workspace/v608build/r2i-stage/showcase/showcase-1-opening.png = MANIFEST.md5:./showcase/showcase-1-opening.png
+OK   35b6616b /workspace/v608build/r2i-stage/showcase/showcase-1-opening.png.sources.txt = MANIFEST.md5:./showcase/showcase-1-opening.png.sources.txt
+OK   6369fca4 /workspace/v608build/r2i-stage/showcase/showcase-2-zones.png = MANIFEST.md5:./showcase/showcase-2-zones.png
+OK   48528688 /workspace/v608build/r2i-stage/showcase/showcase-2-zones.png.sources.txt = MANIFEST.md5:./showcase/showcase-2-zones.png.sources.txt
+OK   f0f0d10c /workspace/v608build/r2i-stage/showcase/showcase-3-asking.png = MANIFEST.md5:./showcase/showcase-3-asking.png
+OK   b213403f /workspace/v608build/r2i-stage/showcase/showcase-3-asking.png.sources.txt = MANIFEST.md5:./showcase/showcase-3-asking.png.sources.txt
+OK   c62068de /workspace/v608build/r2i-stage/showcase/showcase-4-walk-guardian.png = MANIFEST.md5:./showcase/showcase-4-walk-guardian.png
+OK   778e0d80 /workspace/v608build/r2i-stage/showcase/showcase-4-walk-guardian.png.sources.txt = MANIFEST.md5:./showcase/showcase-4-walk-guardian.png.sources.txt
+OK   4764adcb /workspace/v608build/r2i-stage/showcase/showcase-5-rewards-pause.png = MANIFEST.md5:./showcase/showcase-5-rewards-pause.png
+OK   b2cbc832 /workspace/v608build/r2i-stage/showcase/showcase-5-rewards-pause.png.sources.txt = MANIFEST.md5:./showcase/showcase-5-rewards-pause.png.sources.txt
+OK   1d5671ec /workspace/v608build/r2i-stage/showcase/tiles.txt = MANIFEST.md5:./showcase/tiles.txt
+RESULT CLEAR: 25 files, 0 problems

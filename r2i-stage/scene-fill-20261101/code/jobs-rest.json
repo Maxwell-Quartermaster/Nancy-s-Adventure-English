@@ -1,0 +1,84 @@
+{
+ "pointer_md5": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "paste_md5": "317e91ce86f073c961f8169183d2bbd3",
+ "jobs": [
+  {
+   "tag": "rest-base-320x568",
+   "src": "/workspace/v608build/screens/play_v608.py:rest() + stage_v608.compose",
+   "src_md5": "ee74f3ef184f843aa1734462900eb5fc",
+   "html_md5": "79e9ff82419af0d190ffdce6d5da4615",
+   "w": 320,
+   "h": 568,
+   "loc": "REST",
+   "tod": "base",
+   "fixes": [
+    "rest-base-320x568: brush-stroke walkway removed (16/16S look)",
+    "rest-base-320x568: 3 ground dots -> tufts (t527u)",
+    "rest-base-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)"
+   ],
+   "note": "rest screen at 320 (spec: fixed evening sky) fit 0.821"
+  },
+  {
+   "tag": "rest-sunset-390x844",
+   "src": "/workspace/v608build/scene-fill-20261101/src-snapshot/37-rest-screen-390x844.html",
+   "src_md5": "3c780acd2357bf1b0846b1ffbb039739",
+   "html_md5": "a80638485d0bb04e4547dfbdc62943cb",
+   "w": 390,
+   "h": 844,
+   "loc": "REST",
+   "tod": "sunset",
+   "fixes": [
+    "sky sunset"
+   ],
+   "note": "restSky sunset - CONCEPT palette, spec names only"
+  },
+  {
+   "tag": "rest-sunset-320x568",
+   "src": "/workspace/v608build/screens/play_v608.py:rest() + stage_v608.compose",
+   "src_md5": "ee74f3ef184f843aa1734462900eb5fc",
+   "html_md5": "3ffbc3ae8c14fcd56bba99ad4c801505",
+   "w": 320,
+   "h": 568,
+   "loc": "REST",
+   "tod": "sunset",
+   "fixes": [
+    "rest-sunset-320x568: brush-stroke walkway removed (16/16S look)",
+    "rest-sunset-320x568: 3 ground dots -> tufts (t527u)",
+    "rest-sunset-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)",
+    "sky sunset"
+   ],
+   "note": "restSky sunset - CONCEPT palette, spec names only fit 0.821"
+  },
+  {
+   "tag": "rest-starry-390x844",
+   "src": "/workspace/v608build/scene-fill-20261101/src-snapshot/37-rest-screen-390x844.html",
+   "src_md5": "3c780acd2357bf1b0846b1ffbb039739",
+   "html_md5": "676b865f93f0a0540aa4eefb49b15bfb",
+   "w": 390,
+   "h": 844,
+   "loc": "REST",
+   "tod": "starry",
+   "fixes": [
+    "sky starry"
+   ],
+   "note": "restSky starry - CONCEPT palette, spec names only"
+  },
+  {
+   "tag": "rest-starry-320x568",
+   "src": "/workspace/v608build/screens/play_v608.py:rest() + stage_v608.compose",
+   "src_md5": "ee74f3ef184f843aa1734462900eb5fc",
+   "html_md5": "588051f80c88c32ccbf4dfe4cdd61158",
+   "w": 320,
+   "h": 568,
+   "loc": "REST",
+   "tod": "starry",
+   "fixes": [
+    "rest-starry-320x568: brush-stroke walkway removed (16/16S look)",
+    "rest-starry-320x568: 3 ground dots -> tufts (t527u)",
+    "rest-starry-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)",
+    "sky starry"
+   ],
+   "note": "restSky starry - CONCEPT palette, spec names only fit 0.821"
+  }
+ ]
+}

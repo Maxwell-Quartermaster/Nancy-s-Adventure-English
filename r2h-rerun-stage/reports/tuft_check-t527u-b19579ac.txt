@@ -1,0 +1,35 @@
+tuft_check b19579ac0921056cc8a2bc7f795cc59c | folder /tmp/qmtmp/r2h/gc-tuft
+10-word-meadow-scene-320x568.png  1b630f1a74d39ff477c43ea2cd5298e2  PASS
+10-word-meadow-scene-390x844.png  df0c2776a4e29a89656dc7ec487fdc49  PASS
+11-word-meadow-scene-right-390x844.png  e04e71a97bdb72315a39e3a02c7be16b  PASS
+12-reveal-right-390x844.png  71dee973d95db2f7b4b852032cafe067  PASS
+13-word-meadow-scene-retry-390x844.png  338cf5245ddb87818b2debacb0e8f912  PASS
+15-say-it-sight-words-390x844.png  e45e003628b7492f3dc44ecf3a0cfcd8  PASS
+23-level-up-reward-320x568.png  fb3012a1b132f20366daefc36f8298f1  PASS
+23-level-up-reward-390x844.png  7742f66ca724f977806132d4f64aacec  PASS
+24-guardian-run-entry-320x568.png  fa6b21c2b3ad3b28e0533ca1f0a4a765  PASS
+24-guardian-run-entry-375x667.png  bbde85d4fc8f743ba5b36742756304f5  PASS
+24-guardian-run-entry-390x844.png  9fbe6c7335c629fd8edd4b555ea0d503  PASS
+25-guardian-hint-letters-320x568.png  50af4d399bebcdcb57f924e9e1fa8d2c  PASS
+25-guardian-hint-letters-375x667.png  92e0fe59c38c667f19829a1d727aebe1  PASS
+25-guardian-hint-letters-390x844.png  08e3e97f8eb9fb382fdb04390080738f  PASS
+26-guardian-hint-jesus-words-320x568.png  9672cc3d9f8f4df826f8b6aa1ac91db5  BLOCK | bare grass: no tufts in band x0-640 y464-1136 (84736 px grass, s 1.64)
+26-guardian-hint-jesus-words-375x667.png  6a43ef49fd050ef69d4e3091d5ac16d2  PASS
+26-guardian-hint-jesus-words-390x844.png  f4ae9dc7bc9a37f32aa77304a48b6460  PASS
+27-guardian-kneels-320x568.png  e632cd0d6de7b160602335e2322e3de2  PASS
+27-guardian-kneels-375x667.png  63b354b9365d913b32b2a2f18eaf4094  PASS
+27-guardian-kneels-390x844.png  25cd45317f208a169f02e352376498ce  PASS
+28-guardian-win-320x568.png  4dc85e7d38bb95ce8d909929aad97e6d  PASS
+28-guardian-win-375x667.png  bd04fc4ddfa8111afca257d4414e8383  PASS
+28-guardian-win-390x844.png  f2549435e5dca2c4fb56e84b0b6ab770  PASS
+29-verse-scroll-gift-390x844.png  c8536836052b9d7054c69694e735e409  PASS
+30-new-weapon-gift-390x844.png  ac9b71a5d81dfa61f8e72fe4a23a33c9  PASS
+37-rest-screen-390x844.png  8c6c12e3229734dc180bb052e647fc77  PASS
+44-scroll-reopened-390x844.png  1406cb8b65368fc657a4ae5644bf3379  PASS
+48-continue-after-pause-390x844.png  c99a9d61f7dbabd2653dc08f65548814  PASS
+zone-meadow-ask-320x568-skyB.png  1b630f1a74d39ff477c43ea2cd5298e2  PASS
+zone-meadow-ask-320x568.png  1b630f1a74d39ff477c43ea2cd5298e2  PASS
+zone-meadow-ask-375x812-skyB.png  bb241fd9488024fa14d02b701de80bd7  PASS
+zone-meadow-ask-390x844-skyB.png  df0c2776a4e29a89656dc7ec487fdc49  PASS
+summary: 32 images, 1 BLOCK, 31 PASS
+exit 2

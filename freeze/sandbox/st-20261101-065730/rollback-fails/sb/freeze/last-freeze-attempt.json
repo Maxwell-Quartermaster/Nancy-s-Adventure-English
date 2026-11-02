@@ -1,0 +1,24 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": false,
+ "sandbox": true,
+ "started": "2026-11-01 00:58 MDT",
+ "steps": {
+  "1": "pointer f6dac2d0e7b391436a160eab1bbf17fe snap-r2h-0021MDT OK; old PASTE 317e91ce on disk; new PASTE 317e91ce 188,116 chars, bank 84; disk 23.0%",
+  "2": "verses nancys-adventure-english-v6-08-daily-verses.json = nancys-adventure-english-v6-07-daily-verses.json except version; \"if due\" present; no 911/Call Max/Show the Nurse; no phone/email/street; thai-diff exit 0 (no Thai change)",
+  "3": "checks_v608 SKIPPED (sandbox test flag); trim-clip DOM check 1 html, 0 clipped; send_guard CLEAR on 2 sheets/showcase files; fit_sheet_check: no fit sheet in stage",
+  "4": "/workspace/v608build/freeze/sandbox/st-20261101-065730/rollback-fails/sb/snap-st-0100MDT (7 files, MANIFEST f3c4acc4, renders-MANIFEST 3e4e322c 4 lines), every md5 re-verified, read-only",
+  "5": "backup /workspace/v608build/freeze/sandbox/st-20261101-065730/rollback-fails/sb/CURRENT-SNAP.txt.pre-snap-st-0100MDT (f6dac2d0); new pointer c81f019291e3725d6e0c3ea5b8bc6f78 written atomically and re-read"
+ },
+ "thai_diff": {
+  "exit": 0,
+  "lines": 3,
+  "head": [
+   "thai_diff.py 41de37a5b68643d6a7df6e12a0c1f23a | MANIFEST none | base 317e91ce86f073c961f8169183d2bbd3 | new 317e91ce86f073c961f8169183d2bbd3"
+  ],
+  "file": "/workspace/v608build/freeze/sandbox/st-20261101-065730/rollback-fails/sb/freeze/work/thai-diff-snap-st-0100MDT.txt"
+ },
+ "result": "FAIL",
+ "reason": "REASON: step 6 current_snap: /workspace/v608build/freeze/sandbox/st-20261101-065730/rollback-fails/sb/CURRENT-SNAP.txt: current_snap self-check failed on the new pointer: current_snap c81f019291e3725d6e0c3ea5b8bc6f78 snap-st-0100MDT problems: ['renders-MANIFEST 3e4e322c != pointer 00000000']",
+ "pointer": "POINTER MOVED to c81f019291e3725d6e0c3ea5b8bc6f78; NOT ROLLED BACK (planted: rollback write refused). Restore by hand: cp /workspace/v608build/freeze/sandbox/st-20261101-065730/rollback-fails/sb/CURRENT-SNAP.txt.pre-snap-st-0100MDT /workspace/v608build/freeze/sandbox/st-20261101-065730/rollback-fails/sb/CURRENT-SNAP.txt (expect md5 f6dac2d0e7b391436a160eab1bbf17fe)."
+}

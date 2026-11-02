@@ -1,0 +1,36 @@
+--- a/council-tools/send-guard/send_guard.py
++++ b/council-tools/send-guard/send_guard.py
+@@ -162,6 +162,13 @@
+     ap.add_argument('--no-ground', action='store_true', help='skip the ground-check pixel pass (old path stroke, floating trees); sends to Maxwell must not use this')
+     ap.add_argument('files', nargs='*')
+     a = ap.parse_args()
++    # QM freeze HOLD (Maxwell t511u): no sends while a freeze is running or failed. freeze.py's own calls set NAE_FREEZE_RUNNING=1.
++    if not a.selftest and os.environ.get('NAE_FREEZE_RUNNING') != '1':
++        sys.path.insert(0, '/workspace/v608build/freeze')
++        try:
++            import hold_check; _h = hold_check.check()
++        except Exception as e: _h = f'hold_check could not run: {e}'
++        if _h: stamp('HOLD'); print(f'BLOCK {_h}'); sys.exit(1)
+     if a.selftest: stamp('selftest'); sys.exit(selftest())
+     if not a.snap:
+         sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+--- a/council-tools/current_snap.py
++++ b/council-tools/current_snap.py
+@@ -7,7 +7,17 @@
+     with open(p, 'rb') as f:
+         for b in iter(lambda: f.read(1 << 20), b''): h.update(b)
+     return h.hexdigest()
++class HoldError(RuntimeError): pass
++def hold(path=POINTER):
++    """QM freeze HOLD (Maxwell t511u): reason string if <pointer dir>/freeze/HOLD exists, else None."""
++    h = os.path.join(os.path.dirname(os.path.abspath(path)), 'freeze', 'HOLD')
++    if not os.path.exists(h): return None
++    r = h + '.reason'
++    return open(r, encoding='utf-8').read().strip().splitlines()[0] if os.path.isfile(r) else 'freeze in progress (see freeze/HOLD)'
+ def read(path=POINTER):
++    # Tools refuse to read the pointer while QM's HOLD is in place; freeze.py itself sets NAE_FREEZE_RUNNING=1.
++    _h = None if os.environ.get('NAE_FREEZE_RUNNING') == '1' else hold(path)
++    if _h: raise HoldError(f'QM HOLD in place: {_h}; stop work until QM posts RESUME')
+     d = {}
+     for line in open(path, encoding='utf-8'):
+         if '=' in line:

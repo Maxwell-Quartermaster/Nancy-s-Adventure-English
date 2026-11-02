@@ -1,0 +1,143 @@
+--- a/council-tools/fit-table/fit_sheet_check.py
++++ b/council-tools/fit-table/fit_sheet_check.py
+@@ -1,22 +1,120 @@
+-"""fit_sheet_check.py - Owner: Chancellor. Refuses a fit/cost sheet unless it names the
+-CURRENT pointer's paste_1b md5 (first 8 chars) and that file is on disk at that md5.
+-Usage: python3 fit_sheet_check.py SHEET.md [...]   exit 0 = CURRENT, 1 = STALE, 2 = pointer error."""
+-import sys,os,hashlib
++"""fit_sheet_check.py (v2 proposal) - Owner: Chancellor. Checks that a fit/cost sheet was written on the
++build the CURRENT pointer names. The sheet must carry exactly one md5 in a line
++    PASTE for this sheet: <32-hex md5>
++A bare mention of an md5 anywhere else (header, chain notes, prose) never counts (false-CURRENT fix).
++
++Usage:
++    python3 fit_sheet_check.py [--pointer PATH] SHEET.md [...]
++    python3 fit_sheet_check.py [--pointer PATH] --candidate PASTE_PATH SHEET.md [...]
++    python3 fit_sheet_check.py --selftest
++--pointer defaults to the live /workspace/v608build/CURRENT-SNAP.txt (current_snap.POINTER).
++--candidate hashes the file at PASTE_PATH (a staged candidate the pointer does not name yet) and
++compares the sheet's PASTE line to that md5 instead of the pointer's paste_1b.
++
++Exit codes (only 0 is clean):
++    0  CURRENT    PASTE line equals the live pointer's paste_1b md5 (and that file is on disk at it). Clean.
++    1  STALE      no PASTE line, several different PASTE lines, or the md5 does not match
++                  (the pointer's paste_1b, or the --candidate file's md5).
++    2  ERROR      sheet path missing or unreadable; pointer missing or malformed; pointer's MANIFEST or
++                  paste_1b file disagrees with disk; --candidate path missing or unreadable; bad usage.
++    3  CANDIDATE  PASTE line equals the --candidate file's md5. NOT valid for a send; never treat as clean.
++With several sheets the worst result wins (2 over 1 over 3 over 0)."""
++import sys,os,re,hashlib
+ HERE=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,os.path.dirname(HERE))
+ import current_snap as cs
+-def md(p): return hashlib.md5(open(p,'rb').read()).hexdigest()
+-try:
+-    ptr=cs.read(); probs=cs.verify(ptr)
+-except Exception as e: print(f"POINTER ERROR: {e}"); sys.exit(2)
+-if probs: print("POINTER ERROR: "+"; ".join(probs)); sys.exit(2)
+-want=ptr.get("paste_1b_md5","")[:8]
+-path=os.path.join(os.path.dirname(ptr["snap_dir"].rstrip("/")),ptr.get("paste_1b_path","").split()[0]) if ptr.get("paste_1b_path") else ""
+-if not want or not os.path.exists(path) or md(path)[:8]!=want: print(f"POINTER ERROR: paste_1b {want} missing or md5 mismatch at {path}"); sys.exit(2)
+-print(f"fit_sheet_check {md(__file__)[:8]} pointer {ptr['pointer_md5'][:8]} snap {ptr['snap']} paste_1b {want}")
+-bad=0
+-for s in sys.argv[1:]:
+-    t=open(s,encoding='utf-8').read()
+-    ok=want in t
+-    print(f"{'CURRENT' if ok else 'STALE  '} {s} ({md(s)[:8]})" + ("" if ok else f": does not name paste_1b {want}"))
+-    bad|=not ok
+-sys.exit(1 if bad else 0)
++LINE=re.compile(r'^PASTE for this sheet: ([0-9a-f]{32})\s*$',re.M)
++RANK={0:0,3:1,1:2,2:3}
++def md(p):
++    h=hashlib.md5()
++    with open(p,'rb') as f:
++        for b in iter(lambda:f.read(1<<20),b''): h.update(b)
++    return h.hexdigest()
++def same(a,b): n=min(len(a),len(b)); return n>=8 and a[:n].lower()==b[:n].lower()
++def judge(text,want,cand=None):
++    """-> (exit, label, reason). want = pointer paste_1b md5; cand = --candidate file md5 or None."""
++    m=LINE.findall(text)
++    if not m: return 1,'STALE','no PASTE line'
++    if len(set(m))>1: return 1,'STALE','several different PASTE lines: '+', '.join(sorted(set(m)))
++    got=m[0]
++    if cand is not None:
++        if got==cand: return 3,'CANDIDATE (NOT valid for a send)',f'PASTE {got[:8]} = --candidate file md5 {cand[:8]}'
++        return 1,'STALE',f'mismatch: sheet PASTE {got[:8]} vs --candidate file md5 {cand[:8]}'
++    if same(got,want): return 0,'CURRENT',f'PASTE {got[:8]} = pointer paste_1b {want[:8]}'
++    return 1,'STALE',f'mismatch: sheet PASTE {got[:8]} vs pointer paste_1b {want[:8]}'
++def load_pointer(path):
++    """-> (ptr, want) or raises ValueError with a clear message."""
++    if not os.path.isfile(path): raise ValueError(f'pointer {path} missing')
++    try: ptr=cs.read(path)
++    except Exception as e: raise ValueError(f'pointer {path} malformed: {e}')
++    want=ptr.get('paste_1b_md5','')
++    if not re.fullmatch(r'[0-9a-f]{8,32}',want): raise ValueError(f'pointer {path} malformed: paste_1b_md5 {want!r}')
++    probs=cs.verify(ptr)
++    if probs: raise ValueError('pointer disagrees with disk: '+'; '.join(probs))
++    pp=ptr.get('paste_1b_path','').split()
++    path1b=os.path.join(os.path.dirname(ptr['snap_dir'].rstrip('/')),pp[0]) if pp else ''
++    if not path1b or not os.path.isfile(path1b): raise ValueError(f'pointer paste_1b file missing: {path1b or "(no paste_1b_path)"}')
++    if not same(md(path1b),want): raise ValueError(f'pointer paste_1b {want[:8]} != disk {md(path1b)[:8]} at {path1b}')
++    return ptr,want
++def run(argv,out=print):
++    a=list(argv); pointer=cs.POINTER; cand_path=None
++    try:
++        for opt in ('--pointer','--candidate'):
++            if opt in a:
++                i=a.index(opt)
++                if i+1>=len(a): out(f'ERROR usage: {opt} needs a path'); return 2
++                v=a[i+1]; del a[i:i+2]
++                if opt=='--pointer': pointer=v
++                else: cand_path=v
++        if not a: out('ERROR usage: fit_sheet_check.py [--pointer PATH] [--candidate PASTE] SHEET.md [...] | --selftest'); return 2
++        try: ptr,want=load_pointer(pointer)
++        except ValueError as e: out(f'ERROR {e}'); return 2
++        cand=None
++        if cand_path is not None:
++            try: cand=md(cand_path)
++            except OSError as e: out(f'ERROR --candidate {cand_path} missing or unreadable: {e.strerror}'); return 2
++        out(f"fit_sheet_check {md(os.path.abspath(__file__))[:8]} pointer {ptr['pointer_md5'][:8]} snap {ptr['snap']} paste_1b {want[:8]}"+(f" candidate {cand[:8]}" if cand else ''))
++        worst=0
++        for s in a:
++            try: text=open(s,encoding='utf-8').read()
++            except (OSError,UnicodeDecodeError) as e: out(f'ERROR   {s}: sheet missing or unreadable ({e.__class__.__name__})'); rc=2
++            else:
++                rc,lab,why=judge(text,want,cand); out(f'{lab} {s} ({md(s)[:8]}): {why}')
++            if RANK[rc]>RANK[worst]: worst=rc
++        return worst
++    except Exception as e:
++        out(f'ERROR unexpected {e.__class__.__name__}: {e}'); return 2
++def selftest():
++    import tempfile
++    try: _,want=load_pointer(cs.POINTER)
++    except ValueError as e: print(f'SELFTEST ERROR live pointer: {e}'); return 2
++    if len(want)!=32: print('SELFTEST ERROR pointer paste_1b md5 is not a full 32-hex value'); return 2
++    with tempfile.TemporaryDirectory(prefix='fsc-selftest-') as T:
++        def w(name,txt):
++            p=os.path.join(T,name); open(p,'w',encoding='utf-8').write(txt); return p
++        other='0123456789abcdef0123456789abcdef'; dead='deadbeefdeadbeefdeadbeefdeadbeef'
++        cand_file=w('candidate-PASTE.md','temp candidate paste\n'); cm=md(cand_file)
++        s_ok=w('ok.md',f'# sheet\nPASTE for this sheet: {want}\n')
++        s_other=w('other.md',f'# sheet\nPASTE for this sheet: {other}\n')
++        s_none=w('none.md','# sheet\nno line\n')
++        s_prose=w('prose.md',f'# sheet\nBased on: pointer, PASTE {want}\nThe chain started from {want}.\n')
++        s_cand=w('cand.md',f'# sheet\nPASTE for this sheet: {cm}\n')
++        s_dead=w('dead.md',f'# sheet\nPASTE for this sheet: {dead}\n')
++        bad_ptr=w('CURRENT-SNAP.txt','snap=nothing\nthis pointer is malformed\n')
++        cases=[('PASTE line matches the pointer',[s_ok],0),
++               ('PASTE line set to a different md5',[s_other],1),
++               ('no PASTE line',[s_none],1),
++               ('pointer md5 only in prose (false-CURRENT regression)',[s_prose],1),
++               ('--candidate real temp file, md5 matches sheet',['--candidate',cand_file,s_cand],3),
++               ('--candidate, sheet stamped deadbeef, file does not hash to it',['--candidate',cand_file,s_dead],1),
++               ('--candidate on a missing path',['--candidate',os.path.join(T,'missing.md'),s_cand],2),
++               ('missing sheet path',[os.path.join(T,'no-such-sheet.md')],2),
++               ('malformed pointer via --pointer (temp)',['--pointer',bad_ptr,s_ok],2)]
++        bad=0
++        for name,args,exp in cases:
++            lines=[]; rc=run(args,out=lines.append); ok=rc==exp; bad|=not ok
++            print(f"{'PASS' if ok else 'FAIL'} {name}: exit {rc} (want {exp}) | {lines[-1]}")
++    print(f'temp dir removed: {not os.path.exists(T)}')
++    print('SELFTEST '+('PASS' if not bad else 'FAIL')); return 0 if not bad else 1
++if __name__=='__main__':
++    if sys.argv[1:]==['--selftest']: sys.exit(selftest())
++    sys.exit(run(sys.argv[1:]))

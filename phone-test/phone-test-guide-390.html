@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+body{margin:0;width:390px;background:#F4ECD8;font:16px/1.45 'DejaVu Sans',sans-serif;color:#3A2410}
+h1{font:400 28px/1.15 'Lilita One',sans-serif;margin:18px 16px 4px} .sub{margin:0 16px 12px;font-size:14px}
+.card{margin:12px 16px;background:#F6E9C8;border:2px solid #10170F;border-radius:14px;box-shadow:inset 0 0 0 3px #E8B84A,0 4px 0 #10170F;padding:14px}
+.st{font:400 21px/1.2 'Lilita One',sans-serif;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:#FFCC33;border:2px solid #10170F;display:inline-flex;align-items:center;justify-content:center;font:400 18px 'Lilita One',sans-serif}
+.file{display:flex;gap:10px;align-items:flex-start;margin:8px 0} .fn{font-weight:bold;font-size:14px;word-break:break-all} .sm{font-size:13px;color:#5A4A3A}
+
+.md5{font:12px/1.4 'DejaVu Sans Mono',monospace;color:#3A2410;word-break:break-all} .ok{color:#2F7D3A;font-weight:bold} .stop{color:#7A1E12;font-weight:bold}
+figure{margin:10px 0 0;text-align:center} img{width:230px;border:2px solid #10170F;border-radius:10px} figcaption{font-size:13px;margin-top:4px}
+.note{margin:12px 16px 20px;font-size:12px;color:#5A4A3A} ul{margin:6px 0 0 0;padding-left:20px} li{margin:4px 0}
+</style></head><body>
+<h1>Phone test: v6-08 in Build</h1>
+<div class='sub'>Three files, three messages, in this order. Oct 31, 2026.</div>
+<div class='card'><div class='st'>Before you start</div><ul><li>Use a <b>new, empty</b> Build project. Never Nancy's real one.</li><li><b>The current version stays v5-37 until this test passes.</b></li><li>Have these three files on your phone:</li></ul><div class='file'><div class='num'>1</div><div><div class='fn'>nancys-adventure-english-v6-08-PASTE.md</div><div class='sm'>the game · 187,208 characters</div><div class='md5'>md5 95a4d0fce48affdf1541cb862e6d56e5</div></div></div><div class='file'><div class='num'>2</div><div><div class='fn'>nancys-adventure-english-v6-08-daily-verses.json</div><div class='sm'>the daily verses · 23,133 characters</div><div class='md5'>md5 81295c9fa657c5ff1652204b88c23665</div></div></div><div class='file'><div class='num'>3</div><div><div class='fn'>nancys-adventure-english-v6-08-title.svg</div><div class='sm'>the title picture · 19,057 characters</div><div class='md5'>md5 bab91ec9df422160507fcf777aba3ef0</div></div></div></div>
+<div class='card'><div class='st'><span class='num'>1</span>Send file 1: the game</div><ul><li>Open a new message in Build.</li><li>Open file 1, copy <b>all</b> of its text, and paste it in.</li><li>Send, then <b>wait for Build's reply</b> before doing anything else.</li></ul></div>
+<div class='card'><div class='st'><span class='num'>2</span>Send file 2: the verses</div><ul><li>New message. Copy <b>all</b> of file 2 and paste it in.</li><li>Send and wait for the reply.</li></ul></div>
+<div class='card'><div class='st'><span class='num'>3</span>Send file 3: the title picture</div><ul><li>New message. Copy <b>all</b> of file 3 and paste it in.</li><li>Send and wait until Build says it is done.</li></ul></div>
+<div class='card'><div class='st'><span class='num'>4</span>What success looks like</div><ul><li class='ok'>Each send goes through with no error and no 'too long' message.</li><li class='ok'>Build reports PASS for each of the four build stages.</li><li class='ok'>The app opens on the mountain title with 'Start your day' (the sky follows the clock).</li></ul><figure><img src='01-title.png'><figcaption>Title screen</figcaption></figure><figure><img src='02-main-menu-verse-popup.png'><figcaption>Menu: verse of the day, English and Thai</figcaption></figure><figure><img src='05-map-day1.png'><figcaption>Adventure Map</figcaption></figure></div>
+<div class='card'><div class='st'><span class='num'>5</span>If something looks wrong</div><ul><li class='stop'>An error on send, a 'too long' reply, or Build saying it shortened or summarized a file.</li><li class='stop'>A different title picture, missing Thai, or a verse that is cut off.</li><li>Stop there. Take a screenshot and send it with the step number. Don't paste again into the same project.</li></ul></div>
+<div class='note'>Pictures are the v6-08 design renders; Build's drawing will differ in detail. Build's own menus and buttons aren't documented on this computer, so these steps describe what to send, not which buttons to press.</div>
+</body></html>

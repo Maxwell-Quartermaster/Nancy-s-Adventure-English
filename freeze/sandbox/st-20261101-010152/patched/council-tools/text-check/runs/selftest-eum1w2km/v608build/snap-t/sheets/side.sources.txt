@@ -1,0 +1,2 @@
+6f4464793061a7dcdf3a81ffabd6c8db  /workspace/council-tools/text-check/runs/selftest-eum1w2km/v608build/snap-t/showcase/clean.png
+00000000000000000000000000000000  /workspace/council-tools/text-check/runs/selftest-eum1w2km/v608build/snap-t/showcase/retired.png

@@ -1,0 +1,6547 @@
+{
+ "version": "v5-14",
+ "rewardText": {
+  "en": "You earned this!",
+  "th": "เก่งมาก! รางวัลนี้เป็นของคุณ"
+ },
+ "wrongText": {
+  "en": "Now you know it",
+  "th": "ตอนนี้รู้แล้วนะ"
+ },
+ "welcomeBack": {
+  "en": "Welcome back! Your streak waited for you.",
+  "th": "ยินดีต้อนรับกลับ! วันเรียนของคุณยังอยู่ครบ"
+ },
+ "restScreen": {
+  "en": "Great work, come back tomorrow.",
+  "th": "เก่งมาก พรุ่งนี้มาเล่นต่อนะ"
+ },
+ "needsMaxwell": [
+  "ms-04",
+  "ms-05",
+  "ms-06",
+  "bh-30",
+  "ms-28",
+  "ms-29",
+  "ms-30"
+ ],
+ "zones": [
+  {
+   "key": "phonics",
+   "name": "Phonics",
+   "nameTh": "เสียงพื้นฐาน",
+   "order": 1,
+   "prefix": "ph-",
+   "path": "left",
+   "startZone": true,
+   "boss": {
+    "appearsAtLevel": 4,
+    "cards": [
+     "ph-15",
+     "ph-16",
+     "ph-17",
+     "ph-18",
+     "ph-19",
+     "ph-20",
+     "ph-21",
+     "ph-22",
+     "ph-23",
+     "ph-24"
+    ],
+    "clip": "audio/maxwell-boss-phonics.m4a",
+    "scroll": {
+     "ref": "Genesis 1:1",
+     "th": "[PASTE-TSV: Genesis 1:1]",
+     "askMax": true
+    }
+   },
+   "cardIds": [
+    "ph-01",
+    "ph-02",
+    "ph-03",
+    "ph-04",
+    "ph-05",
+    "ph-06",
+    "ph-07",
+    "ph-08",
+    "ph-09",
+    "ph-10",
+    "ph-11",
+    "ph-12",
+    "ph-13",
+    "ph-14",
+    "ph-15",
+    "ph-16",
+    "ph-17",
+    "ph-18",
+    "ph-19",
+    "ph-20",
+    "ph-21",
+    "ph-22",
+    "ph-23",
+    "ph-24"
+   ],
+   "openLevel": 1,
+   "zoneClip": "audio/maxwell-phonics.m4a"
+  },
+  {
+   "key": "colors-shapes",
+   "name": "Colors and Shapes",
+   "nameTh": "สีและรูปทรง",
+   "order": 2,
+   "prefix": "cs-",
+   "path": "left",
+   "boss": {
+    "appearsAtLevel": 9,
+    "cards": [
+     "cs-15",
+     "cs-16",
+     "cs-17",
+     "cs-18",
+     "cs-19",
+     "cs-20",
+     "cs-21",
+     "cs-22",
+     "cs-23",
+     "cs-24"
+    ],
+    "clip": "audio/maxwell-boss-colors-shapes.m4a",
+    "scroll": {
+     "ref": "Genesis 9:13",
+     "th": "[PASTE-TSV: Genesis 9:13]",
+     "askMax": true
+    }
+   },
+   "cardIds": [
+    "cs-01",
+    "cs-02",
+    "cs-03",
+    "cs-04",
+    "cs-05",
+    "cs-06",
+    "cs-07",
+    "cs-08",
+    "cs-09",
+    "cs-10",
+    "cs-11",
+    "cs-12",
+    "cs-13",
+    "cs-14",
+    "cs-15",
+    "cs-16",
+    "cs-17",
+    "cs-18",
+    "cs-19",
+    "cs-20",
+    "cs-21",
+    "cs-22",
+    "cs-23",
+    "cs-24"
+   ],
+   "openLevel": 6,
+   "zoneClip": "audio/maxwell-colors-shapes.m4a"
+  },
+  {
+   "key": "numbers",
+   "name": "Numbers",
+   "nameTh": "ตัวเลข",
+   "order": 3,
+   "prefix": "nm-",
+   "path": "left",
+   "boss": {
+    "appearsAtLevel": 13,
+    "cards": [
+     "nm-15",
+     "nm-16",
+     "nm-17",
+     "nm-18",
+     "nm-19",
+     "nm-20",
+     "nm-21",
+     "nm-22",
+     "nm-23",
+     "nm-24"
+    ],
+    "clip": "audio/maxwell-boss-numbers.m4a",
+    "scroll": {
+     "ref": "John 6:9",
+     "th": "[PASTE-TSV: John 6:9]",
+     "askMax": true
+    }
+   },
+   "cardIds": [
+    "nm-01",
+    "nm-02",
+    "nm-03",
+    "nm-04",
+    "nm-05",
+    "nm-06",
+    "nm-07",
+    "nm-08",
+    "nm-09",
+    "nm-10",
+    "nm-11",
+    "nm-12",
+    "nm-13",
+    "nm-14",
+    "nm-15",
+    "nm-16",
+    "nm-17",
+    "nm-18",
+    "nm-19",
+    "nm-20",
+    "nm-21",
+    "nm-22",
+    "nm-23",
+    "nm-24"
+   ],
+   "openLevel": 8,
+   "zoneClip": "audio/maxwell-numbers.m4a"
+  },
+  {
+   "key": "sight-words",
+   "name": "Sight Words",
+   "nameTh": "คำพื้นฐาน",
+   "order": 4,
+   "prefix": "sw-",
+   "path": "left",
+   "boss": {
+    "appearsAtLevel": 16,
+    "cards": [
+     "sw-15",
+     "sw-16",
+     "sw-17",
+     "sw-18",
+     "sw-19",
+     "sw-20",
+     "sw-21",
+     "sw-22",
+     "sw-23",
+     "sw-24"
+    ],
+    "clip": "audio/maxwell-boss-sight-words.m4a",
+    "scroll": {
+     "ref": "1 Samuel 17:45",
+     "th": "[PASTE-TSV: 1 Samuel 17:45]",
+     "askMax": true
+    }
+   },
+   "cardIds": [
+    "sw-01",
+    "sw-02",
+    "sw-03",
+    "sw-04",
+    "sw-05",
+    "sw-06",
+    "sw-07",
+    "sw-08",
+    "sw-09",
+    "sw-10",
+    "sw-11",
+    "sw-12",
+    "sw-13",
+    "sw-14",
+    "sw-15",
+    "sw-16",
+    "sw-17",
+    "sw-18",
+    "sw-19",
+    "sw-20",
+    "sw-21",
+    "sw-22",
+    "sw-23",
+    "sw-24"
+   ],
+   "openLevel": 10,
+   "zoneClip": "audio/maxwell-sight-words.m4a"
+  },
+  {
+   "key": "baby-hospital",
+   "name": "Baby and Hospital",
+   "nameTh": "ลูกและโรงพยาบาล",
+   "order": 5,
+   "prefix": "bh-",
+   "path": "right",
+   "boss": {
+    "appearsAtLevel": 7,
+    "cards": [
+     "bh-12",
+     "bh-16",
+     "bh-18",
+     "bh-19",
+     "bh-21",
+     "bh-22",
+     "bh-24",
+     "bh-26",
+     "bh-27",
+     "bh-28"
+    ],
+    "clip": "audio/maxwell-boss-baby-hospital.m4a",
+    "scroll": {
+     "ref": "Isaiah 40:11",
+     "th": "[PASTE-TSV: Isaiah 40:11]",
+     "askMax": true
+    }
+   },
+   "cardIds": [
+    "bh-01",
+    "bh-02",
+    "bh-03",
+    "bh-04",
+    "bh-05",
+    "bh-06",
+    "bh-07",
+    "bh-08",
+    "bh-09",
+    "bh-10",
+    "bh-11",
+    "bh-12",
+    "bh-13",
+    "bh-14",
+    "bh-15",
+    "bh-16",
+    "bh-17",
+    "bh-18",
+    "bh-19",
+    "bh-20",
+    "bh-21",
+    "bh-22",
+    "bh-23",
+    "bh-24",
+    "bh-25",
+    "bh-26",
+    "bh-27",
+    "bh-28",
+    "bh-29",
+    "bh-30"
+   ],
+   "openLevel": 1,
+   "zoneClip": "audio/maxwell-baby-hospital.m4a"
+  },
+  {
+   "key": "maxwell-says",
+   "name": "Maxwell Says",
+   "nameTh": "แม็กซ์เวลล์พูดว่า",
+   "order": 6,
+   "prefix": "ms-",
+   "path": "right",
+   "boss": null,
+   "cardIds": [
+    "ms-01",
+    "ms-02",
+    "ms-03",
+    "ms-04",
+    "ms-05",
+    "ms-06",
+    "ms-07",
+    "ms-08",
+    "ms-09",
+    "ms-10",
+    "ms-11",
+    "ms-12",
+    "ms-13",
+    "ms-14",
+    "ms-15",
+    "ms-16",
+    "ms-17",
+    "ms-18",
+    "ms-19",
+    "ms-20",
+    "ms-21",
+    "ms-22",
+    "ms-23",
+    "ms-24",
+    "ms-25",
+    "ms-26",
+    "ms-27",
+    "ms-28",
+    "ms-29",
+    "ms-30"
+   ],
+   "openLevel": 1,
+   "zoneClip": "audio/maxwell-maxwell-says.m4a"
+  }
+ ],
+ "soundDuel": {
+  "pairs": [
+   {
+    "a": "light",
+    "b": "right",
+    "trap": "R/L"
+   },
+   {
+    "a": "rock",
+    "b": "lock",
+    "trap": "R/L"
+   },
+   {
+    "a": "road",
+    "b": "load",
+    "trap": "R/L"
+   },
+   {
+    "a": "rain",
+    "b": "lane",
+    "trap": "R/L"
+   },
+   {
+    "a": "glass",
+    "b": "grass",
+    "trap": "R/L"
+   },
+   {
+    "a": "long",
+    "b": "wrong",
+    "trap": "R/L"
+   },
+   {
+    "a": "three",
+    "b": "tree",
+    "trap": "TH/T"
+   },
+   {
+    "a": "bath",
+    "b": "bat",
+    "trap": "TH/T"
+   },
+   {
+    "a": "they",
+    "b": "day",
+    "trap": "TH/D"
+   },
+   {
+    "a": "mouth",
+    "b": "mouse",
+    "trap": "TH/S"
+   },
+   {
+    "a": "vest",
+    "b": "west",
+    "trap": "V/W"
+   },
+   {
+    "a": "very",
+    "b": "berry",
+    "trap": "V/B"
+   },
+   {
+    "a": "shop",
+    "b": "chop",
+    "trap": "SH/CH"
+   },
+   {
+    "a": "wash",
+    "b": "watch",
+    "trap": "SH/CH"
+   },
+   {
+    "a": "she",
+    "b": "see",
+    "trap": "SH/S"
+   },
+   {
+    "a": "ship",
+    "b": "sheep",
+    "trap": "short/long vowel"
+   },
+   {
+    "a": "sleep",
+    "b": "slip",
+    "trap": "short/long vowel"
+   },
+   {
+    "a": "it",
+    "b": "eat",
+    "trap": "short/long vowel"
+   },
+   {
+    "a": "thirteen",
+    "b": "thirty",
+    "trap": "-teen/-ty"
+   },
+   {
+    "a": "fifteen",
+    "b": "fifty",
+    "trap": "-teen/-ty"
+   },
+   {
+    "a": "seventeen",
+    "b": "seventy",
+    "trap": "-teen/-ty"
+   },
+   {
+    "a": "card",
+    "b": "car",
+    "trap": "dropped ending"
+   },
+   {
+    "a": "bread",
+    "b": "bed",
+    "trap": "dropped blend"
+   },
+   {
+    "a": "cold",
+    "b": "coal",
+    "trap": "dropped ending"
+   }
+  ]
+ },
+ "cards": [
+  {
+   "id": "ph-01",
+   "zone": "phonics",
+   "en": "crib",
+   "th": "เปลเด็ก",
+   "respell": "KRIB",
+   "choices": [
+    {
+     "en": "rib"
+    },
+    {
+     "en": "crib"
+    },
+    {
+     "en": "toy"
+    },
+    {
+     "en": "blanket"
+    }
+   ],
+   "answer": "crib",
+   "trap": "rib",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · rib = ซี่โครง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:crib",
+   "hint": {
+    "letters": "c___",
+    "sound": "c",
+    "word": "crib"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-02",
+   "zone": "phonics",
+   "en": "sleep",
+   "th": "นอนหลับ",
+   "respell": "SLEEP",
+   "choices": [
+    {
+     "en": "sleep"
+    },
+    {
+     "en": "cry"
+    },
+    {
+     "en": "slip"
+    },
+    {
+     "en": "eat"
+    }
+   ],
+   "answer": "sleep",
+   "trap": "slip",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · slip = ลื่น · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "😴",
+   "hint": {
+    "letters": "s____",
+    "sound": "s",
+    "word": "sleep"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-03",
+   "zone": "phonics",
+   "en": "bed",
+   "th": "เตียง",
+   "respell": "BED",
+   "choices": [
+    {
+     "en": "desk"
+    },
+    {
+     "en": "bad"
+    },
+    {
+     "en": "lamp"
+    },
+    {
+     "en": "bed"
+    }
+   ],
+   "answer": "bed",
+   "trap": "bad",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bad = ไม่ดี · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🛏️",
+   "hint": {
+    "letters": "b__",
+    "sound": "b",
+    "word": "bed"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-04",
+   "zone": "phonics",
+   "en": "desk",
+   "th": "เคาน์เตอร์ / โต๊ะ",
+   "respell": "DESK",
+   "choices": [
+    {
+     "en": "desk"
+    },
+    {
+     "en": "disk"
+    },
+    {
+     "en": "door"
+    },
+    {
+     "en": "bell"
+    }
+   ],
+   "answer": "desk",
+   "trap": "disk",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · disk = แผ่นดิสก์ · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:front-desk",
+   "hint": {
+    "letters": "d___",
+    "sound": "d",
+    "word": "desk"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-05",
+   "zone": "phonics",
+   "en": "towel",
+   "th": "ผ้าเช็ดตัว",
+   "respell": "TOW-ul",
+   "choices": [
+    {
+     "en": "pillow"
+    },
+    {
+     "en": "soap"
+    },
+    {
+     "en": "towel"
+    },
+    {
+     "en": "tower"
+    }
+   ],
+   "answer": "towel",
+   "trap": "tower",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tower = หอคอย · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:towel",
+   "hint": {
+    "letters": "t____",
+    "sound": "t",
+    "word": "towel"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-06",
+   "zone": "phonics",
+   "en": "wife",
+   "th": "ภรรยา",
+   "respell": "WAIF",
+   "choices": [
+    {
+     "en": "wife"
+    },
+    {
+     "en": "friend"
+    },
+    {
+     "en": "wipe"
+    },
+    {
+     "en": "sister"
+    }
+   ],
+   "answer": "wife",
+   "trap": "wipe",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · wipe = เช็ด · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👰‍♀️",
+   "hint": {
+    "letters": "w___",
+    "sound": "w",
+    "word": "wife"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-07",
+   "zone": "phonics",
+   "en": "hug",
+   "th": "กอด",
+   "respell": "HUG",
+   "choices": [
+    {
+     "en": "clap"
+    },
+    {
+     "en": "hug"
+    },
+    {
+     "en": "wave"
+    },
+    {
+     "en": "hut"
+    }
+   ],
+   "answer": "hug",
+   "trap": "hut",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · hut = กระท่อม · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🫂",
+   "hint": {
+    "letters": "h__",
+    "sound": "h",
+    "word": "hug"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-08",
+   "zone": "phonics",
+   "en": "pray",
+   "th": "อธิษฐาน",
+   "respell": "PRAY",
+   "choices": [
+    {
+     "en": "read"
+    },
+    {
+     "en": "sing"
+    },
+    {
+     "en": "play"
+    },
+    {
+     "en": "pray"
+    }
+   ],
+   "answer": "pray",
+   "trap": "play",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · play = เล่น · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🙏",
+   "hint": {
+    "letters": "p___",
+    "sound": "p",
+    "word": "pray"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-09",
+   "zone": "phonics",
+   "en": "grace",
+   "th": "พระคุณ",
+   "respell": "GRAYS",
+   "choices": [
+    {
+     "en": "song"
+    },
+    {
+     "en": "grace"
+    },
+    {
+     "en": "race"
+    },
+    {
+     "en": "prayer"
+    }
+   ],
+   "answer": "grace",
+   "trap": "race",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · race = วิ่งแข่ง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "g____",
+    "sound": "g",
+    "word": "grace"
+   },
+   "thDef": "ของขวัญที่ไม่ต้องจ่าย",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-10",
+   "zone": "phonics",
+   "en": "faith",
+   "th": "ความเชื่อ",
+   "respell": "FAYTH",
+   "choices": [
+    {
+     "en": "hope"
+    },
+    {
+     "en": "love"
+    },
+    {
+     "en": "faith"
+    },
+    {
+     "en": "face"
+    }
+   ],
+   "answer": "faith",
+   "trap": "face",
+   "trapType": "TH/S",
+   "trapNote": "ตอนนี้รู้แล้วนะ · face = ใบหน้า · TH แลบลิ้นนิดๆ · S ลิ้นอยู่ในปาก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "f____",
+    "sound": "f",
+    "word": "faith"
+   },
+   "thDef": "วางใจในพระเจ้า",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-11",
+   "zone": "phonics",
+   "en": "right",
+   "th": "ขวา",
+   "respell": "RAIT",
+   "choices": [
+    {
+     "en": "right"
+    },
+    {
+     "en": "light"
+    },
+    {
+     "en": "up"
+    },
+    {
+     "en": "left"
+    }
+   ],
+   "answer": "right",
+   "trap": "light",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · light = ไฟ · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "➡️",
+   "hint": {
+    "letters": "r____",
+    "sound": "r",
+    "word": "right"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-12",
+   "zone": "phonics",
+   "en": "rock",
+   "th": "ก้อนหิน",
+   "respell": "ROK",
+   "choices": [
+    {
+     "en": "lock"
+    },
+    {
+     "en": "stick"
+    },
+    {
+     "en": "rock"
+    },
+    {
+     "en": "leaf"
+    }
+   ],
+   "answer": "rock",
+   "trap": "lock",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · lock = แม่กุญแจ · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🪨",
+   "hint": {
+    "letters": "r___",
+    "sound": "r",
+    "word": "rock"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-13",
+   "zone": "phonics",
+   "en": "road",
+   "th": "ถนน",
+   "respell": "ROHD",
+   "choices": [
+    {
+     "en": "road"
+    },
+    {
+     "en": "load"
+    },
+    {
+     "en": "river"
+    },
+    {
+     "en": "bridge"
+    }
+   ],
+   "answer": "road",
+   "trap": "load",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · load = ของที่ขน · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🛣️",
+   "hint": {
+    "letters": "r___",
+    "sound": "r",
+    "word": "road"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-14",
+   "zone": "phonics",
+   "en": "rain",
+   "th": "ฝน",
+   "respell": "RAYN",
+   "choices": [
+    {
+     "en": "lane"
+    },
+    {
+     "en": "rain"
+    },
+    {
+     "en": "wind"
+    },
+    {
+     "en": "snow"
+    }
+   ],
+   "answer": "rain",
+   "trap": "lane",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · lane = ช่องทางเดินรถ · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🌧️",
+   "hint": {
+    "letters": "r___",
+    "sound": "r",
+    "word": "rain"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-15",
+   "zone": "phonics",
+   "en": "glass",
+   "th": "แก้ว",
+   "respell": "GLASS",
+   "choices": [
+    {
+     "en": "grass"
+    },
+    {
+     "en": "cup"
+    },
+    {
+     "en": "glass"
+    },
+    {
+     "en": "plate"
+    }
+   ],
+   "answer": "glass",
+   "trap": "grass",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · grass = หญ้า · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:glass",
+   "hint": {
+    "letters": "g____",
+    "sound": "g",
+    "word": "glass"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-16",
+   "zone": "phonics",
+   "en": "three",
+   "th": "สาม",
+   "respell": "THREE",
+   "choices": [
+    {
+     "en": "tree"
+    },
+    {
+     "en": "three"
+    },
+    {
+     "en": "two"
+    },
+    {
+     "en": "four"
+    }
+   ],
+   "answer": "three",
+   "trap": "tree",
+   "trapType": "TH/T",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tree = ต้นไม้ · TH แลบลิ้นนิดๆ · T ไม่แลบลิ้น",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "3️⃣",
+   "hint": {
+    "letters": "t____",
+    "sound": "th",
+    "word": "three"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-17",
+   "zone": "phonics",
+   "en": "they",
+   "th": "พวกเขา",
+   "respell": "THAY",
+   "choices": [
+    {
+     "en": "you"
+    },
+    {
+     "en": "they"
+    },
+    {
+     "en": "day"
+    },
+    {
+     "en": "we"
+    }
+   ],
+   "answer": "they",
+   "trap": "day",
+   "trapType": "TH/D",
+   "trapNote": "ตอนนี้รู้แล้วนะ · day = วัน · TH แลบลิ้นนิดๆ · D ไม่แลบลิ้น",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👥",
+   "hint": {
+    "letters": "t___",
+    "sound": "th",
+    "word": "they"
+   },
+   "thDef": "หลายคนนั้น",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-18",
+   "zone": "phonics",
+   "en": "mouth",
+   "th": "ปาก",
+   "respell": "MOWTH",
+   "choices": [
+    {
+     "en": "mouse"
+    },
+    {
+     "en": "mouth"
+    },
+    {
+     "en": "nose"
+    },
+    {
+     "en": "ear"
+    }
+   ],
+   "answer": "mouth",
+   "trap": "mouse",
+   "trapType": "TH/S",
+   "trapNote": "ตอนนี้รู้แล้วนะ · mouse = หนู · TH แลบลิ้นนิดๆ · S ลิ้นอยู่ในปาก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👄",
+   "hint": {
+    "letters": "m____",
+    "sound": "m",
+    "word": "mouth"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-19",
+   "zone": "phonics",
+   "en": "vest",
+   "th": "เสื้อกั๊ก",
+   "respell": "VEST",
+   "choices": [
+    {
+     "en": "hat"
+    },
+    {
+     "en": "west"
+    },
+    {
+     "en": "vest"
+    },
+    {
+     "en": "coat"
+    }
+   ],
+   "answer": "vest",
+   "trap": "west",
+   "trapType": "V/W",
+   "trapNote": "ตอนนี้รู้แล้วนะ · west = ทิศตะวันตก · V ฟันบนแตะปากล่าง · W ห่อปาก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🦺",
+   "hint": {
+    "letters": "v___",
+    "sound": "v",
+    "word": "vest"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-20",
+   "zone": "phonics",
+   "en": "shop",
+   "th": "ร้านค้า",
+   "respell": "SHOP",
+   "choices": [
+    {
+     "en": "chop"
+    },
+    {
+     "en": "shop"
+    },
+    {
+     "en": "school"
+    },
+    {
+     "en": "bank"
+    }
+   ],
+   "answer": "shop",
+   "trap": "chop",
+   "trapType": "SH/CH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · chop = สับ · SH ลมยาว ชฺ~ · CH สั้น หยุดก่อน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🏪",
+   "hint": {
+    "letters": "s___",
+    "sound": "sh",
+    "word": "shop"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-21",
+   "zone": "phonics",
+   "en": "wash",
+   "th": "ล้าง",
+   "respell": "WOSH",
+   "choices": [
+    {
+     "en": "sweep"
+    },
+    {
+     "en": "wash"
+    },
+    {
+     "en": "cook"
+    },
+    {
+     "en": "watch"
+    }
+   ],
+   "answer": "wash",
+   "trap": "watch",
+   "trapType": "SH/CH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · watch = นาฬิกาข้อมือ / ดู · SH ลมยาว ชฺ~ · CH สั้น หยุดก่อน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🧼",
+   "hint": {
+    "letters": "w___",
+    "sound": "w",
+    "word": "wash"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-22",
+   "zone": "phonics",
+   "en": "ship",
+   "th": "เรือ",
+   "respell": "SHIP",
+   "choices": [
+    {
+     "en": "train"
+    },
+    {
+     "en": "bus"
+    },
+    {
+     "en": "ship"
+    },
+    {
+     "en": "sheep"
+    }
+   ],
+   "answer": "ship",
+   "trap": "sheep",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · sheep = แกะ · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🚢",
+   "hint": {
+    "letters": "s___",
+    "sound": "sh",
+    "word": "ship"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-23",
+   "zone": "phonics",
+   "en": "bread",
+   "th": "ขนมปัง",
+   "respell": "BRED",
+   "choices": [
+    {
+     "en": "bed"
+    },
+    {
+     "en": "egg"
+    },
+    {
+     "en": "cheese"
+    },
+    {
+     "en": "bread"
+    }
+   ],
+   "answer": "bread",
+   "trap": "bed",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bed = เตียง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🍞",
+   "hint": {
+    "letters": "b____",
+    "sound": "b",
+    "word": "bread"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ph-24",
+   "zone": "phonics",
+   "en": "cold",
+   "th": "หนาว",
+   "respell": "KOHLD",
+   "choices": [
+    {
+     "en": "coal"
+    },
+    {
+     "en": "hot"
+    },
+    {
+     "en": "cold"
+    },
+    {
+     "en": "wet"
+    }
+   ],
+   "answer": "cold",
+   "trap": "coal",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · coal = ถ่านหิน · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🥶",
+   "hint": {
+    "letters": "c___",
+    "sound": "c",
+    "word": "cold"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-01",
+   "zone": "colors-shapes",
+   "en": "a white blanket",
+   "th": "ผ้าห่มสีขาว",
+   "respell": "a WAIT BLANG-kit",
+   "choices": [
+    {
+     "en": "a blue blanket"
+    },
+    {
+     "en": "a wide blanket"
+    },
+    {
+     "en": "a white blanket"
+    },
+    {
+     "en": "a pink blanket"
+    }
+   ],
+   "answer": "a white blanket",
+   "trap": "a wide blanket",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · wide = กว้าง · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:blanket-white",
+   "hint": {
+    "letters": "a w____ b______",
+    "sound": "wh",
+    "word": "white"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-02",
+   "zone": "colors-shapes",
+   "en": "a round ball",
+   "th": "ลูกบอลกลม",
+   "respell": "a ROWND BAWL",
+   "choices": [
+    {
+     "en": "a round ball"
+    },
+    {
+     "en": "a round bowl"
+    },
+    {
+     "en": "a square box"
+    },
+    {
+     "en": "a long stick"
+    }
+   ],
+   "answer": "a round ball",
+   "trap": "a round bowl",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bowl = ชาม · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "⚽",
+   "hint": {
+    "letters": "a r____ b___",
+    "sound": "b",
+    "word": "ball"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-03",
+   "zone": "colors-shapes",
+   "en": "a white towel",
+   "th": "ผ้าเช็ดตัวสีขาว",
+   "respell": "a WAIT TOW-ul",
+   "choices": [
+    {
+     "en": "a white towel"
+    },
+    {
+     "en": "a white pillow"
+    },
+    {
+     "en": "a white sheet"
+    },
+    {
+     "en": "a white tower"
+    }
+   ],
+   "answer": "a white towel",
+   "trap": "a white tower",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tower = หอคอย · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:towel-white",
+   "hint": {
+    "letters": "a w____ t____",
+    "sound": "t",
+    "word": "towel"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-04",
+   "zone": "colors-shapes",
+   "en": "a long line",
+   "th": "แถวยาว",
+   "respell": "a LONG LAIN",
+   "choices": [
+    {
+     "en": "a wrong line"
+    },
+    {
+     "en": "a short line"
+    },
+    {
+     "en": "a long line"
+    },
+    {
+     "en": "a long table"
+    }
+   ],
+   "answer": "a long line",
+   "trap": "a wrong line",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · wrong = ผิด · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:line-queue",
+   "hint": {
+    "letters": "a l___ l___",
+    "sound": "l",
+    "word": "long"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-05",
+   "zone": "colors-shapes",
+   "en": "God made the light.",
+   "th": "พระเจ้าทรงสร้างแสงสว่าง",
+   "respell": "GOD mayd thuh LAIT",
+   "choices": [
+    {
+     "en": "God made the light."
+    },
+    {
+     "en": "God made the night."
+    },
+    {
+     "en": "God made the sea."
+    },
+    {
+     "en": "God made the trees."
+    }
+   ],
+   "answer": "God made the light.",
+   "trap": "God made the night.",
+   "trapType": "L/N",
+   "trapNote": "ตอนนี้รู้แล้วนะ · night = กลางคืน · L ลมออกข้างลิ้น · N ลมออกจมูก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:light-rays",
+   "hint": {
+    "letters": "G__ m___ t__ l____.",
+    "sound": "l",
+    "word": "light"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-06",
+   "zone": "colors-shapes",
+   "en": "God made the rainbow.",
+   "th": "พระเจ้าทรงสร้างรุ้งกินน้ำ",
+   "respell": "GOD mayd thuh RAYN-boh",
+   "choices": [
+    {
+     "en": "God made the rainbow."
+    },
+    {
+     "en": "God made the moon."
+    },
+    {
+     "en": "God made the sun."
+    },
+    {
+     "en": "God made the rain."
+    }
+   ],
+   "answer": "God made the rainbow.",
+   "trap": "God made the rain.",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · rain = ฝน · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🌈",
+   "hint": {
+    "letters": "G__ m___ t__ r______.",
+    "sound": "r",
+    "word": "rainbow"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-07",
+   "zone": "colors-shapes",
+   "en": "God made the colors.",
+   "th": "พระเจ้าทรงสร้างสีสันทั้งหลาย",
+   "respell": "GOD mayd thuh KUL-erz",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-08",
+   "zone": "colors-shapes",
+   "en": "red",
+   "th": "สีแดง",
+   "respell": "RED",
+   "choices": [
+    {
+     "en": "green"
+    },
+    {
+     "en": "led"
+    },
+    {
+     "en": "blue"
+    },
+    {
+     "en": "red"
+    }
+   ],
+   "answer": "red",
+   "trap": "led",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · led = หลอดไฟ LED · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🟥",
+   "hint": {
+    "letters": "r__",
+    "sound": "r",
+    "word": "red"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-09",
+   "zone": "colors-shapes",
+   "en": "blue",
+   "th": "สีน้ำเงิน",
+   "respell": "BLOO",
+   "choices": [
+    {
+     "en": "yellow"
+    },
+    {
+     "en": "brew"
+    },
+    {
+     "en": "blue"
+    },
+    {
+     "en": "red"
+    }
+   ],
+   "answer": "blue",
+   "trap": "brew",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · brew = ชง (กาแฟ) · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🟦",
+   "hint": {
+    "letters": "b___",
+    "sound": "b",
+    "word": "blue"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-10",
+   "zone": "colors-shapes",
+   "en": "green",
+   "th": "สีเขียว",
+   "respell": "GREEN",
+   "choices": [
+    {
+     "en": "green"
+    },
+    {
+     "en": "gray"
+    },
+    {
+     "en": "grin"
+    },
+    {
+     "en": "brown"
+    }
+   ],
+   "answer": "green",
+   "trap": "grin",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · grin = ยิ้มกว้าง · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🟩",
+   "hint": {
+    "letters": "g____",
+    "sound": "g",
+    "word": "green"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-11",
+   "zone": "colors-shapes",
+   "en": "black",
+   "th": "สีดำ",
+   "respell": "BLAK",
+   "choices": [
+    {
+     "en": "white"
+    },
+    {
+     "en": "black"
+    },
+    {
+     "en": "back"
+    },
+    {
+     "en": "pink"
+    }
+   ],
+   "answer": "black",
+   "trap": "back",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · back = ข้างหลัง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "⬛",
+   "hint": {
+    "letters": "b____",
+    "sound": "b",
+    "word": "black"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-12",
+   "zone": "colors-shapes",
+   "en": "brown",
+   "th": "สีน้ำตาล",
+   "respell": "BROWN",
+   "choices": [
+    {
+     "en": "blown"
+    },
+    {
+     "en": "brown"
+    },
+    {
+     "en": "orange"
+    },
+    {
+     "en": "gold"
+    }
+   ],
+   "answer": "brown",
+   "trap": "blown",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · blown = ถูกลมพัด · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🟫",
+   "hint": {
+    "letters": "b____",
+    "sound": "b",
+    "word": "brown"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-13",
+   "zone": "colors-shapes",
+   "en": "purple",
+   "th": "สีม่วง",
+   "respell": "PER-pul",
+   "choices": [
+    {
+     "en": "blue"
+    },
+    {
+     "en": "pink"
+    },
+    {
+     "en": "people"
+    },
+    {
+     "en": "purple"
+    }
+   ],
+   "answer": "purple",
+   "trap": "people",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · people = ผู้คน · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🟪",
+   "hint": {
+    "letters": "p_____",
+    "sound": "p",
+    "word": "purple"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-14",
+   "zone": "colors-shapes",
+   "en": "pink",
+   "th": "สีชมพู",
+   "respell": "PINK",
+   "choices": [
+    {
+     "en": "purple"
+    },
+    {
+     "en": "red"
+    },
+    {
+     "en": "pink"
+    },
+    {
+     "en": "pin"
+    }
+   ],
+   "answer": "pink",
+   "trap": "pin",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · pin = เข็มหมุด · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:swatch-pink",
+   "hint": {
+    "letters": "p___",
+    "sound": "p",
+    "word": "pink"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-15",
+   "zone": "colors-shapes",
+   "en": "gold",
+   "th": "สีทอง",
+   "respell": "GOHLD",
+   "choices": [
+    {
+     "en": "goal"
+    },
+    {
+     "en": "silver"
+    },
+    {
+     "en": "gold"
+    },
+    {
+     "en": "yellow"
+    }
+   ],
+   "answer": "gold",
+   "trap": "goal",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · goal = ประตูฟุตบอล / เป้าหมาย · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:swatch-gold",
+   "hint": {
+    "letters": "g___",
+    "sound": "g",
+    "word": "gold"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-16",
+   "zone": "colors-shapes",
+   "en": "a black hat",
+   "th": "หมวกสีดำ",
+   "respell": "a BLAK HAT",
+   "choices": [
+    {
+     "en": "a black hut"
+    },
+    {
+     "en": "a brown hat"
+    },
+    {
+     "en": "a black cat"
+    },
+    {
+     "en": "a black hat"
+    }
+   ],
+   "answer": "a black hat",
+   "trap": "a black hut",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · hut = กระท่อม · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🎩",
+   "hint": {
+    "letters": "a b____ h__",
+    "sound": "h",
+    "word": "hat"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-17",
+   "zone": "colors-shapes",
+   "en": "triangle",
+   "th": "สามเหลี่ยม",
+   "respell": "TRAI-ang-gul",
+   "choices": [
+    {
+     "en": "square"
+    },
+    {
+     "en": "triangle"
+    },
+    {
+     "en": "circle"
+    },
+    {
+     "en": "tangle"
+    }
+   ],
+   "answer": "triangle",
+   "trap": "tangle",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tangle = พันกันยุ่ง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🔺",
+   "hint": {
+    "letters": "t_______",
+    "sound": "t",
+    "word": "triangle"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-18",
+   "zone": "colors-shapes",
+   "en": "heart",
+   "th": "รูปหัวใจ",
+   "respell": "HART",
+   "choices": [
+    {
+     "en": "star"
+    },
+    {
+     "en": "circle"
+    },
+    {
+     "en": "heart"
+    },
+    {
+     "en": "hard"
+    }
+   ],
+   "answer": "heart",
+   "trap": "hard",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · hard = แข็ง · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "❤️",
+   "hint": {
+    "letters": "h____",
+    "sound": "h",
+    "word": "heart"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-19",
+   "zone": "colors-shapes",
+   "en": "star",
+   "th": "ดาว",
+   "respell": "STAR",
+   "choices": [
+    {
+     "en": "star"
+    },
+    {
+     "en": "heart"
+    },
+    {
+     "en": "store"
+    },
+    {
+     "en": "moon"
+    }
+   ],
+   "answer": "star",
+   "trap": "store",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · store = ร้านค้า · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "⭐",
+   "hint": {
+    "letters": "s___",
+    "sound": "s",
+    "word": "star"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-20",
+   "zone": "colors-shapes",
+   "en": "circle",
+   "th": "วงกลม",
+   "respell": "SER-kul",
+   "choices": [
+    {
+     "en": "circle"
+    },
+    {
+     "en": "triangle"
+    },
+    {
+     "en": "square"
+    },
+    {
+     "en": "circus"
+    }
+   ],
+   "answer": "circle",
+   "trap": "circus",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · circus = ละครสัตว์ · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "⚪",
+   "hint": {
+    "letters": "c_____",
+    "sound": "c",
+    "word": "circle"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-21",
+   "zone": "colors-shapes",
+   "en": "line",
+   "th": "เส้น",
+   "respell": "LAIN",
+   "choices": [
+    {
+     "en": "line"
+    },
+    {
+     "en": "nine"
+    },
+    {
+     "en": "square"
+    },
+    {
+     "en": "dot"
+    }
+   ],
+   "answer": "line",
+   "trap": "nine",
+   "trapType": "L/N",
+   "trapNote": "ตอนนี้รู้แล้วนะ · nine = เก้า · L ลมออกข้างลิ้น · N ลมออกจมูก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:shape-line",
+   "hint": {
+    "letters": "l___",
+    "sound": "l",
+    "word": "line"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-22",
+   "zone": "colors-shapes",
+   "en": "long",
+   "th": "ยาว",
+   "respell": "LONG",
+   "choices": [
+    {
+     "en": "short"
+    },
+    {
+     "en": "tall"
+    },
+    {
+     "en": "wrong"
+    },
+    {
+     "en": "long"
+    }
+   ],
+   "answer": "long",
+   "trap": "wrong",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · wrong = ผิด · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:size-long",
+   "hint": {
+    "letters": "l___",
+    "sound": "l",
+    "word": "long"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-23",
+   "zone": "colors-shapes",
+   "en": "big",
+   "th": "ใหญ่",
+   "respell": "BIG",
+   "choices": [
+    {
+     "en": "small"
+    },
+    {
+     "en": "tall"
+    },
+    {
+     "en": "big"
+    },
+    {
+     "en": "bit"
+    }
+   ],
+   "answer": "big",
+   "trap": "bit",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bit = นิดหน่อย · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:size-big",
+   "hint": {
+    "letters": "b__",
+    "sound": "b",
+    "word": "big"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "cs-24",
+   "zone": "colors-shapes",
+   "en": "small",
+   "th": "เล็ก",
+   "respell": "SMAWL",
+   "choices": [
+    {
+     "en": "smell"
+    },
+    {
+     "en": "small"
+    },
+    {
+     "en": "big"
+    },
+    {
+     "en": "long"
+    }
+   ],
+   "answer": "small",
+   "trap": "smell",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · smell = ดมกลิ่น · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:size-small",
+   "hint": {
+    "letters": "s____",
+    "sound": "s",
+    "word": "small"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-01",
+   "zone": "sight-words",
+   "en": "Here is your card.",
+   "th": "นี่บัตรของคุณค่ะ",
+   "respell": "HEER iz yor KARD",
+   "choices": [
+    {
+     "en": "Here is your car."
+    },
+    {
+     "en": "Here is your bag."
+    },
+    {
+     "en": "Here is your card."
+    },
+    {
+     "en": "Here is your map."
+    }
+   ],
+   "answer": "Here is your card.",
+   "trap": "Here is your car.",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · car = รถยนต์ · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "💳",
+   "hint": {
+    "letters": "H___ i_ y___ c___.",
+    "sound": "c",
+    "word": "card"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-02",
+   "zone": "sight-words",
+   "en": "Please wait here.",
+   "th": "กรุณารอตรงนี้ค่ะ",
+   "respell": "pleez WAYT HEER",
+   "choices": [
+    {
+     "en": "Please wait here."
+    },
+    {
+     "en": "Please sign here."
+    },
+    {
+     "en": "Please wait there."
+    },
+    {
+     "en": "Please sit here."
+    }
+   ],
+   "answer": "Please wait here.",
+   "trap": "Please wait there.",
+   "trapType": "TH/H",
+   "trapNote": "ตอนนี้รู้แล้วนะ · there = ตรงนั้น · TH แลบลิ้น · H แค่หายใจออก",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "⏳",
+   "hint": {
+    "letters": "P_____ w___ h___.",
+    "sound": "h",
+    "word": "here"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-03",
+   "zone": "sight-words",
+   "en": "Can I help you?",
+   "th": "มีอะไรให้ช่วยไหมคะ",
+   "respell": "KAN ai HELP yoo",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-04",
+   "zone": "sight-words",
+   "en": "He is my husband.",
+   "th": "เขาเป็นสามีของฉันค่ะ",
+   "respell": "hee iz mai HUZ-bund",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-05",
+   "zone": "sight-words",
+   "en": "I love my baby.",
+   "th": "ฉันรักลูกค่ะ",
+   "respell": "ai LUV mai BAY-bee",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-06",
+   "zone": "sight-words",
+   "en": "It is a free gift.",
+   "th": "เป็นของขวัญที่ให้ฟรี",
+   "respell": "it iz a FREE GIFT",
+   "choices": [
+    {
+     "en": "It is a new gift."
+    },
+    {
+     "en": "It is three gifts."
+    },
+    {
+     "en": "It is a free gift."
+    },
+    {
+     "en": "It is a big gift."
+    }
+   ],
+   "answer": "It is a free gift.",
+   "trap": "It is three gifts.",
+   "trapType": "TH/F",
+   "trapNote": "ตอนนี้รู้แล้วนะ · three = สาม · TH แลบลิ้น · F ฟันบนแตะปากล่าง",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🎁",
+   "hint": {
+    "letters": "I_ i_ a f___ g___.",
+    "sound": "g",
+    "word": "gift"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-07",
+   "zone": "sight-words",
+   "en": "God loves you.",
+   "th": "พระเจ้าทรงรักคุณ",
+   "respell": "GOD luvz YOO",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-08",
+   "zone": "sight-words",
+   "en": "I cannot do it alone.",
+   "th": "ฉันทำคนเดียวไม่ได้ค่ะ",
+   "respell": "ai KAN-not DOO it a-LOHN",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-09",
+   "zone": "sight-words",
+   "en": "his",
+   "th": "ของเขา (ผู้ชาย)",
+   "respell": "HIZ",
+   "choices": [
+    {
+     "en": "her"
+    },
+    {
+     "en": "my"
+    },
+    {
+     "en": "his"
+    },
+    {
+     "en": "he's"
+    }
+   ],
+   "answer": "his",
+   "trap": "he's",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · he's = เขาเป็น / เขาอยู่ · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "h__",
+    "sound": "h",
+    "word": "his"
+   },
+   "thDef": "ของผู้ชายคนนั้น",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-10",
+   "zone": "sight-words",
+   "en": "her",
+   "th": "ของเธอ (ผู้หญิง)",
+   "respell": "HER",
+   "choices": [
+    {
+     "en": "our"
+    },
+    {
+     "en": "her"
+    },
+    {
+     "en": "his"
+    },
+    {
+     "en": "hair"
+    }
+   ],
+   "answer": "her",
+   "trap": "hair",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · hair = ผม (เส้นผม) · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "h__",
+    "sound": "h",
+    "word": "her"
+   },
+   "thDef": "ของผู้หญิงคนนั้น",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-11",
+   "zone": "sight-words",
+   "en": "It is mine.",
+   "th": "นี่ของฉัน",
+   "respell": "it iz MAIN",
+   "choices": [
+    {
+     "en": "It is mine."
+    },
+    {
+     "en": "It is his."
+    },
+    {
+     "en": "It is nine."
+    },
+    {
+     "en": "It is hers."
+    }
+   ],
+   "answer": "It is mine.",
+   "trap": "It is nine.",
+   "trapType": "sound-alike",
+   "trapNote": "ตอนนี้รู้แล้วนะ · nine = เก้าโมง · สองคำนี้เสียงคล้ายกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "I_ i_ m___.",
+    "sound": "m",
+    "word": "mine"
+   },
+   "thDef": "เป็นของตัวฉันเอง",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-12",
+   "zone": "sight-words",
+   "en": "This is yours.",
+   "th": "นี่ของคุณค่ะ",
+   "respell": "THIS iz YORZ",
+   "choices": [
+    {
+     "en": "This is yours."
+    },
+    {
+     "en": "This is his."
+    },
+    {
+     "en": "This is mine."
+    },
+    {
+     "en": "This is ours."
+    }
+   ],
+   "answer": "This is yours.",
+   "trap": "This is ours.",
+   "trapType": "dropped Y",
+   "trapNote": "ตอนนี้รู้แล้วนะ · ours = ของเรา · Y ต้นคำ ออกเสียง 'ย'",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "T___ i_ y____.",
+    "sound": "y",
+    "word": "yours"
+   },
+   "thDef": "คุณเป็นเจ้าของ",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-13",
+   "zone": "sight-words",
+   "en": "this",
+   "th": "นี่",
+   "respell": "THIS",
+   "choices": [
+    {
+     "en": "this"
+    },
+    {
+     "en": "that"
+    },
+    {
+     "en": "these"
+    },
+    {
+     "en": "those"
+    }
+   ],
+   "answer": "this",
+   "trap": "these",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · these = พวกนี้ · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "t___",
+    "sound": "th",
+    "word": "this"
+   },
+   "thDef": "อันที่อยู่ใกล้",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-14",
+   "zone": "sight-words",
+   "en": "where",
+   "th": "ที่ไหน",
+   "respell": "WAIR",
+   "choices": [
+    {
+     "en": "were"
+    },
+    {
+     "en": "where"
+    },
+    {
+     "en": "when"
+    },
+    {
+     "en": "what"
+    }
+   ],
+   "answer": "where",
+   "trap": "were",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · were = เคยเป็น (อดีต) · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "w____",
+    "sound": "wh",
+    "word": "where"
+   },
+   "thDef": "ถามหาสถานที่",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-15",
+   "zone": "sight-words",
+   "en": "walk",
+   "th": "เดิน",
+   "respell": "WAWK",
+   "choices": [
+    {
+     "en": "sit"
+    },
+    {
+     "en": "walk"
+    },
+    {
+     "en": "run"
+    },
+    {
+     "en": "work"
+    }
+   ],
+   "answer": "walk",
+   "trap": "work",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · work = ทำงาน · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🚶",
+   "hint": {
+    "letters": "w___",
+    "sound": "w",
+    "word": "walk"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-16",
+   "zone": "sight-words",
+   "en": "I want it.",
+   "th": "ฉันอยากได้ค่ะ",
+   "respell": "ai WONT it",
+   "choices": [
+    {
+     "en": "I want it."
+    },
+    {
+     "en": "I like it."
+    },
+    {
+     "en": "I won't."
+    },
+    {
+     "en": "I need it."
+    }
+   ],
+   "answer": "I want it.",
+   "trap": "I won't.",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · won't = จะไม่ · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "I w___ i_.",
+    "sound": "w",
+    "word": "want"
+   },
+   "thDef": "บอกสิ่งที่อยากได้",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-17",
+   "zone": "sight-words",
+   "en": "I can.",
+   "th": "ฉันทำได้ค่ะ",
+   "respell": "ai KAN",
+   "choices": [
+    {
+     "en": "I can't."
+    },
+    {
+     "en": "I will."
+    },
+    {
+     "en": "I do."
+    },
+    {
+     "en": "I can."
+    }
+   ],
+   "answer": "I can.",
+   "trap": "I can't.",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · can't = ทำไม่ได้ · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "💪",
+   "hint": {
+    "letters": "I c__.",
+    "sound": "c",
+    "word": "can"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-18",
+   "zone": "sight-words",
+   "en": "she",
+   "th": "เธอ (ผู้หญิง)",
+   "respell": "SHEE",
+   "choices": [
+    {
+     "en": "he"
+    },
+    {
+     "en": "she"
+    },
+    {
+     "en": "see"
+    },
+    {
+     "en": "we"
+    }
+   ],
+   "answer": "she",
+   "trap": "see",
+   "trapType": "SH/S",
+   "trapNote": "ตอนนี้รู้แล้วนะ · see = เห็น · SH ห่อปาก ลมยาว · S ยิ้ม ลมผ่านฟัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👩",
+   "hint": {
+    "letters": "s__",
+    "sound": "sh",
+    "word": "she"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-19",
+   "zone": "sight-words",
+   "en": "think",
+   "th": "คิด",
+   "respell": "THINGK",
+   "choices": [
+    {
+     "en": "feel"
+    },
+    {
+     "en": "sink"
+    },
+    {
+     "en": "know"
+    },
+    {
+     "en": "think"
+    }
+   ],
+   "answer": "think",
+   "trap": "sink",
+   "trapType": "TH/S",
+   "trapNote": "ตอนนี้รู้แล้วนะ · sink = อ่างล้างจาน · TH แลบลิ้นนิดๆ · S ลิ้นอยู่ในปาก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🤔",
+   "hint": {
+    "letters": "t____",
+    "sound": "th",
+    "word": "think"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-20",
+   "zone": "sight-words",
+   "en": "now",
+   "th": "ตอนนี้",
+   "respell": "NOW",
+   "choices": [
+    {
+     "en": "now"
+    },
+    {
+     "en": "later"
+    },
+    {
+     "en": "no"
+    },
+    {
+     "en": "soon"
+    }
+   ],
+   "answer": "now",
+   "trap": "no",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · no = ไม่ · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "n__",
+    "sound": "n",
+    "word": "now"
+   },
+   "thDef": "เวลานี้เลย",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-21",
+   "zone": "sight-words",
+   "en": "it",
+   "th": "มัน",
+   "respell": "IT",
+   "choices": [
+    {
+     "en": "is"
+    },
+    {
+     "en": "eat"
+    },
+    {
+     "en": "in"
+    },
+    {
+     "en": "it"
+    }
+   ],
+   "answer": "it",
+   "trap": "eat",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · eat = กิน · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "i_",
+    "sound": "i",
+    "word": "it"
+   },
+   "thDef": "ใช้แทนสิ่งของ",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-22",
+   "zone": "sight-words",
+   "en": "there",
+   "th": "ที่นั่น",
+   "respell": "THAIR",
+   "choices": [
+    {
+     "en": "near"
+    },
+    {
+     "en": "dare"
+    },
+    {
+     "en": "there"
+    },
+    {
+     "en": "here"
+    }
+   ],
+   "answer": "there",
+   "trap": "dare",
+   "trapType": "TH/D",
+   "trapNote": "ตอนนี้รู้แล้วนะ · dare = กล้า · TH แลบลิ้นนิดๆ · D ไม่แลบลิ้น",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "t____",
+    "sound": "th",
+    "word": "there"
+   },
+   "thDef": "ที่ที่ไกลออกไป",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-23",
+   "zone": "sight-words",
+   "en": "come",
+   "th": "มา",
+   "respell": "KUM",
+   "choices": [
+    {
+     "en": "go"
+    },
+    {
+     "en": "comb"
+    },
+    {
+     "en": "come"
+    },
+    {
+     "en": "stay"
+    }
+   ],
+   "answer": "come",
+   "trap": "comb",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · comb = หวี · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "c___",
+    "sound": "c",
+    "word": "come"
+   },
+   "thDef": "เดินเข้ามาหา",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "sw-24",
+   "zone": "sight-words",
+   "en": "look",
+   "th": "ดู",
+   "respell": "LUK",
+   "choices": [
+    {
+     "en": "touch"
+    },
+    {
+     "en": "look"
+    },
+    {
+     "en": "lock"
+    },
+    {
+     "en": "listen"
+    }
+   ],
+   "answer": "look",
+   "trap": "lock",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · lock = ล็อก · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👀",
+   "hint": {
+    "letters": "l___",
+    "sound": "l",
+    "word": "look"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-01",
+   "zone": "numbers",
+   "en": "Room thirteen.",
+   "th": "ห้องสิบสามค่ะ",
+   "respell": "ROOM ther-TEEN",
+   "choices": [
+    {
+     "en": "Room twelve."
+    },
+    {
+     "en": "Room thirty."
+    },
+    {
+     "en": "Room three."
+    },
+    {
+     "en": "Room thirteen."
+    }
+   ],
+   "answer": "Room thirteen.",
+   "trap": "Room thirty.",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · thirty = สามสิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:door-13",
+   "hint": {
+    "letters": "R___ t_______.",
+    "sound": "th",
+    "word": "thirteen"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-02",
+   "zone": "numbers",
+   "en": "Fourth floor.",
+   "th": "ชั้นสี่ค่ะ",
+   "respell": "FORTH FLOR",
+   "choices": [
+    {
+     "en": "Fourth floor."
+    },
+    {
+     "en": "Four floors."
+    },
+    {
+     "en": "First floor."
+    },
+    {
+     "en": "Fifth floor."
+    }
+   ],
+   "answer": "Fourth floor.",
+   "trap": "Four floors.",
+   "trapType": "dropped TH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · four floors = สี่ชั้น · ท้ายคำมี TH แลบลิ้นนิดๆ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:floor-4",
+   "hint": {
+    "letters": "F_____ f____.",
+    "sound": "f",
+    "word": "Fourth"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-03",
+   "zone": "numbers",
+   "en": "Cash or card?",
+   "th": "เงินสดหรือบัตรคะ",
+   "respell": "KASH or KARD",
+   "choices": [
+    {
+     "en": "Cash or check?"
+    },
+    {
+     "en": "Cash or card?"
+    },
+    {
+     "en": "Card or check?"
+    },
+    {
+     "en": "Cash or car?"
+    }
+   ],
+   "answer": "Cash or card?",
+   "trap": "Cash or car?",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · car = รถยนต์ · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "💵💳",
+   "hint": {
+    "letters": "C___ o_ c___?",
+    "sound": "c",
+    "word": "card"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-04",
+   "zone": "numbers",
+   "en": "Here is your change.",
+   "th": "นี่เงินทอนค่ะ",
+   "respell": "HEER iz yor CHAYNJ",
+   "choices": [
+    {
+     "en": "Here is your chain."
+    },
+    {
+     "en": "Here is your receipt."
+    },
+    {
+     "en": "Here is your key."
+    },
+    {
+     "en": "Here is your change."
+    }
+   ],
+   "answer": "Here is your change.",
+   "trap": "Here is your chain.",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · chain = โซ่ / สร้อย · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🪙",
+   "hint": {
+    "letters": "H___ i_ y___ c_____.",
+    "sound": "ch",
+    "word": "change"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-05",
+   "zone": "numbers",
+   "en": "Eight pounds.",
+   "th": "หนักแปดปอนด์",
+   "respell": "AYT POWNDZ",
+   "choices": [
+    {
+     "en": "Six pounds."
+    },
+    {
+     "en": "Eighty pounds."
+    },
+    {
+     "en": "Eight pounds."
+    },
+    {
+     "en": "Seven pounds."
+    }
+   ],
+   "answer": "Eight pounds.",
+   "trap": "Eighty pounds.",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · eighty = แปดสิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:baby-scale-8",
+   "hint": {
+    "letters": "E____ p_____.",
+    "sound": "e",
+    "word": "Eight"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-06",
+   "zone": "numbers",
+   "en": "I'm home at five thirty.",
+   "th": "ผมจะกลับถึงบ้านห้าโมงครึ่งครับ",
+   "respell": "aim HOHM at FAIV THER-tee",
+   "choices": [
+    {
+     "en": "I'm home at five thirty."
+    },
+    {
+     "en": "I'm home at six thirty."
+    },
+    {
+     "en": "I'm home at five thirteen."
+    },
+    {
+     "en": "I'm home at four thirty."
+    }
+   ],
+   "answer": "I'm home at five thirty.",
+   "trap": "I'm home at five thirteen.",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · thirteen = สิบสาม · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🏠🕠",
+   "hint": {
+    "letters": "I__ h___ a_ f___ t_____.",
+    "sound": "th",
+    "word": "thirty"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-07",
+   "zone": "numbers",
+   "en": "Jesus fed five thousand.",
+   "th": "พระเยซูทรงเลี้ยงคนห้าพันคน",
+   "respell": "JEE-zus FED FAIV THOW-zund",
+   "choices": [
+    {
+     "en": "Jesus fed fifty thousand."
+    },
+    {
+     "en": "Jesus fed five hundred."
+    },
+    {
+     "en": "Jesus fed five thousand."
+    },
+    {
+     "en": "Jesus fed one thousand."
+    }
+   ],
+   "answer": "Jesus fed five thousand.",
+   "trap": "Jesus fed fifty thousand.",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · fifty = ห้าสิบ · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:crowd-5000",
+   "hint": {
+    "letters": "J____ f__ f___ t_______.",
+    "sound": "f",
+    "word": "five"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-08",
+   "zone": "numbers",
+   "en": "One God.",
+   "th": "พระเจ้าองค์เดียว",
+   "respell": "WUN GOD",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-09",
+   "zone": "numbers",
+   "en": "Jesus rose on day three.",
+   "th": "พระเยซูทรงเป็นขึ้นมาในวันที่สาม",
+   "respell": "JEE-zus ROHZ on day THREE",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-10",
+   "zone": "numbers",
+   "en": "three",
+   "th": "สาม",
+   "respell": "THREE",
+   "choices": [
+    {
+     "en": "tree"
+    },
+    {
+     "en": "five"
+    },
+    {
+     "en": "three"
+    },
+    {
+     "en": "two"
+    }
+   ],
+   "answer": "three",
+   "trap": "tree",
+   "trapType": "TH/T",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tree = ต้นไม้ · TH แลบลิ้นนิดๆ · T ไม่แลบลิ้น",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "3️⃣",
+   "hint": {
+    "letters": "t____",
+    "sound": "th",
+    "word": "three"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-11",
+   "zone": "numbers",
+   "en": "two",
+   "th": "สอง",
+   "respell": "TOO",
+   "choices": [
+    {
+     "en": "four"
+    },
+    {
+     "en": "two"
+    },
+    {
+     "en": "tooth"
+    },
+    {
+     "en": "one"
+    }
+   ],
+   "answer": "two",
+   "trap": "tooth",
+   "trapType": "dropped TH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tooth = ฟัน · ท้ายคำมี TH แลบลิ้นนิดๆ",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "2️⃣",
+   "hint": {
+    "letters": "t__",
+    "sound": "t",
+    "word": "two"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-12",
+   "zone": "numbers",
+   "en": "five",
+   "th": "ห้า",
+   "respell": "FAIV",
+   "choices": [
+    {
+     "en": "nine"
+    },
+    {
+     "en": "four"
+    },
+    {
+     "en": "five"
+    },
+    {
+     "en": "fine"
+    }
+   ],
+   "answer": "five",
+   "trap": "fine",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · fine = สบายดี · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "5️⃣",
+   "hint": {
+    "letters": "f___",
+    "sound": "f",
+    "word": "five"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-13",
+   "zone": "numbers",
+   "en": "six",
+   "th": "หก",
+   "respell": "SIKS",
+   "choices": [
+    {
+     "en": "eight"
+    },
+    {
+     "en": "sick"
+    },
+    {
+     "en": "seven"
+    },
+    {
+     "en": "six"
+    }
+   ],
+   "answer": "six",
+   "trap": "sick",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · sick = ไม่สบาย · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "6️⃣",
+   "hint": {
+    "letters": "s__",
+    "sound": "s",
+    "word": "six"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-14",
+   "zone": "numbers",
+   "en": "nine",
+   "th": "เก้า",
+   "respell": "NAIN",
+   "choices": [
+    {
+     "en": "nine"
+    },
+    {
+     "en": "five"
+    },
+    {
+     "en": "ten"
+    },
+    {
+     "en": "line"
+    }
+   ],
+   "answer": "nine",
+   "trap": "line",
+   "trapType": "L/N",
+   "trapNote": "ตอนนี้รู้แล้วนะ · line = เส้น · L ลมออกข้างลิ้น · N ลมออกจมูก",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "9️⃣",
+   "hint": {
+    "letters": "n___",
+    "sound": "n",
+    "word": "nine"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-15",
+   "zone": "numbers",
+   "en": "ten",
+   "th": "สิบ",
+   "respell": "TEN",
+   "choices": [
+    {
+     "en": "ten"
+    },
+    {
+     "en": "tin"
+    },
+    {
+     "en": "two"
+    },
+    {
+     "en": "one"
+    }
+   ],
+   "answer": "ten",
+   "trap": "tin",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · tin = ดีบุก / กระป๋อง · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🔟",
+   "hint": {
+    "letters": "t__",
+    "sound": "t",
+    "word": "ten"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-16",
+   "zone": "numbers",
+   "en": "four",
+   "th": "สี่",
+   "respell": "FOR",
+   "choices": [
+    {
+     "en": "four"
+    },
+    {
+     "en": "six"
+    },
+    {
+     "en": "fork"
+    },
+    {
+     "en": "three"
+    }
+   ],
+   "answer": "four",
+   "trap": "fork",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · fork = ส้อม · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "4️⃣",
+   "hint": {
+    "letters": "f___",
+    "sound": "f",
+    "word": "four"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-17",
+   "zone": "numbers",
+   "en": "eight",
+   "th": "แปด",
+   "respell": "AYT",
+   "choices": [
+    {
+     "en": "eight"
+    },
+    {
+     "en": "aid"
+    },
+    {
+     "en": "nine"
+    },
+    {
+     "en": "seven"
+    }
+   ],
+   "answer": "eight",
+   "trap": "aid",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · aid = ความช่วยเหลือ · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "8️⃣",
+   "hint": {
+    "letters": "e____",
+    "sound": "e",
+    "word": "eight"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-18",
+   "zone": "numbers",
+   "en": "fourteen",
+   "th": "สิบสี่",
+   "respell": "for-TEEN",
+   "choices": [
+    {
+     "en": "fourteen"
+    },
+    {
+     "en": "forty"
+    },
+    {
+     "en": "eleven"
+    },
+    {
+     "en": "four"
+    }
+   ],
+   "answer": "fourteen",
+   "trap": "forty",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · forty = สี่สิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:number-14",
+   "hint": {
+    "letters": "f_______",
+    "sound": "f",
+    "word": "fourteen"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-19",
+   "zone": "numbers",
+   "en": "fifteen",
+   "th": "สิบห้า",
+   "respell": "fif-TEEN",
+   "choices": [
+    {
+     "en": "twelve"
+    },
+    {
+     "en": "five"
+    },
+    {
+     "en": "fifty"
+    },
+    {
+     "en": "fifteen"
+    }
+   ],
+   "answer": "fifteen",
+   "trap": "fifty",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · fifty = ห้าสิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:number-15",
+   "hint": {
+    "letters": "f______",
+    "sound": "f",
+    "word": "fifteen"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-20",
+   "zone": "numbers",
+   "en": "sixteen",
+   "th": "สิบหก",
+   "respell": "siks-TEEN",
+   "choices": [
+    {
+     "en": "eleven"
+    },
+    {
+     "en": "sixteen"
+    },
+    {
+     "en": "six"
+    },
+    {
+     "en": "sixty"
+    }
+   ],
+   "answer": "sixteen",
+   "trap": "sixty",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · sixty = หกสิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:number-16",
+   "hint": {
+    "letters": "s______",
+    "sound": "s",
+    "word": "sixteen"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-21",
+   "zone": "numbers",
+   "en": "seventeen",
+   "th": "สิบเจ็ด",
+   "respell": "sev-en-TEEN",
+   "choices": [
+    {
+     "en": "seventeen"
+    },
+    {
+     "en": "twelve"
+    },
+    {
+     "en": "seventy"
+    },
+    {
+     "en": "seven"
+    }
+   ],
+   "answer": "seventeen",
+   "trap": "seventy",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · seventy = เจ็ดสิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:number-17",
+   "hint": {
+    "letters": "s________",
+    "sound": "s",
+    "word": "seventeen"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-22",
+   "zone": "numbers",
+   "en": "nineteen",
+   "th": "สิบเก้า",
+   "respell": "nain-TEEN",
+   "choices": [
+    {
+     "en": "ninety"
+    },
+    {
+     "en": "nineteen"
+    },
+    {
+     "en": "twenty"
+    },
+    {
+     "en": "nine"
+    }
+   ],
+   "answer": "nineteen",
+   "trap": "ninety",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · ninety = เก้าสิบ · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:number-19",
+   "hint": {
+    "letters": "n_______",
+    "sound": "n",
+    "word": "nineteen"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-23",
+   "zone": "numbers",
+   "en": "It is fifty dollars.",
+   "th": "ห้าสิบดอลลาร์ค่ะ",
+   "respell": "it iz FIF-tee DOL-erz",
+   "choices": [
+    {
+     "en": "It is twenty dollars."
+    },
+    {
+     "en": "It is fifteen dollars."
+    },
+    {
+     "en": "It is fifty dollars."
+    },
+    {
+     "en": "It is five dollars."
+    }
+   ],
+   "answer": "It is fifty dollars.",
+   "trap": "It is fifteen dollars.",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · fifteen = สิบห้า · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:money-50",
+   "hint": {
+    "letters": "I_ i_ f____ d______.",
+    "sound": "f",
+    "word": "fifty"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "nm-24",
+   "zone": "numbers",
+   "en": "Nine thirty.",
+   "th": "เก้าโมงครึ่ง",
+   "respell": "NAIN THER-tee",
+   "choices": [
+    {
+     "en": "Nine thirteen."
+    },
+    {
+     "en": "Ten thirty."
+    },
+    {
+     "en": "Nine thirty."
+    },
+    {
+     "en": "Nine o'clock."
+    }
+   ],
+   "answer": "Nine thirty.",
+   "trap": "Nine thirteen.",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · thirteen = สิบสาม · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🕤",
+   "hint": {
+    "letters": "N___ t_____.",
+    "sound": "th",
+    "word": "thirty"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-01",
+   "zone": "baby-hospital",
+   "en": "I need a Thai interpreter.",
+   "th": "ฉันต้องการล่ามภาษาไทยค่ะ",
+   "respell": "ai NEED a TAI in-TER-pri-ter",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-02",
+   "zone": "baby-hospital",
+   "en": "My water broke.",
+   "th": "น้ำคร่ำแตกแล้วค่ะ",
+   "respell": "mai WAW-ter BROHK",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-03",
+   "zone": "baby-hospital",
+   "en": "I have contractions.",
+   "th": "ฉันเจ็บท้องคลอดค่ะ",
+   "respell": "ai HAV kon-TRAK-shunz",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-04",
+   "zone": "baby-hospital",
+   "en": "I am bleeding.",
+   "th": "ฉันมีเลือดออกค่ะ",
+   "respell": "ai am BLEED-ing",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-05",
+   "zone": "baby-hospital",
+   "en": "The baby is coming.",
+   "th": "ลูกจะคลอดแล้วค่ะ",
+   "respell": "thuh BAY-bee iz KUM-ing",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-06",
+   "zone": "baby-hospital",
+   "en": "Please call my husband.",
+   "th": "กรุณาโทรหาสามีของฉันค่ะ",
+   "respell": "pleez KAWL mai HUZ-bund",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-07",
+   "zone": "baby-hospital",
+   "en": "I am pregnant.",
+   "th": "ฉันตั้งครรภ์ค่ะ",
+   "respell": "ai am PREG-nunt",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-08",
+   "zone": "baby-hospital",
+   "en": "It hurts here.",
+   "th": "เจ็บตรงนี้ค่ะ",
+   "respell": "it HERTS HEER",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-09",
+   "zone": "baby-hospital",
+   "en": "The baby is not moving.",
+   "th": "ลูกไม่ดิ้นค่ะ",
+   "respell": "thuh BAY-bee iz NOT MOO-ving",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-10",
+   "zone": "baby-hospital",
+   "en": "Where is Labor and Delivery?",
+   "th": "ห้องคลอดอยู่ที่ไหนคะ",
+   "respell": "WAIR iz LAY-ber and dee-LIV-er-ee",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": true
+  },
+  {
+   "id": "bh-11",
+   "zone": "baby-hospital",
+   "en": "My due date",
+   "th": "กำหนดคลอดของฉันค่ะ",
+   "respell": "mai DOO dayt",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-12",
+   "zone": "baby-hospital",
+   "en": "Wash the baby.",
+   "th": "อาบน้ำให้ลูก",
+   "respell": "WOSH thuh BAY-bee",
+   "choices": [
+    {
+     "en": "Hold the baby."
+    },
+    {
+     "en": "Watch the baby."
+    },
+    {
+     "en": "Wash the baby."
+    },
+    {
+     "en": "Feed the baby."
+    }
+   ],
+   "answer": "Wash the baby.",
+   "trap": "Watch the baby.",
+   "trapType": "SH/CH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · watch = เฝ้าดู · SH ลมยาว · CH หยุดสั้น",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👶🛁",
+   "hint": {
+    "letters": "W___ t__ b___.",
+    "sound": "w",
+    "word": "Wash"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-13",
+   "zone": "baby-hospital",
+   "en": "I need to rest.",
+   "th": "ฉันต้องพักค่ะ",
+   "respell": "ai NEED too REST",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-14",
+   "zone": "baby-hospital",
+   "en": "Is it a boy or a girl?",
+   "th": "ผู้ชายหรือผู้หญิงคะ",
+   "respell": "iz it a BOY or a GERL",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-15",
+   "zone": "baby-hospital",
+   "en": "Thank you, God, for my baby.",
+   "th": "ขอบคุณพระเจ้าสำหรับลูกของฉันค่ะ",
+   "respell": "THANGK yoo GOD for mai BAY-bee",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-16",
+   "zone": "baby-hospital",
+   "en": "God made my baby.",
+   "th": "พระเจ้าทรงสร้างลูกของฉัน",
+   "respell": "GOD mayd mai BAY-bee",
+   "choices": [
+    {
+     "en": "God made my baby."
+    },
+    {
+     "en": "God made the sun."
+    },
+    {
+     "en": "God made the sea."
+    },
+    {
+     "en": "God made my body."
+    }
+   ],
+   "answer": "God made my baby.",
+   "trap": "God made my body.",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · body = ร่างกาย · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👶",
+   "hint": {
+    "letters": "G__ m___ m_ b___.",
+    "sound": "b",
+    "word": "baby"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-17",
+   "zone": "baby-hospital",
+   "en": "God is with us.",
+   "th": "พระเจ้าทรงอยู่กับเรา",
+   "respell": "GOD iz WITH us",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-18",
+   "zone": "baby-hospital",
+   "en": "Please bring a blanket.",
+   "th": "ขอผ้าห่มหน่อยค่ะ",
+   "respell": "pleez BRING a BLANG-kit",
+   "choices": [
+    {
+     "en": "Please bring a towel."
+    },
+    {
+     "en": "Please bring a basket."
+    },
+    {
+     "en": "Please bring a pillow."
+    },
+    {
+     "en": "Please bring a blanket."
+    }
+   ],
+   "answer": "Please bring a blanket.",
+   "trap": "Please bring a basket.",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · basket = ตะกร้า · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:blanket",
+   "hint": {
+    "letters": "P_____ b____ a b______.",
+    "sound": "b",
+    "word": "blanket"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-19",
+   "zone": "baby-hospital",
+   "en": "Change the diaper.",
+   "th": "เปลี่ยนผ้าอ้อม",
+   "respell": "CHAYNJ thuh DAI-per",
+   "choices": [
+    {
+     "en": "Change the dipper."
+    },
+    {
+     "en": "Change the shirt."
+    },
+    {
+     "en": "Change the diaper."
+    },
+    {
+     "en": "Change the sheet."
+    }
+   ],
+   "answer": "Change the diaper.",
+   "trap": "Change the dipper.",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · dipper = กระบวย · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:diaper",
+   "hint": {
+    "letters": "C_____ t__ d_____.",
+    "sound": "d",
+    "word": "diaper"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-20",
+   "zone": "baby-hospital",
+   "en": "Feed the baby.",
+   "th": "ให้นมลูก",
+   "respell": "FEED thuh BAY-bee",
+   "choices": [
+    {
+     "en": "Feel the baby."
+    },
+    {
+     "en": "Wash the baby."
+    },
+    {
+     "en": "Hold the baby."
+    },
+    {
+     "en": "Feed the baby."
+    }
+   ],
+   "answer": "Feed the baby.",
+   "trap": "Feel the baby.",
+   "trapType": "final sound",
+   "trapNote": "ตอนนี้รู้แล้วนะ · feel = สัมผัส · เสียงท้ายคำต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🍼",
+   "hint": {
+    "letters": "F___ t__ b___.",
+    "sound": "f",
+    "word": "Feed"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-21",
+   "zone": "baby-hospital",
+   "en": "The baby is crying.",
+   "th": "ลูกกำลังร้องไห้",
+   "respell": "thuh BAY-bee iz KRAI-ing",
+   "choices": [
+    {
+     "en": "The baby is sleeping."
+    },
+    {
+     "en": "The baby is trying."
+    },
+    {
+     "en": "The baby is crying."
+    },
+    {
+     "en": "The baby is eating."
+    }
+   ],
+   "answer": "The baby is crying.",
+   "trap": "The baby is trying.",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · trying = พยายาม · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👶😢",
+   "hint": {
+    "letters": "T__ b___ i_ c_____.",
+    "sound": "c",
+    "word": "crying"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-22",
+   "zone": "baby-hospital",
+   "en": "Call the doctor.",
+   "th": "เรียกหมอหน่อยค่ะ",
+   "respell": "KAWL thuh DOK-ter",
+   "choices": [
+    {
+     "en": "Call the daughter."
+    },
+    {
+     "en": "Call the front desk."
+    },
+    {
+     "en": "Call the doctor."
+    },
+    {
+     "en": "Call the nurse."
+    }
+   ],
+   "answer": "Call the doctor.",
+   "trap": "Call the daughter.",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · daughter = ลูกสาว · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🩺",
+   "hint": {
+    "letters": "C___ t__ d_____.",
+    "sound": "d",
+    "word": "doctor"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-23",
+   "zone": "baby-hospital",
+   "en": "I need water.",
+   "th": "ขอน้ำหน่อยค่ะ",
+   "respell": "ai NEED WAW-ter",
+   "choices": [
+    {
+     "en": "I need water."
+    },
+    {
+     "en": "I need ice."
+    },
+    {
+     "en": "I need a waiter."
+    },
+    {
+     "en": "I need a towel."
+    }
+   ],
+   "answer": "I need water.",
+   "trap": "I need a waiter.",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · waiter = พนักงานเสิร์ฟ · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🚰",
+   "hint": {
+    "letters": "I n___ w____.",
+    "sound": "w",
+    "word": "water"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-24",
+   "zone": "baby-hospital",
+   "en": "Where is the bathroom?",
+   "th": "ห้องน้ำอยู่ที่ไหนคะ",
+   "respell": "WAIR iz thuh BATH-room",
+   "choices": [
+    {
+     "en": "Where is the exit?"
+    },
+    {
+     "en": "Where is the bedroom?"
+    },
+    {
+     "en": "Where is the bathroom?"
+    },
+    {
+     "en": "Where is the door?"
+    }
+   ],
+   "answer": "Where is the bathroom?",
+   "trap": "Where is the bedroom?",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bedroom = ห้องนอน · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🚻",
+   "hint": {
+    "letters": "W____ i_ t__ b_______?",
+    "sound": "b",
+    "word": "bathroom"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-25",
+   "zone": "baby-hospital",
+   "en": "Please speak slowly.",
+   "th": "กรุณาพูดช้าๆ ค่ะ",
+   "respell": "pleez SPEEK SLOH-lee",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-26",
+   "zone": "baby-hospital",
+   "en": "Take this pill.",
+   "th": "กินยาเม็ดนี้นะ",
+   "respell": "TAYK this PIL",
+   "choices": [
+    {
+     "en": "Take this cup."
+    },
+    {
+     "en": "Take this card."
+    },
+    {
+     "en": "Take this pill."
+    },
+    {
+     "en": "Take this pillow."
+    }
+   ],
+   "answer": "Take this pill.",
+   "trap": "Take this pillow.",
+   "trapType": "dropped ending",
+   "trapNote": "ตอนนี้รู้แล้วนะ · pillow = หมอน · ฟังเสียงท้ายคำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "💊",
+   "hint": {
+    "letters": "T___ t___ p___.",
+    "sound": "p",
+    "word": "pill"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-27",
+   "zone": "baby-hospital",
+   "en": "I am hungry.",
+   "th": "ฉันหิวค่ะ",
+   "respell": "ai am HUNG-gree",
+   "choices": [
+    {
+     "en": "I am angry."
+    },
+    {
+     "en": "I am happy."
+    },
+    {
+     "en": "I am cold."
+    },
+    {
+     "en": "I am hungry."
+    }
+   ],
+   "answer": "I am hungry.",
+   "trap": "I am angry.",
+   "trapType": "dropped H",
+   "trapNote": "ตอนนี้รู้แล้วนะ · angry = โกรธ · H หายใจออกเบาๆ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:hungry",
+   "hint": {
+    "letters": "I a_ h_____.",
+    "sound": "h",
+    "word": "hungry"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-01",
+   "zone": "maxwell-says",
+   "en": "I am proud of you.",
+   "th": "ผมภูมิใจในตัวคุณนะครับ",
+   "respell": "ai am PROWD uv yoo",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-02",
+   "zone": "maxwell-says",
+   "en": "Our baby is coming soon.",
+   "th": "อีกไม่นานลูกของเราก็จะมาแล้วนะครับ",
+   "respell": "OW-er BAY-bee iz KUM-ing SOON",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-03",
+   "zone": "maxwell-says",
+   "en": "Welcome to our hotel.",
+   "th": "ยินดีต้อนรับสู่โรงแรมของเราค่ะ",
+   "respell": "WEL-kum too OW-er hoh-TEL",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-04",
+   "zone": "maxwell-says",
+   "en": "Check-out is at eleven.",
+   "th": "เช็คเอาท์ 11 โมงค่ะ",
+   "respell": "CHEK-owt iz at ee-LEV-en",
+   "choices": [
+    {
+     "en": "Check-out is at ten."
+    },
+    {
+     "en": "Check-out is at eleven."
+    },
+    {
+     "en": "Check-out is at seven."
+    },
+    {
+     "en": "Check-out is at noon."
+    }
+   ],
+   "answer": "Check-out is at eleven.",
+   "trap": "Check-out is at seven.",
+   "trapType": "sound-alike",
+   "trapNote": "ตอนนี้รู้แล้วนะ · seven = เจ็ด · สองคำนี้เสียงคล้ายกัน",
+   "fill": true,
+   "tag": "Example",
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🕚",
+   "hint": {
+    "letters": "C____-out i_ a_ e_____.",
+    "sound": "e",
+    "word": "eleven"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-05",
+   "zone": "maxwell-says",
+   "en": "Breakfast is at seven thirty.",
+   "th": "อาหารเช้าเจ็ดโมงครึ่งค่ะ",
+   "respell": "BREK-fust iz at SEV-en THER-tee",
+   "choices": [
+    {
+     "en": "Breakfast is at eight."
+    },
+    {
+     "en": "Breakfast is at seven thirty."
+    },
+    {
+     "en": "Breakfast is at six thirty."
+    },
+    {
+     "en": "Breakfast is at seven thirteen."
+    }
+   ],
+   "answer": "Breakfast is at seven thirty.",
+   "trap": "Breakfast is at seven thirteen.",
+   "trapType": "-teen/-ty",
+   "trapNote": "ตอนนี้รู้แล้วนะ · thirteen = สิบสาม · -teen ยาว เน้นท้าย · -ty สั้น เน้นหน้า",
+   "fill": true,
+   "tag": "Example",
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🍳🕢",
+   "hint": {
+    "letters": "B________ i_ a_ s____ t_____.",
+    "sound": "th",
+    "word": "thirty"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-06",
+   "zone": "maxwell-says",
+   "en": "One night is one hundred twenty dollars.",
+   "th": "คืนละ 120 ดอลลาร์ค่ะ",
+   "respell": "WUN NAIT iz WUN HUN-dred TWEN-tee DOL-erz",
+   "choices": [
+    {
+     "en": "One night is one hundred twelve dollars."
+    },
+    {
+     "en": "One night is two hundred twenty dollars."
+    },
+    {
+     "en": "One night is one hundred twenty dollars."
+    },
+    {
+     "en": "One night is one hundred dollars."
+    }
+   ],
+   "answer": "One night is one hundred twenty dollars.",
+   "trap": "One night is one hundred twelve dollars.",
+   "trapType": "sound-alike",
+   "trapNote": "ตอนนี้รู้แล้วนะ · twelve = สิบสอง · สองคำนี้เสียงคล้ายกัน",
+   "fill": true,
+   "tag": "Example",
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:money-120",
+   "hint": {
+    "letters": "O__ n____ i_ o__ h______ t_____ d______.",
+    "sound": "t",
+    "word": "twenty"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-07",
+   "zone": "maxwell-says",
+   "en": "Good morning, honey.",
+   "th": "อรุณสวัสดิ์ครับ ที่รัก",
+   "respell": "good MOR-ning HUN-ee",
+   "choices": [
+    {
+     "en": "Good morning, honey."
+    },
+    {
+     "en": "Good afternoon, honey."
+    },
+    {
+     "en": "Good night, honey."
+    },
+    {
+     "en": "Good evening, honey."
+    }
+   ],
+   "answer": "Good morning, honey.",
+   "trap": "Good evening, honey.",
+   "trapType": "greeting",
+   "trapNote": "ตอนนี้รู้แล้วนะ · evening = ตอนเย็น · morning = ตอนเช้า",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🌅",
+   "hint": {
+    "letters": "G___ m______, h____.",
+    "sound": "m",
+    "word": "morning"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-08",
+   "zone": "maxwell-says",
+   "en": "I love you.",
+   "th": "ผมรักคุณครับ",
+   "respell": "ai LUV yoo",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-09",
+   "zone": "maxwell-says",
+   "en": "Good job!",
+   "th": "เก่งมากครับ",
+   "respell": "good JOB",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-10",
+   "zone": "maxwell-says",
+   "en": "Your English is good.",
+   "th": "คุณพูดภาษาอังกฤษเก่งนะครับ",
+   "respell": "yor ING-glish iz GUD",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-11",
+   "zone": "maxwell-says",
+   "en": "I will pray for you.",
+   "th": "ผมจะอธิษฐานเผื่อคุณครับ",
+   "respell": "ai wil PRAY for yoo",
+   "choices": [
+    {
+     "en": "I will cook for you."
+    },
+    {
+     "en": "I will pray for you."
+    },
+    {
+     "en": "I will pay for you."
+    },
+    {
+     "en": "I will wait for you."
+    }
+   ],
+   "answer": "I will pray for you.",
+   "trap": "I will pay for you.",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · pay = จ่ายเงิน · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🙏",
+   "hint": {
+    "letters": "I w___ p___ f__ y__.",
+    "sound": "p",
+    "word": "pray"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-12",
+   "zone": "maxwell-says",
+   "en": "Let's pray before we eat.",
+   "th": "อธิษฐานก่อนกินข้าวกันนะครับ",
+   "respell": "lets PRAY bee-FOR wee EET",
+   "choices": [
+    {
+     "en": "Let's pray before we eat."
+    },
+    {
+     "en": "Let's sit before we eat."
+    },
+    {
+     "en": "Let's wash before we eat."
+    },
+    {
+     "en": "Let's play before we eat."
+    }
+   ],
+   "answer": "Let's pray before we eat.",
+   "trap": "Let's play before we eat.",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · play = เล่น · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🙏🍽️",
+   "hint": {
+    "letters": "L____ p___ b_____ w_ e__.",
+    "sound": "p",
+    "word": "pray"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-13",
+   "zone": "maxwell-says",
+   "en": "Let's go to church.",
+   "th": "ไปโบสถ์กันนะครับ",
+   "respell": "lets GOH too CHERCH",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-14",
+   "zone": "maxwell-says",
+   "en": "Jesus is my friend.",
+   "th": "พระเยซูเป็นเพื่อนของผมครับ",
+   "respell": "JEE-zus iz mai FREND",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-15",
+   "zone": "maxwell-says",
+   "en": "Are you hungry?",
+   "th": "หิวไหมครับ",
+   "respell": "ar yoo HUNG-gree",
+   "choices": [
+    {
+     "en": "Are you tired?"
+    },
+    {
+     "en": "Are you hungry?"
+    },
+    {
+     "en": "Are you cold?"
+    },
+    {
+     "en": "Are you angry?"
+    }
+   ],
+   "answer": "Are you hungry?",
+   "trap": "Are you angry?",
+   "trapType": "dropped H",
+   "trapNote": "ตอนนี้รู้แล้วนะ · angry = โกรธ · H หายใจออกเบาๆ",
+   "fill": false,
+   "tag": null,
+   "easy": true,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "svg:hungry",
+   "hint": {
+    "letters": "A__ y__ h_____?",
+    "sound": "h",
+    "word": "hungry"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-16",
+   "zone": "maxwell-says",
+   "en": "See you soon.",
+   "th": "แล้วเจอกันนะครับ",
+   "respell": "SEE yoo SOON",
+   "choices": [
+    {
+     "en": "See you, son."
+    },
+    {
+     "en": "See you at home."
+    },
+    {
+     "en": "See you at noon."
+    },
+    {
+     "en": "See you soon."
+    }
+   ],
+   "answer": "See you soon.",
+   "trap": "See you, son.",
+   "trapType": "short/long vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · son = ลูกชาย · สระสั้นกับสระยาวต่างกัน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "👋",
+   "hint": {
+    "letters": "S__ y__ s___.",
+    "sound": "s",
+    "word": "soon"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-17",
+   "zone": "maxwell-says",
+   "en": "Wash the dishes.",
+   "th": "ล้างจานหน่อยนะครับ",
+   "respell": "WOSH thuh DISH-iz",
+   "choices": [
+    {
+     "en": "Watch the dishes."
+    },
+    {
+     "en": "Wash the cups."
+    },
+    {
+     "en": "Dry the dishes."
+    },
+    {
+     "en": "Wash the dishes."
+    }
+   ],
+   "answer": "Wash the dishes.",
+   "trap": "Watch the dishes.",
+   "trapType": "SH/CH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · watch = ดู / เฝ้า · SH ลมยาว ชฺ~ · CH สั้น หยุดก่อน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🧽🍽️",
+   "hint": {
+    "letters": "W___ t__ d_____.",
+    "sound": "w",
+    "word": "Wash"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-18",
+   "zone": "maxwell-says",
+   "en": "Wash your hands.",
+   "th": "ล้างมือนะครับ",
+   "respell": "WOSH yor HANDZ",
+   "choices": [
+    {
+     "en": "Dry your hands."
+    },
+    {
+     "en": "Wash your hands."
+    },
+    {
+     "en": "Wash your face."
+    },
+    {
+     "en": "Watch your hands."
+    }
+   ],
+   "answer": "Wash your hands.",
+   "trap": "Watch your hands.",
+   "trapType": "SH/CH",
+   "trapNote": "ตอนนี้รู้แล้วนะ · watch = ดู / ระวัง · SH ลมยาว ชฺ~ · CH สั้น หยุดก่อน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🧼👐",
+   "hint": {
+    "letters": "W___ y___ h____.",
+    "sound": "w",
+    "word": "Wash"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-19",
+   "zone": "maxwell-says",
+   "en": "Time for bed.",
+   "th": "ได้เวลานอนแล้วครับ",
+   "respell": "TAIM for BED",
+   "choices": [
+    {
+     "en": "Time for lunch."
+    },
+    {
+     "en": "Time for bread."
+    },
+    {
+     "en": "Time for bed."
+    },
+    {
+     "en": "Time for work."
+    }
+   ],
+   "answer": "Time for bed.",
+   "trap": "Time for bread.",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bread = ขนมปัง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🛏️🌙",
+   "hint": {
+    "letters": "T___ f__ b__.",
+    "sound": "b",
+    "word": "bed"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-20",
+   "zone": "maxwell-says",
+   "en": "Make the bed.",
+   "th": "ปูเตียงหน่อยครับ",
+   "respell": "MAYK thuh BED",
+   "choices": [
+    {
+     "en": "Make the soup."
+    },
+    {
+     "en": "Make the bed."
+    },
+    {
+     "en": "Make the bread."
+    },
+    {
+     "en": "Make the tea."
+    }
+   ],
+   "answer": "Make the bed.",
+   "trap": "Make the bread.",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · bread = ขนมปัง · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🛏️",
+   "hint": {
+    "letters": "M___ t__ b__.",
+    "sound": "b",
+    "word": "bed"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-21",
+   "zone": "maxwell-says",
+   "en": "Where are the keys?",
+   "th": "กุญแจอยู่ไหนครับ",
+   "respell": "WAIR ar thuh KEEZ",
+   "choices": [
+    {
+     "en": "Where are the shoes?"
+    },
+    {
+     "en": "Where are the keys?"
+    },
+    {
+     "en": "Where are the cups?"
+    },
+    {
+     "en": "Where are the kids?"
+    }
+   ],
+   "answer": "Where are the keys?",
+   "trap": "Where are the kids?",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · kids = เด็กๆ · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🔑",
+   "hint": {
+    "letters": "W____ a__ t__ k___?",
+    "sound": "k",
+    "word": "keys"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-22",
+   "zone": "maxwell-says",
+   "en": "The truck is outside.",
+   "th": "รถกระบะอยู่ข้างนอกครับ",
+   "respell": "thuh TRUK iz owt-SAID",
+   "choices": [
+    {
+     "en": "The truck is inside."
+    },
+    {
+     "en": "The dog is outside."
+    },
+    {
+     "en": "The truck is outside."
+    },
+    {
+     "en": "The track is outside."
+    }
+   ],
+   "answer": "The truck is outside.",
+   "trap": "The track is outside.",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · track = ราง / ลู่วิ่ง · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🛻",
+   "hint": {
+    "letters": "T__ t____ i_ o______.",
+    "sound": "t",
+    "word": "truck"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-23",
+   "zone": "maxwell-says",
+   "en": "Close the door.",
+   "th": "ปิดประตูหน่อยครับ",
+   "respell": "KLOHZ thuh DOR",
+   "choices": [
+    {
+     "en": "Close the door."
+    },
+    {
+     "en": "Close the drawer."
+    },
+    {
+     "en": "Close the window."
+    },
+    {
+     "en": "Open the door."
+    }
+   ],
+   "answer": "Close the door.",
+   "trap": "Close the drawer.",
+   "trapType": "dropped blend",
+   "trapNote": "ตอนนี้รู้แล้วนะ · drawer = ลิ้นชัก · ออกเสียงควบกล้ำให้ครบ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🚪",
+   "hint": {
+    "letters": "C____ t__ d___.",
+    "sound": "d",
+    "word": "door"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-24",
+   "zone": "maxwell-says",
+   "en": "Let's walk.",
+   "th": "ไปเดินเล่นกันครับ",
+   "respell": "lets WAWK",
+   "choices": [
+    {
+     "en": "Let's walk."
+    },
+    {
+     "en": "Let's rest."
+    },
+    {
+     "en": "Let's work."
+    },
+    {
+     "en": "Let's eat."
+    }
+   ],
+   "answer": "Let's walk.",
+   "trap": "Let's work.",
+   "trapType": "vowel",
+   "trapNote": "ตอนนี้รู้แล้วนะ · work = ทำงาน · เสียงสระต่างกันนิดเดียว",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "🚶",
+   "hint": {
+    "letters": "L____ w___.",
+    "sound": "w",
+    "word": "walk"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-25",
+   "zone": "maxwell-says",
+   "en": "Let's read together.",
+   "th": "อ่านหนังสือด้วยกันนะครับ",
+   "respell": "lets REED too-GETH-er",
+   "choices": [
+    {
+     "en": "Let's eat together."
+    },
+    {
+     "en": "Let's sing together."
+    },
+    {
+     "en": "Let's read together."
+    },
+    {
+     "en": "Let's lead together."
+    }
+   ],
+   "answer": "Let's read together.",
+   "trap": "Let's lead together.",
+   "trapType": "R/L",
+   "trapNote": "ตอนนี้รู้แล้วนะ · lead = นำ · R ห่อปาก ลิ้นไม่แตะ · L ลิ้นแตะหลังฟันบน",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": "📖",
+   "hint": {
+    "letters": "L____ r___ t_______.",
+    "sound": "r",
+    "word": "read"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-26",
+   "zone": "maxwell-says",
+   "en": "Put it there.",
+   "th": "วางไว้ตรงนั้นนะครับ",
+   "respell": "PUT it THAIR",
+   "choices": [
+    {
+     "en": "Put it there."
+    },
+    {
+     "en": "Put it here."
+    },
+    {
+     "en": "Put it back."
+    },
+    {
+     "en": "Put it down."
+    }
+   ],
+   "answer": "Put it there.",
+   "trap": "Put it here.",
+   "trapType": "TH/H",
+   "trapNote": "ตอนนี้รู้แล้วนะ · here = ตรงนี้ · TH แลบลิ้น · H แค่หายใจออก",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "picture",
+   "pic": null,
+   "hint": {
+    "letters": "P__ i_ t____.",
+    "sound": "th",
+    "word": "there"
+   },
+   "thDef": "วางไว้ไกลตัว",
+   "thDefStatus": "NEEDS NANCY",
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-27",
+   "zone": "maxwell-says",
+   "en": "Thank you, honey.",
+   "th": "ขอบคุณนะครับ ที่รัก",
+   "respell": "THANGK yoo HUN-ee",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "trapType": null,
+   "trapNote": null,
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": false,
+   "thStatus": "NEEDS NANCY",
+   "type": "say-it",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-28",
+   "zone": "baby-hospital",
+   "type": "picture",
+   "en": "The baby is sleeping.",
+   "th": "ลูกกำลังหลับ",
+   "respell": "thuh BAY-bee iz SLEE-ping",
+   "choices": [
+    {
+     "en": "The baby is crying."
+    },
+    {
+     "en": "The baby is sleeping."
+    },
+    {
+     "en": "The baby is eating."
+    },
+    {
+     "en": "The baby is in the bath."
+    }
+   ],
+   "answer": "The baby is sleeping.",
+   "trap": "The baby is crying.",
+   "trapType": "word meaning",
+   "trapNote": "ตอนนี้รู้แล้วนะ · sleeping = หลับ",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "pic": "👶💤",
+   "hint": {
+    "letters": "T__ b___ i_ s_______.",
+    "sound": "s",
+    "word": "sleeping"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-29",
+   "zone": "baby-hospital",
+   "type": "picture",
+   "en": "I need a nurse.",
+   "th": "ฉันต้องการพยาบาล",
+   "respell": "ai NEED uh NERS",
+   "choices": [
+    {
+     "en": "doctor"
+    },
+    {
+     "en": "nurse"
+    },
+    {
+     "en": "daughter"
+    },
+    {
+     "en": "front desk"
+    }
+   ],
+   "answer": "nurse",
+   "trap": "daughter",
+   "trapType": "word meaning",
+   "trapNote": "ตอนนี้รู้แล้วนะ · nurse = พยาบาล",
+   "fill": false,
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "pic": "svg:nurse",
+   "hint": {
+    "letters": "n____",
+    "sound": "n",
+    "word": "nurse"
+   },
+   "mode": "picture-recall",
+   "nursePhrase": false
+  },
+  {
+   "id": "bh-30",
+   "zone": "baby-hospital",
+   "type": "say-it",
+   "en": "",
+   "th": "",
+   "respell": "",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "fill": true,
+   "slot": "baby",
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-28",
+   "zone": "maxwell-says",
+   "type": "say-it",
+   "en": "",
+   "th": "",
+   "respell": "",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "fill": true,
+   "slot": "hotel",
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-29",
+   "zone": "maxwell-says",
+   "type": "say-it",
+   "en": "",
+   "th": "",
+   "respell": "",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "fill": true,
+   "slot": "husband",
+   "tag": null,
+   "easy": false,
+   "faith": false,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "mode": "english-first",
+   "nursePhrase": false
+  },
+  {
+   "id": "ms-30",
+   "zone": "maxwell-says",
+   "type": "say-it",
+   "en": "",
+   "th": "",
+   "respell": "",
+   "choices": [],
+   "answer": null,
+   "trap": null,
+   "fill": true,
+   "slot": "faith",
+   "tag": null,
+   "easy": false,
+   "faith": true,
+   "personal": true,
+   "thStatus": "NEEDS NANCY",
+   "mode": "english-first",
+   "nursePhrase": false
+  }
+ ],
+ "rewardClips": [
+  "audio/maxwell-reward-1.m4a",
+  "audio/maxwell-reward-2.m4a",
+  "audio/maxwell-reward-3.m4a",
+  "audio/maxwell-reward-4.m4a",
+  "audio/maxwell-reward-5.m4a"
+ ],
+ "gotItText": {
+  "en": "Got it",
+  "th": "เข้าใจแล้ว",
+  "thStatus": "NEEDS NANCY"
+ },
+ "meta": {
+  "totalCards": 156,
+  "writtenCards": 152,
+  "emptySlots": [
+   "bh-30",
+   "ms-28",
+   "ms-29",
+   "ms-30"
+  ],
+  "sayItWritten": 33,
+  "sayItTotal": 37,
+  "sayItBabyHospital": 17,
+  "audioClips": {
+   "zone": 6,
+   "reward": 5,
+   "boss": 5,
+   "total": 16
+  },
+  "pictureCards": 119,
+  "personalCards": 75,
+  "personalWritten": 71,
+  "thDefCards": 15,
+  "pics": {
+   "pictureCards": 119,
+   "emoji": 75,
+   "svg": 30,
+   "fallback": 14
+  },
+  "svgToDraw": 42,
+  "encouragementLines": 7,
+  "trophies": 17,
+  "bossLevels": [
+   4,
+   7,
+   9,
+   13,
+   16
+  ],
+  "nursePhrases": [
+   "bh-01",
+   "bh-02",
+   "bh-03",
+   "bh-04",
+   "bh-05",
+   "bh-06",
+   "bh-07",
+   "bh-08",
+   "bh-09",
+   "bh-10"
+  ],
+  "uiTextEntries": 15,
+  "coinMeter": "10 gold coins (svg:coin) = the pip meter; visual only, not a currency"
+ },
+ "trophies": [
+  {
+   "id": "sword-iron",
+   "cat": "gear",
+   "slot": "sword",
+   "pic": "svg:sword-iron",
+   "unlock": {
+    "type": "start"
+   },
+   "en": "Iron sword",
+   "th": "ดาบเหล็ก",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "cape-green",
+   "cat": "gear",
+   "slot": "cape",
+   "pic": "svg:cape-green",
+   "unlock": {
+    "type": "start"
+   },
+   "en": "Green cape",
+   "th": "ผ้าคลุมสีเขียว",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "theme-meadow",
+   "cat": "themes",
+   "slot": "mapTheme",
+   "pic": "🌿",
+   "unlock": {
+    "type": "start"
+   },
+   "en": "Green meadow",
+   "th": "ทุ่งหญ้าสีเขียว",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "jewel-emerald",
+   "cat": "jewels",
+   "slot": "featuredJewel",
+   "pic": "svg:jewel-emerald",
+   "unlock": {
+    "type": "level",
+    "n": 2
+   },
+   "en": "Green jewel",
+   "th": "อัญมณีสีเขียว",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "cape-purple",
+   "cat": "gear",
+   "slot": "cape",
+   "pic": "svg:cape-purple",
+   "unlock": {
+    "type": "level",
+    "n": 3
+   },
+   "en": "Purple cape",
+   "th": "ผ้าคลุมสีม่วง",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "jewel-amethyst",
+   "cat": "jewels",
+   "slot": "featuredJewel",
+   "pic": "svg:jewel-amethyst",
+   "unlock": {
+    "type": "pipFills",
+    "n": 3
+   },
+   "en": "Purple jewel",
+   "th": "อัญมณีสีม่วง",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "jewel-sapphire",
+   "cat": "jewels",
+   "slot": "featuredJewel",
+   "pic": "svg:jewel-sapphire",
+   "unlock": {
+    "type": "daysPlayed",
+    "n": 3
+   },
+   "en": "Blue jewel",
+   "th": "อัญมณีสีน้ำเงิน",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "sparkle",
+   "cat": "gear",
+   "slot": "sparkle",
+   "pic": "✨",
+   "unlock": {
+    "type": "bossesWon",
+    "n": 1
+   },
+   "en": "Right-answer sparkle",
+   "th": "ประกายเมื่อตอบถูก",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "tunic-rose",
+   "cat": "gear",
+   "slot": "tunic",
+   "pic": "svg:tunic-rose",
+   "unlock": {
+    "type": "daysPlayed",
+    "n": 5
+   },
+   "en": "Rose tunic",
+   "th": "เสื้อสีชมพู",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "sword-gold",
+   "cat": "gear",
+   "slot": "sword",
+   "pic": "svg:sword-gold",
+   "unlock": {
+    "type": "pipFills",
+    "n": 10
+   },
+   "en": "Glowing gold sword",
+   "th": "ดาบทองเรืองแสง",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "theme-flowers",
+   "cat": "themes",
+   "slot": "mapTheme",
+   "pic": "🌸",
+   "unlock": {
+    "type": "daysPlayed",
+    "n": 7
+   },
+   "en": "Flower meadow",
+   "th": "ทุ่งดอกไม้",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "cape-sky",
+   "cat": "gear",
+   "slot": "cape",
+   "pic": "svg:cape-sky",
+   "unlock": {
+    "type": "pipFills",
+    "n": 20
+   },
+   "en": "Sky blue cape",
+   "th": "ผ้าคลุมสีฟ้า",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "jewel-ruby",
+   "cat": "jewels",
+   "slot": "featuredJewel",
+   "pic": "svg:jewel-ruby",
+   "unlock": {
+    "type": "bossesWon",
+    "n": 2
+   },
+   "en": "Red jewel",
+   "th": "อัญมณีสีแดง",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "frame-hearts",
+   "cat": "themes",
+   "slot": "cardFrame",
+   "pic": "💗",
+   "unlock": {
+    "type": "pipFills",
+    "n": 30
+   },
+   "en": "Heart card frame",
+   "th": "กรอบการ์ดหัวใจ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "sword-crystal",
+   "cat": "gear",
+   "slot": "sword",
+   "pic": "svg:sword-crystal",
+   "unlock": {
+    "type": "bossesWon",
+    "n": 3
+   },
+   "en": "Crystal sword",
+   "th": "ดาบคริสตัล",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "theme-stars",
+   "cat": "themes",
+   "slot": "mapTheme",
+   "pic": "🌌",
+   "unlock": {
+    "type": "daysPlayed",
+    "n": 14
+   },
+   "en": "Starry night",
+   "th": "คืนเต็มไปด้วยดาว",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "id": "jewel-topaz",
+   "cat": "jewels",
+   "slot": "featuredJewel",
+   "pic": "svg:jewel-topaz",
+   "unlock": {
+    "type": "bossesWon",
+    "n": 5
+   },
+   "en": "Gold jewel",
+   "th": "อัญมณีสีทอง",
+   "thStatus": "NEEDS NANCY"
+  }
+ ],
+ "trophyRules": {
+  "defaults": {
+   "sword": "sword-iron",
+   "cape": "cape-green",
+   "tunic": null,
+   "sparkle": null,
+   "mapTheme": "theme-meadow",
+   "cardFrame": null,
+   "featuredJewel": null
+  },
+  "unlockTypes": {
+   "start": "owned from first launch",
+   "level": "player level >= n",
+   "pipFills": "ten-pip meter filled n times (lifetime)",
+   "daysPlayed": "distinct days she played (never decreases)",
+   "bossesWon": "distinct bosses won"
+  },
+  "note": "Visual only. No spending, no prices. Unlocks are awarded automatically, once each, by ledger id unlock:<id>. Equipping is free and never changes progress."
+ },
+ "picPlan": {
+  "rule": "Picture-recall cards show ONE picture of the ANSWER. pic = emoji string (Apple Color Emoji, offline on iOS), 'svg:<id>' (draw it), or null (fallback: zone emblem at 40% + Thai definition enlarged in the frame). The English answer is never shown before she answers.",
+  "svg": [
+   "baby-scale-8",
+   "blanket",
+   "blanket-white",
+   "crib",
+   "crowd-5000",
+   "diaper",
+   "door-13",
+   "floor-4",
+   "front-desk",
+   "glass",
+   "hungry",
+   "light-rays",
+   "line-queue",
+   "money-120",
+   "money-50",
+   "number-14",
+   "number-15",
+   "number-16",
+   "number-17",
+   "number-19",
+   "nurse",
+   "shape-line",
+   "size-big",
+   "size-long",
+   "size-small",
+   "swatch-gold",
+   "swatch-pink",
+   "towel",
+   "towel-white"
+  ],
+  "trophySvg": [
+   "cape-green",
+   "cape-purple",
+   "cape-sky",
+   "jewel-amethyst",
+   "jewel-emerald",
+   "jewel-ruby",
+   "jewel-sapphire",
+   "jewel-topaz",
+   "sword-crystal",
+   "sword-gold",
+   "sword-iron",
+   "tunic-rose"
+  ],
+  "svgCount": 29,
+  "trophySvgCount": 12,
+  "totalSvgToDraw": 42,
+  "counts": {
+   "pictureCards": 119,
+   "emoji": 75,
+   "svg": 30,
+   "fallback": 14
+  },
+  "fallbackIds": [
+   "ph-09",
+   "ph-10",
+   "sw-09",
+   "sw-10",
+   "sw-11",
+   "sw-12",
+   "sw-13",
+   "sw-14",
+   "sw-16",
+   "sw-20",
+   "sw-21",
+   "sw-22",
+   "sw-23",
+   "ms-26"
+  ],
+  "uiSvg": [
+   "coin"
+  ],
+  "uiSvgCount": 1
+ },
+ "uiText": {
+  "thDefRule": {
+   "note": "Thai line on the question screen = card.thDef if present (a short hint, not a translation), else card.th. All NEEDS NANCY."
+  },
+  "askMax": {
+   "en": "If you don't know the meaning, ask Max and he can help you.",
+   "th": "ถ้าไม่เข้าใจความหมาย ถามแม็กซ์ได้นะ เขาช่วยได้",
+   "thStatus": "NEEDS NANCY"
+  },
+  "hintButton": {
+   "en": "Hint",
+   "th": "คำใบ้",
+   "thStatus": "NEEDS NANCY"
+  },
+  "itStartsWith": {
+   "en": "It starts with",
+   "th": "ขึ้นต้นด้วยเสียง",
+   "thStatus": "NEEDS NANCY"
+  },
+  "sayItOutLoud": {
+   "en": "Say it out loud",
+   "th": "พูดออกเสียงดังๆ",
+   "thStatus": "NEEDS NANCY"
+  },
+  "myStuff": {
+   "en": "My Stuff",
+   "th": "ของของฉัน",
+   "thStatus": "NEEDS NANCY"
+  },
+  "jewels": {
+   "en": "Jewels",
+   "th": "อัญมณี",
+   "thStatus": "NEEDS NANCY"
+  },
+  "gear": {
+   "en": "Gear",
+   "th": "อุปกรณ์",
+   "thStatus": "NEEDS NANCY"
+  },
+  "themes": {
+   "en": "Themes",
+   "th": "ธีม",
+   "thStatus": "NEEDS NANCY"
+  },
+  "earnedShelf": {
+   "en": "You earned this!",
+   "th": "เก่งมาก! รางวัลนี้เป็นของคุณ",
+   "thStatus": "NEEDS NANCY"
+  },
+  "wearing": {
+   "en": "Wearing",
+   "th": "กำลังใช้",
+   "thStatus": "NEEDS NANCY"
+  },
+  "unlocksAtLevel": {
+   "en": "Unlocks at level {n}",
+   "th": "ได้รับเมื่อถึงเลเวล {n}",
+   "thStatus": "NEEDS NANCY"
+  },
+  "unlocksPips": {
+   "en": "Fill the coins {n} times",
+   "th": "เติมเหรียญให้เต็ม {n} ครั้ง",
+   "thStatus": "NEEDS NANCY"
+  },
+  "unlocksDays": {
+   "en": "Play on {n} days",
+   "th": "เล่น {n} วัน",
+   "thStatus": "NEEDS NANCY"
+  },
+  "unlocksBosses": {
+   "en": "Win {n} boss battles",
+   "th": "ชนะบอส {n} ครั้ง",
+   "thStatus": "NEEDS NANCY"
+  }
+ },
+ "encouragement": [
+  {
+   "en": "I love you.",
+   "th": "ผมรักคุณนะ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "en": "You can do it.",
+   "th": "คุณทำได้ครับ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "en": "I'm proud of you.",
+   "th": "ผมภูมิใจในตัวคุณครับ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "en": "Take your time.",
+   "th": "ค่อยๆ คิดนะครับ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "en": "You are doing great.",
+   "th": "คุณทำได้ดีมากครับ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "en": "God loves you.",
+   "th": "พระเจ้าทรงรักคุณ",
+   "thStatus": "NEEDS NANCY"
+  },
+  {
+   "en": "It's okay to rest.",
+   "th": "พักได้นะครับ ไม่เป็นไร",
+   "thStatus": "NEEDS NANCY"
+  }
+ ]
+}

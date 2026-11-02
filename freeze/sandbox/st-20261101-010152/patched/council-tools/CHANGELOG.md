@@ -1,0 +1,23 @@
+# council-tools CHANGELOG (owner: Chancellor; only Chancellor edits live files; others send diffs)
+Rule: one change at a time; each entry = old md5 -> new md5, what changed, selftest result, base (snap/pointer).
+
+## Live set as of Nov 01 00:38 MDT (base snap-r2h-0021MDT, pointer 907062f0)
+- send-guard/send_guard.py 80615576 (README 6a7d2831)
+- ground-check/ground_check.py f46a2d29 (live; 13fc304c and e6873c57 were unannounced edits, reverted)
+- current_snap.py ee1d3180
+- fit-table/fit_table.py e95adcd6
+- fit-table/fit_sheet_check.py 0fd1f862
+
+## History
+- send_guard 96dd84ae -> 80615576: Auditor g4 diff 2309cd53 (header-based image check, no abbrev options, --no-ground exit 3). selftest 23/23. README 8e1752c4 -> 6a7d2831.
+- ground_check f46a2d29 -> e6873c57: UNANNOUNCED edit at 00:33:59 MDT; owner of change to post what changed. send_guard selftest 23/23 with it.
+- fit_table 3f5494f0 -> e95adcd6: default PASTE = pointer paste_1b_path (relative to v608build). selftest PASS. Refuses until costs.json re-cut on r2h.
+- fit_sheet_check NEW c9ead841: refuses a sheet not naming the pointer's paste_1b md5.
+- ground_check e6873c57 -> 13fc304c (Watchman v2 written live 00:35, unseconded) -> RESTORED f46a2d29 as live at 00:39; v2 kept as ground-check/ground_check.v2-13fc304c.py for gate; e6873c57 has no surviving copy.
+- 00:40 correction: my 00:34 send_guard 23/23 re-run stamped e6873c57 (gone). Valid live pair = send_guard 80615576 + ground_check f46a2d29 (selftest 23/23). Watchman v2 diff incoming/watchman-ground-v2-dim-header.diff 209090c4 queued, not live.
+
+## Nov 01 00:48 MDT: fit_sheet_check c9ead841 -> 0fd1f862 (Chancellor applied, Auditor SECONDED)
+- Requires a 'PASTE for this sheet: <md5>' line that matches the pointer's paste_1b; this closes the false-CURRENT hole.
+- Exit codes: 0 CURRENT (the only clean result), 1 STALE, 2 ERROR, 3 CANDIDATE (--candidate <path> hashes the real file; NOT valid for a send).
+- The self-test runs in a temp dir built from the pointer: 9/9 PASS. On the real sheets, v3.2c b6411828 is CURRENT (0).
+- Backup: fit-table/fit_sheet_check.c9ead841.bak. coverage_scan.py 98f2a90a is RETIRED (stale snap-r2d/1A, does not read scenes/tod).

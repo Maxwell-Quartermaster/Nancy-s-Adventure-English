@@ -1,0 +1,867 @@
+{
+ "generated": "2026-11-01 07:28 MDT",
+ "candidate_dir": "v608build/scene-fill-20261101/renders/",
+ "candidate_rows": 75,
+ "candidate_by": {
+  "lake-home|n|320x568": 1,
+  "lake-front-desk|n|320x568": 1,
+  "lake-home|m|320x568": 1,
+  "REST|e|320x568": 1,
+  "lake-front-desk|d|390x844": 1,
+  "lake-front-desk|n|390x844": 1,
+  "lake-home|e|390x844": 1,
+  "lake-kitchen|n|320x568": 1,
+  "meadow-pond|a|320x568": 1,
+  "meadow-pond|n|390x844": 1,
+  "meadow-park|a|390x844": 1,
+  "fields-farm|n|390x844": 1,
+  "MENU|n|320x568": 2,
+  "REST|sunset|390x844": 1,
+  "lake-home|e|320x568": 1,
+  "lake-front-desk|d|320x568": 1,
+  "meadow-pond|m|320x568": 1,
+  "MENU|n|390x844": 2,
+  "lake-kitchen|m|390x844": 1,
+  "meadow-park|n|320x568": 1,
+  "TITLE|a|390x844": 1,
+  "MENU|e|390x844": 2,
+  "meadow-park|e|390x844": 1,
+  "MENU|e|320x568": 2,
+  "fields-farm|d|390x844": 1,
+  "lake-kitchen|d|390x844": 1,
+  "lake-kitchen|a|320x568": 1,
+  "lake-kitchen|m|320x568": 1,
+  "fields-farm|e|320x568": 1,
+  "meadow-park|a|320x568": 1,
+  "REST|starry|320x568": 1,
+  "fields-farm|d|320x568": 1,
+  "lake-kitchen|e|390x844": 1,
+  "fields-farm|n|320x568": 1,
+  "TITLE|e|320x568": 1,
+  "meadow-pond|d|320x568": 1,
+  "lake-front-desk|base|390x844": 1,
+  "meadow-pond|d|390x844": 1,
+  "fields-farm|m|320x568": 1,
+  "lake-front-desk|m|390x844": 1,
+  "TITLE|a|320x568": 1,
+  "lake-front-desk|e|390x844": 1,
+  "lake-kitchen|e|320x568": 1,
+  "meadow-pond|n|320x568": 1,
+  "meadow-park|n|390x844": 1,
+  "lake-home|a|320x568": 1,
+  "fields-farm|m|390x844": 1,
+  "lake-kitchen|d|320x568": 1,
+  "meadow-pond|m|390x844": 1,
+  "lake-front-desk|base|320x568": 1,
+  "lake-home|a|390x844": 1,
+  "lake-front-desk|a|320x568": 1,
+  "meadow-pond|a|390x844": 1,
+  "TITLE|n|320x568": 2,
+  "lake-home|m|390x844": 1,
+  "meadow-park|e|320x568": 1,
+  "lake-front-desk|e|320x568": 1,
+  "lake-front-desk|a|390x844": 1,
+  "TITLE|e|390x844": 1,
+  "lake-home|d|320x568": 1,
+  "meadow-park|d|390x844": 1,
+  "lake-front-desk|m|320x568": 1,
+  "lake-kitchen|n|390x844": 1,
+  "lake-home|n|390x844": 1,
+  "lake-kitchen|a|390x844": 1,
+  "REST|sunset|320x568": 1,
+  "meadow-park|d|320x568": 1,
+  "fields-farm|e|390x844": 1,
+  "lake-home|d|390x844": 1,
+  "REST|starry|390x844": 1
+ },
+ "cells": [
+  {
+   "loc": "meadow-park",
+   "tod": "m",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "in_progress": [
+    "320x568",
+    "375x667",
+    "375x812",
+    "390x844"
+   ],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "375x667",
+    "375x812",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-park",
+   "tod": "d",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-park",
+   "tod": "a",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-park",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-park",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-pond",
+   "tod": "m",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-pond",
+   "tod": "d",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-pond",
+   "tod": "a",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-pond",
+   "tod": "e",
+   "best": "IN-PROGRESS",
+   "current": [],
+   "in_progress": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "meadow-pond",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-home",
+   "tod": "m",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-home",
+   "tod": "d",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-home",
+   "tod": "a",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-home",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-home",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-kitchen",
+   "tod": "m",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-kitchen",
+   "tod": "d",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-kitchen",
+   "tod": "a",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-kitchen",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-kitchen",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-front-desk",
+   "tod": "m",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-front-desk",
+   "tod": "d",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-front-desk",
+   "tod": "a",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-front-desk",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-front-desk",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "fields-farm",
+   "tod": "m",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "fields-farm",
+   "tod": "d",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "fields-farm",
+   "tod": "a",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "in_progress": [
+    "390x844"
+   ],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "fields-farm",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "fields-farm",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "forest-woods",
+   "tod": "m",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "forest-woods",
+   "tod": "d",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "forest-woods",
+   "tod": "a",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "forest-woods",
+   "tod": "e",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "forest-woods",
+   "tod": "n",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "375x667",
+    "375x812",
+    "390x844"
+   ],
+   "in_progress": [
+    "320x568",
+    "390x844"
+   ],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "375x667",
+    "375x812",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "lake-front-desk",
+   "tod": "base",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  }
+ ],
+ "extra": [
+  {
+   "loc": "TITLE",
+   "tod": "m",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "TITLE",
+   "tod": "a",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "TITLE",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "TITLE",
+   "tod": "n",
+   "best": "CURRENT",
+   "current": [
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [
+    "320x568"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "MENU",
+   "tod": "m",
+   "best": "IN-PROGRESS",
+   "current": [],
+   "in_progress": [
+    "320x568",
+    "390x844"
+   ],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "MENU",
+   "tod": "a",
+   "best": "CURRENT",
+   "current": [
+    "320x568",
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "MENU",
+   "tod": "e",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "MENU",
+   "tod": "n",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "REST",
+   "tod": "e",
+   "best": "CURRENT",
+   "current": [
+    "390x844"
+   ],
+   "in_progress": [],
+   "candidate": [
+    "320x568"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "REST",
+   "tod": "sunset",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  },
+  {
+   "loc": "REST",
+   "tod": "starry",
+   "best": "CANDIDATE",
+   "current": [],
+   "in_progress": [],
+   "candidate": [
+    "320x568",
+    "390x844"
+   ],
+   "covered": [
+    "320x568",
+    "390x844"
+   ],
+   "missing": []
+  }
+ ],
+ "best_counts_35": {
+  "CURRENT": 7,
+  "CANDIDATE": 27,
+  "IN-PROGRESS": 1
+ },
+ "gaps": []
+}

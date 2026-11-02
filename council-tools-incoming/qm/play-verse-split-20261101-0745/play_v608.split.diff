@@ -1,0 +1,51 @@
+--- old/play_v608.py	2026-11-01 14:40:10.147409437 +0000
++++ new/play_v608.py	2026-11-01 14:40:10.171410793 +0000
+@@ -47,6 +47,21 @@
+ C = {c['id']: c for c in D['cards']}
+ if C['sw-19']['choices'] == ['eat', 'sink', 'run', 'think']: C['sw-19']['choices'] = ['eat', 'sink', 'three', 'think']   # round2.py P6, a QM-relayed staged fix (Auditor eb2674be H1): 'three' gives "t____ /th/" two 5-letter fits
+ G = json.load(open('/workspace/v604build/screens/guardians.json'))   # dumped from mock-t346u/map_t346u.guardian() by dump_guardians.py
++# QM play-verse-fix (Nov 1 2026, candidate): verse text comes straight from the PASTE JSON line, never retyped here (PASTE :344, :404, verses.textRule).
++# NAE_PASTE overrides the path; default is the pointer's paste_1b_path. No quote marks are added; '\n' renders as a line break (white-space:pre-line).
++def _paste_json():
++    p = os.environ.get('NAE_PASTE')
++    if not p:
++        ptr = dict(l.split('=', 1) for l in open('/workspace/v608build/CURRENT-SNAP.txt', encoding='utf-8').read().splitlines() if '=' in l)
++        p = '/workspace/v608build/' + ptr['paste_1b_path']
++    for l in open(p, encoding='utf-8'):
++        if l.startswith('{"version"'): return json.loads(l)
++    raise SystemExit('no PASTE JSON line in ' + p)
++PJ = _paste_json()
++def verse(ref):   # the one PASTE verse with this ref: verses.rest or verses.weekly[]
++    vs = [v for v in [PJ['verses']['rest']] + PJ['verses']['weekly'] if v['ref'] == ref]; assert len(vs) == 1, ref; return vs[0]
++def vtx(t, cls, extra=''):   # a verse string exactly as in the file; a '\n' poetry break shows as a line break
++    return tx(t, cls, ((extra + ';') if extra else '') + 'white-space:pre-line') if '\n' in t else tx(t, cls, extra)
+ def u(k, **kw):
+     en, th = U[k]['en'], U[k]['th']
+     for a, b in kw.items(): en = en.replace('{%s}' % a, str(b)); th = th.replace('{%s}' % a, str(b))
+@@ -263,7 +278,7 @@
+     if hint == 'letters' and _one: lines = [f"<div style='display:flex;gap:8px;justify-content:center;align-items:baseline'>{tx(c['en'][:1] + '_' * (len(c['en']) - 1) + ' /th/', 'e20 nw')}{tx(u('itStartsWith')[1], 't17 nw', 'line-height:1.7')}</div>"] + lines   # r2c: hint and its Thai on one line at 320
+     elif hint == 'letters': lines = [tx(c['en'][:1] + '_' * (len(c['en']) - 1) + ' /th/', 'e20'), tx(u('itStartsWith')[1], 't17', 'line-height:1.7')] + lines   # V2: Thai on its own 1.7 line
+     if hint == 'jesus':
+-        j = D['jesusWords'][0]   # 9:05 PM MDT follow-up: at 320 the bubble sits just above the card (at top 250 it covered the card's Thai line); 390 unchanged
++        j = PJ['jesusWords'][0]   # play-verse-fix: from the PASTE (same bytes as cards.json). 9:05 PM MDT follow-up: at 320 the bubble sits just above the card (at top 250 it covered the card's Thai line); 390 unchanged
+         out += (f"<div class='abs'{' data-overlay=1' if SE else ''} style='{'left:16px;right:16px;bottom:120px' if SE else 'left:16px;top:250px;width:250px'};z-index:6;box-sizing:border-box;background:#FFF0B8;border:2px solid #10170F;border-radius:14px;box-shadow:inset 0 0 0 3px #E8B84A,inset 0 0 0 4px #10170F,0 4px 0 #10170F;padding:10px 12px'>"
+                 + tx(u('jesusWords')[0] + ' · ' + j['ref'], 'e15') + tx(j['en'], 'e15') + tx(j['th'], 't17') + '</div>')
+     if SE and R2C_SE: return out + card(lines, 132 if hint == 'letters' else 104)
+@@ -308,14 +323,15 @@
+ add(34, 'echo-forest-sound-duel', 'extrapolated', 'Q-shot-t328u-forest scene (night woods, Nancy, sword not dagger) + Echo Knight (gap 1) + parchment card', lambda: duel(None))
+ add(35, 'sound-duel-right', 'extrapolated', 'as 34, cheer pose, Gold glow tile', lambda: duel('right'))
+ add(36, 'sound-duel-round-done', 'extrapolated', 'as 34, roundDone ribbon + card', lambda: duel('done'))
++REST_CH = 320   # play-verse-fix: card height with the Thai line (was 260); 300 at 320 x 568 so the card clears the restScreen ribbon
+ def rest():
+     b = Z.outdoor(W, H, 'meadow')
+     ev = "<div class='abs' style='left:0;top:0;width:390px;height:844px;background:linear-gradient(#4F64A8 0%,#F4A862 45%,rgba(244,168,98,0) 60%);opacity:.72'></div>"   # t288u evening sky (gap 17)
+     hn, wk, hx, k, feet, *_ = SC['meadow']
+     b += ev + Z.hero(hn, k, hx, feet - 177*k, wk, 'cheer')
+-    v = D['restScreen']
++    v = D['restScreen']; r_ = PJ['verses']['rest']   # play-verse-fix: verses.rest from the PASTE, no added quotes, Thai under the English (as the 29 scroll)
+     return (b + top('meadow') + ribbon(v['en'], v['th'], 150).replace('white-space:nowrap', 'white-space:normal;width:340px') +
+-            card([tx('Matthew 11:28', 'e20'), tx('“Come to me, all who labor and are heavy laden, and I will give you rest.”', 'e15', 'font-size:18px'), tx('ESV · THSV11', 'e15')], 260, [gbtn(*u('keepGoing'), 140), gbtn(*u('restNow'), 140)]))
++            card([tx(r_['ref'], 'e20'), vtx(r_['en'], 'e15', 'font-size:18px'), vtx(r_['th'], 't17'), tx(r_['enSource'] + ' · ' + r_['thSource'], 'e15')], 300 if SE else REST_CH, [gbtn(*u('keepGoing'), 140), gbtn(*u('restNow'), 140)]))
+ add(37, 'rest-screen', 'extrapolated', 'gap 17: the evening sky (t288u palette) over the meadow scene + parchment card', rest)
+ def paused():
+     b = Z.screen('meadow', 'ask', W, H)

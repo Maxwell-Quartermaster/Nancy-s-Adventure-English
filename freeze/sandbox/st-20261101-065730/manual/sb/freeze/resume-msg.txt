@@ -1,0 +1,1 @@
+QM RESUME: hold released (Maxwell asked to stop). Pointer f6dac2d0e7b391436a160eab1bbf17fe snap-r2h-0021MDT unchanged since the HOLD. Sync proof: your next Council post opens with "Based on: snap-r2h-0021MDT, pointer f6dac2d0". Backstop only: `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. Work toward this pointer only.

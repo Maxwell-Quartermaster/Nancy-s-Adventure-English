@@ -1,0 +1,17 @@
+[
+ "v6-08 M4: the hearth is a corner button in 6.2 and the main-menu test: False",
+ "v6-08 PASTE = FINAL + the cards.json block (minified, byte-identical to the cards file); 188116 chars <= 188,200; Thai reserve unused; banked 84 (+1012 vs v6-03): False",
+ "v6-08 PASTE = FINAL + the cards.json block (one JSON block, minified, byte-identical to the cards file); 188116 chars <= 188,200; Thai reserve 188,200-188,500 unused; banked 84: False",
+ "v6-08 PASTE = FINAL + the cards.json block; 188116 chars <= 188,200, banked 84, Thai reserve untouched; spec banked line matches: False",
+ "v6-08 R2b PASTE - 1748 = the sum of round2.py edit sizes (+908): False",
+ "v6-08 R2b each round2b/eb2674be edit present once, its old text gone (4 edits): False",
+ "v6-08 R2b round2.py PATCHES applied in order to snap-1748MDT 95a4d0fc give the staged PASTE byte for byte: False 188116",
+ "v6-08 R2b spec banked line = 188,200 minus the PASTE length: False",
+ "v6-08 R2b undoing round2.py in reverse recovers 95a4d0fc: False",
+ "v6-08 R2c trim clause matches the staged trim (1A 'a room ..., never over a target' once; 1B front desk and kitchen, no 'never over'): False",
+ "v6-08 diff-only: undoing B1, A2, VP1-VP10, H1, P1, SC, G, WM S1/G1, AP1, F2-F4, AG g1-g9/R1/A1, E1 (#rE), dailyGift, the 4 scene uiText keys, sizeSort, 6 pair pics, G1, uiTextEntries and the version gives the v6-07 PASTE byte for byte (+6266 chars): False",
+ "v6-08 find-and-tap targets in the t376u template: \"44 pt+ tap areas, 8 px apart, no overlap\" and the rest of the rule: False",
+ "v6-08 generator qm_v608.py --dry re-runs from v6-07 and gives the file on disk (188116 chars): False",
+ "v6-08 spec .md: Pacing note in Auditor wording (stale ten-days sentence gone), headroom note verbatim; banked figure = 188,200 - PASTE chars; PASTE has no pacing line: False",
+ "v6-08 spec banked line matches: False"
+]

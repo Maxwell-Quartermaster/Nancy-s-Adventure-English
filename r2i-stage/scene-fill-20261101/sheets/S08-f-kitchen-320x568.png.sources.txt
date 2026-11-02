@@ -1,0 +1,17 @@
+0e082e8cc8c50e4553df643482ef0ce1  /workspace/v608build/scene-fill-20261101/renders/F-kitchen-m-320x568.png
+bf24dbd7d9669c43534670cbc314e292  /workspace/v608build/scene-fill-20261101/html/F-kitchen-m-320x568.html
+953e425bc7c7c40d51188c442292d1dd  /workspace/v608build/scene-fill-20261101/renders/F-kitchen-d-320x568.png
+9c6e7b0b84a05c3e2ee9d5fcc90c1073  /workspace/v608build/scene-fill-20261101/html/F-kitchen-d-320x568.html
+e6505f7e8e8bfed26f2d70cdb1f0be15  /workspace/v608build/scene-fill-20261101/renders/F-kitchen-a-320x568.png
+e245091a267dd530f93a6ac5a3c1411f  /workspace/v608build/scene-fill-20261101/html/F-kitchen-a-320x568.html
+cee5e67eb8eaa04f36263d28527b2593  /workspace/v608build/scene-fill-20261101/renders/F-kitchen-e-320x568.png
+31719120c4ed303635562bc53788de9a  /workspace/v608build/scene-fill-20261101/html/F-kitchen-e-320x568.html
+c7f5e52aa17014826f6375e52b3b7ca9  /workspace/v608build/scene-fill-20261101/renders/F-kitchen-n-320x568.png
+46c190f19f521dc02728bbc925539ff8  /workspace/v608build/scene-fill-20261101/html/F-kitchen-n-320x568.html
+caption S08 · Home Lake · Kitchen meal set · 320x568
+caption 1. Morning
+caption 2. Midday
+caption 3. Afternoon
+caption 4. Evening
+caption 5. Night
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

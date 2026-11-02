@@ -1,0 +1,35 @@
+# Home-lake rooms, 320-frame ceiling crop (3B)
+- 14-reveal-gentle-retry-390x844: shows from design y 302, 320 cap 295: no ceiling to trim (scene fit only)
+- 14-reveal-gentle-retry-375x812: shows from design y 319, 320 cap 295: no ceiling to trim (scene fit only)
+- 16-say-it-maxwell-says-day1-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- 16-say-it-maxwell-says-day1-375x812: scale 0.958; trimmed design y 131-295 (157 pt) to the 320 frame (3B)
+- 17-two-answer-pray-high-five-390x844: kept its ceiling, never over a target (1A ", never over a target"): the trim would cut ['highFive', 'pray']
+- 17-two-answer-pray-high-five-375x812: kept its ceiling, never over a target (1A ", never over a target"): the trim would cut ['highFive', 'pray']
+- 18-two-answer-wrong-tap-390x844: kept its ceiling, never over a target (1A ", never over a target"): the trim would cut ['highFive', 'pray']
+- 18-two-answer-wrong-tap-375x812: kept its ceiling, never over a target (1A ", never over a target"): the trim would cut ['highFive', 'pray']
+- 19-two-answer-right-done-390x844: kept its ceiling, never over a target (1A ", never over a target"): the trim would cut ['highFive', 'pray']
+- 19-two-answer-right-done-375x812: kept its ceiling, never over a target (1A ", never over a target"): the trim would cut ['highFive', 'pray']
+- 20-kitchen-say-it-picture-first-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- 20-kitchen-say-it-picture-first-375x812: scale 0.958; trimmed design y 131-295 (157 pt) to the 320 frame (3B)
+- 21-kitchen-say-it-shown-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- 21-kitchen-say-it-shown-375x812: scale 0.958; trimmed design y 131-295 (157 pt) to the 320 frame (3B)
+- 22-kitchen-server-talk-390x844: scale 1.000; trimmed design y 257-295 (38 pt) to the 320 frame (3B)
+- 22-kitchen-server-talk-375x812: scale 0.962; trimmed design y 272-295 (22 pt) to the 320 frame (3B)
+- 32-home-lake-scene-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- 32-home-lake-scene-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- 33-say-it-baby-hospital-reply-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- 33-say-it-baby-hospital-reply-375x812: scale 0.962; trimmed design y 138-295 (151 pt) to the 320 frame (3B)
+- 54-phrase-ask-card-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- 54-phrase-ask-card-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- zone-lake-ask-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- zone-lake-ask-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- lake-step1-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- lake-step1-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- lake-step2-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- lake-step2-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- lake-step3-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- lake-step3-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- lake-step4-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- lake-step4-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)
+- lake-step5-390x844: scale 1.000; trimmed design y 123-295 (172 pt) to the 320 frame (3B)
+- lake-step5-375x812: scale 0.958; trimmed design y 130-295 (158 pt) to the 320 frame (3B)

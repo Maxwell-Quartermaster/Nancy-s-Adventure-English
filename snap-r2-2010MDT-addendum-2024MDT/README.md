@@ -1,0 +1,1 @@
+Addendum to snap-r2-2010MDT (left untouched): Chancellor 8:20 PM MDT round totals on the ledger and every pick sheet footer. PASTEs, FINALs, specs, cards, verses, title, checks, round2.py and showcase are unchanged from snap-r2-2010MDT.

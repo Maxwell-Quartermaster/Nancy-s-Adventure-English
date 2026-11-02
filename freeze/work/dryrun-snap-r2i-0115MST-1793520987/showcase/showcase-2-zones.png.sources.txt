@@ -1,0 +1,13 @@
+df0c2776a4e29a89656dc7ec487fdc49  /workspace/v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-390x844.png
+1b630f1a74d39ff477c43ea2cd5298e2  /workspace/v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-320x568.png
+d043ad155035d246a6d679e8035a874c  /workspace/v608build/r2h-rerun-stage/r2h/png/31-golden-fields-scene-390x844.png
+d21ee0f110e8ed9dcf32abc00a831a03  /workspace/v608build/r2h-rerun-stage/r2h/png/32-home-lake-scene-390x844.png
+839517e85fe5be978d625f66d277d81e  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-390x844.png
+42fcd45ff9a600906b98d1462142dfea  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-320x568.png
+caption Nancy's eyes, sheet 2: Each zone's first scene
+caption Word Meadow, first ask.
+caption Word Meadow at 320 × 568.
+caption Golden Fields.
+caption Home Lake.
+caption Echo Forest, first ask.
+caption Echo Forest at 320 × 568.

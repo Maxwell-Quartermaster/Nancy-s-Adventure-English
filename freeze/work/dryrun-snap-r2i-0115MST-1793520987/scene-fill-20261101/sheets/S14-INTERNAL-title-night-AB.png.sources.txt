@@ -1,0 +1,8 @@
+f38f05ab29f6a36a0fa17a4f07327a6e  /workspace/v608build/scene-fill-20261101/renders/title-n-A-320x568.png
+28accb2702cc25e8741f9c22c2bf5bfa  /workspace/v608build/scene-fill-20261101/html/title-n-A-320x568.html
+1b5a95dda319e8a8c520cd9292549a75  /workspace/v608build/scene-fill-20261101/renders/title-n-B-320x568.png
+94b697c04c5074198c5ec583fd8eb285  /workspace/v608build/scene-fill-20261101/html/title-n-B-320x568.html
+caption S14 · INTERNAL · Title night 320 · A vs B (not for Maxwell)
+caption 1. A · "Good night!" (PASTE greetNight)
+caption 2. B · "Good evening!" (instructor patch --night)
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

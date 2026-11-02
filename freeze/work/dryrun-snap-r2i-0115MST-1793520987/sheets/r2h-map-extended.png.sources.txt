@@ -1,0 +1,10 @@
+dbd2ba9e39cfd6048625c3d2343016f5  /workspace/v608build/r2h-rerun-stage/r2h/png/05-map-day1-390x844.png
+2486fb47571994494e770d294655f325  /workspace/v608build/r2h-rerun-stage/r2h/png/map-extended-390x844.png
+17865e75ea6e4d9e510bb0e377bef96b  /workspace/v608build/r2h-rerun-stage/r2h/png/map-extended-320x568.png
+caption Adventure Map: hero select moved to the main menu, sheet extended down
+caption Map now (r2h) 390
+caption 05-map-day1-390x844
+caption Map extended 390
+caption map-extended-390x844
+caption Map extended 320
+caption map-extended-320x568

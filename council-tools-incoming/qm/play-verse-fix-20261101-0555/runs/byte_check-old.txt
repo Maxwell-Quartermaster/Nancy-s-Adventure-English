@@ -1,0 +1,34 @@
+26-guardian-hint-jesus-words-320x568 | verse | .jesusWords[0].en | PASS | MATCH 66 bytes
+26-guardian-hint-jesus-words-320x568 | verse | .jesusWords[0].th | PASS | MATCH 230 bytes
+26-guardian-hint-jesus-words-320x568 | label | .uiText.jesusWords.en + " · " + .jesusWords[0].ref | PASS | MATCH 27 bytes
+26-guardian-hint-jesus-words-375x667 | verse | .jesusWords[0].en | PASS | MATCH 66 bytes
+26-guardian-hint-jesus-words-375x667 | verse | .jesusWords[0].th | PASS | MATCH 230 bytes
+26-guardian-hint-jesus-words-375x667 | label | .uiText.jesusWords.en + " · " + .jesusWords[0].ref | PASS | MATCH 27 bytes
+26-guardian-hint-jesus-words-390x844 | verse | .jesusWords[0].en | PASS | MATCH 66 bytes
+26-guardian-hint-jesus-words-390x844 | verse | .jesusWords[0].th | PASS | MATCH 230 bytes
+26-guardian-hint-jesus-words-390x844 | label | .uiText.jesusWords.en + " · " + .jesusWords[0].ref | PASS | MATCH 27 bytes
+30-new-weapon-gift-320x568 | verse | .verses.weekly[2].en | FAIL | MISSING (no segment carries it)
+30-new-weapon-gift-320x568 | verse | .verses.weekly[2].th | FAIL | MISSING (no segment carries it)
+30-new-weapon-gift-320x568 | label | .trophies[36].word[0] + " · " + .trophies[36].ref | PASS | MATCH 25 bytes
+30-new-weapon-gift-375x667 | verse | .verses.weekly[2].en | FAIL | MISSING (no segment carries it)
+30-new-weapon-gift-375x667 | verse | .verses.weekly[2].th | FAIL | MISSING (no segment carries it)
+30-new-weapon-gift-375x667 | label | .trophies[36].word[0] + " · " + .trophies[36].ref | PASS | MATCH 25 bytes
+30-new-weapon-gift-390x844 | verse | .verses.weekly[2].en | FAIL | MISSING (no segment carries it)
+30-new-weapon-gift-390x844 | verse | .verses.weekly[2].th | FAIL | MISSING (no segment carries it)
+30-new-weapon-gift-390x844 | label | .trophies[36].word[0] + " · " + .trophies[36].ref | PASS | MATCH 25 bytes
+37-rest-screen-320x568 | verse | .verses.rest.en | FAIL | DIFF at byte 0: render b'\xe2\x80\x9cCome ' vs PASTE b'Come to ' (render 78 B, PASTE 72 B)
+37-rest-screen-320x568 | verse | .verses.rest.th | FAIL | MISSING (no segment carries it)
+37-rest-screen-320x568 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-320x568 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-320x568 | stray | verse 'Matthew 11:28' en | FAIL | segment not byte-identical: '“Come to me, all who labor and are heavy'
+37-rest-screen-375x667 | verse | .verses.rest.en | FAIL | DIFF at byte 0: render b'\xe2\x80\x9cCome ' vs PASTE b'Come to ' (render 78 B, PASTE 72 B)
+37-rest-screen-375x667 | verse | .verses.rest.th | FAIL | MISSING (no segment carries it)
+37-rest-screen-375x667 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-375x667 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-375x667 | stray | verse 'Matthew 11:28' en | FAIL | segment not byte-identical: '“Come to me, all who labor and are heavy'
+37-rest-screen-390x844 | verse | .verses.rest.en | FAIL | DIFF at byte 0: render b'\xe2\x80\x9cCome ' vs PASTE b'Come to ' (render 78 B, PASTE 72 B)
+37-rest-screen-390x844 | verse | .verses.rest.th | FAIL | MISSING (no segment carries it)
+37-rest-screen-390x844 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-390x844 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-390x844 | stray | verse 'Matthew 11:28' en | FAIL | segment not byte-identical: '“Come to me, all who labor and are heavy'
+TOTAL checks 33  PASS 18  FAIL 15  (PASTE /workspace/v608build/r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md)

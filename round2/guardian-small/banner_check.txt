@@ -1,0 +1,19 @@
+24-guardian-run-entry-320x568.html banner bottom 119, scene top 125 (plate), hero [183] pt ok
+25-guardian-hint-letters-320x568.html banner bottom 119, scene top 125 (plate), hero [182] pt ok
+26-guardian-hint-jesus-words-320x568.html banner bottom 119, scene top 125 (plate), hero [183] pt ok
+27-guardian-kneels-320x568.html banner bottom 119, scene top 125 (plate), hero [165] pt ok
+28-guardian-win-320x568.html banner bottom 119, scene top 125 (tree), hero [163] pt ok
+24-guardian-run-entry-375x667.html banner bottom 131, scene top 137 (plate), hero [181] pt ok
+25-guardian-hint-letters-375x667.html banner bottom 131, scene top 137 (plate), hero [177] pt ok
+26-guardian-hint-jesus-words-375x667.html banner bottom 131, scene top 137 (plate), hero [181] pt ok
+27-guardian-kneels-375x667.html banner bottom 131, scene top 137 (plate), hero [180] pt ok
+28-guardian-win-375x667.html banner bottom 131, scene top 218 (tree), hero [144] pt ok
+24-guardian-run-entry-375x812.html banner bottom 131, scene top 218 (plate), hero [216] pt ok
+25-guardian-hint-letters-375x812.html banner bottom 131, scene top 216 (plate), hero [216] pt ok
+26-guardian-hint-jesus-words-375x812.html banner bottom 131, scene top 218 (plate), hero [216] pt ok
+27-guardian-kneels-375x812.html banner bottom 131, scene top 217 (plate), hero [216] pt ok
+28-guardian-win-375x812.html banner bottom 131, scene top 233 (tree), hero [216] pt ok
+W24-walk-B-320x568.html banner bottom 119, scene top 125 (tree), hero [171] pt ok
+W24-walk-B-375x667.html banner bottom 131, scene top 160 (tree), hero [216] pt ok
+W24-walk-B-390x844.html banner bottom 131, scene top 325 (tree), hero [225] pt ok
+TOTAL banner/edge issues: 0

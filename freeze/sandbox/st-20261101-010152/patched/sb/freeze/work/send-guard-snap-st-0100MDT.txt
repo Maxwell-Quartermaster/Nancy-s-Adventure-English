@@ -1,0 +1,5 @@
+send-guard a5df0fe6 current_snap 2285d01e ground_check f46a2d29 snap snap-st-0100MDT MANIFEST 2ce0d228 renders-MANIFEST d30a9563
+pointer 81d83fab snap snap-st-0100MDT
+OK   2b14fcd0 /workspace/v608build/freeze/sandbox/st-20261101-010152/patched/stage/sheets/05-map-day1-390x844.png = MANIFEST.md5:./sheets/05-map-day1-390x844.png
+OK   8dcce473 /workspace/v608build/freeze/sandbox/st-20261101-010152/patched/stage/showcase/showcase-1-opening.png = MANIFEST.md5:./showcase/showcase-1-opening.png
+RESULT CLEAR: 2 files, 0 problems

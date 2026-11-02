@@ -1,0 +1,50 @@
+{
+ "fits26": {
+  "375x667": [
+   0.8032250615763546,
+   30.871112992610847,
+   -51.06403940886696
+  ],
+  "320x568": [
+   0.8155403325123153,
+   0.9696351600985338,
+   -65.9458128078818
+  ]
+ },
+ "fixlog": [
+  "26-guardian-hint-jesus-words-320x568: brush-stroke walkway removed (16/16S look)",
+  "26-guardian-hint-jesus-words-320x568: 3 ground dots -> tufts",
+  "26-guardian-hint-jesus-words-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)",
+  "26-guardian-hint-jesus-words-375x667: brush-stroke walkway removed (16/16S look)",
+  "26-guardian-hint-jesus-words-375x667: 3 ground dots -> tufts",
+  "26-guardian-hint-jesus-words-375x667: tree at x 372 base y 300 -> 376.3 (+76.3)",
+  "26-guardian-hint-jesus-words-390x844: brush-stroke walkway removed (16/16S look)",
+  "26-guardian-hint-jesus-words-390x844: 3 ground dots -> tufts",
+  "26-guardian-hint-jesus-words-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)",
+  "30-new-weapon-gift-320x568: tree at x 305 base y 196 -> 218.6 (+22.6)",
+  "30-new-weapon-gift-375x667: brush-stroke walkway removed (16/16S look)",
+  "30-new-weapon-gift-375x667: 3 ground dots -> tufts",
+  "30-new-weapon-gift-375x667: tree at x 372 base y 300 -> 370.8 (+70.8)",
+  "30-new-weapon-gift-390x844: brush-stroke walkway removed (16/16S look)",
+  "30-new-weapon-gift-390x844: 3 ground dots -> tufts",
+  "30-new-weapon-gift-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)",
+  "37-rest-screen-320x568: tree at x 305 base y 196 -> 218.6 (+22.6)",
+  "37-rest-screen-375x667: brush-stroke walkway removed (16/16S look)",
+  "37-rest-screen-375x667: 3 ground dots -> tufts",
+  "37-rest-screen-375x667: tree at x 372 base y 300 -> 370.8 (+70.8)",
+  "37-rest-screen-390x844: brush-stroke walkway removed (16/16S look)",
+  "37-rest-screen-390x844: 3 ground dots -> tufts",
+  "37-rest-screen-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)"
+ ],
+ "files": {
+  "26-guardian-hint-jesus-words-320x568": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/26-guardian-hint-jesus-words-320x568.html",
+  "26-guardian-hint-jesus-words-375x667": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/26-guardian-hint-jesus-words-375x667.html",
+  "26-guardian-hint-jesus-words-390x844": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/26-guardian-hint-jesus-words-390x844.html",
+  "30-new-weapon-gift-320x568": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/30-new-weapon-gift-320x568.html",
+  "30-new-weapon-gift-375x667": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/30-new-weapon-gift-375x667.html",
+  "30-new-weapon-gift-390x844": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/30-new-weapon-gift-390x844.html",
+  "37-rest-screen-320x568": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/37-rest-screen-320x568.html",
+  "37-rest-screen-375x667": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/37-rest-screen-375x667.html",
+  "37-rest-screen-390x844": "/workspace/v608build/council-tools-incoming/qm/play-verse-split-20261101-0745/html/new/37-rest-screen-390x844.html"
+ }
+}

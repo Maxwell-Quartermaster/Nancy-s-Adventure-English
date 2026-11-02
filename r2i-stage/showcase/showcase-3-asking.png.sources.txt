@@ -1,0 +1,13 @@
+f8770270b77d040ba477b9e5a4157765  /workspace/v608build/r2h-rerun-stage/r2h/png/54-phrase-ask-card-390x844.png
+e04e71a97bdb72315a39e3a02c7be16b  /workspace/v608build/r2h-rerun-stage/r2h/png/11-word-meadow-scene-right-390x844.png
+71dee973d95db2f7b4b852032cafe067  /workspace/v608build/r2h-rerun-stage/r2h/png/12-reveal-right-390x844.png
+f77519fb64332d6e46d05c5fd49e0fce  /workspace/v608build/r2h-rerun-stage/r2h/png/18-two-answer-wrong-tap-390x844.png
+058b61a7141010e1a216d3bcffcdaac0  /workspace/v608build/r2h-rerun-stage/r2h/png/14-reveal-gentle-retry-390x844.png
+e45e003628b7492f3dc44ecf3a0cfcd8  /workspace/v608build/r2h-rerun-stage/r2h/png/15-say-it-sight-words-390x844.png
+caption Nancy's eyes, sheet 3: Asking and answering
+caption An ask card with a phrase.
+caption A right answer.
+caption The reveal: a hug card to say out loud.
+caption A gentle miss on a two-answer card.
+caption After a miss: "Now you know it."
+caption Say it: a sight-word card.

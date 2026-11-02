@@ -1,0 +1,20 @@
+c4145646e874017a7f50441d6c74b52d  /workspace/v608build/scene-fill-20261101/renders/E-front-desk-base-320x568.png
+8d8f52e3f4ff7a4025c8512b0c4db0cf  /workspace/v608build/scene-fill-20261101/html/E-front-desk-base-320x568.html
+57c5180f3a256b7b46edfa9a3f30795f  /workspace/v608build/scene-fill-20261101/renders/E-front-desk-m-320x568.png
+2eded43f2eb6e6becd8a031331d3f8f5  /workspace/v608build/scene-fill-20261101/html/E-front-desk-m-320x568.html
+47f07167bea67606a36cf9526d17e675  /workspace/v608build/scene-fill-20261101/renders/E-front-desk-d-320x568.png
+a9b5581478808615d161a9ac3e3ba068  /workspace/v608build/scene-fill-20261101/html/E-front-desk-d-320x568.html
+d57dd1250b7b93fd1c0b775544e7e287  /workspace/v608build/scene-fill-20261101/renders/E-front-desk-a-320x568.png
+f3d39e351b22dc9c0679427bfdcfee5d  /workspace/v608build/scene-fill-20261101/html/E-front-desk-a-320x568.html
+49ebd3cbd50f0c515632488f4e11767b  /workspace/v608build/scene-fill-20261101/renders/E-front-desk-e-320x568.png
+13211a196f137d1c02174722afc37ae7  /workspace/v608build/scene-fill-20261101/html/E-front-desk-e-320x568.html
+4ae739137737fb0d693c5fb15bdfc344  /workspace/v608build/scene-fill-20261101/renders/E-front-desk-n-320x568.png
+1ac1d5650b3e7da570c864cfb4983f20  /workspace/v608build/scene-fill-20261101/html/E-front-desk-n-320x568.html
+caption S10 · Home Lake · Front desk · 320x568
+caption 1. No tint
+caption 2. Morning
+caption 3. Midday
+caption 4. Afternoon
+caption 5. Evening
+caption 6. Night
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

@@ -1,0 +1,2 @@
+# spec prose: no fail wording, no lives, no timers; wrong taps are graced
+{"version": "t", "wrongText": {"en": "Now you know it", "th": "ตอนนี้รู้แล้วนะ"}, "uiText": {"tapPrompt": {"en": "Can you find the {word}?", "th": "หา {word} เจอไหม"}, "pantry": {"en": "Shop", "th": "ร้านดาวทอง"}}, "cards": [{"id": "bh-24", "en": "Where is the bathroom?", "th": "ห้องน้ำอยู่ที่ไหนคะ"}, {"id": "cs-22", "en": "long", "choices": [{"en": "wrong"}]}]}

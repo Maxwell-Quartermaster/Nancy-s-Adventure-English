@@ -1,0 +1,926 @@
+{
+ "chrome": "Chrome/156.0.8078.47",
+ "26-guardian-hint-jesus-words-320x568": {
+  "iw": 320,
+  "ih": 568,
+  "dpr": 2,
+  "docW": 320,
+  "card": [
+   16,
+   456,
+   304,
+   560
+  ],
+  "thai": [
+   {
+    "t": "ผู้พิทักษ์คำ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     202,
+     80,
+     274,
+     109
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "พระบิดาทรงรักเราอย่างไร ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     30,
+     349,
+     290,
+     436
+    ],
+    "scrollBox": false,
+    "lines": 3
+   },
+   {
+    "t": "คิด",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     471,
+     283,
+     500
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   95,
+   86
+  ],
+  "contentBottom": 560
+ },
+ "26-guardian-hint-jesus-words-375x667": {
+  "iw": 375,
+  "ih": 667,
+  "dpr": 2,
+  "docW": 375,
+  "card": [
+   16,
+   463,
+   359,
+   659
+  ],
+  "thai": [
+   {
+    "t": "เลเวล 3",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     238,
+     23,
+     289,
+     51
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ผู้พิทักษ์คำ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     229,
+     92,
+     302,
+     121
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "พระบิดาทรงรักเราอย่างไร ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     30,
+     312,
+     252,
+     398
+    ],
+    "scrollBox": false,
+    "lines": 3
+   },
+   {
+    "t": "คิด",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     478,
+     338,
+     507
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   178,
+   178
+  ],
+  "contentBottom": 633
+ },
+ "26-guardian-hint-jesus-words-390x844": {
+  "iw": 390,
+  "ih": 844,
+  "dpr": 2,
+  "docW": 390,
+  "card": [
+   16,
+   640,
+   374,
+   836
+  ],
+  "thai": [
+   {
+    "t": "เลเวล 3",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     238,
+     23,
+     289,
+     51
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ผู้พิทักษ์คำ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     237,
+     92,
+     309,
+     121
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "พระบิดาทรงรักเราอย่างไร ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     30,
+     312,
+     252,
+     398
+    ],
+    "scrollBox": false,
+    "lines": 3
+   },
+   {
+    "t": "คิด",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     655,
+     353,
+     684
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   178,
+   178
+  ],
+  "contentBottom": 810
+ },
+ "30-new-weapon-gift-320x568": {
+  "iw": 320,
+  "ih": 568,
+  "dpr": 2,
+  "docW": 320,
+  "card": [
+   16,
+   215,
+   304,
+   560
+  ],
+  "thai": [
+   {
+    "t": "ทุ่งหญ้าคำศัพท์",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     160,
+     80,
+     266,
+     109
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "New weapon!ได้อาวุธใหม่!",
+    "fs": "16px",
+    "lh": "normal",
+    "lhRatio": "NaN",
+    "inCard": false,
+    "box": [
+     79,
+     150,
+     241,
+     212
+    ],
+    "scrollBox": false,
+    "lines": null
+   },
+   {
+    "t": "ของขวัญจากผู้พิทักษ์คำ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     356,
+     283,
+     385
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ใช้อาวุธนี้",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     46,
+     516,
+     164,
+     545
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "เข้าใจแล้ว",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     201,
+     516,
+     266,
+     545
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   331,
+   327
+  ],
+  "contentBottom": 555,
+  "vbox": {
+   "scrollH": 256,
+   "clientH": 82,
+   "thaiLinesVisible": 0,
+   "thaiLinesTotal": 6
+  }
+ },
+ "30-new-weapon-gift-375x667": {
+  "iw": 375,
+  "ih": 667,
+  "dpr": 2,
+  "docW": 375,
+  "card": [
+   16,
+   239,
+   359,
+   659
+  ],
+  "thai": [
+   {
+    "t": "เลเวล 3",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     238,
+     23,
+     289,
+     51
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ทุ่งหญ้าคำศัพท์",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     160,
+     92,
+     266,
+     121
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "New weapon!ได้อาวุธใหม่!",
+    "fs": "16px",
+    "lh": "normal",
+    "lhRatio": "NaN",
+    "inCard": false,
+    "box": [
+     106,
+     150,
+     269,
+     212
+    ],
+    "scrollBox": false,
+    "lines": null
+   },
+   {
+    "t": "ของขวัญจากผู้พิทักษ์คำ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     380,
+     338,
+     409
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "อย่ากลัวเลย เพราะเราอยู่",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     493,
+     338,
+     557
+    ],
+    "scrollBox": true,
+    "lines": 4
+   },
+   {
+    "t": "ใช้อาวุธนี้",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     69,
+     588,
+     186,
+     617
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "เข้าใจแล้ว",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     235,
+     588,
+     300,
+     617
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   402,
+   402
+  ],
+  "contentBottom": 627,
+  "vbox": {
+   "scrollH": 182,
+   "clientH": 130,
+   "thaiLinesVisible": 2.21,
+   "thaiLinesTotal": 4
+  }
+ },
+ "30-new-weapon-gift-390x844": {
+  "iw": 390,
+  "ih": 844,
+  "dpr": 2,
+  "docW": 390,
+  "card": [
+   16,
+   416,
+   374,
+   836
+  ],
+  "thai": [
+   {
+    "t": "เลเวล 3",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     238,
+     23,
+     289,
+     51
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ทุ่งหญ้าคำศัพท์",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     160,
+     92,
+     266,
+     121
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "New weapon!ได้อาวุธใหม่!",
+    "fs": "16px",
+    "lh": "normal",
+    "lhRatio": "NaN",
+    "inCard": false,
+    "box": [
+     114,
+     150,
+     276,
+     212
+    ],
+    "scrollBox": false,
+    "lines": null
+   },
+   {
+    "t": "ของขวัญจากผู้พิทักษ์คำ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     557,
+     353,
+     586
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "อย่ากลัวเลย เพราะเราอยู่",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     670,
+     353,
+     734
+    ],
+    "scrollBox": true,
+    "lines": 4
+   },
+   {
+    "t": "ใช้อาวุธนี้",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     76,
+     765,
+     194,
+     794
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "เข้าใจแล้ว",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     242,
+     765,
+     308,
+     794
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   402,
+   402
+  ],
+  "contentBottom": 804,
+  "vbox": {
+   "scrollH": 182,
+   "clientH": 130,
+   "thaiLinesVisible": 2.21,
+   "thaiLinesTotal": 4
+  }
+ },
+ "37-rest-screen-320x568": {
+  "iw": 320,
+  "ih": 568,
+  "dpr": 2,
+  "docW": 320,
+  "card": [
+   16,
+   260,
+   304,
+   560
+  ],
+  "thai": [
+   {
+    "t": "ทุ่งหญ้าคำศัพท์",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     160,
+     80,
+     266,
+     109
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "Great work today! Keep g",
+    "fs": "16px",
+    "lh": "normal",
+    "lhRatio": "NaN",
+    "inCard": false,
+    "box": [
+     -10,
+     150,
+     330,
+     237
+    ],
+    "scrollBox": false,
+    "lines": null
+   },
+   {
+    "t": "บรรดาผู้เหน็ดเหนื่อยและแ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     356,
+     283,
+     443
+    ],
+    "scrollBox": false,
+    "lines": 3
+   },
+   {
+    "t": "เล่นต่อ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     49,
+     490,
+     143,
+     519
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "พักก่อน",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     191,
+     490,
+     257,
+     519
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [
+   {
+    "t": "Great work today! Keep going o",
+    "viewport": true,
+    "box": [
+     -10,
+     150,
+     330,
+     237
+    ]
+   }
+  ],
+  "btn": [],
+  "faceScroll": [
+   282,
+   282
+  ],
+  "contentBottom": 530
+ },
+ "37-rest-screen-375x667": {
+  "iw": 375,
+  "ih": 667,
+  "dpr": 2,
+  "docW": 375,
+  "card": [
+   16,
+   339,
+   359,
+   659
+  ],
+  "thai": [
+   {
+    "t": "เลเวล 3",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     238,
+     23,
+     289,
+     51
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ทุ่งหญ้าคำศัพท์",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     160,
+     92,
+     266,
+     121
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "Great work today! Keep g",
+    "fs": "16px",
+    "lh": "normal",
+    "lhRatio": "NaN",
+    "inCard": false,
+    "box": [
+     18,
+     150,
+     358,
+     237
+    ],
+    "scrollBox": false,
+    "lines": null
+   },
+   {
+    "t": "บรรดาผู้เหน็ดเหนื่อยและแ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     416,
+     338,
+     473
+    ],
+    "scrollBox": false,
+    "lines": 2
+   },
+   {
+    "t": "เล่นต่อ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     65,
+     520,
+     160,
+     549
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "พักก่อน",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     229,
+     520,
+     296,
+     549
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   302,
+   302
+  ],
+  "contentBottom": 560
+ },
+ "37-rest-screen-390x844": {
+  "iw": 390,
+  "ih": 844,
+  "dpr": 2,
+  "docW": 390,
+  "card": [
+   16,
+   516,
+   374,
+   836
+  ],
+  "thai": [
+   {
+    "t": "เลเวล 3",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     238,
+     23,
+     289,
+     51
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "ทุ่งหญ้าคำศัพท์",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": false,
+    "box": [
+     160,
+     92,
+     266,
+     121
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "Great work today! Keep g",
+    "fs": "16px",
+    "lh": "normal",
+    "lhRatio": "NaN",
+    "inCard": false,
+    "box": [
+     25,
+     150,
+     365,
+     237
+    ],
+    "scrollBox": false,
+    "lines": null
+   },
+   {
+    "t": "บรรดาผู้เหน็ดเหนื่อยและแ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     37,
+     593,
+     353,
+     650
+    ],
+    "scrollBox": false,
+    "lines": 2
+   },
+   {
+    "t": "เล่นต่อ",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     73,
+     697,
+     167,
+     726
+    ],
+    "scrollBox": false,
+    "lines": 1
+   },
+   {
+    "t": "พักก่อน",
+    "fs": "17px",
+    "lh": "28.9px",
+    "lhRatio": "1.700",
+    "inCard": true,
+    "box": [
+     237,
+     697,
+     303,
+     726
+    ],
+    "scrollBox": false,
+    "lines": 1
+   }
+  ],
+  "outside": [],
+  "btn": [],
+  "faceScroll": [
+   302,
+   302
+  ],
+  "contentBottom": 737
+ }
+}

@@ -1,0 +1,8 @@
+snap=snap-b
+manifest_md5=ed204d231a31bbbdedc3ba293680b162
+renders_manifest_md5=049b4586eb95b3d6eea4d5c4a83eddffb
+paste_1a_md5=x
+paste_1a_chars=1
+bank=1
+paste_1b_md5=4a3baee3562899093ed358c2091e1f0d
+paste_1b_path=p1b.md

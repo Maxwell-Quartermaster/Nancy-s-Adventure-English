@@ -1,0 +1,10 @@
+snap=r2h-rerun-stage
+manifest_md5=ac0582cab9a8dbf47edee6c223bf5ee2
+renders_manifest_md5=1089c48e8feb5ebbc1c8111d9b1a02d1
+paste_1a_md5=fca9ce69a1f1d5e556e8414efc524a18
+paste_1a_chars=187746
+paste_1b_md5=317e91ce86f073c961f8169183d2bbd3
+paste_1b_path=r2h-rerun-stage/trim-1B/nancys-adventure-english-v6-08-PASTE.md
+paste_1b_chars=188116
+bank=84
+note=TRIAL pointer for send-guard on the unfrozen stage only; not CURRENT-SNAP.txt

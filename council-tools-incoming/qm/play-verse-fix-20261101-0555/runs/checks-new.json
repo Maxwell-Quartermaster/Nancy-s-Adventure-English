@@ -1,0 +1,1166 @@
+{
+ "26-guardian-hint-jesus-words-320x568.html": {
+  "dom": {
+   "W": 320,
+   "Hh": 568,
+   "taps": [
+    [
+     "back",
+     16,
+     8,
+     72,
+     70
+    ],
+    [
+     "hearth-flame",
+     256,
+     15,
+     304,
+     63
+    ],
+    [
+     "plate",
+     28,
+     506,
+     88,
+     554
+    ],
+    [
+     "plate",
+     96,
+     506,
+     156,
+     554
+    ],
+    [
+     "plate",
+     164,
+     506,
+     224,
+     554
+    ],
+    [
+     "plate",
+     232,
+     506,
+     292,
+     554
+    ]
+   ],
+   "issues": []
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     -65,
+     319,
+     622
+    ],
+    "cov": {
+     "path": 3,
+     "card:\"คิด eat sink three think\"": 3
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"🤔\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     -65,
+     319,
+     622
+    ],
+    "cov": {
+     "card:\"คิด eat sink three think\"": 3,
+     "path": 1
+    },
+    "nc": 4,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     98,
+     263,
+     180,
+     446
+    ],
+    "cov": {
+     "div:\"Words of Jesus · John 15\"": 3,
+     "div:\"พระบิดาทรงรักเราอย่างไร \"": 6
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     193,
+     252,
+     279,
+     446
+    ],
+    "cov": {
+     "div:\"Words of Jesus · John 15\"": 3,
+     "div:\"พระบิดาทรงรักเราอย่างไร \"": 6
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     193,
+     246,
+     279,
+     310
+    ],
+    "cov": {
+     "div:\"Words of Jesus · John 15\"": 3
+    },
+    "nc": 3,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     245,
+     336,
+     288,
+     380
+    ],
+    "cov": {
+     "div:\"As the Father has loved \"": 3,
+     "div:\"พระบิดาทรงรักเราอย่างไร \"": 6
+    },
+    "nc": 9,
+    "off": 0
+   }
+  ],
+  "banner": {
+   "bb": 118.890625,
+   "st": 124.89886474609375,
+   "who": "plate",
+   "taps": [
+    [
+     "back",
+     16,
+     72,
+     8
+    ],
+    [
+     "hearth-flame",
+     256,
+     304,
+     15
+    ],
+    [
+     "plate",
+     28,
+     88,
+     505.890625
+    ],
+    [
+     "plate",
+     96,
+     156,
+     505.890625
+    ],
+    [
+     "plate",
+     164,
+     224,
+     505.890625
+    ],
+    [
+     "plate",
+     232,
+     292,
+     505.890625
+    ]
+   ],
+   "hh": [
+    183
+   ]
+  }
+ },
+ "26-guardian-hint-jesus-words-375x667.html": {
+  "dom": {
+   "W": 375,
+   "Hh": 667,
+   "taps": [
+    [
+     "back",
+     16,
+     8,
+     76,
+     82
+    ],
+    [
+     "hearth-flame",
+     303,
+     17,
+     359,
+     73
+    ],
+    [
+     "plate",
+     23,
+     513,
+     183,
+     565
+    ],
+    [
+     "plate",
+     193,
+     513,
+     353,
+     565
+    ],
+    [
+     "plate",
+     23,
+     575,
+     183,
+     627
+    ],
+    [
+     "plate",
+     193,
+     575,
+     353,
+     627
+    ]
+   ],
+   "issues": []
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     30,
+     -51,
+     344,
+     626
+    ],
+    "cov": {
+     "div:\"As the Father has loved \"": 2,
+     "card:\"คิด eat sink three think\"": 3,
+     "path": 1
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"🤔\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     30,
+     -51,
+     344,
+     626
+    ],
+    "cov": {
+     "div:\"As the Father has loved \"": 2,
+     "card:\"คิด eat sink three think\"": 3,
+     "path": 1
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     127,
+     273,
+     207,
+     454
+    ],
+    "cov": {
+     "div:\"As the Father has loved \"": 3,
+     "div:\"พระบิดาทรงรักเราอย่างไร \"": 3
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     220,
+     263,
+     305,
+     453
+    ],
+    "cov": {
+     "div:\"As the Father has loved \"": 1,
+     "div:\"พระบิดาทรงรักเราอย่างไร \"": 1,
+     "div:\"Words of Jesus · John 15\"": 2,
+     "circle": 1
+    },
+    "nc": 5,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     220,
+     256,
+     305,
+     320
+    ],
+    "cov": {
+     "div:\"Words of Jesus · John 15\"": 4,
+     "div:\"As the Father has loved \"": 2
+    },
+    "nc": 6,
+    "off": 0
+   }
+  ],
+  "banner": {
+   "bb": 130.890625,
+   "st": 136.908935546875,
+   "who": "plate",
+   "taps": [
+    [
+     "back",
+     16,
+     76,
+     8
+    ],
+    [
+     "hearth-flame",
+     303,
+     359,
+     17
+    ],
+    [
+     "plate",
+     22.5,
+     182.5,
+     512.890625
+    ],
+    [
+     "plate",
+     192.5,
+     352.5,
+     512.890625
+    ],
+    [
+     "plate",
+     22.5,
+     182.5,
+     574.890625
+    ],
+    [
+     "plate",
+     192.5,
+     352.5,
+     574.890625
+    ]
+   ],
+   "hh": [
+    181
+   ]
+  }
+ },
+ "26-guardian-hint-jesus-words-390x844.html": {
+  "dom": {
+   "W": 390,
+   "Hh": 844,
+   "taps": [
+    [
+     "back",
+     16,
+     8,
+     76,
+     82
+    ],
+    [
+     "hearth-flame",
+     318,
+     17,
+     374,
+     73
+    ],
+    [
+     "plate",
+     30,
+     690,
+     190,
+     742
+    ],
+    [
+     "plate",
+     200,
+     690,
+     360,
+     742
+    ],
+    [
+     "plate",
+     30,
+     752,
+     190,
+     804
+    ],
+    [
+     "plate",
+     200,
+     752,
+     360,
+     804
+    ]
+   ],
+   "issues": []
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     390,
+     844
+    ],
+    "cov": {
+     "path": 3,
+     "card:\"คิด eat sink three think\"": 3
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"🤔 Back ★ 64 Level 3 เลเ\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     390,
+     844
+    ],
+    "cov": {
+     "card:\"คิด eat sink three think\"": 3,
+     "path": 1
+    },
+    "nc": 4,
+    "off": 0
+   }
+  ],
+  "banner": {
+   "bb": 130.890625,
+   "st": 1000000000,
+   "who": "",
+   "taps": [
+    [
+     "back",
+     16,
+     76,
+     8
+    ],
+    [
+     "hearth-flame",
+     318,
+     374,
+     17
+    ],
+    [
+     "plate",
+     30,
+     190,
+     689.890625
+    ],
+    [
+     "plate",
+     200,
+     360,
+     689.890625
+    ],
+    [
+     "plate",
+     30,
+     190,
+     751.890625
+    ],
+    [
+     "plate",
+     200,
+     360,
+     751.890625
+    ]
+   ],
+   "hh": []
+  }
+ },
+ "30-new-weapon-gift-320x568.html": {
+  "dom": {
+   "W": 320,
+   "Hh": 568,
+   "taps": [
+    [
+     "hearth-flame",
+     256,
+     15,
+     304,
+     63
+    ],
+    [
+     "btn",
+     37,
+     493,
+     173,
+     549
+    ],
+    [
+     "btn",
+     183,
+     493,
+     283,
+     549
+    ]
+   ],
+   "issues": [
+    [
+     "textClipped",
+     "อย่ากลัวเลย เพราะเราอยู่กับเจ้"
+    ],
+    [
+     "thaiClipped",
+     "อย่ากลัวเลย เพราะเราอยู่"
+    ],
+    [
+     "thaiCut",
+     "อย่ากลัวเลย เพราะเราอยู่"
+    ]
+   ]
+  },
+  "occl": [
+   {
+    "k": "text",
+    "t": "อย่ากลัวเลย เพราะเราอยู่",
+    "el": "card:\"Oak Axe A gift from the \"",
+    "hid": false,
+    "r": [
+     148,
+     544,
+     171,
+     570
+    ],
+    "cov": {
+     "path": 3
+    },
+    "nc": 3,
+    "off": 0
+   },
+   {
+    "k": "text",
+    "t": "อย่ากลัวเลย เพราะเราอยู่",
+    "el": "card:\"Oak Axe A gift from the \"",
+    "hid": false,
+    "r": [
+     48,
+     573,
+     271,
+     599
+    ],
+    "cov": {},
+    "nc": 0,
+    "off": 9
+   },
+   {
+    "k": "text",
+    "t": "อย่ากลัวเลย เพราะเราอยู่",
+    "el": "card:\"Oak Axe A gift from the \"",
+    "hid": false,
+    "r": [
+     44,
+     602,
+     275,
+     628
+    ],
+    "cov": {},
+    "nc": 0,
+    "off": 9
+   },
+   {
+    "k": "text",
+    "t": "อย่ากลัวเลย เพราะเราอยู่",
+    "el": "card:\"Oak Axe A gift from the \"",
+    "hid": false,
+    "r": [
+     134,
+     631,
+     185,
+     657
+    ],
+    "cov": {},
+    "nc": 0,
+    "off": 9
+   },
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     320,
+     568
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"★ 64 Lv 3 Word Meadow ทุ\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     320,
+     568
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     100,
+     298,
+     164,
+     442
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 9
+    },
+    "nc": 9,
+    "off": 0
+   }
+  ]
+ },
+ "30-new-weapon-gift-375x667.html": {
+  "dom": {
+   "W": 375,
+   "Hh": 667,
+   "taps": [
+    [
+     "hearth-flame",
+     303,
+     17,
+     359,
+     73
+    ],
+    [
+     "btn",
+     53,
+     565,
+     203,
+     621
+    ],
+    [
+     "btn",
+     213,
+     565,
+     323,
+     621
+    ]
+   ],
+   "issues": [
+    [
+     "thaiCut",
+     "อย่ากลัวเลย เพราะเราอยู่"
+    ]
+   ]
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     375,
+     667
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"★ 64 Level 3 เลเวล 3 Wor\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     375,
+     667
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6
+    },
+    "nc": 6,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     120,
+     397,
+     220,
+     622
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6,
+     "btn:\"Use this weapon ใช้อาวุธ\"": 3
+    },
+    "nc": 9,
+    "off": 0
+   }
+  ]
+ },
+ "30-new-weapon-gift-390x844.html": {
+  "dom": {
+   "W": 390,
+   "Hh": 844,
+   "taps": [
+    [
+     "hearth-flame",
+     318,
+     17,
+     374,
+     73
+    ],
+    [
+     "btn",
+     60,
+     742,
+     210,
+     798
+    ],
+    [
+     "btn",
+     220,
+     742,
+     330,
+     798
+    ]
+   ],
+   "issues": [
+    [
+     "thaiCut",
+     "อย่ากลัวเลย เพราะเราอยู่"
+    ]
+   ]
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     390,
+     844
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6,
+     "div:\"New weapon!\"": 1
+    },
+    "nc": 7,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"★ 64 Level 3 เลเวล 3 Wor\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     390,
+     844
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 6,
+     "div:\"New weapon!\"": 1
+    },
+    "nc": 7,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     120,
+     397,
+     220,
+     622
+    ],
+    "cov": {
+     "card:\"Oak Axe A gift from the \"": 9
+    },
+    "nc": 9,
+    "off": 0
+   }
+  ]
+ },
+ "37-rest-screen-320x568.html": {
+  "dom": {
+   "W": 320,
+   "Hh": 568,
+   "taps": [
+    [
+     "back",
+     16,
+     8,
+     72,
+     70
+    ],
+    [
+     "hearth-flame",
+     256,
+     15,
+     304,
+     63
+    ],
+    [
+     "btn",
+     37,
+     468,
+     155,
+     524
+    ],
+    [
+     "btn",
+     165,
+     468,
+     283,
+     524
+    ]
+   ],
+   "issues": [
+    [
+     "textClipped",
+     "Great work today! Keep going o"
+    ]
+   ]
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     320,
+     568
+    ],
+    "cov": {
+     "div": 3,
+     "card:\"Matthew 11:28 Come to me\"": 6
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"Back ★ 64 Lv 3 Word Mead\"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     320,
+     568
+    ],
+    "cov": {
+     "div": 3,
+     "card:\"Matthew 11:28 Come to me\"": 6
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     120,
+     403,
+     220,
+     628
+    ],
+    "cov": {
+     "card:\"Matthew 11:28 Come to me\"": 3,
+     "btn:\"Keep playing เล่นต่อ\"": 1,
+     "btn:\"Rest now พักก่อน\"": 2
+    },
+    "nc": 6,
+    "off": 3
+   }
+  ]
+ },
+ "37-rest-screen-375x667.html": {
+  "dom": {
+   "W": 375,
+   "Hh": 667,
+   "taps": [
+    [
+     "back",
+     16,
+     8,
+     76,
+     82
+    ],
+    [
+     "hearth-flame",
+     303,
+     17,
+     359,
+     73
+    ],
+    [
+     "btn",
+     43,
+     498,
+     183,
+     554
+    ],
+    [
+     "btn",
+     193,
+     498,
+     333,
+     554
+    ]
+   ],
+   "issues": []
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     375,
+     667
+    ],
+    "cov": {
+     "div": 6,
+     "btn:\"Keep playing เล่นต่อ\"": 1,
+     "card:\"Matthew 11:28 Come to me\"": 1,
+     "btn:\"Rest now พักก่อน\"": 1
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"Back ★ 64 Level 3 เลเวล \"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     375,
+     667
+    ],
+    "cov": {
+     "div": 6,
+     "btn:\"Keep playing เล่นต่อ\"": 1,
+     "card:\"Matthew 11:28 Come to me\"": 1,
+     "btn:\"Rest now พักก่อน\"": 1
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     120,
+     403,
+     220,
+     628
+    ],
+    "cov": {
+     "card:\"Matthew 11:28 Come to me\"": 6,
+     "btn:\"Keep playing เล่นต่อ\"": 2,
+     "btn:\"Rest now พักก่อน\"": 1
+    },
+    "nc": 9,
+    "off": 0
+   }
+  ]
+ },
+ "37-rest-screen-390x844.html": {
+  "dom": {
+   "W": 390,
+   "Hh": 844,
+   "taps": [
+    [
+     "back",
+     16,
+     8,
+     76,
+     82
+    ],
+    [
+     "hearth-flame",
+     318,
+     17,
+     374,
+     73
+    ],
+    [
+     "btn",
+     50,
+     675,
+     190,
+     731
+    ],
+    [
+     "btn",
+     200,
+     675,
+     340,
+     731
+    ]
+   ],
+   "issues": []
+  },
+  "occl": [
+   {
+    "k": "svg",
+    "t": "div:\"[data-tod] .su{transform\"",
+    "el": "svg:\".su,.st{transition:opaci\"",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     390,
+     844
+    ],
+    "cov": {
+     "div:\"Great work today! Keep g\"": 3,
+     "div": 3,
+     "btn:\"Keep playing เล่นต่อ\"": 1,
+     "card:\"Matthew 11:28 Come to me\"": 1,
+     "btn:\"Rest now พักก่อน\"": 1
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div:\"Back ★ 64 Level 3 เลเวล \"",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     0,
+     0,
+     390,
+     844
+    ],
+    "cov": {
+     "div:\"Great work today! Keep g\"": 3,
+     "div": 3,
+     "btn:\"Keep playing เล่นต่อ\"": 1,
+     "card:\"Matthew 11:28 Come to me\"": 1,
+     "btn:\"Rest now พักก่อน\"": 1
+    },
+    "nc": 9,
+    "off": 0
+   },
+   {
+    "k": "svg",
+    "t": "div",
+    "el": "svg",
+    "hid": false,
+    "r": [
+     120,
+     403,
+     220,
+     628
+    ],
+    "cov": {
+     "card:\"Matthew 11:28 Come to me\"": 6
+    },
+    "nc": 6,
+    "off": 0
+   }
+  ]
+ }
+}

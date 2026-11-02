@@ -1,0 +1,1 @@
+QM RESUME: hold released (diff test). Pointer 81d83fab312b06cab58a5b762ffeb2c8 snap-st-0100MDT unchanged since the HOLD. Sync proof: your next Council post opens with "Based on: snap-st-0100MDT, pointer 81d83fab". Backstop only: `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. Work toward this pointer only.

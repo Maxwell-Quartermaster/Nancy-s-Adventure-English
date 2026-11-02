@@ -1,0 +1,82 @@
+{
+ "pointer_md5": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "paste_md5": "317e91ce86f073c961f8169183d2bbd3",
+ "jobs": [
+  {
+   "tag": "menu-M1-e-390x844",
+   "src": "/workspace/v608build/scene-fill-20261101/src-snapshot/M1-main-menu-390x844.html",
+   "src_orig": "/workspace/v608build/round2/r2h/html/M1-main-menu-390x844.html",
+   "src_md5": "214d367dca5d8afd0099c145ddfa9946",
+   "html_md5": "d749315c3f111895ed8d81ff0a1e5f10",
+   "w": 390,
+   "h": 844,
+   "loc": "MENU",
+   "tod": "e",
+   "fixes": [
+    "sky-stops x2",
+    "sky-tint x2",
+    "flowers -> tufts x4",
+    "greeting",
+    "sun recolour"
+   ],
+   "note": "M1 concept (unpicked) at evening"
+  },
+  {
+   "tag": "menu-M1-n-390x844",
+   "src": "/workspace/v608build/scene-fill-20261101/src-snapshot/M1-main-menu-390x844.html",
+   "src_orig": "/workspace/v608build/round2/r2h/html/M1-main-menu-390x844.html",
+   "src_md5": "214d367dca5d8afd0099c145ddfa9946",
+   "html_md5": "37e9ef4d9f5f705341752583719bbd3f",
+   "w": 390,
+   "h": 844,
+   "loc": "MENU",
+   "tod": "n",
+   "fixes": [
+    "sky-stops x2",
+    "sky-tint x2",
+    "flowers -> tufts x4",
+    "greeting",
+    "sun recolour"
+   ],
+   "note": "M1 concept (unpicked) at night (greeting A: Good night!)"
+  },
+  {
+   "tag": "menu-M3-e-390x844",
+   "src": "/workspace/v608build/scene-fill-20261101/src-snapshot/M3-main-menu-390x844.html",
+   "src_orig": "/workspace/v608build/round2/r2h/html/M3-main-menu-390x844.html",
+   "src_md5": "739e21d8c2dbebfbbcb180c5aefeda58",
+   "html_md5": "168f40728dcc2cfd467252bad4f1e636",
+   "w": 390,
+   "h": 844,
+   "loc": "MENU",
+   "tod": "e",
+   "fixes": [
+    "sky-stops x2",
+    "sky-tint x2",
+    "flowers -> tufts x4",
+    "greeting",
+    "sun recolour"
+   ],
+   "note": "M3 concept (unpicked) at evening"
+  },
+  {
+   "tag": "menu-M3-n-390x844",
+   "src": "/workspace/v608build/scene-fill-20261101/src-snapshot/M3-main-menu-390x844.html",
+   "src_orig": "/workspace/v608build/round2/r2h/html/M3-main-menu-390x844.html",
+   "src_md5": "739e21d8c2dbebfbbcb180c5aefeda58",
+   "html_md5": "a3926ed6e392e98df51eb6ca98aef3ae",
+   "w": 390,
+   "h": 844,
+   "loc": "MENU",
+   "tod": "n",
+   "fixes": [
+    "sky-stops x2",
+    "sky-tint x2",
+    "flowers -> tufts x4",
+    "greeting",
+    "sun recolour"
+   ],
+   "note": "M3 concept (unpicked) at night (greeting A: Good night!)"
+  }
+ ]
+}

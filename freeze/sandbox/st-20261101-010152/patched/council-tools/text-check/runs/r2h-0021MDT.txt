@@ -1,0 +1,170 @@
+# text-check run on /workspace/v608build/snap-r2h-0021MDT/sheets + /workspace/v608build/snap-r2h-0021MDT/showcase, 2026-11-01 00:51 MDT; pointer read at start of this run: f6dac2d0
+text-check 4c3666d1 words 12ff2958 pointer f6dac2d0 snap snap-r2h-0021MDT paste_1b 317e91ce chrome yes
+note live uiText.tapPrompt.en = 'Can you find the {word}?'
+note live uiText.tapPrompt.th = 'หา {word} เจอไหม'
+note live uiText.pantry.en = 'Shop'
+PASS            sheets/E-front-desk-one-layout-390.png  (0 problems, 2 warnings, Thai pages measured 3)
+    source  builder makes 2 images; used its statements 1-6 (top level) for this one
+    source  builder code/sheets_r2.py (writes v608build/round2/sheets/E-front-desk-one-layout-390.png)
+    source  helper round_totals.py
+    source  html v608build/scenes/superseded-t439u/s320/html/E-lake-front-desk-320x568.html 320x568 (E-front-desk-one-layout-390.png / E-lake-front-desk-320x568.png) [outside snapshot]
+    source  html v608build/scenes/stage/html/E-lake-front-desk-320x568.html 320x568 (E-front-desk-one-layout-390.png / E-lake-front-desk-320x568.png) [outside snapshot]
+    source  html v608build/scenes/stage/html/E-lake-front-desk-390x844.html 390x844 (E-front-desk-one-layout-390.png / E-lake-front-desk-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 3 of 3 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+    WARN    CAPTION-MENTION FAIL-WORD F-fail "FAIL" in code/sheets_r2.py:19 [caption]: "Render only. Spec line: round 2 P3, +160 PASTE chars (fit to width; HUD, card, taps full s" (fail word) (sheet caption, not game UI)
+PASS            sheets/front-desk-t444u-320-vs-390.png  (0 problems, 1 warnings, Thai pages measured 4)
+    source  builder code/sheet_frontdesk.py (writes v608build/round2/sheets/front-desk-t444u-320-vs-390.png)
+    source  helper round_totals.py (sheetkit footer)
+    source  html v608build/scenes/stage/html/E-lake-front-desk-320x568.html 320x568 (front-desk-t444u-320-vs-390.png / E-lake-front-desk-320x568.png) [outside snapshot]
+    source  html v608build/scenes/stage/html/E-lake-front-desk-390x844.html 390x844 (front-desk-t444u-320-vs-390.png / E-lake-front-desk-390x844.png) [outside snapshot]
+    source  html v608build/round2/ceiling-cap/html/E-lake-front-desk-390x844.html 390x844 (front-desk-t444u-320-vs-390.png / E-lake-front-desk-390x844.png) [outside snapshot]
+    source  html v608build/round2/ceiling-cap/html/E-lake-front-desk-390x844-wallup.html 390x844 (front-desk-t444u-320-vs-390.png / E-lake-front-desk-390x844-wallup.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 4 of 4 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+TEXT UNVERIFIED sheets/home-lake-trim-before-after-390.png  (3 problems, 2 warnings, Thai pages measured 2)
+    source  builder makes 2 images; used its statements 10-23 (top level) for this one
+    source  builder code/sheet_trim.py (writes v608build/round2/sheets/home-lake-trim-before-after-390.png)
+    source  helper round_totals.py
+    source  html v608build/round2/sheets/r2tp/B--zone-lake-ask-390x844.html 390x844 (home-lake-trim-before-after-390.png / B--zone-lake-ask-390x844.html) [outside snapshot]
+    source  html v608build/round2/ceiling-cap/home-lake/html/20-kitchen-say-it-picture-first-390x844-before.html 390x844 (home-lake-trim-before-after-390.png / 20-kitchen-say-it-picture-first-390x844-before.html) [outside snapshot]
+    BLOCK   TEXT UNVERIFIED home-lake-trim-before-after-390.png: r2tp() input built at run time (code/sheet_trim.py:25: H + f'html/{r}-390x844.html')
+    BLOCK   TEXT UNVERIFIED home-lake-trim-before-after-390.png: an input path is built at run time (code/sheet_trim.py:21: '/workspace/v608build/scenes/tod/' + r + '-390.html')
+    BLOCK   TEXT UNVERIFIED home-lake-trim-before-after-390.png: an input path is built at run time (code/sheet_trim.py:24: V + r + '.html')
+    WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+    WARN    CAPTION-MENTION FAIL-WORD F-wrong "wrong" in code/sheet_trim.py:12 [caption]: "18-two-answer-wrong-tap" (fail word) (sheet caption, not game UI)
+PASS            sheets/jesus-words-26-320-A-B-C-D.png  (0 problems, 1 warnings, Thai pages measured 6)
+    source  builder code/sheet_jesus26_abcd.py (writes v608build/round2/r2d/sheets/jesus-words-26-320-A-B-C-D.png)
+    source  helper code/r2_fit_table.py
+    source  helper round_totals.py
+    source  html v608build/round2/r2d/g26d/html/26-A-320x568.html 320x568 (jesus-words-26-320-A-B-C-D.png / 26-A-320x568.png) [outside snapshot]
+    source  html v608build/round2/r2d/g26d/html/26-B-320x568.html 320x568 (jesus-words-26-320-A-B-C-D.png / 26-B-320x568.png) [outside snapshot]
+    source  html v608build/round2/r2d/g26d/html/26-C-rest-320x568.html 320x568 (jesus-words-26-320-A-B-C-D.png / 26-C-rest-320x568.png) [outside snapshot]
+    source  html v608build/round2/r2d/g26d/html/26-C-open-320x568.html 320x568 (jesus-words-26-320-A-B-C-D.png / 26-C-open-320x568.png) [outside snapshot]
+    source  html v608build/round2/r2d/g26d/html/26-D-320x568.html 320x568 (jesus-words-26-320-A-B-C-D.png / 26-D-320x568.png) [outside snapshot]
+    source  html v608build/round2/r2d/g26d/html/26-D-375x667.html 375x667 (jesus-words-26-320-A-B-C-D.png / 26-D-375x667.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 6 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            sheets/pick-combined-trim-ask-verse.png  (0 problems, 1 warnings, Thai pages measured 5)
+    source  builder code/sheet_pick_combined.py (writes v608build/round2/sheets/pick-combined-trim-ask-verse.png)
+    source  helper code/r2_fit_table.py
+    source  helper round_totals.py
+    source  html v608build/round2/ceiling-cap/home-lake/html/54-phrase-ask-card-390x844.html 390x844 (pick-combined-trim-ask-verse.png / 54-phrase-ask-card-390x844.html) [outside snapshot]
+    source  html screens-v608/html/54-phrase-ask-card.html 390x844 (pick-combined-trim-ask-verse.png / 54-phrase-ask-card.html) [outside snapshot]
+    source  html v608build/decisions/b2b/letters-A-grows.html 390x844 (pick-combined-trim-ask-verse.png / letters-A-grows.png) [outside snapshot]
+    source  html v608build/decisions/b2b/state-pair-open-book.html 390x844 (pick-combined-trim-ask-verse.png / state-pair-open-book.png) [outside snapshot]
+    source  html screens-v608/html/02b-main-menu-verse-popup-longest-320x568-scrolled.html 320x568 (pick-combined-trim-ask-verse.png / 02b-main-menu-verse-popup-longest-320x568-scrolled.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 5 of 5 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            sheets/r2-fit-table-check.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc sheets/r2-fit-table-check.txt (council notes: mentions warn, never block)
+PASS            sheets/r2-fit-table.md  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc sheets/r2-fit-table.md (council notes: mentions warn, never block)
+PASS            sheets/trim-pick-1A-vs-1B-390.png  (0 problems, 1 warnings, Thai pages measured 4)
+    source  builder makes 2 images; used its statements 1-9 (top level) for this one
+    source  builder code/sheet_trim.py (writes v608build/round2/sheets/trim-pick-1A-vs-1B-390.png)
+    source  helper round_totals.py (sheetkit footer)
+    source  html v608build/round2/ceiling-cap/home-lake/html/54-phrase-ask-card-390x844.html 390x844 (trim-pick-1A-vs-1B-390.png / 54-phrase-ask-card-390x844.html) [outside snapshot]
+    source  html screens-v608/html/54-phrase-ask-card.html 390x844 (trim-pick-1A-vs-1B-390.png / 54-phrase-ask-card.html) [outside snapshot]
+    source  html v608build/round2/ceiling-cap/home-lake/html/18-two-answer-wrong-tap-390x844.html 390x844 (trim-pick-1A-vs-1B-390.png / 18-two-answer-wrong-tap-390x844.html) [outside snapshot]
+    source  html v608build/round2/ceiling-cap/html/E-lake-front-desk-390x844-wallup.html 390x844 (trim-pick-1A-vs-1B-390.png / E-lake-front-desk-390x844-wallup.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 4 of 4 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            sheets/walk24-B-t441u-before-after-390.png  (0 problems, 1 warnings, Thai pages measured 3)
+    source  builder makes 2 images; used its statements 7-7 (top level) for this one
+    source  builder code/sheets_r2.py (writes v608build/round2/sheets/walk24-B-t441u-before-after-390.png)
+    source  helper round_totals.py
+    source  html v608build/decisions/walk24-B.html 390x844 (walk24-B-t441u-before-after-390.png / walk24-B.png) [outside snapshot]
+    source  html v608build/scenes/stage/html/W24-walk-B-390x844.html 390x844 (walk24-B-t441u-before-after-390.png / W24-walk-B-390x844.png) [outside snapshot]
+    source  html v608build/scenes/stage/html/W24-walk-B-320x568.html 320x568 (walk24-B-t441u-before-after-390.png / W24-walk-B-320x568.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 3 of 3 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            showcase/INDEX.md  (0 problems, 7 warnings, Thai pages measured 0)
+    source  doc showcase/INDEX.md (council notes: mentions warn, never block)
+    WARN    DOC-MENTION FAIL-WORD F-wrong "wrong" in INDEX.md:24 [line]: "- **13**: A gentle miss on a two-answer card. (18-two-answer-wrong-tap.html)" (fail word)
+    WARN    DOC-MENTION RETIRED R3-shop-en "golden pantry" in INDEX.md:40 [line]: "- **24**: The golden pantry. (45-character-golden-pantry.html)" (t487u)
+    WARN    DOC-MENTION RETIRED R3-shop-en "pantry" in INDEX.md:40 [line]: "- **24**: The golden pantry. (45-character-golden-pantry.html)" (t487u)
+    WARN    DOC-MENTION RETIRED R1-ask-en "Where is the" in INDEX.md:51 [line]: "- Old ask wording left in the tour tiles, visible or hidden ("Where is the …?" / "อยู่ที่ไ" (Maxwell t440u (QM-relayed), round 2 P1)
+    WARN    DOC-MENTION RETIRED R2-ask-th "อยู่ที่ไหน" in INDEX.md:51 [line]: "- Old ask wording left in the tour tiles, visible or hidden ("Where is the …?" / "อยู่ที่ไ" (Maxwell t440u (QM-relayed), round 2 P1)
+    WARN    DOC-MENTION FAIL-WORD F-wrong "wrong" in INDEX.md:56 [line]: "- Instructor gate 8:35 PM MDT, fixed as render bugs (no PASTE change): tile 13 (screen 18)" (fail word)
+    WARN    DOC-MENTION FAIL-WORD F-wrong "wrong" in INDEX.md:59 [line]: "- 13 (meadow retry: the kite glows after a wrong tap, with "Take your time"): this is the " (fail word)
+PASS            showcase/showcase-1-opening.png  (0 problems, 1 warnings, Thai pages measured 5)
+    source  tour showcase/tour.py (SHEETS)
+    source  html screens-v608/html/01-title.html 390x844 (showcase-1-opening.png tile 1) [outside snapshot]
+    source  html screens-v608/html/02-main-menu-verse-popup.html 390x844 (showcase-1-opening.png tile 2) [outside snapshot]
+    source  html screens-v608/html/03-main-menu.html 390x844 (showcase-1-opening.png tile 3) [outside snapshot]
+    source  html screens-v608/html/05-map-day1.html 390x844 (showcase-1-opening.png tile 4) [outside snapshot]
+    source  html screens-v608/html/07-map-word-meadow-chooser.html 390x844 (showcase-1-opening.png tile 5) [outside snapshot]
+    source  helper round_totals.py (sheetkit footer)
+    WARN    UNFROZEN-SOURCE 5 of 5 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            showcase/showcase-2-zones.png  (0 problems, 0 warnings, Thai pages measured 6)
+    source  tour showcase/tour.py (SHEETS)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--10-word-meadow-scene.html 390x844 (showcase-2-zones.png tile 6)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--10-word-meadow-scene-320x568.html 320x568 (showcase-2-zones.png tile 6s)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--31-golden-fields-scene.html 390x844 (showcase-2-zones.png tile 7)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--32-home-lake-scene.html 390x844 (showcase-2-zones.png tile 8)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/B--zone-forest-ask-390x844.html 390x844 (showcase-2-zones.png tile 9)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--zone-forest-ask-320x568.html 320x568 (showcase-2-zones.png tile 9s)
+    source  helper round_totals.py (sheetkit footer)
+PASS            showcase/showcase-3-asking.png  (0 problems, 1 warnings, Thai pages measured 6)
+    source  tour showcase/tour.py (SHEETS)
+    source  html screens-v608/html/54-phrase-ask-card.html 390x844 (showcase-3-asking.png tile 10) [outside snapshot]
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--11-word-meadow-scene-right.html 390x844 (showcase-3-asking.png tile 11)
+    source  html screens-v608/html/12-reveal-right.html 390x844 (showcase-3-asking.png tile 12) [outside snapshot]
+    source  html screens-v608/html/18-two-answer-wrong-tap.html 390x844 (showcase-3-asking.png tile 13) [outside snapshot]
+    source  html screens-v608/html/14-reveal-gentle-retry.html 390x844 (showcase-3-asking.png tile 14) [outside snapshot]
+    source  html screens-v608/html/15-say-it-sight-words.html 390x844 (showcase-3-asking.png tile 15) [outside snapshot]
+    source  helper round_totals.py (sheetkit footer)
+    WARN    UNFROZEN-SOURCE 5 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            showcase/showcase-4-walk-guardian.png  (0 problems, 1 warnings, Thai pages measured 5)
+    source  tour showcase/tour.py (SHEETS)
+    source  html v608build/scenes/stage/html/W24-walk-B-390x844.html 390x844 (showcase-4-walk-guardian.png tile 16) [outside snapshot]
+    source  html v608build/scenes/stage/html/W24-walk-B-320x568.html 320x568 (showcase-4-walk-guardian.png tile 16s) [outside snapshot]
+    source  html screens-v608/html/26-guardian-hint-jesus-words.html 390x844 (showcase-4-walk-guardian.png tile 17) [outside snapshot]
+    source  html screens-v608/html/27-guardian-kneels.html 390x844 (showcase-4-walk-guardian.png tile 18) [outside snapshot]
+    source  html screens-v608/html/28-guardian-win.html 390x844 (showcase-4-walk-guardian.png tile 19) [outside snapshot]
+    source  helper round_totals.py (sheetkit footer)
+    WARN    UNFROZEN-SOURCE 5 of 5 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+BLOCK           showcase/showcase-5-rewards-pause.png  (3 problems, 1 warnings, Thai pages measured 6)
+    source  tour showcase/tour.py (SHEETS)
+    source  html screens-v608/html/29-verse-scroll-gift.html 390x844 (showcase-5-rewards-pause.png tile 20) [outside snapshot]
+    source  html screens-v608/html/23-level-up-reward.html 390x844 (showcase-5-rewards-pause.png tile 21) [outside snapshot]
+    source  html screens-v608/html/36-sound-duel-round-done.html 390x844 (showcase-5-rewards-pause.png tile 22) [outside snapshot]
+    source  html screens-v608/html/38-character-gear-mmo-tooltip.html 390x844 (showcase-5-rewards-pause.png tile 23) [outside snapshot]
+    source  html screens-v608/html/45-character-golden-pantry.html 390x844 (showcase-5-rewards-pause.png tile 24) [outside snapshot]
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--48-continue-after-pause.html 390x844 (showcase-5-rewards-pause.png tile 25)
+    source  helper round_totals.py (sheetkit footer)
+    BLOCK   RETIRED R3-shop-en "golden pantry" in showcase/tour.py tile 24 caption [caption]: "The golden pantry." (t487u)
+    BLOCK   RETIRED R3-shop-en "GOLDEN PANTRY" in showcase-5-rewards-pause.png tile 24 source screens-v608/html/45-character-golden-pantry.html [text]: "GOLDEN PANTRY" (t487u)
+    BLOCK   RETIRED R4-shop-th "ตู้กับข้าว" in showcase-5-rewards-pause.png tile 24 source screens-v608/html/45-character-golden-pantry.html [text]: "ตู้กับข้าวทองคำ" (t487u)
+    WARN    UNFROZEN-SOURCE 5 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+SKIP            showcase/tour.py  (0 problems, 1 warnings, Thai pages measured 0)
+    WARN    SKIP tour.py: not an image, html or text doc (no user-visible text to check)
+PASS            showcase/tiles/B--zone-forest-ask-390x844.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/B--zone-forest-ask-390x844.html
+PASS            showcase/tiles/B--zone-forest-ask-390x844.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/B--zone-forest-ask-390x844.html 390x844 (B--zone-forest-ask-390x844.png)
+PASS            showcase/tiles/screens-v608--10-word-meadow-scene-320x568.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--10-word-meadow-scene-320x568.html
+PASS            showcase/tiles/screens-v608--10-word-meadow-scene-320x568.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--10-word-meadow-scene-320x568.html 320x568 (screens-v608--10-word-meadow-scene-320x568.png)
+PASS            showcase/tiles/screens-v608--10-word-meadow-scene.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--10-word-meadow-scene.html
+PASS            showcase/tiles/screens-v608--10-word-meadow-scene.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--10-word-meadow-scene.html 390x844 (screens-v608--10-word-meadow-scene.png)
+PASS            showcase/tiles/screens-v608--11-word-meadow-scene-right.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--11-word-meadow-scene-right.html
+PASS            showcase/tiles/screens-v608--11-word-meadow-scene-right.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--11-word-meadow-scene-right.html 390x844 (screens-v608--11-word-meadow-scene-right.png)
+PASS            showcase/tiles/screens-v608--31-golden-fields-scene.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--31-golden-fields-scene.html
+PASS            showcase/tiles/screens-v608--31-golden-fields-scene.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--31-golden-fields-scene.html 390x844 (screens-v608--31-golden-fields-scene.png)
+PASS            showcase/tiles/screens-v608--32-home-lake-scene.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--32-home-lake-scene.html
+PASS            showcase/tiles/screens-v608--32-home-lake-scene.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--32-home-lake-scene.html 390x844 (screens-v608--32-home-lake-scene.png)
+PASS            showcase/tiles/screens-v608--48-continue-after-pause.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--48-continue-after-pause.html
+PASS            showcase/tiles/screens-v608--48-continue-after-pause.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--48-continue-after-pause.html 390x844 (screens-v608--48-continue-after-pause.png)
+PASS            showcase/tiles/screens-v608--zone-forest-ask-320x568.html  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html showcase/tiles/screens-v608--zone-forest-ask-320x568.html
+PASS            showcase/tiles/screens-v608--zone-forest-ask-320x568.png  (0 problems, 0 warnings, Thai pages measured 1)
+    source  html v608build/snap-r2h-0021MDT/showcase/tiles/screens-v608--zone-forest-ask-320x568.html 320x568 (screens-v608--zone-forest-ask-320x568.png)
+RESULT BLOCK: 32 files, 1 BLOCK, 29 PASS, 1 SKIP, 1 TEXT UNVERIFIED; 6 problems, 21 warnings
+# exit 1

@@ -1,0 +1,16 @@
+c8d5900be7a7e1ac3d5f02ae56e44713  /workspace/v608build/r2h-rerun-stage/r2h/png/M1-main-menu-390x844.png
+acebb7384833c8ec7b625f632025ebe0  /workspace/v608build/r2h-rerun-stage/r2h/png/M1-main-menu-320x568.png
+7addcf5a8f0c93a4c84605014896c5d4  /workspace/v608build/r2h-rerun-stage/r2h/png/M2-main-menu-390x844.png
+c6093b4b37855c9bb3334df2e7e78104  /workspace/v608build/r2h-rerun-stage/r2h/png/M2-main-menu-320x568.png
+47af087c93e5d4c02fccb5b25d30dc16  /workspace/v608build/r2h-rerun-stage/r2h/png/M3-main-menu-390x844.png
+25234b9346f3d2e35055bc722a197c23  /workspace/v608build/r2h-rerun-stage/r2h/png/M3-main-menu-320x568.png
+caption Main menu concepts M1 / M2 / M3  (390 x 844 top, 320 x 568 below)
+caption M1
+caption M1-main-menu-390x844
+caption M1-main-menu-320x568
+caption M2
+caption M2-main-menu-390x844
+caption M2-main-menu-320x568
+caption M3
+caption M3-main-menu-390x844
+caption M3-main-menu-320x568

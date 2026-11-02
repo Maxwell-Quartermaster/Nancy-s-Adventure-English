@@ -1,0 +1,13 @@
+814cbfbaaaa75df46bea746c280988df  /workspace/v608build/r2h-rerun-stage/r2h/png/29-verse-scroll-gift-390x844.png
+7742f66ca724f977806132d4f64aacec  /workspace/v608build/r2h-rerun-stage/r2h/png/23-level-up-reward-390x844.png
+ecf289278ffe6b7da9c5578b44e8b774  /workspace/v608build/r2h-rerun-stage/r2h/png/36-sound-duel-round-done-390x844-before.png
+74087c94cda682a95708587655aa8c48  /workspace/v608build/r2h-rerun-stage/r2h/png/38-character-gear-mmo-tooltip-390x844-before.png
+77e379498b275dba2cc699e3d35f8ad3  /workspace/v608build/r2h-rerun-stage/r2h/png/45-character-golden-pantry-390x844.png
+c99a9d61f7dbabd2653dc08f65548814  /workspace/v608build/r2h-rerun-stage/r2h/png/48-continue-after-pause-390x844.png
+caption Nancy's eyes, sheet 5: Rewards, gear, pause and the end of a level
+caption A verse scroll as a gift.
+caption Level up.
+caption End of a Sound Duel round.
+caption Character gear.
+caption The Shop.
+caption Back after a pause: one Continue button.

@@ -1,0 +1,8 @@
+new noO dup-ref exit=1 :: AssertionError: Matthew 11:28
+new -O dup-ref exit=0 :: verse() returned dict assert stripped (-O)
+a4 noO dup-ref exit=1 :: PASTE verse 'Matthew 11:28' found 2 times, need exactly 1
+a4 -O dup-ref exit=1 :: PASTE verse 'Matthew 11:28' found 2 times, need exactly 1
+new noO control exit=0 :: verse() returned dict assert active
+new -O control exit=0 :: verse() returned dict assert stripped (-O)
+a4 noO control exit=0 :: verse() returned dict assert active
+a4 -O control exit=0 :: verse() returned dict assert stripped (-O)

@@ -1,0 +1,23 @@
+sub("if V>='v6-04': _SUP36.update({   # A1", """if V>='v6-08': _SUP36.update({   # v6-08 (verse pop-up B, daily gift, happy eyes): each rechecked in the v6-08 block
+ 't235u 1 main menu = exactly two buttons':'v6-08 VP1: launch order now ends "run or main menu; the daily verse, if due, pops up over the main menu"; 6.2 two buttons rechecked in the v6-08 block',
+ 'Q-0754 spec: daily delivery':'v6-08 VP3: "on her first main-menu visit each day, in the pop-up below"; daily delivery rechecked in the v6-08 block',
+ 't238u no Settings':'v6-08 VP6: state gains giftGems before settings{slowMode, restWeeks}; Settings rule rechecked in the v6-08 block',
+ 't238u R1 Restore':'v6-08 VP8: restore check is "all keys but `giftGems`"; Restore rechecked in the v6-08 block',
+ 'v5-30 mn7 Restore check':'v6-08 VP8: "(JSON, `schema` 5020, all keys but `giftGems`)"; rechecked in the v6-08 block',
+ V+' spec section 15 byte-identical to v5-33':'v6-08 VP3/VP4 change section 15 (pop-up + daily gift); diff-only undo to v6-07 checked in the v6-08 block',
+ V+' 29 new uiText keys':'v6-08 adds uiText.dailyGift and the 4 scene keys (NEEDS NANCY); uiText 97 rechecked in the v6-08 block',
+ V+' MX4 (t330u) scene notes':'v6-08 E1: the Golden Fields eyes note became "Sam\\'s eyes are happy closed Ink arcs on every screen (t398u)"; the other four notes rechecked in the v6-08 block',
+ V+' audit fixes F1-F12, F14, F15, B1':'v6-08 VP10: the stated `uiText` count is 97 (dailyGift + 4 scene keys); rechecked in the v6-08 block',
+ V+' cards Thai changed only where planned (+tapPrompt, +playAgain, -old tapPrompt)':'v6-08 Thai changes (dailyGift, listenFind, howMany, howManyCows, bigOrSmall) are pinned by the live VP and SC uiText checks in the v6-08 block',
+ 'every picPlan.svg id is used by a card or choice':'Maxwell t406u (H1): high-five stays in the library while ms-31 uses hand emoji; H1 rechecked in the v6-08 block',
+ 'ms-31 uses drawn SVGs':'Maxwell t406u (H1): hand-only emoji are fine; ms-31 is 🙏 / 🙌 on bordered plates; rechecked in the v6-08 block',
+ 'ms-31 SVG guard':'Maxwell t406u (H1): hand-only emoji are fine; rechecked in the v6-08 block',
+ 'Q-0741 regressions':'Maxwell t406u (H1) allows 🙏 on ms-31; the other Q-0741 items are rechecked by the diff-only undo to v6-07 in the v6-08 block',
+ V+' compact cards: zone/choices/hint decode':'v6-08 H1 changes ms-31 choice pics only; diff-only undo to v6-07 checked in the v6-08 block',
+ V+' lossless trims':'v6-08 H1 (ms-31 pics), E1 (#rE) and dailyGift; diff-only undo to v6-07 checked in the v6-08 block',
+ V+' picPlan: only uiInlineSvg':'v6-08 E1 changes tex #rE only; rechecked in the v6-08 block',
+ V+' Watchman flags':'v6-08 H1 rewrites the :243 high-five wording; rechecked in the v6-08 block',
+ V+' emoji: no new emoji beyond v5-37':'Maxwell t406u (H1): 🙌 / 🙏 hand emoji on ms-31; rechecked in the v6-08 block',
+ V+' hands: tex unchanged from v6-04':'v6-08 E1: tex #rE is the happy arcs; tex equals v6-07 except #rE, rechecked in the v6-08 block',
+})
+if V>='v6-04': _SUP36.update({   # A1""")

@@ -1,0 +1,187 @@
+{
+ "pointer_md5": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "paste_md5": "317e91ce86f073c961f8169183d2bbd3",
+ "pond_evening_skipped": true,
+ "jobs": [
+  {
+   "tag": "E-front-desk-base-390x844",
+   "loc": "lake-front-desk",
+   "tod": "base",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "3936ddf17607ea1d6c6ef521c6f7af5d",
+   "note": "",
+   "fixes": [
+    "E-front-desk-base-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-base-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-base-320x568",
+   "loc": "lake-front-desk",
+   "tod": "base",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "8d8f52e3f4ff7a4025c8512b0c4db0cf",
+   "note": "",
+   "fixes": [
+    "E-front-desk-base-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-base-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-m-390x844",
+   "loc": "lake-front-desk",
+   "tod": "m",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "f31e70ed49d82738b4329f32ecfe4b9a",
+   "note": "",
+   "fixes": [
+    "E-front-desk-m-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-m-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-m-320x568",
+   "loc": "lake-front-desk",
+   "tod": "m",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "2eded43f2eb6e6becd8a031331d3f8f5",
+   "note": "",
+   "fixes": [
+    "E-front-desk-m-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-m-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-d-390x844",
+   "loc": "lake-front-desk",
+   "tod": "d",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "e933deae55e442e1234a98e939f28231",
+   "note": "",
+   "fixes": [
+    "E-front-desk-d-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-d-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-d-320x568",
+   "loc": "lake-front-desk",
+   "tod": "d",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "a9b5581478808615d161a9ac3e3ba068",
+   "note": "",
+   "fixes": [
+    "E-front-desk-d-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-d-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-a-390x844",
+   "loc": "lake-front-desk",
+   "tod": "a",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "88c0b199adec7d609584d0d90dc1ba7c",
+   "note": "",
+   "fixes": [
+    "E-front-desk-a-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-a-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-a-320x568",
+   "loc": "lake-front-desk",
+   "tod": "a",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "f3d39e351b22dc9c0679427bfdcfee5d",
+   "note": "",
+   "fixes": [
+    "E-front-desk-a-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-a-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-e-390x844",
+   "loc": "lake-front-desk",
+   "tod": "e",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "a38e39939feb6a406fe4210f158848e2",
+   "note": "",
+   "fixes": [
+    "E-front-desk-e-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-e-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-e-320x568",
+   "loc": "lake-front-desk",
+   "tod": "e",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "13211a196f137d1c02174722afc37ae7",
+   "note": "",
+   "fixes": [
+    "E-front-desk-e-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-e-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-n-390x844",
+   "loc": "lake-front-desk",
+   "tod": "n",
+   "w": 390,
+   "h": 844,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-390x844.html",
+   "src_md5": "602e1f25fa7803c4dec7e47cfd8880d0",
+   "html_md5": "be1c433e92a86219a4dae924a52874ef",
+   "note": "",
+   "fixes": [
+    "E-front-desk-n-390x844: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-n-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged"
+   ]
+  },
+  {
+   "tag": "E-front-desk-n-320x568",
+   "loc": "lake-front-desk",
+   "tod": "n",
+   "w": 320,
+   "h": 568,
+   "src": "/workspace/v608build/scenes/stage/html/E-lake-front-desk-320x568.html",
+   "src_md5": "faf1385f0699536b79a14584a8383349",
+   "html_md5": "1ac1d5650b3e7da570c864cfb4983f20",
+   "note": "",
+   "fixes": [
+    "E-front-desk-n-320x568: Home Lake colour x2 #D9663F -> #F05A00",
+    "E-front-desk-n-320x568: wall top 372 -> 343.4 (design; ceiling 40 pt under the HUD from y 303); scale 0.82051 unchanged"
+   ]
+  }
+ ]
+}

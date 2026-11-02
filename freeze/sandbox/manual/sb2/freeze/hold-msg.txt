@@ -1,0 +1,1 @@
+QM HOLD: freeze snap-test-0110MDT in progress. Stop work now. No edits, no sends, no patches past this point until RESUME.

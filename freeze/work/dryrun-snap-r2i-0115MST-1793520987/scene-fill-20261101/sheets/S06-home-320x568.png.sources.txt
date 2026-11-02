@@ -1,0 +1,17 @@
+e1adb1b4f124e2265a29aec1d6b13b2d  /workspace/v608build/scene-fill-20261101/renders/home-m-320x568.png
+9196a86468cca34da2be6a2ac74146c5  /workspace/v608build/scene-fill-20261101/html/home-m-320x568.html
+a9d75d2838cc0e9d84ee46bd0b5d9978  /workspace/v608build/scene-fill-20261101/renders/home-d-320x568.png
+c6c1db8175287aa42049caef69105f29  /workspace/v608build/scene-fill-20261101/html/home-d-320x568.html
+beb5b6b9ba7f19eac4f07a8acbfe7e4d  /workspace/v608build/scene-fill-20261101/renders/home-a-320x568.png
+bd84f55f110fd4f98c665f5cb1e3fc24  /workspace/v608build/scene-fill-20261101/html/home-a-320x568.html
+ad6e7e8441784d2f3e81a40ef2e0bd27  /workspace/v608build/scene-fill-20261101/renders/home-e-320x568.png
+cb3b65774695f01cb5a99da6c04ed375  /workspace/v608build/scene-fill-20261101/html/home-e-320x568.html
+3dce04f00f904e786fac163ccf91f1bf  /workspace/v608build/scene-fill-20261101/renders/home-n-320x568.png
+3ad8627a67251a02df6a066c9c1352c4  /workspace/v608build/scene-fill-20261101/html/home-n-320x568.html
+caption S06 · Home Lake · Home room · 320x568
+caption 1. Morning
+caption 2. Midday
+caption 3. Afternoon
+caption 4. Evening
+caption 5. Night
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

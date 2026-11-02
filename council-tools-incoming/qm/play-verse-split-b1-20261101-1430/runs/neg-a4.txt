@@ -1,0 +1,88 @@
+a4 control SE=0 exit=0 :: 
+a4 control SE=1 exit=0 :: 
+a4 jw-empty-list SE=0 exit=1 :: IndexError: list index out of range
+a4 jw-empty-list SE=1 exit=1 :: IndexError: list index out of range
+a4 jw-en-empty SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-empty SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-missing SE=0 exit=1 :: KeyError: 'en'
+a4 jw-en-missing SE=1 exit=1 :: KeyError: 'en'
+a4 jw-en-null SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-null SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-space SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-space SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-wsmix SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-en-wsmix SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+a4 jw-ref-empty SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-empty SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-missing SE=0 exit=1 :: KeyError: 'ref'
+a4 jw-ref-missing SE=1 exit=1 :: KeyError: 'ref'
+a4 jw-ref-null SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-null SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-space SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-space SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-wsmix SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-ref-wsmix SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+a4 jw-th-empty SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-empty SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-missing SE=0 exit=1 :: KeyError: 'th'
+a4 jw-th-missing SE=1 exit=1 :: KeyError: 'th'
+a4 jw-th-null SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-null SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-space SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-space SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-wsmix SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 jw-th-wsmix SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+a4 rest-en-empty SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-empty SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-missing SE=0 exit=1 :: KeyError: 'en'
+a4 rest-en-missing SE=1 exit=1 :: KeyError: 'en'
+a4 rest-en-null SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-null SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-number SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-number SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-space SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-space SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-wsmix SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-en-wsmix SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+a4 rest-enSource-empty SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-empty SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-missing SE=0 exit=1 :: KeyError: 'enSource'
+a4 rest-enSource-missing SE=1 exit=1 :: KeyError: 'enSource'
+a4 rest-enSource-null SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-null SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-space SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-space SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-wsmix SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-enSource-wsmix SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+a4 rest-missing SE=0 exit=1 :: KeyError: 'rest'
+a4 rest-missing SE=1 exit=1 :: KeyError: 'rest'
+a4 rest-ref-empty SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-empty SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-missing SE=0 exit=1 :: KeyError: 'ref'
+a4 rest-ref-missing SE=1 exit=1 :: KeyError: 'ref'
+a4 rest-ref-null SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-null SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-space SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-space SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-wsmix SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-ref-wsmix SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+a4 rest-th-empty SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-empty SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-missing SE=0 exit=1 :: KeyError: 'th'
+a4 rest-th-missing SE=1 exit=1 :: KeyError: 'th'
+a4 rest-th-null SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-null SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-space SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-space SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-wsmix SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-th-wsmix SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+a4 rest-thSource-empty SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-empty SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-missing SE=0 exit=1 :: KeyError: 'thSource'
+a4 rest-thSource-missing SE=1 exit=1 :: KeyError: 'thSource'
+a4 rest-thSource-null SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-null SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-space SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-space SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-wsmix SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+a4 rest-thSource-wsmix SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank

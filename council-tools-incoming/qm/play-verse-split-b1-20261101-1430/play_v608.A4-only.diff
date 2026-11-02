@@ -1,0 +1,13 @@
+--- new/play_v608.py	2026-11-01 21:31:16.963955636 +0000
++++ a4/play_v608.py	2026-11-01 21:31:25.335933956 +0000
+@@ -61,7 +61,9 @@
+ for _w, _v in [('verses.rest.' + k, PJ['verses']['rest'][k]) for k in ('ref', 'en', 'th', 'enSource', 'thSource')] + [('jesusWords[0].' + k, PJ['jesusWords'][0][k]) for k in ('ref', 'en', 'th')]:   # Watchman gate f778b0bf B1: a blank verse field fails loudly, never renders blank
+     if not isinstance(_v, str) or not _v.strip(): raise SystemExit('PASTE ' + _w + ' is missing or blank')
+ def verse(ref):   # the one PASTE verse with this ref: verses.rest or verses.weekly[]
+-    vs = [v for v in [PJ['verses']['rest']] + PJ['verses']['weekly'] if v['ref'] == ref]; assert len(vs) == 1, ref; return vs[0]
++    vs = [v for v in [PJ['verses']['rest']] + PJ['verses']['weekly'] if v['ref'] == ref]
++    if len(vs) != 1: raise SystemExit('PASTE verse ' + repr(ref) + ' found ' + str(len(vs)) + ' times, need exactly 1')   # Watchman gate f778b0bf A4: SystemExit, not assert (python -O strips assert)
++    return vs[0]
+ def vtx(t, cls, extra=''):   # a verse string exactly as in the file; a '\n' poetry break shows as a line break
+     return tx(t, cls, ((extra + ';') if extra else '') + 'white-space:pre-line') if '\n' in t else tx(t, cls, extra)
+ def u(k, **kw):

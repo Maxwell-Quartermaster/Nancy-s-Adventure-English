@@ -1,0 +1,37 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": false,
+ "sandbox": true,
+ "started": "2026-11-01 00:59 MDT",
+ "steps": {
+  "1": "pointer f6dac2d0e7b391436a160eab1bbf17fe snap-r2h-0021MDT OK; old PASTE 317e91ce on disk; new PASTE 317e91ce 188,116 chars, bank 84; disk 23.0%",
+  "2": "verses nancys-adventure-english-v6-08-daily-verses.json = nancys-adventure-english-v6-07-daily-verses.json except version; \"if due\" present; no 911/Call Max/Show the Nurse; no phone/email/street; thai-diff exit 0 (no Thai change)",
+  "3": "checks_v608 0 new live False (15 live False already on the pointer PASTE 317e91ce, unchanged); trim-clip DOM check 1 html, 0 clipped; send_guard CLEAR on 2 sheets/showcase files; fit_sheet_check: no fit sheet in stage",
+  "4": "/workspace/v608build/freeze/sandbox/st-20261101-065833/clean/sb/snap-st-0100MDT (7 files, MANIFEST 4e8d867b, renders-MANIFEST c78b05ba 4 lines), every md5 re-verified, read-only",
+  "5": "backup /workspace/v608build/freeze/sandbox/st-20261101-065833/clean/sb/CURRENT-SNAP.txt.pre-snap-st-0100MDT (f6dac2d0); new pointer 66f16fbcc78f565ce6ad4ac963040c15 written atomically and re-read",
+  "6": "current_snap 66f16fbcc78f565ce6ad4ac963040c15 snap-st-0100MDT problems: []"
+ },
+ "thai_diff": {
+  "exit": 0,
+  "lines": 3,
+  "head": [
+   "thai_diff.py 41de37a5b68643d6a7df6e12a0c1f23a | MANIFEST none | base 317e91ce86f073c961f8169183d2bbd3 | new 317e91ce86f073c961f8169183d2bbd3"
+  ],
+  "file": "/workspace/v608build/freeze/sandbox/st-20261101-065833/clean/sb/freeze/work/thai-diff-snap-st-0100MDT.txt"
+ },
+ "result": "FROZEN",
+ "pointer_md5": "66f16fbcc78f565ce6ad4ac963040c15",
+ "pointer_was": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "pointer_backup": "/workspace/v608build/freeze/sandbox/st-20261101-065833/clean/sb/CURRENT-SNAP.txt.pre-snap-st-0100MDT",
+ "paste_md5": "317e91ce86f073c961f8169183d2bbd3",
+ "chars": 188116,
+ "bank": 84,
+ "manifest_md5": "4e8d867b45fd8a1cf243e1705aadb75c",
+ "renders_manifest_md5": "c78b05ba15760434d9c60dc261888df6",
+ "messages": {
+  "hold": "QM HOLD: freeze snap-st-0100MDT in progress. Stop work now. No edits, no sends, no patches past this point until RESUME.",
+  "resume": "QM RESUME+SYNC: freeze snap-st-0100MDT done, HOLD released. New pointer 66f16fbcc78f565ce6ad4ac963040c15 (was f6dac2d0). Snap snap-st-0100MDT, MANIFEST 4e8d867b, renders-MANIFEST c78b05ba. PASTE 1B 317e91ce86f073c961f8169183d2bbd3 (188,116 chars, bank 84). What changed: PASTE 317e91ce -> 317e91ce (+0 chars); 2 files changed, 3 new, 668 not carried vs snap-r2h-0021MDT; selftest clean run. Re-base now, before any work. Sync proof: your next Council post opens with \"Based on: snap-st-0100MDT, pointer 66f16fbc, PASTE 317e91ce.\" Backstop only, now that HOLD is released: run `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. Work toward this pointer only; anything based on f6dac2d0 is stale.",
+  "watchman": "FREEZE 66f16fbcc78f565ce6ad4ac963040c15 snap-st-0100MDT"
+ },
+ "finished": "2026-11-01 01:00 MDT"
+}

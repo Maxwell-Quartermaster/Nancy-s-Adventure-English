@@ -1,0 +1,531 @@
+{
+ "01-title": {
+  "src": "/workspace/screens-v606/html/01-title.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/01-title.png",
+  "before": "/workspace/v608build/eyes/before/01-title.png"
+ },
+ "01-title-320x568": {
+  "src": "/workspace/screens-v606/html/01-title-320x568.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/01-title-320x568.png",
+  "before": "/workspace/v608build/eyes/before/01-title-320x568.png"
+ },
+ "02-verse-of-the-day": {
+  "src": "/workspace/screens-v606/html/02-verse-of-the-day.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/superseded-O1/png/02-verse-of-the-day.png",
+  "before": "/workspace/v608build/eyes/before/02-verse-of-the-day.png",
+  "note": "O1 (gate 2b29ce71): verse no longer drawn over the title; replaced by 02-main-menu-verse-popup-*"
+ },
+ "03-main-menu": {
+  "src": "/workspace/screens-v606/html/03-main-menu.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/03-main-menu.png",
+  "before": "/workspace/v608build/eyes/before/03-main-menu.png"
+ },
+ "04-main-menu-hearth": {
+  "src": "/workspace/screens-v606/html/04-main-menu-hearth.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/04-main-menu-hearth.png",
+  "before": "/workspace/v608build/eyes/before/04-main-menu-hearth.png"
+ },
+ "05-map-day1": {
+  "src": "/workspace/screens-v604/html/05-map-day1.html",
+  "subs": {
+   "<path d='M33.1 20.7q1.9-": 1
+  },
+  "png": "/workspace/screens-v608/png/05-map-day1.png",
+  "before": "/workspace/v608build/eyes/before/05-map-day1.png"
+ },
+ "06-map-tap-unopened": {
+  "src": "/workspace/screens-v604/html/06-map-tap-unopened.html",
+  "subs": {
+   "<path d='M33.1 20.7q1.9-": 1
+  },
+  "png": "/workspace/screens-v608/png/06-map-tap-unopened.png",
+  "before": "/workspace/v608build/eyes/before/06-map-tap-unopened.png"
+ },
+ "07-map-word-meadow-chooser": {
+  "src": "/workspace/screens-v604/html/07-map-word-meadow-chooser.html",
+  "subs": {
+   "<path d='M33.1 20.7q1.9-": 1
+  },
+  "png": "/workspace/screens-v608/png/07-map-word-meadow-chooser.png",
+  "before": "/workspace/v608build/eyes/before/07-map-word-meadow-chooser.png"
+ },
+ "08-map-home-lake-chooser-day1": {
+  "src": "/workspace/screens-v604/html/08-map-home-lake-chooser-day1.html",
+  "subs": {
+   "<path d='M33.1 20.7q1.9-": 1
+  },
+  "png": "/workspace/screens-v608/png/08-map-home-lake-chooser-day1.png",
+  "before": "/workspace/v608build/eyes/before/08-map-home-lake-chooser-day1.png"
+ },
+ "09-map-later": {
+  "src": "/workspace/screens-v604/html/09-map-later.html",
+  "subs": {
+   "<path d='M33.1 20.7q1.9-": 1
+  },
+  "png": "/workspace/screens-v608/png/09-map-later.png",
+  "before": "/workspace/v608build/eyes/before/09-map-later.png"
+ },
+ "10-word-meadow-scene": {
+  "src": "/workspace/screens-v607/html/10-word-meadow-scene-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/10-word-meadow-scene.png",
+  "before": "/workspace/v608build/eyes/before/10-word-meadow-scene.png"
+ },
+ "11-word-meadow-scene-right": {
+  "src": "/workspace/screens-v607/html/11-word-meadow-scene-right-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/11-word-meadow-scene-right.png",
+  "before": "/workspace/v608build/eyes/before/11-word-meadow-scene-right.png"
+ },
+ "12-reveal-right": {
+  "src": "/workspace/screens-v607/html/12-reveal-right-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/12-reveal-right.png",
+  "before": "/workspace/v608build/eyes/before/12-reveal-right.png"
+ },
+ "13-word-meadow-scene-retry": {
+  "src": "/workspace/screens-v607/html/13-word-meadow-scene-retry-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/13-word-meadow-scene-retry.png",
+  "before": "/workspace/v608build/eyes/before/13-word-meadow-scene-retry.png"
+ },
+ "14-reveal-gentle-retry": {
+  "src": "/workspace/screens-v607/html/14-reveal-gentle-retry-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "15-say-it-sight-words": {
+  "src": "/workspace/screens-v607/html/15-say-it-sight-words-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "16-say-it-maxwell-says-day1": {
+  "src": "/workspace/screens-v607/html/16-say-it-maxwell-says-day1-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "17-two-answer-pray-high-five": {
+  "src": "/workspace/screens-v607/html/17-two-answer-pray-high-five-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "18-two-answer-wrong-tap": {
+  "src": "/workspace/screens-v607/html/18-two-answer-wrong-tap-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "19-two-answer-right-done": {
+  "src": "/workspace/screens-v607/html/19-two-answer-right-done-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "20-kitchen-say-it-picture-first": {
+  "src": "/workspace/screens-v607/html/20-kitchen-say-it-picture-first-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "21-kitchen-say-it-shown": {
+  "src": "/workspace/screens-v607/html/21-kitchen-say-it-shown-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "22-kitchen-server-talk": {
+  "src": "/workspace/screens-v607/html/22-kitchen-server-talk-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "22-kitchen-server-talk-320x568": {
+  "src": "/workspace/screens-v607/html/22-kitchen-server-talk-320x568.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "23-level-up-reward": {
+  "src": "/workspace/screens-v607/html/23-level-up-reward-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/23-level-up-reward.png",
+  "before": "/workspace/v608build/eyes/before/23-level-up-reward.png"
+ },
+ "24-guardian-run-entry": {
+  "src": "/workspace/screens-v607/html/24-guardian-run-entry-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/24-guardian-run-entry.png",
+  "before": "/workspace/v608build/eyes/before/24-guardian-run-entry.png"
+ },
+ "25-guardian-hint-letters": {
+  "src": "/workspace/screens-v607/html/25-guardian-hint-letters-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/25-guardian-hint-letters.png",
+  "before": "/workspace/v608build/eyes/before/25-guardian-hint-letters.png"
+ },
+ "26-guardian-hint-jesus-words": {
+  "src": "/workspace/screens-v607/html/26-guardian-hint-jesus-words-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/26-guardian-hint-jesus-words.png",
+  "before": "/workspace/v608build/eyes/before/26-guardian-hint-jesus-words.png"
+ },
+ "27-guardian-kneels": {
+  "src": "/workspace/screens-v607/html/27-guardian-kneels-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 2
+  },
+  "png": "/workspace/screens-v608/png/27-guardian-kneels.png",
+  "before": "/workspace/v608build/eyes/before/27-guardian-kneels.png"
+ },
+ "28-guardian-win": {
+  "src": "/workspace/screens-v607/html/28-guardian-win-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 2
+  },
+  "png": "/workspace/screens-v608/png/28-guardian-win.png",
+  "before": "/workspace/v608build/eyes/before/28-guardian-win.png"
+ },
+ "29-verse-scroll-gift": {
+  "src": "/workspace/screens-v607/html/29-verse-scroll-gift-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/29-verse-scroll-gift.png",
+  "before": "/workspace/v608build/eyes/before/29-verse-scroll-gift.png"
+ },
+ "30-new-weapon-gift": {
+  "src": "/workspace/screens-v607/html/30-new-weapon-gift-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/30-new-weapon-gift.png",
+  "before": "/workspace/v608build/eyes/before/30-new-weapon-gift.png"
+ },
+ "31-golden-fields-scene": {
+  "src": "/workspace/screens-v607/html/31-golden-fields-scene-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "32-home-lake-scene": {
+  "src": "/workspace/screens-v607/html/32-home-lake-scene-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "33-say-it-baby-hospital-reply": {
+  "src": "/workspace/screens-v607/html/33-say-it-baby-hospital-reply-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "33-say-it-baby-hospital-reply-320x568": {
+  "src": "/workspace/screens-v607/html/33-say-it-baby-hospital-reply-320x568.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "34-echo-forest-sound-duel": {
+  "src": "/workspace/screens-v607/html/34-echo-forest-sound-duel-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/34-echo-forest-sound-duel.png",
+  "before": "/workspace/v608build/eyes/before/34-echo-forest-sound-duel.png"
+ },
+ "34-echo-forest-sound-duel-320x568": {
+  "src": "/workspace/screens-v607/html/34-echo-forest-sound-duel-320x568.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/34-echo-forest-sound-duel-320x568.png",
+  "before": "/workspace/v608build/eyes/before/34-echo-forest-sound-duel-320x568.png"
+ },
+ "35-sound-duel-right": {
+  "src": "/workspace/screens-v607/html/35-sound-duel-right-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/35-sound-duel-right.png",
+  "before": "/workspace/v608build/eyes/before/35-sound-duel-right.png"
+ },
+ "35-sound-duel-right-320x568": {
+  "src": "/workspace/screens-v607/html/35-sound-duel-right-320x568.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/35-sound-duel-right-320x568.png",
+  "before": "/workspace/v608build/eyes/before/35-sound-duel-right-320x568.png"
+ },
+ "36-sound-duel-round-done": {
+  "src": "/workspace/screens-v607/html/36-sound-duel-round-done-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/36-sound-duel-round-done.png",
+  "before": "/workspace/v608build/eyes/before/36-sound-duel-round-done.png"
+ },
+ "37-rest-screen": {
+  "src": "/workspace/screens-v607/html/37-rest-screen-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/37-rest-screen.png",
+  "before": "/workspace/v608build/eyes/before/37-rest-screen.png"
+ },
+ "38-character-gear-mmo-tooltip": {
+  "src": "/workspace/screens-v604/html/38-character-gear-mmo-tooltip.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/38-character-gear-mmo-tooltip.png",
+  "before": "/workspace/v608build/eyes/before/38-character-gear-mmo-tooltip.png"
+ },
+ "39-character-gear-rows": {
+  "src": "/workspace/screens-v604/html/39-character-gear-rows.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/39-character-gear-rows.png",
+  "before": "/workspace/v608build/eyes/before/39-character-gear-rows.png"
+ },
+ "40-character-themes": {
+  "src": "/workspace/screens-v604/html/40-character-themes.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "41-character-gems": {
+  "src": "/workspace/screens-v604/html/41-character-gems.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "42-character-scrolls": {
+  "src": "/workspace/screens-v604/html/42-character-scrolls.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "43-character-scrolls-credits": {
+  "src": "/workspace/screens-v604/html/43-character-scrolls-credits.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "44-scroll-reopened": {
+  "src": "/workspace/screens-v607/html/44-scroll-reopened-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/44-scroll-reopened.png",
+  "before": "/workspace/v608build/eyes/before/44-scroll-reopened.png"
+ },
+ "45-character-golden-pantry": {
+  "src": "/workspace/screens-v604/html/45-character-golden-pantry.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "46-backup-view": {
+  "src": "/workspace/screens-v607/html/46-backup-view-390check.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "47-backup-restore-step2": {
+  "src": "/workspace/screens-v604/html/47-backup-restore-step2.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "48-continue-after-pause": {
+  "src": "/workspace/screens-v607/html/48-continue-after-pause-390check.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/48-continue-after-pause.png",
+  "before": "/workspace/v608build/eyes/before/48-continue-after-pause.png"
+ },
+ "49-welcome-back": {
+  "src": "/workspace/screens-v604/html/49-welcome-back.html",
+  "subs": {
+   "<ellipse cx='48' cy='20'": 1
+  },
+  "png": "/workspace/screens-v608/png/49-welcome-back.png",
+  "before": "/workspace/v608build/eyes/before/49-welcome-back.png"
+ },
+ "50-open-from-home-screen": {
+  "src": "/workspace/screens-v606/html/50-open-from-home-screen.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/50-open-from-home-screen.png",
+  "before": "/workspace/v608build/eyes/before/50-open-from-home-screen.png"
+ },
+ "51-main-menu-hearth-verse": {
+  "src": "/workspace/screens-v606/html/51-main-menu-hearth-verse.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/51-main-menu-hearth-verse.png",
+  "before": "/workspace/v608build/eyes/before/51-main-menu-hearth-verse.png"
+ },
+ "52-title-night": {
+  "src": "/workspace/screens-v606/html/52-title-night.html",
+  "subs": {
+   "<g stroke='none'><ellips": 1
+  },
+  "png": "/workspace/screens-v608/png/52-title-night.png",
+  "before": "/workspace/v608build/eyes/before/52-title-night.png"
+ },
+ "53-map-nancy-later": {
+  "src": "/workspace/screens-v604/html/53-map-nancy-later.html",
+  "subs": {
+   "<path d='M33.1 20.7q1.9-": 1
+  },
+  "png": "/workspace/screens-v608/png/53-map-nancy-later.png",
+  "before": "/workspace/v608build/eyes/before/53-map-nancy-later.png"
+ },
+ "sv-A-meadow-evening-pond": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/A-meadow-evening-pond.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-B-meadow-listen-and-find": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/B-meadow-listen-and-find.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-C-fields-count-it": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/C-fields-count-it.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-D-fields-big-or-small": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/D-fields-big-or-small.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-E-lake-front-desk": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/E-lake-front-desk.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-F-lake-night-table": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/F-lake-night-table.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-G-forest-picture-duel": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/G-forest-picture-duel.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/v608build/eyes/scene-variety/png/sv-G-forest-picture-duel.png",
+  "before": "/workspace/v608build/eyes/before/sv-G-forest-picture-duel.png"
+ },
+ "sv-H-forest-dawn": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/H-forest-dawn.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/v608build/eyes/scene-variety/png/sv-H-forest-dawn.png",
+  "before": "/workspace/v608build/eyes/before/sv-H-forest-dawn.png"
+ },
+ "sv-now-10-word-meadow-scene": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/now-10-word-meadow-scene.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/v608build/eyes/scene-variety/png/sv-now-10-word-meadow-scene.png",
+  "before": "/workspace/v608build/eyes/before/sv-now-10-word-meadow-scene.png"
+ },
+ "sv-now-31-golden-fields-scene": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/now-31-golden-fields-scene.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-now-32-home-lake-scene": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/now-32-home-lake-scene.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "sv-now-34-echo-forest-sound-duel": {
+  "src": "/workspace/mocks-scene-variety-t401u/html/now-34-echo-forest-sound-duel.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/v608build/eyes/scene-variety/png/sv-now-34-echo-forest-sound-duel.png",
+  "before": "/workspace/v608build/eyes/before/sv-now-34-echo-forest-sound-duel.png"
+ },
+ "zone-fields-ask-320x568": {
+  "src": "/workspace/screens-v607/html/zone-fields-ask-320x568.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "zone-forest-ask-320x568": {
+  "src": "/workspace/screens-v607/html/zone-forest-ask-320x568.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "zone-lake-ask-320x568": {
+  "src": "/workspace/screens-v607/html/zone-lake-ask-320x568.html",
+  "subs": {},
+  "png": null,
+  "before": null
+ },
+ "zone-meadow-ask-320x568": {
+  "src": "/workspace/screens-v607/html/zone-meadow-ask-320x568.html",
+  "subs": {
+   "<use href='#rE'/>": 1
+  },
+  "png": "/workspace/screens-v608/png/zone-meadow-ask-320x568.png",
+  "before": "/workspace/v608build/eyes/before/zone-meadow-ask-320x568.png"
+ }
+}

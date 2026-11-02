@@ -1,0 +1,31 @@
+26-guardian-hint-jesus-words-320x568 | verse | .jesusWords[0].en | PASS | MATCH 66 bytes
+26-guardian-hint-jesus-words-320x568 | verse | .jesusWords[0].th | PASS | MATCH 230 bytes
+26-guardian-hint-jesus-words-320x568 | label | .uiText.jesusWords.en + " · " + .jesusWords[0].ref | PASS | MATCH 27 bytes
+26-guardian-hint-jesus-words-375x667 | verse | .jesusWords[0].en | PASS | MATCH 66 bytes
+26-guardian-hint-jesus-words-375x667 | verse | .jesusWords[0].th | PASS | MATCH 230 bytes
+26-guardian-hint-jesus-words-375x667 | label | .uiText.jesusWords.en + " · " + .jesusWords[0].ref | PASS | MATCH 27 bytes
+26-guardian-hint-jesus-words-390x844 | verse | .jesusWords[0].en | PASS | MATCH 66 bytes
+26-guardian-hint-jesus-words-390x844 | verse | .jesusWords[0].th | PASS | MATCH 230 bytes
+26-guardian-hint-jesus-words-390x844 | label | .uiText.jesusWords.en + " · " + .jesusWords[0].ref | PASS | MATCH 27 bytes
+30-new-weapon-gift-320x568 | verse | .verses.weekly[2].en | PASS | MATCH 152 bytes
+30-new-weapon-gift-320x568 | verse | .verses.weekly[2].th | PASS | MATCH 405 bytes
+30-new-weapon-gift-320x568 | label | .trophies[36].word[0] + " · " + .trophies[36].ref | PASS | MATCH 25 bytes
+30-new-weapon-gift-375x667 | verse | .verses.weekly[2].en | PASS | MATCH 152 bytes
+30-new-weapon-gift-375x667 | verse | .verses.weekly[2].th | PASS | MATCH 405 bytes
+30-new-weapon-gift-375x667 | label | .trophies[36].word[0] + " · " + .trophies[36].ref | PASS | MATCH 25 bytes
+30-new-weapon-gift-390x844 | verse | .verses.weekly[2].en | PASS | MATCH 152 bytes
+30-new-weapon-gift-390x844 | verse | .verses.weekly[2].th | PASS | MATCH 405 bytes
+30-new-weapon-gift-390x844 | label | .trophies[36].word[0] + " · " + .trophies[36].ref | PASS | MATCH 25 bytes
+37-rest-screen-320x568 | verse | .verses.rest.en | PASS | MATCH 72 bytes
+37-rest-screen-320x568 | verse | .verses.rest.th | PASS | MATCH 230 bytes
+37-rest-screen-320x568 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-320x568 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-375x667 | verse | .verses.rest.en | PASS | MATCH 72 bytes
+37-rest-screen-375x667 | verse | .verses.rest.th | PASS | MATCH 230 bytes
+37-rest-screen-375x667 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-375x667 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-390x844 | verse | .verses.rest.en | PASS | MATCH 72 bytes
+37-rest-screen-390x844 | verse | .verses.rest.th | PASS | MATCH 230 bytes
+37-rest-screen-390x844 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-390x844 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+TOTAL checks 30  PASS 30  FAIL 0  (PASTE /workspace/v608build/r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md)

@@ -1,0 +1,2 @@
+7c74cd8e8f52184b2b1ad8c8b3f2eef9  /workspace/instructor/v608/nightB/A.html
+5b548c61f70ec10f73e8de1331a30963  /workspace/instructor/v608/nightB/B.html

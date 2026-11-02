@@ -1,0 +1,3 @@
+snap=snap-t
+paste_1b_md5=00000000000000000000000000000000
+paste_1b_path=r2h-build/p.md

@@ -1,0 +1,6 @@
+- E-lake-front-desk-390x844: rebuilt == staged render: True; cropped design y 123-303 (181 pt of ceiling/wall) above the cap
+- E-lake-front-desk-375x667: rebuilt == staged render: True; cropped design y 283-303 (20 pt of ceiling/wall) above the cap
+- E-lake-front-desk-375x812: rebuilt == staged render: False; cropped design y 132-303 (165 pt of ceiling/wall) above the cap
+- F-lake-night-table-390x844: rebuilt == staged render: True; cropped design y 123-303 (181 pt of ceiling/wall) above the cap
+- F-lake-night-table-375x667: rebuilt == staged render: True; cropped design y 283-303 (20 pt of ceiling/wall) above the cap
+- F-lake-night-table-375x812: rebuilt == staged render: False; cropped design y 132-303 (165 pt of ceiling/wall) above the cap

@@ -1,0 +1,11 @@
+37-rest-screen-375x667 | verse | .verses.rest.en | PASS | MATCH 72 bytes
+37-rest-screen-375x667 | verse | .verses.rest.th | FAIL | DIFF at byte 52: render b'\xe0\xb8\xb7\xe0\xb8\xad\xe0\xb8\xa2\xe0\xb9\x81' vs PASTE b'\xe0\xb8\xb7\xe0\xb9\x88\xe0\xb8\xad\xe0\xb8\xa2' (render 227 B, PASTE 230 B)
+37-rest-screen-375x667 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-375x667 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-375x667 | stray | verse 'Matthew 11:28' th | FAIL | segment not byte-identical: 'บรรดาผู้เหน็ดเหนือยและแบกภาระหนัก จงมาหา'
+37-rest-screen-390x844 | verse | .verses.rest.en | FAIL | DIFF at byte 0: render b'\xe2\x80\x9cCome ' vs PASTE b'Come to ' (render 75 B, PASTE 72 B)
+37-rest-screen-390x844 | verse | .verses.rest.th | PASS | MATCH 230 bytes
+37-rest-screen-390x844 | label | .verses.rest.ref | PASS | MATCH 13 bytes
+37-rest-screen-390x844 | label | .verses.rest.enSource + " · " + .verses.rest.thSource | PASS | MATCH 13 bytes
+37-rest-screen-390x844 | stray | verse 'Matthew 11:28' en | FAIL | segment not byte-identical: '“Come to me, all who labor and are heavy'
+TOTAL checks 10  PASS 6  FAIL 4  (PASTE /workspace/v608build/r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md)

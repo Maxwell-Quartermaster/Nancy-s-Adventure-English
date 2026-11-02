@@ -1,0 +1,4 @@
+ground_check f46a2d29056eb68d56f6fc2113522905 | folder /tmp/qmtmp/r2h/gcw24 | MANIFEST none
+stage-W24-walk-B-320x568.png  86ea4312d133a2219b9912ef50e869ec  PASS
+stage-W24-walk-B-390x844.png  3685711d4a38314794a5519559e47177  PASS
+summary: 2 png, 0 BLOCK, 2 PASS

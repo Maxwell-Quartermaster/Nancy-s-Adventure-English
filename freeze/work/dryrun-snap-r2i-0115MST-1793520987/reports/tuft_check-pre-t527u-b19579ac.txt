@@ -1,0 +1,70 @@
+tuft_check b19579ac0921056cc8a2bc7f795cc59c | folder /tmp/qmtmp/r2h/gc-after
+05-map-day1-390x844.png  2b14fcd09562f32f6a6c6d981cabfe5a  PASS
+08-map-home-lake-chooser-day1-390x844.png  d2c80490bff7fd346cb2dbba591a4b9d  PASS
+09-map-later-390x844.png  bf88ff867dee8114f6f0cafb4568f994  PASS
+10-word-meadow-scene-320x568.png  1b630f1a74d39ff477c43ea2cd5298e2  PASS
+10-word-meadow-scene-390x844.png  df0c2776a4e29a89656dc7ec487fdc49  PASS
+11-word-meadow-scene-right-390x844.png  e04e71a97bdb72315a39e3a02c7be16b  PASS
+12-reveal-right-390x844.png  ccc8838644fa23649472e4213a588d57  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (293568 px grass, s 2.00)
+13-word-meadow-scene-retry-390x844.png  338cf5245ddb87818b2debacb0e8f912  PASS
+14-reveal-gentle-retry-320x568.png  a39a930e8f10b7e6d43e228cb2a8fd81  PASS
+14-reveal-gentle-retry-390x844.png  058b61a7141010e1a216d3bcffcdaac0  PASS
+15-say-it-sight-words-390x844.png  2f0af1a60880f45f8b4ecea6081c51aa  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (329280 px grass, s 2.00)
+16-say-it-maxwell-says-day1-390x844.png  39d3e1701701f749010ffaee646c76b2  PASS
+17-two-answer-pray-high-five-390x844.png  0dc05eb440c7561d0f6fa01c09a5d1c1  PASS
+18-two-answer-wrong-tap-390x844.png  f77519fb64332d6e46d05c5fd49e0fce  PASS
+19-two-answer-right-done-390x844.png  58079edd0f0dc349bcde5dfd0b236375  PASS
+21-kitchen-say-it-shown-320x568.png  aad8051ea70aea1b3109741039a7d37d  PASS
+21-kitchen-say-it-shown-390x844.png  1dec12147918073801973990f98d138f  PASS
+22-kitchen-server-talk-320x568.png  519bacd64c15a30f785d48f3317f7721  PASS
+22-kitchen-server-talk-390x844.png  621acd0fefff407774362b7e02fbd13a  PASS
+23-level-up-reward-320x568.png  8e38111608bec897098000c345019d18  BLOCK | bare grass: no tufts in band x0-640 y312-1048 (208896 px grass, s 1.64)
+23-level-up-reward-390x844.png  b672d41d3a651274c8f22d2a47ce7ca3  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (359936 px grass, s 2.00)
+24-guardian-run-entry-320x568.png  c55ba785b584ba2e5e0cf55ac79b4b1f  BLOCK | bare grass: no tufts in band x0-640 y464-1136 (207808 px grass, s 1.64)
+24-guardian-run-entry-375x667.png  cf15a0ca0b38c65a7c997d614b7609b3  BLOCK | bare grass: no tufts in band x64-688 y480-928 (190592 px grass, s 1.92)
+24-guardian-run-entry-390x844.png  3869600bffd97db1699971f324184ca2  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (313152 px grass, s 2.00)
+25-guardian-hint-letters-320x568.png  e45cdd6673c93b0aa7b2382693cad952  BLOCK | bare grass: no tufts in band x8-632 y456-1136 (183168 px grass, s 1.64)
+25-guardian-hint-letters-375x667.png  9b6d531886d40b1e3ba30b0758f13a3a  BLOCK | bare grass: no tufts in band x64-688 y480-928 (190592 px grass, s 1.92)
+25-guardian-hint-letters-390x844.png  9fe3f19cba18a2b09edbc4b8f32acae2  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (275008 px grass, s 2.00)
+26-guardian-hint-jesus-words-320x568.png  aafbf6c5fcd4a2079bf357636685c83b  BLOCK | bare grass: no tufts in band x0-640 y464-1136 (85056 px grass, s 1.64)
+26-guardian-hint-jesus-words-375x667.png  4838c07fa0a74fcba433bfb62f2c6040  BLOCK | bare grass: no tufts in band x64-688 y488-928 (82432 px grass, s 1.92)
+26-guardian-hint-jesus-words-390x844.png  92739f2cd72329aa70730ee07d475eb8  BLOCK | bare grass: no tufts in band x0-776 y736-1640 (277888 px grass, s 2.00)
+27-guardian-kneels-320x568.png  76e692c68b4b9c7a64e6917af1220428  BLOCK | bare grass: no tufts in band x32-608 y440-848 (160832 px grass, s 1.64)
+27-guardian-kneels-375x667.png  e7f9a1744276d0580af46a198f5019ea  BLOCK | bare grass: no tufts in band x64-688 y480-920 (192768 px grass, s 1.92)
+27-guardian-kneels-390x844.png  4d78c16977b87b1d0238da791f1f7c82  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (316800 px grass, s 2.00)
+28-guardian-win-320x568.png  ac52252af8f92f678f2450fc5c841349  PASS
+28-guardian-win-375x667.png  16173ee628b9d2331987b0bd55a767b5  PASS
+28-guardian-win-390x844.png  aff4563c2794db131f89e582a7cee3a0  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (345344 px grass, s 2.00)
+29-verse-scroll-gift-390x844.png  c8536836052b9d7054c69694e735e409  PASS
+30-new-weapon-gift-390x844.png  c13a3f54a10ebb519ff1ea60aff06e8e  BLOCK | bare grass: no tufts in band x0-776 y728-1640 (251008 px grass, s 2.00)
+32-home-lake-scene-390x844.png  d21ee0f110e8ed9dcf32abc00a831a03  PASS
+33-say-it-baby-hospital-reply-320x568.png  16d9465b5b3d8ba6bb25b359d244c249  PASS
+33-say-it-baby-hospital-reply-390x844.png  43f6194435c58613e7616b9b54124a0b  PASS
+37-rest-screen-390x844.png  2c5218bd2e6a6e09fab5edc625ebf5d1  BLOCK | bare grass: no tufts in band x0-272 y992-1640 (57216 px grass, s 2.00) ; bare grass: no tufts in band x376-776 y992-1640 (75968 px grass, s 2.00)
+44-scroll-reopened-390x844.png  1406cb8b65368fc657a4ae5644bf3379  PASS
+48-continue-after-pause-390x844.png  c99a9d61f7dbabd2653dc08f65548814  PASS
+54-phrase-ask-card-320x568.png  23312c0999a91ae405b12864ce42c206  PASS
+54-phrase-ask-card-390x844.png  f8770270b77d040ba477b9e5a4157765  PASS
+M1-main-menu-320x568.png  acebb7384833c8ec7b625f632025ebe0  PASS
+M1-main-menu-390x844.png  d90014f0e89871eb1616b2c2e1012376  PASS
+M2-main-menu-320x568.png  ad30a75e5911962444d924369d07785d  PASS
+M2-main-menu-390x844.png  eeb6fdb0952936c6429db233cda4bf73  PASS
+M3-main-menu-320x568.png  25234b9346f3d2e35055bc722a197c23  PASS
+M3-main-menu-390x844.png  ef86ca9da2fd16a7cabcd0ed19a40493  PASS
+map-extended-320x568.png  fabf6780694a00aabecf170ba5e4406f  PASS
+map-extended-390x844.png  b9c3326f5bd69db8fd432a3cfd427ebd  PASS
+stage-A-meadow-evening-pond-320x568.png  b483659c890c625293e1b846e49153c0  PASS
+stage-A-meadow-evening-pond-375x667.png  556dce2ba93709afc572ad3b4940ecb9  PASS
+stage-A-meadow-evening-pond-390x844.png  a0d98dbb19371e702fe0eb5da8c1f026  PASS
+stage-B-meadow-listen-and-find-320x568.png  d100408282994cf99920413397d5f175  PASS
+stage-B-meadow-listen-and-find-375x667.png  2c2292edb49fcfeabcde23d67a3f3be4  PASS
+stage-B-meadow-listen-and-find-390x844.png  fb0715ce966889c09f7583952fe9acd6  PASS
+zone-forest-ask-320x568.png  42fcd45ff9a600906b98d1462142dfea  PASS
+zone-forest-ask-375x812.png  4b0860096270c3277541fe4ec6960d52  PASS
+zone-forest-ask-390x844.png  839517e85fe5be978d625f66d277d81e  PASS
+zone-lake-ask-320x568.png  79d4fe3b1213c7af8831b246797835ad  PASS
+zone-meadow-ask-320x568-skyB.png  1b630f1a74d39ff477c43ea2cd5298e2  PASS
+zone-meadow-ask-320x568.png  1b630f1a74d39ff477c43ea2cd5298e2  PASS
+zone-meadow-ask-375x812-skyB.png  bb241fd9488024fa14d02b701de80bd7  PASS
+zone-meadow-ask-390x844-skyB.png  df0c2776a4e29a89656dc7ec487fdc49  PASS
+summary: 68 images, 19 BLOCK, 49 PASS

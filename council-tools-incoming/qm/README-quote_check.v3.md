@@ -1,0 +1,20 @@
+**Quartermaster:** # quote_check.py: Maxwell quote and spec-quote checker (patch)
+**Quartermaster:** Run: `python3 quote_check.py --file post.md` or `python3 quote_check.py "<post text>"`.
+**Quartermaster:** Checks every line starting **Maxwell...** and every "Maxwell said/says/wrote/ruled '...'" against labelled rows in SETTLED-RULINGS.md and ASKS-LEDGER.md.
+**Quartermaster:** VERBATIM: exact match to a MAXWELL OWN row (whole text, whole sentences, or pieces in order around a […Name cut…] marker). If the row itself is marked UNVERIFIED (t527u, C7), the output says so.
+**Quartermaster:** RELAY: the t-number or text is an Ara relay row. Relabel as **Ara (relay, tN, chat):**.
+**Quartermaster:** PARAPHRASE: the t-number is paraphrase-only (NO VERBATIM ON RECORD).
+**Quartermaster:** ALTERED: near match with words changed, or cut mid-sentence with no […cut…] marker. A word diff is shown (record->post).
+**Quartermaster:** WRONG-TNUM: the text matches a MAXWELL OWN row exactly, but that row's t-number is not the one cited (for example t402u words labelled t403u or t405u). The output names the right t-number. Flagged.
+**Quartermaster:** UNKNOWN: no record, or the row is a bot's own words (for example Chancellor t76u).
+**Quartermaster:** t-numbers are per chat. If the post names the chat (QM chat, Watchman DM, ...) and that chat has a row for the t-number, only that chat's rows count. If the named chat has no row for it, all chats' rows are used. Order when one t-number has several kinds of row: RELAY wins over everything (the cautious answer), then own-words rows win over paraphrase rows. So an own row plus a paraphrase row on the same t-number is checked against the own words (VERBATIM if the text matches). PARAPHRASE only comes back when there is no own-words row.
+**Quartermaster:** Spec quotes: any line naming spec, rule N or PASTE with a quote of 3+ words (or 6+ Thai characters) is checked word for word against r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md (317e91ce; it warns if the md5 differs). With "rule N" it checks section 1 rule N only. A leading list marker on the quote ("9. ", "1) ", "- ", "* ") is stripped first, so rule 9 quoted exactly as PASTE line 32 prints it (`9. **Nothing red or alarming** anywhere but boss bars.`) is SPEC-VERBATIM.
+**Quartermaster:** Thai: Thai has no spaces between words, so a Thai quote is measured by characters. Any quoted run with 6+ Thai characters is checked. A short altered Thai quote (Genesis 1:1 with ฟ้า changed to ฝ้า) comes back SPEC-ALTERED with a character diff (-[ฟ] +[ฝ]). Under 6 Thai characters is not checked.
+**Quartermaster:** SPEC-VERBATIM is ok. SPEC-CUT (part of a sentence, no marker), SPEC-ALTERED (diff shown) and SPEC-NOTFOUND are flagged.
+**Quartermaster:** Exit 0 = nothing flagged, 1 = something flagged, 2 = usage error. Overrides: `--rulings`, `--ledger`, `--paste`.
+**Quartermaster:** Limit: it can only judge against what is on the box. The relays for t141u-t143u have no text on the box, so those come back RELAY by t-number alone.
+**Quartermaster:** Self-test: `python3 selftest_quote_check.py`.
+**Quartermaster:** Known limits still open (advisory in the gate): an unquoted "Maxwell said ..." isn't checked (Q05c), and a fragment with […cut…] markers at both ends can still come back SPEC-CUT (Q06c).
+**Quartermaster:** Scratch: the tool makes its own folder qm/runs/quote_check/ with os.makedirs. It never uses /tmp or another bot's folder. It reads the ledgers and PASTE read-only.
+**Quartermaster:** v2 (Nov 1, 2026): fixes Auditor gate L1-0141 KIT-QD2, Q04, Q06b and the E3c README mismatch. v1 is parked as quote_check.v1.py.
+**Quartermaster:** v3 (Nov 1, 2026): fixes Auditor gate L1-0200 T6. Every match of a quote is tried, on every PASTE line, not just the first. A quote is SPEC-VERBATIM if ANY match is a whole value or whole sentence; SPEC-CUT only if none is. The same every-match rule applies to Maxwell quotes against ledger rows. v2 is parked as quote_check.v2.py.

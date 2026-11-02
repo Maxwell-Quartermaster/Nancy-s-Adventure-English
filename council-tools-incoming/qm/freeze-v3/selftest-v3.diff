@@ -1,0 +1,129 @@
+--- selftest.base-214efe53.py	2026-11-01 07:29:27.947493845 +0000
++++ selftest.py	2026-11-01 09:22:07.791511886 +0000
+@@ -1,7 +1,10 @@
+ #!/usr/bin/env python3
+ """selftest.py - planted-fault self-test for freeze.py and hold_check.py. Owner: Quartermaster.
+   python3 selftest.py [--quick]     (--quick skips the two real checks_v608 runs, ~50 s)
+-Every case runs in its own sandbox under freeze/sandbox/st-<time>/ (kept; no-delete rule). The live pointer is checked after every case."""
++Every case runs in its own sandbox under <this dir>/sandbox/st-<time>/ (kept; no-delete rule). The live pointer is checked after every case.
++v3 (sheets routing): freeze runs get FREEZE_TOOLS = a small copy of the tools freeze uses (current_snap, send-guard, ground-check,
++thai-diff, fit-table) plus a STUB sheets scan (logs what it is given; BLOCKs names in $SHEETS_SCAN_STUB_BLOCK) and a logging
++wrapper around ground_check (every path it is asked to check goes to $GC_LOG). tools='live' runs against /workspace/council-tools."""
+ import fcntl, hashlib, json, os, re, shutil, subprocess, sys, time
+ HERE = os.path.dirname(os.path.abspath(__file__)); FZ = os.path.join(HERE, 'freeze.py'); HC = os.path.join(HERE, 'hold_check.py')
+ LIVE = '/workspace/v608build/CURRENT-SNAP.txt'; LIVE_MD5 = 'f6dac2d0e7b391436a160eab1bbf17fe'
+@@ -24,11 +27,51 @@
+     if extra: extra(T)
+     return T
+ 
+-def fz(sb, *args, fault=None, stage_dir=None, paste=PASTE, snap='snap-st-0100MDT', quick=True, timeout=600, env_extra=None):
++STUB_SCAN = """#!/usr/bin/env python3
++# SELFTEST STUB of Chancellor's sheets scan (NOT the real scan). Logs every file to $SHEETS_SCAN_LOG; BLOCKs basenames in $SHEETS_SCAN_STUB_BLOCK.
++import os, sys
++fs = sys.argv[1:]
++if not fs: print('ERROR no files'); sys.exit(2)
++lg = os.environ.get('SHEETS_SCAN_LOG'); blk = set(x for x in os.environ.get('SHEETS_SCAN_STUB_BLOCK', '').split(',') if x); bad = 0
++for f in fs:
++    if lg: open(lg, 'a').write(os.path.abspath(f) + '\\n')
++    if os.path.basename(f) in blk: print(f'BLOCK {f}: planted (stub)'); bad += 1
++    else: print(f'PASS {f} (stub)')
++print(f'RESULT {"BLOCK" if bad else "PASS"}: {len(fs)} files'); sys.exit(1 if bad else 0)
++"""
++GC_WRAP = """# selftest wrapper: log every path, then the real ground_check (ground_check_real.py, byte-identical copy)
++import os, sys
++sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
++import ground_check_real as _r
++from ground_check_real import *
++def check(f, *a, **k):
++    lg = os.environ.get('GC_LOG')
++    if lg: open(lg, 'a').write(os.path.abspath(f) + '\\n')
++    return _r.check(f, *a, **k)
++"""
++def tools_copy(dst, stub=True, wrap_gc=True):
++    """Copy of the tools freeze.py uses into dst/council-tools (reads live, writes only dst)."""
++    T = os.path.join(dst, 'council-tools'); os.makedirs(T)
++    ig = shutil.ignore_patterns('__pycache__', 'runs', 'selftest-scratch', '*.bak', 'design')
++    shutil.copy2('/workspace/council-tools/current_snap.py', T)
++    for d in ('send-guard', 'ground-check', 'thai-diff', 'fit-table'): shutil.copytree(f'/workspace/council-tools/{d}', f'{T}/{d}', ignore=ig)
++    if wrap_gc:
++        os.rename(f'{T}/ground-check/ground_check.py', f'{T}/ground-check/ground_check_real.py'); open(f'{T}/ground-check/ground_check.py', 'w').write(GC_WRAP)
++    if stub:
++        os.makedirs(f'{T}/sheets-scan'); open(f'{T}/sheets-scan/sheets_scan.py', 'w').write(STUB_SCAN)
++    return T
++TOOLS_COPY = tools_copy(os.path.join(ROOT, 'tools'))
++def logs(sb): n = os.path.basename(os.path.dirname(sb)); return os.path.join(ROOT, f'gc-{n}.log'), os.path.join(ROOT, f'scan-{n}.log')
++def readlog(p): return open(p).read().split() if os.path.isfile(p) else []
++
++def fz(sb, *args, fault=None, stage_dir=None, paste=PASTE, snap='snap-st-0100MDT', quick=True, timeout=600, env_extra=None, tools=None):
+     cmd = [sys.executable, FZ, '--sandbox', sb] + list(args)
+     if stage_dir: cmd += ['--stage', stage_dir, '--paste', paste, '--snap-name', snap] + (['--skip-checks-v608'] if quick else [])
+     env = dict(os.environ); env.pop('FREEZE_FAULT', None)
+     if fault: env['FREEZE_FAULT'] = fault
++    if tools == 'live': env.pop('FREEZE_TOOLS', None)
++    else: env['FREEZE_TOOLS'] = tools or TOOLS_COPY
++    env['GC_LOG'], env['SHEETS_SCAN_LOG'] = logs(sb)
+     if env_extra: env.update(env_extra)
+     r = subprocess.run(cmd, capture_output=True, text=True, env=env, timeout=timeout)
+     return r.returncode, r.stdout + r.stderr
+@@ -91,10 +134,48 @@
+ # 4 over-ceiling
+ op = os.path.join(ROOT, 'over-PASTE.md'); open(op, 'w', encoding='utf-8').write(open(PASTE, encoding='utf-8').read() + 'x' * 100)
+ sb, rc, out = planted('over-ceiling', 1, paste=op); ok('over-ceiling: reason says over the ceiling', 'over the 188,200 ceiling' in out)
+-# 5 send_guard exit 3
+-sb, rc, out = planted('sendguard-exit3', 3, fault='sendguard_exit3'); ok('send_guard exit 3 counts as FAIL', 'send_guard exit 3' in out, out[-300:])
+-# 5b send_guard real BLOCK: a sheet with the old path stroke (ground check)
+-sb, rc, out = planted('sendguard-block', 3, extra=lambda T: shutil.copy2(f'{R}/r2h/sheets/r2h-before-after.png', f'{T}/sheets/')); ok('send_guard real BLOCK (ground) counts as FAIL', 'send_guard exit 1' in out)
++# 5 (v3) FREEZE_FAULT sendguard_exit3 is a no-op: the sheets leg is always send_guard --no-ground and requires exit 3
++sb = sbx('sendguard-exit3'); T = stage('sendguard-exit3'); fz(sb, '--status')
++rc, out = fz(sb, '--dry-run', stage_dir=T, fault='sendguard_exit3'); ok('v3 sendguard_exit3 fault is a no-op (sheets leg always --no-ground): dry run exit 0', rc == 0 and 'DRY RUN CLEAN' in out, out[-300:])
++# 5b (v3) the old-path sheet in sheets/ goes to the sheets scan, NOT ground_check; a sheets-scan BLOCK fails the freeze
++sb = sbx('sheets-scan-block'); T = stage('sheets-scan-block', lambda T: shutil.copy2(f'{R}/r2h/sheets/r2h-before-after.png', f'{T}/sheets/')); fz(sb, '--status'); p0 = ptr(sb)
++rc, out = fz(sb, stage_dir=T, env_extra={'SHEETS_SCAN_STUB_BLOCK': 'r2h-before-after.png'}); gl, sl = logs(sb)
++failed_kept('sheets-scan BLOCK', rc, out, sb, 3, p0)
++ok('sheets-scan BLOCK: REASON names the sheets scan (exit 1), ground_check was never called', 'sheets scan exit 1' in out and readlog(gl) == [] and any(x.endswith('/sheets/r2h-before-after.png') for x in readlog(sl)), out[-300:])
++# 5c (v3) routing: showcase/, sheets/, nested sheets (two kinds) and a normal render
++r = subprocess.run([sys.executable, '-c', 'import sys,json;sys.path.insert(0,%r);import freeze as f;print(json.dumps([f.route(x) for x in sys.argv[1:]]))' % HERE,
++                    './showcase/showcase-1-opening.png', './sheets/05-map-day1-390x844.png', './scene-fill-20261101/sheets/S01.png', './sheets/sub/x.png',
++                    './renders/r2x/09-map-later-390x844.png', './sheets-ref/x.png', './renders/sheets.png', './showcase'],
++                   env=dict(os.environ, FREEZE_TOOLS=TOOLS_COPY), capture_output=True, text=True)
++want = ['sheets', 'sheets', 'sheets', 'sheets', 'single', 'single', 'single', 'single']
++ok('route(): showcase/, sheets/, nested scene-fill/sheets/ and sheets/sub/ -> sheets; normal render, sheets-ref/, a file named sheets.png -> single', r.stdout.strip() == json.dumps(want), r.stdout + r.stderr[-300:])
++def nested(T):
++    for d in ('scene-fill-20261101/sheets', 'sheets/sub'): os.makedirs(os.path.join(T, d))
++    shutil.copy2(f'{R}/r2h/png/09-map-later-390x844.png', f'{T}/scene-fill-20261101/sheets/S01-nested.png'); shutil.copy2(f'{R}/r2h/png/09-map-later-390x844.png', f'{T}/sheets/sub/sub-nested.png')
++sb = sbx('routing'); T = stage('routing', nested); fz(sb, '--status'); p0 = ptr(sb)
++rc, out = fz(sb, '--dry-run', stage_dir=T); gl, sl = logs(sb); sc = readlog(sl)
++sg = open(os.path.join(sb, 'freeze', 'work', 'send-guard-snap-st-0100MDT.txt')).read() if os.path.isfile(os.path.join(sb, 'freeze', 'work', 'send-guard-snap-st-0100MDT.txt')) else ''
++ok('routing dry run: exit 0, DRY RUN CLEAN, pointer untouched', rc == 0 and 'DRY RUN CLEAN' in out and ptr(sb) == p0, out[-400:])
++ok('routing: showcase/ file -> sheets scan only', os.path.join(T, 'showcase/showcase-1-opening.png') in sc, sc)
++ok('routing: sheets/ file -> sheets scan only', os.path.join(T, 'sheets/05-map-day1-390x844.png') in sc, sc)
++ok('routing: nested scene-fill-20261101/sheets/ and sheets/sub/ files -> sheets scan only', os.path.join(T, 'scene-fill-20261101/sheets/S01-nested.png') in sc and os.path.join(T, 'sheets/sub/sub-nested.png') in sc, sc)
++ok('routing: sheets scan got exactly the 4 sheets/showcase images, not the normal render', len(sc) == 4 and not any('/renders/' in x for x in sc), sc)
++ok('routing: ground_check was called on NOTHING (no sheets/showcase path reached it)', readlog(gl) == [], readlog(gl))
++ok('routing: send_guard ran --no-ground with nested --only prefixes, every sheets/showcase file OK in the candidate snapshot', 'GROUND SKIPPED' in sg and 'GRND' not in sg and 'RESULT CLEAR: 4 files' in sg and 'OK ' in sg and 'S01-nested.png = MANIFEST.md5:./scene-fill-20261101/sheets/S01-nested.png' in sg, sg[-500:])
++ok('routing: normal render (renders/r2x/) not given to send_guard or the sheets scan (unchanged from 91aa8a3e)', '/renders/' not in sg and not any('/renders/' in x for x in sc), sg[-300:])
++# control: the ground_check logger works (send_guard WITH ground on the tools copy logs the path)
++cl = os.path.join(ROOT, 'gc-control.log')
++r = subprocess.run([sys.executable, os.path.join(TOOLS_COPY, 'send-guard/send_guard.py'), os.path.join(T, 'sheets/05-map-day1-390x844.png')], env=dict(os.environ, GC_LOG=cl, CURRENT_SNAP=os.path.join(sb, 'CURRENT-SNAP.txt')), capture_output=True, text=True)
++ok('control: ground_check logger records a direct send_guard ground call', readlog(cl) == [os.path.join(T, 'sheets/05-map-day1-390x844.png')], readlog(cl))
++# 5d (v3) live tools have no sheets scan installed: a stage with sheets/showcase fails closed at step 3; a stage with none still passes
++sb = sbx('no-scan'); T = stage('no-scan'); fz(sb, '--status', tools='live')
++rc, out = fz(sb, '--dry-run', stage_dir=T, tools='live')
++ok('no sheets scan installed (live tools): exit 1, REASON step 3 names the missing scan', rc == 1 and re.search(r'^REASON: step 3 render: \S*sheets-scan/sheets_scan.py: sheets scan not installed', out, re.M), out[-400:])
++def nosheets(T):
++    for d in ('sheets', 'showcase'): os.rename(os.path.join(T, d), os.path.join(T, d + '-moved-by-selftest'))
++sb = sbx('no-sheets'); T = stage('no-sheets', nosheets); fz(sb, '--status', tools='live')
++rc, out = fz(sb, '--dry-run', stage_dir=T, tools='live')
++ok('stage with no sheets/showcase (live tools): dry run exit 0, scan not needed', rc == 0 and 'DRY RUN CLEAN' in out and 'no sheets/ or showcase/ files in stage' in out, out[-400:])
+ # 6 existing snap dir
+ sb, rc, out = planted('snap-exists', 1, prep=lambda sb: os.makedirs(os.path.join(sb, 'snap-st-0100MDT'))); ok('existing snap dir: refuses to overwrite', 'already exists' in out)
+ # 7 pointer md5 mismatch (pointer's own paste_1b changed on disk)
+@@ -190,7 +271,7 @@
+ sb, rc, out = planted('carry-corrupt', 3, prep=corrupt)
+ ok('corrupted carried file: named, no new snap, pointer untouched', 'carried file md5' in out and 'QUEUE.md' in out and not os.path.exists(os.path.join(sb, 'snap-st-0100MDT')), out[-300:])
+ # 22 the proposed council-tools/incoming/qm-hold-check.diff on a COPY of council-tools (live tools untouched)
+-P = os.path.join(ROOT, 'patched'); os.makedirs(P); subprocess.run(['cp', '-a', '/workspace/council-tools', P], check=True)
++P = os.path.join(ROOT, 'patched'); os.makedirs(P); tools_copy(P, stub=True, wrap_gc=False)   # v3: small copy (was cp -a of all 8.8 GB) + stub sheets scan
+ pr = subprocess.run(['patch', '-p1', '-i', '/workspace/council-tools/incoming/qm-hold-check.diff'], cwd=P, capture_output=True, text=True)
+ ok('hold-check diff applies cleanly to a copy', pr.returncode == 0, pr.stdout + pr.stderr)
+ sb = sbx('patched'); T = stage('patched'); pe = {'FREEZE_TOOLS': os.path.join(P, 'council-tools')}

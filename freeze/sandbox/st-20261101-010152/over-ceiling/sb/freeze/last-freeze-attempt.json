@@ -1,0 +1,10 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": false,
+ "sandbox": true,
+ "started": "2026-11-01 01:03 MDT",
+ "steps": {},
+ "result": "FAIL",
+ "reason": "REASON: step 1 preflight: /workspace/v608build/freeze/sandbox/st-20261101-010152/over-PASTE.md: 188,216 chars is over the 188,200 ceiling by 16",
+ "pointer": "pointer not moved"
+}

@@ -1,0 +1,2502 @@
+# DELTA: snap-r2i-0115MST vs snap-r2h-0021MDT (MANIFEST 7b7c357fea7bf6777df24650754b8be9; DELTA.md itself excluded)
+
+Frozen 1:13 AM MST by freeze.py (carry: previous complete snapshot + stage overlay + PASTE). Copies only (copy2, mtimes kept); nothing deleted. PASTE 1B at ./trim-1B/nancys-adventure-english-v6-08-PASTE.md = 317e91ce86f073c961f8169183d2bbd3.
+
+Carried: 662. Stage new: 902. Stage overrides (changed): 8. Stage same as carried: 0. Not carried: 0. renders-MANIFEST: 1099 carried lines, 477 stage lines, 1576 total.
+
+## Changed (old md5 -> new md5)
+
+- ./README.md: 4844343ddd66a66bd334f70f8d0458e9 -> c567fc47748cfa9849ba1522314c7def
+- ./renders-MANIFEST.md5: 62e41535fb1d86d3a05dec854c56f572 -> 6db638bda6165c7ac3bea33596b29c95
+- ./showcase/INDEX.md: 796dc3fc9479b5ab4d422805a89db05f -> 5eace60f022397aabcf4401b9bb63e03
+- ./showcase/showcase-1-opening.png: 8dcce473f9dbc98ee2b0c03e3caa2351 -> 4422ff64d43d2e166e50750641110015
+- ./showcase/showcase-2-zones.png: 923bacf2d4bfd6003db88372b61d89ae -> 6369fca40ca2f4f62bb271d08f9770f3
+- ./showcase/showcase-3-asking.png: f4a8453e5a2d57fbc24084a5c68d9f64 -> f0f0d10cc6c9329011c676190de24460
+- ./showcase/showcase-4-walk-guardian.png: dc0939b8b077d425faec4b2d0f85a85f -> c62068deb0fd16483601f20d7f96c102
+- ./showcase/showcase-5-rewards-pause.png: f1a2e8d00ec840a6ef8c1708eb9b8e26 -> 4764adcb3043685bb6e4316d853cf1b4
+- ./trim-1B/nancys-adventure-english-v6-08-PASTE.md: 2eebff944f7c30ac2e13fdc8e888d398 -> 317e91ce86f073c961f8169183d2bbd3
+
+## New
+
+- ./r2h/code/FIXLOG.md: e663347d082f37be4d199ca19cae4b57
+- ./r2h/code/__pycache__/cdp_shot.cpython-313.pyc: 8422d724ea70dca36d04e64485806c53
+- ./r2h/code/__pycache__/fix_r2h.cpython-313.pyc: 79e19c08327e03bfa1b53fcbbda18deb
+- ./r2h/code/__pycache__/sheet_r2h.cpython-313.pyc: f6b69214337e234fa32dbe969da8d597
+- ./r2h/code/__pycache__/sidecar.cpython-313.pyc: 2564c8f93486d824888aa87f2c2c074c
+- ./r2h/code/__pycache__/tour_r2h.cpython-313.pyc: c3b2c7ea26a31bf0ee6b568e271c9788
+- ./r2h/code/backfill_html_md5.py: e2a95c2223fa88e768c39d6341f0225b
+- ./r2h/code/cdp_checks.py: 04529264bdba8f508ee503673c45a6f9
+- ./r2h/code/cdp_shot.py: 38bf7dadbc8bb98192d05d91372471b8
+- ./r2h/code/fix_r2h.py: 36c8d24e610c486aee2144090dd703c3
+- ./r2h/code/maps_t527u.py: f947adc56ebfd98c234ffe49352764ea
+- ./r2h/code/menu/__pycache__/flowers.cpython-313.pyc: 81897f81412ebc089eb0a2ac1760abaf
+- ./r2h/code/menu/__pycache__/parts.cpython-313.pyc: b13e150a638a1775ad06e256b3955cfa
+- ./r2h/code/menu/__pycache__/sheet_menu.cpython-313.pyc: fe7515c84be6bb0bdb43571867275ed7
+- ./r2h/code/menu/build_menu.py: 010675777cf46de049a9309c0a73560b
+- ./r2h/code/menu/flowers.py: c0915315a4504d618d43806188fea45f
+- ./r2h/code/menu/overlap_menu.py: 276f97edad2ee5a2dc03aa2438e02769
+- ./r2h/code/menu/parts.py: 0c58270b661b70203df6dc3de831367b
+- ./r2h/code/menu/sheet_menu.py: d86687a0173bfae0e4ffc93f2498eeff
+- ./r2h/code/menu/shoot_menu.py: a6fdbcbc82006b4b973cedcd1e501628
+- ./r2h/code/render_r2h.py: db77d6893bcb8883835c0dbbe1dacecf
+- ./r2h/code/sheet_r2h.py: 8292993d712947bc868eee602c5981f1
+- ./r2h/code/sidecar.py: c697b745302740806afbd0822f2ef5b8
+- ./r2h/code/stage_r2h_paste.py: 34d18af7ebf4a5f2a3d711e1096ed600
+- ./r2h/code/tour_r2h.py: c23c71e5ed493e22694a47957faa4627
+- ./r2h/html/01-title-390x844-before.html: 52baea126aa2e2cd6d47d8c0f14b360d
+- ./r2h/html/02-main-menu-verse-popup-390x844-before.html: d132a927cf4f05741c06c089a15735d0
+- ./r2h/html/03-main-menu-390x844-before.html: ca8361f4e36d247ede5da9f16e2a9bde
+- ./r2h/html/05-map-day1-390x844-before.html: 9859a9b12be506cb006528a5781ff249
+- ./r2h/html/05-map-day1-390x844.html: cd0ca16a9fa323cf0767abff47f00739
+- ./r2h/html/07-map-word-meadow-chooser-390x844-before.html: 5073f0ee7571a5ed069e94961406c14e
+- ./r2h/html/07-map-word-meadow-chooser-390x844.html: de7fd0dad0c5ccfc84a5f699a8a843d1
+- ./r2h/html/08-map-home-lake-chooser-day1-390x844-before.html: 70c8a025ae22f1f76ece8666dd9cd6ed
+- ./r2h/html/08-map-home-lake-chooser-day1-390x844.html: e86a6c239078f35fe502459652cee35a
+- ./r2h/html/09-map-later-390x844-before.html: 8add012eec046f3e03837909f0ce8e56
+- ./r2h/html/09-map-later-390x844.html: d99bb16a1da4479b8a99dfb92f920038
+- ./r2h/html/10-word-meadow-scene-320x568-before.html: aa7d44a5654852f7c424f9ac41974cf5
+- ./r2h/html/10-word-meadow-scene-320x568.html: b87661b71ed2cc93c8cec7945daf17d1
+- ./r2h/html/10-word-meadow-scene-390x844-before.html: 511989aacd2e29c7e56d79524f6c9d09
+- ./r2h/html/10-word-meadow-scene-390x844.html: 723493a4c01ee784436868fe19d9a995
+- ./r2h/html/11-word-meadow-scene-right-390x844-before.html: 1b8a68d100de5445124ef418ac876296
+- ./r2h/html/11-word-meadow-scene-right-390x844.html: 5821aba3cdc0839e7ae26531b31e7c54
+- ./r2h/html/12-reveal-right-390x844-before.html: c34adac320616285ba4e32331d7c2319
+- ./r2h/html/12-reveal-right-390x844.html: 0975b9e3276d17c3873fbab1ce261a28
+- ./r2h/html/13-word-meadow-scene-retry-390x844-before.html: f08d5c263fbc0b75ebed6c7413b1de94
+- ./r2h/html/13-word-meadow-scene-retry-390x844.html: dee4ab0f6367482f15549c49664b19dd
+- ./r2h/html/14-reveal-gentle-retry-320x568-before.html: 6d2b199fa8c915b5b5f0b6eda8883364
+- ./r2h/html/14-reveal-gentle-retry-320x568.html: 491cb9a42e77531349fa974f77de5864
+- ./r2h/html/14-reveal-gentle-retry-390x844-before.html: 6400cb75148c103421f8056bf8081b8f
+- ./r2h/html/14-reveal-gentle-retry-390x844.html: fb0b054fc2f6d8796c943847a9d5f6b4
+- ./r2h/html/15-say-it-sight-words-390x844-before.html: 5f8e27d7a3f44dcdf9a9d660ad37a8f1
+- ./r2h/html/15-say-it-sight-words-390x844.html: 5a1fa6a51b23eb0103eb3a7cb7ea7975
+- ./r2h/html/16-say-it-maxwell-says-day1-390x844-before.html: d0379ce622eb9c07434730217a42e892
+- ./r2h/html/16-say-it-maxwell-says-day1-390x844.html: eaa7b03ee43901d6dc809d7c0ba74d4a
+- ./r2h/html/17-two-answer-pray-high-five-390x844-before.html: dad83b3c3cabb4ab2e39e1d2591a4818
+- ./r2h/html/17-two-answer-pray-high-five-390x844.html: 7a8f68ff53a36af347e555751cc77a70
+- ./r2h/html/18-two-answer-wrong-tap-390x844-before.html: 9a6fcbfb97b09a882100ef970844f558
+- ./r2h/html/18-two-answer-wrong-tap-390x844.html: 02550e34e8557b6c646022887bb984f5
+- ./r2h/html/19-two-answer-right-done-390x844-before.html: c99faea7a884c3edd32ed52e60219dc0
+- ./r2h/html/19-two-answer-right-done-390x844.html: e92c186a51912a701b2bceabb3ea745f
+- ./r2h/html/21-kitchen-say-it-shown-320x568-before.html: 97a102294c2a861e9d4c9652928d3f67
+- ./r2h/html/21-kitchen-say-it-shown-320x568.html: c764c24be32e003221540bd92b67dce2
+- ./r2h/html/21-kitchen-say-it-shown-390x844-before.html: eb0be055fe19d26a8441f98d55458a35
+- ./r2h/html/21-kitchen-say-it-shown-390x844.html: 724e47dabefd66074f9a9959623359e2
+- ./r2h/html/22-kitchen-server-talk-320x568-before.html: 1cebd0c03076b0f174a7198ef112c851
+- ./r2h/html/22-kitchen-server-talk-320x568.html: f5f863f5340d104d08e7f21db4df055a
+- ./r2h/html/22-kitchen-server-talk-390x844-before.html: 33a9b6782592f0814143f3016febf9bc
+- ./r2h/html/22-kitchen-server-talk-390x844.html: 576b6f8a70ff583122dd414815deb5f4
+- ./r2h/html/23-level-up-reward-320x568-before.html: 1eb587b584b0371ade1050f0eaf3b4c6
+- ./r2h/html/23-level-up-reward-320x568.html: 639c4e87cbc108eebfca7d0f3bf1452c
+- ./r2h/html/23-level-up-reward-390x844-before.html: 4f33ddc809e430d916eeb7e9cb4b5795
+- ./r2h/html/23-level-up-reward-390x844.html: ca373b9856c7b6e74ace5a8decc95e94
+- ./r2h/html/24-guardian-run-entry-320x568-before.html: b9b52a3404def3001ced99451c955e11
+- ./r2h/html/24-guardian-run-entry-320x568.html: 1725586beb032df25db2727e388c592d
+- ./r2h/html/24-guardian-run-entry-375x667-before.html: 2eabc3c291e70ee19edf3deeec7f8804
+- ./r2h/html/24-guardian-run-entry-375x667.html: 2ca1853843b9d7963ba004dab30c90de
+- ./r2h/html/24-guardian-run-entry-390x844-before.html: 6358cb32560d72604166fcbf37844ced
+- ./r2h/html/24-guardian-run-entry-390x844.html: 15e0e593b4f750c96fbd3b3e3073114b
+- ./r2h/html/25-guardian-hint-letters-320x568-before.html: b74fda6fa0811b7e3df488ee8dd85662
+- ./r2h/html/25-guardian-hint-letters-320x568.html: 1e79af4ef0c58d0e0c6fdfd7a6486036
+- ./r2h/html/25-guardian-hint-letters-375x667-before.html: 72dfc3719fb05c79e7ccb392f5175ce8
+- ./r2h/html/25-guardian-hint-letters-375x667.html: bd3a81b799361d67b914b680bedd81a8
+- ./r2h/html/25-guardian-hint-letters-390x844-before.html: 2fbd30296a194dedb6c3e523ce154b14
+- ./r2h/html/25-guardian-hint-letters-390x844.html: 5db515bed92d976e8a1aed437159c701
+- ./r2h/html/26-guardian-hint-jesus-words-320x568-before.html: 1931e760fd7c9a54d5ea363f2f3bef75
+- ./r2h/html/26-guardian-hint-jesus-words-320x568.html: d8f970e06a97ef82f23eb4d1f2e7890e
+- ./r2h/html/26-guardian-hint-jesus-words-375x667-before.html: e871c5e8896f5c22b2798346eeb618fd
+- ./r2h/html/26-guardian-hint-jesus-words-375x667.html: 401a7b0072443abe13474849125ee61d
+- ./r2h/html/26-guardian-hint-jesus-words-390x844-before.html: 26c1d9ce4d5920afb6f09cc09b8e3274
+- ./r2h/html/26-guardian-hint-jesus-words-390x844.html: 5d6befb6641c4350d4c4264ac01cb9e7
+- ./r2h/html/27-guardian-kneels-320x568-before.html: 20aaf267d6a3bce588fa5707da449ed4
+- ./r2h/html/27-guardian-kneels-320x568.html: 5ae0768c9ca44dbb3cad3f4adfdb90cd
+- ./r2h/html/27-guardian-kneels-375x667-before.html: a9ec5b0f66dcf71f6143500e6a01f494
+- ./r2h/html/27-guardian-kneels-375x667.html: 1d2f0efcffc1fe42a3c810ae0196fdb8
+- ./r2h/html/27-guardian-kneels-390x844-before.html: 9df1e0dfc536dbbec8cfbb20ae446f44
+- ./r2h/html/27-guardian-kneels-390x844.html: ac2a302450c5c4c5d8282296d2aaa903
+- ./r2h/html/28-guardian-win-320x568-before.html: 63aeb4df775d19a48d87a1a6e044d6d0
+- ./r2h/html/28-guardian-win-320x568.html: 25aa8835500fcf303f41033bfb0015ea
+- ./r2h/html/28-guardian-win-375x667-before.html: 6e79aee2e40fc833d86b5ca8927f90cc
+- ./r2h/html/28-guardian-win-375x667.html: 26246a7ebbcdb58aafd1fc9fcef8cd97
+- ./r2h/html/28-guardian-win-390x844-before.html: d1b10c4fef099f1e09275627369a9ecd
+- ./r2h/html/28-guardian-win-390x844.html: e85619bac01b09ef9f87306455008f16
+- ./r2h/html/29-verse-scroll-gift-390x844-before.html: 74516f91e8117f8a33abf33c6ce09d1d
+- ./r2h/html/29-verse-scroll-gift-390x844.html: 22e6f9df353e5b22f0a889b7d2cf847f
+- ./r2h/html/30-new-weapon-gift-390x844-before.html: dfad68d318f7615b957a023a05be24ff
+- ./r2h/html/30-new-weapon-gift-390x844.html: 85bac2316f8a0aadf009c7f90fa9c839
+- ./r2h/html/31-golden-fields-scene-390x844-before.html: dcf6720048f418ce37f9a9ac777fbfb7
+- ./r2h/html/31-golden-fields-scene-390x844.html: ef78cb4e5017b9447a86cdca564048a6
+- ./r2h/html/32-home-lake-scene-390x844-before.html: 960839e9623ea260f1b8ee974c3d5233
+- ./r2h/html/32-home-lake-scene-390x844.html: 369c9908c8ee069acb625d19f5c8114e
+- ./r2h/html/33-say-it-baby-hospital-reply-320x568-before.html: ea6a23b9d28f5669fed2d47bb7559ef3
+- ./r2h/html/33-say-it-baby-hospital-reply-320x568.html: 60ca3fa31b049ef3d79f5ed1d6ac63d6
+- ./r2h/html/33-say-it-baby-hospital-reply-390x844-before.html: 73f2a10a4f7ddeb75c5fd07b3a3390d9
+- ./r2h/html/33-say-it-baby-hospital-reply-390x844.html: 87f584bc1994af00a1dc2c74958388d8
+- ./r2h/html/36-sound-duel-round-done-320x568-before.html: 354d95d3fe0357e30af3a457899a2821
+- ./r2h/html/36-sound-duel-round-done-390x844-before.html: 8427b91c47772b5d295d013ce68df209
+- ./r2h/html/37-rest-screen-390x844-before.html: e08617b9d7ebe28cfe6bbdc3f1ea03ea
+- ./r2h/html/37-rest-screen-390x844.html: b7ac6b0a8a01291f173fbe1ca3dd64c0
+- ./r2h/html/38-character-gear-mmo-tooltip-390x844-before.html: a7bade0faabfd2f82ff7e27589e5b7c8
+- ./r2h/html/44-scroll-reopened-390x844-before.html: 3a39fa76d6e8e65e9ce643b053d94035
+- ./r2h/html/44-scroll-reopened-390x844.html: a357d582b65e0d679c14ff01ef6a6d87
+- ./r2h/html/45-character-golden-pantry-390x844-before.html: 022cf2ccc584a848472d7ccf6f946e17
+- ./r2h/html/45-character-golden-pantry-390x844.html: 7eb6a2c6181ec4787555d18f8762a720
+- ./r2h/html/48-continue-after-pause-390x844-before.html: 5aa4d0535b29dcd1da3c4d0256b2b24a
+- ./r2h/html/48-continue-after-pause-390x844.html: 0cf5ed05f660b3dd4ee51da846efa671
+- ./r2h/html/54-phrase-ask-card-320x568-before.html: f484569d7b1ff32ab2d670978a6a2630
+- ./r2h/html/54-phrase-ask-card-320x568.html: ffad33ebf7fa541559277d1cf308528a
+- ./r2h/html/54-phrase-ask-card-390x844-before.html: 9d9c03cb2fb5e3afb8d687dee2d1976e
+- ./r2h/html/54-phrase-ask-card-390x844.html: c4e1bca03263021a4436ec60513b1c3c
+- ./r2h/html/M1-main-menu-320x568.html: 1bfbf475da97a6bb3f3a610b8f3e75c8
+- ./r2h/html/M1-main-menu-390x844.html: 4bc56cc160c4c3bfaff9e10bb251612a
+- ./r2h/html/M2-main-menu-320x568.html: a85991c0b1d5e6340aac864742e52f1e
+- ./r2h/html/M2-main-menu-390x844.html: 4c282b2cb5bb927c048104152e872aef
+- ./r2h/html/M3-main-menu-320x568.html: ed04b2cfa370f7e2afc8bc37e50d33ea
+- ./r2h/html/M3-main-menu-390x844.html: 17834bd46848ef02be6ea1755e684518
+- ./r2h/html/map-extended-320x568.html: 9aa7eebd53f7db8246b68f1eb5c68451
+- ./r2h/html/map-extended-390x844.html: d149ea9ab71b17e50cd630153a7a17fd
+- ./r2h/html/stage-A-meadow-evening-pond-320x568-before.html: 8f1f8986cbf2af50dd45f190193916d7
+- ./r2h/html/stage-A-meadow-evening-pond-320x568.html: 02e367022e1506ee6430ce7ae265ed34
+- ./r2h/html/stage-A-meadow-evening-pond-375x667-before.html: d25071461f507a49f5cfbc98c4db6800
+- ./r2h/html/stage-A-meadow-evening-pond-375x667.html: 786b5c4181dabdab95f80b479be847fa
+- ./r2h/html/stage-A-meadow-evening-pond-390x844-before.html: 8fc6d31c3b23222f9ac83b35edc814fa
+- ./r2h/html/stage-A-meadow-evening-pond-390x844.html: 08550ecadff91af7eaefdd2a49d9c85f
+- ./r2h/html/stage-B-meadow-listen-and-find-320x568-before.html: a7d0dfed1baa46b66935b8ffd4f407b3
+- ./r2h/html/stage-B-meadow-listen-and-find-320x568.html: 02852a0199a5f9505c323f0ad0b218a1
+- ./r2h/html/stage-B-meadow-listen-and-find-375x667-before.html: b04b6146656efcdd01d9a07707d7007e
+- ./r2h/html/stage-B-meadow-listen-and-find-375x667.html: e15cb35742f499b98083620ccfca90b2
+- ./r2h/html/stage-B-meadow-listen-and-find-390x844-before.html: 31963a82f7653f111969359dd44ada41
+- ./r2h/html/stage-B-meadow-listen-and-find-390x844.html: 7487b83e3843fa2ce9be1c6cd6bc7ed6
+- ./r2h/html/stage-W24-walk-B-320x568-before.html: 23a73080f2fb8e6e2302f0d0de02390e
+- ./r2h/html/stage-W24-walk-B-320x568.html: 23a73080f2fb8e6e2302f0d0de02390e
+- ./r2h/html/stage-W24-walk-B-390x844-before.html: b9577d94f37f1a55b3449e52eb6d91cb
+- ./r2h/html/stage-W24-walk-B-390x844.html: b9577d94f37f1a55b3449e52eb6d91cb
+- ./r2h/html/zone-forest-ask-320x568-before.html: 6da55cf16e5f882d3308c04140d1b179
+- ./r2h/html/zone-forest-ask-320x568.html: c1ff4f139d80fdf14a8ff384d9b809f5
+- ./r2h/html/zone-forest-ask-375x812-before.html: a9fa0550ca933148528a49c0eac60dfb
+- ./r2h/html/zone-forest-ask-375x812.html: 1b97ee198f1792f91eef2df94f9f17ad
+- ./r2h/html/zone-forest-ask-390x844-before.html: b20f3e2dce810bae7b2463dd9ea070f3
+- ./r2h/html/zone-forest-ask-390x844.html: 2727ae87b459c8ead933eb49e55c1ad9
+- ./r2h/html/zone-lake-ask-320x568-before.html: e663e1e7bc1460ac69e36779b7122933
+- ./r2h/html/zone-lake-ask-320x568.html: 1893a8a737baf7264bac14d56e938ddd
+- ./r2h/html/zone-lake-ask-390x844-before.html: f31eb3070080593ffb11814dba5d52d5
+- ./r2h/html/zone-meadow-ask-320x568-before.html: f7a9df4dc399d466d50c5b889a9e2ed2
+- ./r2h/html/zone-meadow-ask-320x568-skyB-before.html: f7a9df4dc399d466d50c5b889a9e2ed2
+- ./r2h/html/zone-meadow-ask-320x568-skyB.html: c9e2a1620c03ea301336495b543edb05
+- ./r2h/html/zone-meadow-ask-320x568.html: c9e2a1620c03ea301336495b543edb05
+- ./r2h/html/zone-meadow-ask-375x812-skyB-before.html: a03f56d80f78e14e8ca2d984dfb97c2e
+- ./r2h/html/zone-meadow-ask-375x812-skyB.html: 273fc69ec302065f00024db29dd6ecd6
+- ./r2h/html/zone-meadow-ask-390x844-skyB-before.html: 511989aacd2e29c7e56d79524f6c9d09
+- ./r2h/html/zone-meadow-ask-390x844-skyB.html: 723493a4c01ee784436868fe19d9a995
+- ./r2h/png/01-title-390x844-before.json: ce794abd8c668b30a58fa19f35056061
+- ./r2h/png/01-title-390x844-before.png: 378620625fcd996601ae6d069c3114ec
+- ./r2h/png/02-main-menu-verse-popup-390x844-before.json: bb8a69391b6bc41b590b734f03290f22
+- ./r2h/png/02-main-menu-verse-popup-390x844-before.png: 10cfca19164081f280fdfaf2b0d31341
+- ./r2h/png/03-main-menu-390x844-before.json: 56e7d40294b6e9b5382d0dba427d1bee
+- ./r2h/png/03-main-menu-390x844-before.png: a6bf17e0df1286b15bd6263e398cdf22
+- ./r2h/png/05-map-day1-390x844-before.json: 0f0d2e0b4d86121d15dba3524b8b7c8d
+- ./r2h/png/05-map-day1-390x844-before.png: a7cefecad4819cb0a8a1074c21fb1bdb
+- ./r2h/png/05-map-day1-390x844.json: 33c434d118ff690951e76a8d16fda340
+- ./r2h/png/05-map-day1-390x844.png: dbd2ba9e39cfd6048625c3d2343016f5
+- ./r2h/png/07-map-word-meadow-chooser-390x844-before.json: 43a42f4cf1c1047af2f326b6904694ef
+- ./r2h/png/07-map-word-meadow-chooser-390x844-before.png: c064323ecec4f710ba0898a04ce17bdb
+- ./r2h/png/07-map-word-meadow-chooser-390x844.json: c6e1ea48adf83d9833ffa4d1bf84e107
+- ./r2h/png/07-map-word-meadow-chooser-390x844.png: e9490d27cf05a277a7ee2f8fc697a2f8
+- ./r2h/png/08-map-home-lake-chooser-day1-390x844-before.json: a2b54ec05e85036421fa89a3103393e6
+- ./r2h/png/08-map-home-lake-chooser-day1-390x844-before.png: 54ec213d49cf25bc6a5ac6bf7edff8df
+- ./r2h/png/08-map-home-lake-chooser-day1-390x844.json: 712f71232bb7a15784b71a6e1acb7622
+- ./r2h/png/08-map-home-lake-chooser-day1-390x844.png: d2c80490bff7fd346cb2dbba591a4b9d
+- ./r2h/png/09-map-later-390x844-before.json: 43bb5f3eb4fc6fbfdbb9c8ece84ec5f5
+- ./r2h/png/09-map-later-390x844-before.png: 8afa9c5cc5fb994eb0439b349dfde3c6
+- ./r2h/png/09-map-later-390x844.json: 80118f27b982b013bf2d82401b738347
+- ./r2h/png/09-map-later-390x844.png: 9c2ada13a94cbf742b3540b376201fc4
+- ./r2h/png/10-word-meadow-scene-320x568-before.json: cca2fdd3f232f4423259a94b5517043b
+- ./r2h/png/10-word-meadow-scene-320x568-before.png: bd76e27644da3b027b27ef5e5daf6d13
+- ./r2h/png/10-word-meadow-scene-320x568.json: 654f05bcfb2114285af92cfc941c567e
+- ./r2h/png/10-word-meadow-scene-320x568.png: 1b630f1a74d39ff477c43ea2cd5298e2
+- ./r2h/png/10-word-meadow-scene-390x844-before.json: e146f31290a9e1e914f088667b841177
+- ./r2h/png/10-word-meadow-scene-390x844-before.png: b6eb2bf20308b05dbaf2b0de3e9f77ad
+- ./r2h/png/10-word-meadow-scene-390x844.json: 4e2f204fb12662179e3b0df39af635ea
+- ./r2h/png/10-word-meadow-scene-390x844.png: df0c2776a4e29a89656dc7ec487fdc49
+- ./r2h/png/11-word-meadow-scene-right-390x844-before.json: b14fdedf97acf2549f5153bbe7f2e46f
+- ./r2h/png/11-word-meadow-scene-right-390x844-before.png: 81bd17008f262a83f55a542b40f8c7c2
+- ./r2h/png/11-word-meadow-scene-right-390x844.json: 0743557d44904d9101f08be8dcc819ca
+- ./r2h/png/11-word-meadow-scene-right-390x844.png: e04e71a97bdb72315a39e3a02c7be16b
+- ./r2h/png/12-reveal-right-390x844-before.json: f5df2900ffe8baf0e9ec1ee9891e9bae
+- ./r2h/png/12-reveal-right-390x844-before.png: 2160d4802b7e8d841c83b2e6a1ff3091
+- ./r2h/png/12-reveal-right-390x844.json: b554b58103e7fa6c4f75039ba3e7d88a
+- ./r2h/png/12-reveal-right-390x844.png: 71dee973d95db2f7b4b852032cafe067
+- ./r2h/png/13-word-meadow-scene-retry-390x844-before.json: 891ceea7ef973448d5cea58624535265
+- ./r2h/png/13-word-meadow-scene-retry-390x844-before.png: c9ad57f6424c9773ea7cabfa5b3933c7
+- ./r2h/png/13-word-meadow-scene-retry-390x844.json: 3cb5d2b61678063a886a0b2a61489c84
+- ./r2h/png/13-word-meadow-scene-retry-390x844.png: 338cf5245ddb87818b2debacb0e8f912
+- ./r2h/png/14-reveal-gentle-retry-320x568-before.json: e2bc5bfb096fe729610b5cbee24cde76
+- ./r2h/png/14-reveal-gentle-retry-320x568-before.png: 6032902ee5adfbe36aa18b47d68d4a44
+- ./r2h/png/14-reveal-gentle-retry-320x568.json: 17fbfa927a32d2cc5b724e9025c80b5d
+- ./r2h/png/14-reveal-gentle-retry-320x568.png: a39a930e8f10b7e6d43e228cb2a8fd81
+- ./r2h/png/14-reveal-gentle-retry-390x844-before.json: 2b075b9dd05345343b5e7850e4912578
+- ./r2h/png/14-reveal-gentle-retry-390x844-before.png: 9ce2b91ed74084b704b0c0cb54d59a90
+- ./r2h/png/14-reveal-gentle-retry-390x844.json: 5c9438778595916450a60bede8b9ef8c
+- ./r2h/png/14-reveal-gentle-retry-390x844.png: 058b61a7141010e1a216d3bcffcdaac0
+- ./r2h/png/15-say-it-sight-words-390x844-before.json: 6dfb515cc4c912844c8c3b57939b2516
+- ./r2h/png/15-say-it-sight-words-390x844-before.png: e0ef71d75cb7fc659d9fc2fa01460328
+- ./r2h/png/15-say-it-sight-words-390x844.json: 920bf01d86c7507cd32f15f2c0214509
+- ./r2h/png/15-say-it-sight-words-390x844.png: e45e003628b7492f3dc44ecf3a0cfcd8
+- ./r2h/png/16-say-it-maxwell-says-day1-390x844-before.json: 27fabb91c87acc957929742de8cc123b
+- ./r2h/png/16-say-it-maxwell-says-day1-390x844-before.png: 6ec17b1466ecf89e5dfd152fb18ed77e
+- ./r2h/png/16-say-it-maxwell-says-day1-390x844.json: 1325d13adbf6893d89078819c3ce91d6
+- ./r2h/png/16-say-it-maxwell-says-day1-390x844.png: 39d3e1701701f749010ffaee646c76b2
+- ./r2h/png/17-two-answer-pray-high-five-390x844-before.json: 2b3bcedc2ed74698f7d14d88a3a37f38
+- ./r2h/png/17-two-answer-pray-high-five-390x844-before.png: f36314744912637bd02f6871abfddc0b
+- ./r2h/png/17-two-answer-pray-high-five-390x844.json: b330a1b8d06886af4b8ad49f10c22c4b
+- ./r2h/png/17-two-answer-pray-high-five-390x844.png: 0dc05eb440c7561d0f6fa01c09a5d1c1
+- ./r2h/png/18-two-answer-wrong-tap-390x844-before.json: 82ea0216db3c5b081abca44b27d096c4
+- ./r2h/png/18-two-answer-wrong-tap-390x844-before.png: 6a98b929ae4722b025ac48d94a3fed58
+- ./r2h/png/18-two-answer-wrong-tap-390x844.json: 89386a3973aa77e90677941edcc9c786
+- ./r2h/png/18-two-answer-wrong-tap-390x844.png: f77519fb64332d6e46d05c5fd49e0fce
+- ./r2h/png/19-two-answer-right-done-390x844-before.json: aced91ab5fb72661e5427f31458e4fa3
+- ./r2h/png/19-two-answer-right-done-390x844-before.png: a0e335cf4272abcb9defc581fa5f9d53
+- ./r2h/png/19-two-answer-right-done-390x844.json: 41c91c053845f5446599525adf91a9aa
+- ./r2h/png/19-two-answer-right-done-390x844.png: 58079edd0f0dc349bcde5dfd0b236375
+- ./r2h/png/21-kitchen-say-it-shown-320x568-before.json: b1afca3a328a04db85f85560ac2e30bb
+- ./r2h/png/21-kitchen-say-it-shown-320x568-before.png: 2c49534054afc89bc5755fdafd4fc4bc
+- ./r2h/png/21-kitchen-say-it-shown-320x568.json: 6b60c397e35dda31ddc2eaa7828bc469
+- ./r2h/png/21-kitchen-say-it-shown-320x568.png: aad8051ea70aea1b3109741039a7d37d
+- ./r2h/png/21-kitchen-say-it-shown-390x844-before.json: 465aa049a54d434067b31e9fb52b202c
+- ./r2h/png/21-kitchen-say-it-shown-390x844-before.png: 4095ef61cd4dccd43ebb75ba60c399eb
+- ./r2h/png/21-kitchen-say-it-shown-390x844.json: 8c80922489e68f493bff88aa54adbf26
+- ./r2h/png/21-kitchen-say-it-shown-390x844.png: 1dec12147918073801973990f98d138f
+- ./r2h/png/22-kitchen-server-talk-320x568-before.json: 9364b775adec630ca53d56ef9c806475
+- ./r2h/png/22-kitchen-server-talk-320x568-before.png: c13390a749f115b1de3985997ed4a7bf
+- ./r2h/png/22-kitchen-server-talk-320x568.json: b7af6f0c7587c31c2020d21081a10af4
+- ./r2h/png/22-kitchen-server-talk-320x568.png: 519bacd64c15a30f785d48f3317f7721
+- ./r2h/png/22-kitchen-server-talk-390x844-before.json: 6f57c70e8f408456a2c42e367382d433
+- ./r2h/png/22-kitchen-server-talk-390x844-before.png: 6ed2a1571589cf23a589b615b491a2ad
+- ./r2h/png/22-kitchen-server-talk-390x844.json: 434ea89147f5e46b9bc6e58421f411ef
+- ./r2h/png/22-kitchen-server-talk-390x844.png: 621acd0fefff407774362b7e02fbd13a
+- ./r2h/png/23-level-up-reward-320x568-before.json: c032e306f6411bb92939a3397eadaa65
+- ./r2h/png/23-level-up-reward-320x568-before.png: b480982f30b853c5d0eb46f82ea11f1a
+- ./r2h/png/23-level-up-reward-320x568.json: 1c70674f6d6a7dfc3319972f0cedda98
+- ./r2h/png/23-level-up-reward-320x568.png: fb3012a1b132f20366daefc36f8298f1
+- ./r2h/png/23-level-up-reward-390x844-before.json: ac69b9f9c0e9ac56c4ee7f76d5930104
+- ./r2h/png/23-level-up-reward-390x844-before.png: 19d947fae2c346aac8f1f17663dd559e
+- ./r2h/png/23-level-up-reward-390x844.json: ff710709d77fa0685268b4879ba84274
+- ./r2h/png/23-level-up-reward-390x844.png: 7742f66ca724f977806132d4f64aacec
+- ./r2h/png/24-guardian-run-entry-320x568-before.json: 38215c5ed9daec15439becd9fe2ca490
+- ./r2h/png/24-guardian-run-entry-320x568-before.png: 33291f8955aa9e12f8cd19f35dc607bb
+- ./r2h/png/24-guardian-run-entry-320x568.json: e5e4db2d9168bcfcf6716ebd0361de88
+- ./r2h/png/24-guardian-run-entry-320x568.png: fa6b21c2b3ad3b28e0533ca1f0a4a765
+- ./r2h/png/24-guardian-run-entry-375x667-before.json: 3add6f5c2b91a411708019bcf3bd022a
+- ./r2h/png/24-guardian-run-entry-375x667-before.png: 198ad5f7090369c9c41073fe31800342
+- ./r2h/png/24-guardian-run-entry-375x667.json: da2930d3a12f57cc36e2a5c71f2dbc72
+- ./r2h/png/24-guardian-run-entry-375x667.png: bbde85d4fc8f743ba5b36742756304f5
+- ./r2h/png/24-guardian-run-entry-390x844-before.json: 419799c77eb2b109e191f4384171c6bd
+- ./r2h/png/24-guardian-run-entry-390x844-before.png: 2e0788a9096f674c06d6d7668182efa0
+- ./r2h/png/24-guardian-run-entry-390x844.json: c81d8fc9e58cd3e23c64c9f758ebcc1d
+- ./r2h/png/24-guardian-run-entry-390x844.png: 9fbe6c7335c629fd8edd4b555ea0d503
+- ./r2h/png/25-guardian-hint-letters-320x568-before.json: adeec12f62c7e8e2024fffbbfdd57faf
+- ./r2h/png/25-guardian-hint-letters-320x568-before.png: 92a2b993f3d515940d2ac549aae7ec6d
+- ./r2h/png/25-guardian-hint-letters-320x568.json: ba2f2204935ba71784b120813eeb81d1
+- ./r2h/png/25-guardian-hint-letters-320x568.png: 50af4d399bebcdcb57f924e9e1fa8d2c
+- ./r2h/png/25-guardian-hint-letters-375x667-before.json: cef167a25a8c56da413232edf8f2d518
+- ./r2h/png/25-guardian-hint-letters-375x667-before.png: 9728a110ceb180874ef1b6dbf02441de
+- ./r2h/png/25-guardian-hint-letters-375x667.json: c72128730a2f126a064494b23921f91a
+- ./r2h/png/25-guardian-hint-letters-375x667.png: 92e0fe59c38c667f19829a1d727aebe1
+- ./r2h/png/25-guardian-hint-letters-390x844-before.json: 2e00166e835d4a3f81c254f43b045c48
+- ./r2h/png/25-guardian-hint-letters-390x844-before.png: 3a65d6e7fc470a326ceb711714b04263
+- ./r2h/png/25-guardian-hint-letters-390x844.json: 9a8b5ad22665f8a7b3e2167e1837b4de
+- ./r2h/png/25-guardian-hint-letters-390x844.png: 08e3e97f8eb9fb382fdb04390080738f
+- ./r2h/png/26-guardian-hint-jesus-words-320x568-before.json: 52e8cbb7ba4721ab25f396b1c579e529
+- ./r2h/png/26-guardian-hint-jesus-words-320x568-before.png: 1af65b0641e6e65e3f5019dc120d50f1
+- ./r2h/png/26-guardian-hint-jesus-words-320x568.json: 46b02f38c82678fc522a7fe4bfc7866b
+- ./r2h/png/26-guardian-hint-jesus-words-320x568.png: 9672cc3d9f8f4df826f8b6aa1ac91db5
+- ./r2h/png/26-guardian-hint-jesus-words-375x667-before.json: ebfe372abe69633912e9ace89306a4ff
+- ./r2h/png/26-guardian-hint-jesus-words-375x667-before.png: 33e956ea7469a49361ba76ee8c414d76
+- ./r2h/png/26-guardian-hint-jesus-words-375x667.json: f118b93ea711e75aa8d3b0f86afc5f96
+- ./r2h/png/26-guardian-hint-jesus-words-375x667.png: 6a43ef49fd050ef69d4e3091d5ac16d2
+- ./r2h/png/26-guardian-hint-jesus-words-390x844-before.json: f65198e12f45bc846ea8cd166ca4b081
+- ./r2h/png/26-guardian-hint-jesus-words-390x844-before.png: 28e4c6d71c788a731aa60123281e55ae
+- ./r2h/png/26-guardian-hint-jesus-words-390x844.json: 449b70110a8ae33923f2e604da30d1d1
+- ./r2h/png/26-guardian-hint-jesus-words-390x844.png: f4ae9dc7bc9a37f32aa77304a48b6460
+- ./r2h/png/27-guardian-kneels-320x568-before.json: 348a5e553505d7da817ae5a706a817f3
+- ./r2h/png/27-guardian-kneels-320x568-before.png: f96e442047b8440594f9888f0818da91
+- ./r2h/png/27-guardian-kneels-320x568.json: dace9d5d8b59e04e6532b1d6a234be08
+- ./r2h/png/27-guardian-kneels-320x568.png: e632cd0d6de7b160602335e2322e3de2
+- ./r2h/png/27-guardian-kneels-375x667-before.json: 6c2eea41dc063ca9d02fed4dc5d3702d
+- ./r2h/png/27-guardian-kneels-375x667-before.png: 56ab41ba721a2c27ac7969200918d07a
+- ./r2h/png/27-guardian-kneels-375x667.json: a3f4e7b5662d5b91ae960b8666d8e2c3
+- ./r2h/png/27-guardian-kneels-375x667.png: 63b354b9365d913b32b2a2f18eaf4094
+- ./r2h/png/27-guardian-kneels-390x844-before.json: c3d40833e47e02a29ba5e4447d55b008
+- ./r2h/png/27-guardian-kneels-390x844-before.png: 0de7db9e86fe459456d2a2cf473c276e
+- ./r2h/png/27-guardian-kneels-390x844.json: 527319f8f5db924df8fefaf7883aeb0c
+- ./r2h/png/27-guardian-kneels-390x844.png: 25cd45317f208a169f02e352376498ce
+- ./r2h/png/28-guardian-win-320x568-before.json: 7d8a442dbbbe7f81f328e46e94f8287f
+- ./r2h/png/28-guardian-win-320x568-before.png: fa017b0093057b3707ed26659d9d89f2
+- ./r2h/png/28-guardian-win-320x568.json: f9543cd75983184cd5c9e495ff620fc5
+- ./r2h/png/28-guardian-win-320x568.png: 4dc85e7d38bb95ce8d909929aad97e6d
+- ./r2h/png/28-guardian-win-375x667-before.json: df340c8a32d12675f2b5576686d45021
+- ./r2h/png/28-guardian-win-375x667-before.png: cb600b2d9626f8345e25a64863bf018e
+- ./r2h/png/28-guardian-win-375x667.json: 06795862fbfe6a4283c413b14d30bb12
+- ./r2h/png/28-guardian-win-375x667.png: bd04fc4ddfa8111afca257d4414e8383
+- ./r2h/png/28-guardian-win-390x844-before.json: 33fba091a1e53aa0f4d021b6d879b1e8
+- ./r2h/png/28-guardian-win-390x844-before.png: e6deaf2c2d47ebf3567f4e94c84782f3
+- ./r2h/png/28-guardian-win-390x844.json: a7ee6c071a50f214547e059d075e68fa
+- ./r2h/png/28-guardian-win-390x844.png: f2549435e5dca2c4fb56e84b0b6ab770
+- ./r2h/png/29-verse-scroll-gift-390x844-before.json: f9de8e80f9dd624a628e008c440e2150
+- ./r2h/png/29-verse-scroll-gift-390x844-before.png: 38df393c15c3cca2aead25a9bfeed178
+- ./r2h/png/29-verse-scroll-gift-390x844.json: 2dcadfb6ae778d8a1a4ccc9326ec1a5c
+- ./r2h/png/29-verse-scroll-gift-390x844.png: 814cbfbaaaa75df46bea746c280988df
+- ./r2h/png/30-new-weapon-gift-390x844-before.json: 0cf6d135690d73bb20917ed3b14fe513
+- ./r2h/png/30-new-weapon-gift-390x844-before.png: 0226efc11315071cfb8b48c547f773f3
+- ./r2h/png/30-new-weapon-gift-390x844.json: 332166e957afec3eff3ea96493ed40b0
+- ./r2h/png/30-new-weapon-gift-390x844.png: ac9b71a5d81dfa61f8e72fe4a23a33c9
+- ./r2h/png/31-golden-fields-scene-390x844-before.json: a5cdf99dbc5a9cc88cc6215439b495da
+- ./r2h/png/31-golden-fields-scene-390x844-before.png: 524b425e1b60d6cc394b2cc0787686cf
+- ./r2h/png/31-golden-fields-scene-390x844.json: 3f3eb0e3c46ade10b06e855fb0ef342f
+- ./r2h/png/31-golden-fields-scene-390x844.png: d043ad155035d246a6d679e8035a874c
+- ./r2h/png/32-home-lake-scene-390x844-before.json: 8df7caf66657b1853caf2dedfa720eb8
+- ./r2h/png/32-home-lake-scene-390x844-before.png: f0ed02b50994e9da48467c1edeb4f31d
+- ./r2h/png/32-home-lake-scene-390x844.json: 25df5fea6292523f33d6e69c9d14740b
+- ./r2h/png/32-home-lake-scene-390x844.png: d21ee0f110e8ed9dcf32abc00a831a03
+- ./r2h/png/33-say-it-baby-hospital-reply-320x568-before.json: 3add12b84cbe82d9950c28d88e540ebe
+- ./r2h/png/33-say-it-baby-hospital-reply-320x568-before.png: 27b0220fa889e9a388547f0bff0d7202
+- ./r2h/png/33-say-it-baby-hospital-reply-320x568.json: d24106c64e4f3bc648d228886ecde687
+- ./r2h/png/33-say-it-baby-hospital-reply-320x568.png: 16d9465b5b3d8ba6bb25b359d244c249
+- ./r2h/png/33-say-it-baby-hospital-reply-390x844-before.json: aa5334e7a3d512f6fd3efd92ee32d574
+- ./r2h/png/33-say-it-baby-hospital-reply-390x844-before.png: 714ac604c5c43504c2eba4b0604f4468
+- ./r2h/png/33-say-it-baby-hospital-reply-390x844.json: 7c217ee97b487f1127c9ce155efbaab1
+- ./r2h/png/33-say-it-baby-hospital-reply-390x844.png: 43f6194435c58613e7616b9b54124a0b
+- ./r2h/png/36-sound-duel-round-done-320x568-before.json: 357d12ffd9eba2aad1ffbaa9ba896401
+- ./r2h/png/36-sound-duel-round-done-320x568-before.png: 043b1d8f8bb983a3abe10412e921c63f
+- ./r2h/png/36-sound-duel-round-done-390x844-before.json: fb245d668bb35707a7e0aa027258f7c5
+- ./r2h/png/36-sound-duel-round-done-390x844-before.png: ecf289278ffe6b7da9c5578b44e8b774
+- ./r2h/png/37-rest-screen-390x844-before.json: ee26b486211187463e1186d4d16f12ac
+- ./r2h/png/37-rest-screen-390x844-before.png: 050e0abe5c058cf7a2682155ca4e4c24
+- ./r2h/png/37-rest-screen-390x844.json: a8ef41b137ed2d172536b6c8079cb278
+- ./r2h/png/37-rest-screen-390x844.png: 8c6c12e3229734dc180bb052e647fc77
+- ./r2h/png/38-character-gear-mmo-tooltip-390x844-before.json: 0d76f211742e7b2366143c3ddafc7157
+- ./r2h/png/38-character-gear-mmo-tooltip-390x844-before.png: 74087c94cda682a95708587655aa8c48
+- ./r2h/png/44-scroll-reopened-390x844-before.json: a1f1b2568999cfcd71f0ec3d2484be55
+- ./r2h/png/44-scroll-reopened-390x844-before.png: e7f02e962c85c73a9f0ea4b758ceb7c8
+- ./r2h/png/44-scroll-reopened-390x844.json: 6c6f4a1e324dbd66c68149e3c3965d0d
+- ./r2h/png/44-scroll-reopened-390x844.png: 59b7cbde9ab58048d9191106e8883faf
+- ./r2h/png/45-character-golden-pantry-390x844-before.json: 9304cf42e3c03fdd43a360f06702e59a
+- ./r2h/png/45-character-golden-pantry-390x844-before.png: b1d34a924c48175603b5be6584410a9b
+- ./r2h/png/45-character-golden-pantry-390x844.json: c65dd7511808169675d6af1801c185c8
+- ./r2h/png/45-character-golden-pantry-390x844.png: 77e379498b275dba2cc699e3d35f8ad3
+- ./r2h/png/48-continue-after-pause-390x844-before.json: 7e4fe095dc27b23e297747ec436be103
+- ./r2h/png/48-continue-after-pause-390x844-before.png: 9666d19c36cf03300e60a8b4a9d61f19
+- ./r2h/png/48-continue-after-pause-390x844.json: 8ff79b901768b63f3c9b7ad3c8ba80ef
+- ./r2h/png/48-continue-after-pause-390x844.png: c99a9d61f7dbabd2653dc08f65548814
+- ./r2h/png/54-phrase-ask-card-320x568-before.json: c6be8ecb996c3fa82725281a658e4888
+- ./r2h/png/54-phrase-ask-card-320x568-before.png: 278096fdbdd47652fb9862bdea089d9e
+- ./r2h/png/54-phrase-ask-card-320x568.json: c6e95c7e1543ec6b459847893e305f4e
+- ./r2h/png/54-phrase-ask-card-320x568.png: 23312c0999a91ae405b12864ce42c206
+- ./r2h/png/54-phrase-ask-card-390x844-before.json: 325373066c07f24aae7bf74129b7dfba
+- ./r2h/png/54-phrase-ask-card-390x844-before.png: 5ab63a51ce13c2f7da5231a0d3e7dd35
+- ./r2h/png/54-phrase-ask-card-390x844.json: 05f633f99a6ea07a418c0bdd1b05ac6c
+- ./r2h/png/54-phrase-ask-card-390x844.png: f8770270b77d040ba477b9e5a4157765
+- ./r2h/png/M1-main-menu-320x568.json: b1c426dbdd1503c04391122366b998ea
+- ./r2h/png/M1-main-menu-320x568.png: acebb7384833c8ec7b625f632025ebe0
+- ./r2h/png/M1-main-menu-390x844.json: 725fc049293206e58bda2fa4d4804fb1
+- ./r2h/png/M1-main-menu-390x844.png: c8d5900be7a7e1ac3d5f02ae56e44713
+- ./r2h/png/M2-main-menu-320x568.json: 97083b029343071eaa86b80898ed9d6c
+- ./r2h/png/M2-main-menu-320x568.png: c6093b4b37855c9bb3334df2e7e78104
+- ./r2h/png/M2-main-menu-390x844.json: ac1cacee6b391c155859e69d340c12ca
+- ./r2h/png/M2-main-menu-390x844.png: 7addcf5a8f0c93a4c84605014896c5d4
+- ./r2h/png/M3-main-menu-320x568.json: 13289e44b40e5b7d9861d5eeaba09366
+- ./r2h/png/M3-main-menu-320x568.png: 25234b9346f3d2e35055bc722a197c23
+- ./r2h/png/M3-main-menu-390x844.json: de0c04000632e17a14eb9c54cbfbafd1
+- ./r2h/png/M3-main-menu-390x844.png: 47af087c93e5d4c02fccb5b25d30dc16
+- ./r2h/png/map-extended-320x568.json: 8a5ba7e639bdd628cf9f259cb1738e5c
+- ./r2h/png/map-extended-320x568.png: 17865e75ea6e4d9e510bb0e377bef96b
+- ./r2h/png/map-extended-390x844.json: 9889a992f8f6f1e433531038625a05a5
+- ./r2h/png/map-extended-390x844.png: 2486fb47571994494e770d294655f325
+- ./r2h/png/stage-A-meadow-evening-pond-320x568-before.json: d2b046641d7d45310825c4d6d3ceefeb
+- ./r2h/png/stage-A-meadow-evening-pond-320x568-before.png: 2b86e5feeb72b4a048926e2788e6b8f4
+- ./r2h/png/stage-A-meadow-evening-pond-320x568.json: 7e12d5cb018fe7d29f2155d7ff35f85e
+- ./r2h/png/stage-A-meadow-evening-pond-320x568.png: b483659c890c625293e1b846e49153c0
+- ./r2h/png/stage-A-meadow-evening-pond-375x667-before.json: feefda764e58f5205bb6e8351d76ac6b
+- ./r2h/png/stage-A-meadow-evening-pond-375x667-before.png: e184e8cae90871b38600486d5c928b5f
+- ./r2h/png/stage-A-meadow-evening-pond-375x667.json: 2679aac375d81938d0e29a694a57b61e
+- ./r2h/png/stage-A-meadow-evening-pond-375x667.png: 556dce2ba93709afc572ad3b4940ecb9
+- ./r2h/png/stage-A-meadow-evening-pond-390x844-before.json: 55cf04a20bcd1c603df3835b6be05d28
+- ./r2h/png/stage-A-meadow-evening-pond-390x844-before.png: 4e261e2f04562f98488f21d976ddc523
+- ./r2h/png/stage-A-meadow-evening-pond-390x844.json: 633e851454e091eb9cb10c54b5452051
+- ./r2h/png/stage-A-meadow-evening-pond-390x844.png: a0d98dbb19371e702fe0eb5da8c1f026
+- ./r2h/png/stage-B-meadow-listen-and-find-320x568-before.json: 2f0d41d211e533c3355a6badc7627c97
+- ./r2h/png/stage-B-meadow-listen-and-find-320x568-before.png: eed8fcb43e32ef4ddfe51f3984e54eb2
+- ./r2h/png/stage-B-meadow-listen-and-find-320x568.json: 8e134b5832a63eaccd54ca0eeb61673a
+- ./r2h/png/stage-B-meadow-listen-and-find-320x568.png: d100408282994cf99920413397d5f175
+- ./r2h/png/stage-B-meadow-listen-and-find-375x667-before.json: e0a8da971e1b6cf29067c2d93540cd5f
+- ./r2h/png/stage-B-meadow-listen-and-find-375x667-before.png: f7a9c008be1917604e6fa381894fa42b
+- ./r2h/png/stage-B-meadow-listen-and-find-375x667.json: 7c81d25342fa509503cf694881c41022
+- ./r2h/png/stage-B-meadow-listen-and-find-375x667.png: 2c2292edb49fcfeabcde23d67a3f3be4
+- ./r2h/png/stage-B-meadow-listen-and-find-390x844-before.json: 3e6eeee4851703dc2c93933b0a616f15
+- ./r2h/png/stage-B-meadow-listen-and-find-390x844-before.png: 7ac06be09c977a5e1c5a36fed852c032
+- ./r2h/png/stage-B-meadow-listen-and-find-390x844.json: 0d5f539dc8ffb48f90ad4c9fcc3b3d98
+- ./r2h/png/stage-B-meadow-listen-and-find-390x844.png: fb0715ce966889c09f7583952fe9acd6
+- ./r2h/png/stage-W24-walk-B-320x568-before.json: 4f56055d5f25e55a4e84bec35d86c213
+- ./r2h/png/stage-W24-walk-B-320x568-before.png: 0e9a9b70d3c4ba4c4bc51d8fb256c7f6
+- ./r2h/png/stage-W24-walk-B-320x568.json: e2935a238b8fd2db7ca8a944b2e3370c
+- ./r2h/png/stage-W24-walk-B-320x568.png: 86ea4312d133a2219b9912ef50e869ec
+- ./r2h/png/stage-W24-walk-B-390x844-before.json: 1a902d9ba5512d47bc83e3975a218289
+- ./r2h/png/stage-W24-walk-B-390x844-before.png: eddc1c665f8167711bb8542da1e8a207
+- ./r2h/png/stage-W24-walk-B-390x844.json: 10d277988328237a7c05c5c3c10a1357
+- ./r2h/png/stage-W24-walk-B-390x844.png: 3685711d4a38314794a5519559e47177
+- ./r2h/png/zone-forest-ask-320x568-before.json: 2bcba807621bc5f5bda5613e2680e8dd
+- ./r2h/png/zone-forest-ask-320x568-before.png: 5a9fcc03981aecf4d47453ade0025717
+- ./r2h/png/zone-forest-ask-320x568.json: b25792e3cd9413ad021ea78313445b22
+- ./r2h/png/zone-forest-ask-320x568.png: 42fcd45ff9a600906b98d1462142dfea
+- ./r2h/png/zone-forest-ask-375x812-before.json: 57f9ac01eb9e258dff0521bf9fc0f332
+- ./r2h/png/zone-forest-ask-375x812-before.png: b48dbc94fd1495255c49a3142e2eda1d
+- ./r2h/png/zone-forest-ask-375x812.json: 2fb1836e150d34aa33ce6d233d34f093
+- ./r2h/png/zone-forest-ask-375x812.png: 4b0860096270c3277541fe4ec6960d52
+- ./r2h/png/zone-forest-ask-390x844-before.json: 54047c54125557c25e9625e3056781a3
+- ./r2h/png/zone-forest-ask-390x844-before.png: f94427a4f11107bf68698011fd83187e
+- ./r2h/png/zone-forest-ask-390x844.json: ccf6d566da7a2c4c33199ceaec1b22ed
+- ./r2h/png/zone-forest-ask-390x844.png: 839517e85fe5be978d625f66d277d81e
+- ./r2h/png/zone-lake-ask-320x568-before.json: 8a894ffb6f840a2c403d7ea89f3c664c
+- ./r2h/png/zone-lake-ask-320x568-before.png: 4d6f88ebc8ebc498085aa241585729e5
+- ./r2h/png/zone-lake-ask-320x568.json: 3b74d75f5ebf6e0ca369e81f4b8e0736
+- ./r2h/png/zone-lake-ask-320x568.png: 79d4fe3b1213c7af8831b246797835ad
+- ./r2h/png/zone-lake-ask-390x844-before.json: 1926fb4c8cabcb87a9b214d9882faa92
+- ./r2h/png/zone-lake-ask-390x844-before.png: 78668ccb6fc94b07f1e181e34ccd07cb
+- ./r2h/png/zone-meadow-ask-320x568-before.json: 79097db610b199a49b8a161f5072e720
+- ./r2h/png/zone-meadow-ask-320x568-before.png: bd76e27644da3b027b27ef5e5daf6d13
+- ./r2h/png/zone-meadow-ask-320x568-skyB-before.json: 9e50206ecda99dbf71d0cd34277fb0c1
+- ./r2h/png/zone-meadow-ask-320x568-skyB-before.png: bd76e27644da3b027b27ef5e5daf6d13
+- ./r2h/png/zone-meadow-ask-320x568-skyB.json: 8935858cf7bfbebae51c01b402945f62
+- ./r2h/png/zone-meadow-ask-320x568-skyB.png: 1b630f1a74d39ff477c43ea2cd5298e2
+- ./r2h/png/zone-meadow-ask-320x568.json: 6892b811b646c7dde1fb24c3d82caf9f
+- ./r2h/png/zone-meadow-ask-320x568.png: 1b630f1a74d39ff477c43ea2cd5298e2
+- ./r2h/png/zone-meadow-ask-375x812-skyB-before.json: 2387ef60a7caf0c9ae7cbed35a1f2dee
+- ./r2h/png/zone-meadow-ask-375x812-skyB-before.png: ca1540f3c2c69a039f14bf709bdf8d52
+- ./r2h/png/zone-meadow-ask-375x812-skyB.json: 9be43feb9e5377e44e4f7a26761dd663
+- ./r2h/png/zone-meadow-ask-375x812-skyB.png: bb241fd9488024fa14d02b701de80bd7
+- ./r2h/png/zone-meadow-ask-390x844-skyB-before.json: aec05f7aeb0f26363545a4dc5f861545
+- ./r2h/png/zone-meadow-ask-390x844-skyB-before.png: b6eb2bf20308b05dbaf2b0de3e9f77ad
+- ./r2h/png/zone-meadow-ask-390x844-skyB.json: e8f6fc4b01b47055814d03c080b79ca6
+- ./r2h/png/zone-meadow-ask-390x844-skyB.png: df0c2776a4e29a89656dc7ec487fdc49
+- ./r2h/sheets-ref/r2h-before-after.png: 7292fa6cea8fe2e4c49fc9e85bbd4ee1
+- ./r2h/sheets-ref/r2h-before-after.png.sources.txt: e1ffb1595344987f9ace25f1a0754bac
+- ./r2h/sheets-ref/r2h-before-after.sources.txt: e1ffb1595344987f9ace25f1a0754bac
+- ./r2h/superseded/36-sound-duel-round-done-320x568.html: 078cbd1452f727e699867dd549538609
+- ./r2h/superseded/36-sound-duel-round-done-320x568.json: 5ff7d7abe958274a3aa452ccd3816c95
+- ./r2h/superseded/36-sound-duel-round-done-320x568.png: a4436620be3dc8e0ad908a1e060417ae
+- ./r2h/superseded/36-sound-duel-round-done-390x844.html: c5b30355686795851cd0ce0393af4bb2
+- ./r2h/superseded/36-sound-duel-round-done-390x844.json: ee73e68ac055060d3fbb3085d32fc6af
+- ./r2h/superseded/36-sound-duel-round-done-390x844.png: 13a16a1ec19a1d9a3e63443bdcaeae40
+- ./reports/STAGE-POINTER-trial.txt: 32e9e360fc61c6b6ca48a9e2e6f2d28a
+- ./reports/cdp_checks-2728.txt: 62e44725c0ea1dce41125b32e01e458e
+- ./reports/cdp_checks-full.txt: 224a770ac040f07d1a322e10dacb56b8
+- ./reports/chk1B-rerun.log: d34a7c6f08e50c986906e1df53ed3b68
+- ./reports/gc-after.txt: a7777d032d316ff12cb4b6a94d10aed9
+- ./reports/ground_check-W24-f46a2d29.txt: 1b8e7acb123930b3a4bf5ecc63543552
+- ./reports/ground_check-f46a2d29.txt: 02f3da0fee6daae5917212776361cb48
+- ./reports/ground_check-maps-f46a2d29.txt: f4755f0a3f881e31e824b23c6ccbf4a2
+- ./reports/ground_check-menuflowers-f46a2d29.txt: af2eaf207a2e13cbdad7be7c81c9dac6
+- ./reports/ground_check-t527u-f46a2d29.txt: eec1402981b09f8f192b59e44363ca6d
+- ./reports/ground_check-v2-13fc304c.txt: 755b7dc5fa9711eb7dbf411522697cc2
+- ./reports/ground_check-verse2944-f46a2d29.txt: 683e3828eacd024265623c647cb53a12
+- ./reports/sendguard-f46a2d29.txt: 30df68cffe17b5bd12864220f89b1122
+- ./reports/sendguard-hold-f46a2d29.txt: eb238df32fdc27d838f444f68a12f84e
+- ./reports/sendguard-livepointer.txt: f9baaa0016baa4a0d88784e0d0bc0b92
+- ./reports/sendguard-maps-f46a2d29.txt: 827ef354f7241d01869b1a01cee029dc
+- ./reports/sendguard-menuflowers-f46a2d29.txt: acaa5064cb8c42e150ad9d97c63a9dd5
+- ./reports/sendguard-qmcut-f46a2d29.txt: 3f783efc9699cbc91d859516c795f989
+- ./reports/sendguard-t527u-f46a2d29.txt: d9b33be817055d733e8a7f765dbc1c31
+- ./reports/sendguard-v2-13fc304c.txt: 8cc31bebd80a6d4989ce61d40e7032fb
+- ./reports/sendguard-verse2944-f46a2d29.txt: 3a5ecb0f31d092ec8cebbd5af17d7699
+- ./reports/sg_v2.py: 97980a0e0bc6a9d72d79a29338100627
+- ./reports/t527u-pages-md5.txt: 63388bd7357120c0a83fce6f703162b7
+- ./reports/text_check-37-9c433cba.txt: abc9e43755849fbf3907a082980980bd
+- ./reports/text_check-4c3666d1.txt: 089ee8f80aefe42f0cdb032ef3e2e757
+- ./reports/text_check-hold-9c433cba.txt: a95e94e7f5ab8e4a05a08b212d4e521f
+- ./reports/text_check-maps-9c433cba.txt: a95e94e7f5ab8e4a05a08b212d4e521f
+- ./reports/text_check-menuflowers-9c433cba.txt: 9ad9dd8a16dbb3999956f6910e2205d3
+- ./reports/text_check-run2.txt: d01815e83cd154a56661623188253279
+- ./reports/text_check-t527u-9c433cba.txt: b6855693c9e2c86e1403c2a6c80e3e47
+- ./reports/text_check-t527u-sheets-showcase-9c433cba.txt: b9b8e61dbbaef06eb12f351e3a655456
+- ./reports/text_check-verse2944-pages-9c433cba.txt: 5f1a978fff20ab01877e36604759ea69
+- ./reports/text_check-verse2944-sheets-showcase-9c433cba.txt: 83316578648aa775d6428d68a771fc89
+- ./reports/tuft_check-maps-b19579ac.txt: b5c740e010e24859619108359eb8fb3f
+- ./reports/tuft_check-pre-t527u-b19579ac.txt: abbba5fe4bbf382afd953ebc4a39161b
+- ./reports/tuft_check-t527u-b19579ac.txt: dc1a43ace3934d8affd0a8e222aad42b
+- ./scene-fill-20261101/FIXLOG.md: 391a63b7fad17e128e1401acf8a6bf35
+- ./scene-fill-20261101/MANIFEST.md5: 6848a5e0246f576d60cd238f639333e4
+- ./scene-fill-20261101/README.md: 3d4cbcb347960d8c1387ee5d474cdf4c
+- ./scene-fill-20261101/code/__pycache__/cdp_shot.cpython-313.pyc: 2244be6f9cd38a451890e3fd614a5af3
+- ./scene-fill-20261101/code/cdp_shot.py: 7a115ec23d75c658fe800629beeb72d2
+- ./scene-fill-20261101/code/fill.py: 93010a9231cb1de311220af98fb9a1a8
+- ./scene-fill-20261101/code/fixlog-fill.txt: 8879286253b68b24db83e5f2129362ed
+- ./scene-fill-20261101/code/fixlog.py: a41316b3422e25d353c3b42f24ed979e
+- ./scene-fill-20261101/code/inventory_update.py: b8ff2343c1fd50d6b2484d013b1c5c39
+- ./scene-fill-20261101/code/jobs-E.json: 577d4076c09e1a114e2d5b39a350d3d3
+- ./scene-fill-20261101/code/jobs-menu.json: c83fb332f5bbc8298ecf96aedaebb626
+- ./scene-fill-20261101/code/jobs-menu390.json: b1ceeee34c61143fcdfa5a552e6e0d1a
+- ./scene-fill-20261101/code/jobs-rest.json: a7f02fbadf1bc7eaa54f52429dcb50be
+- ./scene-fill-20261101/code/jobs.json: f708f2841f17b93d7d0fd9bc14917d8c
+- ./scene-fill-20261101/code/menu.py: 9dc0d3ad6ccb9733a6e4f6369140bc4f
+- ./scene-fill-20261101/code/rest.py: 525ab98722e6cf7396a7f476a7e1f78e
+- ./scene-fill-20261101/code/sheets.py: 4c9cdfd1b9fbdbcd6f44d0282791c7cb
+- ./scene-fill-20261101/code/shoot.py: 24891d2e317ba2c539cf2271f1fd6623
+- ./scene-fill-20261101/html/E-front-desk-a-320x568.html: f3d39e351b22dc9c0679427bfdcfee5d
+- ./scene-fill-20261101/html/E-front-desk-a-390x844.html: 88c0b199adec7d609584d0d90dc1ba7c
+- ./scene-fill-20261101/html/E-front-desk-base-320x568.html: 8d8f52e3f4ff7a4025c8512b0c4db0cf
+- ./scene-fill-20261101/html/E-front-desk-base-390x844.html: 3936ddf17607ea1d6c6ef521c6f7af5d
+- ./scene-fill-20261101/html/E-front-desk-d-320x568.html: a9b5581478808615d161a9ac3e3ba068
+- ./scene-fill-20261101/html/E-front-desk-d-390x844.html: e933deae55e442e1234a98e939f28231
+- ./scene-fill-20261101/html/E-front-desk-e-320x568.html: 13211a196f137d1c02174722afc37ae7
+- ./scene-fill-20261101/html/E-front-desk-e-390x844.html: a38e39939feb6a406fe4210f158848e2
+- ./scene-fill-20261101/html/E-front-desk-m-320x568.html: 2eded43f2eb6e6becd8a031331d3f8f5
+- ./scene-fill-20261101/html/E-front-desk-m-390x844.html: f31e70ed49d82738b4329f32ecfe4b9a
+- ./scene-fill-20261101/html/E-front-desk-n-320x568.html: 1ac1d5650b3e7da570c864cfb4983f20
+- ./scene-fill-20261101/html/E-front-desk-n-390x844.html: be1c433e92a86219a4dae924a52874ef
+- ./scene-fill-20261101/html/F-kitchen-a-320x568.html: e245091a267dd530f93a6ac5a3c1411f
+- ./scene-fill-20261101/html/F-kitchen-a-390x844.html: 49d18e04a21fe5029edc7be8800ca36b
+- ./scene-fill-20261101/html/F-kitchen-d-320x568.html: 9c6e7b0b84a05c3e2ee9d5fcc90c1073
+- ./scene-fill-20261101/html/F-kitchen-d-390x844.html: 87a0d0a4f80409825e8e049b6d479346
+- ./scene-fill-20261101/html/F-kitchen-e-320x568.html: 31719120c4ed303635562bc53788de9a
+- ./scene-fill-20261101/html/F-kitchen-e-390x844.html: 3848cdc354f17c26612c526ba5065906
+- ./scene-fill-20261101/html/F-kitchen-m-320x568.html: bf24dbd7d9669c43534670cbc314e292
+- ./scene-fill-20261101/html/F-kitchen-m-390x844.html: 2aae4d5c6072705eb6a03c7e23259b4c
+- ./scene-fill-20261101/html/F-kitchen-n-320x568.html: 46c190f19f521dc02728bbc925539ff8
+- ./scene-fill-20261101/html/F-kitchen-n-390x844.html: 79ca6cb28917e7acf1961cb529393f65
+- ./scene-fill-20261101/html/farm-d-320x568.html: 0733415fc2ae49051d484b698df480fd
+- ./scene-fill-20261101/html/farm-d-390x844.html: 9ae072e4ea10f04d6aa18e0878245be7
+- ./scene-fill-20261101/html/farm-e-320x568.html: cd889014db6781756de31aba4a6832eb
+- ./scene-fill-20261101/html/farm-e-390x844.html: acb335d213377844ce095821ebe2537c
+- ./scene-fill-20261101/html/farm-m-320x568.html: e585100bee57fbc39b179e18e52ec8a9
+- ./scene-fill-20261101/html/farm-m-390x844.html: 0219782ce447e0a96f99e925c0c6fd06
+- ./scene-fill-20261101/html/farm-n-320x568.html: 981b04db1c3c4fcf974d5f13a39f1454
+- ./scene-fill-20261101/html/farm-n-390x844.html: 15d0a7d2b59ad2c528b00d2c85955cb2
+- ./scene-fill-20261101/html/home-a-320x568.html: bd84f55f110fd4f98c665f5cb1e3fc24
+- ./scene-fill-20261101/html/home-a-390x844.html: 5eacd98dbffd55262c5984e59504732a
+- ./scene-fill-20261101/html/home-d-320x568.html: c6c1db8175287aa42049caef69105f29
+- ./scene-fill-20261101/html/home-d-390x844.html: d57676f2980c9285ad9b24d58215f706
+- ./scene-fill-20261101/html/home-e-320x568.html: cb3b65774695f01cb5a99da6c04ed375
+- ./scene-fill-20261101/html/home-e-390x844.html: 1096dd9b0e9d3774e2d80ebb03212fc4
+- ./scene-fill-20261101/html/home-m-320x568.html: 9196a86468cca34da2be6a2ac74146c5
+- ./scene-fill-20261101/html/home-m-390x844.html: aaa3db12db285855fcc16c4c74a4789b
+- ./scene-fill-20261101/html/home-n-320x568.html: 3ad8627a67251a02df6a066c9c1352c4
+- ./scene-fill-20261101/html/home-n-390x844.html: b4651c55c16b6708e0181a5cf2863132
+- ./scene-fill-20261101/html/menu-M1-e-320x568.html: bf63b7185ba3532826c573bdcef132d4
+- ./scene-fill-20261101/html/menu-M1-e-390x844.html: d749315c3f111895ed8d81ff0a1e5f10
+- ./scene-fill-20261101/html/menu-M1-n-320x568.html: cab7da18c86700da82107b0a4bb9f6be
+- ./scene-fill-20261101/html/menu-M1-n-390x844.html: 37e9ef4d9f5f705341752583719bbd3f
+- ./scene-fill-20261101/html/menu-M3-e-320x568.html: 9dd8bb1468c35f3fa738a94e400af098
+- ./scene-fill-20261101/html/menu-M3-e-390x844.html: 168f40728dcc2cfd467252bad4f1e636
+- ./scene-fill-20261101/html/menu-M3-n-320x568.html: 909809b0490fe6fb5e4a1c8b98ff18fa
+- ./scene-fill-20261101/html/menu-M3-n-390x844.html: a3926ed6e392e98df51eb6ca98aef3ae
+- ./scene-fill-20261101/html/park-a-320x568.html: 366302012bfc4eba29ea9a0a900000c3
+- ./scene-fill-20261101/html/park-a-390x844.html: 1ddf470ecfe5f9064b0888873600b84b
+- ./scene-fill-20261101/html/park-d-320x568.html: 6e8e1a289e8e4689692fe0cdfb2621e2
+- ./scene-fill-20261101/html/park-d-390x844.html: 6e47563a1ab7cad993feba2fb15c8647
+- ./scene-fill-20261101/html/park-e-320x568.html: 4c3d0457d00425106b67e3366e9a19ef
+- ./scene-fill-20261101/html/park-e-390x844.html: 53feb6b9307cfb1fc5050bfbfb32ba5e
+- ./scene-fill-20261101/html/park-n-320x568.html: 66e2bed19e76ece6d3520a2f2463b7a8
+- ./scene-fill-20261101/html/park-n-390x844.html: dbbde506a259caafa7479349e9c90328
+- ./scene-fill-20261101/html/pond-a-320x568.html: dabc31e0fd954d073a78286b91bfdf41
+- ./scene-fill-20261101/html/pond-a-390x844.html: 0acb8df6faf93e3a8fe4934cad4a4cb5
+- ./scene-fill-20261101/html/pond-d-320x568.html: 87110a93cfdf28405f70ae01ea5a2f33
+- ./scene-fill-20261101/html/pond-d-390x844.html: 232cb8894044eabde62b2cd1b105eab6
+- ./scene-fill-20261101/html/pond-m-320x568.html: 7c3ebf0ea112be49146669fff6f645ba
+- ./scene-fill-20261101/html/pond-m-390x844.html: e3ce0b4ca2a88fe69285701fad1b73f9
+- ./scene-fill-20261101/html/pond-n-320x568.html: 3bff807c56a5878bd82cd19603483821
+- ./scene-fill-20261101/html/pond-n-390x844.html: a8007376d6b949e429bf68825beb7d5c
+- ./scene-fill-20261101/html/rest-base-320x568.html: 79e9ff82419af0d190ffdce6d5da4615
+- ./scene-fill-20261101/html/rest-starry-320x568.html: 588051f80c88c32ccbf4dfe4cdd61158
+- ./scene-fill-20261101/html/rest-starry-390x844.html: 676b865f93f0a0540aa4eefb49b15bfb
+- ./scene-fill-20261101/html/rest-sunset-320x568.html: 3ffbc3ae8c14fcd56bba99ad4c801505
+- ./scene-fill-20261101/html/rest-sunset-390x844.html: a80638485d0bb04e4547dfbdc62943cb
+- ./scene-fill-20261101/html/title-a-320x568.html: 01514fb2d7896ecfc4a788f6ce2c551a
+- ./scene-fill-20261101/html/title-a-390x844.html: 8cf609c0aabf82613aac5707aeb902d5
+- ./scene-fill-20261101/html/title-e-320x568.html: 18057fbb9ad5a488c38da280b62fe0af
+- ./scene-fill-20261101/html/title-e-390x844.html: e9dc331b8d181098dd3485df4822e98d
+- ./scene-fill-20261101/html/title-n-A-320x568.html: 28accb2702cc25e8741f9c22c2bf5bfa
+- ./scene-fill-20261101/html/title-n-B-320x568.html: 94b697c04c5074198c5ec583fd8eb285
+- ./scene-fill-20261101/renders-MANIFEST.md5: 08be71de75a1362a3d9b5ccaaaad5f93
+- ./scene-fill-20261101/renders/E-front-desk-a-320x568.json: b68465221641ac48a4b91dc57b752a77
+- ./scene-fill-20261101/renders/E-front-desk-a-320x568.png: d57dd1250b7b93fd1c0b775544e7e287
+- ./scene-fill-20261101/renders/E-front-desk-a-320x568.sources.txt: 58a809b7a749153bbfcba171a2e3cd89
+- ./scene-fill-20261101/renders/E-front-desk-a-390x844.json: f06d25a5404809c910274eacadd2eac8
+- ./scene-fill-20261101/renders/E-front-desk-a-390x844.png: b207ceec131d6cffb5d9a4551e996643
+- ./scene-fill-20261101/renders/E-front-desk-a-390x844.sources.txt: e975f40d670522d7a21fe9cfcd06bb83
+- ./scene-fill-20261101/renders/E-front-desk-base-320x568.json: 16e9d2e14d3287dde62b716e35ccc15c
+- ./scene-fill-20261101/renders/E-front-desk-base-320x568.png: c4145646e874017a7f50441d6c74b52d
+- ./scene-fill-20261101/renders/E-front-desk-base-320x568.sources.txt: a7fb93243639daf8936b1d8aa0eddc6e
+- ./scene-fill-20261101/renders/E-front-desk-base-390x844.json: dfcd22ff5ac27c544527ec6f408df796
+- ./scene-fill-20261101/renders/E-front-desk-base-390x844.png: 922d0799d7dcd39c3a1ffd3438f529a1
+- ./scene-fill-20261101/renders/E-front-desk-base-390x844.sources.txt: e97f4bfd9cab82705ae8575101c81a67
+- ./scene-fill-20261101/renders/E-front-desk-d-320x568.json: 1a96f75d4f20852165b7030efafecb6d
+- ./scene-fill-20261101/renders/E-front-desk-d-320x568.png: 47f07167bea67606a36cf9526d17e675
+- ./scene-fill-20261101/renders/E-front-desk-d-320x568.sources.txt: 666baaf3157f022065d1381f2b3fdea3
+- ./scene-fill-20261101/renders/E-front-desk-d-390x844.json: 53e03b115384aa5ccbb71fe0e5961f05
+- ./scene-fill-20261101/renders/E-front-desk-d-390x844.png: 3a33a140550481ac4edc10780030fafc
+- ./scene-fill-20261101/renders/E-front-desk-d-390x844.sources.txt: a64bdbdd51c5921b50603c30fce6ff7f
+- ./scene-fill-20261101/renders/E-front-desk-e-320x568.json: 5d862aafb19a36ad537ea5147fb7cf29
+- ./scene-fill-20261101/renders/E-front-desk-e-320x568.png: 49ebd3cbd50f0c515632488f4e11767b
+- ./scene-fill-20261101/renders/E-front-desk-e-320x568.sources.txt: 9eef17071f13cb08837175b11bab75e2
+- ./scene-fill-20261101/renders/E-front-desk-e-390x844.json: 5a0ce72ced8588a427dff504354a774b
+- ./scene-fill-20261101/renders/E-front-desk-e-390x844.png: ecbb893c8984d76fbb64a378870afa84
+- ./scene-fill-20261101/renders/E-front-desk-e-390x844.sources.txt: 5de170017574d10865008d36a233e9b3
+- ./scene-fill-20261101/renders/E-front-desk-m-320x568.json: df99d644fa3de3d35ba2101023ad3e87
+- ./scene-fill-20261101/renders/E-front-desk-m-320x568.png: 57c5180f3a256b7b46edfa9a3f30795f
+- ./scene-fill-20261101/renders/E-front-desk-m-320x568.sources.txt: cec37b0d86749afcea0231f36b693c0f
+- ./scene-fill-20261101/renders/E-front-desk-m-390x844.json: aecf6ffa71e8db6add7111e11e78c679
+- ./scene-fill-20261101/renders/E-front-desk-m-390x844.png: d410a70cdb9d591652f629ccf91a8d1e
+- ./scene-fill-20261101/renders/E-front-desk-m-390x844.sources.txt: c9a2d5fa2c2741425abf67d507606f9e
+- ./scene-fill-20261101/renders/E-front-desk-n-320x568.json: a8edf0f6f7f950f7cd8f2ded759b105c
+- ./scene-fill-20261101/renders/E-front-desk-n-320x568.png: 4ae739137737fb0d693c5fb15bdfc344
+- ./scene-fill-20261101/renders/E-front-desk-n-320x568.sources.txt: 8d162f046fd9f9c2e880883f6717f635
+- ./scene-fill-20261101/renders/E-front-desk-n-390x844.json: 9ef8336b00c50cd1e40765f838a7fdc4
+- ./scene-fill-20261101/renders/E-front-desk-n-390x844.png: db273d041e950dc8cefbd8cf2a3d1b86
+- ./scene-fill-20261101/renders/E-front-desk-n-390x844.sources.txt: 278ff22392e3bb81797c07729202786f
+- ./scene-fill-20261101/renders/F-kitchen-a-320x568.json: afb9459a3e92a398d12062c57676b235
+- ./scene-fill-20261101/renders/F-kitchen-a-320x568.png: e6505f7e8e8bfed26f2d70cdb1f0be15
+- ./scene-fill-20261101/renders/F-kitchen-a-320x568.sources.txt: d8c095744df62e0795e6eef19b74fd8d
+- ./scene-fill-20261101/renders/F-kitchen-a-390x844.json: a389fcc06bfb8d9bee5ad6a76e7e56c5
+- ./scene-fill-20261101/renders/F-kitchen-a-390x844.png: ffa6b7ed0bf826b6dc28f4bac4f66b19
+- ./scene-fill-20261101/renders/F-kitchen-a-390x844.sources.txt: 5ed8023a76351f5fc251ea834a641f98
+- ./scene-fill-20261101/renders/F-kitchen-d-320x568.json: 5bbe30948587562e0bd86acd507a7adb
+- ./scene-fill-20261101/renders/F-kitchen-d-320x568.png: 953e425bc7c7c40d51188c442292d1dd
+- ./scene-fill-20261101/renders/F-kitchen-d-320x568.sources.txt: 0efbd49755b93db849accc168465235a
+- ./scene-fill-20261101/renders/F-kitchen-d-390x844.json: 3c428ffbad1171963005c0f0317bc883
+- ./scene-fill-20261101/renders/F-kitchen-d-390x844.png: 7b05cb1dcc01a610cc00e8f8386b8c14
+- ./scene-fill-20261101/renders/F-kitchen-d-390x844.sources.txt: 4fdb4a28b741a91ca6448e98cb56f9b9
+- ./scene-fill-20261101/renders/F-kitchen-e-320x568.json: e21c14e65479e2532575863b4a52c8be
+- ./scene-fill-20261101/renders/F-kitchen-e-320x568.png: cee5e67eb8eaa04f36263d28527b2593
+- ./scene-fill-20261101/renders/F-kitchen-e-320x568.sources.txt: 61154114b79ab3d3293e3fb9b39fd40e
+- ./scene-fill-20261101/renders/F-kitchen-e-390x844.json: 0b0c0ade075048c010ca955d7c4f2c52
+- ./scene-fill-20261101/renders/F-kitchen-e-390x844.png: 80b4a862f1b2cda6b5b81aec554f3ff2
+- ./scene-fill-20261101/renders/F-kitchen-e-390x844.sources.txt: c9af92c6a9f4f4a0e661cb3e8cf0de29
+- ./scene-fill-20261101/renders/F-kitchen-m-320x568.json: 97cdb2138ceef3ba2bbae468cb78b9d4
+- ./scene-fill-20261101/renders/F-kitchen-m-320x568.png: 0e082e8cc8c50e4553df643482ef0ce1
+- ./scene-fill-20261101/renders/F-kitchen-m-320x568.sources.txt: 0b81aeb7144c81bf5559a82a16a3f40c
+- ./scene-fill-20261101/renders/F-kitchen-m-390x844.json: 019748c9ba841f62f194868e1899f64f
+- ./scene-fill-20261101/renders/F-kitchen-m-390x844.png: c0f79c3eb71f32b8a342db03febccef3
+- ./scene-fill-20261101/renders/F-kitchen-m-390x844.sources.txt: 37816e9e8dc2def2865bbf56e3801332
+- ./scene-fill-20261101/renders/F-kitchen-n-320x568.json: c3a57267550b35fb2effd3ef06a7ec3e
+- ./scene-fill-20261101/renders/F-kitchen-n-320x568.png: c7f5e52aa17014826f6375e52b3b7ca9
+- ./scene-fill-20261101/renders/F-kitchen-n-320x568.sources.txt: 8184614e734cd91eca916f70a6845d41
+- ./scene-fill-20261101/renders/F-kitchen-n-390x844.json: 19bb8932b27e1a820e7e3f0c7e8e0bbc
+- ./scene-fill-20261101/renders/F-kitchen-n-390x844.png: efad28581512ea23019d8d1d25036340
+- ./scene-fill-20261101/renders/F-kitchen-n-390x844.sources.txt: 36e78013adb45434580ec121940ecf27
+- ./scene-fill-20261101/renders/farm-d-320x568.json: 58c2db796c14a6ef68ca9f7f0d790a30
+- ./scene-fill-20261101/renders/farm-d-320x568.png: 779b95246511f31d34af0e3bcb6ebb58
+- ./scene-fill-20261101/renders/farm-d-320x568.sources.txt: 260808cd65737fd3c436e453bbfeb3b0
+- ./scene-fill-20261101/renders/farm-d-390x844.json: 39c0dbd7096cd033563f80122bb79e0a
+- ./scene-fill-20261101/renders/farm-d-390x844.png: 8b1292a9dac9bd2420af804d956b1a01
+- ./scene-fill-20261101/renders/farm-d-390x844.sources.txt: 51d5d8775d26d11b24ad154fcf0e441f
+- ./scene-fill-20261101/renders/farm-e-320x568.json: 2c74909f92c5ee7c07008afcd9ca6627
+- ./scene-fill-20261101/renders/farm-e-320x568.png: 13f2dbf8da3644c30a863669d4c0a0b1
+- ./scene-fill-20261101/renders/farm-e-320x568.sources.txt: fb8c4cd2d94187d303e2426d274928d4
+- ./scene-fill-20261101/renders/farm-e-390x844.json: 9c74a0b68875f12fe467312c4621f777
+- ./scene-fill-20261101/renders/farm-e-390x844.png: afd04eb85131be610458d860ee6b8c71
+- ./scene-fill-20261101/renders/farm-e-390x844.sources.txt: 590e43693f2f2b2b4c15ee8b7e5e9253
+- ./scene-fill-20261101/renders/farm-m-320x568.json: 13687f9e020a82b5b5fc8bf28233e85c
+- ./scene-fill-20261101/renders/farm-m-320x568.png: 5e838dfb0e4c135142ef777bf68565bd
+- ./scene-fill-20261101/renders/farm-m-320x568.sources.txt: 21a5b3a861054a99fa0814c03ca73add
+- ./scene-fill-20261101/renders/farm-m-390x844.json: fcc82128be7123c7cdff7a6e21b09b65
+- ./scene-fill-20261101/renders/farm-m-390x844.png: 285904cbca714393b416c6da2139f731
+- ./scene-fill-20261101/renders/farm-m-390x844.sources.txt: 3fee51090853518a25b5bed425c619de
+- ./scene-fill-20261101/renders/farm-n-320x568.json: ba1812f31aa6ceba8470ba31ff0df838
+- ./scene-fill-20261101/renders/farm-n-320x568.png: c39373461ef27322f3408651a25951e5
+- ./scene-fill-20261101/renders/farm-n-320x568.sources.txt: 1f15ce7331eda124a1e7f965579e784f
+- ./scene-fill-20261101/renders/farm-n-390x844.json: e78340f15ba9b3f38775f6e5c3bb8151
+- ./scene-fill-20261101/renders/farm-n-390x844.png: 5672dc321a37a456fbac0eb0a638c22b
+- ./scene-fill-20261101/renders/farm-n-390x844.sources.txt: fe87955705b113f160095bb6bf054a04
+- ./scene-fill-20261101/renders/home-a-320x568.json: a133a0d813d728d8c847b8b48169f163
+- ./scene-fill-20261101/renders/home-a-320x568.png: beb5b6b9ba7f19eac4f07a8acbfe7e4d
+- ./scene-fill-20261101/renders/home-a-320x568.sources.txt: cdf50e0044ef65e0b07c419e6de58deb
+- ./scene-fill-20261101/renders/home-a-390x844.json: 67a4c7c390cb31954bfef6e5615d4ef2
+- ./scene-fill-20261101/renders/home-a-390x844.png: 691166ff423017b8004f29f178187c60
+- ./scene-fill-20261101/renders/home-a-390x844.sources.txt: a77947b301ded3931d2d6eb0c02f920e
+- ./scene-fill-20261101/renders/home-d-320x568.json: 4914688c25940642d8a097d7682754e1
+- ./scene-fill-20261101/renders/home-d-320x568.png: a9d75d2838cc0e9d84ee46bd0b5d9978
+- ./scene-fill-20261101/renders/home-d-320x568.sources.txt: 5ba6dcc60fd3cb4b8a228c5c274e6dbf
+- ./scene-fill-20261101/renders/home-d-390x844.json: 812ea6b52995c57fd0a2bbb4946ac696
+- ./scene-fill-20261101/renders/home-d-390x844.png: 2ee71f3bb1977abd071e56d03fda5744
+- ./scene-fill-20261101/renders/home-d-390x844.sources.txt: e023b4d5a08756db67174a374d7cc974
+- ./scene-fill-20261101/renders/home-e-320x568.json: 922bda69ec92f0c5c3fcd62f265594fc
+- ./scene-fill-20261101/renders/home-e-320x568.png: ad6e7e8441784d2f3e81a40ef2e0bd27
+- ./scene-fill-20261101/renders/home-e-320x568.sources.txt: 8124230e5a35b104790dd3b7057f847d
+- ./scene-fill-20261101/renders/home-e-390x844.json: 0342e3c91e7318dba99c020f50993926
+- ./scene-fill-20261101/renders/home-e-390x844.png: 477ed2b68cb0767096163176fb010a80
+- ./scene-fill-20261101/renders/home-e-390x844.sources.txt: a2631c5a1190a0bab6d55a764af3636a
+- ./scene-fill-20261101/renders/home-m-320x568.json: c2406e456ed0bad70f3c99186714688c
+- ./scene-fill-20261101/renders/home-m-320x568.png: e1adb1b4f124e2265a29aec1d6b13b2d
+- ./scene-fill-20261101/renders/home-m-320x568.sources.txt: 6024132594624e59fa95037efd491395
+- ./scene-fill-20261101/renders/home-m-390x844.json: 44adbbb4b7754f53aeee6923142e0feb
+- ./scene-fill-20261101/renders/home-m-390x844.png: cc7f27af84fd909e4760757fce04c020
+- ./scene-fill-20261101/renders/home-m-390x844.sources.txt: 89f8d126aaeba56a1c4177e4267da003
+- ./scene-fill-20261101/renders/home-n-320x568.json: 5cf956d38b95d2ce3a2f0194f2d548c6
+- ./scene-fill-20261101/renders/home-n-320x568.png: 3dce04f00f904e786fac163ccf91f1bf
+- ./scene-fill-20261101/renders/home-n-320x568.sources.txt: 011e8463c5825013dc3e528d7ccdefc4
+- ./scene-fill-20261101/renders/home-n-390x844.json: c442df984b3ebc9c4597405175c91cc9
+- ./scene-fill-20261101/renders/home-n-390x844.png: a21c5eb441aa4422b0c96a36602b72ed
+- ./scene-fill-20261101/renders/home-n-390x844.sources.txt: 29220a5f7f7cc7dbb9f668614f5941cb
+- ./scene-fill-20261101/renders/menu-M1-e-320x568.json: bc640bdd9a7ae06471377b0d119bf5ea
+- ./scene-fill-20261101/renders/menu-M1-e-320x568.png: 4c4024b9c850381447913d3d89d076fa
+- ./scene-fill-20261101/renders/menu-M1-e-320x568.sources.txt: ddf837fe8d0f4de84618be6e68a6790f
+- ./scene-fill-20261101/renders/menu-M1-e-390x844.json: bd865c8a740c17e34265e59ecc48272c
+- ./scene-fill-20261101/renders/menu-M1-e-390x844.png: f2cbd37f9d5d797e87497febbbe15890
+- ./scene-fill-20261101/renders/menu-M1-e-390x844.sources.txt: 4b4e5023db1052ddf2d37cd5edb59cd7
+- ./scene-fill-20261101/renders/menu-M1-n-320x568.json: 143aae22319d6cfc73dfe774f6a1f8a4
+- ./scene-fill-20261101/renders/menu-M1-n-320x568.png: a555d1049abc6e764c3af70e8dc11001
+- ./scene-fill-20261101/renders/menu-M1-n-320x568.sources.txt: c61cae39cb4bee5a51b61f0734045b09
+- ./scene-fill-20261101/renders/menu-M1-n-390x844.json: 2ad370150a91d417b13bc665f6979b9d
+- ./scene-fill-20261101/renders/menu-M1-n-390x844.png: b3b50a04c48f9efd05b03ac9d5c797f0
+- ./scene-fill-20261101/renders/menu-M1-n-390x844.sources.txt: b9d15e6d5f0664fdad19644c8d53b40a
+- ./scene-fill-20261101/renders/menu-M3-e-320x568.json: 9fa2c67076624b97e251f7378ce6fbae
+- ./scene-fill-20261101/renders/menu-M3-e-320x568.png: 76b82a7010c18b2bcfebfa77cc8878f3
+- ./scene-fill-20261101/renders/menu-M3-e-320x568.sources.txt: 356ad4b1ac79ce1a742ae3234264f432
+- ./scene-fill-20261101/renders/menu-M3-e-390x844.json: cf42ce47acc8df1c26623c14da651f72
+- ./scene-fill-20261101/renders/menu-M3-e-390x844.png: 1e5f42edab4173dc863b53d2cd64bd65
+- ./scene-fill-20261101/renders/menu-M3-e-390x844.sources.txt: 9536e58a6983afbd0612463acb45c5a9
+- ./scene-fill-20261101/renders/menu-M3-n-320x568.json: faaca3a03ff385b7024dc67340895182
+- ./scene-fill-20261101/renders/menu-M3-n-320x568.png: 11844595ff30b741f14dc7debfa8dc79
+- ./scene-fill-20261101/renders/menu-M3-n-320x568.sources.txt: 780c9a9cde57f6d7ab3072c962222095
+- ./scene-fill-20261101/renders/menu-M3-n-390x844.json: a9c9f5d69f5a41b75144a7ca5c4e9fff
+- ./scene-fill-20261101/renders/menu-M3-n-390x844.png: 91607963acace28bbbbf7ab49643a3e3
+- ./scene-fill-20261101/renders/menu-M3-n-390x844.sources.txt: faf3b1ed0a6baeb3d055e2c2cf0cca3b
+- ./scene-fill-20261101/renders/park-a-320x568.json: 9b0fe13ae89cb650574991ec7632bc75
+- ./scene-fill-20261101/renders/park-a-320x568.png: b7185dac3e5cc18e2ade6b633e1c89e9
+- ./scene-fill-20261101/renders/park-a-320x568.sources.txt: 5fd89e784b4e0c9537338bc73eff2e80
+- ./scene-fill-20261101/renders/park-a-390x844.json: eac0a6edec29fe6561c0598fd2d402a2
+- ./scene-fill-20261101/renders/park-a-390x844.png: 063da908c8eb28b0da09c5aed3046ac1
+- ./scene-fill-20261101/renders/park-a-390x844.sources.txt: 37eec7a2f1ca72177b2483dc42e6f40b
+- ./scene-fill-20261101/renders/park-d-320x568.json: 5f73b9fe878089209826d71cace7b87d
+- ./scene-fill-20261101/renders/park-d-320x568.png: 5a49b307ed6600ec1534e3f8946f90ba
+- ./scene-fill-20261101/renders/park-d-320x568.sources.txt: 1e9a8e16b055e29ecd00c0e48023f8dc
+- ./scene-fill-20261101/renders/park-d-390x844.json: a949b80e8569ca179d1871b336cbba60
+- ./scene-fill-20261101/renders/park-d-390x844.png: 67d6d1e000c2b8e61fa50926f97eee62
+- ./scene-fill-20261101/renders/park-d-390x844.sources.txt: 15b96084981e698c5d8a941cc403e823
+- ./scene-fill-20261101/renders/park-e-320x568.json: ef14b967bcb63101dada0cc902a49492
+- ./scene-fill-20261101/renders/park-e-320x568.png: b7f254b932a52cb2e644e1548ed219cb
+- ./scene-fill-20261101/renders/park-e-320x568.sources.txt: de5e225f6e00a3a27ae778fa54a2f5b6
+- ./scene-fill-20261101/renders/park-e-390x844.json: d4ef325895c6b375cdfdc677ee0dbffa
+- ./scene-fill-20261101/renders/park-e-390x844.png: f3de3256f0d804388d7c58db3736f39f
+- ./scene-fill-20261101/renders/park-e-390x844.sources.txt: 532aaff89e030f531205479fac573aec
+- ./scene-fill-20261101/renders/park-n-320x568.json: 2dcfa388d0c9b102118d364b8e47df81
+- ./scene-fill-20261101/renders/park-n-320x568.png: 0f600c90c930b402963d720589b4658b
+- ./scene-fill-20261101/renders/park-n-320x568.sources.txt: d4bcd75122d5f59e93d625a9b932c767
+- ./scene-fill-20261101/renders/park-n-390x844.json: 78a8351a8e2781ff254c757e88cc612a
+- ./scene-fill-20261101/renders/park-n-390x844.png: 2e567afb89865e01fb660517f98f7351
+- ./scene-fill-20261101/renders/park-n-390x844.sources.txt: d737eaf3ace96b04cc225ea9e97d916b
+- ./scene-fill-20261101/renders/pond-a-320x568.json: 8b0b55c65a9f7a2633ee28e90a594ec7
+- ./scene-fill-20261101/renders/pond-a-320x568.png: 1ad1b302cc23d22da432b855542ae46f
+- ./scene-fill-20261101/renders/pond-a-320x568.sources.txt: 26bd453d43c783f71fff1fff736f81a6
+- ./scene-fill-20261101/renders/pond-a-390x844.json: 948abc1c6ffa299ff353d5f0429fa616
+- ./scene-fill-20261101/renders/pond-a-390x844.png: 6252e27eb94ac869e62ac8e0cf9f79b5
+- ./scene-fill-20261101/renders/pond-a-390x844.sources.txt: a41d5584da51dad78556c44459f232e2
+- ./scene-fill-20261101/renders/pond-d-320x568.json: 6108c821ca68493aead0c1a354700eb5
+- ./scene-fill-20261101/renders/pond-d-320x568.png: e0747bde4966ab971b2c47b4ec4c99f8
+- ./scene-fill-20261101/renders/pond-d-320x568.sources.txt: 155575215c9ed5232dca537cc141b99f
+- ./scene-fill-20261101/renders/pond-d-390x844.json: 6437d4b47f6dc209c6a77a38df5a6580
+- ./scene-fill-20261101/renders/pond-d-390x844.png: 21de6ecf656da8e2795950aa4eb2e480
+- ./scene-fill-20261101/renders/pond-d-390x844.sources.txt: 0af27ef41916e824a0f922e93685dd44
+- ./scene-fill-20261101/renders/pond-m-320x568.json: d5ab8c115449eb7d08942c0c8744d15a
+- ./scene-fill-20261101/renders/pond-m-320x568.png: 8930f732debe72943567e78ba0ff9f94
+- ./scene-fill-20261101/renders/pond-m-320x568.sources.txt: dd6d0a8665ccd392bb4b7d385f9f0ee8
+- ./scene-fill-20261101/renders/pond-m-390x844.json: 25e727df6508e46dd68d922b37365a15
+- ./scene-fill-20261101/renders/pond-m-390x844.png: 8d1654bb2b5faaf4f1790a091a0ae00e
+- ./scene-fill-20261101/renders/pond-m-390x844.sources.txt: 831dc331bf13bd7df0615942871d072c
+- ./scene-fill-20261101/renders/pond-n-320x568.json: ec12ffc898ec019419bea83c0b9f3907
+- ./scene-fill-20261101/renders/pond-n-320x568.png: 195d00cadedff1f26fb19b4d41756f4b
+- ./scene-fill-20261101/renders/pond-n-320x568.sources.txt: 0d203b5c6636e04c124770d23f1c0e87
+- ./scene-fill-20261101/renders/pond-n-390x844.json: c02f2bb155ddddadf911ba50493ad65c
+- ./scene-fill-20261101/renders/pond-n-390x844.png: 4615b3b6fa2fcfed74b32ccb196000dd
+- ./scene-fill-20261101/renders/pond-n-390x844.sources.txt: 7f73bd173cd602e2cc5b3280f07996ea
+- ./scene-fill-20261101/renders/rest-base-320x568.json: 34861328a13de9de993290d779e6fff8
+- ./scene-fill-20261101/renders/rest-base-320x568.png: d02d28e890a3a6a27c5094f85976f328
+- ./scene-fill-20261101/renders/rest-base-320x568.sources.txt: 0d38e1e43a495b35586e9081cb49f299
+- ./scene-fill-20261101/renders/rest-starry-320x568.json: 1a222686e2f2fcc873765f16d5f250c4
+- ./scene-fill-20261101/renders/rest-starry-320x568.png: b8b5f1b7c3e7048fcc166a6916a005ee
+- ./scene-fill-20261101/renders/rest-starry-320x568.sources.txt: b93b4d03630739a504ecff89f173f5ad
+- ./scene-fill-20261101/renders/rest-starry-390x844.json: 10c1d0ed53585176500265c661d1c2af
+- ./scene-fill-20261101/renders/rest-starry-390x844.png: 4b02d7351b498c1b57a317b4ca388ba9
+- ./scene-fill-20261101/renders/rest-starry-390x844.sources.txt: d289096504b41eb161963be2c56482e0
+- ./scene-fill-20261101/renders/rest-sunset-320x568.json: f42a23225f946ba8de6457e56be3eff8
+- ./scene-fill-20261101/renders/rest-sunset-320x568.png: f9ec9da6787c6cbce20248fd1d0ab5a5
+- ./scene-fill-20261101/renders/rest-sunset-320x568.sources.txt: 32249cd6bfea81de59cf29e388458195
+- ./scene-fill-20261101/renders/rest-sunset-390x844.json: e0de170a94fe2faefef884d628fc7128
+- ./scene-fill-20261101/renders/rest-sunset-390x844.png: 41c0eea591884a47b35477831a19d88c
+- ./scene-fill-20261101/renders/rest-sunset-390x844.sources.txt: f071860c1145583d0fe8d30a3061869a
+- ./scene-fill-20261101/renders/title-a-320x568.json: c25c273ffa0836e7dcbe26e913e56e58
+- ./scene-fill-20261101/renders/title-a-320x568.png: a84e5e5f42eae9e84e32f469382b36fd
+- ./scene-fill-20261101/renders/title-a-320x568.sources.txt: fe99e6af8ed4fbac9c8abc360f161a7c
+- ./scene-fill-20261101/renders/title-a-390x844.json: 5435aeddd51d6d71a091dbe824957e92
+- ./scene-fill-20261101/renders/title-a-390x844.png: 3958965144277a2b25919c54391f95e2
+- ./scene-fill-20261101/renders/title-a-390x844.sources.txt: 6081c88713ba41be4ab9fffb70877585
+- ./scene-fill-20261101/renders/title-e-320x568.json: c8a9cb371c9b0fd586cf64db8b512824
+- ./scene-fill-20261101/renders/title-e-320x568.png: 161df2a3628913fcdf9024ded4f8e748
+- ./scene-fill-20261101/renders/title-e-320x568.sources.txt: 06b415b68e4ca645d4887d71769cbc1e
+- ./scene-fill-20261101/renders/title-e-390x844.json: b42c7fe2c9766f12504731df634198c5
+- ./scene-fill-20261101/renders/title-e-390x844.png: c07503db51a2b8cbe1f307531834d97d
+- ./scene-fill-20261101/renders/title-e-390x844.sources.txt: d51c3c516d4932548c181f31af99eba8
+- ./scene-fill-20261101/renders/title-n-A-320x568.json: 6b2b53909bc9e9e18b6d4bf0d2524f1e
+- ./scene-fill-20261101/renders/title-n-A-320x568.png: f38f05ab29f6a36a0fa17a4f07327a6e
+- ./scene-fill-20261101/renders/title-n-A-320x568.sources.txt: bf722a3052e8aa05eecbc038d8322563
+- ./scene-fill-20261101/renders/title-n-B-320x568.json: f0b857c6866c203a34711145b56492ce
+- ./scene-fill-20261101/renders/title-n-B-320x568.png: 1b5a95dda319e8a8c520cd9292549a75
+- ./scene-fill-20261101/renders/title-n-B-320x568.sources.txt: 475d5ed46699528113613cfc86d0cd20
+- ./scene-fill-20261101/scene-inventory-update.json: e7faf7f467e723e4cef0675e22411f6a
+- ./scene-fill-20261101/scene-inventory-update.md: deaae7a0c546f6767ddf53b451ac3ae7
+- ./scene-fill-20261101/sheets/S01-park-390x844.png: 04d395327a478f1ef62aaac071224fe9
+- ./scene-fill-20261101/sheets/S01-park-390x844.png.sources.txt: e6258533841fee9403b20d0053306cc3
+- ./scene-fill-20261101/sheets/S01-park-390x844.sources.txt: e6258533841fee9403b20d0053306cc3
+- ./scene-fill-20261101/sheets/S02-park-320x568.png: 8fe1165e89e41566959f0267d5aff4e5
+- ./scene-fill-20261101/sheets/S02-park-320x568.png.sources.txt: 9c7698cc3b36729e5c55471ec763c3c6
+- ./scene-fill-20261101/sheets/S02-park-320x568.sources.txt: 9c7698cc3b36729e5c55471ec763c3c6
+- ./scene-fill-20261101/sheets/S03-pond-390x844.png: ad02c96ae56da4f740b0b9f9038fc5f9
+- ./scene-fill-20261101/sheets/S03-pond-390x844.png.sources.txt: d6013eef60733e6e720f20a528f6e60d
+- ./scene-fill-20261101/sheets/S03-pond-390x844.sources.txt: d6013eef60733e6e720f20a528f6e60d
+- ./scene-fill-20261101/sheets/S04-pond-320x568.png: e10b95818d536e805436444f33efe981
+- ./scene-fill-20261101/sheets/S04-pond-320x568.png.sources.txt: 96cfe7bc2fb680f6807860f4b167a10b
+- ./scene-fill-20261101/sheets/S04-pond-320x568.sources.txt: 96cfe7bc2fb680f6807860f4b167a10b
+- ./scene-fill-20261101/sheets/S05-home-390x844.png: ee23103538df02b157e7eae2a7ccd00a
+- ./scene-fill-20261101/sheets/S05-home-390x844.png.sources.txt: d33ef484d8147b617898cf8f8111b675
+- ./scene-fill-20261101/sheets/S05-home-390x844.sources.txt: d33ef484d8147b617898cf8f8111b675
+- ./scene-fill-20261101/sheets/S06-home-320x568.png: 52aedd221206ceab4fd830da2170d69e
+- ./scene-fill-20261101/sheets/S06-home-320x568.png.sources.txt: 8817169801b23642798bb1a1a820f553
+- ./scene-fill-20261101/sheets/S06-home-320x568.sources.txt: 8817169801b23642798bb1a1a820f553
+- ./scene-fill-20261101/sheets/S07-f-kitchen-390x844.png: fe20684056f33c6e65b1e9efaa88ffae
+- ./scene-fill-20261101/sheets/S07-f-kitchen-390x844.png.sources.txt: bc273dcf0fe476aba05f4dd02c1025da
+- ./scene-fill-20261101/sheets/S07-f-kitchen-390x844.sources.txt: bc273dcf0fe476aba05f4dd02c1025da
+- ./scene-fill-20261101/sheets/S08-f-kitchen-320x568.png: 934c8e94e455b542c4994039d5c87f9d
+- ./scene-fill-20261101/sheets/S08-f-kitchen-320x568.png.sources.txt: d522dcfc79377c302d4e33510bbcbfea
+- ./scene-fill-20261101/sheets/S08-f-kitchen-320x568.sources.txt: d522dcfc79377c302d4e33510bbcbfea
+- ./scene-fill-20261101/sheets/S09-e-front-desk-390x844.png: 285fc9766193d7c1785d9f1620e89067
+- ./scene-fill-20261101/sheets/S09-e-front-desk-390x844.png.sources.txt: 57d8712a26f104702db70f56cc31bc13
+- ./scene-fill-20261101/sheets/S09-e-front-desk-390x844.sources.txt: 57d8712a26f104702db70f56cc31bc13
+- ./scene-fill-20261101/sheets/S10-e-front-desk-320x568.png: f3420fbd94baee68f736963e88cfc235
+- ./scene-fill-20261101/sheets/S10-e-front-desk-320x568.png.sources.txt: 080337f9f5aa77904d624092674e9c1d
+- ./scene-fill-20261101/sheets/S10-e-front-desk-320x568.sources.txt: 080337f9f5aa77904d624092674e9c1d
+- ./scene-fill-20261101/sheets/S11-farm-390x844.png: be2ecae739dff4771b73e7030f1d4ca6
+- ./scene-fill-20261101/sheets/S11-farm-390x844.png.sources.txt: 1ada63868989cea375534f0ded242096
+- ./scene-fill-20261101/sheets/S11-farm-390x844.sources.txt: 1ada63868989cea375534f0ded242096
+- ./scene-fill-20261101/sheets/S12-farm-320x568.png: a3ed75442cdf5fa195d718350a2a0a14
+- ./scene-fill-20261101/sheets/S12-farm-320x568.png.sources.txt: 827e69f7fad5f90ed39dd67405ccf518
+- ./scene-fill-20261101/sheets/S12-farm-320x568.sources.txt: 827e69f7fad5f90ed39dd67405ccf518
+- ./scene-fill-20261101/sheets/S13-title.png: 1f350b4da953778721e5db51ef98e504
+- ./scene-fill-20261101/sheets/S13-title.png.sources.txt: 518c8e619e12e1978a964fa763777980
+- ./scene-fill-20261101/sheets/S13-title.sources.txt: 518c8e619e12e1978a964fa763777980
+- ./scene-fill-20261101/sheets/S14-INTERNAL-title-night-AB.png: b68c8caf42942d6d3cd3994dfaf34112
+- ./scene-fill-20261101/sheets/S14-INTERNAL-title-night-AB.png.sources.txt: 2caa44483465530e1f0458b60cc61bfe
+- ./scene-fill-20261101/sheets/S14-INTERNAL-title-night-AB.sources.txt: 2caa44483465530e1f0458b60cc61bfe
+- ./scene-fill-20261101/sheets/S15-menu-m1.png: 1b3fab0c056cb28d3873f3515af3d598
+- ./scene-fill-20261101/sheets/S15-menu-m1.png.sources.txt: 7230cf539e686257c3c16715595688dc
+- ./scene-fill-20261101/sheets/S15-menu-m1.sources.txt: 7230cf539e686257c3c16715595688dc
+- ./scene-fill-20261101/sheets/S16-menu-m3.png: 432298a8b1092054df99be17ecff2edc
+- ./scene-fill-20261101/sheets/S16-menu-m3.png.sources.txt: d8c0da1fb51cdc6225bf12bfe9942cc6
+- ./scene-fill-20261101/sheets/S16-menu-m3.sources.txt: d8c0da1fb51cdc6225bf12bfe9942cc6
+- ./scene-fill-20261101/sheets/S17-rest.png: 29641f1f06d369d4312a83378adca129
+- ./scene-fill-20261101/sheets/S17-rest.png.sources.txt: a3af31ecc5fabb25eff84296fe114b95
+- ./scene-fill-20261101/sheets/S17-rest.sources.txt: a3af31ecc5fabb25eff84296fe114b95
+- ./scene-fill-20261101/sheets/sheets.json: 7bda88dee55464f1284f3262affa85de
+- ./scene-fill-20261101/src-snapshot/37-rest-screen-390x844.html: 3c780acd2357bf1b0846b1ffbb039739
+- ./scene-fill-20261101/src-snapshot/M1-main-menu-320x568.html: 1bfbf475da97a6bb3f3a610b8f3e75c8
+- ./scene-fill-20261101/src-snapshot/M1-main-menu-390x844.html: 214d367dca5d8afd0099c145ddfa9946
+- ./scene-fill-20261101/src-snapshot/M3-main-menu-320x568.html: ed04b2cfa370f7e2afc8bc37e50d33ea
+- ./scene-fill-20261101/src-snapshot/M3-main-menu-390x844.html: 739e21d8c2dbebfbbcb180c5aefeda58
+- ./sheets/instructor/v608/nightB/B.png: 843444a53aebb5af0b550c2070b8783e
+- ./sheets/instructor/v608/nightB/B.png.sources.txt: 8a3fb6cabcdae162f043c1f7e4cc3d80
+- ./sheets/instructor/v608/nightB/night-title-1A-1B.png: 75c7906e676c7bff66de6cfbaeb18aa9
+- ./sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt: 8a624cb94f8f8cb0e8ca14f8e56dd9c8
+- ./sheets/r2h-M-menus.md: ddcc8345c5599cb69b69d4e1099208ee
+- ./sheets/r2h-M-menus.png: 571b4c773ccfffc1c2862fdff25b6a4f
+- ./sheets/r2h-M-menus.png.sources.txt: 0ab5addc84574c9367dba9034df94935
+- ./sheets/r2h-after.png: 662807a2efff1de1671875b5b0d053cd
+- ./sheets/r2h-after.png.sources.txt: 6e044cdac512495e14a78febee62aea0
+- ./sheets/r2h-after.sources.txt: 6e044cdac512495e14a78febee62aea0
+- ./sheets/r2h-map-extended.md: 87a05b798e3124eee7d6c9741fc98fbe
+- ./sheets/r2h-map-extended.png: 0aa27de90cabfa41035e241619c07e21
+- ./sheets/r2h-map-extended.png.sources.txt: 001f8f54dd760309bc829fbdbc0520ba
+- ./showcase/showcase-1-opening.png.sources.txt: 35b6616bdf03db40433b233709ce7127
+- ./showcase/showcase-2-zones.png.sources.txt: 485286889016d66901ff44f48d91efa2
+- ./showcase/showcase-3-asking.png.sources.txt: b213403f08a960c9c19e9209aa27c6a3
+- ./showcase/showcase-4-walk-guardian.png.sources.txt: 778e0d80b8ab5ae775c3e569ca64a7b7
+- ./showcase/showcase-5-rewards-pause.png.sources.txt: b2cbc832f2aaf6f594ae69d5ffdef94f
+- ./showcase/tiles.txt: 1d5671ec882d87f2aa936f6e4ae268d8
+
+## Not carried
+
+- none
+
+## Per-file status
+
+- carried: ./COSTS-and-LEDGER.md 843bdd34644c30cabe3cfb4451504997
+- carried: ./QUEUE.md 0ac6f173e50182154f469b3b6aed0b69
+- carried: ./README-v608build.md 7e375f5ede43cb429ab83384e508a164
+- stage-overrides: ./README.md c567fc47748cfa9849ba1522314c7def
+- carried: ./checks/checks_v608.py 84c977fabf24dbd589429504f2a0b416
+- carried: ./checks/mktree.sh fc7dfbe282a7524ac7c4379a1faef064
+- carried: ./checks/trim_clip_check.py ac378ee2c25392d6b4b9c6cdc44f4bec
+- carried: ./code/banner_check.py 901b5c4aaa05fa9ee8fd4613fb822d41
+- carried: ./code/fix52_v608.py 4a1593860c86ada3c255c5fc1937eaa4
+- carried: ./code/freeze_r2c.sh 56e5d660c3c19974c3968eb2e567310b
+- carried: ./code/freeze_r2d.sh 590692970d2cb77357ec0080cdbdbf25
+- carried: ./code/gemtag_v608.py 7cc2f2a6648e024dbde543d3d1b3a5d3
+- carried: ./code/home_lake.py 7d7ab67579d73439dfeb0364e06abe92
+- carried: ./code/make_queue.py 0c7cbc8cf8fedc97620c2d0f9ed8ea0f
+- carried: ./code/make_queue_r2d.py f5f05bf0fa2c2d72f5d383c6a0d53df8
+- carried: ./code/occl_list.py 176d838d9ab2d68ccea8ac18e0b6aa23
+- carried: ./code/occl_qm.py aa963b833f53d88f91ab1a703e352d5f
+- carried: ./code/play_v608.py ee74f3ef184f843aa1734462900eb5fc
+- carried: ./code/r2_fit_table.py 21704fee65f66840c5dcb76213d55a23
+- carried: ./code/r2e/d2_mock.py b2261256907b9a5cd0f456363ade9bf2
+- carried: ./code/r2e/d2_probe.py de9d81dd48e63e84d93ba412a2055481
+- carried: ./code/r2e/freeze_r2e.sh d32dbe4c83519e624a754ee378be9522
+- carried: ./code/r2e/freeze_r2f.sh 75098ff24a38e54c8821340c3f25f8a0
+- carried: ./code/r2e/freeze_r2g.sh f0e0dc3e30cef14566b31679fceb721e
+- carried: ./code/r2e/g26e.py 4b6880bb4ae82dfe2f0c32297c3bb714
+- carried: ./code/r2e/index_r2e.py a48b02d7ac09979b939d2067fb682c0c
+- carried: ./code/r2e/instructor-shop-rename.py d75eaa133d9cc51667fea3bbfa41b85b
+- carried: ./code/r2e/make_queue_r2e.py 4c958a78e3e98ce10681ba9ff5e39d02
+- carried: ./code/r2e/r2d-2233-fixes.py 10dbcc02c40198cdaad03310e7abc706
+- carried: ./code/r2e/r2f-2316-fixes.py 1b76b6c0d41aa1f674eeb42ee63d7ab1
+- carried: ./code/r2e/r2g-2326-fixes.py 095fd03ce99b07339b740e18c7e78132
+- carried: ./code/r2e/sheets_r2e.py 6678a811f180d3a72609a36e382a1bc9
+- carried: ./code/r2e/sitecustomize.py eeb0f2e7f2777c2d3f6ee6f5ca77a3e9
+- carried: ./code/r2h/cdp_shot.py 355fe3c7709710d340441a79f52c1156
+- carried: ./code/r2h/fix_r2h.py 668b7cbe96087a0089b9181007bbf8c3
+- carried: ./code/r2h/freeze_r2h.sh 43ca6c52f5d5d14f5349535bdb0d0834
+- carried: ./code/r2h/render_r2h.py 893f82c1fed347a06e47bf884b77d477
+- carried: ./code/r2h/sheet_r2h.py 7e115654d17cbb44527597867ba6b279
+- carried: ./code/r2h/stage_r2h_paste.py 34d18af7ebf4a5f2a3d711e1096ed600
+- carried: ./code/rects26.py a143c61bc0f17a8b27d8e6e488f9c561
+- carried: ./code/sheet_frontdesk.py eb2d9de94734a494940468e22a84b632
+- carried: ./code/sheet_jesus26.py a4d5b3ad43205cf03b94a1a96bc73afe
+- carried: ./code/sheet_jesus26_abcd.py c581e354d4301533e387024a109cf29f
+- carried: ./code/sheet_pick_combined.py 87aa79d4fd4231f079d6d99db5772ba8
+- carried: ./code/sheet_trim.py f68cfb21f8ad7d367298566f95e421b1
+- carried: ./code/sheetkit.py 15dda05b56e87ae779f7c3fd6009cd37
+- carried: ./code/sheets_b2b.py d158471f47c47e69a08e21d9d1112fa0
+- carried: ./code/sheets_r2.py 50af83042dcecbdd7aeabafacb9aa134
+- carried: ./code/stage320_play.py f36bca5e52e51bb7ef4b8c1627338e52
+- carried: ./code/stage_guardian_play.py be08c9373436520f23c0af15b2953e0b
+- carried: ./code/tour.py 5c5ef06edf7f8008bbae1182463af3f5
+- carried: ./diff-PASTE-snap-1748MDT-to-round2.diff a57150bfbd80d33c6a98f9ce1c645179
+- carried: ./diff-cards-snap-1748MDT-to-round2.diff d31de63a340b34101f21c25ad6d6ed29
+- carried: ./diff-spec-snap-1748MDT-to-round2.diff a1cf78f7d3579d3f7d97b4cf6bfeaa98
+- carried: ./nancys-adventure-english-FINAL-v6-08.md 565402a09d7931038a92455827400265
+- carried: ./nancys-adventure-english-v6-08-PASTE.md 106a066103da9713220a5e7d6c4285cf
+- carried: ./nancys-adventure-english-v6-08-cards.json 501340c26e2a03af39bf8784faab00cc
+- carried: ./nancys-adventure-english-v6-08-daily-verses.json 81295c9fa657c5ff1652204b88c23665
+- carried: ./nancys-adventure-english-v6-08-title.svg bab91ec9df422160507fcf777aba3ef0
+- carried: ./nancys-adventure-english-v6-08.md 9563a48e780c83fa2c0458b514a9de54
+- carried: ./pick-sheets-b2b/B1-reward-pacing.png 6b737d085f4fb388897b6454f36f6b4b
+- carried: ./pick-sheets-b2b/D1-sentence-ask-thai-A-B-C-staged.png 9d3e0b718661bc5f1676b43fee1eee8d
+- carried: ./pick-sheets-b2b/D2-listen-ramp-A-B-C-staged.png 0f4e7cca0cd9786d924ece1296f0fe7f
+- carried: ./pick-sheets-b2b/TG1-sight-words-repeats.png a469bfb411d11f1c8d60c4ff616105dc
+- carried: ./pick-sheets-b2b/TG2-verse-after-run.png 2d503ebbbd55b6ae4a1d96188fdd2669
+- carried: ./pick-sheets-b2b/TG3-guardian-recap.png 1317998d9c6e04324fb49b368839ffa8
+- carried: ./pick-sheets-b2b/TG4-tier3-buy.png d7c9f70ddf0ca122cd45e8948629d888
+- carried: ./pick-sheets-b2b/bloodtide-name.png 7eee863f7fc78cb80673eebab0a55c04
+- carried: ./pick-sheets-b2b/coin-rule.png 1361e3e3b92f91a8efda10f369a36293
+- carried: ./pick-sheets-b2b/letter-game-A-B.png c60893847563d05696ebb91bf9bed95d
+- carried: ./pick-sheets-b2b/night-title-line.png 3709c41b466f475e8a2127d357c017c3
+- carried: ./pick-sheets-b2b/state-pairs-lean.png f2ec52d3054a4a02abbc810b8f17bf20
+- carried: ./r2h/FIXLOG.md 8d14d0935f959a374758ea84082b05cf
+- stage-new: ./r2h/code/FIXLOG.md e663347d082f37be4d199ca19cae4b57
+- stage-new: ./r2h/code/__pycache__/cdp_shot.cpython-313.pyc 8422d724ea70dca36d04e64485806c53
+- stage-new: ./r2h/code/__pycache__/fix_r2h.cpython-313.pyc 79e19c08327e03bfa1b53fcbbda18deb
+- stage-new: ./r2h/code/__pycache__/sheet_r2h.cpython-313.pyc f6b69214337e234fa32dbe969da8d597
+- stage-new: ./r2h/code/__pycache__/sidecar.cpython-313.pyc 2564c8f93486d824888aa87f2c2c074c
+- stage-new: ./r2h/code/__pycache__/tour_r2h.cpython-313.pyc c3b2c7ea26a31bf0ee6b568e271c9788
+- stage-new: ./r2h/code/backfill_html_md5.py e2a95c2223fa88e768c39d6341f0225b
+- stage-new: ./r2h/code/cdp_checks.py 04529264bdba8f508ee503673c45a6f9
+- stage-new: ./r2h/code/cdp_shot.py 38bf7dadbc8bb98192d05d91372471b8
+- stage-new: ./r2h/code/fix_r2h.py 36c8d24e610c486aee2144090dd703c3
+- stage-new: ./r2h/code/maps_t527u.py f947adc56ebfd98c234ffe49352764ea
+- stage-new: ./r2h/code/menu/__pycache__/flowers.cpython-313.pyc 81897f81412ebc089eb0a2ac1760abaf
+- stage-new: ./r2h/code/menu/__pycache__/parts.cpython-313.pyc b13e150a638a1775ad06e256b3955cfa
+- stage-new: ./r2h/code/menu/__pycache__/sheet_menu.cpython-313.pyc fe7515c84be6bb0bdb43571867275ed7
+- stage-new: ./r2h/code/menu/build_menu.py 010675777cf46de049a9309c0a73560b
+- stage-new: ./r2h/code/menu/flowers.py c0915315a4504d618d43806188fea45f
+- stage-new: ./r2h/code/menu/overlap_menu.py 276f97edad2ee5a2dc03aa2438e02769
+- stage-new: ./r2h/code/menu/parts.py 0c58270b661b70203df6dc3de831367b
+- stage-new: ./r2h/code/menu/sheet_menu.py d86687a0173bfae0e4ffc93f2498eeff
+- stage-new: ./r2h/code/menu/shoot_menu.py a6fdbcbc82006b4b973cedcd1e501628
+- stage-new: ./r2h/code/render_r2h.py db77d6893bcb8883835c0dbbe1dacecf
+- stage-new: ./r2h/code/sheet_r2h.py 8292993d712947bc868eee602c5981f1
+- stage-new: ./r2h/code/sidecar.py c697b745302740806afbd0822f2ef5b8
+- stage-new: ./r2h/code/stage_r2h_paste.py 34d18af7ebf4a5f2a3d711e1096ed600
+- stage-new: ./r2h/code/tour_r2h.py c23c71e5ed493e22694a47957faa4627
+- stage-new: ./r2h/html/01-title-390x844-before.html 52baea126aa2e2cd6d47d8c0f14b360d
+- stage-new: ./r2h/html/02-main-menu-verse-popup-390x844-before.html d132a927cf4f05741c06c089a15735d0
+- stage-new: ./r2h/html/03-main-menu-390x844-before.html ca8361f4e36d247ede5da9f16e2a9bde
+- stage-new: ./r2h/html/05-map-day1-390x844-before.html 9859a9b12be506cb006528a5781ff249
+- stage-new: ./r2h/html/05-map-day1-390x844.html cd0ca16a9fa323cf0767abff47f00739
+- stage-new: ./r2h/html/07-map-word-meadow-chooser-390x844-before.html 5073f0ee7571a5ed069e94961406c14e
+- stage-new: ./r2h/html/07-map-word-meadow-chooser-390x844.html de7fd0dad0c5ccfc84a5f699a8a843d1
+- stage-new: ./r2h/html/08-map-home-lake-chooser-day1-390x844-before.html 70c8a025ae22f1f76ece8666dd9cd6ed
+- stage-new: ./r2h/html/08-map-home-lake-chooser-day1-390x844.html e86a6c239078f35fe502459652cee35a
+- stage-new: ./r2h/html/09-map-later-390x844-before.html 8add012eec046f3e03837909f0ce8e56
+- stage-new: ./r2h/html/09-map-later-390x844.html d99bb16a1da4479b8a99dfb92f920038
+- stage-new: ./r2h/html/10-word-meadow-scene-320x568-before.html aa7d44a5654852f7c424f9ac41974cf5
+- stage-new: ./r2h/html/10-word-meadow-scene-320x568.html b87661b71ed2cc93c8cec7945daf17d1
+- stage-new: ./r2h/html/10-word-meadow-scene-390x844-before.html 511989aacd2e29c7e56d79524f6c9d09
+- stage-new: ./r2h/html/10-word-meadow-scene-390x844.html 723493a4c01ee784436868fe19d9a995
+- stage-new: ./r2h/html/11-word-meadow-scene-right-390x844-before.html 1b8a68d100de5445124ef418ac876296
+- stage-new: ./r2h/html/11-word-meadow-scene-right-390x844.html 5821aba3cdc0839e7ae26531b31e7c54
+- stage-new: ./r2h/html/12-reveal-right-390x844-before.html c34adac320616285ba4e32331d7c2319
+- stage-new: ./r2h/html/12-reveal-right-390x844.html 0975b9e3276d17c3873fbab1ce261a28
+- stage-new: ./r2h/html/13-word-meadow-scene-retry-390x844-before.html f08d5c263fbc0b75ebed6c7413b1de94
+- stage-new: ./r2h/html/13-word-meadow-scene-retry-390x844.html dee4ab0f6367482f15549c49664b19dd
+- stage-new: ./r2h/html/14-reveal-gentle-retry-320x568-before.html 6d2b199fa8c915b5b5f0b6eda8883364
+- stage-new: ./r2h/html/14-reveal-gentle-retry-320x568.html 491cb9a42e77531349fa974f77de5864
+- stage-new: ./r2h/html/14-reveal-gentle-retry-390x844-before.html 6400cb75148c103421f8056bf8081b8f
+- stage-new: ./r2h/html/14-reveal-gentle-retry-390x844.html fb0b054fc2f6d8796c943847a9d5f6b4
+- stage-new: ./r2h/html/15-say-it-sight-words-390x844-before.html 5f8e27d7a3f44dcdf9a9d660ad37a8f1
+- stage-new: ./r2h/html/15-say-it-sight-words-390x844.html 5a1fa6a51b23eb0103eb3a7cb7ea7975
+- stage-new: ./r2h/html/16-say-it-maxwell-says-day1-390x844-before.html d0379ce622eb9c07434730217a42e892
+- stage-new: ./r2h/html/16-say-it-maxwell-says-day1-390x844.html eaa7b03ee43901d6dc809d7c0ba74d4a
+- stage-new: ./r2h/html/17-two-answer-pray-high-five-390x844-before.html dad83b3c3cabb4ab2e39e1d2591a4818
+- stage-new: ./r2h/html/17-two-answer-pray-high-five-390x844.html 7a8f68ff53a36af347e555751cc77a70
+- stage-new: ./r2h/html/18-two-answer-wrong-tap-390x844-before.html 9a6fcbfb97b09a882100ef970844f558
+- stage-new: ./r2h/html/18-two-answer-wrong-tap-390x844.html 02550e34e8557b6c646022887bb984f5
+- stage-new: ./r2h/html/19-two-answer-right-done-390x844-before.html c99faea7a884c3edd32ed52e60219dc0
+- stage-new: ./r2h/html/19-two-answer-right-done-390x844.html e92c186a51912a701b2bceabb3ea745f
+- stage-new: ./r2h/html/21-kitchen-say-it-shown-320x568-before.html 97a102294c2a861e9d4c9652928d3f67
+- stage-new: ./r2h/html/21-kitchen-say-it-shown-320x568.html c764c24be32e003221540bd92b67dce2
+- stage-new: ./r2h/html/21-kitchen-say-it-shown-390x844-before.html eb0be055fe19d26a8441f98d55458a35
+- stage-new: ./r2h/html/21-kitchen-say-it-shown-390x844.html 724e47dabefd66074f9a9959623359e2
+- stage-new: ./r2h/html/22-kitchen-server-talk-320x568-before.html 1cebd0c03076b0f174a7198ef112c851
+- stage-new: ./r2h/html/22-kitchen-server-talk-320x568.html f5f863f5340d104d08e7f21db4df055a
+- stage-new: ./r2h/html/22-kitchen-server-talk-390x844-before.html 33a9b6782592f0814143f3016febf9bc
+- stage-new: ./r2h/html/22-kitchen-server-talk-390x844.html 576b6f8a70ff583122dd414815deb5f4
+- stage-new: ./r2h/html/23-level-up-reward-320x568-before.html 1eb587b584b0371ade1050f0eaf3b4c6
+- stage-new: ./r2h/html/23-level-up-reward-320x568.html 639c4e87cbc108eebfca7d0f3bf1452c
+- stage-new: ./r2h/html/23-level-up-reward-390x844-before.html 4f33ddc809e430d916eeb7e9cb4b5795
+- stage-new: ./r2h/html/23-level-up-reward-390x844.html ca373b9856c7b6e74ace5a8decc95e94
+- stage-new: ./r2h/html/24-guardian-run-entry-320x568-before.html b9b52a3404def3001ced99451c955e11
+- stage-new: ./r2h/html/24-guardian-run-entry-320x568.html 1725586beb032df25db2727e388c592d
+- stage-new: ./r2h/html/24-guardian-run-entry-375x667-before.html 2eabc3c291e70ee19edf3deeec7f8804
+- stage-new: ./r2h/html/24-guardian-run-entry-375x667.html 2ca1853843b9d7963ba004dab30c90de
+- stage-new: ./r2h/html/24-guardian-run-entry-390x844-before.html 6358cb32560d72604166fcbf37844ced
+- stage-new: ./r2h/html/24-guardian-run-entry-390x844.html 15e0e593b4f750c96fbd3b3e3073114b
+- stage-new: ./r2h/html/25-guardian-hint-letters-320x568-before.html b74fda6fa0811b7e3df488ee8dd85662
+- stage-new: ./r2h/html/25-guardian-hint-letters-320x568.html 1e79af4ef0c58d0e0c6fdfd7a6486036
+- stage-new: ./r2h/html/25-guardian-hint-letters-375x667-before.html 72dfc3719fb05c79e7ccb392f5175ce8
+- stage-new: ./r2h/html/25-guardian-hint-letters-375x667.html bd3a81b799361d67b914b680bedd81a8
+- stage-new: ./r2h/html/25-guardian-hint-letters-390x844-before.html 2fbd30296a194dedb6c3e523ce154b14
+- stage-new: ./r2h/html/25-guardian-hint-letters-390x844.html 5db515bed92d976e8a1aed437159c701
+- stage-new: ./r2h/html/26-guardian-hint-jesus-words-320x568-before.html 1931e760fd7c9a54d5ea363f2f3bef75
+- stage-new: ./r2h/html/26-guardian-hint-jesus-words-320x568.html d8f970e06a97ef82f23eb4d1f2e7890e
+- stage-new: ./r2h/html/26-guardian-hint-jesus-words-375x667-before.html e871c5e8896f5c22b2798346eeb618fd
+- stage-new: ./r2h/html/26-guardian-hint-jesus-words-375x667.html 401a7b0072443abe13474849125ee61d
+- stage-new: ./r2h/html/26-guardian-hint-jesus-words-390x844-before.html 26c1d9ce4d5920afb6f09cc09b8e3274
+- stage-new: ./r2h/html/26-guardian-hint-jesus-words-390x844.html 5d6befb6641c4350d4c4264ac01cb9e7
+- stage-new: ./r2h/html/27-guardian-kneels-320x568-before.html 20aaf267d6a3bce588fa5707da449ed4
+- stage-new: ./r2h/html/27-guardian-kneels-320x568.html 5ae0768c9ca44dbb3cad3f4adfdb90cd
+- stage-new: ./r2h/html/27-guardian-kneels-375x667-before.html a9ec5b0f66dcf71f6143500e6a01f494
+- stage-new: ./r2h/html/27-guardian-kneels-375x667.html 1d2f0efcffc1fe42a3c810ae0196fdb8
+- stage-new: ./r2h/html/27-guardian-kneels-390x844-before.html 9df1e0dfc536dbbec8cfbb20ae446f44
+- stage-new: ./r2h/html/27-guardian-kneels-390x844.html ac2a302450c5c4c5d8282296d2aaa903
+- stage-new: ./r2h/html/28-guardian-win-320x568-before.html 63aeb4df775d19a48d87a1a6e044d6d0
+- stage-new: ./r2h/html/28-guardian-win-320x568.html 25aa8835500fcf303f41033bfb0015ea
+- stage-new: ./r2h/html/28-guardian-win-375x667-before.html 6e79aee2e40fc833d86b5ca8927f90cc
+- stage-new: ./r2h/html/28-guardian-win-375x667.html 26246a7ebbcdb58aafd1fc9fcef8cd97
+- stage-new: ./r2h/html/28-guardian-win-390x844-before.html d1b10c4fef099f1e09275627369a9ecd
+- stage-new: ./r2h/html/28-guardian-win-390x844.html e85619bac01b09ef9f87306455008f16
+- stage-new: ./r2h/html/29-verse-scroll-gift-390x844-before.html 74516f91e8117f8a33abf33c6ce09d1d
+- stage-new: ./r2h/html/29-verse-scroll-gift-390x844.html 22e6f9df353e5b22f0a889b7d2cf847f
+- stage-new: ./r2h/html/30-new-weapon-gift-390x844-before.html dfad68d318f7615b957a023a05be24ff
+- stage-new: ./r2h/html/30-new-weapon-gift-390x844.html 85bac2316f8a0aadf009c7f90fa9c839
+- stage-new: ./r2h/html/31-golden-fields-scene-390x844-before.html dcf6720048f418ce37f9a9ac777fbfb7
+- stage-new: ./r2h/html/31-golden-fields-scene-390x844.html ef78cb4e5017b9447a86cdca564048a6
+- stage-new: ./r2h/html/32-home-lake-scene-390x844-before.html 960839e9623ea260f1b8ee974c3d5233
+- stage-new: ./r2h/html/32-home-lake-scene-390x844.html 369c9908c8ee069acb625d19f5c8114e
+- stage-new: ./r2h/html/33-say-it-baby-hospital-reply-320x568-before.html ea6a23b9d28f5669fed2d47bb7559ef3
+- stage-new: ./r2h/html/33-say-it-baby-hospital-reply-320x568.html 60ca3fa31b049ef3d79f5ed1d6ac63d6
+- stage-new: ./r2h/html/33-say-it-baby-hospital-reply-390x844-before.html 73f2a10a4f7ddeb75c5fd07b3a3390d9
+- stage-new: ./r2h/html/33-say-it-baby-hospital-reply-390x844.html 87f584bc1994af00a1dc2c74958388d8
+- stage-new: ./r2h/html/36-sound-duel-round-done-320x568-before.html 354d95d3fe0357e30af3a457899a2821
+- stage-new: ./r2h/html/36-sound-duel-round-done-390x844-before.html 8427b91c47772b5d295d013ce68df209
+- stage-new: ./r2h/html/37-rest-screen-390x844-before.html e08617b9d7ebe28cfe6bbdc3f1ea03ea
+- stage-new: ./r2h/html/37-rest-screen-390x844.html b7ac6b0a8a01291f173fbe1ca3dd64c0
+- stage-new: ./r2h/html/38-character-gear-mmo-tooltip-390x844-before.html a7bade0faabfd2f82ff7e27589e5b7c8
+- stage-new: ./r2h/html/44-scroll-reopened-390x844-before.html 3a39fa76d6e8e65e9ce643b053d94035
+- stage-new: ./r2h/html/44-scroll-reopened-390x844.html a357d582b65e0d679c14ff01ef6a6d87
+- stage-new: ./r2h/html/45-character-golden-pantry-390x844-before.html 022cf2ccc584a848472d7ccf6f946e17
+- stage-new: ./r2h/html/45-character-golden-pantry-390x844.html 7eb6a2c6181ec4787555d18f8762a720
+- stage-new: ./r2h/html/48-continue-after-pause-390x844-before.html 5aa4d0535b29dcd1da3c4d0256b2b24a
+- stage-new: ./r2h/html/48-continue-after-pause-390x844.html 0cf5ed05f660b3dd4ee51da846efa671
+- stage-new: ./r2h/html/54-phrase-ask-card-320x568-before.html f484569d7b1ff32ab2d670978a6a2630
+- stage-new: ./r2h/html/54-phrase-ask-card-320x568.html ffad33ebf7fa541559277d1cf308528a
+- stage-new: ./r2h/html/54-phrase-ask-card-390x844-before.html 9d9c03cb2fb5e3afb8d687dee2d1976e
+- stage-new: ./r2h/html/54-phrase-ask-card-390x844.html c4e1bca03263021a4436ec60513b1c3c
+- stage-new: ./r2h/html/M1-main-menu-320x568.html 1bfbf475da97a6bb3f3a610b8f3e75c8
+- stage-new: ./r2h/html/M1-main-menu-390x844.html 4bc56cc160c4c3bfaff9e10bb251612a
+- stage-new: ./r2h/html/M2-main-menu-320x568.html a85991c0b1d5e6340aac864742e52f1e
+- stage-new: ./r2h/html/M2-main-menu-390x844.html 4c282b2cb5bb927c048104152e872aef
+- stage-new: ./r2h/html/M3-main-menu-320x568.html ed04b2cfa370f7e2afc8bc37e50d33ea
+- stage-new: ./r2h/html/M3-main-menu-390x844.html 17834bd46848ef02be6ea1755e684518
+- stage-new: ./r2h/html/map-extended-320x568.html 9aa7eebd53f7db8246b68f1eb5c68451
+- stage-new: ./r2h/html/map-extended-390x844.html d149ea9ab71b17e50cd630153a7a17fd
+- stage-new: ./r2h/html/stage-A-meadow-evening-pond-320x568-before.html 8f1f8986cbf2af50dd45f190193916d7
+- stage-new: ./r2h/html/stage-A-meadow-evening-pond-320x568.html 02e367022e1506ee6430ce7ae265ed34
+- stage-new: ./r2h/html/stage-A-meadow-evening-pond-375x667-before.html d25071461f507a49f5cfbc98c4db6800
+- stage-new: ./r2h/html/stage-A-meadow-evening-pond-375x667.html 786b5c4181dabdab95f80b479be847fa
+- stage-new: ./r2h/html/stage-A-meadow-evening-pond-390x844-before.html 8fc6d31c3b23222f9ac83b35edc814fa
+- stage-new: ./r2h/html/stage-A-meadow-evening-pond-390x844.html 08550ecadff91af7eaefdd2a49d9c85f
+- stage-new: ./r2h/html/stage-B-meadow-listen-and-find-320x568-before.html a7d0dfed1baa46b66935b8ffd4f407b3
+- stage-new: ./r2h/html/stage-B-meadow-listen-and-find-320x568.html 02852a0199a5f9505c323f0ad0b218a1
+- stage-new: ./r2h/html/stage-B-meadow-listen-and-find-375x667-before.html b04b6146656efcdd01d9a07707d7007e
+- stage-new: ./r2h/html/stage-B-meadow-listen-and-find-375x667.html e15cb35742f499b98083620ccfca90b2
+- stage-new: ./r2h/html/stage-B-meadow-listen-and-find-390x844-before.html 31963a82f7653f111969359dd44ada41
+- stage-new: ./r2h/html/stage-B-meadow-listen-and-find-390x844.html 7487b83e3843fa2ce9be1c6cd6bc7ed6
+- stage-new: ./r2h/html/stage-W24-walk-B-320x568-before.html 23a73080f2fb8e6e2302f0d0de02390e
+- stage-new: ./r2h/html/stage-W24-walk-B-320x568.html 23a73080f2fb8e6e2302f0d0de02390e
+- stage-new: ./r2h/html/stage-W24-walk-B-390x844-before.html b9577d94f37f1a55b3449e52eb6d91cb
+- stage-new: ./r2h/html/stage-W24-walk-B-390x844.html b9577d94f37f1a55b3449e52eb6d91cb
+- stage-new: ./r2h/html/zone-forest-ask-320x568-before.html 6da55cf16e5f882d3308c04140d1b179
+- stage-new: ./r2h/html/zone-forest-ask-320x568.html c1ff4f139d80fdf14a8ff384d9b809f5
+- stage-new: ./r2h/html/zone-forest-ask-375x812-before.html a9fa0550ca933148528a49c0eac60dfb
+- stage-new: ./r2h/html/zone-forest-ask-375x812.html 1b97ee198f1792f91eef2df94f9f17ad
+- stage-new: ./r2h/html/zone-forest-ask-390x844-before.html b20f3e2dce810bae7b2463dd9ea070f3
+- stage-new: ./r2h/html/zone-forest-ask-390x844.html 2727ae87b459c8ead933eb49e55c1ad9
+- stage-new: ./r2h/html/zone-lake-ask-320x568-before.html e663e1e7bc1460ac69e36779b7122933
+- stage-new: ./r2h/html/zone-lake-ask-320x568.html 1893a8a737baf7264bac14d56e938ddd
+- stage-new: ./r2h/html/zone-lake-ask-390x844-before.html f31eb3070080593ffb11814dba5d52d5
+- stage-new: ./r2h/html/zone-meadow-ask-320x568-before.html f7a9df4dc399d466d50c5b889a9e2ed2
+- stage-new: ./r2h/html/zone-meadow-ask-320x568-skyB-before.html f7a9df4dc399d466d50c5b889a9e2ed2
+- stage-new: ./r2h/html/zone-meadow-ask-320x568-skyB.html c9e2a1620c03ea301336495b543edb05
+- stage-new: ./r2h/html/zone-meadow-ask-320x568.html c9e2a1620c03ea301336495b543edb05
+- stage-new: ./r2h/html/zone-meadow-ask-375x812-skyB-before.html a03f56d80f78e14e8ca2d984dfb97c2e
+- stage-new: ./r2h/html/zone-meadow-ask-375x812-skyB.html 273fc69ec302065f00024db29dd6ecd6
+- stage-new: ./r2h/html/zone-meadow-ask-390x844-skyB-before.html 511989aacd2e29c7e56d79524f6c9d09
+- stage-new: ./r2h/html/zone-meadow-ask-390x844-skyB.html 723493a4c01ee784436868fe19d9a995
+- stage-new: ./r2h/png/01-title-390x844-before.json ce794abd8c668b30a58fa19f35056061
+- stage-new: ./r2h/png/01-title-390x844-before.png 378620625fcd996601ae6d069c3114ec
+- stage-new: ./r2h/png/02-main-menu-verse-popup-390x844-before.json bb8a69391b6bc41b590b734f03290f22
+- stage-new: ./r2h/png/02-main-menu-verse-popup-390x844-before.png 10cfca19164081f280fdfaf2b0d31341
+- stage-new: ./r2h/png/03-main-menu-390x844-before.json 56e7d40294b6e9b5382d0dba427d1bee
+- stage-new: ./r2h/png/03-main-menu-390x844-before.png a6bf17e0df1286b15bd6263e398cdf22
+- stage-new: ./r2h/png/05-map-day1-390x844-before.json 0f0d2e0b4d86121d15dba3524b8b7c8d
+- stage-new: ./r2h/png/05-map-day1-390x844-before.png a7cefecad4819cb0a8a1074c21fb1bdb
+- stage-new: ./r2h/png/05-map-day1-390x844.json 33c434d118ff690951e76a8d16fda340
+- stage-new: ./r2h/png/05-map-day1-390x844.png dbd2ba9e39cfd6048625c3d2343016f5
+- stage-new: ./r2h/png/07-map-word-meadow-chooser-390x844-before.json 43a42f4cf1c1047af2f326b6904694ef
+- stage-new: ./r2h/png/07-map-word-meadow-chooser-390x844-before.png c064323ecec4f710ba0898a04ce17bdb
+- stage-new: ./r2h/png/07-map-word-meadow-chooser-390x844.json c6e1ea48adf83d9833ffa4d1bf84e107
+- stage-new: ./r2h/png/07-map-word-meadow-chooser-390x844.png e9490d27cf05a277a7ee2f8fc697a2f8
+- stage-new: ./r2h/png/08-map-home-lake-chooser-day1-390x844-before.json a2b54ec05e85036421fa89a3103393e6
+- stage-new: ./r2h/png/08-map-home-lake-chooser-day1-390x844-before.png 54ec213d49cf25bc6a5ac6bf7edff8df
+- stage-new: ./r2h/png/08-map-home-lake-chooser-day1-390x844.json 712f71232bb7a15784b71a6e1acb7622
+- stage-new: ./r2h/png/08-map-home-lake-chooser-day1-390x844.png d2c80490bff7fd346cb2dbba591a4b9d
+- stage-new: ./r2h/png/09-map-later-390x844-before.json 43bb5f3eb4fc6fbfdbb9c8ece84ec5f5
+- stage-new: ./r2h/png/09-map-later-390x844-before.png 8afa9c5cc5fb994eb0439b349dfde3c6
+- stage-new: ./r2h/png/09-map-later-390x844.json 80118f27b982b013bf2d82401b738347
+- stage-new: ./r2h/png/09-map-later-390x844.png 9c2ada13a94cbf742b3540b376201fc4
+- stage-new: ./r2h/png/10-word-meadow-scene-320x568-before.json cca2fdd3f232f4423259a94b5517043b
+- stage-new: ./r2h/png/10-word-meadow-scene-320x568-before.png bd76e27644da3b027b27ef5e5daf6d13
+- stage-new: ./r2h/png/10-word-meadow-scene-320x568.json 654f05bcfb2114285af92cfc941c567e
+- stage-new: ./r2h/png/10-word-meadow-scene-320x568.png 1b630f1a74d39ff477c43ea2cd5298e2
+- stage-new: ./r2h/png/10-word-meadow-scene-390x844-before.json e146f31290a9e1e914f088667b841177
+- stage-new: ./r2h/png/10-word-meadow-scene-390x844-before.png b6eb2bf20308b05dbaf2b0de3e9f77ad
+- stage-new: ./r2h/png/10-word-meadow-scene-390x844.json 4e2f204fb12662179e3b0df39af635ea
+- stage-new: ./r2h/png/10-word-meadow-scene-390x844.png df0c2776a4e29a89656dc7ec487fdc49
+- stage-new: ./r2h/png/11-word-meadow-scene-right-390x844-before.json b14fdedf97acf2549f5153bbe7f2e46f
+- stage-new: ./r2h/png/11-word-meadow-scene-right-390x844-before.png 81bd17008f262a83f55a542b40f8c7c2
+- stage-new: ./r2h/png/11-word-meadow-scene-right-390x844.json 0743557d44904d9101f08be8dcc819ca
+- stage-new: ./r2h/png/11-word-meadow-scene-right-390x844.png e04e71a97bdb72315a39e3a02c7be16b
+- stage-new: ./r2h/png/12-reveal-right-390x844-before.json f5df2900ffe8baf0e9ec1ee9891e9bae
+- stage-new: ./r2h/png/12-reveal-right-390x844-before.png 2160d4802b7e8d841c83b2e6a1ff3091
+- stage-new: ./r2h/png/12-reveal-right-390x844.json b554b58103e7fa6c4f75039ba3e7d88a
+- stage-new: ./r2h/png/12-reveal-right-390x844.png 71dee973d95db2f7b4b852032cafe067
+- stage-new: ./r2h/png/13-word-meadow-scene-retry-390x844-before.json 891ceea7ef973448d5cea58624535265
+- stage-new: ./r2h/png/13-word-meadow-scene-retry-390x844-before.png c9ad57f6424c9773ea7cabfa5b3933c7
+- stage-new: ./r2h/png/13-word-meadow-scene-retry-390x844.json 3cb5d2b61678063a886a0b2a61489c84
+- stage-new: ./r2h/png/13-word-meadow-scene-retry-390x844.png 338cf5245ddb87818b2debacb0e8f912
+- stage-new: ./r2h/png/14-reveal-gentle-retry-320x568-before.json e2bc5bfb096fe729610b5cbee24cde76
+- stage-new: ./r2h/png/14-reveal-gentle-retry-320x568-before.png 6032902ee5adfbe36aa18b47d68d4a44
+- stage-new: ./r2h/png/14-reveal-gentle-retry-320x568.json 17fbfa927a32d2cc5b724e9025c80b5d
+- stage-new: ./r2h/png/14-reveal-gentle-retry-320x568.png a39a930e8f10b7e6d43e228cb2a8fd81
+- stage-new: ./r2h/png/14-reveal-gentle-retry-390x844-before.json 2b075b9dd05345343b5e7850e4912578
+- stage-new: ./r2h/png/14-reveal-gentle-retry-390x844-before.png 9ce2b91ed74084b704b0c0cb54d59a90
+- stage-new: ./r2h/png/14-reveal-gentle-retry-390x844.json 5c9438778595916450a60bede8b9ef8c
+- stage-new: ./r2h/png/14-reveal-gentle-retry-390x844.png 058b61a7141010e1a216d3bcffcdaac0
+- stage-new: ./r2h/png/15-say-it-sight-words-390x844-before.json 6dfb515cc4c912844c8c3b57939b2516
+- stage-new: ./r2h/png/15-say-it-sight-words-390x844-before.png e0ef71d75cb7fc659d9fc2fa01460328
+- stage-new: ./r2h/png/15-say-it-sight-words-390x844.json 920bf01d86c7507cd32f15f2c0214509
+- stage-new: ./r2h/png/15-say-it-sight-words-390x844.png e45e003628b7492f3dc44ecf3a0cfcd8
+- stage-new: ./r2h/png/16-say-it-maxwell-says-day1-390x844-before.json 27fabb91c87acc957929742de8cc123b
+- stage-new: ./r2h/png/16-say-it-maxwell-says-day1-390x844-before.png 6ec17b1466ecf89e5dfd152fb18ed77e
+- stage-new: ./r2h/png/16-say-it-maxwell-says-day1-390x844.json 1325d13adbf6893d89078819c3ce91d6
+- stage-new: ./r2h/png/16-say-it-maxwell-says-day1-390x844.png 39d3e1701701f749010ffaee646c76b2
+- stage-new: ./r2h/png/17-two-answer-pray-high-five-390x844-before.json 2b3bcedc2ed74698f7d14d88a3a37f38
+- stage-new: ./r2h/png/17-two-answer-pray-high-five-390x844-before.png f36314744912637bd02f6871abfddc0b
+- stage-new: ./r2h/png/17-two-answer-pray-high-five-390x844.json b330a1b8d06886af4b8ad49f10c22c4b
+- stage-new: ./r2h/png/17-two-answer-pray-high-five-390x844.png 0dc05eb440c7561d0f6fa01c09a5d1c1
+- stage-new: ./r2h/png/18-two-answer-wrong-tap-390x844-before.json 82ea0216db3c5b081abca44b27d096c4
+- stage-new: ./r2h/png/18-two-answer-wrong-tap-390x844-before.png 6a98b929ae4722b025ac48d94a3fed58
+- stage-new: ./r2h/png/18-two-answer-wrong-tap-390x844.json 89386a3973aa77e90677941edcc9c786
+- stage-new: ./r2h/png/18-two-answer-wrong-tap-390x844.png f77519fb64332d6e46d05c5fd49e0fce
+- stage-new: ./r2h/png/19-two-answer-right-done-390x844-before.json aced91ab5fb72661e5427f31458e4fa3
+- stage-new: ./r2h/png/19-two-answer-right-done-390x844-before.png a0e335cf4272abcb9defc581fa5f9d53
+- stage-new: ./r2h/png/19-two-answer-right-done-390x844.json 41c91c053845f5446599525adf91a9aa
+- stage-new: ./r2h/png/19-two-answer-right-done-390x844.png 58079edd0f0dc349bcde5dfd0b236375
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-320x568-before.json b1afca3a328a04db85f85560ac2e30bb
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-320x568-before.png 2c49534054afc89bc5755fdafd4fc4bc
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-320x568.json 6b60c397e35dda31ddc2eaa7828bc469
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-320x568.png aad8051ea70aea1b3109741039a7d37d
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-390x844-before.json 465aa049a54d434067b31e9fb52b202c
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-390x844-before.png 4095ef61cd4dccd43ebb75ba60c399eb
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-390x844.json 8c80922489e68f493bff88aa54adbf26
+- stage-new: ./r2h/png/21-kitchen-say-it-shown-390x844.png 1dec12147918073801973990f98d138f
+- stage-new: ./r2h/png/22-kitchen-server-talk-320x568-before.json 9364b775adec630ca53d56ef9c806475
+- stage-new: ./r2h/png/22-kitchen-server-talk-320x568-before.png c13390a749f115b1de3985997ed4a7bf
+- stage-new: ./r2h/png/22-kitchen-server-talk-320x568.json b7af6f0c7587c31c2020d21081a10af4
+- stage-new: ./r2h/png/22-kitchen-server-talk-320x568.png 519bacd64c15a30f785d48f3317f7721
+- stage-new: ./r2h/png/22-kitchen-server-talk-390x844-before.json 6f57c70e8f408456a2c42e367382d433
+- stage-new: ./r2h/png/22-kitchen-server-talk-390x844-before.png 6ed2a1571589cf23a589b615b491a2ad
+- stage-new: ./r2h/png/22-kitchen-server-talk-390x844.json 434ea89147f5e46b9bc6e58421f411ef
+- stage-new: ./r2h/png/22-kitchen-server-talk-390x844.png 621acd0fefff407774362b7e02fbd13a
+- stage-new: ./r2h/png/23-level-up-reward-320x568-before.json c032e306f6411bb92939a3397eadaa65
+- stage-new: ./r2h/png/23-level-up-reward-320x568-before.png b480982f30b853c5d0eb46f82ea11f1a
+- stage-new: ./r2h/png/23-level-up-reward-320x568.json 1c70674f6d6a7dfc3319972f0cedda98
+- stage-new: ./r2h/png/23-level-up-reward-320x568.png fb3012a1b132f20366daefc36f8298f1
+- stage-new: ./r2h/png/23-level-up-reward-390x844-before.json ac69b9f9c0e9ac56c4ee7f76d5930104
+- stage-new: ./r2h/png/23-level-up-reward-390x844-before.png 19d947fae2c346aac8f1f17663dd559e
+- stage-new: ./r2h/png/23-level-up-reward-390x844.json ff710709d77fa0685268b4879ba84274
+- stage-new: ./r2h/png/23-level-up-reward-390x844.png 7742f66ca724f977806132d4f64aacec
+- stage-new: ./r2h/png/24-guardian-run-entry-320x568-before.json 38215c5ed9daec15439becd9fe2ca490
+- stage-new: ./r2h/png/24-guardian-run-entry-320x568-before.png 33291f8955aa9e12f8cd19f35dc607bb
+- stage-new: ./r2h/png/24-guardian-run-entry-320x568.json e5e4db2d9168bcfcf6716ebd0361de88
+- stage-new: ./r2h/png/24-guardian-run-entry-320x568.png fa6b21c2b3ad3b28e0533ca1f0a4a765
+- stage-new: ./r2h/png/24-guardian-run-entry-375x667-before.json 3add6f5c2b91a411708019bcf3bd022a
+- stage-new: ./r2h/png/24-guardian-run-entry-375x667-before.png 198ad5f7090369c9c41073fe31800342
+- stage-new: ./r2h/png/24-guardian-run-entry-375x667.json da2930d3a12f57cc36e2a5c71f2dbc72
+- stage-new: ./r2h/png/24-guardian-run-entry-375x667.png bbde85d4fc8f743ba5b36742756304f5
+- stage-new: ./r2h/png/24-guardian-run-entry-390x844-before.json 419799c77eb2b109e191f4384171c6bd
+- stage-new: ./r2h/png/24-guardian-run-entry-390x844-before.png 2e0788a9096f674c06d6d7668182efa0
+- stage-new: ./r2h/png/24-guardian-run-entry-390x844.json c81d8fc9e58cd3e23c64c9f758ebcc1d
+- stage-new: ./r2h/png/24-guardian-run-entry-390x844.png 9fbe6c7335c629fd8edd4b555ea0d503
+- stage-new: ./r2h/png/25-guardian-hint-letters-320x568-before.json adeec12f62c7e8e2024fffbbfdd57faf
+- stage-new: ./r2h/png/25-guardian-hint-letters-320x568-before.png 92a2b993f3d515940d2ac549aae7ec6d
+- stage-new: ./r2h/png/25-guardian-hint-letters-320x568.json ba2f2204935ba71784b120813eeb81d1
+- stage-new: ./r2h/png/25-guardian-hint-letters-320x568.png 50af4d399bebcdcb57f924e9e1fa8d2c
+- stage-new: ./r2h/png/25-guardian-hint-letters-375x667-before.json cef167a25a8c56da413232edf8f2d518
+- stage-new: ./r2h/png/25-guardian-hint-letters-375x667-before.png 9728a110ceb180874ef1b6dbf02441de
+- stage-new: ./r2h/png/25-guardian-hint-letters-375x667.json c72128730a2f126a064494b23921f91a
+- stage-new: ./r2h/png/25-guardian-hint-letters-375x667.png 92e0fe59c38c667f19829a1d727aebe1
+- stage-new: ./r2h/png/25-guardian-hint-letters-390x844-before.json 2e00166e835d4a3f81c254f43b045c48
+- stage-new: ./r2h/png/25-guardian-hint-letters-390x844-before.png 3a65d6e7fc470a326ceb711714b04263
+- stage-new: ./r2h/png/25-guardian-hint-letters-390x844.json 9a8b5ad22665f8a7b3e2167e1837b4de
+- stage-new: ./r2h/png/25-guardian-hint-letters-390x844.png 08e3e97f8eb9fb382fdb04390080738f
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-320x568-before.json 52e8cbb7ba4721ab25f396b1c579e529
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-320x568-before.png 1af65b0641e6e65e3f5019dc120d50f1
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-320x568.json 46b02f38c82678fc522a7fe4bfc7866b
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-320x568.png 9672cc3d9f8f4df826f8b6aa1ac91db5
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-375x667-before.json ebfe372abe69633912e9ace89306a4ff
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-375x667-before.png 33e956ea7469a49361ba76ee8c414d76
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-375x667.json f118b93ea711e75aa8d3b0f86afc5f96
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-375x667.png 6a43ef49fd050ef69d4e3091d5ac16d2
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-390x844-before.json f65198e12f45bc846ea8cd166ca4b081
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-390x844-before.png 28e4c6d71c788a731aa60123281e55ae
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-390x844.json 449b70110a8ae33923f2e604da30d1d1
+- stage-new: ./r2h/png/26-guardian-hint-jesus-words-390x844.png f4ae9dc7bc9a37f32aa77304a48b6460
+- stage-new: ./r2h/png/27-guardian-kneels-320x568-before.json 348a5e553505d7da817ae5a706a817f3
+- stage-new: ./r2h/png/27-guardian-kneels-320x568-before.png f96e442047b8440594f9888f0818da91
+- stage-new: ./r2h/png/27-guardian-kneels-320x568.json dace9d5d8b59e04e6532b1d6a234be08
+- stage-new: ./r2h/png/27-guardian-kneels-320x568.png e632cd0d6de7b160602335e2322e3de2
+- stage-new: ./r2h/png/27-guardian-kneels-375x667-before.json 6c2eea41dc063ca9d02fed4dc5d3702d
+- stage-new: ./r2h/png/27-guardian-kneels-375x667-before.png 56ab41ba721a2c27ac7969200918d07a
+- stage-new: ./r2h/png/27-guardian-kneels-375x667.json a3f4e7b5662d5b91ae960b8666d8e2c3
+- stage-new: ./r2h/png/27-guardian-kneels-375x667.png 63b354b9365d913b32b2a2f18eaf4094
+- stage-new: ./r2h/png/27-guardian-kneels-390x844-before.json c3d40833e47e02a29ba5e4447d55b008
+- stage-new: ./r2h/png/27-guardian-kneels-390x844-before.png 0de7db9e86fe459456d2a2cf473c276e
+- stage-new: ./r2h/png/27-guardian-kneels-390x844.json 527319f8f5db924df8fefaf7883aeb0c
+- stage-new: ./r2h/png/27-guardian-kneels-390x844.png 25cd45317f208a169f02e352376498ce
+- stage-new: ./r2h/png/28-guardian-win-320x568-before.json 7d8a442dbbbe7f81f328e46e94f8287f
+- stage-new: ./r2h/png/28-guardian-win-320x568-before.png fa017b0093057b3707ed26659d9d89f2
+- stage-new: ./r2h/png/28-guardian-win-320x568.json f9543cd75983184cd5c9e495ff620fc5
+- stage-new: ./r2h/png/28-guardian-win-320x568.png 4dc85e7d38bb95ce8d909929aad97e6d
+- stage-new: ./r2h/png/28-guardian-win-375x667-before.json df340c8a32d12675f2b5576686d45021
+- stage-new: ./r2h/png/28-guardian-win-375x667-before.png cb600b2d9626f8345e25a64863bf018e
+- stage-new: ./r2h/png/28-guardian-win-375x667.json 06795862fbfe6a4283c413b14d30bb12
+- stage-new: ./r2h/png/28-guardian-win-375x667.png bd04fc4ddfa8111afca257d4414e8383
+- stage-new: ./r2h/png/28-guardian-win-390x844-before.json 33fba091a1e53aa0f4d021b6d879b1e8
+- stage-new: ./r2h/png/28-guardian-win-390x844-before.png e6deaf2c2d47ebf3567f4e94c84782f3
+- stage-new: ./r2h/png/28-guardian-win-390x844.json a7ee6c071a50f214547e059d075e68fa
+- stage-new: ./r2h/png/28-guardian-win-390x844.png f2549435e5dca2c4fb56e84b0b6ab770
+- stage-new: ./r2h/png/29-verse-scroll-gift-390x844-before.json f9de8e80f9dd624a628e008c440e2150
+- stage-new: ./r2h/png/29-verse-scroll-gift-390x844-before.png 38df393c15c3cca2aead25a9bfeed178
+- stage-new: ./r2h/png/29-verse-scroll-gift-390x844.json 2dcadfb6ae778d8a1a4ccc9326ec1a5c
+- stage-new: ./r2h/png/29-verse-scroll-gift-390x844.png 814cbfbaaaa75df46bea746c280988df
+- stage-new: ./r2h/png/30-new-weapon-gift-390x844-before.json 0cf6d135690d73bb20917ed3b14fe513
+- stage-new: ./r2h/png/30-new-weapon-gift-390x844-before.png 0226efc11315071cfb8b48c547f773f3
+- stage-new: ./r2h/png/30-new-weapon-gift-390x844.json 332166e957afec3eff3ea96493ed40b0
+- stage-new: ./r2h/png/30-new-weapon-gift-390x844.png ac9b71a5d81dfa61f8e72fe4a23a33c9
+- stage-new: ./r2h/png/31-golden-fields-scene-390x844-before.json a5cdf99dbc5a9cc88cc6215439b495da
+- stage-new: ./r2h/png/31-golden-fields-scene-390x844-before.png 524b425e1b60d6cc394b2cc0787686cf
+- stage-new: ./r2h/png/31-golden-fields-scene-390x844.json 3f3eb0e3c46ade10b06e855fb0ef342f
+- stage-new: ./r2h/png/31-golden-fields-scene-390x844.png d043ad155035d246a6d679e8035a874c
+- stage-new: ./r2h/png/32-home-lake-scene-390x844-before.json 8df7caf66657b1853caf2dedfa720eb8
+- stage-new: ./r2h/png/32-home-lake-scene-390x844-before.png f0ed02b50994e9da48467c1edeb4f31d
+- stage-new: ./r2h/png/32-home-lake-scene-390x844.json 25df5fea6292523f33d6e69c9d14740b
+- stage-new: ./r2h/png/32-home-lake-scene-390x844.png d21ee0f110e8ed9dcf32abc00a831a03
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-320x568-before.json 3add12b84cbe82d9950c28d88e540ebe
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-320x568-before.png 27b0220fa889e9a388547f0bff0d7202
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-320x568.json d24106c64e4f3bc648d228886ecde687
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-320x568.png 16d9465b5b3d8ba6bb25b359d244c249
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-390x844-before.json aa5334e7a3d512f6fd3efd92ee32d574
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-390x844-before.png 714ac604c5c43504c2eba4b0604f4468
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-390x844.json 7c217ee97b487f1127c9ce155efbaab1
+- stage-new: ./r2h/png/33-say-it-baby-hospital-reply-390x844.png 43f6194435c58613e7616b9b54124a0b
+- stage-new: ./r2h/png/36-sound-duel-round-done-320x568-before.json 357d12ffd9eba2aad1ffbaa9ba896401
+- stage-new: ./r2h/png/36-sound-duel-round-done-320x568-before.png 043b1d8f8bb983a3abe10412e921c63f
+- stage-new: ./r2h/png/36-sound-duel-round-done-390x844-before.json fb245d668bb35707a7e0aa027258f7c5
+- stage-new: ./r2h/png/36-sound-duel-round-done-390x844-before.png ecf289278ffe6b7da9c5578b44e8b774
+- stage-new: ./r2h/png/37-rest-screen-390x844-before.json ee26b486211187463e1186d4d16f12ac
+- stage-new: ./r2h/png/37-rest-screen-390x844-before.png 050e0abe5c058cf7a2682155ca4e4c24
+- stage-new: ./r2h/png/37-rest-screen-390x844.json a8ef41b137ed2d172536b6c8079cb278
+- stage-new: ./r2h/png/37-rest-screen-390x844.png 8c6c12e3229734dc180bb052e647fc77
+- stage-new: ./r2h/png/38-character-gear-mmo-tooltip-390x844-before.json 0d76f211742e7b2366143c3ddafc7157
+- stage-new: ./r2h/png/38-character-gear-mmo-tooltip-390x844-before.png 74087c94cda682a95708587655aa8c48
+- stage-new: ./r2h/png/44-scroll-reopened-390x844-before.json a1f1b2568999cfcd71f0ec3d2484be55
+- stage-new: ./r2h/png/44-scroll-reopened-390x844-before.png e7f02e962c85c73a9f0ea4b758ceb7c8
+- stage-new: ./r2h/png/44-scroll-reopened-390x844.json 6c6f4a1e324dbd66c68149e3c3965d0d
+- stage-new: ./r2h/png/44-scroll-reopened-390x844.png 59b7cbde9ab58048d9191106e8883faf
+- stage-new: ./r2h/png/45-character-golden-pantry-390x844-before.json 9304cf42e3c03fdd43a360f06702e59a
+- stage-new: ./r2h/png/45-character-golden-pantry-390x844-before.png b1d34a924c48175603b5be6584410a9b
+- stage-new: ./r2h/png/45-character-golden-pantry-390x844.json c65dd7511808169675d6af1801c185c8
+- stage-new: ./r2h/png/45-character-golden-pantry-390x844.png 77e379498b275dba2cc699e3d35f8ad3
+- stage-new: ./r2h/png/48-continue-after-pause-390x844-before.json 7e4fe095dc27b23e297747ec436be103
+- stage-new: ./r2h/png/48-continue-after-pause-390x844-before.png 9666d19c36cf03300e60a8b4a9d61f19
+- stage-new: ./r2h/png/48-continue-after-pause-390x844.json 8ff79b901768b63f3c9b7ad3c8ba80ef
+- stage-new: ./r2h/png/48-continue-after-pause-390x844.png c99a9d61f7dbabd2653dc08f65548814
+- stage-new: ./r2h/png/54-phrase-ask-card-320x568-before.json c6be8ecb996c3fa82725281a658e4888
+- stage-new: ./r2h/png/54-phrase-ask-card-320x568-before.png 278096fdbdd47652fb9862bdea089d9e
+- stage-new: ./r2h/png/54-phrase-ask-card-320x568.json c6e95c7e1543ec6b459847893e305f4e
+- stage-new: ./r2h/png/54-phrase-ask-card-320x568.png 23312c0999a91ae405b12864ce42c206
+- stage-new: ./r2h/png/54-phrase-ask-card-390x844-before.json 325373066c07f24aae7bf74129b7dfba
+- stage-new: ./r2h/png/54-phrase-ask-card-390x844-before.png 5ab63a51ce13c2f7da5231a0d3e7dd35
+- stage-new: ./r2h/png/54-phrase-ask-card-390x844.json 05f633f99a6ea07a418c0bdd1b05ac6c
+- stage-new: ./r2h/png/54-phrase-ask-card-390x844.png f8770270b77d040ba477b9e5a4157765
+- stage-new: ./r2h/png/M1-main-menu-320x568.json b1c426dbdd1503c04391122366b998ea
+- stage-new: ./r2h/png/M1-main-menu-320x568.png acebb7384833c8ec7b625f632025ebe0
+- stage-new: ./r2h/png/M1-main-menu-390x844.json 725fc049293206e58bda2fa4d4804fb1
+- stage-new: ./r2h/png/M1-main-menu-390x844.png c8d5900be7a7e1ac3d5f02ae56e44713
+- stage-new: ./r2h/png/M2-main-menu-320x568.json 97083b029343071eaa86b80898ed9d6c
+- stage-new: ./r2h/png/M2-main-menu-320x568.png c6093b4b37855c9bb3334df2e7e78104
+- stage-new: ./r2h/png/M2-main-menu-390x844.json ac1cacee6b391c155859e69d340c12ca
+- stage-new: ./r2h/png/M2-main-menu-390x844.png 7addcf5a8f0c93a4c84605014896c5d4
+- stage-new: ./r2h/png/M3-main-menu-320x568.json 13289e44b40e5b7d9861d5eeaba09366
+- stage-new: ./r2h/png/M3-main-menu-320x568.png 25234b9346f3d2e35055bc722a197c23
+- stage-new: ./r2h/png/M3-main-menu-390x844.json de0c04000632e17a14eb9c54cbfbafd1
+- stage-new: ./r2h/png/M3-main-menu-390x844.png 47af087c93e5d4c02fccb5b25d30dc16
+- stage-new: ./r2h/png/map-extended-320x568.json 8a5ba7e639bdd628cf9f259cb1738e5c
+- stage-new: ./r2h/png/map-extended-320x568.png 17865e75ea6e4d9e510bb0e377bef96b
+- stage-new: ./r2h/png/map-extended-390x844.json 9889a992f8f6f1e433531038625a05a5
+- stage-new: ./r2h/png/map-extended-390x844.png 2486fb47571994494e770d294655f325
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-320x568-before.json d2b046641d7d45310825c4d6d3ceefeb
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-320x568-before.png 2b86e5feeb72b4a048926e2788e6b8f4
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-320x568.json 7e12d5cb018fe7d29f2155d7ff35f85e
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-320x568.png b483659c890c625293e1b846e49153c0
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-375x667-before.json feefda764e58f5205bb6e8351d76ac6b
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-375x667-before.png e184e8cae90871b38600486d5c928b5f
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-375x667.json 2679aac375d81938d0e29a694a57b61e
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-375x667.png 556dce2ba93709afc572ad3b4940ecb9
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-390x844-before.json 55cf04a20bcd1c603df3835b6be05d28
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-390x844-before.png 4e261e2f04562f98488f21d976ddc523
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-390x844.json 633e851454e091eb9cb10c54b5452051
+- stage-new: ./r2h/png/stage-A-meadow-evening-pond-390x844.png a0d98dbb19371e702fe0eb5da8c1f026
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-320x568-before.json 2f0d41d211e533c3355a6badc7627c97
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-320x568-before.png eed8fcb43e32ef4ddfe51f3984e54eb2
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-320x568.json 8e134b5832a63eaccd54ca0eeb61673a
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-320x568.png d100408282994cf99920413397d5f175
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-375x667-before.json e0a8da971e1b6cf29067c2d93540cd5f
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-375x667-before.png f7a9c008be1917604e6fa381894fa42b
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-375x667.json 7c81d25342fa509503cf694881c41022
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-375x667.png 2c2292edb49fcfeabcde23d67a3f3be4
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-390x844-before.json 3e6eeee4851703dc2c93933b0a616f15
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-390x844-before.png 7ac06be09c977a5e1c5a36fed852c032
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-390x844.json 0d5f539dc8ffb48f90ad4c9fcc3b3d98
+- stage-new: ./r2h/png/stage-B-meadow-listen-and-find-390x844.png fb0715ce966889c09f7583952fe9acd6
+- stage-new: ./r2h/png/stage-W24-walk-B-320x568-before.json 4f56055d5f25e55a4e84bec35d86c213
+- stage-new: ./r2h/png/stage-W24-walk-B-320x568-before.png 0e9a9b70d3c4ba4c4bc51d8fb256c7f6
+- stage-new: ./r2h/png/stage-W24-walk-B-320x568.json e2935a238b8fd2db7ca8a944b2e3370c
+- stage-new: ./r2h/png/stage-W24-walk-B-320x568.png 86ea4312d133a2219b9912ef50e869ec
+- stage-new: ./r2h/png/stage-W24-walk-B-390x844-before.json 1a902d9ba5512d47bc83e3975a218289
+- stage-new: ./r2h/png/stage-W24-walk-B-390x844-before.png eddc1c665f8167711bb8542da1e8a207
+- stage-new: ./r2h/png/stage-W24-walk-B-390x844.json 10d277988328237a7c05c5c3c10a1357
+- stage-new: ./r2h/png/stage-W24-walk-B-390x844.png 3685711d4a38314794a5519559e47177
+- stage-new: ./r2h/png/zone-forest-ask-320x568-before.json 2bcba807621bc5f5bda5613e2680e8dd
+- stage-new: ./r2h/png/zone-forest-ask-320x568-before.png 5a9fcc03981aecf4d47453ade0025717
+- stage-new: ./r2h/png/zone-forest-ask-320x568.json b25792e3cd9413ad021ea78313445b22
+- stage-new: ./r2h/png/zone-forest-ask-320x568.png 42fcd45ff9a600906b98d1462142dfea
+- stage-new: ./r2h/png/zone-forest-ask-375x812-before.json 57f9ac01eb9e258dff0521bf9fc0f332
+- stage-new: ./r2h/png/zone-forest-ask-375x812-before.png b48dbc94fd1495255c49a3142e2eda1d
+- stage-new: ./r2h/png/zone-forest-ask-375x812.json 2fb1836e150d34aa33ce6d233d34f093
+- stage-new: ./r2h/png/zone-forest-ask-375x812.png 4b0860096270c3277541fe4ec6960d52
+- stage-new: ./r2h/png/zone-forest-ask-390x844-before.json 54047c54125557c25e9625e3056781a3
+- stage-new: ./r2h/png/zone-forest-ask-390x844-before.png f94427a4f11107bf68698011fd83187e
+- stage-new: ./r2h/png/zone-forest-ask-390x844.json ccf6d566da7a2c4c33199ceaec1b22ed
+- stage-new: ./r2h/png/zone-forest-ask-390x844.png 839517e85fe5be978d625f66d277d81e
+- stage-new: ./r2h/png/zone-lake-ask-320x568-before.json 8a894ffb6f840a2c403d7ea89f3c664c
+- stage-new: ./r2h/png/zone-lake-ask-320x568-before.png 4d6f88ebc8ebc498085aa241585729e5
+- stage-new: ./r2h/png/zone-lake-ask-320x568.json 3b74d75f5ebf6e0ca369e81f4b8e0736
+- stage-new: ./r2h/png/zone-lake-ask-320x568.png 79d4fe3b1213c7af8831b246797835ad
+- stage-new: ./r2h/png/zone-lake-ask-390x844-before.json 1926fb4c8cabcb87a9b214d9882faa92
+- stage-new: ./r2h/png/zone-lake-ask-390x844-before.png 78668ccb6fc94b07f1e181e34ccd07cb
+- stage-new: ./r2h/png/zone-meadow-ask-320x568-before.json 79097db610b199a49b8a161f5072e720
+- stage-new: ./r2h/png/zone-meadow-ask-320x568-before.png bd76e27644da3b027b27ef5e5daf6d13
+- stage-new: ./r2h/png/zone-meadow-ask-320x568-skyB-before.json 9e50206ecda99dbf71d0cd34277fb0c1
+- stage-new: ./r2h/png/zone-meadow-ask-320x568-skyB-before.png bd76e27644da3b027b27ef5e5daf6d13
+- stage-new: ./r2h/png/zone-meadow-ask-320x568-skyB.json 8935858cf7bfbebae51c01b402945f62
+- stage-new: ./r2h/png/zone-meadow-ask-320x568-skyB.png 1b630f1a74d39ff477c43ea2cd5298e2
+- stage-new: ./r2h/png/zone-meadow-ask-320x568.json 6892b811b646c7dde1fb24c3d82caf9f
+- stage-new: ./r2h/png/zone-meadow-ask-320x568.png 1b630f1a74d39ff477c43ea2cd5298e2
+- stage-new: ./r2h/png/zone-meadow-ask-375x812-skyB-before.json 2387ef60a7caf0c9ae7cbed35a1f2dee
+- stage-new: ./r2h/png/zone-meadow-ask-375x812-skyB-before.png ca1540f3c2c69a039f14bf709bdf8d52
+- stage-new: ./r2h/png/zone-meadow-ask-375x812-skyB.json 9be43feb9e5377e44e4f7a26761dd663
+- stage-new: ./r2h/png/zone-meadow-ask-375x812-skyB.png bb241fd9488024fa14d02b701de80bd7
+- stage-new: ./r2h/png/zone-meadow-ask-390x844-skyB-before.json aec05f7aeb0f26363545a4dc5f861545
+- stage-new: ./r2h/png/zone-meadow-ask-390x844-skyB-before.png b6eb2bf20308b05dbaf2b0de3e9f77ad
+- stage-new: ./r2h/png/zone-meadow-ask-390x844-skyB.json e8f6fc4b01b47055814d03c080b79ca6
+- stage-new: ./r2h/png/zone-meadow-ask-390x844-skyB.png df0c2776a4e29a89656dc7ec487fdc49
+- stage-new: ./r2h/sheets-ref/r2h-before-after.png 7292fa6cea8fe2e4c49fc9e85bbd4ee1
+- stage-new: ./r2h/sheets-ref/r2h-before-after.png.sources.txt e1ffb1595344987f9ace25f1a0754bac
+- stage-new: ./r2h/sheets-ref/r2h-before-after.sources.txt e1ffb1595344987f9ace25f1a0754bac
+- carried: ./r2h/sheets/r2h-before-after.png db65eaf9162d2a2867ddc3cad832e1aa
+- carried: ./r2h/sheets/r2h-before-after.sources.txt 6be8c6240bf236c1cb66a00e0e1139cd
+- carried: ./r2h/staged/1A/PASTE-shop-ground.md cdc7f6fab542d9d38d93511d85bb0c09
+- carried: ./r2h/staged/1A/PASTE-shop.md fca9ce69a1f1d5e556e8414efc524a18
+- carried: ./r2h/staged/1B/EDITS.json dedc203ac2e4397b935b23e9ea597583
+- carried: ./r2h/staged/1B/PASTE-1B-shop-L-ramp-flow-mix.md 1bb1ff6d164df4c973802229828dcbbe
+- carried: ./r2h/staged/1B/PASTE-1B-shop-L-ramp-flow.md 5c1cee890de48a70dd0fd5864ab73262
+- carried: ./r2h/staged/1B/PASTE-1B-shop-L-ramp.md 3d0caf6836648333f020161a2df8cd83
+- carried: ./r2h/staged/1B/PASTE-L-ramp.md adc1acddc05033b7f5723a8788d5875d
+- carried: ./r2h/staged/1B/PASTE-r2h.md decad4f90cf6a00bbf1e11c2f593e8b7
+- carried: ./r2h/staged/1B/PASTE-shop-ground.md f6818d7a047f19f65c6d38694d0663b3
+- carried: ./r2h/staged/1B/PASTE-shop.md 24934ef11a870ebe381e9923dc31bfdd
+- stage-new: ./r2h/superseded/36-sound-duel-round-done-320x568.html 078cbd1452f727e699867dd549538609
+- stage-new: ./r2h/superseded/36-sound-duel-round-done-320x568.json 5ff7d7abe958274a3aa452ccd3816c95
+- stage-new: ./r2h/superseded/36-sound-duel-round-done-320x568.png a4436620be3dc8e0ad908a1e060417ae
+- stage-new: ./r2h/superseded/36-sound-duel-round-done-390x844.html c5b30355686795851cd0ce0393af4bb2
+- stage-new: ./r2h/superseded/36-sound-duel-round-done-390x844.json ee73e68ac055060d3fbb3085d32fc6af
+- stage-new: ./r2h/superseded/36-sound-duel-round-done-390x844.png 13a16a1ec19a1d9a3e63443bdcaeae40
+- regenerated: ./renders-MANIFEST.md5 6db638bda6165c7ac3bea33596b29c95
+- carried: ./renders/ceiling-cap-r2ask/E-lake-front-desk-375x667-wallup.png 3944c9d483adc6484d6058a1cf475435
+- carried: ./renders/ceiling-cap-r2ask/E-lake-front-desk-375x667.png b219ea34bcb750a8ac504a461305f852
+- carried: ./renders/ceiling-cap-r2ask/E-lake-front-desk-375x812-wallup.png 3c292a1679dff95166c6458b560add1f
+- carried: ./renders/ceiling-cap-r2ask/E-lake-front-desk-375x812.png dc21fbcc6c67cbb4a26a7e0c22d74a17
+- carried: ./renders/ceiling-cap-r2ask/E-lake-front-desk-390x844-wallup.png c66c94d3e28881fa6ab0b604ad3eceb0
+- carried: ./renders/ceiling-cap-r2ask/E-lake-front-desk-390x844.png 2a8b1913ba04cfdd77a8191ba4e6042b
+- carried: ./renders/ceiling-cap-r2ask/F-lake-kitchen-375x667-wallup.png edaccffbad748aa5cb8f1c84bc04c6bc
+- carried: ./renders/ceiling-cap-r2ask/F-lake-kitchen-375x667.png 8b3d755c005d6b96ec40a45bf3e6bd28
+- carried: ./renders/ceiling-cap-r2ask/F-lake-kitchen-375x812-wallup.png 823efa01e1f3009cc9de9d6d4d309322
+- carried: ./renders/ceiling-cap-r2ask/F-lake-kitchen-375x812.png 137187e09306f0afc1077f8e8376b9e0
+- carried: ./renders/ceiling-cap-r2ask/F-lake-kitchen-390x844-wallup.png e03683aafbf5dd876a5b5f8e7775bfde
+- carried: ./renders/ceiling-cap-r2ask/F-lake-kitchen-390x844.png 04ae3305b9d421050021dc22136cf9b0
+- carried: ./renders/ceiling-cap-r2ask/F-lake-night-table-375x667-wallup.png edaccffbad748aa5cb8f1c84bc04c6bc
+- carried: ./renders/ceiling-cap-r2ask/F-lake-night-table-375x667.png 8b3d755c005d6b96ec40a45bf3e6bd28
+- carried: ./renders/ceiling-cap-r2ask/F-lake-night-table-375x812-wallup.png 823efa01e1f3009cc9de9d6d4d309322
+- carried: ./renders/ceiling-cap-r2ask/F-lake-night-table-375x812.png 137187e09306f0afc1077f8e8376b9e0
+- carried: ./renders/ceiling-cap-r2ask/F-lake-night-table-390x844-wallup.png e03683aafbf5dd876a5b5f8e7775bfde
+- carried: ./renders/ceiling-cap-r2ask/F-lake-night-table-390x844.png 04ae3305b9d421050021dc22136cf9b0
+- carried: ./renders/ceiling-cap-r2ask/html/E-lake-front-desk-375x667-wallup.html 28a08e20174f0fae062bf14674aa77fc
+- carried: ./renders/ceiling-cap-r2ask/html/E-lake-front-desk-375x667.html 40fc6bd8b29da7b90198dfdf3f68f877
+- carried: ./renders/ceiling-cap-r2ask/html/E-lake-front-desk-375x812-wallup.html 61ecfb99040b934722bf01be007eed9d
+- carried: ./renders/ceiling-cap-r2ask/html/E-lake-front-desk-375x812.html 74538c06934beec0eecbb406e1205677
+- carried: ./renders/ceiling-cap-r2ask/html/E-lake-front-desk-390x844-wallup.html ecf769e34756f99d00b0e6646df10f63
+- carried: ./renders/ceiling-cap-r2ask/html/E-lake-front-desk-390x844.html 876f2559c7fed440f5ecfd0f06433ed4
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-kitchen-375x667-wallup.html 5d7f1043c22b995795d78d0dbb33ac52
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-kitchen-375x667.html b6343a5ed7b4c673c97396e386bbef2b
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-kitchen-375x812-wallup.html edda3e3da11ebba78fd667aecbd8dd92
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-kitchen-375x812.html 9ce368773f72049642e0d964c3c6e698
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-kitchen-390x844-wallup.html acab38d901b9fb27a96d1fdc342efae9
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-kitchen-390x844.html 4976d1e8fd06e34b98911f8cbfb3e254
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-night-table-375x667-wallup.html 5d7f1043c22b995795d78d0dbb33ac52
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-night-table-375x667.html b6343a5ed7b4c673c97396e386bbef2b
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-night-table-375x812-wallup.html edda3e3da11ebba78fd667aecbd8dd92
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-night-table-375x812.html 9ce368773f72049642e0d964c3c6e698
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-night-table-390x844-wallup.html acab38d901b9fb27a96d1fdc342efae9
+- carried: ./renders/ceiling-cap-r2ask/html/F-lake-night-table-390x844.html 4976d1e8fd06e34b98911f8cbfb3e254
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-320x568.html b9b52a3404def3001ced99451c955e11
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-320x568.png fe87544f210884898e2c82062e207a58
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-375x667.html 2eabc3c291e70ee19edf3deeec7f8804
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-375x667.png fac3ac9ff6f2acfd480e9d9af98cca4c
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-375x812.html 7a566d3efa6a43bae32b57c23c96dcb7
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-375x812.png 9ae0aef889aff96b9c967dd9baf5b655
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-390check.html 6358cb32560d72604166fcbf37844ced
+- carried: ./renders/guardian-24-28/24-guardian-run-entry-390check.png e32786f57d5a7b3ade3c12d2ae644934
+- carried: ./renders/guardian-24-28/24-guardian-run-entry.html 6358cb32560d72604166fcbf37844ced
+- carried: ./renders/guardian-24-28/24-guardian-run-entry.png e32786f57d5a7b3ade3c12d2ae644934
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-320x568.html b74fda6fa0811b7e3df488ee8dd85662
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-320x568.png 56b5d8f0aa3977016f57d35497e8c3cb
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-375x667.html 72dfc3719fb05c79e7ccb392f5175ce8
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-375x667.png a388d636dbedb3d573ae94a1ffbd59b1
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-375x812.html e8237b29aac9ea35d62fcb446e48e10e
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-375x812.png 9930d5fc942b7757d0b8a0ea5a1e626e
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-390check.html 2fbd30296a194dedb6c3e523ce154b14
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters-390check.png d7463a1d7bf7f4968dc86d5c0869daf8
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters.html 2fbd30296a194dedb6c3e523ce154b14
+- carried: ./renders/guardian-24-28/25-guardian-hint-letters.png d7463a1d7bf7f4968dc86d5c0869daf8
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-320x568.html 1931e760fd7c9a54d5ea363f2f3bef75
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-320x568.png 9fc5b3c92edc59df11502f66bf726a89
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-375x667.html e871c5e8896f5c22b2798346eeb618fd
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-375x667.png 608dd9075b837b5ae784cee6c650033e
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-375x812.html 6dbfdbf4cf6501206dd2c28fbe0f3aee
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-375x812.png 1951892cd449451502d95d4f04060646
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-390check.html 26c1d9ce4d5920afb6f09cc09b8e3274
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words-390check.png 72046a92712a151d37142734ddd5fb9d
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words.html 26c1d9ce4d5920afb6f09cc09b8e3274
+- carried: ./renders/guardian-24-28/26-guardian-hint-jesus-words.png 72046a92712a151d37142734ddd5fb9d
+- carried: ./renders/guardian-24-28/27-guardian-kneels-320x568.html 20aaf267d6a3bce588fa5707da449ed4
+- carried: ./renders/guardian-24-28/27-guardian-kneels-320x568.png c10b8a6303a53a9fbb85738fcc43cfc7
+- carried: ./renders/guardian-24-28/27-guardian-kneels-375x667.html a9ec5b0f66dcf71f6143500e6a01f494
+- carried: ./renders/guardian-24-28/27-guardian-kneels-375x667.png a9220ee88ecabcd92d981fe5efca9c2a
+- carried: ./renders/guardian-24-28/27-guardian-kneels-375x812.html c2f3fa6dac570c615207100118e48851
+- carried: ./renders/guardian-24-28/27-guardian-kneels-375x812.png d4da6575756ebd4a0b68dbedf86350f1
+- carried: ./renders/guardian-24-28/27-guardian-kneels-390check.html 9df1e0dfc536dbbec8cfbb20ae446f44
+- carried: ./renders/guardian-24-28/27-guardian-kneels-390check.png cca4d19d9c2d894c3ef950098dea6789
+- carried: ./renders/guardian-24-28/27-guardian-kneels.html 9df1e0dfc536dbbec8cfbb20ae446f44
+- carried: ./renders/guardian-24-28/27-guardian-kneels.png cca4d19d9c2d894c3ef950098dea6789
+- carried: ./renders/guardian-24-28/28-guardian-win-320x568.html 63aeb4df775d19a48d87a1a6e044d6d0
+- carried: ./renders/guardian-24-28/28-guardian-win-320x568.png 9b6fcad2afba4c487195d6e00efa2f95
+- carried: ./renders/guardian-24-28/28-guardian-win-375x667.html 6e79aee2e40fc833d86b5ca8927f90cc
+- carried: ./renders/guardian-24-28/28-guardian-win-375x667.png e354d5b18ab398059c1f0e58bb1580fe
+- carried: ./renders/guardian-24-28/28-guardian-win-375x812.html 195f48f8606580cc3c985476d7c613ac
+- carried: ./renders/guardian-24-28/28-guardian-win-375x812.png ca35947ffc9b01c4e8705ea283873acf
+- carried: ./renders/guardian-24-28/28-guardian-win-390check.html d1b10c4fef099f1e09275627369a9ecd
+- carried: ./renders/guardian-24-28/28-guardian-win-390check.png e976b04d6e3de5651e880f1448048ac3
+- carried: ./renders/guardian-24-28/28-guardian-win.html d1b10c4fef099f1e09275627369a9ecd
+- carried: ./renders/guardian-24-28/28-guardian-win.png e976b04d6e3de5651e880f1448048ac3
+- carried: ./renders/home-lake-r2ask/14-reveal-gentle-retry-375x812.png 3c452315de5d1485ca4147edfd084295
+- carried: ./renders/home-lake-r2ask/14-reveal-gentle-retry-390x844.png 3be73b0b004d695d2719321bc44a297f
+- carried: ./renders/home-lake-r2ask/16-say-it-maxwell-says-day1-375x812.png 0ed77865f55d401f141b4adef43d65f8
+- carried: ./renders/home-lake-r2ask/16-say-it-maxwell-says-day1-390x844.png c8153730a93c25d046482003ff1af316
+- carried: ./renders/home-lake-r2ask/17-two-answer-pray-high-five-375x812.png 13322f8e76097b29e2a95310453bfecb
+- carried: ./renders/home-lake-r2ask/17-two-answer-pray-high-five-390x844.png e742afd126a4096e172b4da6ddb830d0
+- carried: ./renders/home-lake-r2ask/18-two-answer-wrong-tap-375x812.png da8e2280f5615431f39c2bcf678b5ff0
+- carried: ./renders/home-lake-r2ask/18-two-answer-wrong-tap-390x844.png 2bf5139f831aa2d9c4e228727b8dd581
+- carried: ./renders/home-lake-r2ask/19-two-answer-right-done-375x812.png 8020af8e554073d694280795ec04b26e
+- carried: ./renders/home-lake-r2ask/19-two-answer-right-done-390x844.png 9959d3cd9e54720ef0137397e0f8c0b8
+- carried: ./renders/home-lake-r2ask/20-kitchen-say-it-picture-first-375x812.png f0e3addd87bc2f1963aff5feaf3d182c
+- carried: ./renders/home-lake-r2ask/20-kitchen-say-it-picture-first-390x844-before.png 7e4f1c1921d3d41e3be4e4855f4315ee
+- carried: ./renders/home-lake-r2ask/20-kitchen-say-it-picture-first-390x844.png 833152d59cbfcb8907d45c1b2f3052d1
+- carried: ./renders/home-lake-r2ask/21-kitchen-say-it-shown-375x812.png c2d60db0afa9ac01423cf43a0e5cc5d5
+- carried: ./renders/home-lake-r2ask/21-kitchen-say-it-shown-390x844.png f3cfee9da725ab345c4a03e736031d3c
+- carried: ./renders/home-lake-r2ask/22-kitchen-server-talk-375x812.png 8c1d7917719b95b05a5fd34be346cd56
+- carried: ./renders/home-lake-r2ask/22-kitchen-server-talk-390x844.png f425c5b65c8c7dc857fe9aefa67942f4
+- carried: ./renders/home-lake-r2ask/32-home-lake-scene-375x812.png 732306843f46719f0eb655493c745ecb
+- carried: ./renders/home-lake-r2ask/32-home-lake-scene-390x844.png b7863b55f5828afaa528236b81eeb47b
+- carried: ./renders/home-lake-r2ask/33-say-it-baby-hospital-reply-375x812.png 1f7ad038c9cd26617854584b43dfbab8
+- carried: ./renders/home-lake-r2ask/33-say-it-baby-hospital-reply-390x844.png 14b8fd6c7a588f99d64df49050ce26bc
+- carried: ./renders/home-lake-r2ask/54-phrase-ask-card-375x812.png 4c8fc4cc6a7475189fc3891d16837c96
+- carried: ./renders/home-lake-r2ask/54-phrase-ask-card-390x844.png 7fb502b14aaf8d6a14f6d08e1f0ef231
+- carried: ./renders/home-lake-r2ask/html/14-reveal-gentle-retry-375x812.html e96da93a040b2be695c4f9394a02c298
+- carried: ./renders/home-lake-r2ask/html/14-reveal-gentle-retry-390x844.html 1f5a6e92c97b07cf92c3f9c1a9643b3a
+- carried: ./renders/home-lake-r2ask/html/16-say-it-maxwell-says-day1-375x812.html 71d44261d09c1a18e4f116beb23d966d
+- carried: ./renders/home-lake-r2ask/html/16-say-it-maxwell-says-day1-390x844.html ddf42861a509e845c42a57937972bba5
+- carried: ./renders/home-lake-r2ask/html/17-two-answer-pray-high-five-375x812.html 3a4a3867ebd53b1cea8d37aff344254d
+- carried: ./renders/home-lake-r2ask/html/17-two-answer-pray-high-five-390x844.html dc80ccdfb4d3ab0ccce5d5fa41c30067
+- carried: ./renders/home-lake-r2ask/html/18-two-answer-wrong-tap-375x812.html dfafbadd001ed5f27f2f1dad03a8f2d6
+- carried: ./renders/home-lake-r2ask/html/18-two-answer-wrong-tap-390x844.html 45c64daa895b3df1fc5b7e1c6aa853c7
+- carried: ./renders/home-lake-r2ask/html/19-two-answer-right-done-375x812.html dac99bb419d995f6cfd06e45bbc86ea2
+- carried: ./renders/home-lake-r2ask/html/19-two-answer-right-done-390x844.html af21cf76f51a1ed367ce9731a2595d1b
+- carried: ./renders/home-lake-r2ask/html/20-kitchen-say-it-picture-first-375x812.html 686c6374a6137ff330b65a4ebcb9ad0b
+- carried: ./renders/home-lake-r2ask/html/20-kitchen-say-it-picture-first-390x844-before.html 901cc72daeb8534b8e48619dba623e31
+- carried: ./renders/home-lake-r2ask/html/20-kitchen-say-it-picture-first-390x844.html f8f7adbf9c867c89ea694bff56944cbb
+- carried: ./renders/home-lake-r2ask/html/21-kitchen-say-it-shown-375x812.html a6972aafaae3993f272636b0c05f9196
+- carried: ./renders/home-lake-r2ask/html/21-kitchen-say-it-shown-390x844.html eb0be055fe19d26a8441f98d55458a35
+- carried: ./renders/home-lake-r2ask/html/22-kitchen-server-talk-375x812.html 46c5c03f4c0254b22f3fb8b1709ab9d1
+- carried: ./renders/home-lake-r2ask/html/22-kitchen-server-talk-390x844.html 33a9b6782592f0814143f3016febf9bc
+- carried: ./renders/home-lake-r2ask/html/32-home-lake-scene-375x812.html 13a0fbafd34b58ebd9081b4ac39ad4f3
+- carried: ./renders/home-lake-r2ask/html/32-home-lake-scene-390x844.html 5587c7d6b546adb651693858e7b8ddf0
+- carried: ./renders/home-lake-r2ask/html/33-say-it-baby-hospital-reply-375x812.html 1728d5d59547d76e035dc3b6d7fc6437
+- carried: ./renders/home-lake-r2ask/html/33-say-it-baby-hospital-reply-390x844.html 062b9716f467adc27139dd96c24aa4b9
+- carried: ./renders/home-lake-r2ask/html/54-phrase-ask-card-375x812.html ca759be4f193c406ca208a8568b86f1b
+- carried: ./renders/home-lake-r2ask/html/54-phrase-ask-card-390x844.html c34071b6eb05130e4791bf766026ae5a
+- carried: ./renders/home-lake-r2ask/html/lake-step1-375x812.html caefc6e4953378089ecfec6e3c6b5364
+- carried: ./renders/home-lake-r2ask/html/lake-step1-390x844.html 28bbb42147af0b7343e51d3f2052ddc9
+- carried: ./renders/home-lake-r2ask/html/lake-step2-375x812.html 2fda18d03e2f7f03064a38630901cb3f
+- carried: ./renders/home-lake-r2ask/html/lake-step2-390x844.html 1b27ef9d91943a07bb356f1a22f54fed
+- carried: ./renders/home-lake-r2ask/html/lake-step3-375x812.html b11e444d127adba6fd7d9c7a8b7d1432
+- carried: ./renders/home-lake-r2ask/html/lake-step3-390x844.html 01e4dab9790eb32e3880d33ef500cf86
+- carried: ./renders/home-lake-r2ask/html/lake-step4-375x812.html 3093a17e6b7bcff8ff6c97fee733e157
+- carried: ./renders/home-lake-r2ask/html/lake-step4-390x844.html e3de2710b70e2d9168e869943ed071ee
+- carried: ./renders/home-lake-r2ask/html/lake-step5-375x812.html 1df693e4b2dbecd37399c8d48a30643a
+- carried: ./renders/home-lake-r2ask/html/lake-step5-390x844.html 5615ad5481a09618c0432a0dfa7a927e
+- carried: ./renders/home-lake-r2ask/html/zone-lake-ask-375x812.html 76e026abfb19cb3ce6432f8a74b342f1
+- carried: ./renders/home-lake-r2ask/html/zone-lake-ask-390x844.html 05a2fb1551ccf8a5c541bef3f11e8276
+- carried: ./renders/home-lake-r2ask/lake-step1-375x812.png cd95a5ba154003fa36699eb42ba874ee
+- carried: ./renders/home-lake-r2ask/lake-step1-390x844.png 3c0a64b54b40c348b5825b35965dfa34
+- carried: ./renders/home-lake-r2ask/lake-step2-375x812.png 1e3545a3199b20119a433e00bc025bc4
+- carried: ./renders/home-lake-r2ask/lake-step2-390x844.png f69a4bdb47376bc70722726c6b8055cb
+- carried: ./renders/home-lake-r2ask/lake-step3-375x812.png c321f3437966d3de2274ad961388c9d0
+- carried: ./renders/home-lake-r2ask/lake-step3-390x844.png 90c31e29ed64a674b0aaea482f9fc758
+- carried: ./renders/home-lake-r2ask/lake-step4-375x812.png 464186dd56354805723e8d44995ef43e
+- carried: ./renders/home-lake-r2ask/lake-step4-390x844.png b8413e8d2ef4cedc8f2ec6d1a74e0127
+- carried: ./renders/home-lake-r2ask/lake-step5-375x812.png 03b91d9b5d7657298e7d18773f68ac31
+- carried: ./renders/home-lake-r2ask/lake-step5-390x844.png 6d0c49e3584e342919c85e2850982ea8
+- carried: ./renders/home-lake-r2ask/zone-lake-ask-375x812.png 732306843f46719f0eb655493c745ecb
+- carried: ./renders/home-lake-r2ask/zone-lake-ask-390x844.png b7863b55f5828afaa528236b81eeb47b
+- carried: ./renders/jesus-26/html/26-A-320x568.html 1931e760fd7c9a54d5ea363f2f3bef75
+- carried: ./renders/jesus-26/html/26-B-320x568.html 8736fec85e503283ffe5ce7f919dcdc8
+- carried: ./renders/jesus-26/html/26-C-open-320x568.html 5fd772886f304993391b3178dfd19b8e
+- carried: ./renders/jesus-26/html/26-C-rest-320x568.html bb5816c1fa40cd0a8c6c1965c858330f
+- carried: ./renders/jesus-26/html/26-D-320x568.html e0412279f985ccdeb16642bc62ebf85b
+- carried: ./renders/jesus-26/html/26-D-375x667.html 0dae25b8ad1263cde02408f1604ce540
+- carried: ./renders/jesus-26/html/26-D-375x812.html 15e4d42d1fe2103724da5bab61a808da
+- carried: ./renders/jesus-26/png/26-A-320x568.png 9fc5b3c92edc59df11502f66bf726a89
+- carried: ./renders/jesus-26/png/26-B-320x568.png 50b2b3e3de23911a6485faae54ed4ee3
+- carried: ./renders/jesus-26/png/26-C-open-320x568.png 7e583097caef3528c6da9b26c2987756
+- carried: ./renders/jesus-26/png/26-C-rest-320x568.png 27fcea05c3259382e6de3ace4deeb309
+- carried: ./renders/jesus-26/png/26-D-320x568.png 75afa5e89426cb75eabf2bbacbd6bc34
+- carried: ./renders/jesus-26/png/26-D-375x667.png 1ec1b250526d2ab9d366096c087d666c
+- carried: ./renders/jesus-26/png/26-D-375x812.png 627eefba7eef9dcdcd0d1267d5a57942
+- carried: ./renders/r2e-c-chip/html/26-C-open-br-320x568.html 209fd71092b21a0988d18845867d4dac
+- carried: ./renders/r2e-c-chip/html/26-C-open-br-375x667.html 3ad0ee7afcfaa9953955d2c9b27f4a7f
+- carried: ./renders/r2e-c-chip/html/26-C-open-frozen-320x568.html 5b3968b33f79be97494253a569036b31
+- carried: ./renders/r2e-c-chip/html/26-C-open-frozen-375x667.html 22a2a410230297ee8bf6b6f728a85afe
+- carried: ./renders/r2e-c-chip/html/26-C-rest-br-320x568.html 0977ff380e52abc9f8ad437c980991e5
+- carried: ./renders/r2e-c-chip/html/26-C-rest-br-375x667.html b0e94064797f186b6f4e988e5a72f64a
+- carried: ./renders/r2e-c-chip/html/26-C-rest-frozen-320x568.html bb5816c1fa40cd0a8c6c1965c858330f
+- carried: ./renders/r2e-c-chip/html/26-C-rest-frozen-375x667.html f395ad8299b2608eebbe60dfa7a526c8
+- carried: ./renders/r2e-c-chip/measure-c-chip.json 4b703b0394a61eb84fd1b3094ace38b8
+- carried: ./renders/r2e-c-chip/png/26-C-open-br-320x568.png 8e201aa5e83080a4a833aae2a5fdb402
+- carried: ./renders/r2e-c-chip/png/26-C-open-br-375x667.png 0be30e2bd8b1227599fc28d9ae7394ca
+- carried: ./renders/r2e-c-chip/png/26-C-open-frozen-320x568.png 7e583097caef3528c6da9b26c2987756
+- carried: ./renders/r2e-c-chip/png/26-C-open-frozen-375x667.png 94b54232fee41032b9fafd741b619e51
+- carried: ./renders/r2e-c-chip/png/26-C-rest-br-320x568.png f984f4d059e70cc2b6c68fdd38d0f567
+- carried: ./renders/r2e-c-chip/png/26-C-rest-br-375x667.png e76ed49ead71d69ce14902cc38230de4
+- carried: ./renders/r2e-c-chip/png/26-C-rest-frozen-320x568.png 27fcea05c3259382e6de3ace4deeb309
+- carried: ./renders/r2e-c-chip/png/26-C-rest-frozen-375x667.png 5595054377284df919c81674440d5312
+- carried: ./renders/r2e-d2/d2-measure.json 9182012ce020dee8d840f12854d8325d
+- carried: ./renders/r2e-d2/html/26-D2-320x568.html 87d53cdbf54439ed55978a9c1f16e63c
+- carried: ./renders/r2e-d2/html/26-D2-375x667.html c41f5b869204487e1ff570b7b5633b9e
+- carried: ./renders/r2e-d2/html/26-D2-390x844.html eec4d2acc7d93427e32a7ea3ab889a30
+- carried: ./renders/r2e-d2/html/zone-forest-ask-D2plate-320x568.html a4da30ae1138ab729ad566f94bcf4463
+- carried: ./renders/r2e-d2/html/zone-forest-ask-D2plate-375x667.html 8252204ce3009a523a681468799fa6b7
+- carried: ./renders/r2e-d2/html/zone-forest-ask-D2plate-390x844.html 1b2f61669380ee9d07343f1bfa4cf6c4
+- carried: ./renders/r2e-d2/html/zone-meadow-ask-D2plate-320x568.html 734de7a8d62a416cb7ce728a9b493e87
+- carried: ./renders/r2e-d2/html/zone-meadow-ask-D2plate-375x667.html f4694507331d8be2b4a050a534439a41
+- carried: ./renders/r2e-d2/html/zone-meadow-ask-D2plate-390x844.html d61356c558fd858f3e7e12c6d0b4e67a
+- carried: ./renders/r2e-d2/occl-d2.log 8da42bb1263113ee3e92293ce401f5d1
+- carried: ./renders/r2e-d2/occl-input.txt a5948805baef82eaaa173cde6f142a50
+- carried: ./renders/r2e-d2/png/26-D2-320x568.png 40abd2094fca99dfb7c2ce7c776545ad
+- carried: ./renders/r2e-d2/png/26-D2-375x667.png 7373902f21bd77af9b9f37a12ad5b720
+- carried: ./renders/r2e-d2/png/26-D2-390x844.png d297e0c6554fec830032892f5c53959a
+- carried: ./renders/r2e-d2/png/zone-forest-ask-D2plate-320x568.png 2415afdbd33f7b6fb3b180a9099a9f1a
+- carried: ./renders/r2e-d2/png/zone-forest-ask-D2plate-375x667.png 50858409d67c25e69d3c678adecce4bb
+- carried: ./renders/r2e-d2/png/zone-forest-ask-D2plate-390x844.png fc08892dba2aec5a05b0ea17f24eaaa9
+- carried: ./renders/r2e-d2/png/zone-meadow-ask-D2plate-320x568.png 2b0b2be132e9097717959287ab5a8631
+- carried: ./renders/r2e-d2/png/zone-meadow-ask-D2plate-375x667.png 8736c831a14ea7a2e16f98756e13988a
+- carried: ./renders/r2e-d2/png/zone-meadow-ask-D2plate-390x844.png 86f7ed088938d58bc69530a37445e901
+- carried: ./renders/r2h/html/05-map-day1-390x844-before.html 9859a9b12be506cb006528a5781ff249
+- carried: ./renders/r2h/html/05-map-day1-390x844.html 0a0a4eaa2bdd4eb14da9b25f20623b94
+- carried: ./renders/r2h/html/08-map-home-lake-chooser-day1-390x844-before.html 70c8a025ae22f1f76ece8666dd9cd6ed
+- carried: ./renders/r2h/html/08-map-home-lake-chooser-day1-390x844.html ba60b21041b340a0eb4877311af9b358
+- carried: ./renders/r2h/html/09-map-later-390x844-before.html 8add012eec046f3e03837909f0ce8e56
+- carried: ./renders/r2h/html/09-map-later-390x844.html 9801e4ad840dc6c667f73990f52fdb25
+- carried: ./renders/r2h/html/10-word-meadow-scene-320x568-before.html aa7d44a5654852f7c424f9ac41974cf5
+- carried: ./renders/r2h/html/10-word-meadow-scene-320x568.html 20363286ab04104172467d879e447e50
+- carried: ./renders/r2h/html/10-word-meadow-scene-390x844-before.html 511989aacd2e29c7e56d79524f6c9d09
+- carried: ./renders/r2h/html/10-word-meadow-scene-390x844.html ccab3904437d7691bd1ac527278b7d41
+- carried: ./renders/r2h/html/11-word-meadow-scene-right-390x844-before.html 1b8a68d100de5445124ef418ac876296
+- carried: ./renders/r2h/html/11-word-meadow-scene-right-390x844.html 8c38d6a273d3d069a714242503da45a6
+- carried: ./renders/r2h/html/12-reveal-right-390x844-before.html c34adac320616285ba4e32331d7c2319
+- carried: ./renders/r2h/html/12-reveal-right-390x844.html 5443639091b5bff9659a754a505496f0
+- carried: ./renders/r2h/html/13-word-meadow-scene-retry-390x844-before.html f08d5c263fbc0b75ebed6c7413b1de94
+- carried: ./renders/r2h/html/13-word-meadow-scene-retry-390x844.html d6863362569e6461202477f172601fed
+- carried: ./renders/r2h/html/14-reveal-gentle-retry-320x568-before.html 6d2b199fa8c915b5b5f0b6eda8883364
+- carried: ./renders/r2h/html/14-reveal-gentle-retry-320x568.html 491cb9a42e77531349fa974f77de5864
+- carried: ./renders/r2h/html/14-reveal-gentle-retry-390x844-before.html 6400cb75148c103421f8056bf8081b8f
+- carried: ./renders/r2h/html/14-reveal-gentle-retry-390x844.html fb0b054fc2f6d8796c943847a9d5f6b4
+- carried: ./renders/r2h/html/15-say-it-sight-words-390x844-before.html 5f8e27d7a3f44dcdf9a9d660ad37a8f1
+- carried: ./renders/r2h/html/15-say-it-sight-words-390x844.html 67885fba7f6dda276b08f5d07f675cae
+- carried: ./renders/r2h/html/16-say-it-maxwell-says-day1-390x844-before.html d0379ce622eb9c07434730217a42e892
+- carried: ./renders/r2h/html/16-say-it-maxwell-says-day1-390x844.html eaa7b03ee43901d6dc809d7c0ba74d4a
+- carried: ./renders/r2h/html/17-two-answer-pray-high-five-390x844-before.html dad83b3c3cabb4ab2e39e1d2591a4818
+- carried: ./renders/r2h/html/17-two-answer-pray-high-five-390x844.html 7a8f68ff53a36af347e555751cc77a70
+- carried: ./renders/r2h/html/18-two-answer-wrong-tap-390x844-before.html 9a6fcbfb97b09a882100ef970844f558
+- carried: ./renders/r2h/html/18-two-answer-wrong-tap-390x844.html 02550e34e8557b6c646022887bb984f5
+- carried: ./renders/r2h/html/19-two-answer-right-done-390x844-before.html c99faea7a884c3edd32ed52e60219dc0
+- carried: ./renders/r2h/html/19-two-answer-right-done-390x844.html e92c186a51912a701b2bceabb3ea745f
+- carried: ./renders/r2h/html/21-kitchen-say-it-shown-320x568-before.html 97a102294c2a861e9d4c9652928d3f67
+- carried: ./renders/r2h/html/21-kitchen-say-it-shown-320x568.html c764c24be32e003221540bd92b67dce2
+- carried: ./renders/r2h/html/21-kitchen-say-it-shown-390x844-before.html eb0be055fe19d26a8441f98d55458a35
+- carried: ./renders/r2h/html/21-kitchen-say-it-shown-390x844.html 724e47dabefd66074f9a9959623359e2
+- carried: ./renders/r2h/html/22-kitchen-server-talk-320x568-before.html 1cebd0c03076b0f174a7198ef112c851
+- carried: ./renders/r2h/html/22-kitchen-server-talk-320x568.html f5f863f5340d104d08e7f21db4df055a
+- carried: ./renders/r2h/html/22-kitchen-server-talk-390x844-before.html 33a9b6782592f0814143f3016febf9bc
+- carried: ./renders/r2h/html/22-kitchen-server-talk-390x844.html 576b6f8a70ff583122dd414815deb5f4
+- carried: ./renders/r2h/html/23-level-up-reward-320x568-before.html 1eb587b584b0371ade1050f0eaf3b4c6
+- carried: ./renders/r2h/html/23-level-up-reward-320x568.html e52bb9e352f594e1d1d71f46d56d43e4
+- carried: ./renders/r2h/html/23-level-up-reward-390x844-before.html 4f33ddc809e430d916eeb7e9cb4b5795
+- carried: ./renders/r2h/html/23-level-up-reward-390x844.html ef3721e767d7d6199c548e103f91121d
+- carried: ./renders/r2h/html/24-guardian-run-entry-320x568-before.html b9b52a3404def3001ced99451c955e11
+- carried: ./renders/r2h/html/24-guardian-run-entry-320x568.html fa871661b278c2cbbc1e474800edc556
+- carried: ./renders/r2h/html/24-guardian-run-entry-375x667-before.html 2eabc3c291e70ee19edf3deeec7f8804
+- carried: ./renders/r2h/html/24-guardian-run-entry-375x667.html 27b8c3c55d1bbd1b1bb0f4313f51e8db
+- carried: ./renders/r2h/html/24-guardian-run-entry-390x844-before.html 6358cb32560d72604166fcbf37844ced
+- carried: ./renders/r2h/html/24-guardian-run-entry-390x844.html 7e52e6c8691bca7028e43f551c87b332
+- carried: ./renders/r2h/html/25-guardian-hint-letters-320x568-before.html b74fda6fa0811b7e3df488ee8dd85662
+- carried: ./renders/r2h/html/25-guardian-hint-letters-320x568.html b8678f0e92a29c4950c8b09b5466bf4f
+- carried: ./renders/r2h/html/25-guardian-hint-letters-375x667-before.html 72dfc3719fb05c79e7ccb392f5175ce8
+- carried: ./renders/r2h/html/25-guardian-hint-letters-375x667.html 13f8482015ef9c60d63577e45e8aa7c6
+- carried: ./renders/r2h/html/25-guardian-hint-letters-390x844-before.html 2fbd30296a194dedb6c3e523ce154b14
+- carried: ./renders/r2h/html/25-guardian-hint-letters-390x844.html 096b7bfedcd5c56b66806e3fbd9aefeb
+- carried: ./renders/r2h/html/26-guardian-hint-jesus-words-320x568-before.html 1931e760fd7c9a54d5ea363f2f3bef75
+- carried: ./renders/r2h/html/26-guardian-hint-jesus-words-320x568.html bd8946dd6f9ad4eeeef4f864d39ab8fe
+- carried: ./renders/r2h/html/26-guardian-hint-jesus-words-375x667-before.html e871c5e8896f5c22b2798346eeb618fd
+- carried: ./renders/r2h/html/26-guardian-hint-jesus-words-375x667.html 3427aee7500a1d1e8a8869cdd7261c95
+- carried: ./renders/r2h/html/26-guardian-hint-jesus-words-390x844-before.html 26c1d9ce4d5920afb6f09cc09b8e3274
+- carried: ./renders/r2h/html/26-guardian-hint-jesus-words-390x844.html aceb15c222ab9ee09863ed65a7235137
+- carried: ./renders/r2h/html/27-guardian-kneels-320x568-before.html 20aaf267d6a3bce588fa5707da449ed4
+- carried: ./renders/r2h/html/27-guardian-kneels-320x568.html e7067c380403effea4c0954d01bac501
+- carried: ./renders/r2h/html/27-guardian-kneels-375x667-before.html a9ec5b0f66dcf71f6143500e6a01f494
+- carried: ./renders/r2h/html/27-guardian-kneels-375x667.html cb5c124f1125ab73082ee8578ef30fe3
+- carried: ./renders/r2h/html/27-guardian-kneels-390x844-before.html 9df1e0dfc536dbbec8cfbb20ae446f44
+- carried: ./renders/r2h/html/27-guardian-kneels-390x844.html 74662111b31a3e96d4d47d24d19f3341
+- carried: ./renders/r2h/html/28-guardian-win-320x568-before.html 63aeb4df775d19a48d87a1a6e044d6d0
+- carried: ./renders/r2h/html/28-guardian-win-320x568.html ec11f9c5f4e092f494dc17ad4ef2bf93
+- carried: ./renders/r2h/html/28-guardian-win-375x667-before.html 6e79aee2e40fc833d86b5ca8927f90cc
+- carried: ./renders/r2h/html/28-guardian-win-375x667.html 0754a48bce3442dd6d6ea019064ca52e
+- carried: ./renders/r2h/html/28-guardian-win-390x844-before.html d1b10c4fef099f1e09275627369a9ecd
+- carried: ./renders/r2h/html/28-guardian-win-390x844.html f52fdc91c012ae319d21a781a9eccfd7
+- carried: ./renders/r2h/html/29-verse-scroll-gift-390x844-before.html 74516f91e8117f8a33abf33c6ce09d1d
+- carried: ./renders/r2h/html/29-verse-scroll-gift-390x844.html 1e4381de6e6fcc44fb5c2157588b61ac
+- carried: ./renders/r2h/html/30-new-weapon-gift-390x844-before.html dfad68d318f7615b957a023a05be24ff
+- carried: ./renders/r2h/html/30-new-weapon-gift-390x844.html 6e667e2758b2d4f991e523c998b55e08
+- carried: ./renders/r2h/html/32-home-lake-scene-390x844-before.html 960839e9623ea260f1b8ee974c3d5233
+- carried: ./renders/r2h/html/32-home-lake-scene-390x844.html 832b5f67837eac4e5611396f27ec40d9
+- carried: ./renders/r2h/html/33-say-it-baby-hospital-reply-320x568-before.html ea6a23b9d28f5669fed2d47bb7559ef3
+- carried: ./renders/r2h/html/33-say-it-baby-hospital-reply-320x568.html 60ca3fa31b049ef3d79f5ed1d6ac63d6
+- carried: ./renders/r2h/html/33-say-it-baby-hospital-reply-390x844-before.html 73f2a10a4f7ddeb75c5fd07b3a3390d9
+- carried: ./renders/r2h/html/33-say-it-baby-hospital-reply-390x844.html 87f584bc1994af00a1dc2c74958388d8
+- carried: ./renders/r2h/html/37-rest-screen-390x844-before.html e08617b9d7ebe28cfe6bbdc3f1ea03ea
+- carried: ./renders/r2h/html/37-rest-screen-390x844.html 3c780acd2357bf1b0846b1ffbb039739
+- carried: ./renders/r2h/html/44-scroll-reopened-390x844-before.html 3a39fa76d6e8e65e9ce643b053d94035
+- carried: ./renders/r2h/html/44-scroll-reopened-390x844.html 7ecde71b6892f75e1879798791f1b3ba
+- carried: ./renders/r2h/html/48-continue-after-pause-390x844-before.html 5aa4d0535b29dcd1da3c4d0256b2b24a
+- carried: ./renders/r2h/html/48-continue-after-pause-390x844.html 1c4eff95fdd228a23f6c78fc2b4feec7
+- carried: ./renders/r2h/html/54-phrase-ask-card-320x568-before.html f484569d7b1ff32ab2d670978a6a2630
+- carried: ./renders/r2h/html/54-phrase-ask-card-320x568.html ffad33ebf7fa541559277d1cf308528a
+- carried: ./renders/r2h/html/54-phrase-ask-card-390x844-before.html 9d9c03cb2fb5e3afb8d687dee2d1976e
+- carried: ./renders/r2h/html/54-phrase-ask-card-390x844.html c4e1bca03263021a4436ec60513b1c3c
+- carried: ./renders/r2h/html/zone-forest-ask-320x568-before.html 6da55cf16e5f882d3308c04140d1b179
+- carried: ./renders/r2h/html/zone-forest-ask-320x568.html 93ad57454d1e1816292647aba663e634
+- carried: ./renders/r2h/html/zone-forest-ask-375x812-before.html a9fa0550ca933148528a49c0eac60dfb
+- carried: ./renders/r2h/html/zone-forest-ask-375x812.html 41ca18dae06c83b2ccd8b336a73fccd9
+- carried: ./renders/r2h/html/zone-forest-ask-390x844-before.html b20f3e2dce810bae7b2463dd9ea070f3
+- carried: ./renders/r2h/html/zone-forest-ask-390x844.html a39547a1feb721b1d5459bf287c965c2
+- carried: ./renders/r2h/html/zone-lake-ask-320x568-before.html e663e1e7bc1460ac69e36779b7122933
+- carried: ./renders/r2h/html/zone-lake-ask-320x568.html 5efa6eb3ebff3b30fe5b60f4bd858f70
+- carried: ./renders/r2h/html/zone-lake-ask-390x844-before.html f31eb3070080593ffb11814dba5d52d5
+- carried: ./renders/r2h/png/05-map-day1-390x844-before.png a7cefecad4819cb0a8a1074c21fb1bdb
+- carried: ./renders/r2h/png/05-map-day1-390x844.png 2b14fcd09562f32f6a6c6d981cabfe5a
+- carried: ./renders/r2h/png/08-map-home-lake-chooser-day1-390x844-before.png 54ec213d49cf25bc6a5ac6bf7edff8df
+- carried: ./renders/r2h/png/08-map-home-lake-chooser-day1-390x844.png d2c80490bff7fd346cb2dbba591a4b9d
+- carried: ./renders/r2h/png/09-map-later-390x844-before.png 8afa9c5cc5fb994eb0439b349dfde3c6
+- carried: ./renders/r2h/png/09-map-later-390x844.png bf88ff867dee8114f6f0cafb4568f994
+- carried: ./renders/r2h/png/10-word-meadow-scene-320x568-before.png bd76e27644da3b027b27ef5e5daf6d13
+- carried: ./renders/r2h/png/10-word-meadow-scene-320x568.png 8fae8a16414bf14bc0865c6bccff2e70
+- carried: ./renders/r2h/png/10-word-meadow-scene-390x844-before.png b6eb2bf20308b05dbaf2b0de3e9f77ad
+- carried: ./renders/r2h/png/10-word-meadow-scene-390x844.png 39142b6a15dc1806ca06b6feccc9ba70
+- carried: ./renders/r2h/png/11-word-meadow-scene-right-390x844-before.png 81bd17008f262a83f55a542b40f8c7c2
+- carried: ./renders/r2h/png/11-word-meadow-scene-right-390x844.png 2d280b94f268b650cac97ce98642aaa4
+- carried: ./renders/r2h/png/12-reveal-right-390x844-before.png 2160d4802b7e8d841c83b2e6a1ff3091
+- carried: ./renders/r2h/png/12-reveal-right-390x844.png ccc8838644fa23649472e4213a588d57
+- carried: ./renders/r2h/png/13-word-meadow-scene-retry-390x844-before.png c9ad57f6424c9773ea7cabfa5b3933c7
+- carried: ./renders/r2h/png/13-word-meadow-scene-retry-390x844.png 6426d6dbda97b24c7bd9108f990d38f9
+- carried: ./renders/r2h/png/14-reveal-gentle-retry-320x568-before.png 6032902ee5adfbe36aa18b47d68d4a44
+- carried: ./renders/r2h/png/14-reveal-gentle-retry-320x568.png a39a930e8f10b7e6d43e228cb2a8fd81
+- carried: ./renders/r2h/png/14-reveal-gentle-retry-390x844-before.png 9ce2b91ed74084b704b0c0cb54d59a90
+- carried: ./renders/r2h/png/14-reveal-gentle-retry-390x844.png 058b61a7141010e1a216d3bcffcdaac0
+- carried: ./renders/r2h/png/15-say-it-sight-words-390x844-before.png e0ef71d75cb7fc659d9fc2fa01460328
+- carried: ./renders/r2h/png/15-say-it-sight-words-390x844.png 2f0af1a60880f45f8b4ecea6081c51aa
+- carried: ./renders/r2h/png/16-say-it-maxwell-says-day1-390x844-before.png 6ec17b1466ecf89e5dfd152fb18ed77e
+- carried: ./renders/r2h/png/16-say-it-maxwell-says-day1-390x844.png 39d3e1701701f749010ffaee646c76b2
+- carried: ./renders/r2h/png/17-two-answer-pray-high-five-390x844-before.png f36314744912637bd02f6871abfddc0b
+- carried: ./renders/r2h/png/17-two-answer-pray-high-five-390x844.png 0dc05eb440c7561d0f6fa01c09a5d1c1
+- carried: ./renders/r2h/png/18-two-answer-wrong-tap-390x844-before.png 6a98b929ae4722b025ac48d94a3fed58
+- carried: ./renders/r2h/png/18-two-answer-wrong-tap-390x844.png f77519fb64332d6e46d05c5fd49e0fce
+- carried: ./renders/r2h/png/19-two-answer-right-done-390x844-before.png a0e335cf4272abcb9defc581fa5f9d53
+- carried: ./renders/r2h/png/19-two-answer-right-done-390x844.png 58079edd0f0dc349bcde5dfd0b236375
+- carried: ./renders/r2h/png/21-kitchen-say-it-shown-320x568-before.png 2c49534054afc89bc5755fdafd4fc4bc
+- carried: ./renders/r2h/png/21-kitchen-say-it-shown-320x568.png aad8051ea70aea1b3109741039a7d37d
+- carried: ./renders/r2h/png/21-kitchen-say-it-shown-390x844-before.png 4095ef61cd4dccd43ebb75ba60c399eb
+- carried: ./renders/r2h/png/21-kitchen-say-it-shown-390x844.png 1dec12147918073801973990f98d138f
+- carried: ./renders/r2h/png/22-kitchen-server-talk-320x568-before.png c13390a749f115b1de3985997ed4a7bf
+- carried: ./renders/r2h/png/22-kitchen-server-talk-320x568.png 519bacd64c15a30f785d48f3317f7721
+- carried: ./renders/r2h/png/22-kitchen-server-talk-390x844-before.png 6ed2a1571589cf23a589b615b491a2ad
+- carried: ./renders/r2h/png/22-kitchen-server-talk-390x844.png 621acd0fefff407774362b7e02fbd13a
+- carried: ./renders/r2h/png/23-level-up-reward-320x568-before.png b480982f30b853c5d0eb46f82ea11f1a
+- carried: ./renders/r2h/png/23-level-up-reward-320x568.png 8e38111608bec897098000c345019d18
+- carried: ./renders/r2h/png/23-level-up-reward-390x844-before.png 19d947fae2c346aac8f1f17663dd559e
+- carried: ./renders/r2h/png/23-level-up-reward-390x844.png b672d41d3a651274c8f22d2a47ce7ca3
+- carried: ./renders/r2h/png/24-guardian-run-entry-320x568-before.png 33291f8955aa9e12f8cd19f35dc607bb
+- carried: ./renders/r2h/png/24-guardian-run-entry-320x568.png 97500b030dc76002b4c1ed8c79fa7fef
+- carried: ./renders/r2h/png/24-guardian-run-entry-375x667-before.png 198ad5f7090369c9c41073fe31800342
+- carried: ./renders/r2h/png/24-guardian-run-entry-375x667.png a56125e4815fe4a811d45104f33ee718
+- carried: ./renders/r2h/png/24-guardian-run-entry-390x844-before.png 2e0788a9096f674c06d6d7668182efa0
+- carried: ./renders/r2h/png/24-guardian-run-entry-390x844.png c279c66f41a78c02beec5322349b6d47
+- carried: ./renders/r2h/png/25-guardian-hint-letters-320x568-before.png 92a2b993f3d515940d2ac549aae7ec6d
+- carried: ./renders/r2h/png/25-guardian-hint-letters-320x568.png 72fc077782b84b472756968f0a3c4132
+- carried: ./renders/r2h/png/25-guardian-hint-letters-375x667-before.png 9728a110ceb180874ef1b6dbf02441de
+- carried: ./renders/r2h/png/25-guardian-hint-letters-375x667.png 80b78aa271c166496c2ec1d6864372fa
+- carried: ./renders/r2h/png/25-guardian-hint-letters-390x844-before.png 3a65d6e7fc470a326ceb711714b04263
+- carried: ./renders/r2h/png/25-guardian-hint-letters-390x844.png 75e85b4388e82a83c01a932c7db3d7a4
+- carried: ./renders/r2h/png/26-guardian-hint-jesus-words-320x568-before.png 1af65b0641e6e65e3f5019dc120d50f1
+- carried: ./renders/r2h/png/26-guardian-hint-jesus-words-320x568.png 13e24b25fcebfef81df58527fdafdabf
+- carried: ./renders/r2h/png/26-guardian-hint-jesus-words-375x667-before.png 33e956ea7469a49361ba76ee8c414d76
+- carried: ./renders/r2h/png/26-guardian-hint-jesus-words-375x667.png b2294c2b9c702cf77379121c7e15f605
+- carried: ./renders/r2h/png/26-guardian-hint-jesus-words-390x844-before.png 28e4c6d71c788a731aa60123281e55ae
+- carried: ./renders/r2h/png/26-guardian-hint-jesus-words-390x844.png 095ccf8ba586f61bd02019b7f331ad67
+- carried: ./renders/r2h/png/27-guardian-kneels-320x568-before.png f96e442047b8440594f9888f0818da91
+- carried: ./renders/r2h/png/27-guardian-kneels-320x568.png ef6508ca662f47d9b4f5910885882fa6
+- carried: ./renders/r2h/png/27-guardian-kneels-375x667-before.png 56ab41ba721a2c27ac7969200918d07a
+- carried: ./renders/r2h/png/27-guardian-kneels-375x667.png 0a9bb8d5b16560ff4b0018a615953b0e
+- carried: ./renders/r2h/png/27-guardian-kneels-390x844-before.png 0de7db9e86fe459456d2a2cf473c276e
+- carried: ./renders/r2h/png/27-guardian-kneels-390x844.png 7a41845dbe799480a958b3efadbb4e32
+- carried: ./renders/r2h/png/28-guardian-win-320x568-before.png fa017b0093057b3707ed26659d9d89f2
+- carried: ./renders/r2h/png/28-guardian-win-320x568.png ac52252af8f92f678f2450fc5c841349
+- carried: ./renders/r2h/png/28-guardian-win-375x667-before.png cb600b2d9626f8345e25a64863bf018e
+- carried: ./renders/r2h/png/28-guardian-win-375x667.png 16173ee628b9d2331987b0bd55a767b5
+- carried: ./renders/r2h/png/28-guardian-win-390x844-before.png e6deaf2c2d47ebf3567f4e94c84782f3
+- carried: ./renders/r2h/png/28-guardian-win-390x844.png aff4563c2794db131f89e582a7cee3a0
+- carried: ./renders/r2h/png/29-verse-scroll-gift-390x844-before.png 38df393c15c3cca2aead25a9bfeed178
+- carried: ./renders/r2h/png/29-verse-scroll-gift-390x844.png c8536836052b9d7054c69694e735e409
+- carried: ./renders/r2h/png/30-new-weapon-gift-390x844-before.png 0226efc11315071cfb8b48c547f773f3
+- carried: ./renders/r2h/png/30-new-weapon-gift-390x844.png c13a3f54a10ebb519ff1ea60aff06e8e
+- carried: ./renders/r2h/png/32-home-lake-scene-390x844-before.png f0ed02b50994e9da48467c1edeb4f31d
+- carried: ./renders/r2h/png/32-home-lake-scene-390x844.png e357d51658df0c441d4e4da1acc31ced
+- carried: ./renders/r2h/png/33-say-it-baby-hospital-reply-320x568-before.png 27b0220fa889e9a388547f0bff0d7202
+- carried: ./renders/r2h/png/33-say-it-baby-hospital-reply-320x568.png 16d9465b5b3d8ba6bb25b359d244c249
+- carried: ./renders/r2h/png/33-say-it-baby-hospital-reply-390x844-before.png 714ac604c5c43504c2eba4b0604f4468
+- carried: ./renders/r2h/png/33-say-it-baby-hospital-reply-390x844.png 43f6194435c58613e7616b9b54124a0b
+- carried: ./renders/r2h/png/37-rest-screen-390x844-before.png 050e0abe5c058cf7a2682155ca4e4c24
+- carried: ./renders/r2h/png/37-rest-screen-390x844.png 2c5218bd2e6a6e09fab5edc625ebf5d1
+- carried: ./renders/r2h/png/44-scroll-reopened-390x844-before.png e7f02e962c85c73a9f0ea4b758ceb7c8
+- carried: ./renders/r2h/png/44-scroll-reopened-390x844.png 1406cb8b65368fc657a4ae5644bf3379
+- carried: ./renders/r2h/png/48-continue-after-pause-390x844-before.png 9666d19c36cf03300e60a8b4a9d61f19
+- carried: ./renders/r2h/png/48-continue-after-pause-390x844.png 2fcd997dfe52389dd402491f2a9884de
+- carried: ./renders/r2h/png/54-phrase-ask-card-320x568-before.png 278096fdbdd47652fb9862bdea089d9e
+- carried: ./renders/r2h/png/54-phrase-ask-card-320x568.png 23312c0999a91ae405b12864ce42c206
+- carried: ./renders/r2h/png/54-phrase-ask-card-390x844-before.png 5ab63a51ce13c2f7da5231a0d3e7dd35
+- carried: ./renders/r2h/png/54-phrase-ask-card-390x844.png f8770270b77d040ba477b9e5a4157765
+- carried: ./renders/r2h/png/zone-forest-ask-320x568-before.png 5a9fcc03981aecf4d47453ade0025717
+- carried: ./renders/r2h/png/zone-forest-ask-320x568.png c2f8be75e7c3d59e2d11fbce8588dc7b
+- carried: ./renders/r2h/png/zone-forest-ask-375x812-before.png b48dbc94fd1495255c49a3142e2eda1d
+- carried: ./renders/r2h/png/zone-forest-ask-375x812.png c498c7c2558540d1e4761cdb04dc5f69
+- carried: ./renders/r2h/png/zone-forest-ask-390x844-before.png f94427a4f11107bf68698011fd83187e
+- carried: ./renders/r2h/png/zone-forest-ask-390x844.png f1ed7b7bb3100a8be918d7a2eafe9bf7
+- carried: ./renders/r2h/png/zone-lake-ask-320x568-before.png 4d6f88ebc8ebc498085aa241585729e5
+- carried: ./renders/r2h/png/zone-lake-ask-320x568.png 7d6d7c0bdb68df16e751da79301a5273
+- carried: ./renders/r2h/png/zone-lake-ask-390x844-before.png 78668ccb6fc94b07f1e181e34ccd07cb
+- carried: ./renders/screens/02b-main-menu-verse-popup-longest-320x568-scrolled.html 53324df9c6dac288df609db693913f92
+- carried: ./renders/screens/02b-main-menu-verse-popup-longest-320x568-scrolled.png 27d041b43568dcdd41c86d4395b2e039
+- carried: ./renders/screens/02b-main-menu-verse-popup-longest-320x568.html 4789567bba53ee6444b526803e966b71
+- carried: ./renders/screens/02b-main-menu-verse-popup-longest-320x568.png 38174d8801ff1a757ea9f6130933c634
+- carried: ./renders/screens/02c-menu-gemtag-before-verse-320x568.html ecdf5cae1cf5fc4d55957bfef802e0ba
+- carried: ./renders/screens/02c-menu-gemtag-before-verse-320x568.png 2409984be2b6c1e663426732a98197d8
+- carried: ./renders/screens/02c-menu-gemtag-before-verse.html d132a927cf4f05741c06c089a15735d0
+- carried: ./renders/screens/02c-menu-gemtag-before-verse.png d74b32b04b85a2dc66d4aff6fb74e3b4
+- carried: ./renders/screens/18-two-answer-wrong-tap.html 9a6fcbfb97b09a882100ef970844f558
+- carried: ./renders/screens/18-two-answer-wrong-tap.png 2bf5139f831aa2d9c4e228727b8dd581
+- carried: ./renders/screens/23-level-up-reward-320x568.html 1eb587b584b0371ade1050f0eaf3b4c6
+- carried: ./renders/screens/23-level-up-reward-320x568.png 26e0547e1b203b3e5ebb7d1b813dd03c
+- carried: ./renders/screens/23-level-up-reward.html 4f33ddc809e430d916eeb7e9cb4b5795
+- carried: ./renders/screens/23-level-up-reward.png 181fa70f8efe467e8b66c197307dc30c
+- carried: ./renders/screens/29-verse-scroll-gift.html 74516f91e8117f8a33abf33c6ce09d1d
+- carried: ./renders/screens/29-verse-scroll-gift.png 857c6a26038024cd8da87bc04560f033
+- carried: ./renders/screens/30-new-weapon-gift.html dfad68d318f7615b957a023a05be24ff
+- carried: ./renders/screens/30-new-weapon-gift.png 61d4ba845b91e47035f41952165dc721
+- carried: ./renders/screens/34-echo-forest-sound-duel-320x568.html f35d4136e8f9e90b79709c6ed8f0d445
+- carried: ./renders/screens/34-echo-forest-sound-duel-320x568.png f2d1462f5eea51a70ffcf74c802becab
+- carried: ./renders/screens/35-sound-duel-right-320x568.html e4226262473c7e0b32a85b636b12715e
+- carried: ./renders/screens/35-sound-duel-right-320x568.png 2f5f5236ea6f8997f823fc943b0ebd98
+- carried: ./renders/screens/36-sound-duel-round-done-320x568.html 354d95d3fe0357e30af3a457899a2821
+- carried: ./renders/screens/36-sound-duel-round-done-320x568.png 9ef5211ec73ce6a916ca153f5af95848
+- carried: ./renders/screens/36-sound-duel-round-done.html 8427b91c47772b5d295d013ce68df209
+- carried: ./renders/screens/36-sound-duel-round-done.png 1742b291378c64ff5533d6bd6cbc7935
+- carried: ./renders/screens/52-title-night.html 7c74cd8e8f52184b2b1ad8c8b3f2eef9
+- carried: ./renders/screens/52-title-night.png dbdf520885dacf2190ed358937e3cd4e
+- carried: ./renders/sky-B-r2ask/10-word-meadow-scene-320x568.png 4d3317e8f7c1caa2f598319aa0404968
+- carried: ./renders/sky-B-r2ask/10-word-meadow-scene-375x812.png 5937e0885790bb7c4e3be67c706209e0
+- carried: ./renders/sky-B-r2ask/10-word-meadow-scene-390x844.png 522bc8d439604e5e9d4d382aa3b475d6
+- carried: ./renders/sky-B-r2ask/14-reveal-gentle-retry-320x568.png 908396a41a0f4a353256de5d7de96ee8
+- carried: ./renders/sky-B-r2ask/14-reveal-gentle-retry-375x812.png 3c452315de5d1485ca4147edfd084295
+- carried: ./renders/sky-B-r2ask/14-reveal-gentle-retry-390x844.png 3be73b0b004d695d2719321bc44a297f
+- carried: ./renders/sky-B-r2ask/21-kitchen-say-it-shown-320x568.png 0c232f2a690955dd5e518d3f1a7f5252
+- carried: ./renders/sky-B-r2ask/21-kitchen-say-it-shown-375x812.png ae83be41e5cb58e6496672e1952beb5e
+- carried: ./renders/sky-B-r2ask/21-kitchen-say-it-shown-390x844.png 8fd03a6fa6182c77daaa16a883a74276
+- carried: ./renders/sky-B-r2ask/22-kitchen-server-talk-320x568.png e362a31370d960f120288b4904d156f6
+- carried: ./renders/sky-B-r2ask/22-kitchen-server-talk-375x812.png 6414861bc4bc4580f1cf9c967326f0b5
+- carried: ./renders/sky-B-r2ask/22-kitchen-server-talk-390x844.png a74240a2498ec5d0ece0120bd85a2c32
+- carried: ./renders/sky-B-r2ask/23-level-up-reward-320x568.png 26e0547e1b203b3e5ebb7d1b813dd03c
+- carried: ./renders/sky-B-r2ask/23-level-up-reward-375x812.png e9a215b3f0445ca0dac966024ba2ae75
+- carried: ./renders/sky-B-r2ask/23-level-up-reward-390x844.png 181fa70f8efe467e8b66c197307dc30c
+- carried: ./renders/sky-B-r2ask/33-say-it-baby-hospital-reply-320x568.png 0429e7bf3185fe236c5bbb68be29e0ac
+- carried: ./renders/sky-B-r2ask/33-say-it-baby-hospital-reply-375x812.png f50c7fb5d4d1336b17eb43eb09479558
+- carried: ./renders/sky-B-r2ask/33-say-it-baby-hospital-reply-390x844.png 166ecb4262c1d23e9535693347bbe848
+- carried: ./renders/sky-B-r2ask/34-echo-forest-sound-duel-320x568.png f2d1462f5eea51a70ffcf74c802becab
+- carried: ./renders/sky-B-r2ask/34-echo-forest-sound-duel-375x812.png 0b39ec28a07c0e2ad6f9a697b95f3949
+- carried: ./renders/sky-B-r2ask/34-echo-forest-sound-duel-390x844.png 8a3c5ef133a797c55e3ffeaa196c9621
+- carried: ./renders/sky-B-r2ask/35-sound-duel-right-320x568.png 2f5f5236ea6f8997f823fc943b0ebd98
+- carried: ./renders/sky-B-r2ask/35-sound-duel-right-375x812.png 4ae386f5ce9a9ca298ed883b561ea24b
+- carried: ./renders/sky-B-r2ask/35-sound-duel-right-390x844.png 114f239e635e2b19c0c6749409b438c6
+- carried: ./renders/sky-B-r2ask/36-sound-duel-round-done-320x568.png 9ef5211ec73ce6a916ca153f5af95848
+- carried: ./renders/sky-B-r2ask/36-sound-duel-round-done-375x812.png 68d20669254fa2b0efd174c6c8980abf
+- carried: ./renders/sky-B-r2ask/36-sound-duel-round-done-390x844.png 1742b291378c64ff5533d6bd6cbc7935
+- carried: ./renders/sky-B-r2ask/54-phrase-ask-card-320x568.png 2be53d78599d654355c11b24608e1a67
+- carried: ./renders/sky-B-r2ask/54-phrase-ask-card-375x812.png 1917c16bd2be3763ef629af2bf59d933
+- carried: ./renders/sky-B-r2ask/54-phrase-ask-card-390x844.png 14ade1839065a66003a1aca9c810539c
+- carried: ./renders/sky-B-r2ask/html/10-word-meadow-scene-320x568.html 19cb50277a86de1101fcb752d0f0d4d6
+- carried: ./renders/sky-B-r2ask/html/10-word-meadow-scene-375x812.html 81d860edfbb3e37a8a0310d8d86dc169
+- carried: ./renders/sky-B-r2ask/html/10-word-meadow-scene-390x844.html 280e4d50e29f1f1bd73bb1dbe17fc72a
+- carried: ./renders/sky-B-r2ask/html/14-reveal-gentle-retry-320x568.html 6d2b199fa8c915b5b5f0b6eda8883364
+- carried: ./renders/sky-B-r2ask/html/14-reveal-gentle-retry-375x812.html e96da93a040b2be695c4f9394a02c298
+- carried: ./renders/sky-B-r2ask/html/14-reveal-gentle-retry-390x844.html 6400cb75148c103421f8056bf8081b8f
+- carried: ./renders/sky-B-r2ask/html/21-kitchen-say-it-shown-320x568.html 97a102294c2a861e9d4c9652928d3f67
+- carried: ./renders/sky-B-r2ask/html/21-kitchen-say-it-shown-375x812.html a55b297ac51d108db8bf635123ecd7a2
+- carried: ./renders/sky-B-r2ask/html/21-kitchen-say-it-shown-390x844.html 5f286ce8449c5ee253d293d63cd2b5fb
+- carried: ./renders/sky-B-r2ask/html/22-kitchen-server-talk-320x568.html 1cebd0c03076b0f174a7198ef112c851
+- carried: ./renders/sky-B-r2ask/html/22-kitchen-server-talk-375x812.html d9b3812255d71a6a8643419b7909adc3
+- carried: ./renders/sky-B-r2ask/html/22-kitchen-server-talk-390x844.html e11374dbdc451fd5d8dd919115a684f7
+- carried: ./renders/sky-B-r2ask/html/23-level-up-reward-320x568.html 1eb587b584b0371ade1050f0eaf3b4c6
+- carried: ./renders/sky-B-r2ask/html/23-level-up-reward-375x812.html f1ad2e64e6c4fa627c70e4a18270b8b2
+- carried: ./renders/sky-B-r2ask/html/23-level-up-reward-390x844.html 4f33ddc809e430d916eeb7e9cb4b5795
+- carried: ./renders/sky-B-r2ask/html/33-say-it-baby-hospital-reply-320x568.html ea6a23b9d28f5669fed2d47bb7559ef3
+- carried: ./renders/sky-B-r2ask/html/33-say-it-baby-hospital-reply-375x812.html 1dd4fd3f4b7bc83b554d55934c757a99
+- carried: ./renders/sky-B-r2ask/html/33-say-it-baby-hospital-reply-390x844.html 73f2a10a4f7ddeb75c5fd07b3a3390d9
+- carried: ./renders/sky-B-r2ask/html/34-echo-forest-sound-duel-320x568.html f35d4136e8f9e90b79709c6ed8f0d445
+- carried: ./renders/sky-B-r2ask/html/34-echo-forest-sound-duel-375x812.html ccf33f6275b9d2a382f48af16f9c6581
+- carried: ./renders/sky-B-r2ask/html/34-echo-forest-sound-duel-390x844.html 38ccdd5c539babaf4f911a66e41a5e67
+- carried: ./renders/sky-B-r2ask/html/35-sound-duel-right-320x568.html e4226262473c7e0b32a85b636b12715e
+- carried: ./renders/sky-B-r2ask/html/35-sound-duel-right-375x812.html 803e28712d38a9a95f437164c6e77908
+- carried: ./renders/sky-B-r2ask/html/35-sound-duel-right-390x844.html 728bcbbad64aa35df4d09d7a8198a16b
+- carried: ./renders/sky-B-r2ask/html/36-sound-duel-round-done-320x568.html 354d95d3fe0357e30af3a457899a2821
+- carried: ./renders/sky-B-r2ask/html/36-sound-duel-round-done-375x812.html f8157441be54c3194615585bd0341373
+- carried: ./renders/sky-B-r2ask/html/36-sound-duel-round-done-390x844.html 8427b91c47772b5d295d013ce68df209
+- carried: ./renders/sky-B-r2ask/html/54-phrase-ask-card-320x568.html f484569d7b1ff32ab2d670978a6a2630
+- carried: ./renders/sky-B-r2ask/html/54-phrase-ask-card-375x812.html 5e197df99963fa9e869e9243aa01e2e9
+- carried: ./renders/sky-B-r2ask/html/54-phrase-ask-card-390x844.html 9d9c03cb2fb5e3afb8d687dee2d1976e
+- carried: ./renders/sky-B-r2ask/html/zone-fields-ask-320x568.html 4da2a44e22340f7ff82a90eea586bcb2
+- carried: ./renders/sky-B-r2ask/html/zone-fields-ask-375x812.html 5001537a7e869b4994e1d122407ba5ea
+- carried: ./renders/sky-B-r2ask/html/zone-fields-ask-390x844.html ef78cb4e5017b9447a86cdca564048a6
+- carried: ./renders/sky-B-r2ask/html/zone-forest-ask-320x568.html f6d8fd7c3388de526488a1bd84e77999
+- carried: ./renders/sky-B-r2ask/html/zone-forest-ask-375x812.html 192f8a5d463c194138407329f183d985
+- carried: ./renders/sky-B-r2ask/html/zone-forest-ask-390x844.html cda6571f712602f49a4089da1f5222e2
+- carried: ./renders/sky-B-r2ask/html/zone-lake-ask-320x568.html 1178168e96c488d056a6979c66975b97
+- carried: ./renders/sky-B-r2ask/html/zone-lake-ask-375x812.html 1ac2ae3e09d29167aec3a4039fde8b8b
+- carried: ./renders/sky-B-r2ask/html/zone-lake-ask-390x844.html 166581b3c3c900e201bd6d27d769d6fd
+- carried: ./renders/sky-B-r2ask/html/zone-meadow-ask-320x568.html 681bbc34a88cb8f5b248621731825af7
+- carried: ./renders/sky-B-r2ask/html/zone-meadow-ask-375x812.html 419e125d2019b09701d5e7817d2557f5
+- carried: ./renders/sky-B-r2ask/html/zone-meadow-ask-390x844.html 280e4d50e29f1f1bd73bb1dbe17fc72a
+- carried: ./renders/sky-B-r2ask/measure390.json 13ebf2016860ff1371c4cc90ae0a9db3
+- carried: ./renders/sky-B-r2ask/zone-fields-ask-320x568.png 59580a9868b12448460a4f23abc6e7a0
+- carried: ./renders/sky-B-r2ask/zone-fields-ask-375x812.png 7f82775c181892c682acfcc5d1ba3ce2
+- carried: ./renders/sky-B-r2ask/zone-fields-ask-390x844.png f008055c445628236aec7a43eee067c2
+- carried: ./renders/sky-B-r2ask/zone-forest-ask-320x568.png aa1fe503c72e3d5ac6ebc652a6edbdd2
+- carried: ./renders/sky-B-r2ask/zone-forest-ask-375x812.png 3711be18dd6fd5df8f31e8d47edb16d0
+- carried: ./renders/sky-B-r2ask/zone-forest-ask-390x844.png d468ddd4988e9022c31a37b36d445b7e
+- carried: ./renders/sky-B-r2ask/zone-lake-ask-320x568.png 9f975b36f1e7f624912a903d4d57fae7
+- carried: ./renders/sky-B-r2ask/zone-lake-ask-375x812.png e574f2bd8cd5b7b9e870bb62302b5adc
+- carried: ./renders/sky-B-r2ask/zone-lake-ask-390x844.png 320f8aeb4ff9d0bc134a0ced433e776a
+- carried: ./renders/sky-B-r2ask/zone-meadow-ask-320x568.png 4d3317e8f7c1caa2f598319aa0404968
+- carried: ./renders/sky-B-r2ask/zone-meadow-ask-375x812.png 5937e0885790bb7c4e3be67c706209e0
+- carried: ./renders/sky-B-r2ask/zone-meadow-ask-390x844.png 522bc8d439604e5e9d4d382aa3b475d6
+- carried: ./renders/walk24/W24-walk-B-320x568.png 86ea4312d133a2219b9912ef50e869ec
+- carried: ./renders/walk24/W24-walk-B-375x667.png 8fb5c3f515398a637549d2a414e62ffe
+- carried: ./renders/walk24/W24-walk-B-390x844.png 3685711d4a38314794a5519559e47177
+- stage-new: ./reports/STAGE-POINTER-trial.txt 32e9e360fc61c6b6ca48a9e2e6f2d28a
+- stage-new: ./reports/cdp_checks-2728.txt 62e44725c0ea1dce41125b32e01e458e
+- stage-new: ./reports/cdp_checks-full.txt 224a770ac040f07d1a322e10dacb56b8
+- stage-new: ./reports/chk1B-rerun.log d34a7c6f08e50c986906e1df53ed3b68
+- carried: ./reports/dom_r2d.log eeb3a39a9769104a5862c2c14eee4774
+- carried: ./reports/dom_r2d2.log 6a001fcb107daf8d0a7d8542f68576b1
+- stage-new: ./reports/gc-after.txt a7777d032d316ff12cb4b6a94d10aed9
+- stage-new: ./reports/ground_check-W24-f46a2d29.txt 1b8e7acb123930b3a4bf5ecc63543552
+- stage-new: ./reports/ground_check-f46a2d29.txt 02f3da0fee6daae5917212776361cb48
+- stage-new: ./reports/ground_check-maps-f46a2d29.txt f4755f0a3f881e31e824b23c6ccbf4a2
+- stage-new: ./reports/ground_check-menuflowers-f46a2d29.txt af2eaf207a2e13cbdad7be7c81c9dac6
+- stage-new: ./reports/ground_check-t527u-f46a2d29.txt eec1402981b09f8f192b59e44363ca6d
+- stage-new: ./reports/ground_check-v2-13fc304c.txt 755b7dc5fa9711eb7dbf411522697cc2
+- stage-new: ./reports/ground_check-verse2944-f46a2d29.txt 683e3828eacd024265623c647cb53a12
+- carried: ./reports/occl_g15.log 3b15989e67cafa1723c5adc259e96022
+- carried: ./reports/occl_r2d.log a4b937c7d62ca65c8cfaa5512c401f28
+- carried: ./reports/occl_r2d2.log d463c1216f90d033f61c5180b9a5138e
+- carried: ./reports/r2e/checks1A.log 937cce356baad505e9caa09badb1c8a3
+- carried: ./reports/r2e/checks1B.log 14995e7015f4ccc8a639f635903b2217
+- carried: ./reports/r2e/fit_r2e.md bff52890e70f758a70104a8693446d17
+- carried: ./reports/r2e/ft1A.md e4d51b27934fa8a75a08f51a5285ec43
+- carried: ./reports/r2e/ft1B.md 2e61a9bf7e1b9cc24190a1b90f5f5a17
+- carried: ./reports/r2e/nodelete.log 576b8e7249514cf90bb4261322752d1b
+- carried: ./reports/r2e/second-count.txt d12e9d57a2c3e91874ac9e1b69584b48
+- stage-new: ./reports/sendguard-f46a2d29.txt 30df68cffe17b5bd12864220f89b1122
+- stage-new: ./reports/sendguard-hold-f46a2d29.txt eb238df32fdc27d838f444f68a12f84e
+- stage-new: ./reports/sendguard-livepointer.txt f9baaa0016baa4a0d88784e0d0bc0b92
+- stage-new: ./reports/sendguard-maps-f46a2d29.txt 827ef354f7241d01869b1a01cee029dc
+- stage-new: ./reports/sendguard-menuflowers-f46a2d29.txt acaa5064cb8c42e150ad9d97c63a9dd5
+- stage-new: ./reports/sendguard-qmcut-f46a2d29.txt 3f783efc9699cbc91d859516c795f989
+- stage-new: ./reports/sendguard-t527u-f46a2d29.txt d9b33be817055d733e8a7f765dbc1c31
+- stage-new: ./reports/sendguard-v2-13fc304c.txt 8cc31bebd80a6d4989ce61d40e7032fb
+- stage-new: ./reports/sendguard-verse2944-f46a2d29.txt 3a5ecb0f31d092ec8cebbd5af17d7699
+- stage-new: ./reports/sg_v2.py 97980a0e0bc6a9d72d79a29338100627
+- carried: ./reports/sgp_r2d5.log c4cb17f98f6920935bf21249724e7695
+- carried: ./reports/stage-r2d2.log dfee96a01caf14a514e0f3537e239faa
+- stage-new: ./reports/t527u-pages-md5.txt 63388bd7357120c0a83fce6f703162b7
+- stage-new: ./reports/text_check-37-9c433cba.txt abc9e43755849fbf3907a082980980bd
+- stage-new: ./reports/text_check-4c3666d1.txt 089ee8f80aefe42f0cdb032ef3e2e757
+- stage-new: ./reports/text_check-hold-9c433cba.txt a95e94e7f5ab8e4a05a08b212d4e521f
+- stage-new: ./reports/text_check-maps-9c433cba.txt a95e94e7f5ab8e4a05a08b212d4e521f
+- stage-new: ./reports/text_check-menuflowers-9c433cba.txt 9ad9dd8a16dbb3999956f6910e2205d3
+- stage-new: ./reports/text_check-run2.txt d01815e83cd154a56661623188253279
+- stage-new: ./reports/text_check-t527u-9c433cba.txt b6855693c9e2c86e1403c2a6c80e3e47
+- stage-new: ./reports/text_check-t527u-sheets-showcase-9c433cba.txt b9b8e61dbbaef06eb12f351e3a655456
+- stage-new: ./reports/text_check-verse2944-pages-9c433cba.txt 5f1a978fff20ab01877e36604759ea69
+- stage-new: ./reports/text_check-verse2944-sheets-showcase-9c433cba.txt 83316578648aa775d6428d68a771fc89
+- stage-new: ./reports/tuft_check-maps-b19579ac.txt b5c740e010e24859619108359eb8fb3f
+- stage-new: ./reports/tuft_check-pre-t527u-b19579ac.txt abbba5fe4bbf382afd953ebc4a39161b
+- stage-new: ./reports/tuft_check-t527u-b19579ac.txt dc1a43ace3934d8affd0a8e222aad42b
+- carried: ./round2.py 2105fb5d71bac8c3d9a85f4a4d8b0746
+- carried: ./round_totals.py d6aebb2cb1011c9506f10ee714819ebd
+- stage-new: ./scene-fill-20261101/FIXLOG.md 391a63b7fad17e128e1401acf8a6bf35
+- stage-new: ./scene-fill-20261101/MANIFEST.md5 6848a5e0246f576d60cd238f639333e4
+- stage-new: ./scene-fill-20261101/README.md 3d4cbcb347960d8c1387ee5d474cdf4c
+- stage-new: ./scene-fill-20261101/code/__pycache__/cdp_shot.cpython-313.pyc 2244be6f9cd38a451890e3fd614a5af3
+- stage-new: ./scene-fill-20261101/code/cdp_shot.py 7a115ec23d75c658fe800629beeb72d2
+- stage-new: ./scene-fill-20261101/code/fill.py 93010a9231cb1de311220af98fb9a1a8
+- stage-new: ./scene-fill-20261101/code/fixlog-fill.txt 8879286253b68b24db83e5f2129362ed
+- stage-new: ./scene-fill-20261101/code/fixlog.py a41316b3422e25d353c3b42f24ed979e
+- stage-new: ./scene-fill-20261101/code/inventory_update.py b8ff2343c1fd50d6b2484d013b1c5c39
+- stage-new: ./scene-fill-20261101/code/jobs-E.json 577d4076c09e1a114e2d5b39a350d3d3
+- stage-new: ./scene-fill-20261101/code/jobs-menu.json c83fb332f5bbc8298ecf96aedaebb626
+- stage-new: ./scene-fill-20261101/code/jobs-menu390.json b1ceeee34c61143fcdfa5a552e6e0d1a
+- stage-new: ./scene-fill-20261101/code/jobs-rest.json a7f02fbadf1bc7eaa54f52429dcb50be
+- stage-new: ./scene-fill-20261101/code/jobs.json f708f2841f17b93d7d0fd9bc14917d8c
+- stage-new: ./scene-fill-20261101/code/menu.py 9dc0d3ad6ccb9733a6e4f6369140bc4f
+- stage-new: ./scene-fill-20261101/code/rest.py 525ab98722e6cf7396a7f476a7e1f78e
+- stage-new: ./scene-fill-20261101/code/sheets.py 4c9cdfd1b9fbdbcd6f44d0282791c7cb
+- stage-new: ./scene-fill-20261101/code/shoot.py 24891d2e317ba2c539cf2271f1fd6623
+- stage-new: ./scene-fill-20261101/html/E-front-desk-a-320x568.html f3d39e351b22dc9c0679427bfdcfee5d
+- stage-new: ./scene-fill-20261101/html/E-front-desk-a-390x844.html 88c0b199adec7d609584d0d90dc1ba7c
+- stage-new: ./scene-fill-20261101/html/E-front-desk-base-320x568.html 8d8f52e3f4ff7a4025c8512b0c4db0cf
+- stage-new: ./scene-fill-20261101/html/E-front-desk-base-390x844.html 3936ddf17607ea1d6c6ef521c6f7af5d
+- stage-new: ./scene-fill-20261101/html/E-front-desk-d-320x568.html a9b5581478808615d161a9ac3e3ba068
+- stage-new: ./scene-fill-20261101/html/E-front-desk-d-390x844.html e933deae55e442e1234a98e939f28231
+- stage-new: ./scene-fill-20261101/html/E-front-desk-e-320x568.html 13211a196f137d1c02174722afc37ae7
+- stage-new: ./scene-fill-20261101/html/E-front-desk-e-390x844.html a38e39939feb6a406fe4210f158848e2
+- stage-new: ./scene-fill-20261101/html/E-front-desk-m-320x568.html 2eded43f2eb6e6becd8a031331d3f8f5
+- stage-new: ./scene-fill-20261101/html/E-front-desk-m-390x844.html f31e70ed49d82738b4329f32ecfe4b9a
+- stage-new: ./scene-fill-20261101/html/E-front-desk-n-320x568.html 1ac1d5650b3e7da570c864cfb4983f20
+- stage-new: ./scene-fill-20261101/html/E-front-desk-n-390x844.html be1c433e92a86219a4dae924a52874ef
+- stage-new: ./scene-fill-20261101/html/F-kitchen-a-320x568.html e245091a267dd530f93a6ac5a3c1411f
+- stage-new: ./scene-fill-20261101/html/F-kitchen-a-390x844.html 49d18e04a21fe5029edc7be8800ca36b
+- stage-new: ./scene-fill-20261101/html/F-kitchen-d-320x568.html 9c6e7b0b84a05c3e2ee9d5fcc90c1073
+- stage-new: ./scene-fill-20261101/html/F-kitchen-d-390x844.html 87a0d0a4f80409825e8e049b6d479346
+- stage-new: ./scene-fill-20261101/html/F-kitchen-e-320x568.html 31719120c4ed303635562bc53788de9a
+- stage-new: ./scene-fill-20261101/html/F-kitchen-e-390x844.html 3848cdc354f17c26612c526ba5065906
+- stage-new: ./scene-fill-20261101/html/F-kitchen-m-320x568.html bf24dbd7d9669c43534670cbc314e292
+- stage-new: ./scene-fill-20261101/html/F-kitchen-m-390x844.html 2aae4d5c6072705eb6a03c7e23259b4c
+- stage-new: ./scene-fill-20261101/html/F-kitchen-n-320x568.html 46c190f19f521dc02728bbc925539ff8
+- stage-new: ./scene-fill-20261101/html/F-kitchen-n-390x844.html 79ca6cb28917e7acf1961cb529393f65
+- stage-new: ./scene-fill-20261101/html/farm-d-320x568.html 0733415fc2ae49051d484b698df480fd
+- stage-new: ./scene-fill-20261101/html/farm-d-390x844.html 9ae072e4ea10f04d6aa18e0878245be7
+- stage-new: ./scene-fill-20261101/html/farm-e-320x568.html cd889014db6781756de31aba4a6832eb
+- stage-new: ./scene-fill-20261101/html/farm-e-390x844.html acb335d213377844ce095821ebe2537c
+- stage-new: ./scene-fill-20261101/html/farm-m-320x568.html e585100bee57fbc39b179e18e52ec8a9
+- stage-new: ./scene-fill-20261101/html/farm-m-390x844.html 0219782ce447e0a96f99e925c0c6fd06
+- stage-new: ./scene-fill-20261101/html/farm-n-320x568.html 981b04db1c3c4fcf974d5f13a39f1454
+- stage-new: ./scene-fill-20261101/html/farm-n-390x844.html 15d0a7d2b59ad2c528b00d2c85955cb2
+- stage-new: ./scene-fill-20261101/html/home-a-320x568.html bd84f55f110fd4f98c665f5cb1e3fc24
+- stage-new: ./scene-fill-20261101/html/home-a-390x844.html 5eacd98dbffd55262c5984e59504732a
+- stage-new: ./scene-fill-20261101/html/home-d-320x568.html c6c1db8175287aa42049caef69105f29
+- stage-new: ./scene-fill-20261101/html/home-d-390x844.html d57676f2980c9285ad9b24d58215f706
+- stage-new: ./scene-fill-20261101/html/home-e-320x568.html cb3b65774695f01cb5a99da6c04ed375
+- stage-new: ./scene-fill-20261101/html/home-e-390x844.html 1096dd9b0e9d3774e2d80ebb03212fc4
+- stage-new: ./scene-fill-20261101/html/home-m-320x568.html 9196a86468cca34da2be6a2ac74146c5
+- stage-new: ./scene-fill-20261101/html/home-m-390x844.html aaa3db12db285855fcc16c4c74a4789b
+- stage-new: ./scene-fill-20261101/html/home-n-320x568.html 3ad8627a67251a02df6a066c9c1352c4
+- stage-new: ./scene-fill-20261101/html/home-n-390x844.html b4651c55c16b6708e0181a5cf2863132
+- stage-new: ./scene-fill-20261101/html/menu-M1-e-320x568.html bf63b7185ba3532826c573bdcef132d4
+- stage-new: ./scene-fill-20261101/html/menu-M1-e-390x844.html d749315c3f111895ed8d81ff0a1e5f10
+- stage-new: ./scene-fill-20261101/html/menu-M1-n-320x568.html cab7da18c86700da82107b0a4bb9f6be
+- stage-new: ./scene-fill-20261101/html/menu-M1-n-390x844.html 37e9ef4d9f5f705341752583719bbd3f
+- stage-new: ./scene-fill-20261101/html/menu-M3-e-320x568.html 9dd8bb1468c35f3fa738a94e400af098
+- stage-new: ./scene-fill-20261101/html/menu-M3-e-390x844.html 168f40728dcc2cfd467252bad4f1e636
+- stage-new: ./scene-fill-20261101/html/menu-M3-n-320x568.html 909809b0490fe6fb5e4a1c8b98ff18fa
+- stage-new: ./scene-fill-20261101/html/menu-M3-n-390x844.html a3926ed6e392e98df51eb6ca98aef3ae
+- stage-new: ./scene-fill-20261101/html/park-a-320x568.html 366302012bfc4eba29ea9a0a900000c3
+- stage-new: ./scene-fill-20261101/html/park-a-390x844.html 1ddf470ecfe5f9064b0888873600b84b
+- stage-new: ./scene-fill-20261101/html/park-d-320x568.html 6e8e1a289e8e4689692fe0cdfb2621e2
+- stage-new: ./scene-fill-20261101/html/park-d-390x844.html 6e47563a1ab7cad993feba2fb15c8647
+- stage-new: ./scene-fill-20261101/html/park-e-320x568.html 4c3d0457d00425106b67e3366e9a19ef
+- stage-new: ./scene-fill-20261101/html/park-e-390x844.html 53feb6b9307cfb1fc5050bfbfb32ba5e
+- stage-new: ./scene-fill-20261101/html/park-n-320x568.html 66e2bed19e76ece6d3520a2f2463b7a8
+- stage-new: ./scene-fill-20261101/html/park-n-390x844.html dbbde506a259caafa7479349e9c90328
+- stage-new: ./scene-fill-20261101/html/pond-a-320x568.html dabc31e0fd954d073a78286b91bfdf41
+- stage-new: ./scene-fill-20261101/html/pond-a-390x844.html 0acb8df6faf93e3a8fe4934cad4a4cb5
+- stage-new: ./scene-fill-20261101/html/pond-d-320x568.html 87110a93cfdf28405f70ae01ea5a2f33
+- stage-new: ./scene-fill-20261101/html/pond-d-390x844.html 232cb8894044eabde62b2cd1b105eab6
+- stage-new: ./scene-fill-20261101/html/pond-m-320x568.html 7c3ebf0ea112be49146669fff6f645ba
+- stage-new: ./scene-fill-20261101/html/pond-m-390x844.html e3ce0b4ca2a88fe69285701fad1b73f9
+- stage-new: ./scene-fill-20261101/html/pond-n-320x568.html 3bff807c56a5878bd82cd19603483821
+- stage-new: ./scene-fill-20261101/html/pond-n-390x844.html a8007376d6b949e429bf68825beb7d5c
+- stage-new: ./scene-fill-20261101/html/rest-base-320x568.html 79e9ff82419af0d190ffdce6d5da4615
+- stage-new: ./scene-fill-20261101/html/rest-starry-320x568.html 588051f80c88c32ccbf4dfe4cdd61158
+- stage-new: ./scene-fill-20261101/html/rest-starry-390x844.html 676b865f93f0a0540aa4eefb49b15bfb
+- stage-new: ./scene-fill-20261101/html/rest-sunset-320x568.html 3ffbc3ae8c14fcd56bba99ad4c801505
+- stage-new: ./scene-fill-20261101/html/rest-sunset-390x844.html a80638485d0bb04e4547dfbdc62943cb
+- stage-new: ./scene-fill-20261101/html/title-a-320x568.html 01514fb2d7896ecfc4a788f6ce2c551a
+- stage-new: ./scene-fill-20261101/html/title-a-390x844.html 8cf609c0aabf82613aac5707aeb902d5
+- stage-new: ./scene-fill-20261101/html/title-e-320x568.html 18057fbb9ad5a488c38da280b62fe0af
+- stage-new: ./scene-fill-20261101/html/title-e-390x844.html e9dc331b8d181098dd3485df4822e98d
+- stage-new: ./scene-fill-20261101/html/title-n-A-320x568.html 28accb2702cc25e8741f9c22c2bf5bfa
+- stage-new: ./scene-fill-20261101/html/title-n-B-320x568.html 94b697c04c5074198c5ec583fd8eb285
+- stage-new: ./scene-fill-20261101/renders-MANIFEST.md5 08be71de75a1362a3d9b5ccaaaad5f93
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-a-320x568.json b68465221641ac48a4b91dc57b752a77
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-a-320x568.png d57dd1250b7b93fd1c0b775544e7e287
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-a-320x568.sources.txt 58a809b7a749153bbfcba171a2e3cd89
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-a-390x844.json f06d25a5404809c910274eacadd2eac8
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-a-390x844.png b207ceec131d6cffb5d9a4551e996643
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-a-390x844.sources.txt e975f40d670522d7a21fe9cfcd06bb83
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-base-320x568.json 16e9d2e14d3287dde62b716e35ccc15c
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-base-320x568.png c4145646e874017a7f50441d6c74b52d
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-base-320x568.sources.txt a7fb93243639daf8936b1d8aa0eddc6e
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-base-390x844.json dfcd22ff5ac27c544527ec6f408df796
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-base-390x844.png 922d0799d7dcd39c3a1ffd3438f529a1
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-base-390x844.sources.txt e97f4bfd9cab82705ae8575101c81a67
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-d-320x568.json 1a96f75d4f20852165b7030efafecb6d
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-d-320x568.png 47f07167bea67606a36cf9526d17e675
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-d-320x568.sources.txt 666baaf3157f022065d1381f2b3fdea3
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-d-390x844.json 53e03b115384aa5ccbb71fe0e5961f05
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-d-390x844.png 3a33a140550481ac4edc10780030fafc
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-d-390x844.sources.txt a64bdbdd51c5921b50603c30fce6ff7f
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-e-320x568.json 5d862aafb19a36ad537ea5147fb7cf29
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-e-320x568.png 49ebd3cbd50f0c515632488f4e11767b
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-e-320x568.sources.txt 9eef17071f13cb08837175b11bab75e2
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-e-390x844.json 5a0ce72ced8588a427dff504354a774b
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-e-390x844.png ecbb893c8984d76fbb64a378870afa84
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-e-390x844.sources.txt 5de170017574d10865008d36a233e9b3
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-m-320x568.json df99d644fa3de3d35ba2101023ad3e87
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-m-320x568.png 57c5180f3a256b7b46edfa9a3f30795f
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-m-320x568.sources.txt cec37b0d86749afcea0231f36b693c0f
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-m-390x844.json aecf6ffa71e8db6add7111e11e78c679
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-m-390x844.png d410a70cdb9d591652f629ccf91a8d1e
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-m-390x844.sources.txt c9a2d5fa2c2741425abf67d507606f9e
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-n-320x568.json a8edf0f6f7f950f7cd8f2ded759b105c
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-n-320x568.png 4ae739137737fb0d693c5fb15bdfc344
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-n-320x568.sources.txt 8d162f046fd9f9c2e880883f6717f635
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-n-390x844.json 9ef8336b00c50cd1e40765f838a7fdc4
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-n-390x844.png db273d041e950dc8cefbd8cf2a3d1b86
+- stage-new: ./scene-fill-20261101/renders/E-front-desk-n-390x844.sources.txt 278ff22392e3bb81797c07729202786f
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-a-320x568.json afb9459a3e92a398d12062c57676b235
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-a-320x568.png e6505f7e8e8bfed26f2d70cdb1f0be15
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-a-320x568.sources.txt d8c095744df62e0795e6eef19b74fd8d
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-a-390x844.json a389fcc06bfb8d9bee5ad6a76e7e56c5
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-a-390x844.png ffa6b7ed0bf826b6dc28f4bac4f66b19
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-a-390x844.sources.txt 5ed8023a76351f5fc251ea834a641f98
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-d-320x568.json 5bbe30948587562e0bd86acd507a7adb
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-d-320x568.png 953e425bc7c7c40d51188c442292d1dd
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-d-320x568.sources.txt 0efbd49755b93db849accc168465235a
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-d-390x844.json 3c428ffbad1171963005c0f0317bc883
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-d-390x844.png 7b05cb1dcc01a610cc00e8f8386b8c14
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-d-390x844.sources.txt 4fdb4a28b741a91ca6448e98cb56f9b9
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-e-320x568.json e21c14e65479e2532575863b4a52c8be
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-e-320x568.png cee5e67eb8eaa04f36263d28527b2593
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-e-320x568.sources.txt 61154114b79ab3d3293e3fb9b39fd40e
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-e-390x844.json 0b0c0ade075048c010ca955d7c4f2c52
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-e-390x844.png 80b4a862f1b2cda6b5b81aec554f3ff2
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-e-390x844.sources.txt c9af92c6a9f4f4a0e661cb3e8cf0de29
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-m-320x568.json 97cdb2138ceef3ba2bbae468cb78b9d4
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-m-320x568.png 0e082e8cc8c50e4553df643482ef0ce1
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-m-320x568.sources.txt 0b81aeb7144c81bf5559a82a16a3f40c
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-m-390x844.json 019748c9ba841f62f194868e1899f64f
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-m-390x844.png c0f79c3eb71f32b8a342db03febccef3
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-m-390x844.sources.txt 37816e9e8dc2def2865bbf56e3801332
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-n-320x568.json c3a57267550b35fb2effd3ef06a7ec3e
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-n-320x568.png c7f5e52aa17014826f6375e52b3b7ca9
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-n-320x568.sources.txt 8184614e734cd91eca916f70a6845d41
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-n-390x844.json 19bb8932b27e1a820e7e3f0c7e8e0bbc
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-n-390x844.png efad28581512ea23019d8d1d25036340
+- stage-new: ./scene-fill-20261101/renders/F-kitchen-n-390x844.sources.txt 36e78013adb45434580ec121940ecf27
+- stage-new: ./scene-fill-20261101/renders/farm-d-320x568.json 58c2db796c14a6ef68ca9f7f0d790a30
+- stage-new: ./scene-fill-20261101/renders/farm-d-320x568.png 779b95246511f31d34af0e3bcb6ebb58
+- stage-new: ./scene-fill-20261101/renders/farm-d-320x568.sources.txt 260808cd65737fd3c436e453bbfeb3b0
+- stage-new: ./scene-fill-20261101/renders/farm-d-390x844.json 39c0dbd7096cd033563f80122bb79e0a
+- stage-new: ./scene-fill-20261101/renders/farm-d-390x844.png 8b1292a9dac9bd2420af804d956b1a01
+- stage-new: ./scene-fill-20261101/renders/farm-d-390x844.sources.txt 51d5d8775d26d11b24ad154fcf0e441f
+- stage-new: ./scene-fill-20261101/renders/farm-e-320x568.json 2c74909f92c5ee7c07008afcd9ca6627
+- stage-new: ./scene-fill-20261101/renders/farm-e-320x568.png 13f2dbf8da3644c30a863669d4c0a0b1
+- stage-new: ./scene-fill-20261101/renders/farm-e-320x568.sources.txt fb8c4cd2d94187d303e2426d274928d4
+- stage-new: ./scene-fill-20261101/renders/farm-e-390x844.json 9c74a0b68875f12fe467312c4621f777
+- stage-new: ./scene-fill-20261101/renders/farm-e-390x844.png afd04eb85131be610458d860ee6b8c71
+- stage-new: ./scene-fill-20261101/renders/farm-e-390x844.sources.txt 590e43693f2f2b2b4c15ee8b7e5e9253
+- stage-new: ./scene-fill-20261101/renders/farm-m-320x568.json 13687f9e020a82b5b5fc8bf28233e85c
+- stage-new: ./scene-fill-20261101/renders/farm-m-320x568.png 5e838dfb0e4c135142ef777bf68565bd
+- stage-new: ./scene-fill-20261101/renders/farm-m-320x568.sources.txt 21a5b3a861054a99fa0814c03ca73add
+- stage-new: ./scene-fill-20261101/renders/farm-m-390x844.json fcc82128be7123c7cdff7a6e21b09b65
+- stage-new: ./scene-fill-20261101/renders/farm-m-390x844.png 285904cbca714393b416c6da2139f731
+- stage-new: ./scene-fill-20261101/renders/farm-m-390x844.sources.txt 3fee51090853518a25b5bed425c619de
+- stage-new: ./scene-fill-20261101/renders/farm-n-320x568.json ba1812f31aa6ceba8470ba31ff0df838
+- stage-new: ./scene-fill-20261101/renders/farm-n-320x568.png c39373461ef27322f3408651a25951e5
+- stage-new: ./scene-fill-20261101/renders/farm-n-320x568.sources.txt 1f15ce7331eda124a1e7f965579e784f
+- stage-new: ./scene-fill-20261101/renders/farm-n-390x844.json e78340f15ba9b3f38775f6e5c3bb8151
+- stage-new: ./scene-fill-20261101/renders/farm-n-390x844.png 5672dc321a37a456fbac0eb0a638c22b
+- stage-new: ./scene-fill-20261101/renders/farm-n-390x844.sources.txt fe87955705b113f160095bb6bf054a04
+- stage-new: ./scene-fill-20261101/renders/home-a-320x568.json a133a0d813d728d8c847b8b48169f163
+- stage-new: ./scene-fill-20261101/renders/home-a-320x568.png beb5b6b9ba7f19eac4f07a8acbfe7e4d
+- stage-new: ./scene-fill-20261101/renders/home-a-320x568.sources.txt cdf50e0044ef65e0b07c419e6de58deb
+- stage-new: ./scene-fill-20261101/renders/home-a-390x844.json 67a4c7c390cb31954bfef6e5615d4ef2
+- stage-new: ./scene-fill-20261101/renders/home-a-390x844.png 691166ff423017b8004f29f178187c60
+- stage-new: ./scene-fill-20261101/renders/home-a-390x844.sources.txt a77947b301ded3931d2d6eb0c02f920e
+- stage-new: ./scene-fill-20261101/renders/home-d-320x568.json 4914688c25940642d8a097d7682754e1
+- stage-new: ./scene-fill-20261101/renders/home-d-320x568.png a9d75d2838cc0e9d84ee46bd0b5d9978
+- stage-new: ./scene-fill-20261101/renders/home-d-320x568.sources.txt 5ba6dcc60fd3cb4b8a228c5c274e6dbf
+- stage-new: ./scene-fill-20261101/renders/home-d-390x844.json 812ea6b52995c57fd0a2bbb4946ac696
+- stage-new: ./scene-fill-20261101/renders/home-d-390x844.png 2ee71f3bb1977abd071e56d03fda5744
+- stage-new: ./scene-fill-20261101/renders/home-d-390x844.sources.txt e023b4d5a08756db67174a374d7cc974
+- stage-new: ./scene-fill-20261101/renders/home-e-320x568.json 922bda69ec92f0c5c3fcd62f265594fc
+- stage-new: ./scene-fill-20261101/renders/home-e-320x568.png ad6e7e8441784d2f3e81a40ef2e0bd27
+- stage-new: ./scene-fill-20261101/renders/home-e-320x568.sources.txt 8124230e5a35b104790dd3b7057f847d
+- stage-new: ./scene-fill-20261101/renders/home-e-390x844.json 0342e3c91e7318dba99c020f50993926
+- stage-new: ./scene-fill-20261101/renders/home-e-390x844.png 477ed2b68cb0767096163176fb010a80
+- stage-new: ./scene-fill-20261101/renders/home-e-390x844.sources.txt a2631c5a1190a0bab6d55a764af3636a
+- stage-new: ./scene-fill-20261101/renders/home-m-320x568.json c2406e456ed0bad70f3c99186714688c
+- stage-new: ./scene-fill-20261101/renders/home-m-320x568.png e1adb1b4f124e2265a29aec1d6b13b2d
+- stage-new: ./scene-fill-20261101/renders/home-m-320x568.sources.txt 6024132594624e59fa95037efd491395
+- stage-new: ./scene-fill-20261101/renders/home-m-390x844.json 44adbbb4b7754f53aeee6923142e0feb
+- stage-new: ./scene-fill-20261101/renders/home-m-390x844.png cc7f27af84fd909e4760757fce04c020
+- stage-new: ./scene-fill-20261101/renders/home-m-390x844.sources.txt 89f8d126aaeba56a1c4177e4267da003
+- stage-new: ./scene-fill-20261101/renders/home-n-320x568.json 5cf956d38b95d2ce3a2f0194f2d548c6
+- stage-new: ./scene-fill-20261101/renders/home-n-320x568.png 3dce04f00f904e786fac163ccf91f1bf
+- stage-new: ./scene-fill-20261101/renders/home-n-320x568.sources.txt 011e8463c5825013dc3e528d7ccdefc4
+- stage-new: ./scene-fill-20261101/renders/home-n-390x844.json c442df984b3ebc9c4597405175c91cc9
+- stage-new: ./scene-fill-20261101/renders/home-n-390x844.png a21c5eb441aa4422b0c96a36602b72ed
+- stage-new: ./scene-fill-20261101/renders/home-n-390x844.sources.txt 29220a5f7f7cc7dbb9f668614f5941cb
+- stage-new: ./scene-fill-20261101/renders/menu-M1-e-320x568.json bc640bdd9a7ae06471377b0d119bf5ea
+- stage-new: ./scene-fill-20261101/renders/menu-M1-e-320x568.png 4c4024b9c850381447913d3d89d076fa
+- stage-new: ./scene-fill-20261101/renders/menu-M1-e-320x568.sources.txt ddf837fe8d0f4de84618be6e68a6790f
+- stage-new: ./scene-fill-20261101/renders/menu-M1-e-390x844.json bd865c8a740c17e34265e59ecc48272c
+- stage-new: ./scene-fill-20261101/renders/menu-M1-e-390x844.png f2cbd37f9d5d797e87497febbbe15890
+- stage-new: ./scene-fill-20261101/renders/menu-M1-e-390x844.sources.txt 4b4e5023db1052ddf2d37cd5edb59cd7
+- stage-new: ./scene-fill-20261101/renders/menu-M1-n-320x568.json 143aae22319d6cfc73dfe774f6a1f8a4
+- stage-new: ./scene-fill-20261101/renders/menu-M1-n-320x568.png a555d1049abc6e764c3af70e8dc11001
+- stage-new: ./scene-fill-20261101/renders/menu-M1-n-320x568.sources.txt c61cae39cb4bee5a51b61f0734045b09
+- stage-new: ./scene-fill-20261101/renders/menu-M1-n-390x844.json 2ad370150a91d417b13bc665f6979b9d
+- stage-new: ./scene-fill-20261101/renders/menu-M1-n-390x844.png b3b50a04c48f9efd05b03ac9d5c797f0
+- stage-new: ./scene-fill-20261101/renders/menu-M1-n-390x844.sources.txt b9d15e6d5f0664fdad19644c8d53b40a
+- stage-new: ./scene-fill-20261101/renders/menu-M3-e-320x568.json 9fa2c67076624b97e251f7378ce6fbae
+- stage-new: ./scene-fill-20261101/renders/menu-M3-e-320x568.png 76b82a7010c18b2bcfebfa77cc8878f3
+- stage-new: ./scene-fill-20261101/renders/menu-M3-e-320x568.sources.txt 356ad4b1ac79ce1a742ae3234264f432
+- stage-new: ./scene-fill-20261101/renders/menu-M3-e-390x844.json cf42ce47acc8df1c26623c14da651f72
+- stage-new: ./scene-fill-20261101/renders/menu-M3-e-390x844.png 1e5f42edab4173dc863b53d2cd64bd65
+- stage-new: ./scene-fill-20261101/renders/menu-M3-e-390x844.sources.txt 9536e58a6983afbd0612463acb45c5a9
+- stage-new: ./scene-fill-20261101/renders/menu-M3-n-320x568.json faaca3a03ff385b7024dc67340895182
+- stage-new: ./scene-fill-20261101/renders/menu-M3-n-320x568.png 11844595ff30b741f14dc7debfa8dc79
+- stage-new: ./scene-fill-20261101/renders/menu-M3-n-320x568.sources.txt 780c9a9cde57f6d7ab3072c962222095
+- stage-new: ./scene-fill-20261101/renders/menu-M3-n-390x844.json a9c9f5d69f5a41b75144a7ca5c4e9fff
+- stage-new: ./scene-fill-20261101/renders/menu-M3-n-390x844.png 91607963acace28bbbbf7ab49643a3e3
+- stage-new: ./scene-fill-20261101/renders/menu-M3-n-390x844.sources.txt faf3b1ed0a6baeb3d055e2c2cf0cca3b
+- stage-new: ./scene-fill-20261101/renders/park-a-320x568.json 9b0fe13ae89cb650574991ec7632bc75
+- stage-new: ./scene-fill-20261101/renders/park-a-320x568.png b7185dac3e5cc18e2ade6b633e1c89e9
+- stage-new: ./scene-fill-20261101/renders/park-a-320x568.sources.txt 5fd89e784b4e0c9537338bc73eff2e80
+- stage-new: ./scene-fill-20261101/renders/park-a-390x844.json eac0a6edec29fe6561c0598fd2d402a2
+- stage-new: ./scene-fill-20261101/renders/park-a-390x844.png 063da908c8eb28b0da09c5aed3046ac1
+- stage-new: ./scene-fill-20261101/renders/park-a-390x844.sources.txt 37eec7a2f1ca72177b2483dc42e6f40b
+- stage-new: ./scene-fill-20261101/renders/park-d-320x568.json 5f73b9fe878089209826d71cace7b87d
+- stage-new: ./scene-fill-20261101/renders/park-d-320x568.png 5a49b307ed6600ec1534e3f8946f90ba
+- stage-new: ./scene-fill-20261101/renders/park-d-320x568.sources.txt 1e9a8e16b055e29ecd00c0e48023f8dc
+- stage-new: ./scene-fill-20261101/renders/park-d-390x844.json a949b80e8569ca179d1871b336cbba60
+- stage-new: ./scene-fill-20261101/renders/park-d-390x844.png 67d6d1e000c2b8e61fa50926f97eee62
+- stage-new: ./scene-fill-20261101/renders/park-d-390x844.sources.txt 15b96084981e698c5d8a941cc403e823
+- stage-new: ./scene-fill-20261101/renders/park-e-320x568.json ef14b967bcb63101dada0cc902a49492
+- stage-new: ./scene-fill-20261101/renders/park-e-320x568.png b7f254b932a52cb2e644e1548ed219cb
+- stage-new: ./scene-fill-20261101/renders/park-e-320x568.sources.txt de5e225f6e00a3a27ae778fa54a2f5b6
+- stage-new: ./scene-fill-20261101/renders/park-e-390x844.json d4ef325895c6b375cdfdc677ee0dbffa
+- stage-new: ./scene-fill-20261101/renders/park-e-390x844.png f3de3256f0d804388d7c58db3736f39f
+- stage-new: ./scene-fill-20261101/renders/park-e-390x844.sources.txt 532aaff89e030f531205479fac573aec
+- stage-new: ./scene-fill-20261101/renders/park-n-320x568.json 2dcfa388d0c9b102118d364b8e47df81
+- stage-new: ./scene-fill-20261101/renders/park-n-320x568.png 0f600c90c930b402963d720589b4658b
+- stage-new: ./scene-fill-20261101/renders/park-n-320x568.sources.txt d4bcd75122d5f59e93d625a9b932c767
+- stage-new: ./scene-fill-20261101/renders/park-n-390x844.json 78a8351a8e2781ff254c757e88cc612a
+- stage-new: ./scene-fill-20261101/renders/park-n-390x844.png 2e567afb89865e01fb660517f98f7351
+- stage-new: ./scene-fill-20261101/renders/park-n-390x844.sources.txt d737eaf3ace96b04cc225ea9e97d916b
+- stage-new: ./scene-fill-20261101/renders/pond-a-320x568.json 8b0b55c65a9f7a2633ee28e90a594ec7
+- stage-new: ./scene-fill-20261101/renders/pond-a-320x568.png 1ad1b302cc23d22da432b855542ae46f
+- stage-new: ./scene-fill-20261101/renders/pond-a-320x568.sources.txt 26bd453d43c783f71fff1fff736f81a6
+- stage-new: ./scene-fill-20261101/renders/pond-a-390x844.json 948abc1c6ffa299ff353d5f0429fa616
+- stage-new: ./scene-fill-20261101/renders/pond-a-390x844.png 6252e27eb94ac869e62ac8e0cf9f79b5
+- stage-new: ./scene-fill-20261101/renders/pond-a-390x844.sources.txt a41d5584da51dad78556c44459f232e2
+- stage-new: ./scene-fill-20261101/renders/pond-d-320x568.json 6108c821ca68493aead0c1a354700eb5
+- stage-new: ./scene-fill-20261101/renders/pond-d-320x568.png e0747bde4966ab971b2c47b4ec4c99f8
+- stage-new: ./scene-fill-20261101/renders/pond-d-320x568.sources.txt 155575215c9ed5232dca537cc141b99f
+- stage-new: ./scene-fill-20261101/renders/pond-d-390x844.json 6437d4b47f6dc209c6a77a38df5a6580
+- stage-new: ./scene-fill-20261101/renders/pond-d-390x844.png 21de6ecf656da8e2795950aa4eb2e480
+- stage-new: ./scene-fill-20261101/renders/pond-d-390x844.sources.txt 0af27ef41916e824a0f922e93685dd44
+- stage-new: ./scene-fill-20261101/renders/pond-m-320x568.json d5ab8c115449eb7d08942c0c8744d15a
+- stage-new: ./scene-fill-20261101/renders/pond-m-320x568.png 8930f732debe72943567e78ba0ff9f94
+- stage-new: ./scene-fill-20261101/renders/pond-m-320x568.sources.txt dd6d0a8665ccd392bb4b7d385f9f0ee8
+- stage-new: ./scene-fill-20261101/renders/pond-m-390x844.json 25e727df6508e46dd68d922b37365a15
+- stage-new: ./scene-fill-20261101/renders/pond-m-390x844.png 8d1654bb2b5faaf4f1790a091a0ae00e
+- stage-new: ./scene-fill-20261101/renders/pond-m-390x844.sources.txt 831dc331bf13bd7df0615942871d072c
+- stage-new: ./scene-fill-20261101/renders/pond-n-320x568.json ec12ffc898ec019419bea83c0b9f3907
+- stage-new: ./scene-fill-20261101/renders/pond-n-320x568.png 195d00cadedff1f26fb19b4d41756f4b
+- stage-new: ./scene-fill-20261101/renders/pond-n-320x568.sources.txt 0d203b5c6636e04c124770d23f1c0e87
+- stage-new: ./scene-fill-20261101/renders/pond-n-390x844.json c02f2bb155ddddadf911ba50493ad65c
+- stage-new: ./scene-fill-20261101/renders/pond-n-390x844.png 4615b3b6fa2fcfed74b32ccb196000dd
+- stage-new: ./scene-fill-20261101/renders/pond-n-390x844.sources.txt 7f73bd173cd602e2cc5b3280f07996ea
+- stage-new: ./scene-fill-20261101/renders/rest-base-320x568.json 34861328a13de9de993290d779e6fff8
+- stage-new: ./scene-fill-20261101/renders/rest-base-320x568.png d02d28e890a3a6a27c5094f85976f328
+- stage-new: ./scene-fill-20261101/renders/rest-base-320x568.sources.txt 0d38e1e43a495b35586e9081cb49f299
+- stage-new: ./scene-fill-20261101/renders/rest-starry-320x568.json 1a222686e2f2fcc873765f16d5f250c4
+- stage-new: ./scene-fill-20261101/renders/rest-starry-320x568.png b8b5f1b7c3e7048fcc166a6916a005ee
+- stage-new: ./scene-fill-20261101/renders/rest-starry-320x568.sources.txt b93b4d03630739a504ecff89f173f5ad
+- stage-new: ./scene-fill-20261101/renders/rest-starry-390x844.json 10c1d0ed53585176500265c661d1c2af
+- stage-new: ./scene-fill-20261101/renders/rest-starry-390x844.png 4b02d7351b498c1b57a317b4ca388ba9
+- stage-new: ./scene-fill-20261101/renders/rest-starry-390x844.sources.txt d289096504b41eb161963be2c56482e0
+- stage-new: ./scene-fill-20261101/renders/rest-sunset-320x568.json f42a23225f946ba8de6457e56be3eff8
+- stage-new: ./scene-fill-20261101/renders/rest-sunset-320x568.png f9ec9da6787c6cbce20248fd1d0ab5a5
+- stage-new: ./scene-fill-20261101/renders/rest-sunset-320x568.sources.txt 32249cd6bfea81de59cf29e388458195
+- stage-new: ./scene-fill-20261101/renders/rest-sunset-390x844.json e0de170a94fe2faefef884d628fc7128
+- stage-new: ./scene-fill-20261101/renders/rest-sunset-390x844.png 41c0eea591884a47b35477831a19d88c
+- stage-new: ./scene-fill-20261101/renders/rest-sunset-390x844.sources.txt f071860c1145583d0fe8d30a3061869a
+- stage-new: ./scene-fill-20261101/renders/title-a-320x568.json c25c273ffa0836e7dcbe26e913e56e58
+- stage-new: ./scene-fill-20261101/renders/title-a-320x568.png a84e5e5f42eae9e84e32f469382b36fd
+- stage-new: ./scene-fill-20261101/renders/title-a-320x568.sources.txt fe99e6af8ed4fbac9c8abc360f161a7c
+- stage-new: ./scene-fill-20261101/renders/title-a-390x844.json 5435aeddd51d6d71a091dbe824957e92
+- stage-new: ./scene-fill-20261101/renders/title-a-390x844.png 3958965144277a2b25919c54391f95e2
+- stage-new: ./scene-fill-20261101/renders/title-a-390x844.sources.txt 6081c88713ba41be4ab9fffb70877585
+- stage-new: ./scene-fill-20261101/renders/title-e-320x568.json c8a9cb371c9b0fd586cf64db8b512824
+- stage-new: ./scene-fill-20261101/renders/title-e-320x568.png 161df2a3628913fcdf9024ded4f8e748
+- stage-new: ./scene-fill-20261101/renders/title-e-320x568.sources.txt 06b415b68e4ca645d4887d71769cbc1e
+- stage-new: ./scene-fill-20261101/renders/title-e-390x844.json b42c7fe2c9766f12504731df634198c5
+- stage-new: ./scene-fill-20261101/renders/title-e-390x844.png c07503db51a2b8cbe1f307531834d97d
+- stage-new: ./scene-fill-20261101/renders/title-e-390x844.sources.txt d51c3c516d4932548c181f31af99eba8
+- stage-new: ./scene-fill-20261101/renders/title-n-A-320x568.json 6b2b53909bc9e9e18b6d4bf0d2524f1e
+- stage-new: ./scene-fill-20261101/renders/title-n-A-320x568.png f38f05ab29f6a36a0fa17a4f07327a6e
+- stage-new: ./scene-fill-20261101/renders/title-n-A-320x568.sources.txt bf722a3052e8aa05eecbc038d8322563
+- stage-new: ./scene-fill-20261101/renders/title-n-B-320x568.json f0b857c6866c203a34711145b56492ce
+- stage-new: ./scene-fill-20261101/renders/title-n-B-320x568.png 1b5a95dda319e8a8c520cd9292549a75
+- stage-new: ./scene-fill-20261101/renders/title-n-B-320x568.sources.txt 475d5ed46699528113613cfc86d0cd20
+- stage-new: ./scene-fill-20261101/scene-inventory-update.json e7faf7f467e723e4cef0675e22411f6a
+- stage-new: ./scene-fill-20261101/scene-inventory-update.md deaae7a0c546f6767ddf53b451ac3ae7
+- stage-new: ./scene-fill-20261101/sheets/S01-park-390x844.png 04d395327a478f1ef62aaac071224fe9
+- stage-new: ./scene-fill-20261101/sheets/S01-park-390x844.png.sources.txt e6258533841fee9403b20d0053306cc3
+- stage-new: ./scene-fill-20261101/sheets/S01-park-390x844.sources.txt e6258533841fee9403b20d0053306cc3
+- stage-new: ./scene-fill-20261101/sheets/S02-park-320x568.png 8fe1165e89e41566959f0267d5aff4e5
+- stage-new: ./scene-fill-20261101/sheets/S02-park-320x568.png.sources.txt 9c7698cc3b36729e5c55471ec763c3c6
+- stage-new: ./scene-fill-20261101/sheets/S02-park-320x568.sources.txt 9c7698cc3b36729e5c55471ec763c3c6
+- stage-new: ./scene-fill-20261101/sheets/S03-pond-390x844.png ad02c96ae56da4f740b0b9f9038fc5f9
+- stage-new: ./scene-fill-20261101/sheets/S03-pond-390x844.png.sources.txt d6013eef60733e6e720f20a528f6e60d
+- stage-new: ./scene-fill-20261101/sheets/S03-pond-390x844.sources.txt d6013eef60733e6e720f20a528f6e60d
+- stage-new: ./scene-fill-20261101/sheets/S04-pond-320x568.png e10b95818d536e805436444f33efe981
+- stage-new: ./scene-fill-20261101/sheets/S04-pond-320x568.png.sources.txt 96cfe7bc2fb680f6807860f4b167a10b
+- stage-new: ./scene-fill-20261101/sheets/S04-pond-320x568.sources.txt 96cfe7bc2fb680f6807860f4b167a10b
+- stage-new: ./scene-fill-20261101/sheets/S05-home-390x844.png ee23103538df02b157e7eae2a7ccd00a
+- stage-new: ./scene-fill-20261101/sheets/S05-home-390x844.png.sources.txt d33ef484d8147b617898cf8f8111b675
+- stage-new: ./scene-fill-20261101/sheets/S05-home-390x844.sources.txt d33ef484d8147b617898cf8f8111b675
+- stage-new: ./scene-fill-20261101/sheets/S06-home-320x568.png 52aedd221206ceab4fd830da2170d69e
+- stage-new: ./scene-fill-20261101/sheets/S06-home-320x568.png.sources.txt 8817169801b23642798bb1a1a820f553
+- stage-new: ./scene-fill-20261101/sheets/S06-home-320x568.sources.txt 8817169801b23642798bb1a1a820f553
+- stage-new: ./scene-fill-20261101/sheets/S07-f-kitchen-390x844.png fe20684056f33c6e65b1e9efaa88ffae
+- stage-new: ./scene-fill-20261101/sheets/S07-f-kitchen-390x844.png.sources.txt bc273dcf0fe476aba05f4dd02c1025da
+- stage-new: ./scene-fill-20261101/sheets/S07-f-kitchen-390x844.sources.txt bc273dcf0fe476aba05f4dd02c1025da
+- stage-new: ./scene-fill-20261101/sheets/S08-f-kitchen-320x568.png 934c8e94e455b542c4994039d5c87f9d
+- stage-new: ./scene-fill-20261101/sheets/S08-f-kitchen-320x568.png.sources.txt d522dcfc79377c302d4e33510bbcbfea
+- stage-new: ./scene-fill-20261101/sheets/S08-f-kitchen-320x568.sources.txt d522dcfc79377c302d4e33510bbcbfea
+- stage-new: ./scene-fill-20261101/sheets/S09-e-front-desk-390x844.png 285fc9766193d7c1785d9f1620e89067
+- stage-new: ./scene-fill-20261101/sheets/S09-e-front-desk-390x844.png.sources.txt 57d8712a26f104702db70f56cc31bc13
+- stage-new: ./scene-fill-20261101/sheets/S09-e-front-desk-390x844.sources.txt 57d8712a26f104702db70f56cc31bc13
+- stage-new: ./scene-fill-20261101/sheets/S10-e-front-desk-320x568.png f3420fbd94baee68f736963e88cfc235
+- stage-new: ./scene-fill-20261101/sheets/S10-e-front-desk-320x568.png.sources.txt 080337f9f5aa77904d624092674e9c1d
+- stage-new: ./scene-fill-20261101/sheets/S10-e-front-desk-320x568.sources.txt 080337f9f5aa77904d624092674e9c1d
+- stage-new: ./scene-fill-20261101/sheets/S11-farm-390x844.png be2ecae739dff4771b73e7030f1d4ca6
+- stage-new: ./scene-fill-20261101/sheets/S11-farm-390x844.png.sources.txt 1ada63868989cea375534f0ded242096
+- stage-new: ./scene-fill-20261101/sheets/S11-farm-390x844.sources.txt 1ada63868989cea375534f0ded242096
+- stage-new: ./scene-fill-20261101/sheets/S12-farm-320x568.png a3ed75442cdf5fa195d718350a2a0a14
+- stage-new: ./scene-fill-20261101/sheets/S12-farm-320x568.png.sources.txt 827e69f7fad5f90ed39dd67405ccf518
+- stage-new: ./scene-fill-20261101/sheets/S12-farm-320x568.sources.txt 827e69f7fad5f90ed39dd67405ccf518
+- stage-new: ./scene-fill-20261101/sheets/S13-title.png 1f350b4da953778721e5db51ef98e504
+- stage-new: ./scene-fill-20261101/sheets/S13-title.png.sources.txt 518c8e619e12e1978a964fa763777980
+- stage-new: ./scene-fill-20261101/sheets/S13-title.sources.txt 518c8e619e12e1978a964fa763777980
+- stage-new: ./scene-fill-20261101/sheets/S14-INTERNAL-title-night-AB.png b68c8caf42942d6d3cd3994dfaf34112
+- stage-new: ./scene-fill-20261101/sheets/S14-INTERNAL-title-night-AB.png.sources.txt 2caa44483465530e1f0458b60cc61bfe
+- stage-new: ./scene-fill-20261101/sheets/S14-INTERNAL-title-night-AB.sources.txt 2caa44483465530e1f0458b60cc61bfe
+- stage-new: ./scene-fill-20261101/sheets/S15-menu-m1.png 1b3fab0c056cb28d3873f3515af3d598
+- stage-new: ./scene-fill-20261101/sheets/S15-menu-m1.png.sources.txt 7230cf539e686257c3c16715595688dc
+- stage-new: ./scene-fill-20261101/sheets/S15-menu-m1.sources.txt 7230cf539e686257c3c16715595688dc
+- stage-new: ./scene-fill-20261101/sheets/S16-menu-m3.png 432298a8b1092054df99be17ecff2edc
+- stage-new: ./scene-fill-20261101/sheets/S16-menu-m3.png.sources.txt d8c0da1fb51cdc6225bf12bfe9942cc6
+- stage-new: ./scene-fill-20261101/sheets/S16-menu-m3.sources.txt d8c0da1fb51cdc6225bf12bfe9942cc6
+- stage-new: ./scene-fill-20261101/sheets/S17-rest.png 29641f1f06d369d4312a83378adca129
+- stage-new: ./scene-fill-20261101/sheets/S17-rest.png.sources.txt a3af31ecc5fabb25eff84296fe114b95
+- stage-new: ./scene-fill-20261101/sheets/S17-rest.sources.txt a3af31ecc5fabb25eff84296fe114b95
+- stage-new: ./scene-fill-20261101/sheets/sheets.json 7bda88dee55464f1284f3262affa85de
+- stage-new: ./scene-fill-20261101/src-snapshot/37-rest-screen-390x844.html 3c780acd2357bf1b0846b1ffbb039739
+- stage-new: ./scene-fill-20261101/src-snapshot/M1-main-menu-320x568.html 1bfbf475da97a6bb3f3a610b8f3e75c8
+- stage-new: ./scene-fill-20261101/src-snapshot/M1-main-menu-390x844.html 214d367dca5d8afd0099c145ddfa9946
+- stage-new: ./scene-fill-20261101/src-snapshot/M3-main-menu-320x568.html ed04b2cfa370f7e2afc8bc37e50d33ea
+- stage-new: ./scene-fill-20261101/src-snapshot/M3-main-menu-390x844.html 739e21d8c2dbebfbbcb180c5aefeda58
+- carried: ./sheets-r2e/c-chip-linebreak-test-320-375.png 1e39a6132211bda6639750adc3bc0b44
+- carried: ./sheets-r2e/d2-plate-mock-not-added.png 8a8b2099c0e225ce0d65ad5cb519f521
+- carried: ./sheets/E-front-desk-one-layout-390.png 08b5906c5fcac939952dd26947eb0c37
+- carried: ./sheets/front-desk-t444u-320-vs-390.png 56e60380f68a7c0399d731e37a5ffd62
+- carried: ./sheets/home-lake-trim-before-after-390.png 90c4c92017f2de31b1ea221c68c0ca7d
+- stage-new: ./sheets/instructor/v608/nightB/B.png 843444a53aebb5af0b550c2070b8783e
+- stage-new: ./sheets/instructor/v608/nightB/B.png.sources.txt 8a3fb6cabcdae162f043c1f7e4cc3d80
+- stage-new: ./sheets/instructor/v608/nightB/night-title-1A-1B.png 75c7906e676c7bff66de6cfbaeb18aa9
+- stage-new: ./sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt 8a624cb94f8f8cb0e8ca14f8e56dd9c8
+- carried: ./sheets/jesus-words-26-320-A-B-C-D.png 11c101ea6e15ae055e42fdab50a74aa4
+- carried: ./sheets/pick-combined-trim-ask-verse.png a76f6913b0d4146a7ed7013581ad2fb2
+- carried: ./sheets/r2-fit-table-check.txt 13878a8813f1d8d5ee3fbabc8425616e
+- carried: ./sheets/r2-fit-table.md 876295700a86c9c260461527236541d7
+- stage-new: ./sheets/r2h-M-menus.md ddcc8345c5599cb69b69d4e1099208ee
+- stage-new: ./sheets/r2h-M-menus.png 571b4c773ccfffc1c2862fdff25b6a4f
+- stage-new: ./sheets/r2h-M-menus.png.sources.txt 0ab5addc84574c9367dba9034df94935
+- stage-new: ./sheets/r2h-after.png 662807a2efff1de1671875b5b0d053cd
+- stage-new: ./sheets/r2h-after.png.sources.txt 6e044cdac512495e14a78febee62aea0
+- stage-new: ./sheets/r2h-after.sources.txt 6e044cdac512495e14a78febee62aea0
+- stage-new: ./sheets/r2h-map-extended.md 87a05b798e3124eee7d6c9741fc98fbe
+- stage-new: ./sheets/r2h-map-extended.png 0aa27de90cabfa41035e241619c07e21
+- stage-new: ./sheets/r2h-map-extended.png.sources.txt 001f8f54dd760309bc829fbdbc0520ba
+- carried: ./sheets/trim-pick-1A-vs-1B-390.png 2aa8e7c4c6c630c6d7ab7d66b59d7433
+- carried: ./sheets/walk24-B-t441u-before-after-390.png f222b9c850d3790f9124defd182054a1
+- stage-overrides: ./showcase/INDEX.md 5eace60f022397aabcf4401b9bb63e03
+- stage-overrides: ./showcase/showcase-1-opening.png 4422ff64d43d2e166e50750641110015
+- stage-new: ./showcase/showcase-1-opening.png.sources.txt 35b6616bdf03db40433b233709ce7127
+- stage-overrides: ./showcase/showcase-2-zones.png 6369fca40ca2f4f62bb271d08f9770f3
+- stage-new: ./showcase/showcase-2-zones.png.sources.txt 485286889016d66901ff44f48d91efa2
+- stage-overrides: ./showcase/showcase-3-asking.png f0f0d10cc6c9329011c676190de24460
+- stage-new: ./showcase/showcase-3-asking.png.sources.txt b213403f08a960c9c19e9209aa27c6a3
+- stage-overrides: ./showcase/showcase-4-walk-guardian.png c62068deb0fd16483601f20d7f96c102
+- stage-new: ./showcase/showcase-4-walk-guardian.png.sources.txt 778e0d80b8ab5ae775c3e569ca64a7b7
+- stage-overrides: ./showcase/showcase-5-rewards-pause.png 4764adcb3043685bb6e4316d853cf1b4
+- stage-new: ./showcase/showcase-5-rewards-pause.png.sources.txt b2cbc832f2aaf6f594ae69d5ffdef94f
+- stage-new: ./showcase/tiles.txt 1d5671ec882d87f2aa936f6e4ae268d8
+- carried: ./showcase/tiles/B--zone-forest-ask-390x844.html cda6571f712602f49a4089da1f5222e2
+- carried: ./showcase/tiles/B--zone-forest-ask-390x844.png d468ddd4988e9022c31a37b36d445b7e
+- carried: ./showcase/tiles/screens-v608--10-word-meadow-scene-320x568.html 19cb50277a86de1101fcb752d0f0d4d6
+- carried: ./showcase/tiles/screens-v608--10-word-meadow-scene-320x568.png 4d3317e8f7c1caa2f598319aa0404968
+- carried: ./showcase/tiles/screens-v608--10-word-meadow-scene.html 280e4d50e29f1f1bd73bb1dbe17fc72a
+- carried: ./showcase/tiles/screens-v608--10-word-meadow-scene.png 522bc8d439604e5e9d4d382aa3b475d6
+- carried: ./showcase/tiles/screens-v608--11-word-meadow-scene-right.html 911e434fe5a385fe047ecd7ac651a6b0
+- carried: ./showcase/tiles/screens-v608--11-word-meadow-scene-right.png 5d35f6ebbb8d07c76811eaa8e276df2f
+- carried: ./showcase/tiles/screens-v608--31-golden-fields-scene.html ef78cb4e5017b9447a86cdca564048a6
+- carried: ./showcase/tiles/screens-v608--31-golden-fields-scene.png f008055c445628236aec7a43eee067c2
+- carried: ./showcase/tiles/screens-v608--32-home-lake-scene.html 166581b3c3c900e201bd6d27d769d6fd
+- carried: ./showcase/tiles/screens-v608--32-home-lake-scene.png 320f8aeb4ff9d0bc134a0ced433e776a
+- carried: ./showcase/tiles/screens-v608--48-continue-after-pause.html 26c0be1d4ba882651233caeb2fe163b0
+- carried: ./showcase/tiles/screens-v608--48-continue-after-pause.png f427c3a014df6f2d4a3ffc26213fe2f4
+- carried: ./showcase/tiles/screens-v608--zone-forest-ask-320x568.html f6d8fd7c3388de526488a1bd84e77999
+- carried: ./showcase/tiles/screens-v608--zone-forest-ask-320x568.png aa1fe503c72e3d5ac6ebc652a6edbdd2
+- carried: ./showcase/tour.py 5c5ef06edf7f8008bbae1182463af3f5
+- carried: ./stage/CHECK.md 46e7f28e40e63d8af00b554971fa74b2
+- carried: ./stage/stage_v608.py 28ef363405042eb381d339fea04085b0
+- carried: ./trim-1B/diff-PASTE-snap-1748MDT-to-round2.diff d55140a346cfbfb6ef6f7182e2e41861
+- carried: ./trim-1B/diff-cards-snap-1748MDT-to-round2.diff d31de63a340b34101f21c25ad6d6ed29
+- carried: ./trim-1B/diff-spec-snap-1748MDT-to-round2.diff 9b526b6e46de5923a78543e932f832da
+- carried: ./trim-1B/nancys-adventure-english-FINAL-v6-08.md 2b67e3f5cc5077e19275d29f417af789
+- stage-overrides: ./trim-1B/nancys-adventure-english-v6-08-PASTE.md 317e91ce86f073c961f8169183d2bbd3
+- carried: ./trim-1B/nancys-adventure-english-v6-08-cards.json 501340c26e2a03af39bf8784faab00cc
+- carried: ./trim-1B/nancys-adventure-english-v6-08.md b11946586037fecc983703ec20155e5b

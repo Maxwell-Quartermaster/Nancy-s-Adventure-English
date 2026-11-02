@@ -1,0 +1,11 @@
+378620625fcd996601ae6d069c3114ec  /workspace/v608build/r2h-rerun-stage/r2h/png/01-title-390x844-before.png
+10cfca19164081f280fdfaf2b0d31341  /workspace/v608build/r2h-rerun-stage/r2h/png/02-main-menu-verse-popup-390x844-before.png
+a6bf17e0df1286b15bd6263e398cdf22  /workspace/v608build/r2h-rerun-stage/r2h/png/03-main-menu-390x844-before.png
+dbd2ba9e39cfd6048625c3d2343016f5  /workspace/v608build/r2h-rerun-stage/r2h/png/05-map-day1-390x844.png
+e9490d27cf05a277a7ee2f8fc697a2f8  /workspace/v608build/r2h-rerun-stage/r2h/png/07-map-word-meadow-chooser-390x844.png
+caption Nancy's eyes, sheet 1: Opening the game
+caption Title screen.
+caption Verse of the day pops up over the menu.
+caption Main menu (current; the M1/M2/M3 concepts are on sheets/r2h-M-menus.png).
+caption The map on day 1.
+caption She taps Word Meadow: the zone chooser.

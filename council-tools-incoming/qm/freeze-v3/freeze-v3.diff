@@ -1,0 +1,77 @@
+--- freeze.base-91aa8a3e.py	2026-11-01 07:29:27.947493845 +0000
++++ freeze.py	2026-11-01 09:15:16.759265792 +0000
+@@ -25,6 +25,7 @@
+ SEND_GUARD = os.path.join(TOOLS, 'send-guard/send_guard.py')
+ FIT_CHECK = os.path.join(TOOLS, 'fit-table/fit_sheet_check.py')
+ THAI_DIFF = os.path.join(TOOLS, 'thai-diff/thai_diff.py')
++SHEETS_SCAN = os.path.join(TOOLS, 'sheets-scan/sheets_scan.py')   # Chancellor's per-panel sheets scan (owner: Chancellor); sheets/ and showcase/ go ONLY here
+ WATCHER = '/workspace/watchman/watcher/watcher.py'
+ HOLD_REASON_TXT = 'freeze in progress, stop work, do not edit build or post sends'
+ FAULTS = ('step6_bad_pointer', 'paste_copy_corrupt', 'manifest_enospc', 'pointer_handmove', 'crash_after_hold', 'rollback_fails', 'sendguard_exit3', 'plain_copy')
+@@ -131,6 +132,28 @@
+ 
+ def say(msg): print(msg, flush=True)
+ 
++# ---------------------------------------------------------------- render routing (v3, QM ruling on Auditor point 2)
++SEND_DIRS = ('sheets', 'showcase')
++IMG_EXT = ('.png', '.jpg', '.jpeg', '.webp', '.gif')
++def route(rel):
++    """'sheets' if any directory of the stage-relative path is named exactly sheets or showcase (any depth, e.g.
++    scene-fill-20261101/sheets/S01.png or sheets/sub/x.png): judged ONLY by the sheets scan, never by ground_check.
++    'single' otherwise: unchanged from 91aa8a3e."""
++    parts = rel[2:].split('/') if rel.startswith('./') else rel.split('/')
++    return 'sheets' if any(x in SEND_DIRS for x in parts[:-1]) else 'single'
++def is_image(p):
++    try: head = open(p, 'rb').read(8)
++    except OSError: return False
++    return p.lower().endswith(IMG_EXT) or head.startswith(b'\x89PNG') or head.startswith(b'\xff\xd8\xff')
++def send_files(stage):
++    """(sorted files routed 'sheets', sorted send_guard --only prefixes cut at the first sheets/showcase folder)."""
++    files, prefixes = [], set()
++    for rel, p in file_map(stage).items():
++        if route(rel) != 'sheets': continue
++        parts = rel[2:].split('/'); i = next(k for k, x in enumerate(parts[:-1]) if x in SEND_DIRS)
++        files.append(p); prefixes.add('/'.join(parts[:i + 1]) + '/')
++    return sorted(files), sorted(prefixes)
++
+ # ---------------------------------------------------------------- the freeze
+ def freeze(a, ctx, fault):
+     snap = a.snap_name; dry = a.dry_run; started = now_mt(); NOW = started.strftime('%-I:%M %p ') + (started.tzname() or 'MT')
+@@ -280,16 +303,31 @@
+     shutil.copy2(paste, os.path.join(pre, snap, SNAP_PASTE))
+     newp = new_pointer_fields(oldp, snap, plan, pmd5, chars, a.note)
+     cand_ptr = os.path.join(pre, 'CURRENT-SNAP.txt'); open(cand_ptr, 'w').write(ptr_text(newp, order))
+-    sends = [p for sub in ('sheets', 'showcase') for p in sorted(glob.glob(os.path.join(stage, sub, '**', '*'), recursive=True)) if os.path.isfile(p)]
++    # v3: everything under a sheets/ or showcase/ folder (any depth) is routed ONLY to the sheets scan, never to ground_check.
++    # send_guard still checks those files against the candidate snapshot/pointer, but with --no-ground (it never calls
++    # ground_check), so its clean exit here is 3 and only 3 passes. FREEZE_FAULT sendguard_exit3 is now a no-op (kept so
++    # FREEZE_FAULT parsing is unchanged): this leg is always --no-ground by design.
++    sends, onlys = send_files(stage)
+     if sends:
+-        cmd = [sys.executable, SEND_GUARD, '--only', 'sheets/,showcase/'] + (['--no-ground'] if 'sendguard_exit3' in fault else []) + sends
++        cmd = [sys.executable, SEND_GUARD, '--only', ','.join(onlys), '--no-ground'] + sends
+         rc, out = run(cmd, ctx.env(cand_ptr), timeout=1800)
+         open(os.path.join(ctx.work, f'send-guard-{snap}.txt'), 'w').write(out)
+-        if rc != 0:
+-            why = {1: 'BLOCK', 2: 'ERROR', 3: 'ground skipped (3 is not valid for a send)'}.get(rc, f'exit {rc}')
++        if rc != 3:
++            why = {0: 'exit 0 with --no-ground: ground_check may have run', 1: 'BLOCK', 2: 'ERROR'}.get(rc, f'exit {rc}')
+             first = next((l for l in out.splitlines() if l.startswith(('MISS', 'GRND', 'ERROR', 'STALE'))), out.strip().splitlines()[-1] if out.strip() else '')
+-            raise Fail(3, S3, SEND_GUARD, f'send_guard exit {rc} ({why}): {first}')
+-        notes.append(f'send_guard CLEAR on {len(sends)} sheets/showcase files')
++            raise Fail(3, S3, SEND_GUARD, f'send_guard --no-ground exit {rc} ({why}; only 3 passes on the sheets leg): {first}')
++        imgs = [p for p in sends if is_image(p)]
++        if imgs:
++            if not os.path.isfile(SHEETS_SCAN):
++                raise Fail(3, S3, SHEETS_SCAN, f'sheets scan not installed: {len(imgs)} sheets/showcase image(s) cannot be judged (they are never sent to ground_check)')
++            rc, out = run([sys.executable, SHEETS_SCAN] + imgs, ctx.env(cand_ptr), timeout=1800)
++            open(os.path.join(ctx.work, f'sheets-scan-{snap}.txt'), 'w').write(out)
++            if rc != 0:
++                why = {1: 'BLOCK', 2: 'ERROR'}.get(rc, f'exit {rc}')
++                first = next((l for l in out.splitlines() if l.startswith(('BLOCK', 'MISS', 'ERROR', 'STALE'))), out.strip().splitlines()[-1] if out.strip() else '')
++                raise Fail(3, S3, SHEETS_SCAN, f'sheets scan exit {rc} ({why}; only 0 passes): {first}')
++        notes.append(f'sheets/showcase: send_guard snapshot check CLEAR (--no-ground) on {len(sends)} files under {",".join(onlys)}; '
++                     f'sheets scan PASS on {len(imgs)} image(s); none sent to ground_check')
+     else: notes.append('send_guard: no sheets/ or showcase/ files in stage')
+     fits = [p for p in sorted(glob.glob(os.path.join(stage, '**', '*.md'), recursive=True)) if 'fit' in os.path.basename(p).lower()]
+     if fits:

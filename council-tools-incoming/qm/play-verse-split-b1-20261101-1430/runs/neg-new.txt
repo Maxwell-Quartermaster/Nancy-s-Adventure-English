@@ -1,0 +1,88 @@
+new control SE=0 exit=0 :: 
+new control SE=1 exit=0 :: 
+new jw-empty-list SE=0 exit=1 :: IndexError: list index out of range
+new jw-empty-list SE=1 exit=1 :: IndexError: list index out of range
+new jw-en-empty SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-empty SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-missing SE=0 exit=1 :: KeyError: 'en'
+new jw-en-missing SE=1 exit=1 :: KeyError: 'en'
+new jw-en-null SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-null SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-space SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-space SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-wsmix SE=0 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-en-wsmix SE=1 exit=1 :: PASTE jesusWords[0].en is missing or blank
+new jw-ref-empty SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-empty SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-missing SE=0 exit=1 :: KeyError: 'ref'
+new jw-ref-missing SE=1 exit=1 :: KeyError: 'ref'
+new jw-ref-null SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-null SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-space SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-space SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-wsmix SE=0 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-ref-wsmix SE=1 exit=1 :: PASTE jesusWords[0].ref is missing or blank
+new jw-th-empty SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-empty SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-missing SE=0 exit=1 :: KeyError: 'th'
+new jw-th-missing SE=1 exit=1 :: KeyError: 'th'
+new jw-th-null SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-null SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-space SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-space SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-wsmix SE=0 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new jw-th-wsmix SE=1 exit=1 :: PASTE jesusWords[0].th is missing or blank
+new rest-en-empty SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-empty SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-missing SE=0 exit=1 :: KeyError: 'en'
+new rest-en-missing SE=1 exit=1 :: KeyError: 'en'
+new rest-en-null SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-null SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-number SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-number SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-space SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-space SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-wsmix SE=0 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-en-wsmix SE=1 exit=1 :: PASTE verses.rest.en is missing or blank
+new rest-enSource-empty SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-empty SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-missing SE=0 exit=1 :: KeyError: 'enSource'
+new rest-enSource-missing SE=1 exit=1 :: KeyError: 'enSource'
+new rest-enSource-null SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-null SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-space SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-space SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-wsmix SE=0 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-enSource-wsmix SE=1 exit=1 :: PASTE verses.rest.enSource is missing or blank
+new rest-missing SE=0 exit=1 :: KeyError: 'rest'
+new rest-missing SE=1 exit=1 :: KeyError: 'rest'
+new rest-ref-empty SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-empty SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-missing SE=0 exit=1 :: KeyError: 'ref'
+new rest-ref-missing SE=1 exit=1 :: KeyError: 'ref'
+new rest-ref-null SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-null SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-space SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-space SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-wsmix SE=0 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-ref-wsmix SE=1 exit=1 :: PASTE verses.rest.ref is missing or blank
+new rest-th-empty SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-empty SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-missing SE=0 exit=1 :: KeyError: 'th'
+new rest-th-missing SE=1 exit=1 :: KeyError: 'th'
+new rest-th-null SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-null SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-space SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-space SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-wsmix SE=0 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-th-wsmix SE=1 exit=1 :: PASTE verses.rest.th is missing or blank
+new rest-thSource-empty SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-empty SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-missing SE=0 exit=1 :: KeyError: 'thSource'
+new rest-thSource-missing SE=1 exit=1 :: KeyError: 'thSource'
+new rest-thSource-null SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-null SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-space SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-space SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-wsmix SE=0 exit=1 :: PASTE verses.rest.thSource is missing or blank
+new rest-thSource-wsmix SE=1 exit=1 :: PASTE verses.rest.thSource is missing or blank

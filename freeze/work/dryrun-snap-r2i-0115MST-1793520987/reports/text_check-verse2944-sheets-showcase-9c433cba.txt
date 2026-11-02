@@ -1,0 +1,197 @@
+text-check 9c433cba words 12ff2958 pointer f6dac2d0 snap snap-r2h-0021MDT paste_1b 317e91ce chrome yes
+note live uiText.tapPrompt.en = 'Can you find the {word}?'
+note live uiText.tapPrompt.th = 'หา {word} เจอไหม'
+note live uiText.pantry.en = 'Shop'
+PASS            v608build/r2h-rerun-stage/sheets/r2h-M-menus.md  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/r2h-M-menus.md (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/sheets/r2h-M-menus.png  (0 problems, 1 warnings, Thai pages measured 6)
+    source  sidecar v608build/r2h-rerun-stage/sheets/r2h-M-menus.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/M1-main-menu-390x844.json html_md5 214d367d = v608build/r2h-rerun-stage/r2h/html/M1-main-menu-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/M1-main-menu-390x844.html 390x844 (r2h-M-menus.png / M1-main-menu-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/M1-main-menu-320x568.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/M1-main-menu-320x568.html 320x568 (r2h-M-menus.png / M1-main-menu-320x568.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/M2-main-menu-390x844.json html_md5 d7aa132f = v608build/r2h-rerun-stage/r2h/html/M2-main-menu-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/M2-main-menu-390x844.html 390x844 (r2h-M-menus.png / M2-main-menu-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/M2-main-menu-320x568.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/M2-main-menu-320x568.html 320x568 (r2h-M-menus.png / M2-main-menu-320x568.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/M3-main-menu-390x844.json html_md5 739e21d8 = v608build/r2h-rerun-stage/r2h/html/M3-main-menu-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/M3-main-menu-390x844.html 390x844 (r2h-M-menus.png / M3-main-menu-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/M3-main-menu-320x568.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/M3-main-menu-320x568.html 320x568 (r2h-M-menus.png / M3-main-menu-320x568.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 6 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/sheets/r2h-M-menus.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/r2h-M-menus.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/sheets/r2h-after.png  (0 problems, 1 warnings, Thai pages measured 25)
+    source  sidecar v608build/r2h-rerun-stage/sheets/r2h-after.sources.txt
+    source  sidecar v608build/round2/r2h/png/10-word-meadow-scene-390x844.json html_md5 723493a4 = v608build/round2/r2h/html/10-word-meadow-scene-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/10-word-meadow-scene-390x844.html 390x844 (r2h-after.png / 10-word-meadow-scene-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/10-word-meadow-scene-320x568.json html_md5 b87661b7 = v608build/round2/r2h/html/10-word-meadow-scene-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/10-word-meadow-scene-320x568.html 320x568 (r2h-after.png / 10-word-meadow-scene-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/32-home-lake-scene-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/32-home-lake-scene-390x844.html 390x844 (r2h-after.png / 32-home-lake-scene-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/zone-lake-ask-320x568.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/zone-lake-ask-320x568.html 320x568 (r2h-after.png / zone-lake-ask-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/zone-forest-ask-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/zone-forest-ask-390x844.html 390x844 (r2h-after.png / zone-forest-ask-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/zone-forest-ask-320x568.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/zone-forest-ask-320x568.html 320x568 (r2h-after.png / zone-forest-ask-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/zone-forest-ask-375x812.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/zone-forest-ask-375x812.html 375x812 (r2h-after.png / zone-forest-ask-375x812.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/54-phrase-ask-card-390x844.json html_md5 c4e1bca0 = v608build/round2/r2h/html/54-phrase-ask-card-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/54-phrase-ask-card-390x844.html 390x844 (r2h-after.png / 54-phrase-ask-card-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/54-phrase-ask-card-320x568.json html_md5 ffad33eb = v608build/round2/r2h/html/54-phrase-ask-card-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/54-phrase-ask-card-320x568.html 320x568 (r2h-after.png / 54-phrase-ask-card-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/11-word-meadow-scene-right-390x844.json html_md5 5821aba3 = v608build/round2/r2h/html/11-word-meadow-scene-right-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/11-word-meadow-scene-right-390x844.html 390x844 (r2h-after.png / 11-word-meadow-scene-right-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/12-reveal-right-390x844.json html_md5 0975b9e3 = v608build/round2/r2h/html/12-reveal-right-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/12-reveal-right-390x844.html 390x844 (r2h-after.png / 12-reveal-right-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/15-say-it-sight-words-390x844.json html_md5 5a1fa6a5 = v608build/round2/r2h/html/15-say-it-sight-words-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/15-say-it-sight-words-390x844.html 390x844 (r2h-after.png / 15-say-it-sight-words-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/21-kitchen-say-it-shown-390x844.json html_md5 724e47da = v608build/round2/r2h/html/21-kitchen-say-it-shown-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/21-kitchen-say-it-shown-390x844.html 390x844 (r2h-after.png / 21-kitchen-say-it-shown-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/21-kitchen-say-it-shown-320x568.json html_md5 c764c24b = v608build/round2/r2h/html/21-kitchen-say-it-shown-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/21-kitchen-say-it-shown-320x568.html 320x568 (r2h-after.png / 21-kitchen-say-it-shown-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/05-map-day1-390x844.json html_md5 0a0a4eaa = v608build/round2/r2h/html/05-map-day1-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/05-map-day1-390x844.html 390x844 (r2h-after.png / 05-map-day1-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/14-reveal-gentle-retry-390x844.json html_md5 fb0b054f = v608build/round2/r2h/html/14-reveal-gentle-retry-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/14-reveal-gentle-retry-390x844.html 390x844 (r2h-after.png / 14-reveal-gentle-retry-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/14-reveal-gentle-retry-320x568.json html_md5 491cb9a4 = v608build/round2/r2h/html/14-reveal-gentle-retry-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/14-reveal-gentle-retry-320x568.html 320x568 (r2h-after.png / 14-reveal-gentle-retry-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/24-guardian-run-entry-390x844.json html_md5 15e0e593 = v608build/round2/r2h/html/24-guardian-run-entry-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/24-guardian-run-entry-390x844.html 390x844 (r2h-after.png / 24-guardian-run-entry-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/25-guardian-hint-letters-320x568.json html_md5 1e79af4e = v608build/round2/r2h/html/25-guardian-hint-letters-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/25-guardian-hint-letters-320x568.html 320x568 (r2h-after.png / 25-guardian-hint-letters-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/26-guardian-hint-jesus-words-375x667.json html_md5 401a7b00 = v608build/round2/r2h/html/26-guardian-hint-jesus-words-375x667.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/26-guardian-hint-jesus-words-375x667.html 375x667 (r2h-after.png / 26-guardian-hint-jesus-words-375x667.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/27-guardian-kneels-390x844.json html_md5 ac2a3024 = v608build/round2/r2h/html/27-guardian-kneels-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/27-guardian-kneels-390x844.html 390x844 (r2h-after.png / 27-guardian-kneels-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/zone-meadow-ask-320x568.json html_md5 c9e2a162 = v608build/round2/r2h/html/zone-meadow-ask-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/zone-meadow-ask-320x568.html 320x568 (r2h-after.png / zone-meadow-ask-320x568.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/zone-meadow-ask-390x844-skyB.json html_md5 723493a4 = v608build/round2/r2h/html/zone-meadow-ask-390x844-skyB.html: VERIFIED by hash (mtime not used)
+    source  html v608build/round2/r2h/html/zone-meadow-ask-390x844-skyB.html 390x844 (r2h-after.png / zone-meadow-ask-390x844-skyB.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/stage-A-meadow-evening-pond-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/stage-A-meadow-evening-pond-390x844.html 390x844 (r2h-after.png / stage-A-meadow-evening-pond-390x844.png) [outside snapshot]
+    source  sidecar v608build/round2/r2h/png/stage-B-meadow-listen-and-find-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/round2/r2h/html/stage-B-meadow-listen-and-find-390x844.html 390x844 (r2h-after.png / stage-B-meadow-listen-and-find-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 25 of 25 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/sheets/r2h-after.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/r2h-after.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/sheets/r2h-map-extended.md  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/r2h-map-extended.md (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/sheets/r2h-map-extended.png  (0 problems, 1 warnings, Thai pages measured 3)
+    source  sidecar v608build/r2h-rerun-stage/sheets/r2h-map-extended.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/05-map-day1-390x844.json html_md5 0a0a4eaa = v608build/r2h-rerun-stage/r2h/html/05-map-day1-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/05-map-day1-390x844.html 390x844 (r2h-map-extended.png / 05-map-day1-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/map-extended-390x844.json html_md5 e966189b = v608build/r2h-rerun-stage/r2h/html/map-extended-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/map-extended-390x844.html 390x844 (r2h-map-extended.png / map-extended-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/map-extended-320x568.json html_md5 825925fd = v608build/r2h-rerun-stage/r2h/html/map-extended-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/map-extended-320x568.html 320x568 (r2h-map-extended.png / map-extended-320x568.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 3 of 3 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/sheets/r2h-map-extended.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/r2h-map-extended.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/B.png  (0 problems, 1 warnings, Thai pages measured 1)
+    source  sidecar v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/B.png.sources.txt
+    source  html instructor/v608/nightB/B.html 390x844 (B.png / B.html) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 1 of 1 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/B.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/B.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png  (0 problems, 1 warnings, Thai pages measured 2)
+    source  sidecar v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt
+    source  html instructor/v608/nightB/A.html 390x844 (night-title-1A-1B.png / A.html) [outside snapshot]
+    source  html instructor/v608/nightB/B.html 390x844 (night-title-1A-1B.png / B.html) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/showcase/INDEX.md  (0 problems, 2 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/INDEX.md (council notes: mentions warn, never block)
+    WARN    DOC-MENTION FAIL-WORD F-wrong "wrong" in INDEX.md:24 [line]: "- **13**: A gentle miss on a two-answer card. (round2/r2h/png/18-two-answer-wrong-tap-390x" (fail word)
+    WARN    DOC-MENTION RETIRED R3-shop-en "pantry" in INDEX.md:40 [line]: "- **24**: The Shop. (round2/r2h/png/45-character-golden-pantry-390x844.png, md5 77e379498b" (t487u)
+PASS            v608build/r2h-rerun-stage/showcase/showcase-1-opening.png  (0 problems, 1 warnings, Thai pages measured 5)
+    source  sidecar v608build/r2h-rerun-stage/showcase/showcase-1-opening.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/01-title-390x844-before.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/01-title-390x844-before.html 390x844 (showcase-1-opening.png / 01-title-390x844-before.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/02-main-menu-verse-popup-390x844-before.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/02-main-menu-verse-popup-390x844-before.html 390x844 (showcase-1-opening.png / 02-main-menu-verse-popup-390x844-before.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/03-main-menu-390x844-before.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/03-main-menu-390x844-before.html 390x844 (showcase-1-opening.png / 03-main-menu-390x844-before.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/05-map-day1-390x844.json html_md5 0a0a4eaa = v608build/r2h-rerun-stage/r2h/html/05-map-day1-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/05-map-day1-390x844.html 390x844 (showcase-1-opening.png / 05-map-day1-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/07-map-word-meadow-chooser-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/07-map-word-meadow-chooser-390x844.html 390x844 (showcase-1-opening.png / 07-map-word-meadow-chooser-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 5 of 5 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/showcase/showcase-1-opening.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/showcase-1-opening.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/showcase/showcase-2-zones.png  (0 problems, 1 warnings, Thai pages measured 6)
+    source  sidecar v608build/r2h-rerun-stage/showcase/showcase-2-zones.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-390x844.json html_md5 723493a4 = v608build/r2h-rerun-stage/r2h/html/10-word-meadow-scene-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/10-word-meadow-scene-390x844.html 390x844 (showcase-2-zones.png / 10-word-meadow-scene-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-320x568.json html_md5 b87661b7 = v608build/r2h-rerun-stage/r2h/html/10-word-meadow-scene-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/10-word-meadow-scene-320x568.html 320x568 (showcase-2-zones.png / 10-word-meadow-scene-320x568.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/31-golden-fields-scene-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/31-golden-fields-scene-390x844.html 390x844 (showcase-2-zones.png / 31-golden-fields-scene-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/32-home-lake-scene-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/32-home-lake-scene-390x844.html 390x844 (showcase-2-zones.png / 32-home-lake-scene-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/zone-forest-ask-390x844.html 390x844 (showcase-2-zones.png / zone-forest-ask-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-320x568.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/zone-forest-ask-320x568.html 320x568 (showcase-2-zones.png / zone-forest-ask-320x568.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 6 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/showcase/showcase-2-zones.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/showcase-2-zones.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/showcase/showcase-3-asking.png  (0 problems, 1 warnings, Thai pages measured 6)
+    source  sidecar v608build/r2h-rerun-stage/showcase/showcase-3-asking.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/54-phrase-ask-card-390x844.json html_md5 c4e1bca0 = v608build/r2h-rerun-stage/r2h/html/54-phrase-ask-card-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/54-phrase-ask-card-390x844.html 390x844 (showcase-3-asking.png / 54-phrase-ask-card-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/11-word-meadow-scene-right-390x844.json html_md5 5821aba3 = v608build/r2h-rerun-stage/r2h/html/11-word-meadow-scene-right-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/11-word-meadow-scene-right-390x844.html 390x844 (showcase-3-asking.png / 11-word-meadow-scene-right-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/12-reveal-right-390x844.json html_md5 0975b9e3 = v608build/r2h-rerun-stage/r2h/html/12-reveal-right-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/12-reveal-right-390x844.html 390x844 (showcase-3-asking.png / 12-reveal-right-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/18-two-answer-wrong-tap-390x844.json html_md5 02550e34 = v608build/r2h-rerun-stage/r2h/html/18-two-answer-wrong-tap-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/18-two-answer-wrong-tap-390x844.html 390x844 (showcase-3-asking.png / 18-two-answer-wrong-tap-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/14-reveal-gentle-retry-390x844.json html_md5 fb0b054f = v608build/r2h-rerun-stage/r2h/html/14-reveal-gentle-retry-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/14-reveal-gentle-retry-390x844.html 390x844 (showcase-3-asking.png / 14-reveal-gentle-retry-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/15-say-it-sight-words-390x844.json html_md5 5a1fa6a5 = v608build/r2h-rerun-stage/r2h/html/15-say-it-sight-words-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/15-say-it-sight-words-390x844.html 390x844 (showcase-3-asking.png / 15-say-it-sight-words-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 6 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/showcase/showcase-3-asking.png.sources.txt  (0 problems, 1 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/showcase-3-asking.png.sources.txt (council notes: mentions warn, never block)
+    WARN    DOC-MENTION FAIL-WORD F-wrong "wrong" in showcase-3-asking.png.sources.txt:4 [line]: "f77519fb64332d6e46d05c5fd49e0fce /workspace/v608build/r2h-rerun-stage/r2h/png/18-two-answe" (fail word)
+PASS            v608build/r2h-rerun-stage/showcase/showcase-4-walk-guardian.png  (0 problems, 1 warnings, Thai pages measured 5)
+    source  sidecar v608build/r2h-rerun-stage/showcase/showcase-4-walk-guardian.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/stage-W24-walk-B-390x844.json html_md5 b9577d94 = v608build/r2h-rerun-stage/r2h/html/stage-W24-walk-B-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/stage-W24-walk-B-390x844.html 390x844 (showcase-4-walk-guardian.png / stage-W24-walk-B-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/stage-W24-walk-B-320x568.json html_md5 23a73080 = v608build/r2h-rerun-stage/r2h/html/stage-W24-walk-B-320x568.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/stage-W24-walk-B-320x568.html 320x568 (showcase-4-walk-guardian.png / stage-W24-walk-B-320x568.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/26-guardian-hint-jesus-words-390x844.json html_md5 5d6befb6 = v608build/r2h-rerun-stage/r2h/html/26-guardian-hint-jesus-words-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/26-guardian-hint-jesus-words-390x844.html 390x844 (showcase-4-walk-guardian.png / 26-guardian-hint-jesus-words-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/27-guardian-kneels-390x844.json html_md5 ac2a3024 = v608build/r2h-rerun-stage/r2h/html/27-guardian-kneels-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/27-guardian-kneels-390x844.html 390x844 (showcase-4-walk-guardian.png / 27-guardian-kneels-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/28-guardian-win-390x844.json html_md5 e85619ba = v608build/r2h-rerun-stage/r2h/html/28-guardian-win-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/28-guardian-win-390x844.html 390x844 (showcase-4-walk-guardian.png / 28-guardian-win-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 5 of 5 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/showcase/showcase-4-walk-guardian.png.sources.txt  (0 problems, 0 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/showcase-4-walk-guardian.png.sources.txt (council notes: mentions warn, never block)
+PASS            v608build/r2h-rerun-stage/showcase/showcase-5-rewards-pause.png  (0 problems, 1 warnings, Thai pages measured 6)
+    source  sidecar v608build/r2h-rerun-stage/showcase/showcase-5-rewards-pause.png.sources.txt
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/29-verse-scroll-gift-390x844.json html_md5 22e6f9df = v608build/r2h-rerun-stage/r2h/html/29-verse-scroll-gift-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/29-verse-scroll-gift-390x844.html 390x844 (showcase-5-rewards-pause.png / 29-verse-scroll-gift-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/23-level-up-reward-390x844.json html_md5 ca373b98 = v608build/r2h-rerun-stage/r2h/html/23-level-up-reward-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/23-level-up-reward-390x844.html 390x844 (showcase-5-rewards-pause.png / 23-level-up-reward-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/36-sound-duel-round-done-390x844-before.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/36-sound-duel-round-done-390x844-before.html 390x844 (showcase-5-rewards-pause.png / 36-sound-duel-round-done-390x844-before.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/38-character-gear-mmo-tooltip-390x844-before.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/38-character-gear-mmo-tooltip-390x844-before.html 390x844 (showcase-5-rewards-pause.png / 38-character-gear-mmo-tooltip-390x844-before.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/45-character-golden-pantry-390x844.json has no source hash (fields: el, html, paste_md5, png, png_md5, snap, vh, vw); time check used
+    source  html v608build/r2h-rerun-stage/r2h/html/45-character-golden-pantry-390x844.html 390x844 (showcase-5-rewards-pause.png / 45-character-golden-pantry-390x844.png) [outside snapshot]
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/48-continue-after-pause-390x844.json html_md5 0cf5ed05 = v608build/r2h-rerun-stage/r2h/html/48-continue-after-pause-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/48-continue-after-pause-390x844.html 390x844 (showcase-5-rewards-pause.png / 48-continue-after-pause-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 6 of 6 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+PASS            v608build/r2h-rerun-stage/showcase/showcase-5-rewards-pause.png.sources.txt  (0 problems, 1 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/showcase-5-rewards-pause.png.sources.txt (council notes: mentions warn, never block)
+    WARN    DOC-MENTION RETIRED R3-shop-en "pantry" in showcase-5-rewards-pause.png.sources.txt:5 [line]: "77e379498b275dba2cc699e3d35f8ad3 /workspace/v608build/r2h-rerun-stage/r2h/png/45-character" (t487u)
+PASS            v608build/r2h-rerun-stage/showcase/tiles.txt  (0 problems, 2 warnings, Thai pages measured 0)
+    source  doc v608build/r2h-rerun-stage/showcase/tiles.txt (council notes: mentions warn, never block)
+    WARN    DOC-MENTION FAIL-WORD F-wrong "wrong" in tiles.txt:15 [line]: "3-asking 13 /workspace/v608build/round2/r2h/png/18-two-answer-wrong-tap-390x844.png" (fail word)
+    WARN    DOC-MENTION RETIRED R3-shop-en "pantry" in tiles.txt:27 [line]: "5-rewards-pause 24 /workspace/v608build/round2/r2h/png/45-character-golden-pantry-390x844." (t487u)
+RESULT CLEAR: 24 files, 24 PASS; 0 problems, 16 warnings
+exit 0

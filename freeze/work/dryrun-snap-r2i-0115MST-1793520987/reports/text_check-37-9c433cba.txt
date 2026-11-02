@@ -1,0 +1,10 @@
+text-check 9c433cba words 12ff2958 pointer f6dac2d0 snap snap-r2h-0021MDT paste_1b 317e91ce chrome yes
+note live uiText.tapPrompt.en = 'Can you find the {word}?'
+note live uiText.tapPrompt.th = 'หา {word} เจอไหม'
+note live uiText.pantry.en = 'Shop'
+PASS            v608build/r2h-rerun-stage/r2h/png/37-rest-screen-390x844.png  (0 problems, 1 warnings, Thai pages measured 1)
+    source  sidecar v608build/r2h-rerun-stage/r2h/png/37-rest-screen-390x844.json html_md5 b7ac6b0a = v608build/r2h-rerun-stage/r2h/html/37-rest-screen-390x844.html: VERIFIED by hash (mtime not used)
+    source  html v608build/r2h-rerun-stage/r2h/html/37-rest-screen-390x844.html 390x844 (37-rest-screen-390x844.png) [outside snapshot]
+    WARN    UNFROZEN-SOURCE 1 of 1 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded only by the edited-after-render time check
+RESULT CLEAR: 1 files, 1 PASS; 0 problems, 1 warnings
+exit 0

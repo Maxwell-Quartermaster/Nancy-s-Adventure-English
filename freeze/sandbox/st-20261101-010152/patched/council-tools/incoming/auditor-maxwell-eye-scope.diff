@@ -1,0 +1,52 @@
+--- a/council-tools/send-guard/design/MAXWELL-EYE.md
++++ b/council-tools/send-guard/design/MAXWELL-EYE.md
+@@ -1,7 +1,14 @@
+ # Maxwell's Eye: checker rules from Maxwell's own tile critiques
+ Owner: Auditor (design, Maxwell t98u, Nov 1 2026 12:37 AM MDT). Implementation: Chancellor (sole editor). Part of DESIGN-v5 (d7713bf6).
++Proposed by Auditor, scope pass per t100u, based on 1fda3d0a
+ Source: Maxwell's critiques of tiles 1-26 as relayed in t98u. TODO (Watchman): quote his exact words from the QM session per rule.
+ 
++## Scope (Maxwell t100u, Nov 1 2026)
++Each critique applies only to what he pointed at; never extrapolate into a global rule; wider use needs his confirmation.
++- Each rule BLOCKs (or ASKs, per its severity) only on the tiles listed in its Scope field.
++- On any other tile it reports ASK with exit 0 and the note 'scope unconfirmed (t100u)', never BLOCK.
++- A scope widens only when Maxwell confirms it (cite his t-number on the Scope line).
++
+ ## What he approves / rejects (the principle every rule serves)
+ Approves: placement looks intentional, proportions stay consistent, physics look natural (gravity, grounding), colors carry meaning, nothing covers what the player taps.
+ Rejects: anything that looks accidental, floating, or like a placeholder brush stroke.
+@@ -16,19 +23,33 @@
+ 
+ ## Rules
+ ME1 Grounded trees. "Floating trees that don't connect to the grass." Tiles 6, 11, 12, 15, 18, 19. PIXEL (exists: float). BLOCK.
++  Scope: tiles 6, 11, 12, 15, 18, 19; global by Maxwell's own ask (16/16S ground treatment default everywhere, t128u / t91u-t93u). Confirm wording via Watchman quote pass.
+ ME2 No fake walkway. "Thin gray-tan brush strokes randomly placed." Tiles 11, 12, 18, 19. PIXEL (exists: path). BLOCK.
+-ME3 Ground dots are three-tuft grass, not rocks or flowers. Tile 11. PIXEL: small non-green blobs on grass. BLOCK.
++  Scope: tiles 11, 12, 18, 19; global by Maxwell's own ask (16/16S ground treatment default everywhere, t128u / t91u-t93u). Confirm wording via Watchman quote pass.
++ME3 Old yellow ground dots replaced by three-blade grass tufts. Tiles 11-12 (Word Meadow). Source (paraphrases, unverified): t441u "miniature grass tufts instead of dots"; t472u-t473u on tiles 11-12. PIXEL: old yellow ground dots on grass. BLOCK.
++  Scope: tiles 11-12 (Word Meadow). Rocks/pebbles: Watchman asked Maxwell (render 52 crop); answer pending, not covered until he answers.
+ ME4 Room proportions. "Too much ceiling", grow the wall; consistent across levels, no size jumps or hero repositioning. Tiles 8, 10. GEOM: ceiling band / room height <= ref ratio (from approved room); hero box size+position within tolerance across all room screens. BLOCK on jumps; ASK on ratio.
++  Scope: tiles 8, 10.
+ ME5 Focal objects not hidden. "Moon behind the owl, move to center." Tile 9. GEOM: no focal decor (moon, owl, signs, hero, boss) overlapping another focal box. BLOCK.
++  Scope: tile 9.
+ ME6 Furniture reads in front of the wall. "Bed almost against the wall." Tile 10. GEOM: furniture base sits below the wall baseline by >= ref gap. ASK.
++  Scope: tile 10.
+ ME7 Gravity. "Tie hanging off to the side... normal gravity." Tiles 8, 10, 13, 14. GEOM: hanging items rotation ~0 deg and centered under the hook. BLOCK.
++  Scope: tiles 8, 10, 13, 14.
+ ME8 Nothing over a tap target. "Word bubbles overlapping buttons." Tiles 17, 26. GEOM (Auditor's occl layout layer): bubble/text box ∩ button box = 0 at 320/375/390. BLOCK.
++  Scope: tiles 17, 26.
+ ME9 Colors carry meaning. Green = right. Zone markers neutral = bright neon orange (Home Lake red "looked like she was doing something wrong", tile 13). Red fills only for boss health bars (tiles 22, 26). PIXEL+GEOM: saturated red outside boss-bar boxes => BLOCK, except approved scenery listed in REF (s36 mushrooms stay red, t501u "always fine"). Zone marker hue must be the approved orange.
++  Scope: tile 13 (Home Lake zone colour, t474u); tiles 22, 26 (boss bars). 'Green = right' and 'red only in boss bars everywhere' are Auditor generalizations => ASK elsewhere. Spec rule 9 'Nothing red or alarming anywhere' still applies on its own.
+ ME10 Boss nameplate everywhere. Loved style on 22/26; extrapolate to every boss. Health bar red and a different color from the plate. Echo Knight: same plate, smaller, barless. GEOM+REF: every boss screen has a plate; bar hue red != plate hue; Echo Knight plate scale < boss plate, no bar. BLOCK.
++  Scope: tiles 22, 26. 'Extrapolate to every boss' source unknown => ASK on other boss tiles until the quote is found.
+ ME11 Reference styles win. Character-select hand from tile 25 over newer ones unless animation is wired (tile 21). REF. ASK.
++  Scope: tiles 21, 25.
+ ME12 Same layout at every size. "Icon placement awkward on L and S"; open/closed book bottom right. GEOM: each icon's relative position matches the reference size within tolerance. BLOCK.
++  Scope: unconfirmed; tiles to be found (Watchman quote pass) => ASK on every tile until named.
+ ME13 Don't over-change what's good. Tile 20 (clean borders, compact scroll, but keep what's good); approved tiles stay approved. REF: any approved tile that differs from its approved render beyond threshold => ASK, with the Maxwell message that asked for the change named (e.g. t474u on tile 14), else BLOCK.
++  Scope: tile 20, plus each approved tile per its own Maxwell message (e.g. t474u).
+ ME14 Leave alone what he said is fine (s36 mushrooms, t501u). REF: locked regions must be pixel-identical. BLOCK.
++  Scope: s36 mushrooms (t501u).
+ 
+ ## Owners
+ Watchman: ME1-3 (pixel), ME9 hue scan, exact-quote pass for every rule.

@@ -1,0 +1,13 @@
+tuft_check b19579ac0921056cc8a2bc7f795cc59c | folder /tmp/qmtmp/r2h/tmp/gc-maps
+05-map-day1-390x844.png  dbd2ba9e39cfd6048625c3d2343016f5  PASS
+07-map-word-meadow-chooser-390x844.png  e9490d27cf05a277a7ee2f8fc697a2f8  PASS
+08-map-home-lake-chooser-day1-390x844.png  d2c80490bff7fd346cb2dbba591a4b9d  PASS
+09-map-later-390x844.png  9c2ada13a94cbf742b3540b376201fc4  PASS
+M1-main-menu-390x844.png  c8d5900be7a7e1ac3d5f02ae56e44713  PASS
+M2-main-menu-320x568.png  c6093b4b37855c9bb3334df2e7e78104  PASS
+M2-main-menu-390x844.png  7addcf5a8f0c93a4c84605014896c5d4  PASS
+M3-main-menu-390x844.png  47af087c93e5d4c02fccb5b25d30dc16  PASS
+map-extended-320x568.png  17865e75ea6e4d9e510bb0e377bef96b  PASS
+map-extended-390x844.png  2486fb47571994494e770d294655f325  PASS
+summary: 10 images, 0 BLOCK, 10 PASS
+exit 0

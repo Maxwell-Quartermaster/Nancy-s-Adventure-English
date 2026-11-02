@@ -1,0 +1,113 @@
+b6eb2bf20308b05dbaf2b0de3e9f77ad  /workspace/v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-390x844-before.png
+df0c2776a4e29a89656dc7ec487fdc49  /workspace/v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-390x844.png
+bd76e27644da3b027b27ef5e5daf6d13  /workspace/v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-320x568-before.png
+1b630f1a74d39ff477c43ea2cd5298e2  /workspace/v608build/r2h-rerun-stage/r2h/png/10-word-meadow-scene-320x568.png
+f0ed02b50994e9da48467c1edeb4f31d  /workspace/v608build/r2h-rerun-stage/r2h/png/32-home-lake-scene-390x844-before.png
+d21ee0f110e8ed9dcf32abc00a831a03  /workspace/v608build/r2h-rerun-stage/r2h/png/32-home-lake-scene-390x844.png
+4d6f88ebc8ebc498085aa241585729e5  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-lake-ask-320x568-before.png
+79d4fe3b1213c7af8831b246797835ad  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-lake-ask-320x568.png
+f94427a4f11107bf68698011fd83187e  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-390x844-before.png
+839517e85fe5be978d625f66d277d81e  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-390x844.png
+5a9fcc03981aecf4d47453ade0025717  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-320x568-before.png
+42fcd45ff9a600906b98d1462142dfea  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-320x568.png
+b48dbc94fd1495255c49a3142e2eda1d  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-375x812-before.png
+4b0860096270c3277541fe4ec6960d52  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-forest-ask-375x812.png
+5ab63a51ce13c2f7da5231a0d3e7dd35  /workspace/v608build/r2h-rerun-stage/r2h/png/54-phrase-ask-card-390x844-before.png
+f8770270b77d040ba477b9e5a4157765  /workspace/v608build/r2h-rerun-stage/r2h/png/54-phrase-ask-card-390x844.png
+278096fdbdd47652fb9862bdea089d9e  /workspace/v608build/r2h-rerun-stage/r2h/png/54-phrase-ask-card-320x568-before.png
+23312c0999a91ae405b12864ce42c206  /workspace/v608build/r2h-rerun-stage/r2h/png/54-phrase-ask-card-320x568.png
+81bd17008f262a83f55a542b40f8c7c2  /workspace/v608build/r2h-rerun-stage/r2h/png/11-word-meadow-scene-right-390x844-before.png
+e04e71a97bdb72315a39e3a02c7be16b  /workspace/v608build/r2h-rerun-stage/r2h/png/11-word-meadow-scene-right-390x844.png
+2160d4802b7e8d841c83b2e6a1ff3091  /workspace/v608build/r2h-rerun-stage/r2h/png/12-reveal-right-390x844-before.png
+71dee973d95db2f7b4b852032cafe067  /workspace/v608build/r2h-rerun-stage/r2h/png/12-reveal-right-390x844.png
+e0ef71d75cb7fc659d9fc2fa01460328  /workspace/v608build/r2h-rerun-stage/r2h/png/15-say-it-sight-words-390x844-before.png
+e45e003628b7492f3dc44ecf3a0cfcd8  /workspace/v608build/r2h-rerun-stage/r2h/png/15-say-it-sight-words-390x844.png
+4095ef61cd4dccd43ebb75ba60c399eb  /workspace/v608build/r2h-rerun-stage/r2h/png/21-kitchen-say-it-shown-390x844-before.png
+1dec12147918073801973990f98d138f  /workspace/v608build/r2h-rerun-stage/r2h/png/21-kitchen-say-it-shown-390x844.png
+2c49534054afc89bc5755fdafd4fc4bc  /workspace/v608build/r2h-rerun-stage/r2h/png/21-kitchen-say-it-shown-320x568-before.png
+aad8051ea70aea1b3109741039a7d37d  /workspace/v608build/r2h-rerun-stage/r2h/png/21-kitchen-say-it-shown-320x568.png
+a7cefecad4819cb0a8a1074c21fb1bdb  /workspace/v608build/r2h-rerun-stage/r2h/png/05-map-day1-390x844-before.png
+dbd2ba9e39cfd6048625c3d2343016f5  /workspace/v608build/r2h-rerun-stage/r2h/png/05-map-day1-390x844.png
+9ce2b91ed74084b704b0c0cb54d59a90  /workspace/v608build/r2h-rerun-stage/r2h/png/14-reveal-gentle-retry-390x844-before.png
+058b61a7141010e1a216d3bcffcdaac0  /workspace/v608build/r2h-rerun-stage/r2h/png/14-reveal-gentle-retry-390x844.png
+6032902ee5adfbe36aa18b47d68d4a44  /workspace/v608build/r2h-rerun-stage/r2h/png/14-reveal-gentle-retry-320x568-before.png
+a39a930e8f10b7e6d43e228cb2a8fd81  /workspace/v608build/r2h-rerun-stage/r2h/png/14-reveal-gentle-retry-320x568.png
+2e0788a9096f674c06d6d7668182efa0  /workspace/v608build/r2h-rerun-stage/r2h/png/24-guardian-run-entry-390x844-before.png
+9fbe6c7335c629fd8edd4b555ea0d503  /workspace/v608build/r2h-rerun-stage/r2h/png/24-guardian-run-entry-390x844.png
+92a2b993f3d515940d2ac549aae7ec6d  /workspace/v608build/r2h-rerun-stage/r2h/png/25-guardian-hint-letters-320x568-before.png
+50af4d399bebcdcb57f924e9e1fa8d2c  /workspace/v608build/r2h-rerun-stage/r2h/png/25-guardian-hint-letters-320x568.png
+33e956ea7469a49361ba76ee8c414d76  /workspace/v608build/r2h-rerun-stage/r2h/png/26-guardian-hint-jesus-words-375x667-before.png
+6a43ef49fd050ef69d4e3091d5ac16d2  /workspace/v608build/r2h-rerun-stage/r2h/png/26-guardian-hint-jesus-words-375x667.png
+0de7db9e86fe459456d2a2cf473c276e  /workspace/v608build/r2h-rerun-stage/r2h/png/27-guardian-kneels-390x844-before.png
+25cd45317f208a169f02e352376498ce  /workspace/v608build/r2h-rerun-stage/r2h/png/27-guardian-kneels-390x844.png
+bd76e27644da3b027b27ef5e5daf6d13  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-meadow-ask-320x568-before.png
+1b630f1a74d39ff477c43ea2cd5298e2  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-meadow-ask-320x568.png
+b6eb2bf20308b05dbaf2b0de3e9f77ad  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-meadow-ask-390x844-skyB-before.png
+df0c2776a4e29a89656dc7ec487fdc49  /workspace/v608build/r2h-rerun-stage/r2h/png/zone-meadow-ask-390x844-skyB.png
+4e261e2f04562f98488f21d976ddc523  /workspace/v608build/r2h-rerun-stage/r2h/png/stage-A-meadow-evening-pond-390x844-before.png
+a0d98dbb19371e702fe0eb5da8c1f026  /workspace/v608build/r2h-rerun-stage/r2h/png/stage-A-meadow-evening-pond-390x844.png
+7ac06be09c977a5e1c5a36fed852c032  /workspace/v608build/r2h-rerun-stage/r2h/png/stage-B-meadow-listen-and-find-390x844-before.png
+fb0715ce966889c09f7583952fe9acd6  /workspace/v608build/r2h-rerun-stage/r2h/png/stage-B-meadow-listen-and-find-390x844.png
+caption r2h before/after, base trim 1B (Maxwell t492u). Every image is an r2h render (r2h/png). paste_1b 317e91ce, pointer f6dac2d0.
+caption 6  Word Meadow scene (screen 10): tree rooted, walkway off, dots -> tufts (t467u/t473u)
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption 8  Home Lake home room (screen 32 / zone ask): tie hangs straight (t472u); wall unchanged under 1B
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption 9  Echo Forest (zone ask, sky B): moon to the sky centre (t471u)
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption before 375x812
+caption after 375x812
+caption 10  Phrase ask (screen 54): bed 8 pt forward, tie straight (t472u); wall unchanged under 1B
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption 11  Right answer (screen 11): tree, walkway, tufts (t473u)
+caption before 390x844
+caption after 390x844
+caption 12  Reveal (screen 12): tree, walkway, tufts (t473u)
+caption before 390x844
+caption after 390x844
+caption 15  Say it, sight words (screen 15): tree, walkway, tufts (t476u)
+caption before 390x844
+caption after 390x844
+caption K  Kitchen (screen 21): taller wall, 1B (t470u/t492u); tie straight
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption M  Map (screen 05): Home Lake colour #D9663F -> #F05A00 (t474u)
+caption before 390x844
+caption after 390x844
+caption 14  Screen 14 gentle retry: Home Lake colour (t474u) and tie (t474u item 2)
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption G  Guardian 24-27: red boss bar (boss step); 390 nameplate + bar, 375/320 bar under the zone chip
+caption before 390x844
+caption after 390x844
+caption before 320x568
+caption after 320x568
+caption before 375x667
+caption after 375x667
+caption before 390x844
+caption after 390x844
+caption W  Watchman 2a-2c: ask wording (r2tp), walkway strokes M118/M330 removed, zone-meadow-ask 320 and sky-B
+caption before 320x568
+caption after 320x568
+caption before skyB
+caption after skyB
+caption before 390x844
+caption after 390x844
+caption before 390x844
+caption after 390x844

@@ -1,0 +1,616 @@
+{
+ "rows": [
+  {
+   "id": "title",
+   "name": "Title / sword screen",
+   "ref": "6.1",
+   "first": 1,
+   "spec": 51,
+   "files": 250,
+   "hits": 7312,
+   "checks": 64,
+   "walked": 27,
+   "shown": 7,
+   "renders": 3,
+   "sizes": {
+    "390": 2,
+    "320x568": 1
+   }
+  },
+  {
+   "id": "menu",
+   "name": "Main menu, hub, verse pop-up",
+   "ref": "6.2, 15",
+   "first": 1,
+   "spec": 25,
+   "files": 193,
+   "hits": 3087,
+   "checks": 18,
+   "walked": 21,
+   "shown": 4,
+   "renders": 12,
+   "sizes": {
+    "390": 8,
+    "320x568": 4
+   }
+  },
+  {
+   "id": "map",
+   "name": "Map and zone choosers",
+   "ref": "6.3",
+   "first": 1,
+   "spec": 54,
+   "files": 230,
+   "hits": 8841,
+   "checks": 25,
+   "walked": 26,
+   "shown": 5,
+   "renders": 6,
+   "sizes": {
+    "390": 6
+   }
+  },
+  {
+   "id": "ask",
+   "name": "Find-and-tap scenes (asks)",
+   "ref": "6.4, 7.1",
+   "first": 1,
+   "spec": 11,
+   "files": 197,
+   "hits": 1409,
+   "checks": 14,
+   "walked": 26,
+   "shown": 20,
+   "renders": 71,
+   "sizes": {
+    "390": 30,
+    "320x568": 21,
+    "375x667": 1,
+    "375x812": 19
+   }
+  },
+  {
+   "id": "reveal",
+   "name": "Reveal screen",
+   "ref": "6.5",
+   "first": 1,
+   "spec": 25,
+   "files": 192,
+   "hits": 2888,
+   "checks": 3,
+   "walked": 25,
+   "shown": 4,
+   "renders": 18,
+   "sizes": {
+    "390": 9,
+    "320x568": 4,
+    "375x812": 5
+   }
+  },
+  {
+   "id": "sayit",
+   "name": "Say-it cards",
+   "ref": "8",
+   "first": 1,
+   "spec": 55,
+   "files": 208,
+   "hits": 4158,
+   "checks": 6,
+   "walked": 26,
+   "shown": 4,
+   "renders": 62,
+   "sizes": {
+    "390": 31,
+    "320x568": 12,
+    "375x812": 19
+   }
+  },
+  {
+   "id": "twoans",
+   "name": "Two-answer (pray / high five)",
+   "ref": "8.1",
+   "first": 1,
+   "spec": 60,
+   "files": 204,
+   "hits": 4722,
+   "checks": 8,
+   "walked": 21,
+   "shown": 8,
+   "renders": 18,
+   "sizes": {
+    "390": 12,
+    "375x812": 6
+   }
+  },
+  {
+   "id": "kitchen",
+   "name": "Kitchen / Server Talk",
+   "ref": "8.2",
+   "first": 0,
+   "spec": 28,
+   "files": 222,
+   "hits": 3384,
+   "checks": 17,
+   "walked": 26,
+   "shown": 1,
+   "renders": 38,
+   "sizes": {
+    "390": 18,
+    "320x568": 8,
+    "375x812": 12
+   }
+  },
+  {
+   "id": "xp",
+   "name": "XP, levels, level-up",
+   "ref": "9",
+   "first": 1,
+   "spec": 47,
+   "files": 192,
+   "hits": 4941,
+   "checks": 7,
+   "walked": 25,
+   "shown": 3,
+   "renders": 12,
+   "sizes": {
+    "390": 5,
+    "320x568": 4,
+    "375x812": 3
+   }
+  },
+  {
+   "id": "guardian",
+   "name": "Guardian runs (boss)",
+   "ref": "7, 12",
+   "first": 0,
+   "spec": 42,
+   "files": 215,
+   "hits": 5438,
+   "checks": 26,
+   "walked": 27,
+   "shown": 19,
+   "renders": 40,
+   "sizes": {
+    "390": 12,
+    "320x568": 15,
+    "375x812": 6,
+    "375x667": 7
+   }
+  },
+  {
+   "id": "gifts",
+   "name": "Reward gifts (verse scroll, weapon)",
+   "ref": "9, 15",
+   "first": 0,
+   "spec": 2,
+   "files": 66,
+   "hits": 501,
+   "checks": 0,
+   "walked": 11,
+   "shown": 1,
+   "renders": 6,
+   "sizes": {
+    "390": 6
+   }
+  },
+  {
+   "id": "duel",
+   "name": "Sound Duel",
+   "ref": "12",
+   "first": 0,
+   "spec": 18,
+   "files": 186,
+   "hits": 1843,
+   "checks": 11,
+   "walked": 22,
+   "shown": 4,
+   "renders": 36,
+   "sizes": {
+    "390": 15,
+    "320x568": 12,
+    "375x812": 9
+   }
+  },
+  {
+   "id": "rest",
+   "name": "Rest screen (victory lap)",
+   "ref": "14",
+   "first": 0,
+   "spec": 15,
+   "files": 162,
+   "hits": 1522,
+   "checks": 4,
+   "walked": 18,
+   "shown": 0,
+   "renders": 2,
+   "sizes": {
+    "390": 2
+   }
+  },
+  {
+   "id": "char",
+   "name": "Character, gear, themes, gems",
+   "ref": "6.6, 11.1",
+   "first": 0,
+   "spec": 172,
+   "files": 252,
+   "hits": 15682,
+   "checks": 70,
+   "walked": 27,
+   "shown": 9,
+   "renders": 10,
+   "sizes": {
+    "390": 8,
+    "320x568": 2
+   }
+  },
+  {
+   "id": "scrolls",
+   "name": "Scrolls pane",
+   "ref": "6.8",
+   "first": 0,
+   "spec": 35,
+   "files": 184,
+   "hits": 3507,
+   "checks": 13,
+   "walked": 17,
+   "shown": 3,
+   "renders": 6,
+   "sizes": {
+    "390": 4,
+    "320x568": 2
+   }
+  },
+  {
+   "id": "pantry",
+   "name": "Golden Pantry / buying",
+   "ref": "11.4",
+   "first": 0,
+   "spec": 35,
+   "files": 214,
+   "hits": 3802,
+   "checks": 19,
+   "walked": 20,
+   "shown": 6,
+   "renders": 3,
+   "sizes": {
+    "390": 2,
+    "320x568": 1
+   }
+  },
+  {
+   "id": "backup",
+   "name": "Backup view / restore (Maxwell)",
+   "ref": "6.7",
+   "first": 0,
+   "spec": 34,
+   "files": 214,
+   "hits": 18115,
+   "checks": 14,
+   "walked": 24,
+   "shown": 1,
+   "renders": 6,
+   "sizes": {
+    "390": 4,
+    "320x568": 2
+   }
+  },
+  {
+   "id": "resume",
+   "name": "Pause, resume, welcome back",
+   "ref": "10",
+   "first": 1,
+   "spec": 22,
+   "files": 151,
+   "hits": 2908,
+   "checks": 4,
+   "walked": 26,
+   "shown": 8,
+   "renders": 5,
+   "sizes": {
+    "320x568": 1,
+    "390": 4
+   }
+  },
+  {
+   "id": "pwa",
+   "name": "Home-screen launch, offline, PWA",
+   "ref": "2, 4",
+   "first": 1,
+   "spec": 8,
+   "files": 114,
+   "hits": 689,
+   "checks": 0,
+   "walked": 19,
+   "shown": 0,
+   "renders": 3,
+   "sizes": {
+    "390": 2,
+    "320x568": 1
+   }
+  },
+  {
+   "id": "streak",
+   "name": "Day streak",
+   "ref": "13",
+   "first": 0,
+   "spec": 15,
+   "files": 162,
+   "hits": 1271,
+   "checks": 7,
+   "walked": 17,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "unlock",
+   "name": "Unlocks and reconcile on launch",
+   "ref": "11.2, 11.3",
+   "first": 0,
+   "spec": 68,
+   "files": 176,
+   "hits": 4507,
+   "checks": 18,
+   "walked": 19,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "trophy",
+   "name": "Trophies",
+   "ref": "9, 11",
+   "first": 0,
+   "spec": 74,
+   "files": 204,
+   "hits": 7829,
+   "checks": 50,
+   "walked": 20,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "personal",
+   "name": "Personal card slots",
+   "ref": "17",
+   "first": 0,
+   "spec": 4,
+   "files": 102,
+   "hits": 399,
+   "checks": 0,
+   "walked": 15,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "thaiq",
+   "name": "Thai Review Queue / NEEDS NANCY flow",
+   "ref": "18",
+   "first": 0,
+   "spec": 24,
+   "files": 169,
+   "hits": 2279,
+   "checks": 20,
+   "walked": 17,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "verses",
+   "name": "Bible verses and Jesus words",
+   "ref": "15",
+   "first": 1,
+   "spec": 156,
+   "files": 287,
+   "hits": 21035,
+   "checks": 69,
+   "walked": 31,
+   "shown": 26,
+   "renders": 22,
+   "sizes": {
+    "390": 6,
+    "320x568": 12,
+    "375x812": 2,
+    "375x667": 2
+   }
+  },
+  {
+   "id": "audio",
+   "name": "Audio, speech, pronunciation",
+   "ref": "4, 7",
+   "first": 1,
+   "spec": 276,
+   "files": 203,
+   "hits": 13638,
+   "checks": 6,
+   "walked": 22,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "a11y",
+   "name": "Accessibility: text size, VoiceOver, motion",
+   "ref": "2",
+   "first": 1,
+   "spec": 7,
+   "files": 182,
+   "hits": 879,
+   "checks": 5,
+   "walked": 20,
+   "shown": 2,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "rotate",
+   "name": "Landscape / rotate",
+   "ref": "2",
+   "first": 1,
+   "spec": 3,
+   "files": 160,
+   "hits": 317,
+   "checks": 8,
+   "walked": 18,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "device",
+   "name": "Real iPhone / Safari behaviour",
+   "ref": "4, 20",
+   "first": 1,
+   "spec": 2,
+   "files": 160,
+   "hits": 516,
+   "checks": 10,
+   "walked": 16,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "sizes",
+   "name": "Other phone sizes (375, 414/430, Plus/Max)",
+   "ref": "2",
+   "first": 1,
+   "spec": 9,
+   "files": 185,
+   "hits": 1129,
+   "checks": 6,
+   "walked": 23,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "endgame",
+   "name": "End of game / after the last level",
+   "ref": "9, 11",
+   "first": 0,
+   "spec": 0,
+   "files": 34,
+   "hits": 34,
+   "checks": 1,
+   "walked": 0,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "longrun",
+   "name": "Long-term flow (weeks of play, repetition)",
+   "ref": "7, 9",
+   "first": 0,
+   "spec": 5,
+   "files": 170,
+   "hits": 720,
+   "checks": 8,
+   "walked": 17,
+   "shown": 2,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "edge",
+   "name": "Error and edge states (storage, empty, fallback)",
+   "ref": "10, 15",
+   "first": 1,
+   "spec": 23,
+   "files": 181,
+   "hits": 2174,
+   "checks": 6,
+   "walked": 23,
+   "shown": 0,
+   "renders": 0,
+   "sizes": {}
+  },
+  {
+   "id": "firstrun",
+   "name": "First run / onboarding (day 1)",
+   "ref": "6.1-6.3, 10",
+   "first": 1,
+   "spec": 7,
+   "files": 188,
+   "hits": 1157,
+   "checks": 6,
+   "walked": 23,
+   "shown": 2,
+   "renders": 8,
+   "sizes": {
+    "390": 6,
+    "375x812": 2
+   }
+  }
+ ],
+ "docs": 347,
+ "walkdocs": 35,
+ "cards": 211,
+ "rendered": 38,
+ "mentioned": 211,
+ "by_prefix": {
+  "ph": [
+   26,
+   12,
+   26
+  ],
+  "cs": [
+   24,
+   9,
+   24
+  ],
+  "sw": [
+   24,
+   7,
+   24
+  ],
+  "nm": [
+   24,
+   3,
+   24
+  ],
+  "bh": [
+   31,
+   1,
+   31
+  ],
+  "ms": [
+   32,
+   3,
+   32
+  ],
+  "fd": [
+   38,
+   3,
+   38
+  ],
+  "cv": [
+   12,
+   0,
+   12
+  ]
+ },
+ "zones": [
+  "phonics",
+  "colors-shapes",
+  "numbers",
+  "sight-words",
+  "baby-hospital",
+  "maxwell-says",
+  "kitchen"
+ ],
+ "settings_in_spec": 3,
+ "levels": [
+  "2",
+  "3",
+  "20",
+  "20",
+  "6",
+  "2"
+ ]
+}

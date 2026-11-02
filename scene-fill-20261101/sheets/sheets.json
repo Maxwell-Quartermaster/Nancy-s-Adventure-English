@@ -1,0 +1,197 @@
+[
+ {
+  "sheet": "S01-park-390x844.png",
+  "md5": "04d395327a478f1ef62aaac071224fe9",
+  "tiles": [
+   "park-d-390x844",
+   "park-a-390x844",
+   "park-e-390x844",
+   "park-n-390x844"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S02-park-320x568.png",
+  "md5": "8fe1165e89e41566959f0267d5aff4e5",
+  "tiles": [
+   "park-d-320x568",
+   "park-a-320x568",
+   "park-e-320x568",
+   "park-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S03-pond-390x844.png",
+  "md5": "ad02c96ae56da4f740b0b9f9038fc5f9",
+  "tiles": [
+   "pond-m-390x844",
+   "pond-d-390x844",
+   "pond-a-390x844",
+   "pond-n-390x844"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S04-pond-320x568.png",
+  "md5": "e10b95818d536e805436444f33efe981",
+  "tiles": [
+   "pond-m-320x568",
+   "pond-d-320x568",
+   "pond-a-320x568",
+   "pond-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S05-home-390x844.png",
+  "md5": "ee23103538df02b157e7eae2a7ccd00a",
+  "tiles": [
+   "home-m-390x844",
+   "home-d-390x844",
+   "home-a-390x844",
+   "home-e-390x844",
+   "home-n-390x844"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S06-home-320x568.png",
+  "md5": "52aedd221206ceab4fd830da2170d69e",
+  "tiles": [
+   "home-m-320x568",
+   "home-d-320x568",
+   "home-a-320x568",
+   "home-e-320x568",
+   "home-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S07-f-kitchen-390x844.png",
+  "md5": "fe20684056f33c6e65b1e9efaa88ffae",
+  "tiles": [
+   "F-kitchen-m-390x844",
+   "F-kitchen-d-390x844",
+   "F-kitchen-a-390x844",
+   "F-kitchen-e-390x844",
+   "F-kitchen-n-390x844"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S08-f-kitchen-320x568.png",
+  "md5": "934c8e94e455b542c4994039d5c87f9d",
+  "tiles": [
+   "F-kitchen-m-320x568",
+   "F-kitchen-d-320x568",
+   "F-kitchen-a-320x568",
+   "F-kitchen-e-320x568",
+   "F-kitchen-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S09-e-front-desk-390x844.png",
+  "md5": "285fc9766193d7c1785d9f1620e89067",
+  "tiles": [
+   "E-front-desk-base-390x844",
+   "E-front-desk-m-390x844",
+   "E-front-desk-d-390x844",
+   "E-front-desk-a-390x844",
+   "E-front-desk-e-390x844",
+   "E-front-desk-n-390x844"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S10-e-front-desk-320x568.png",
+  "md5": "f3420fbd94baee68f736963e88cfc235",
+  "tiles": [
+   "E-front-desk-base-320x568",
+   "E-front-desk-m-320x568",
+   "E-front-desk-d-320x568",
+   "E-front-desk-a-320x568",
+   "E-front-desk-e-320x568",
+   "E-front-desk-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S11-farm-390x844.png",
+  "md5": "be2ecae739dff4771b73e7030f1d4ca6",
+  "tiles": [
+   "farm-m-390x844",
+   "farm-d-390x844",
+   "farm-e-390x844",
+   "farm-n-390x844"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S12-farm-320x568.png",
+  "md5": "a3ed75442cdf5fa195d718350a2a0a14",
+  "tiles": [
+   "farm-m-320x568",
+   "farm-d-320x568",
+   "farm-e-320x568",
+   "farm-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S13-title.png",
+  "md5": "1f350b4da953778721e5db51ef98e504",
+  "tiles": [
+   "title-a-390x844",
+   "title-a-320x568",
+   "title-e-390x844",
+   "title-e-320x568",
+   "title-n-A-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S14-INTERNAL-title-night-AB.png",
+  "md5": "b68c8caf42942d6d3cd3994dfaf34112",
+  "tiles": [
+   "title-n-A-320x568",
+   "title-n-B-320x568"
+  ],
+  "internal": true
+ },
+ {
+  "sheet": "S15-menu-m1.png",
+  "md5": "1b3fab0c056cb28d3873f3515af3d598",
+  "tiles": [
+   "menu-M1-e-390x844",
+   "menu-M1-e-320x568",
+   "menu-M1-n-390x844",
+   "menu-M1-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S16-menu-m3.png",
+  "md5": "432298a8b1092054df99be17ecff2edc",
+  "tiles": [
+   "menu-M3-e-390x844",
+   "menu-M3-e-320x568",
+   "menu-M3-n-390x844",
+   "menu-M3-n-320x568"
+  ],
+  "internal": false
+ },
+ {
+  "sheet": "S17-rest.png",
+  "md5": "29641f1f06d369d4312a83378adca129",
+  "tiles": [
+   "rest-base-320x568",
+   "rest-sunset-390x844",
+   "rest-sunset-320x568",
+   "rest-starry-390x844",
+   "rest-starry-320x568"
+  ],
+  "internal": false
+ }
+]

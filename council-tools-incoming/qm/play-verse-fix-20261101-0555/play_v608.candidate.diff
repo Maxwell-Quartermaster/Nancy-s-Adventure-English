@@ -1,0 +1,69 @@
+--- snap-r2h-0021MDT/code/play_v608.py (ee74f3ef)
++++ play_v608.candidate.py
+@@ -47,6 +47,21 @@
+ C = {c['id']: c for c in D['cards']}
+ if C['sw-19']['choices'] == ['eat', 'sink', 'run', 'think']: C['sw-19']['choices'] = ['eat', 'sink', 'three', 'think']   # round2.py P6, a QM-relayed staged fix (Auditor eb2674be H1): 'three' gives "t____ /th/" two 5-letter fits
+ G = json.load(open('/workspace/v604build/screens/guardians.json'))   # dumped from mock-t346u/map_t346u.guardian() by dump_guardians.py
++# QM play-verse-fix (Nov 1 2026, candidate): verse text comes straight from the PASTE JSON line, never retyped here (PASTE :344, :404, verses.textRule).
++# NAE_PASTE overrides the path; default is the pointer's paste_1b_path. No quote marks are added; '\n' renders as a line break (white-space:pre-line).
++def _paste_json():
++    p = os.environ.get('NAE_PASTE')
++    if not p:
++        ptr = dict(l.split('=', 1) for l in open('/workspace/v608build/CURRENT-SNAP.txt', encoding='utf-8').read().splitlines() if '=' in l)
++        p = '/workspace/v608build/' + ptr['paste_1b_path']
++    for l in open(p, encoding='utf-8'):
++        if l.startswith('{"version"'): return json.loads(l)
++    raise SystemExit('no PASTE JSON line in ' + p)
++PJ = _paste_json()
++def verse(ref):   # the one PASTE verse with this ref: verses.rest or verses.weekly[]
++    vs = [v for v in [PJ['verses']['rest']] + PJ['verses']['weekly'] if v['ref'] == ref]; assert len(vs) == 1, ref; return vs[0]
++def vtx(t, cls, extra=''):   # a verse string exactly as in the file; a '\n' poetry break shows as a line break
++    return tx(t, cls, ((extra + ';') if extra else '') + 'white-space:pre-line') if '\n' in t else tx(t, cls, extra)
+ def u(k, **kw):
+     en, th = U[k]['en'], U[k]['th']
+     for a, b in kw.items(): en = en.replace('{%s}' % a, str(b)); th = th.replace('{%s}' % a, str(b))
+@@ -263,7 +278,7 @@
+     if hint == 'letters' and _one: lines = [f"<div style='display:flex;gap:8px;justify-content:center;align-items:baseline'>{tx(c['en'][:1] + '_' * (len(c['en']) - 1) + ' /th/', 'e20 nw')}{tx(u('itStartsWith')[1], 't17 nw', 'line-height:1.7')}</div>"] + lines   # r2c: hint and its Thai on one line at 320
+     elif hint == 'letters': lines = [tx(c['en'][:1] + '_' * (len(c['en']) - 1) + ' /th/', 'e20'), tx(u('itStartsWith')[1], 't17', 'line-height:1.7')] + lines   # V2: Thai on its own 1.7 line
+     if hint == 'jesus':
+-        j = D['jesusWords'][0]   # 9:05 PM MDT follow-up: at 320 the bubble sits just above the card (at top 250 it covered the card's Thai line); 390 unchanged
++        j = PJ['jesusWords'][0]   # play-verse-fix: from the PASTE (same bytes as cards.json). 9:05 PM MDT follow-up: at 320 the bubble sits just above the card (at top 250 it covered the card's Thai line); 390 unchanged
+         out += (f"<div class='abs'{' data-overlay=1' if SE else ''} style='{'left:16px;right:16px;bottom:120px' if SE else 'left:16px;top:250px;width:250px'};z-index:6;box-sizing:border-box;background:#FFF0B8;border:2px solid #10170F;border-radius:14px;box-shadow:inset 0 0 0 3px #E8B84A,inset 0 0 0 4px #10170F,0 4px 0 #10170F;padding:10px 12px'>"
+                 + tx(u('jesusWords')[0] + ' · ' + j['ref'], 'e15') + tx(j['en'], 'e15') + tx(j['th'], 't17') + '</div>')
+     if SE and R2C_SE: return out + card(lines, 132 if hint == 'letters' else 104)
+@@ -286,11 +301,15 @@
+     return (b + top('meadow') + ribbon(*rb) + card([tx(s['ref'], 'e20'), tx(s['en'], 'e15', 'font-size:18px;line-height:1.35'), tx(s['th'], 't17'), tx('ESV · THSV11', 'e15'), tx(u('askMax')[0], 'e15'), tx(u('askMax')[1], 't17')], 540, btn + [gbtn(*D['gotItText'].values(), 120)]))
+ add(29, 'verse-scroll-gift', 'extrapolated', 'meadow template + tall parchment card', lambda: no_back(scroll()))   # Auditor r2b-2051 #4: a rewardQueue screen (PASTE :72)
+ add(44, 'scroll-reopened', 'extrapolated', 'as 29 with Scrolls banner + Back to Map', lambda: scroll(True))
+-def weapon_gift():
++# play-verse-fix: the Isaiah 41:10 en + th (4 + 4 lines) sit in a capped scroll box (the r2d 26-D bubble pattern: Thai scrolls inside, 17 px, lh 1.7, inset shadow);
++# card heights per size (was 290 at every size) keep the card under the weaponNew ribbon
++WG_CH = {(390, 844): 420, (375, 667): 420, (320, 568): 345}; WG_VH = {(390, 844): 130, (375, 667): 130, (320, 568): 82}
++def weapon_gift():   # play-verse-fix: label = trophies[axe-oak] word + ' · ' + ref (as 26's label · ref), then the verse en and th (as 26's bubble)
++    t_ = next(t for t in PJ['trophies'] if t['id'] == 'axe-oak'); v_ = verse(t_['ref'])
+     b, g = base('meadow', 'cheer', objs=False)
+     ax = "<svg width='110' height='110' viewBox='-30 -60 60 80'><path d='M-3 18v-72h6v72z' fill='#B07A42' stroke='#10170F' stroke-width='2.5'/><path d='M3-56c16-6 27 4 27 24c-9-6-18-6-27 0z' fill='#C9CED6' stroke='#10170F' stroke-width='2.5'/><path d='M-3-50l-11 6 11 6z' fill='#8A939C' stroke='#10170F' stroke-width='2.5' stroke-linejoin='round'/></svg>"
+     return (b + top('meadow') + ribbon(*u('weaponNew')) +
+-            card(["<div style='display:flex;justify-content:center'>" + ax.replace("width='110' height='110'", "width='84' height='84'") + "</div>", tx('Oak Axe', 'e22'), tx(u('giftFrom', g=re.sub(r'^The ', 'the ', BN['en']))[0], 'e15'), tx(u('giftFrom', g=BN['th'])[1], 't17'), tx('Steadfast · Isaiah 41:10', 'e15')], 290, [gbtn(*u('weaponUse'), 150), gbtn(*D['gotItText'].values(), 110)]))
++            card(["<div style='display:flex;justify-content:center'>" + ax.replace("width='110' height='110'", "width='84' height='84'") + "</div>", tx('Oak Axe', 'e22'), tx(u('giftFrom', g=re.sub(r'^The ', 'the ', BN['en']))[0], 'e15'), tx(u('giftFrom', g=BN['th'])[1], 't17'), tx(t_['word'][0] + ' · ' + t_['ref'], 'e15'), f"<div data-verse-scroll=1 style='max-height:{WG_VH[(W, H)]}px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:inset 0 -14px 10px -12px rgba(58,36,16,.45);margin-top:2px'>" + vtx(v_['en'], 'e15') + vtx(v_['th'], 't17') + '</div>'], WG_CH[(W, H)], [gbtn(*u('weaponUse'), 150), gbtn(*D['gotItText'].values(), 110)]))
+ add(30, 'new-weapon-gift', 'extrapolated', 'meadow template + weapon in the scene + parchment card', lambda: no_back(weapon_gift()))   # Auditor r2b-2051 #4
+ def duel(state):
+     b, g = base('forest', 'cheer' if state else 'ask', hide=('owl', 'lantern'))
+@@ -308,14 +327,15 @@
+ add(34, 'echo-forest-sound-duel', 'extrapolated', 'Q-shot-t328u-forest scene (night woods, Nancy, sword not dagger) + Echo Knight (gap 1) + parchment card', lambda: duel(None))
+ add(35, 'sound-duel-right', 'extrapolated', 'as 34, cheer pose, Gold glow tile', lambda: duel('right'))
+ add(36, 'sound-duel-round-done', 'extrapolated', 'as 34, roundDone ribbon + card', lambda: duel('done'))
++REST_CH = 320   # play-verse-fix: card height with the Thai line (was 260); 300 at 320 x 568 so the card clears the restScreen ribbon
+ def rest():
+     b = Z.outdoor(W, H, 'meadow')
+     ev = "<div class='abs' style='left:0;top:0;width:390px;height:844px;background:linear-gradient(#4F64A8 0%,#F4A862 45%,rgba(244,168,98,0) 60%);opacity:.72'></div>"   # t288u evening sky (gap 17)
+     hn, wk, hx, k, feet, *_ = SC['meadow']
+     b += ev + Z.hero(hn, k, hx, feet - 177*k, wk, 'cheer')
+-    v = D['restScreen']
++    v = D['restScreen']; r_ = PJ['verses']['rest']   # play-verse-fix: verses.rest from the PASTE, no added quotes, Thai under the English (as the 29 scroll)
+     return (b + top('meadow') + ribbon(v['en'], v['th'], 150).replace('white-space:nowrap', 'white-space:normal;width:340px') +
+-            card([tx('Matthew 11:28', 'e20'), tx('“Come to me, all who labor and are heavy laden, and I will give you rest.”', 'e15', 'font-size:18px'), tx('ESV · THSV11', 'e15')], 260, [gbtn(*u('keepGoing'), 140), gbtn(*u('restNow'), 140)]))
++            card([tx(r_['ref'], 'e20'), vtx(r_['en'], 'e15', 'font-size:18px'), vtx(r_['th'], 't17'), tx(r_['enSource'] + ' · ' + r_['thSource'], 'e15')], 300 if SE else REST_CH, [gbtn(*u('keepGoing'), 140), gbtn(*u('restNow'), 140)]))
+ add(37, 'rest-screen', 'extrapolated', 'gap 17: the evening sky (t288u palette) over the meadow scene + parchment card', rest)
+ def paused():
+     b = Z.screen('meadow', 'ask', W, H)

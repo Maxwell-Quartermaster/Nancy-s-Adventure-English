@@ -1,0 +1,4322 @@
+{
+ "generated": "2026-11-01 06:51 MDT",
+ "base": {
+  "pointer": "f6dac2d0e7b391436a160eab1bbf17fe",
+  "snap": "snap-r2h-0021MDT",
+  "paste": "317e91ce86f073c961f8169183d2bbd3",
+  "renders_manifest": "62e41535fb1d86d3a05dec854c56f572"
+ },
+ "status_meaning": {
+  "CURRENT": "listed (path or md5) in snap-r2h-0021MDT renders-MANIFEST.md5 and its paired HTML has none of the stale-look markers (or has no HTML to test: marked look_ok null)",
+  "IN-PROGRESS": "written by the r2h re-run into v608build/round2/r2h after the freeze; not in the manifest yet",
+  "CURRENT-LISTED-STALE-LOOK": "listed in the manifest but its HTML still has a superseded look: meadow walkway/ground dots or Home Lake #D9663F chip (fixed in r2h), or the old ask wording Where is the ...? (replaced by P1 t440u)",
+  "OLD": "not in the manifest (older snaps, screens-v603..v607, mocks, superseded folders)",
+  "NEVER": "no render found anywhere scanned"
+ },
+ "scanned_pngs": 2828,
+ "unique_pngs": 961,
+ "matrix": [
+  {
+   "region": "Word Meadow",
+   "location": "meadow-park",
+   "location_name": "Park (swing set, bench, bus stop, kite)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/round2/r2h/png/10-word-meadow-scene-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/10-word-meadow-scene-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/11-word-meadow-scene-right-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/12-reveal-right-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/13-word-meadow-scene-retry-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/15-say-it-sight-words-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/23-level-up-reward-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/23-level-up-reward-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/24-guardian-run-entry-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/24-guardian-run-entry-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/24-guardian-run-entry-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/25-guardian-hint-letters-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/25-guardian-hint-letters-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/25-guardian-hint-letters-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/26-guardian-hint-jesus-words-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/26-guardian-hint-jesus-words-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/26-guardian-hint-jesus-words-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/27-guardian-kneels-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/27-guardian-kneels-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/27-guardian-kneels-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/28-guardian-win-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/28-guardian-win-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/28-guardian-win-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/29-verse-scroll-gift-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/30-new-weapon-gift-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/44-scroll-reopened-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/48-continue-after-pause-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/24-guardian-run-entry-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/24-guardian-run-entry-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/24-guardian-run-entry-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/25-guardian-hint-letters-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/25-guardian-hint-letters-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/25-guardian-hint-letters-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/26-guardian-hint-jesus-words-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/26-guardian-hint-jesus-words-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/26-guardian-hint-jesus-words-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/27-guardian-kneels-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/27-guardian-kneels-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/27-guardian-kneels-390x844.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [
+    [
+     "v608build/round2/r2h/png/stage-B-meadow-listen-and-find-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/stage-B-meadow-listen-and-find-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/stage-B-meadow-listen-and-find-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/zone-meadow-ask-375x812-skyB.png",
+     "375x812"
+    ]
+   ],
+   "listed_stale_look": [
+    [
+     "screens-v608/png/27-guardian-kneels-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/11-word-meadow-scene-right-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "screens-v608/png/12-reveal-right.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-meadow-ask-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "screens-v608/png/27-guardian-kneels-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/10-word-meadow-scene-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "screens-v608/png/24-guardian-run-entry.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/28-guardian-win-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/48-continue-after-pause.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "screens-v608/png/24-guardian-run-entry-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/25-guardian-hint-letters.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/44-scroll-reopened-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/28-guardian-win-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/25-guardian-hint-letters-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/13-word-meadow-scene-retry.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "screens-v608/png/28-guardian-win-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/23-level-up-reward-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/26-guardian-hint-jesus-words-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/27-guardian-kneels-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/24-guardian-run-entry-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/29-verse-scroll-gift-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/28-guardian-win-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/30-new-weapon-gift.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/27-guardian-kneels-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/25-guardian-hint-letters-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/25-guardian-hint-letters-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/23-level-up-reward-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/15-say-it-sight-words-390check.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-A-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/24-guardian-run-entry-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/26-guardian-hint-jesus-words-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "screens-v608/png/26-guardian-hint-jesus-words-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/W24-walk-B-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/W24-walk-B-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/W24-walk-B-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-C-open-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-C-rest-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/g26e/png/26-C-open-frozen-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/g26e/png/26-C-rest-br-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/g26e/png/26-C-rest-frozen-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/g26e/png/26-C-open-br-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/g26e/png/26-C-rest-br-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/g26e/png/26-C-open-br-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-meadow-ask-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-meadow-ask-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/10-word-meadow-scene-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/23-level-up-reward-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/26-D2-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/26-D2-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/26-D2-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/zone-meadow-ask-D2plate-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/zone-meadow-ask-D2plate-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/zone-meadow-ask-D2plate-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-D-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-D-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-D-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2d/g26d/png/26-B-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/10-word-meadow-scene-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/13-word-meadow-scene-retry-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/48-continue-after-pause-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/11-word-meadow-scene-right-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/10-word-meadow-scene-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/showcase/tiles/screens-v608--11-word-meadow-scene-right.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/showcase/tiles/screens-v608--48-continue-after-pause.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2c/g26/png/26-C-rest-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/r2c/g26/png/26-C-open-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-meadow-ask-375x812.png",
+     "375x812",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/B-meadow-listen-and-find-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/B-meadow-listen-and-find-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/B-meadow-listen-and-find-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/meadow-step1-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/meadow-step1-390.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/B-meadow-listen-and-find.png",
+     "390x844"
+    ],
+    [
+     "mocks-scene-variety-t401u/png/now/10-word-meadow-scene.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/27-guardian-kneels.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/11-word-meadow-scene-right.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/10-word-meadow-scene.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/24-guardian-run-entry.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/44-scroll-reopened.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/28-guardian-win.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/48-continue-after-pause.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/26-guardian-hint-jesus-words.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/29-verse-scroll-gift.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/12-reveal-right.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/15-say-it-sight-words.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/13-word-meadow-scene-retry.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/30-new-weapon-gift.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/23-level-up-reward.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/25-guardian-hint-letters.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/se-meadow-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/12-reveal-right-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/24-guardian-run-entry-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/48-continue-after-pause-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/11-word-meadow-scene-right-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/25-guardian-hint-letters-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/13-word-meadow-scene-retry-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/zone-meadow-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/10-word-meadow-scene-390check.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/instructor-fixes/23-level-up-reward-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/23-level-up-reward-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/23-level-up-reward-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/23-level-up-reward-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/hints/25-guardian-hint-letters-ten-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/10-word-meadow-scene-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/10-word-meadow-scene-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-meadow-ask-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/asset-depth/mirror-B-meadow-listen-and-find-mirrored-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/eyes/scene-variety/png/sv-now-10-word-meadow-scene.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-K3/L1-meadow.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/B-meadow-listen-and-find.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/B-meadow-listen-and-find-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2c-2159MDT/renders/guardian-24-28/28-guardian-win-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/snap-r2c-2159MDT/renders/guardian-24-28/27-guardian-kneels-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/snap-r2c-2159MDT/renders/guardian-24-28/25-guardian-hint-letters-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/decisions/emoji12-B.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/emoji12-now.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/walk24-A.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/phrasing-4.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/phrasing-3.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/walk24-B.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/emoji12-C.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/emoji12-A.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/tg1-now-sw01.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/state-pair-open-book.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/name-keep.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/tg1-sw16.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/letters-B-tiles.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/name-alt2.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/letters-A-grows.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/tg1-sw11.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/name-alt1.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/tg1-sw12.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/L1-listen.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/L1-written.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 39,
+    "IN-PROGRESS": 4,
+    "CURRENT-LISTED-STALE-LOOK": 72,
+    "OLD": 62,
+    "BEFORE": 31
+   },
+   "thumb": "v608build/round2/r2h/png/10-word-meadow-scene-390x844.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-park",
+   "location_name": "Park (swing set, bench, bus stop, kite)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/meadow-step2-390.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/meadow-step2-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/meadow-step2-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-park",
+   "location_name": "Park (swing set, bench, bus stop, kite)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/meadow-step3-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/meadow-step3-390.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "v608build/scenes/superseded-K3/L2-meadow.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-K3/L3-meadow.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/L3-written.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/L3-listen.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 4,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/meadow-step3-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-park",
+   "location_name": "Park (swing set, bench, bus stop, kite)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/meadow-step4-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/meadow-step4-390.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "v608build/scenes/superseded-K3/L4-meadow.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 1,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/meadow-step4-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-park",
+   "location_name": "Park (swing set, bench, bus stop, kite)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/meadow-step5-390.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/meadow-step5-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "ground dots (tufts in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "v608build/scenes/superseded-K3/L5-meadow.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/L5-listen.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/L5-written.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 3,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/meadow-step5-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-pond",
+   "location_name": "Park by a pond (alternate layout)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-pond",
+   "location_name": "Park by a pond (alternate layout)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-pond",
+   "location_name": "Park by a pond (alternate layout)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-pond",
+   "location_name": "Park by a pond (alternate layout)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "IN-PROGRESS",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [
+    [
+     "v608build/round2/r2h/png/stage-A-meadow-evening-pond-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/round2/r2h/png/stage-A-meadow-evening-pond-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/stage-A-meadow-evening-pond-390x844.png",
+     "390x844"
+    ]
+   ],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/stage/png/A-meadow-evening-pond-390x844.png",
+     "390x844",
+     [
+      "meadow walkway (removed in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/A-meadow-evening-pond-320x568.png",
+     "320x568",
+     [
+      "meadow walkway (removed in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/A-meadow-evening-pond-375x667.png",
+     "375x667",
+     [
+      "meadow walkway (removed in r2h)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/A-meadow-evening-pond.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/renders/ask-can-you-find-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/renders/ask-can-you-find-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/asset-depth/mirror-A-meadow-evening-pond-mirrored-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/A-meadow-evening-pond.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/A-meadow-evening-pond-320x568.png",
+     "320x568"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 3,
+    "CURRENT-LISTED-STALE-LOOK": 3,
+    "OLD": 6,
+    "BEFORE": 3
+   },
+   "thumb": "v608build/round2/r2h/png/stage-A-meadow-evening-pond-390x844.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Word Meadow",
+   "location": "meadow-pond",
+   "location_name": "Park by a pond (alternate layout)",
+   "zones": "Phonics, Sight Words",
+   "tier": 1,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-home",
+   "location_name": "Inside the home (shelf, window, desk, crib, rug)",
+   "zones": "Maxwell Says (day one), Baby and Hospital (after Number guardian)",
+   "tier": 2,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step1-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step1-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step1-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step1-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step1-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step1-390.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 6,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/lake-step1-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-home",
+   "location_name": "Inside the home (shelf, window, desk, crib, rug)",
+   "zones": "Maxwell Says (day one), Baby and Hospital (after Number guardian)",
+   "tier": 2,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step2-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step2-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step2-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step2-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step2-390.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step2-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 6,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/lake-step2-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-home",
+   "location_name": "Inside the home (shelf, window, desk, crib, rug)",
+   "zones": "Maxwell Says (day one), Baby and Hospital (after Number guardian)",
+   "tier": 2,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step3-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step3-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step3-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step3-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step3-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step3-390.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 6,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/lake-step3-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-home",
+   "location_name": "Inside the home (shelf, window, desk, crib, rug)",
+   "zones": "Maxwell Says (day one), Baby and Hospital (after Number guardian)",
+   "tier": 2,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step4-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step4-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step4-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step4-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step4-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step4-390.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 6,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/lake-step4-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-home",
+   "location_name": "Inside the home (shelf, window, desk, crib, rug)",
+   "zones": "Maxwell Says (day one), Baby and Hospital (after Number guardian)",
+   "tier": 2,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step5-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step5-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/lake-step5-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/lake-step5-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step5-390.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/lake-step5-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 6,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/lake-step5-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-home",
+   "location_name": "Inside the home (shelf, window, desk, crib, rug)",
+   "zones": "Maxwell Says (day one), Baby and Hospital (after Number guardian)",
+   "tier": 2,
+   "tod": "base",
+   "tod_name": "untinted base (no time of day applied)",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/round2/r2h/png/16-say-it-maxwell-says-day1-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/17-two-answer-pray-high-five-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/18-two-answer-wrong-tap-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/19-two-answer-right-done-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/32-home-lake-scene-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/33-say-it-baby-hospital-reply-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/33-say-it-baby-hospital-reply-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/54-phrase-ask-card-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/54-phrase-ask-card-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/zone-lake-ask-320x568.png",
+     "320x568"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/18-two-answer-wrong-tap-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/54-phrase-ask-card-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "screens-v608/png/16-say-it-maxwell-says-day1-390check.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/33-say-it-baby-hospital-reply-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-lake-ask-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-lake-ask-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/17-two-answer-pray-high-five-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/54-phrase-ask-card-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/33-say-it-baby-hospital-reply-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/19-two-answer-right-done-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/16-say-it-maxwell-says-day1-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/33-say-it-baby-hospital-reply-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/18-two-answer-wrong-tap-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/19-two-answer-right-done-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/54-phrase-ask-card-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/17-two-answer-pray-high-five-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/54-phrase-ask-card-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/zone-lake-ask-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/16-say-it-maxwell-says-day1-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/33-say-it-baby-hospital-reply-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-lake-ask-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-lake-ask-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/54-phrase-ask-card-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/33-say-it-baby-hospital-reply-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-lake-ask-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/zone-lake-ask-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/32-home-lake-scene-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/zone-lake-ask-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png/zone-lake-ask-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-lake-ask-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/zone-lake-ask-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/now/32-home-lake-scene.png",
+     "390x844"
+    ],
+    [
+     "screens-v603/png/32-home-lake-scene.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/16-say-it-maxwell-says-day1.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/14-reveal-gentle-retry.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/18-two-answer-wrong-tap.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/17-two-answer-pray-high-five.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/19-two-answer-right-done.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/33-say-it-baby-hospital-reply.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/32-home-lake-scene.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/se-lake-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v606/png/33-say-it-baby-hospital-reply-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/18-two-answer-wrong-tap-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/zone-lake-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/32-home-lake-scene-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/17-two-answer-pray-high-five-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v607/png/33-say-it-baby-hospital-reply-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/19-two-answer-right-done-390check.png",
+     "390x844"
+    ],
+    [
+     "v608build/b1/after.png",
+     "390x844"
+    ],
+    [
+     "v608build/b1/before.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-lake-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/54-phrase-ask-card-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/54-phrase-ask-card-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-lake-ask-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/54-phrase-ask-card-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-lake-ask-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/renders/home-lake-r2ask/18-two-answer-wrong-tap-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/renders/home-lake-r2ask/19-two-answer-right-done-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/renders/home-lake-r2ask/18-two-answer-wrong-tap-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/renders/home-lake-r2ask/17-two-answer-pray-high-five-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/renders/home-lake-r2ask/19-two-answer-right-done-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/renders/home-lake-r2ask/17-two-answer-pray-high-five-390x844.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 10,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 31,
+    "OLD": 31,
+    "BEFORE": 11
+   },
+   "thumb": "v608build/round2/r2h/png/16-say-it-maxwell-says-day1-390x844.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-kitchen",
+   "location_name": "Home room set for a meal (small table replaces crib)",
+   "zones": "Nancy's Kitchen (day one)",
+   "tier": 2,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-kitchen",
+   "location_name": "Home room set for a meal (small table replaces crib)",
+   "zones": "Nancy's Kitchen (day one)",
+   "tier": 2,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-kitchen",
+   "location_name": "Home room set for a meal (small table replaces crib)",
+   "zones": "Nancy's Kitchen (day one)",
+   "tier": 2,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-kitchen",
+   "location_name": "Home room set for a meal (small table replaces crib)",
+   "zones": "Nancy's Kitchen (day one)",
+   "tier": 2,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-kitchen",
+   "location_name": "Home room set for a meal (small table replaces crib)",
+   "zones": "Nancy's Kitchen (day one)",
+   "tier": 2,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-kitchen",
+   "location_name": "Home room set for a meal (small table replaces crib)",
+   "zones": "Nancy's Kitchen (day one)",
+   "tier": 2,
+   "tod": "base",
+   "tod_name": "untinted base (no time of day applied)",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/round2/r2h/png/14-reveal-gentle-retry-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/14-reveal-gentle-retry-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/21-kitchen-say-it-shown-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/21-kitchen-say-it-shown-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/22-kitchen-server-talk-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/22-kitchen-server-talk-390x844.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/sky-options/B/png-r2ask/22-kitchen-server-talk-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/21-kitchen-say-it-shown-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/22-kitchen-server-talk-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/14-reveal-gentle-retry-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/21-kitchen-say-it-shown-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/14-reveal-gentle-retry-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/21-kitchen-say-it-shown-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/22-kitchen-server-talk-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/22-kitchen-server-talk-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/14-reveal-gentle-retry-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/20-kitchen-say-it-picture-first-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/20-kitchen-say-it-picture-first-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/home-lake/png-r2ask/21-kitchen-say-it-shown-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/22-kitchen-server-talk-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/21-kitchen-say-it-shown-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/F-lake-kitchen-390x844-wallup.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/F-lake-night-table-375x812-wallup.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/F-lake-night-table-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/F-lake-kitchen-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/F-lake-night-table-375x667.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/F-lake-night-table-375x667-wallup.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png/F-lake-kitchen-390x844-wallup.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png/F-lake-kitchen-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png/F-lake-night-table-375x812-wallup.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png/F-lake-night-table-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png/F-lake-night-table-375x667.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png/F-lake-night-table-375x667-wallup.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/F-lake-night-table-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/F-lake-night-table-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/F-lake-night-table-375x667.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)",
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/F-lake-night-table.png",
+     "390x844"
+    ],
+    [
+     "screens-v603/png/22-kitchen-server-talk.png",
+     "390x844"
+    ],
+    [
+     "screens-v603/png/21-kitchen-say-it-shown.png",
+     "390x844"
+    ],
+    [
+     "screens-v603/png/20-kitchen-say-it-picture-first.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/22-kitchen-server-talk.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/21-kitchen-say-it-shown.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/20-kitchen-say-it-picture-first.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/22-kitchen-server-talk.png",
+     "390x844"
+    ],
+    [
+     "screens-v606/png/22-kitchen-server-talk-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/22-kitchen-server-talk-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/superseded-W10/20-kitchen-say-it-picture-first-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/superseded-W10/20-kitchen-say-it-picture-first-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/21-kitchen-say-it-shown-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/21-kitchen-say-it-shown-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/21-kitchen-say-it-shown-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/F-lake-night-table.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/F-lake-night-table-320x568.png",
+     "320x568"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 6,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 30,
+    "OLD": 17,
+    "BEFORE": 7
+   },
+   "thumb": "v608build/round2/r2h/png/14-reveal-gentle-retry-390x844.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-front-desk",
+   "location_name": "Hotel front desk",
+   "zones": "Maxwell Says ms-03 to ms-06, ms-21 to ms-23 only (day one)",
+   "tier": 3,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-front-desk",
+   "location_name": "Hotel front desk",
+   "zones": "Maxwell Says ms-03 to ms-06, ms-21 to ms-23 only (day one)",
+   "tier": 3,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-front-desk",
+   "location_name": "Hotel front desk",
+   "zones": "Maxwell Says ms-03 to ms-06, ms-21 to ms-23 only (day one)",
+   "tier": 3,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-front-desk",
+   "location_name": "Hotel front desk",
+   "zones": "Maxwell Says ms-03 to ms-06, ms-21 to ms-23 only (day one)",
+   "tier": 3,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-front-desk",
+   "location_name": "Hotel front desk",
+   "zones": "Maxwell Says ms-03 to ms-06, ms-21 to ms-23 only (day one)",
+   "tier": 3,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Home Lake",
+   "location": "lake-front-desk",
+   "location_name": "Hotel front desk",
+   "zones": "Maxwell Says ms-03 to ms-06, ms-21 to ms-23 only (day one)",
+   "tier": 3,
+   "tod": "base",
+   "tod_name": "untinted base (no time of day applied)",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/E-lake-front-desk-375x667.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/E-lake-front-desk-375x812-wallup.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/E-lake-front-desk-390x844-wallup.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/E-lake-front-desk-375x667-wallup.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/E-lake-front-desk-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/round2/ceiling-cap/png-r2ask/E-lake-front-desk-375x812.png",
+     "375x812",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/E-lake-front-desk-375x667.png",
+     "375x667",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/E-lake-front-desk-320x568.png",
+     "320x568",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ],
+    [
+     "v608build/scenes/stage/png/E-lake-front-desk-390x844.png",
+     "390x844",
+     [
+      "Home Lake chip #D9663F (r2h #F05A00)"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/E-lake-front-desk.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/E-lake-front-desk.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/E-lake-front-desk-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/D1-A-cardth.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/b2b/wreshoot/D1-B-readfind.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 9,
+    "OLD": 5,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/stage/png/E-lake-front-desk-390x844.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Golden Fields",
+   "location": "fields-farm",
+   "location_name": "Farm (corn row, gate, cow, basket)",
+   "zones": "Colors and Shapes, Numbers (after Word guardian)",
+   "tier": 4,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/fields-step1-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/fields-step1-390.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/fields-step1-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Golden Fields",
+   "location": "fields-farm",
+   "location_name": "Farm (corn row, gate, cow, basket)",
+   "zones": "Colors and Shapes, Numbers (after Word guardian)",
+   "tier": 4,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/fields-step2-390.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/fields-step2-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/fields-step2-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Golden Fields",
+   "location": "fields-farm",
+   "location_name": "Farm (corn row, gate, cow, basket)",
+   "zones": "Colors and Shapes, Numbers (after Word guardian)",
+   "tier": 4,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/round2/showcase/tiles/screens-v608--31-golden-fields-scene.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/stage/png/C-fields-count-it-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/stage/png/C-fields-count-it-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/scenes/stage/png/C-fields-count-it-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/stage/png/D-fields-big-or-small-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/stage/png/D-fields-big-or-small-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/scenes/stage/png/D-fields-big-or-small-390x844.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/round2/sky-options/B/png/zone-fields-ask-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-fields-ask-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-fields-ask-375x812.png",
+     "375x812",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-fields-ask-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-fields-ask-375x812.png",
+     "375x812",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-fields-ask-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/fields-step3-390.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/fields-step3-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/C-fields-count-it.png",
+     "390x844"
+    ],
+    [
+     "mocks-scene-variety-t401u/png/D-fields-big-or-small.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/31-golden-fields-scene.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/se-fields-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/zone-fields-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/31-golden-fields-scene-390check.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/C-fields-count-it.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/D-fields-big-or-small.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/D-fields-big-or-small-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/C10-fields-count-it-ten-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/C-fields-count-it-320x568.png",
+     "320x568"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 7,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 8,
+    "OLD": 11,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/stage/png/C-fields-count-it-390x844.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Golden Fields",
+   "location": "fields-farm",
+   "location_name": "Farm (corn row, gate, cow, basket)",
+   "zones": "Colors and Shapes, Numbers (after Word guardian)",
+   "tier": 4,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/fields-step4-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/fields-step4-390.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/fields-step4-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Golden Fields",
+   "location": "fields-farm",
+   "location_name": "Farm (corn row, gate, cow, basket)",
+   "zones": "Colors and Shapes, Numbers (after Word guardian)",
+   "tier": 4,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "CURRENT-LISTED-STALE-LOOK",
+   "current_sizes": [],
+   "current": [],
+   "in_progress": [],
+   "listed_stale_look": [
+    [
+     "v608build/scenes/tod/fields-step5-390.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/scenes/tod/fields-step5-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [],
+   "counts": {
+    "CURRENT": 0,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 2,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/fields-step5-390.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "region": "Echo Forest",
+   "location": "forest-woods",
+   "location_name": "Night woods (owl, lantern, tent, footbridge), also behind Sound Duel",
+   "zones": "Sound Duel (not one of the 7 zones; after Gentle guardian)",
+   "tier": 5,
+   "tod": "m",
+   "tod_name": "step 1 morning",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "375x667",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/scenes/stage/png/H-forest-dawn-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/stage/png/H-forest-dawn-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/scenes/stage/png/H-forest-dawn-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/tod/forest-step1-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/tod/forest-step1-390.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/H-forest-dawn.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/H-forest-dawn.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/H-forest-dawn-320x568.png",
+     "320x568"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 5,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 3,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/stage/png/H-forest-dawn-390x844.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Echo Forest",
+   "location": "forest-woods",
+   "location_name": "Night woods (owl, lantern, tent, footbridge), also behind Sound Duel",
+   "zones": "Sound Duel (not one of the 7 zones; after Gentle guardian)",
+   "tier": 5,
+   "tod": "d",
+   "tod_name": "step 2 midday",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/scenes/tod/forest-step2-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/tod/forest-step2-390.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 2,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/forest-step2-390.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Echo Forest",
+   "location": "forest-woods",
+   "location_name": "Night woods (owl, lantern, tent, footbridge), also behind Sound Duel",
+   "zones": "Sound Duel (not one of the 7 zones; after Gentle guardian)",
+   "tier": 5,
+   "tod": "a",
+   "tod_name": "step 3 afternoon",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/scenes/tod/forest-step3-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/tod/forest-step3-390.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 2,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/forest-step3-390.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Echo Forest",
+   "location": "forest-woods",
+   "location_name": "Night woods (owl, lantern, tent, footbridge), also behind Sound Duel",
+   "zones": "Sound Duel (not one of the 7 zones; after Gentle guardian)",
+   "tier": 5,
+   "tod": "e",
+   "tod_name": "step 4 evening",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/scenes/tod/forest-step4-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/tod/forest-step4-390.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "listed_stale_look": [],
+   "old": [],
+   "counts": {
+    "CURRENT": 2,
+    "IN-PROGRESS": 0,
+    "CURRENT-LISTED-STALE-LOOK": 0,
+    "OLD": 0,
+    "BEFORE": 0
+   },
+   "thumb": "v608build/scenes/tod/forest-step4-390.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "region": "Echo Forest",
+   "location": "forest-woods",
+   "location_name": "Night woods (owl, lantern, tent, footbridge), also behind Sound Duel",
+   "zones": "Sound Duel (not one of the 7 zones; after Gentle guardian)",
+   "tier": 5,
+   "tod": "n",
+   "tod_name": "step 5 night",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "375x667",
+    "375x812",
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/round2/r2h/png/zone-forest-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/zone-forest-ask-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/r2h/png/zone-forest-ask-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/showcase/tiles/B--zone-forest-ask-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/showcase/tiles/screens-v608--zone-forest-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/34-echo-forest-sound-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/34-echo-forest-sound-duel-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/34-echo-forest-sound-duel-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/35-sound-duel-right-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/35-sound-duel-right-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/35-sound-duel-right-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/36-sound-duel-round-done-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/36-sound-duel-round-done-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/36-sound-duel-round-done-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/stage/png/G-forest-picture-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/stage/png/G-forest-picture-duel-375x667.png",
+     "375x667"
+    ],
+    [
+     "v608build/scenes/stage/png/G-forest-picture-duel-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/tod/forest-step5-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/scenes/tod/forest-step5-390.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [
+    [
+     "v608build/round2/r2h/png/36-sound-duel-round-done-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/36-sound-duel-round-done-320x568.png",
+     "320x568"
+    ]
+   ],
+   "listed_stale_look": [
+    [
+     "v608build/round2/sky-options/B/png/zone-forest-ask-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-forest-ask-375x812.png",
+     "375x812",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/zone-forest-ask-D2plate-375x667.png",
+     "375x667",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/zone-forest-ask-D2plate-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/r2e/d2/png/zone-forest-ask-D2plate-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/zone-forest-ask-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/zone-forest-ask-375x812.png",
+     "375x812",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/renders/r2h/png/zone-forest-ask-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-forest-ask-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png/zone-forest-ask-375x812.png",
+     "375x812",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-forest-ask-390x844.png",
+     "390x844",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ],
+    [
+     "v608build/round2/sky-options/B/png-r2ask/zone-forest-ask-320x568.png",
+     "320x568",
+     [
+      "old ask wording \"Where is the ...?\" (P1 t440u tapPrompt \"Can you find the {word}?\")"
+     ]
+    ]
+   ],
+   "old": [
+    [
+     "mocks-scene-variety-t401u/png/G-forest-picture-duel.png",
+     "390x844"
+    ],
+    [
+     "mocks-scene-variety-t401u/png/now/34-echo-forest-sound-duel.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/36-sound-duel-round-done.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/35-sound-duel-right.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/se-forest-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v606/png/34-echo-forest-sound-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v606/png/35-sound-duel-right-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/34-echo-forest-sound-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/35-sound-duel-right-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v607/png/zone-forest-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/instructor-fixes/36-sound-duel-round-done-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/34-echo-forest-sound-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/36-sound-duel-round-done-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/35-sound-duel-right-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/36-sound-duel-round-done-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/renders/sky-B-png-r2ask/36-sound-duel-round-done-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-forest-ask-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/34-echo-forest-sound-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-forest-ask-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/36-sound-duel-round-done-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/35-sound-duel-right-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/35-sound-duel-right-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/36-sound-duel-round-done-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/zone-forest-ask-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/34-echo-forest-sound-duel-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/36-sound-duel-round-done-375x812.png",
+     "375x812"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/35-sound-duel-right-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/sky-options/A/png/34-echo-forest-sound-duel-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/png/G-forest-picture-duel.png",
+     "390x844"
+    ],
+    [
+     "v608build/scenes/superseded-t439u/s320/png/G-forest-picture-duel-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/decisions/m2-B-34-v608.png",
+     "390x844"
+    ],
+    [
+     "v608build/decisions/m2-B-35-v608.png",
+     "390x844"
+    ]
+   ],
+   "counts": {
+    "CURRENT": 19,
+    "IN-PROGRESS": 2,
+    "CURRENT-LISTED-STALE-LOOK": 12,
+    "OLD": 32,
+    "BEFORE": 5
+   },
+   "thumb": "v608build/round2/r2h/png/zone-forest-ask-390x844.png",
+   "need_320": false,
+   "need_390": false
+  }
+ ],
+ "title": [
+  {
+   "screen": "TITLE",
+   "tod": "m",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "screens-v608/png/01-title.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/01-title-320x568.png",
+     "320x568"
+    ]
+   ],
+   "old": [
+    [
+     "screens-v603/png/01-title.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/01-title.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/01-title.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/title-m-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v606/png/01-title.png",
+     "390x844"
+    ],
+    [
+     "screens-v606/png/01-title-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/title/v607-m-390.png",
+     "390x844"
+    ],
+    [
+     "v608build/title/v607-m-320.png",
+     "320x568"
+    ],
+    [
+     "v608build/title/v608-m-320.png",
+     "320x568"
+    ],
+    [
+     "v608build/title/v608-m-390.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "thumb": "screens-v608/png/01-title.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "screen": "TITLE",
+   "tod": "a",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "screens-v608/png/50-open-from-home-screen-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/50-open-from-home-screen-320x568.png",
+     "320x568"
+    ]
+   ],
+   "old": [
+    [
+     "screens-v604/png/50-open-from-home-screen.png",
+     "390x844"
+    ],
+    [
+     "screens-v606/png/50-open-from-home-screen.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "thumb": "screens-v608/png/50-open-from-home-screen-390check.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "screen": "TITLE",
+   "tod": "e",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "old": [],
+   "in_progress": [],
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "screen": "TITLE",
+   "tod": "n",
+   "status": "CURRENT",
+   "current_sizes": [
+    "390x844"
+   ],
+   "current": [
+    [
+     "screens-v608/png/52-title-night.png",
+     "390x844"
+    ]
+   ],
+   "old": [
+    [
+     "screens-v603/png/52-title-night.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/52-title-night.png",
+     "390x844"
+    ],
+    [
+     "screens-v605/png/title-n-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v605/png/52-title-night.png",
+     "390x844"
+    ],
+    [
+     "screens-v606/png/52-title-night.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2h-0021MDT/pick-sheets-b2b/night-title-line.png",
+     "840x1327px"
+    ],
+    [
+     "v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/B.png",
+     "390x844"
+    ],
+    [
+     "v608build/r2h-rerun-stage/sheets/instructor/v608/nightB/night-title-1A-1B.png",
+     "840x1104px"
+    ],
+    [
+     "v608build/snap-r2b-2034MDT/pick-sheets-b2b/night-title-line.png",
+     "840x1259px"
+    ],
+    [
+     "v608build/title/v607-n-320.png",
+     "320x568"
+    ],
+    [
+     "v608build/title/v608-n-320.png",
+     "320x568"
+    ],
+    [
+     "v608build/title/v608-n-390.png",
+     "390x844"
+    ],
+    [
+     "v608build/title/v607-n-390.png",
+     "390x844"
+    ],
+    [
+     "v608build/snap-r2b-2051MDT/pick-sheets-b2b/night-title-line.png",
+     "840x1276px"
+    ],
+    [
+     "v608build/eyes/pairs/eyes-52-title-night.png",
+     "660x300px"
+    ],
+    [
+     "v608build/snap-r2c-2159MDT/pick-sheets-b2b/night-title-line.png",
+     "840x1293px"
+    ]
+   ],
+   "in_progress": [],
+   "thumb": "screens-v608/png/52-title-night.png",
+   "need_320": true,
+   "need_390": false
+  }
+ ],
+ "menu": [
+  {
+   "screen": "MENU",
+   "tod": "m",
+   "status": "IN-PROGRESS",
+   "current_sizes": [],
+   "current": [],
+   "old": [],
+   "in_progress": [
+    [
+     "v608build/round2/r2h/png/M3-main-menu-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/M3-main-menu-390x844.png",
+     "390x844"
+    ],
+    [
+     "v608build/round2/r2h/png/M1-main-menu-320x568.png",
+     "320x568"
+    ],
+    [
+     "v608build/round2/r2h/png/M1-main-menu-390x844.png",
+     "390x844"
+    ]
+   ],
+   "thumb": "v608build/round2/r2h/png/M1-main-menu-390x844.png",
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "screen": "MENU",
+   "tod": "a",
+   "status": "CURRENT",
+   "current_sizes": [
+    "320x568",
+    "390x844"
+   ],
+   "current": [
+    [
+     "screens-v608/png/49-welcome-back-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/04-main-menu-hearth-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/51-main-menu-hearth-verse.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/02b-main-menu-verse-popup-longest-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/02d-menu-gemtag-after-verse.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/02-main-menu-verse-popup-390check.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/02-main-menu-verse-popup-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/49-welcome-back.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/03-main-menu.png",
+     "390x844"
+    ],
+    [
+     "screens-v608/png/03-main-menu-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/02d-menu-gemtag-after-verse-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/02b-main-menu-verse-popup-longest-320x568-scrolled.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/02b-main-menu-verse-popup-longest-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/51-main-menu-hearth-verse-320x568.png",
+     "320x568"
+    ],
+    [
+     "screens-v608/png/04-main-menu-hearth-320x568.png",
+     "320x568"
+    ]
+   ],
+   "old": [
+    [
+     "mocks-verse-popup-t399u/current-menu-390x844.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/04-main-menu-hearth.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/03-main-menu.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/49-welcome-back.png",
+     "390x844"
+    ],
+    [
+     "screens-v604/png/51-main-menu-hearth-verse.png",
+     "390x844"
+    ],
+    [
+     "screens-v606/png/04-main-menu-hearth.png",
+     "390x844"
+    ],
+    [
+     "screens-v606/png/51-main-menu-hearth-verse.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "thumb": "screens-v608/png/02-main-menu-verse-popup-390check.png",
+   "need_320": false,
+   "need_390": false
+  },
+  {
+   "screen": "MENU",
+   "tod": "e",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "old": [],
+   "in_progress": [],
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  },
+  {
+   "screen": "MENU",
+   "tod": "n",
+   "status": "NEVER",
+   "current_sizes": [],
+   "current": [],
+   "old": [],
+   "in_progress": [],
+   "thumb": null,
+   "need_320": true,
+   "need_390": true
+  }
+ ],
+ "rest": [
+  {
+   "screen": "REST",
+   "tod": "e",
+   "status": "CURRENT",
+   "current_sizes": [
+    "390x844"
+   ],
+   "current": [
+    [
+     "v608build/round2/r2h/png/37-rest-screen-390x844.png",
+     "390x844"
+    ]
+   ],
+   "old": [
+    [
+     "screens-v604/png/37-rest-screen.png",
+     "390x844"
+    ]
+   ],
+   "in_progress": [],
+   "thumb": "v608build/round2/r2h/png/37-rest-screen-390x844.png",
+   "need_320": true,
+   "need_390": false
+  }
+ ],
+ "map": {
+  "CURRENT": [
+   [
+    "screens-v608/png/05-map-day1.png",
+    "390x844"
+   ],
+   [
+    "screens-v608/png/06-map-tap-unopened.png",
+    "390x844"
+   ],
+   [
+    "screens-v608/png/07-map-word-meadow-chooser.png",
+    "390x844"
+   ],
+   [
+    "screens-v608/png/08-map-home-lake-chooser-day1.png",
+    "390x844"
+   ],
+   [
+    "screens-v608/png/09-map-later.png",
+    "390x844"
+   ],
+   [
+    "screens-v608/png/53-map-nancy-later.png",
+    "390x844"
+   ],
+   [
+    "v608build/round2/r2h/png/05-map-day1-390x844.png",
+    "390x844"
+   ],
+   [
+    "v608build/round2/r2h/png/08-map-home-lake-chooser-day1-390x844.png",
+    "390x844"
+   ],
+   [
+    "v608build/round2/r2h/png/09-map-later-390x844.png",
+    "390x844"
+   ]
+  ],
+  "IN-PROGRESS": [
+   [
+    "v608build/round2/r2h/png/map-extended-320x568.png",
+    "320x568"
+   ],
+   [
+    "v608build/round2/r2h/png/map-extended-390x844.png",
+    "390x844"
+   ],
+   [
+    "v608build/round2/r2h/sheets/r2h-map-extended.png",
+    "1410x1394px"
+   ]
+  ],
+  "CURRENT-LISTED-STALE-LOOK": [],
+  "OLD": [
+   [
+    "mock-t346u/Q-mock-t346u-map-day1-320x568.png",
+    "320x568"
+   ],
+   [
+    "mock-t346u/Q-mock-t346u-map-day1-390x844.png",
+    "390x844"
+   ],
+   [
+    "mock-t346u/Q-mock-t346u-map-kneel-390x844.png",
+    "390x844"
+   ],
+   [
+    "mock-t346u/Q-mock-t346u-map-tap-390x844.png",
+    "390x844"
+   ],
+   [
+    "screens-v603/png/05-map-day1.png",
+    "390x844"
+   ],
+   [
+    "screens-v603/png/06-map-tap-unopened.png",
+    "390x844"
+   ],
+   [
+    "screens-v603/png/07-map-word-meadow-chooser.png",
+    "390x844"
+   ],
+   [
+    "screens-v603/png/08-map-home-lake-chooser-day1.png",
+    "390x844"
+   ],
+   [
+    "screens-v603/png/09-map-later.png",
+    "390x844"
+   ],
+   [
+    "screens-v603/png/53-map-nancy-later.png",
+    "390x844"
+   ],
+   [
+    "screens-v604/png/07-map-word-meadow-chooser.png",
+    "390x844"
+   ],
+   [
+    "screens-v604/png/08-map-home-lake-chooser-day1.png",
+    "390x844"
+   ],
+   [
+    "screens-v604/png/53-map-nancy-later.png",
+    "390x844"
+   ],
+   [
+    "v608build/eyes/before/08-map-home-lake-chooser-day1.png",
+    "390x844"
+   ],
+   [
+    "v608build/eyes/pairs/eyes-05-map-day1.png",
+    "660x300px"
+   ],
+   [
+    "v608build/eyes/pairs/eyes-06-map-tap-unopened.png",
+    "660x300px"
+   ],
+   [
+    "v608build/eyes/pairs/eyes-07-map-word-meadow-chooser.png",
+    "660x300px"
+   ],
+   [
+    "v608build/eyes/pairs/eyes-09-map-later.png",
+    "660x300px"
+   ],
+   [
+    "v608build/eyes/pairs/eyes-53-map-nancy-later.png",
+    "660x300px"
+   ]
+  ],
+  "BEFORE": [
+   [
+    "v608build/round2/r2h/png/05-map-day1-390x844-before.png",
+    "390x844"
+   ],
+   [
+    "v608build/round2/r2h/png/08-map-home-lake-chooser-day1-390x844-before.png",
+    "390x844"
+   ],
+   [
+    "v608build/round2/r2h/png/09-map-later-390x844-before.png",
+    "390x844"
+   ]
+  ]
+ },
+ "totals": {
+  "cells": 35,
+  "CURRENT": 7,
+  "IN-PROGRESS": 1,
+  "CURRENT-LISTED-STALE-LOOK": 13,
+  "OLD": 0,
+  "NEVER": 14
+ },
+ "renders_needed": {
+  "scene_320": 28,
+  "scene_390": 28,
+  "title_320": 2,
+  "title_390": 1,
+  "rest_320": 1,
+  "rest_390": 0,
+  "menu_320": 3,
+  "menu_390": 3
+ }
+}

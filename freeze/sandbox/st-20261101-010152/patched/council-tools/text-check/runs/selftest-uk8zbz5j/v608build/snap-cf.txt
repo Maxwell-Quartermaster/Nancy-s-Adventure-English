@@ -1,0 +1,3 @@
+snap=snap-cf
+paste_1b_md5=6d1304ba48507a9ccd0ee29705423bda
+paste_1b_path=r2h-build/p.md

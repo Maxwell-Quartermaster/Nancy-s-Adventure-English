@@ -1,0 +1,14 @@
+f2cbd37f9d5d797e87497febbbe15890  /workspace/v608build/scene-fill-20261101/renders/menu-M1-e-390x844.png
+d749315c3f111895ed8d81ff0a1e5f10  /workspace/v608build/scene-fill-20261101/html/menu-M1-e-390x844.html
+4c4024b9c850381447913d3d89d076fa  /workspace/v608build/scene-fill-20261101/renders/menu-M1-e-320x568.png
+bf63b7185ba3532826c573bdcef132d4  /workspace/v608build/scene-fill-20261101/html/menu-M1-e-320x568.html
+b3b50a04c48f9efd05b03ac9d5c797f0  /workspace/v608build/scene-fill-20261101/renders/menu-M1-n-390x844.png
+37e9ef4d9f5f705341752583719bbd3f  /workspace/v608build/scene-fill-20261101/html/menu-M1-n-390x844.html
+a555d1049abc6e764c3af70e8dc11001  /workspace/v608build/scene-fill-20261101/renders/menu-M1-n-320x568.png
+cab7da18c86700da82107b0a4bb9f6be  /workspace/v608build/scene-fill-20261101/html/menu-M1-n-320x568.html
+caption S15 · Main menu · M1 layout
+caption 1. Evening · 390x844
+caption 2. Evening · 320x568
+caption 3. Night · 390x844
+caption 4. Night · 320x568
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

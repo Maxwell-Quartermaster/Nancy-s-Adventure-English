@@ -1,0 +1,11 @@
+3685711d4a38314794a5519559e47177  /workspace/v608build/r2h-rerun-stage/r2h/png/stage-W24-walk-B-390x844.png
+86ea4312d133a2219b9912ef50e869ec  /workspace/v608build/r2h-rerun-stage/r2h/png/stage-W24-walk-B-320x568.png
+f4ae9dc7bc9a37f32aa77304a48b6460  /workspace/v608build/r2h-rerun-stage/r2h/png/26-guardian-hint-jesus-words-390x844.png
+25cd45317f208a169f02e352376498ce  /workspace/v608build/r2h-rerun-stage/r2h/png/27-guardian-kneels-390x844.png
+f2549435e5dca2c4fb56e84b0b6ab770  /workspace/v608build/r2h-rerun-stage/r2h/png/28-guardian-win-390x844.png
+caption Nancy's eyes, sheet 4: The walk and the Word Guardian
+caption The walk (screen 24, staged; approved tile, unchanged).
+caption The walk at 320 × 568.
+caption The Guardian's hint: words of Jesus (red bar 7/10).
+caption The Guardian kneels (bar empty).
+caption Sam wins: the Guardian gives the scroll.

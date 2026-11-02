@@ -1,0 +1,24 @@
+--- /workspace/council-tools/ground-check/ground_check.v2-13fc304c.py	2026-11-01 06:39:21.374785876 +0000
++++ v2cap/ground_check.py	2026-11-01 06:57:55.067856525 +0000
+@@ -44,7 +44,11 @@
+     a = np.asarray(Image.open(path).convert('RGB'), float)
+     why = check_arr(a, 1.0)
+     k = dim_level(a)
+-    if not why and k < 1: why = [w + f' [dimmed x{k}]' for w in check_arr(a, k)]
++    if not why and k < 1:
++        seen = {}
++        for kk in sorted({max(.4, round(k - .05, 2)), k, min(.95, round(k + .05, 2))}):   # neighbours too: the 0.05 grid can miss a trunk at the estimated k
++            for w in check_arr(a, kk): seen.setdefault(w.split(':')[0] + w.split(':')[1][:12] if w.startswith('floating') else 'path', w + f' [dimmed x{kk}]')
++        why = list(seen.values())
+     return why
+ def check_arr(a, k=1.0):
+     global GRASS, PATH, TRUNK, CANOPY
+@@ -59,7 +63,7 @@
+     H, W = a.shape[:2]; why = []
+     grass = near(a, GRASS, TOL_GRASS)
+     # (a) path stroke: path-coloured pixels with grass within r px on the same row (keeps parchment/card tans out)
+-    r = max(6, W // 40)
++    r = min(24, max(6, W // 40))   # cap: composite sheets must not widen the search (Watchman 8a4c7d09)
+     pm = near(a, PATH, TOL_PATH) & hdilate(grass, r)
+     n = int(pm.sum()); thr = max(40, int(0.0004 * H * W))
+     if n >= thr:

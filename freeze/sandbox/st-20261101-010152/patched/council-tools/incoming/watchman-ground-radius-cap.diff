@@ -1,0 +1,11 @@
+--- /workspace/council-tools/ground-check/ground_check.v1-f46a2d29.py	2026-11-01 06:33:41.326743268 +0000
++++ gc_cap.py	2026-11-01 06:56:59.560045941 +0000
+@@ -39,7 +39,7 @@
+     a = np.asarray(Image.open(path).convert('RGB'), float); H, W = a.shape[:2]; why = []
+     grass = near(a, GRASS, TOL_GRASS)
+     # (a) path stroke: path-coloured pixels with grass within r px on the same row (keeps parchment/card tans out)
+-    r = max(6, W // 40)
++    r = min(24, max(6, W // 40))
+     pm = near(a, PATH, TOL_PATH) & hdilate(grass, r)
+     n = int(pm.sum()); thr = max(40, int(0.0004 * H * W))
+     if n >= thr:

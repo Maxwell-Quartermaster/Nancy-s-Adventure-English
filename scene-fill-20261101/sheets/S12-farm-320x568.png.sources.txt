@@ -1,0 +1,14 @@
+5e838dfb0e4c135142ef777bf68565bd  /workspace/v608build/scene-fill-20261101/renders/farm-m-320x568.png
+e585100bee57fbc39b179e18e52ec8a9  /workspace/v608build/scene-fill-20261101/html/farm-m-320x568.html
+779b95246511f31d34af0e3bcb6ebb58  /workspace/v608build/scene-fill-20261101/renders/farm-d-320x568.png
+0733415fc2ae49051d484b698df480fd  /workspace/v608build/scene-fill-20261101/html/farm-d-320x568.html
+13f2dbf8da3644c30a863669d4c0a0b1  /workspace/v608build/scene-fill-20261101/renders/farm-e-320x568.png
+cd889014db6781756de31aba4a6832eb  /workspace/v608build/scene-fill-20261101/html/farm-e-320x568.html
+c39373461ef27322f3408651a25951e5  /workspace/v608build/scene-fill-20261101/renders/farm-n-320x568.png
+981b04db1c3c4fcf974d5f13a39f1454  /workspace/v608build/scene-fill-20261101/html/farm-n-320x568.html
+caption S12 · Golden Fields · Farm · 320x568
+caption 1. Morning
+caption 2. Midday
+caption 3. Evening
+caption 4. Night
+caption snap-r2h-0021MDT · pointer f6dac2d0 · PASTE 317e91ce · scene-fill-20261101 (candidate, not frozen)

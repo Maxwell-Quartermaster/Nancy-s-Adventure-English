@@ -1,0 +1,29 @@
+ground_check f46a2d29056eb68d56f6fc2113522905 | folder /workspace/v608build/scenes/stage/png | MANIFEST none
+A-meadow-evening-pond-320x568.png  40a343075ba27e3af8020377c686478f  BLOCK | path stroke: 566 px (min 290) in box x209-619 y331-911
+A-meadow-evening-pond-375x667.png  d9ca521c01f99770f2cf9b1a9e347d61  BLOCK | path stroke: 777 px (min 400) in box x245-729 y412-1324
+A-meadow-evening-pond-390x844.png  75ca56f5daff11678d853c1552e5ee6d  BLOCK | path stroke: 1201 px (min 526) in box x254-757 y739-1687
+B-meadow-listen-and-find-320x568.png  2d98241c348e7ef2028a7e328833cf10  BLOCK | path stroke: 975 px (min 290) in box x99-493 y336-911
+B-meadow-listen-and-find-375x667.png  04f869597e22a46830138a2d579d8c7e  BLOCK | path stroke: 1320 px (min 400) in box x202-578 y1054-1324
+B-meadow-listen-and-find-390x844.png  c5c23376d22ccea218346bd47f073aba  BLOCK | path stroke: 1798 px (min 526) in box x210-601 y1406-1687
+C-fields-count-it-320x568.png  8e39bf59fc258faae219e3f27688d1c3  PASS
+C-fields-count-it-375x667.png  add2fd1463d41c977ad4cee392427e4e  PASS
+C-fields-count-it-390x844.png  30b4646260190614b5d21ab42b25a5a3  PASS
+D-fields-big-or-small-320x568.png  3c6ae5cc6c60184bda29104b1b7fad18  PASS
+D-fields-big-or-small-375x667.png  8b196bc765578e9cc453d409a10b25ae  PASS
+D-fields-big-or-small-390x844.png  afc36acd1dde7b14963b3d62fa9dbe7e  PASS
+E-lake-front-desk-320x568.png  255a7722a7b5a13808273e94e3c2b4f7  PASS
+E-lake-front-desk-375x667.png  f04260eab6e30045fc0f45971363a4db  PASS
+E-lake-front-desk-390x844.png  d2add3e571c994d1670599861540d6f6  PASS
+F-lake-night-table-320x568.png  62b0917fbd0d70dcddfa56a3ae27acc6  PASS
+F-lake-night-table-375x667.png  2e6ebcce9f646136801cae8463fddaef  PASS
+F-lake-night-table-390x844.png  9dc3dca90f311b6c569c6bc581e4c3b2  PASS
+G-forest-picture-duel-320x568.png  6701bcaba16ae3c1a79a8ba8cc7b933b  PASS
+G-forest-picture-duel-375x667.png  2f760e1fa60fef4d2d7d11edb193834c  PASS
+G-forest-picture-duel-390x844.png  61f58ce9507cc507528b7955f35f16a4  PASS
+H-forest-dawn-320x568.png  38166c612777e46b8cfed86631077dcf  PASS
+H-forest-dawn-375x667.png  17da2bda8484b375d879a62ec162ca37  PASS
+H-forest-dawn-390x844.png  c8c123c9691d1ae9116d27aac01c2397  PASS
+W24-walk-B-320x568.png  86ea4312d133a2219b9912ef50e869ec  PASS
+W24-walk-B-375x667.png  8fb5c3f515398a637549d2a414e62ffe  PASS
+W24-walk-B-390x844.png  3685711d4a38314794a5519559e47177  PASS
+summary: 27 png, 6 BLOCK, 21 PASS

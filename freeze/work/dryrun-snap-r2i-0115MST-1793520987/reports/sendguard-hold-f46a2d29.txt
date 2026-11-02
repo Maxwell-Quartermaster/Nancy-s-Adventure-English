@@ -1,0 +1,29 @@
+send-guard 80615576 current_snap ee1d3180 ground_check f46a2d29 snap r2h-rerun-stage MANIFEST bc062fa1 renders-MANIFEST 1089c48e
+pointer e687eed4 snap r2h-rerun-stage
+OK   843444a5 sheets/instructor/v608/nightB/B.png = MANIFEST.md5:./sheets/instructor/v608/nightB/B.png
+OK   8a3fb6ca sheets/instructor/v608/nightB/B.png.sources.txt = MANIFEST.md5:./sheets/instructor/v608/nightB/B.png.sources.txt
+OK   75c7906e sheets/instructor/v608/nightB/night-title-1A-1B.png = MANIFEST.md5:./sheets/instructor/v608/nightB/night-title-1A-1B.png
+OK   8a624cb9 sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt = MANIFEST.md5:./sheets/instructor/v608/nightB/night-title-1A-1B.png.sources.txt
+OK   ddcc8345 sheets/r2h-M-menus.md = MANIFEST.md5:./sheets/r2h-M-menus.md
+OK   571b4c77 sheets/r2h-M-menus.png = MANIFEST.md5:./sheets/r2h-M-menus.png
+OK   0ab5addc sheets/r2h-M-menus.png.sources.txt = MANIFEST.md5:./sheets/r2h-M-menus.png.sources.txt
+OK   662807a2 sheets/r2h-after.png = MANIFEST.md5:./sheets/r2h-after.png
+OK   6e044cda sheets/r2h-after.png.sources.txt = MANIFEST.md5:./sheets/r2h-after.png.sources.txt
+OK   6e044cda sheets/r2h-after.sources.txt = MANIFEST.md5:./sheets/r2h-after.png.sources.txt
+OK   87a05b79 sheets/r2h-map-extended.md = MANIFEST.md5:./sheets/r2h-map-extended.md
+OK   0aa27de9 sheets/r2h-map-extended.png = MANIFEST.md5:./sheets/r2h-map-extended.png
+OK   001f8f54 sheets/r2h-map-extended.png.sources.txt = MANIFEST.md5:./sheets/r2h-map-extended.png.sources.txt
+OK   5eace60f showcase/INDEX.md = MANIFEST.md5:./showcase/INDEX.md
+OK   4422ff64 showcase/showcase-1-opening.png = MANIFEST.md5:./showcase/showcase-1-opening.png
+OK   35b6616b showcase/showcase-1-opening.png.sources.txt = MANIFEST.md5:./showcase/showcase-1-opening.png.sources.txt
+OK   6369fca4 showcase/showcase-2-zones.png = MANIFEST.md5:./showcase/showcase-2-zones.png
+OK   48528688 showcase/showcase-2-zones.png.sources.txt = MANIFEST.md5:./showcase/showcase-2-zones.png.sources.txt
+OK   f0f0d10c showcase/showcase-3-asking.png = MANIFEST.md5:./showcase/showcase-3-asking.png
+OK   b213403f showcase/showcase-3-asking.png.sources.txt = MANIFEST.md5:./showcase/showcase-3-asking.png.sources.txt
+OK   c62068de showcase/showcase-4-walk-guardian.png = MANIFEST.md5:./showcase/showcase-4-walk-guardian.png
+OK   778e0d80 showcase/showcase-4-walk-guardian.png.sources.txt = MANIFEST.md5:./showcase/showcase-4-walk-guardian.png.sources.txt
+OK   4764adcb showcase/showcase-5-rewards-pause.png = MANIFEST.md5:./showcase/showcase-5-rewards-pause.png
+OK   b2cbc832 showcase/showcase-5-rewards-pause.png.sources.txt = MANIFEST.md5:./showcase/showcase-5-rewards-pause.png.sources.txt
+OK   1d5671ec showcase/tiles.txt = MANIFEST.md5:./showcase/tiles.txt
+RESULT CLEAR: 25 files, 0 problems
+exit 0

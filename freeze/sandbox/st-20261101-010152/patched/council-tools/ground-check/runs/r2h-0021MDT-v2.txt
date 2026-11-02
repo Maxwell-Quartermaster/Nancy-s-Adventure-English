@@ -1,0 +1,300 @@
+ground_check 13fc304c4980d04236dfcdda34de92ce | folder /workspace/v608build/snap-r2h-0021MDT | MANIFEST 7b7c357fea7bf6777df24650754b8be9 (/workspace/v608build/snap-r2h-0021MDT/MANIFEST.md5)
+pick-sheets-b2b/B1-reward-pacing.png  6b737d085f4fb388897b6454f36f6b4b  BLOCK | path stroke: 1790 px (min 665) in box x195-1066 y827-877
+pick-sheets-b2b/D1-sentence-ask-thai-A-B-C-staged.png  9d3e0b718661bc5f1676b43fee1eee8d  PASS
+pick-sheets-b2b/D2-listen-ramp-A-B-C-staged.png  0f4e7cca0cd9786d924ece1296f0fe7f  BLOCK | path stroke: 11231 px (min 1045) in box x28-1943 y320-685
+pick-sheets-b2b/TG1-sight-words-repeats.png  a469bfb411d11f1c8d60c4ff616105dc  BLOCK | path stroke: 5335 px (min 809) in box x41-1204 y292-986 ; floating tree: trunk x391-394 y447-455, no grass in the 4 px below its foot ; floating tree: trunk x1211-1214 y447-455, no grass in the 4 px below its foot
+pick-sheets-b2b/TG2-verse-after-run.png  2d503ebbbd55b6ae4a1d96188fdd2669  PASS
+pick-sheets-b2b/TG3-guardian-recap.png  1317998d9c6e04324fb49b368839ffa8  BLOCK | path stroke: 1591 px (min 454) in box x41-384 y433-981 ; floating tree: trunk x391-394 y474-482, no grass in the 4 px below its foot
+pick-sheets-b2b/TG4-tier3-buy.png  d7c9f70ddf0ca122cd45e8948629d888  PASS
+pick-sheets-b2b/bloodtide-name.png  7eee863f7fc78cb80673eebab0a55c04  BLOCK | path stroke: 4923 px (min 626) in box x41-1204 y713-783 ; floating tree: trunk x391-394 y423-431, no grass in the 4 px below its foot ; floating tree: trunk x801-804 y423-431, no grass in the 4 px below its foot ; floating tree: trunk x1211-1214 y423-431, no grass in the 4 px below its foot
+pick-sheets-b2b/coin-rule.png  1361e3e3b92f91a8efda10f369a36293  PASS
+pick-sheets-b2b/letter-game-A-B.png  c60893847563d05696ebb91bf9bed95d  BLOCK | path stroke: 2508 px (min 445) in box x41-794 y737-846 ; floating tree: trunk x391-394 y447-455, no grass in the 4 px below its foot ; floating tree: trunk x801-804 y447-455, no grass in the 4 px below its foot
+pick-sheets-b2b/night-title-line.png  3709c41b466f475e8a2127d357c017c3  PASS
+pick-sheets-b2b/state-pairs-lean.png  f2ec52d3054a4a02abbc810b8f17bf20  BLOCK | path stroke: 1465 px (min 267) in box x41-384 y831-935 ; floating tree: trunk x391-394 y525-533, no grass in the 4 px below its foot
+r2h/sheets/r2h-before-after.png  db65eaf9162d2a2867ddc3cad832e1aa  BLOCK | path stroke: 1902 px (min 1774) in box x17-636 y216-3283
+renders/ceiling-cap-r2ask/E-lake-front-desk-375x667-wallup.png  3944c9d483adc6484d6058a1cf475435  PASS
+renders/ceiling-cap-r2ask/E-lake-front-desk-375x667.png  b219ea34bcb750a8ac504a461305f852  PASS
+renders/ceiling-cap-r2ask/E-lake-front-desk-375x812-wallup.png  3c292a1679dff95166c6458b560add1f  PASS
+renders/ceiling-cap-r2ask/E-lake-front-desk-375x812.png  dc21fbcc6c67cbb4a26a7e0c22d74a17  PASS
+renders/ceiling-cap-r2ask/E-lake-front-desk-390x844-wallup.png  c66c94d3e28881fa6ab0b604ad3eceb0  PASS
+renders/ceiling-cap-r2ask/E-lake-front-desk-390x844.png  2a8b1913ba04cfdd77a8191ba4e6042b  PASS
+renders/ceiling-cap-r2ask/F-lake-kitchen-375x667-wallup.png  edaccffbad748aa5cb8f1c84bc04c6bc  PASS
+renders/ceiling-cap-r2ask/F-lake-kitchen-375x667.png  8b3d755c005d6b96ec40a45bf3e6bd28  PASS
+renders/ceiling-cap-r2ask/F-lake-kitchen-375x812-wallup.png  823efa01e1f3009cc9de9d6d4d309322  PASS
+renders/ceiling-cap-r2ask/F-lake-kitchen-375x812.png  137187e09306f0afc1077f8e8376b9e0  PASS
+renders/ceiling-cap-r2ask/F-lake-kitchen-390x844-wallup.png  e03683aafbf5dd876a5b5f8e7775bfde  PASS
+renders/ceiling-cap-r2ask/F-lake-kitchen-390x844.png  04ae3305b9d421050021dc22136cf9b0  PASS
+renders/ceiling-cap-r2ask/F-lake-night-table-375x667-wallup.png  edaccffbad748aa5cb8f1c84bc04c6bc  PASS
+renders/ceiling-cap-r2ask/F-lake-night-table-375x667.png  8b3d755c005d6b96ec40a45bf3e6bd28  PASS
+renders/ceiling-cap-r2ask/F-lake-night-table-375x812-wallup.png  823efa01e1f3009cc9de9d6d4d309322  PASS
+renders/ceiling-cap-r2ask/F-lake-night-table-375x812.png  137187e09306f0afc1077f8e8376b9e0  PASS
+renders/ceiling-cap-r2ask/F-lake-night-table-390x844-wallup.png  e03683aafbf5dd876a5b5f8e7775bfde  PASS
+renders/ceiling-cap-r2ask/F-lake-night-table-390x844.png  04ae3305b9d421050021dc22136cf9b0  PASS
+renders/guardian-24-28/24-guardian-run-entry-320x568.png  fe87544f210884898e2c82062e207a58  BLOCK | path stroke: 2698 px (min 290) in box x232-638 y300-1135 ; floating tree: trunk x606-613 y343-356, no grass in the 5 px below its foot
+renders/guardian-24-28/24-guardian-run-entry-375x667.png  fac3ac9ff6f2acfd480e9d9af98cca4c  BLOCK | path stroke: 2599 px (min 400) in box x395-493 y832-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/guardian-24-28/24-guardian-run-entry-375x812.png  9ae0aef889aff96b9c967dd9baf5b655  BLOCK | path stroke: 3203 px (min 487) in box x398-516 y1102-1215 ; floating tree: trunk x712-721 y545-561, no grass in the 6 px below its foot
+renders/guardian-24-28/24-guardian-run-entry-390check.png  e32786f57d5a7b3ade3c12d2ae644934  BLOCK | path stroke: 3561 px (min 526) in box x414-719 y501-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/24-guardian-run-entry.png  e32786f57d5a7b3ade3c12d2ae644934  BLOCK | path stroke: 3561 px (min 526) in box x414-719 y501-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/25-guardian-hint-letters-320x568.png  56b5d8f0aa3977016f57d35497e8c3cb  BLOCK | path stroke: 1137 px (min 290) in box x231-636 y292-1135 ; floating tree: trunk x604-611 y342-355, no grass in the 5 px below its foot
+renders/guardian-24-28/25-guardian-hint-letters-375x667.png  a388d636dbedb3d573ae94a1ffbd59b1  BLOCK | path stroke: 2599 px (min 400) in box x395-493 y832-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/guardian-24-28/25-guardian-hint-letters-375x812.png  9930d5fc942b7757d0b8a0ea5a1e626e  BLOCK | path stroke: 1084 px (min 487) in box x445-516 y1100-1151 ; floating tree: trunk x712-721 y543-559, no grass in the 6 px below its foot
+renders/guardian-24-28/25-guardian-hint-letters-390check.png  d7463a1d7bf7f4968dc86d5c0869daf8  BLOCK | path stroke: 1209 px (min 526) in box x462-719 y501-1215 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/25-guardian-hint-letters.png  d7463a1d7bf7f4968dc86d5c0869daf8  BLOCK | path stroke: 1209 px (min 526) in box x462-719 y501-1215 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/26-guardian-hint-jesus-words-320x568.png  9fc5b3c92edc59df11502f66bf726a89  BLOCK | path stroke: 581 px (min 290) in box x44-638 y300-1135 ; floating tree: trunk x606-613 y343-356, no grass in the 5 px below its foot
+renders/guardian-24-28/26-guardian-hint-jesus-words-375x667.png  608dd9075b837b5ae784cee6c650033e  BLOCK | path stroke: 2601 px (min 400) in box x395-515 y516-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/guardian-24-28/26-guardian-hint-jesus-words-375x812.png  1951892cd449451502d95d4f04060646  BLOCK | path stroke: 3209 px (min 487) in box x44-516 y792-1215 ; floating tree: trunk x712-721 y545-561, no grass in the 6 px below its foot
+renders/guardian-24-28/26-guardian-hint-jesus-words-390check.png  72046a92712a151d37142734ddd5fb9d  BLOCK | path stroke: 3572 px (min 526) in box x44-719 y501-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/26-guardian-hint-jesus-words.png  72046a92712a151d37142734ddd5fb9d  BLOCK | path stroke: 3572 px (min 526) in box x44-719 y501-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/27-guardian-kneels-320x568.png  c10b8a6303a53a9fbb85738fcc43cfc7  BLOCK | path stroke: 1981 px (min 290) in box x342-428 y759-839 ; floating tree: trunk x578-584 y333-345, no grass in the 5 px below its foot
+renders/guardian-24-28/27-guardian-kneels-375x667.png  a9220ee88ecabcd92d981fe5efca9c2a  BLOCK | path stroke: 2427 px (min 400) in box x158-639 y300-917 ; floating tree: trunk x656-663 y365-379, no grass in the 5 px below its foot
+renders/guardian-24-28/27-guardian-kneels-375x812.png  d4da6575756ebd4a0b68dbedf86350f1  BLOCK | path stroke: 2960 px (min 487) in box x404-516 y1102-1207 ; floating tree: trunk x712-721 y545-561, no grass in the 6 px below its foot
+renders/guardian-24-28/27-guardian-kneels-390check.png  cca4d19d9c2d894c3ef950098dea6789  BLOCK | path stroke: 3229 px (min 526) in box x420-719 y501-1271 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/27-guardian-kneels.png  cca4d19d9c2d894c3ef950098dea6789  BLOCK | path stroke: 3229 px (min 526) in box x420-719 y501-1271 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/28-guardian-win-320x568.png  9b6fcad2afba4c487195d6e00efa2f95  BLOCK | path stroke: 2833 px (min 290) in box x322-426 y731-839 ; floating tree: trunk x574-580 y311-323, no grass in the 5 px below its foot
+renders/guardian-24-28/28-guardian-win-375x667.png  e354d5b18ab398059c1f0e58bb1580fe  BLOCK | path stroke: 3710 px (min 400) in box x147-498 y483-957 ; floating tree: trunk x669-677 y345-359, no grass in the 5 px below its foot
+renders/guardian-24-28/28-guardian-win-375x812.png  ca35947ffc9b01c4e8705ea283873acf  BLOCK | path stroke: 4318 px (min 487) in box x377-516 y1103-1247 ; floating tree: trunk x712-721 y546-562, no grass in the 6 px below its foot
+renders/guardian-24-28/28-guardian-win-390check.png  e976b04d6e3de5651e880f1448048ac3  BLOCK | path stroke: 4699 px (min 526) in box x393-536 y1162-1311 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/guardian-24-28/28-guardian-win.png  e976b04d6e3de5651e880f1448048ac3  BLOCK | path stroke: 4699 px (min 526) in box x393-536 y1162-1311 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/home-lake-r2ask/14-reveal-gentle-retry-375x812.png  3c452315de5d1485ca4147edfd084295  PASS
+renders/home-lake-r2ask/14-reveal-gentle-retry-390x844.png  3be73b0b004d695d2719321bc44a297f  PASS
+renders/home-lake-r2ask/16-say-it-maxwell-says-day1-375x812.png  0ed77865f55d401f141b4adef43d65f8  PASS
+renders/home-lake-r2ask/16-say-it-maxwell-says-day1-390x844.png  c8153730a93c25d046482003ff1af316  PASS
+renders/home-lake-r2ask/17-two-answer-pray-high-five-375x812.png  13322f8e76097b29e2a95310453bfecb  PASS
+renders/home-lake-r2ask/17-two-answer-pray-high-five-390x844.png  e742afd126a4096e172b4da6ddb830d0  PASS
+renders/home-lake-r2ask/18-two-answer-wrong-tap-375x812.png  da8e2280f5615431f39c2bcf678b5ff0  PASS
+renders/home-lake-r2ask/18-two-answer-wrong-tap-390x844.png  2bf5139f831aa2d9c4e228727b8dd581  PASS
+renders/home-lake-r2ask/19-two-answer-right-done-375x812.png  8020af8e554073d694280795ec04b26e  PASS
+renders/home-lake-r2ask/19-two-answer-right-done-390x844.png  9959d3cd9e54720ef0137397e0f8c0b8  PASS
+renders/home-lake-r2ask/20-kitchen-say-it-picture-first-375x812.png  f0e3addd87bc2f1963aff5feaf3d182c  PASS
+renders/home-lake-r2ask/20-kitchen-say-it-picture-first-390x844-before.png  7e4f1c1921d3d41e3be4e4855f4315ee  PASS
+renders/home-lake-r2ask/20-kitchen-say-it-picture-first-390x844.png  833152d59cbfcb8907d45c1b2f3052d1  PASS
+renders/home-lake-r2ask/21-kitchen-say-it-shown-375x812.png  c2d60db0afa9ac01423cf43a0e5cc5d5  PASS
+renders/home-lake-r2ask/21-kitchen-say-it-shown-390x844.png  f3cfee9da725ab345c4a03e736031d3c  PASS
+renders/home-lake-r2ask/22-kitchen-server-talk-375x812.png  8c1d7917719b95b05a5fd34be346cd56  PASS
+renders/home-lake-r2ask/22-kitchen-server-talk-390x844.png  f425c5b65c8c7dc857fe9aefa67942f4  PASS
+renders/home-lake-r2ask/32-home-lake-scene-375x812.png  732306843f46719f0eb655493c745ecb  PASS
+renders/home-lake-r2ask/32-home-lake-scene-390x844.png  b7863b55f5828afaa528236b81eeb47b  PASS
+renders/home-lake-r2ask/33-say-it-baby-hospital-reply-375x812.png  1f7ad038c9cd26617854584b43dfbab8  PASS
+renders/home-lake-r2ask/33-say-it-baby-hospital-reply-390x844.png  14b8fd6c7a588f99d64df49050ce26bc  PASS
+renders/home-lake-r2ask/54-phrase-ask-card-375x812.png  4c8fc4cc6a7475189fc3891d16837c96  PASS
+renders/home-lake-r2ask/54-phrase-ask-card-390x844.png  7fb502b14aaf8d6a14f6d08e1f0ef231  PASS
+renders/home-lake-r2ask/lake-step1-375x812.png  cd95a5ba154003fa36699eb42ba874ee  PASS
+renders/home-lake-r2ask/lake-step1-390x844.png  3c0a64b54b40c348b5825b35965dfa34  PASS
+renders/home-lake-r2ask/lake-step2-375x812.png  1e3545a3199b20119a433e00bc025bc4  PASS
+renders/home-lake-r2ask/lake-step2-390x844.png  f69a4bdb47376bc70722726c6b8055cb  PASS
+renders/home-lake-r2ask/lake-step3-375x812.png  c321f3437966d3de2274ad961388c9d0  PASS
+renders/home-lake-r2ask/lake-step3-390x844.png  90c31e29ed64a674b0aaea482f9fc758  PASS
+renders/home-lake-r2ask/lake-step4-375x812.png  464186dd56354805723e8d44995ef43e  PASS
+renders/home-lake-r2ask/lake-step4-390x844.png  b8413e8d2ef4cedc8f2ec6d1a74e0127  PASS
+renders/home-lake-r2ask/lake-step5-375x812.png  03b91d9b5d7657298e7d18773f68ac31  PASS
+renders/home-lake-r2ask/lake-step5-390x844.png  6d0c49e3584e342919c85e2850982ea8  PASS
+renders/home-lake-r2ask/zone-lake-ask-375x812.png  732306843f46719f0eb655493c745ecb  PASS
+renders/home-lake-r2ask/zone-lake-ask-390x844.png  b7863b55f5828afaa528236b81eeb47b  PASS
+renders/jesus-26/png/26-A-320x568.png  9fc5b3c92edc59df11502f66bf726a89  BLOCK | path stroke: 581 px (min 290) in box x44-638 y300-1135 ; floating tree: trunk x606-613 y343-356, no grass in the 5 px below its foot
+renders/jesus-26/png/26-B-320x568.png  50b2b3e3de23911a6485faae54ed4ee3  BLOCK | path stroke: 2732 px (min 290) in box x44-638 y300-1135
+renders/jesus-26/png/26-C-open-320x568.png  7e583097caef3528c6da9b26c2987756  BLOCK | path stroke: 2260 px (min 290) in box x237-420 y831-1135
+renders/jesus-26/png/26-C-rest-320x568.png  27fcea05c3259382e6de3ace4deeb309  BLOCK | path stroke: 2307 px (min 290) in box x237-546 y377-1135 ; floating tree: trunk x561-567 y432-443, no grass in the 4 px below its foot
+renders/jesus-26/png/26-D-320x568.png  75afa5e89426cb75eabf2bbacbd6bc34  BLOCK | path stroke: 2715 px (min 290) in box x44-638 y300-1135 ; floating tree: trunk x606-613 y343-356, no grass in the 5 px below its foot
+renders/jesus-26/png/26-D-375x667.png  1ec1b250526d2ab9d366096c087d666c  BLOCK | path stroke: 2621 px (min 400) in box x395-493 y503-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/jesus-26/png/26-D-375x812.png  627eefba7eef9dcdcd0d1267d5a57942  BLOCK | path stroke: 3203 px (min 487) in box x398-516 y1102-1215 ; floating tree: trunk x712-721 y545-561, no grass in the 6 px below its foot
+renders/r2e-c-chip/png/26-C-open-br-320x568.png  8e201aa5e83080a4a833aae2a5fdb402  BLOCK | path stroke: 2203 px (min 290) in box x239-417 y834-1135
+renders/r2e-c-chip/png/26-C-open-br-375x667.png  0be30e2bd8b1227599fc28d9ae7394ca  BLOCK | path stroke: 2058 px (min 400) in box x391-469 y850-925
+renders/r2e-c-chip/png/26-C-open-frozen-320x568.png  7e583097caef3528c6da9b26c2987756  BLOCK | path stroke: 2260 px (min 290) in box x237-420 y831-1135
+renders/r2e-c-chip/png/26-C-open-frozen-375x667.png  94b54232fee41032b9fafd741b619e51  BLOCK | path stroke: 2153 px (min 400) in box x392-473 y846-925
+renders/r2e-c-chip/png/26-C-rest-br-320x568.png  f984f4d059e70cc2b6c68fdd38d0f567  BLOCK | path stroke: 2251 px (min 290) in box x141-539 y395-1135 ; floating tree: trunk x554-559 y448-459, no grass in the 4 px below its foot
+renders/r2e-c-chip/png/26-C-rest-br-375x667.png  e76ed49ead71d69ce14902cc38230de4  BLOCK | path stroke: 2059 px (min 400) in box x391-589 y418-925 ; floating tree: trunk x604-609 y471-482, no grass in the 4 px below its foot
+renders/r2e-c-chip/png/26-C-rest-frozen-320x568.png  27fcea05c3259382e6de3ace4deeb309  BLOCK | path stroke: 2307 px (min 290) in box x237-546 y377-1135 ; floating tree: trunk x561-567 y432-443, no grass in the 4 px below its foot
+renders/r2e-c-chip/png/26-C-rest-frozen-375x667.png  5595054377284df919c81674440d5312  BLOCK | path stroke: 2155 px (min 400) in box x392-597 y400-925 ; floating tree: trunk x612-617 y455-466, no grass in the 4 px below its foot
+renders/r2e-d2/png/26-D2-320x568.png  40abd2094fca99dfb7c2ce7c776545ad  BLOCK | path stroke: 2712 px (min 290) in box x232-638 y300-1135
+renders/r2e-d2/png/26-D2-375x667.png  7373902f21bd77af9b9f37a12ad5b720  BLOCK | path stroke: 2610 px (min 400) in box x395-639 y524-925
+renders/r2e-d2/png/26-D2-390x844.png  d297e0c6554fec830032892f5c53959a  BLOCK | path stroke: 3596 px (min 526) in box x414-733 y515-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2e-d2/png/zone-forest-ask-D2plate-320x568.png  2415afdbd33f7b6fb3b180a9099a9f1a  PASS
+renders/r2e-d2/png/zone-forest-ask-D2plate-375x667.png  50858409d67c25e69d3c678adecce4bb  PASS
+renders/r2e-d2/png/zone-forest-ask-D2plate-390x844.png  fc08892dba2aec5a05b0ea17f24eaaa9  PASS
+renders/r2e-d2/png/zone-meadow-ask-D2plate-320x568.png  2b0b2be132e9097717959287ab5a8631  BLOCK | path stroke: 4780 px (min 290) in box x280-514 y517-911 ; floating tree: trunk x528-532 y401-410, no grass in the 4 px below its foot
+renders/r2e-d2/png/zone-meadow-ask-D2plate-375x667.png  8736c831a14ea7a2e16f98756e13988a  BLOCK | path stroke: 7145 px (min 400) in box x325-659 y419-1093 ; floating tree: trunk x631-637 y463-475, no grass in the 5 px below its foot
+renders/r2e-d2/png/zone-meadow-ask-D2plate-390x844.png  86f7ed088938d58bc69530a37445e901  BLOCK | path stroke: 9901 px (min 526) in box x321-719 y788-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/05-map-day1-390x844-before.png  a7cefecad4819cb0a8a1074c21fb1bdb  PASS
+renders/r2h/png/05-map-day1-390x844.png  2b14fcd09562f32f6a6c6d981cabfe5a  PASS
+renders/r2h/png/08-map-home-lake-chooser-day1-390x844-before.png  54ec213d49cf25bc6a5ac6bf7edff8df  PASS
+renders/r2h/png/08-map-home-lake-chooser-day1-390x844.png  d2c80490bff7fd346cb2dbba591a4b9d  PASS
+renders/r2h/png/09-map-later-390x844-before.png  8afa9c5cc5fb994eb0439b349dfde3c6  PASS
+renders/r2h/png/09-map-later-390x844.png  bf88ff867dee8114f6f0cafb4568f994  PASS
+renders/r2h/png/10-word-meadow-scene-320x568-before.png  bd76e27644da3b027b27ef5e5daf6d13  BLOCK | path stroke: 4789 px (min 290) in box x279-411 y748-911 ; floating tree: trunk x528-532 y400-409, no grass in the 4 px below its foot
+renders/r2h/png/10-word-meadow-scene-320x568.png  8fae8a16414bf14bc0865c6bccff2e70  PASS
+renders/r2h/png/10-word-meadow-scene-390x844-before.png  b6eb2bf20308b05dbaf2b0de3e9f77ad  BLOCK | path stroke: 9882 px (min 526) in box x321-545 y1171-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/10-word-meadow-scene-390x844.png  39142b6a15dc1806ca06b6feccc9ba70  PASS
+renders/r2h/png/11-word-meadow-scene-right-390x844-before.png  81bd17008f262a83f55a542b40f8c7c2  BLOCK | path stroke: 9882 px (min 526) in box x321-545 y1171-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/11-word-meadow-scene-right-390x844.png  2d280b94f268b650cac97ce98642aaa4  PASS
+renders/r2h/png/12-reveal-right-390x844-before.png  2160d4802b7e8d841c83b2e6a1ff3091  BLOCK | path stroke: 2408 px (min 526) in box x42-582 y918-1270 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/12-reveal-right-390x844.png  ccc8838644fa23649472e4213a588d57  PASS
+renders/r2h/png/13-word-meadow-scene-retry-390x844-before.png  c9ad57f6424c9773ea7cabfa5b3933c7  BLOCK | path stroke: 8657 px (min 526) in box x336-545 y1171-1414 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/13-word-meadow-scene-retry-390x844.png  6426d6dbda97b24c7bd9108f990d38f9  PASS
+renders/r2h/png/14-reveal-gentle-retry-320x568-before.png  6032902ee5adfbe36aa18b47d68d4a44  PASS
+renders/r2h/png/14-reveal-gentle-retry-320x568.png  a39a930e8f10b7e6d43e228cb2a8fd81  PASS
+renders/r2h/png/14-reveal-gentle-retry-390x844-before.png  9ce2b91ed74084b704b0c0cb54d59a90  PASS
+renders/r2h/png/14-reveal-gentle-retry-390x844.png  058b61a7141010e1a216d3bcffcdaac0  PASS
+renders/r2h/png/15-say-it-sight-words-390x844-before.png  e0ef71d75cb7fc659d9fc2fa01460328  BLOCK | path stroke: 3699 px (min 526) in box x414-545 y1171-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/15-say-it-sight-words-390x844.png  2f0af1a60880f45f8b4ecea6081c51aa  PASS
+renders/r2h/png/16-say-it-maxwell-says-day1-390x844-before.png  6ec17b1466ecf89e5dfd152fb18ed77e  PASS
+renders/r2h/png/16-say-it-maxwell-says-day1-390x844.png  39d3e1701701f749010ffaee646c76b2  PASS
+renders/r2h/png/17-two-answer-pray-high-five-390x844-before.png  f36314744912637bd02f6871abfddc0b  PASS
+renders/r2h/png/17-two-answer-pray-high-five-390x844.png  0dc05eb440c7561d0f6fa01c09a5d1c1  PASS
+renders/r2h/png/18-two-answer-wrong-tap-390x844-before.png  6a98b929ae4722b025ac48d94a3fed58  PASS
+renders/r2h/png/18-two-answer-wrong-tap-390x844.png  f77519fb64332d6e46d05c5fd49e0fce  PASS
+renders/r2h/png/19-two-answer-right-done-390x844-before.png  a0e335cf4272abcb9defc581fa5f9d53  PASS
+renders/r2h/png/19-two-answer-right-done-390x844.png  58079edd0f0dc349bcde5dfd0b236375  PASS
+renders/r2h/png/21-kitchen-say-it-shown-320x568-before.png  2c49534054afc89bc5755fdafd4fc4bc  PASS
+renders/r2h/png/21-kitchen-say-it-shown-320x568.png  aad8051ea70aea1b3109741039a7d37d  PASS
+renders/r2h/png/21-kitchen-say-it-shown-390x844-before.png  4095ef61cd4dccd43ebb75ba60c399eb  PASS
+renders/r2h/png/21-kitchen-say-it-shown-390x844.png  1dec12147918073801973990f98d138f  PASS
+renders/r2h/png/22-kitchen-server-talk-320x568-before.png  c13390a749f115b1de3985997ed4a7bf  PASS
+renders/r2h/png/22-kitchen-server-talk-320x568.png  519bacd64c15a30f785d48f3317f7721  PASS
+renders/r2h/png/22-kitchen-server-talk-390x844-before.png  6ed2a1571589cf23a589b615b491a2ad  PASS
+renders/r2h/png/22-kitchen-server-talk-390x844.png  621acd0fefff407774362b7e02fbd13a  PASS
+renders/r2h/png/23-level-up-reward-320x568-before.png  b480982f30b853c5d0eb46f82ea11f1a  BLOCK | path stroke: 2798 px (min 290) in box x344-525 y225-751 ; floating tree: trunk x608-615 y186-199, no grass in the 5 px below its foot
+renders/r2h/png/23-level-up-reward-320x568.png  8e38111608bec897098000c345019d18  PASS
+renders/r2h/png/23-level-up-reward-390x844-before.png  19d947fae2c346aac8f1f17663dd559e  BLOCK | path stroke: 4240 px (min 526) in box x420-644 y618-1271 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/23-level-up-reward-390x844.png  b672d41d3a651274c8f22d2a47ce7ca3  PASS
+renders/r2h/png/24-guardian-run-entry-320x568-before.png  33291f8955aa9e12f8cd19f35dc607bb  BLOCK | path stroke: 2698 px (min 290) in box x232-638 y300-1135 ; floating tree: trunk x606-613 y343-356, no grass in the 5 px below its foot
+renders/r2h/png/24-guardian-run-entry-320x568.png  97500b030dc76002b4c1ed8c79fa7fef  PASS
+renders/r2h/png/24-guardian-run-entry-375x667-before.png  198ad5f7090369c9c41073fe31800342  BLOCK | path stroke: 2599 px (min 400) in box x395-493 y832-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/r2h/png/24-guardian-run-entry-375x667.png  a56125e4815fe4a811d45104f33ee718  PASS
+renders/r2h/png/24-guardian-run-entry-390x844-before.png  2e0788a9096f674c06d6d7668182efa0  BLOCK | path stroke: 3561 px (min 526) in box x414-719 y501-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/24-guardian-run-entry-390x844.png  c279c66f41a78c02beec5322349b6d47  PASS
+renders/r2h/png/25-guardian-hint-letters-320x568-before.png  92a2b993f3d515940d2ac549aae7ec6d  BLOCK | path stroke: 1137 px (min 290) in box x231-636 y292-1135 ; floating tree: trunk x604-611 y342-355, no grass in the 5 px below its foot
+renders/r2h/png/25-guardian-hint-letters-320x568.png  72fc077782b84b472756968f0a3c4132  PASS
+renders/r2h/png/25-guardian-hint-letters-375x667-before.png  9728a110ceb180874ef1b6dbf02441de  BLOCK | path stroke: 2599 px (min 400) in box x395-493 y832-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/r2h/png/25-guardian-hint-letters-375x667.png  80b78aa271c166496c2ec1d6864372fa  PASS
+renders/r2h/png/25-guardian-hint-letters-390x844-before.png  3a65d6e7fc470a326ceb711714b04263  BLOCK | path stroke: 1209 px (min 526) in box x462-719 y501-1215 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/25-guardian-hint-letters-390x844.png  75e85b4388e82a83c01a932c7db3d7a4  PASS
+renders/r2h/png/26-guardian-hint-jesus-words-320x568-before.png  1af65b0641e6e65e3f5019dc120d50f1  BLOCK | path stroke: 581 px (min 290) in box x44-638 y300-1135 ; floating tree: trunk x606-613 y343-356, no grass in the 5 px below its foot
+renders/r2h/png/26-guardian-hint-jesus-words-320x568.png  13e24b25fcebfef81df58527fdafdabf  PASS
+renders/r2h/png/26-guardian-hint-jesus-words-375x667-before.png  33e956ea7469a49361ba76ee8c414d76  BLOCK | path stroke: 2601 px (min 400) in box x395-515 y516-925 ; floating tree: trunk x657-664 y366-379, no grass in the 5 px below its foot
+renders/r2h/png/26-guardian-hint-jesus-words-375x667.png  b2294c2b9c702cf77379121c7e15f605  PASS
+renders/r2h/png/26-guardian-hint-jesus-words-390x844-before.png  28e4c6d71c788a731aa60123281e55ae  BLOCK | path stroke: 3572 px (min 526) in box x44-719 y501-1279 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/26-guardian-hint-jesus-words-390x844.png  095ccf8ba586f61bd02019b7f331ad67  PASS
+renders/r2h/png/27-guardian-kneels-320x568-before.png  f96e442047b8440594f9888f0818da91  BLOCK | path stroke: 1981 px (min 290) in box x342-428 y759-839 ; floating tree: trunk x578-584 y333-345, no grass in the 5 px below its foot
+renders/r2h/png/27-guardian-kneels-320x568.png  ef6508ca662f47d9b4f5910885882fa6  PASS
+renders/r2h/png/27-guardian-kneels-375x667-before.png  56ab41ba721a2c27ac7969200918d07a  BLOCK | path stroke: 2460 px (min 400) in box x398-638 y299-917 ; floating tree: trunk x655-662 y364-378, no grass in the 5 px below its foot
+renders/r2h/png/27-guardian-kneels-375x667.png  0a9bb8d5b16560ff4b0018a615953b0e  PASS
+renders/r2h/png/27-guardian-kneels-390x844-before.png  0de7db9e86fe459456d2a2cf473c276e  BLOCK | path stroke: 3229 px (min 526) in box x420-719 y501-1271 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/27-guardian-kneels-390x844.png  7a41845dbe799480a958b3efadbb4e32  PASS
+renders/r2h/png/28-guardian-win-320x568-before.png  fa017b0093057b3707ed26659d9d89f2  BLOCK | path stroke: 2805 px (min 290) in box x323-427 y732-839 ; floating tree: trunk x575-581 y312-324, no grass in the 5 px below its foot
+renders/r2h/png/28-guardian-win-320x568.png  ac52252af8f92f678f2450fc5c841349  PASS
+renders/r2h/png/28-guardian-win-375x667-before.png  cb600b2d9626f8345e25a64863bf018e  BLOCK | path stroke: 3709 px (min 400) in box x378-499 y833-957 ; floating tree: trunk x670-678 y345-359, no grass in the 5 px below its foot
+renders/r2h/png/28-guardian-win-375x667.png  16173ee628b9d2331987b0bd55a767b5  PASS
+renders/r2h/png/28-guardian-win-390x844-before.png  e6deaf2c2d47ebf3567f4e94c84782f3  BLOCK | path stroke: 4699 px (min 526) in box x393-536 y1162-1311 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/28-guardian-win-390x844.png  aff4563c2794db131f89e582a7cee3a0  PASS
+renders/r2h/png/29-verse-scroll-gift-390x844-before.png  38df393c15c3cca2aead25a9bfeed178  BLOCK | floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/29-verse-scroll-gift-390x844.png  c8536836052b9d7054c69694e735e409  PASS
+renders/r2h/png/30-new-weapon-gift-390x844-before.png  0226efc11315071cfb8b48c547f773f3  BLOCK | floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/30-new-weapon-gift-390x844.png  c13a3f54a10ebb519ff1ea60aff06e8e  PASS
+renders/r2h/png/32-home-lake-scene-390x844-before.png  f0ed02b50994e9da48467c1edeb4f31d  PASS
+renders/r2h/png/32-home-lake-scene-390x844.png  e357d51658df0c441d4e4da1acc31ced  PASS
+renders/r2h/png/33-say-it-baby-hospital-reply-320x568-before.png  27b0220fa889e9a388547f0bff0d7202  PASS
+renders/r2h/png/33-say-it-baby-hospital-reply-320x568.png  16d9465b5b3d8ba6bb25b359d244c249  PASS
+renders/r2h/png/33-say-it-baby-hospital-reply-390x844-before.png  714ac604c5c43504c2eba4b0604f4468  PASS
+renders/r2h/png/33-say-it-baby-hospital-reply-390x844.png  43f6194435c58613e7616b9b54124a0b  PASS
+renders/r2h/png/37-rest-screen-390x844-before.png  050e0abe5c058cf7a2682155ca4e4c24  PASS
+renders/r2h/png/37-rest-screen-390x844.png  2c5218bd2e6a6e09fab5edc625ebf5d1  PASS
+renders/r2h/png/44-scroll-reopened-390x844-before.png  e7f02e962c85c73a9f0ea4b758ceb7c8  BLOCK | floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/r2h/png/44-scroll-reopened-390x844.png  1406cb8b65368fc657a4ae5644bf3379  PASS
+renders/r2h/png/48-continue-after-pause-390x844-before.png  9666d19c36cf03300e60a8b4a9d61f19  BLOCK | path stroke: 10124 px (min 526) in box x50-729 y746-1637 [dimmed x0.65]
+renders/r2h/png/48-continue-after-pause-390x844.png  2fcd997dfe52389dd402491f2a9884de  PASS
+renders/r2h/png/54-phrase-ask-card-320x568-before.png  278096fdbdd47652fb9862bdea089d9e  PASS
+renders/r2h/png/54-phrase-ask-card-320x568.png  23312c0999a91ae405b12864ce42c206  PASS
+renders/r2h/png/54-phrase-ask-card-390x844-before.png  5ab63a51ce13c2f7da5231a0d3e7dd35  PASS
+renders/r2h/png/54-phrase-ask-card-390x844.png  f8770270b77d040ba477b9e5a4157765  PASS
+renders/r2h/png/zone-forest-ask-320x568-before.png  5a9fcc03981aecf4d47453ade0025717  PASS
+renders/r2h/png/zone-forest-ask-320x568.png  c2f8be75e7c3d59e2d11fbce8588dc7b  PASS
+renders/r2h/png/zone-forest-ask-375x812-before.png  b48dbc94fd1495255c49a3142e2eda1d  PASS
+renders/r2h/png/zone-forest-ask-375x812.png  c498c7c2558540d1e4761cdb04dc5f69  PASS
+renders/r2h/png/zone-forest-ask-390x844-before.png  f94427a4f11107bf68698011fd83187e  PASS
+renders/r2h/png/zone-forest-ask-390x844.png  f1ed7b7bb3100a8be918d7a2eafe9bf7  PASS
+renders/r2h/png/zone-lake-ask-320x568-before.png  4d6f88ebc8ebc498085aa241585729e5  PASS
+renders/r2h/png/zone-lake-ask-320x568.png  7d6d7c0bdb68df16e751da79301a5273  PASS
+renders/r2h/png/zone-lake-ask-390x844-before.png  78668ccb6fc94b07f1e181e34ccd07cb  PASS
+renders/screens/02b-main-menu-verse-popup-longest-320x568-scrolled.png  27d041b43568dcdd41c86d4395b2e039  PASS
+renders/screens/02b-main-menu-verse-popup-longest-320x568.png  38174d8801ff1a757ea9f6130933c634  PASS
+renders/screens/02c-menu-gemtag-before-verse-320x568.png  2409984be2b6c1e663426732a98197d8  PASS
+renders/screens/02c-menu-gemtag-before-verse.png  d74b32b04b85a2dc66d4aff6fb74e3b4  PASS
+renders/screens/18-two-answer-wrong-tap.png  2bf5139f831aa2d9c4e228727b8dd581  PASS
+renders/screens/23-level-up-reward-320x568.png  26e0547e1b203b3e5ebb7d1b813dd03c  BLOCK | path stroke: 2798 px (min 290) in box x344-525 y225-751 ; floating tree: trunk x608-615 y186-199, no grass in the 5 px below its foot
+renders/screens/23-level-up-reward.png  181fa70f8efe467e8b66c197307dc30c  BLOCK | path stroke: 4240 px (min 526) in box x420-644 y618-1271 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/screens/29-verse-scroll-gift.png  857c6a26038024cd8da87bc04560f033  BLOCK | floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/screens/30-new-weapon-gift.png  61d4ba845b91e47035f41952165dc721  BLOCK | floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/screens/34-echo-forest-sound-duel-320x568.png  f2d1462f5eea51a70ffcf74c802becab  PASS
+renders/screens/35-sound-duel-right-320x568.png  2f5f5236ea6f8997f823fc943b0ebd98  PASS
+renders/screens/36-sound-duel-round-done-320x568.png  9ef5211ec73ce6a916ca153f5af95848  PASS
+renders/screens/36-sound-duel-round-done.png  1742b291378c64ff5533d6bd6cbc7935  PASS
+renders/screens/52-title-night.png  dbdf520885dacf2190ed358937e3cd4e  PASS
+renders/sky-B-r2ask/10-word-meadow-scene-320x568.png  4d3317e8f7c1caa2f598319aa0404968  BLOCK | path stroke: 4757 px (min 290) in box x280-411 y749-911 ; floating tree: trunk x528-532 y401-410, no grass in the 4 px below its foot
+renders/sky-B-r2ask/10-word-meadow-scene-375x812.png  5937e0885790bb7c4e3be67c706209e0  BLOCK | path stroke: 8959 px (min 487) in box x309-524 y1118-1383 ; floating tree: trunk x712-721 y552-568, no grass in the 6 px below its foot
+renders/sky-B-r2ask/10-word-meadow-scene-390x844.png  522bc8d439604e5e9d4d382aa3b475d6  BLOCK | path stroke: 9882 px (min 526) in box x321-545 y1171-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/sky-B-r2ask/14-reveal-gentle-retry-320x568.png  908396a41a0f4a353256de5d7de96ee8  PASS
+renders/sky-B-r2ask/14-reveal-gentle-retry-375x812.png  3c452315de5d1485ca4147edfd084295  PASS
+renders/sky-B-r2ask/14-reveal-gentle-retry-390x844.png  3be73b0b004d695d2719321bc44a297f  PASS
+renders/sky-B-r2ask/21-kitchen-say-it-shown-320x568.png  0c232f2a690955dd5e518d3f1a7f5252  PASS
+renders/sky-B-r2ask/21-kitchen-say-it-shown-375x812.png  ae83be41e5cb58e6496672e1952beb5e  PASS
+renders/sky-B-r2ask/21-kitchen-say-it-shown-390x844.png  8fd03a6fa6182c77daaa16a883a74276  PASS
+renders/sky-B-r2ask/22-kitchen-server-talk-320x568.png  e362a31370d960f120288b4904d156f6  PASS
+renders/sky-B-r2ask/22-kitchen-server-talk-375x812.png  6414861bc4bc4580f1cf9c967326f0b5  PASS
+renders/sky-B-r2ask/22-kitchen-server-talk-390x844.png  a74240a2498ec5d0ece0120bd85a2c32  PASS
+renders/sky-B-r2ask/23-level-up-reward-320x568.png  26e0547e1b203b3e5ebb7d1b813dd03c  BLOCK | path stroke: 2798 px (min 290) in box x344-525 y225-751 ; floating tree: trunk x608-615 y186-199, no grass in the 5 px below its foot
+renders/sky-B-r2ask/23-level-up-reward-375x812.png  e9a215b3f0445ca0dac966024ba2ae75  BLOCK | path stroke: 3850 px (min 487) in box x404-618 y579-1207 ; floating tree: trunk x712-721 y545-561, no grass in the 6 px below its foot
+renders/sky-B-r2ask/23-level-up-reward-390x844.png  181fa70f8efe467e8b66c197307dc30c  BLOCK | path stroke: 4240 px (min 526) in box x420-644 y618-1271 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/sky-B-r2ask/33-say-it-baby-hospital-reply-320x568.png  0429e7bf3185fe236c5bbb68be29e0ac  PASS
+renders/sky-B-r2ask/33-say-it-baby-hospital-reply-375x812.png  f50c7fb5d4d1336b17eb43eb09479558  PASS
+renders/sky-B-r2ask/33-say-it-baby-hospital-reply-390x844.png  166ecb4262c1d23e9535693347bbe848  PASS
+renders/sky-B-r2ask/34-echo-forest-sound-duel-320x568.png  f2d1462f5eea51a70ffcf74c802becab  PASS
+renders/sky-B-r2ask/34-echo-forest-sound-duel-375x812.png  0b39ec28a07c0e2ad6f9a697b95f3949  PASS
+renders/sky-B-r2ask/34-echo-forest-sound-duel-390x844.png  8a3c5ef133a797c55e3ffeaa196c9621  PASS
+renders/sky-B-r2ask/35-sound-duel-right-320x568.png  2f5f5236ea6f8997f823fc943b0ebd98  PASS
+renders/sky-B-r2ask/35-sound-duel-right-375x812.png  4ae386f5ce9a9ca298ed883b561ea24b  PASS
+renders/sky-B-r2ask/35-sound-duel-right-390x844.png  114f239e635e2b19c0c6749409b438c6  PASS
+renders/sky-B-r2ask/36-sound-duel-round-done-320x568.png  9ef5211ec73ce6a916ca153f5af95848  PASS
+renders/sky-B-r2ask/36-sound-duel-round-done-375x812.png  68d20669254fa2b0efd174c6c8980abf  PASS
+renders/sky-B-r2ask/36-sound-duel-round-done-390x844.png  1742b291378c64ff5533d6bd6cbc7935  PASS
+renders/sky-B-r2ask/54-phrase-ask-card-320x568.png  2be53d78599d654355c11b24608e1a67  PASS
+renders/sky-B-r2ask/54-phrase-ask-card-375x812.png  1917c16bd2be3763ef629af2bf59d933  PASS
+renders/sky-B-r2ask/54-phrase-ask-card-390x844.png  14ade1839065a66003a1aca9c810539c  PASS
+renders/sky-B-r2ask/zone-fields-ask-320x568.png  59580a9868b12448460a4f23abc6e7a0  PASS
+renders/sky-B-r2ask/zone-fields-ask-375x812.png  7f82775c181892c682acfcc5d1ba3ce2  PASS
+renders/sky-B-r2ask/zone-fields-ask-390x844.png  f008055c445628236aec7a43eee067c2  PASS
+renders/sky-B-r2ask/zone-forest-ask-320x568.png  aa1fe503c72e3d5ac6ebc652a6edbdd2  PASS
+renders/sky-B-r2ask/zone-forest-ask-375x812.png  3711be18dd6fd5df8f31e8d47edb16d0  PASS
+renders/sky-B-r2ask/zone-forest-ask-390x844.png  d468ddd4988e9022c31a37b36d445b7e  PASS
+renders/sky-B-r2ask/zone-lake-ask-320x568.png  9f975b36f1e7f624912a903d4d57fae7  PASS
+renders/sky-B-r2ask/zone-lake-ask-375x812.png  e574f2bd8cd5b7b9e870bb62302b5adc  PASS
+renders/sky-B-r2ask/zone-lake-ask-390x844.png  320f8aeb4ff9d0bc134a0ced433e776a  PASS
+renders/sky-B-r2ask/zone-meadow-ask-320x568.png  4d3317e8f7c1caa2f598319aa0404968  BLOCK | path stroke: 4757 px (min 290) in box x280-411 y749-911 ; floating tree: trunk x528-532 y401-410, no grass in the 4 px below its foot
+renders/sky-B-r2ask/zone-meadow-ask-375x812.png  5937e0885790bb7c4e3be67c706209e0  BLOCK | path stroke: 8959 px (min 487) in box x309-524 y1118-1383 ; floating tree: trunk x712-721 y552-568, no grass in the 6 px below its foot
+renders/sky-B-r2ask/zone-meadow-ask-390x844.png  522bc8d439604e5e9d4d382aa3b475d6  BLOCK | path stroke: 9882 px (min 526) in box x321-545 y1171-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+renders/walk24/W24-walk-B-320x568.png  86ea4312d133a2219b9912ef50e869ec  PASS
+renders/walk24/W24-walk-B-375x667.png  8fb5c3f515398a637549d2a414e62ffe  PASS
+renders/walk24/W24-walk-B-390x844.png  3685711d4a38314794a5519559e47177  PASS
+sheets-r2e/c-chip-linebreak-test-320-375.png  1e39a6132211bda6639750adc3bc0b44  BLOCK | path stroke: 3327 px (min 734) in box x149-1480 y559-796
+sheets-r2e/d2-plate-mock-not-added.png  8a8b2099c0e225ce0d65ad5cb519f521  BLOCK | path stroke: 12126 px (min 1244) in box x52-1237 y368-2072 ; floating tree: trunk x1241-1244 y521-529, no grass in the 4 px below its foot
+sheets/E-front-desk-one-layout-390.png  08b5906c5fcac939952dd26947eb0c37  PASS
+sheets/front-desk-t444u-320-vs-390.png  56e60380f68a7c0399d731e37a5ffd62  PASS
+sheets/home-lake-trim-before-after-390.png  90c4c92017f2de31b1ea221c68c0ca7d  PASS
+sheets/jesus-words-26-320-A-B-C-D.png  11c101ea6e15ae055e42fdab50a74aa4  BLOCK | path stroke: 7304 px (min 1268) in box x52-2094 y679-1116
+sheets/pick-combined-trim-ask-verse.png  a76f6913b0d4146a7ed7013581ad2fb2  BLOCK | path stroke: 711 px (min 681) in box x462-780 y437-528
+sheets/trim-pick-1A-vs-1B-390.png  2aa8e7c4c6c630c6d7ab7d66b59d7433  PASS
+sheets/walk24-B-t441u-before-after-390.png  f222b9c850d3790f9124defd182054a1  BLOCK | path stroke: 2011 px (min 547) in box x41-1197 y311-941 ; floating tree: trunk x391-394 y389-397, no grass in the 4 px below its foot
+showcase/showcase-1-opening.png  8dcce473f9dbc98ee2b0c03e3caa2351  PASS
+showcase/showcase-2-zones.png  923bacf2d4bfd6003db88372b61d89ae  BLOCK | path stroke: 5297 px (min 1221) in box x59-725 y416-1045 ; floating tree: trunk x401-404 y521-529, no grass in the 4 px below its foot
+showcase/showcase-3-asking.png  f4a8453e5a2d57fbc24084a5c68d9f64  BLOCK | path stroke: 6242 px (min 1221) in box x479-1234 y688-1975 ; floating tree: trunk x821-824 y521-529, no grass in the 4 px below its foot ; floating tree: trunk x1241-1244 y521-529, no grass in the 4 px below its foot ; floating tree: trunk x1241-1244 y1555-1563, no grass in the 4 px below its foot
+showcase/showcase-4-walk-guardian.png  dc0939b8b077d425faec4b2d0f85a85f  BLOCK | path stroke: 5959 px (min 1221) in box x51-1234 y360-1935 ; floating tree: trunk x1241-1244 y521-529, no grass in the 4 px below its foot ; floating tree: trunk x401-404 y1555-1563, no grass in the 4 px below its foot ; floating tree: trunk x821-824 y1555-1563, no grass in the 4 px below its foot
+showcase/showcase-5-rewards-pause.png  f1a2e8d00ec840a6ef8c1708eb9b8e26  BLOCK | path stroke: 2286 px (min 1221) in box x47-814 y505-1574 ; floating tree: trunk x401-404 y521-529, no grass in the 4 px below its foot ; floating tree: trunk x821-824 y521-529, no grass in the 4 px below its foot
+showcase/tiles/B--zone-forest-ask-390x844.png  d468ddd4988e9022c31a37b36d445b7e  PASS
+showcase/tiles/screens-v608--10-word-meadow-scene-320x568.png  4d3317e8f7c1caa2f598319aa0404968  BLOCK | path stroke: 4757 px (min 290) in box x280-411 y749-911 ; floating tree: trunk x528-532 y401-410, no grass in the 4 px below its foot
+showcase/tiles/screens-v608--10-word-meadow-scene.png  522bc8d439604e5e9d4d382aa3b475d6  BLOCK | path stroke: 9882 px (min 526) in box x321-545 y1171-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+showcase/tiles/screens-v608--11-word-meadow-scene-right.png  5d35f6ebbb8d07c76811eaa8e276df2f  BLOCK | path stroke: 9882 px (min 526) in box x321-545 y1171-1447 ; floating tree: trunk x741-749 y582-599, no grass in the 6 px below its foot
+showcase/tiles/screens-v608--31-golden-fields-scene.png  f008055c445628236aec7a43eee067c2  PASS
+showcase/tiles/screens-v608--32-home-lake-scene.png  320f8aeb4ff9d0bc134a0ced433e776a  PASS
+showcase/tiles/screens-v608--48-continue-after-pause.png  f427c3a014df6f2d4a3ffc26213fe2f4  BLOCK | path stroke: 10124 px (min 526) in box x50-729 y746-1637 [dimmed x0.65]
+showcase/tiles/screens-v608--zone-forest-ask-320x568.png  aa1fe503c72e3d5ac6ebc652a6edbdd2  PASS
+summary: 297 images, 107 BLOCK, 190 PASS
+done
