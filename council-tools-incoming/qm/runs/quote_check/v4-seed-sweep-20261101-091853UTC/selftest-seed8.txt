@@ -1,0 +1,66 @@
+PASS REAL SLIP: spec rule 9 quoted without 'but boss bars.' -> flag
+PASS REAL SLIP: rule 9 cut quoted in single quotes -> flag
+PASS REAL SLIP: Watchman t141u filed as **Maxwell:** -> RELAY
+PASS REAL SLIP: t142u filed as **Maxwell:** -> RELAY
+PASS REAL SLIP: t143u filed as **Maxwell:** -> RELAY
+PASS REAL SLIP: t102u labelled Maxwell -> RELAY
+PASS REAL SLIP: '0/85' rule credited to Maxwell, no t-number -> UNKNOWN
+PASS REAL SLIP: '0/85' via 'Maxwell said' -> UNKNOWN
+PASS own words exact (t402u) -> VERBATIM
+PASS own words, one full sentence of t421u -> VERBATIM
+PASS own words with […QM cut…] marker (t542u) -> VERBATIM
+PASS 'Maxwell said' + t152u exact -> VERBATIM
+PASS own words, no t-number -> VERBATIM with t-number hint
+PASS t527u matches but record is UNVERIFIED -> says so
+PASS words changed (don't -> do not) -> ALTERED with diff
+PASS cut mid-sentence with no marker (t409u) -> ALTERED
+PASS words dropped from t411u without marker -> ALTERED
+PASS no t-number, near match to t405u -> ALTERED
+PASS Ara relay text quoted as Maxwell, no t-number -> RELAY
+PASS t482u relay as Maxwell -> RELAY
+PASS t336u paraphrase-only -> PARAPHRASE
+PASS t235u paraphrase-only -> PARAPHRASE
+PASS Chancellor's own t76u row as Maxwell -> UNKNOWN
+PASS t999u never recorded -> UNKNOWN
+PASS full rule 9 -> SPEC-VERBATIM
+PASS rule 9 with […cut…] marker -> SPEC-VERBATIM
+PASS rule 9 word changed -> SPEC-ALTERED
+PASS line 388 sentence exact, no rule number -> SPEC-VERBATIM
+PASS made-up spec rule -> SPEC-NOTFOUND
+PASS rule 5 exact -> SPEC-VERBATIM
+PASS plain bot line -> NONE, exit 0
+PASS --file post: 2 checked, 1 flagged, exit 1
+PASS KIT-QD2 (gate): rule 9 quoted exactly as PASTE :32 prints it, with '9.' -> SPEC-VERBATIM
+PASS PASTE :32 with '9.' but no rule number named -> SPEC-VERBATIM
+PASS '- ' list marker stripped -> SPEC-VERBATIM
+PASS '9.' kept but a word changed -> still SPEC-ALTERED
+PASS '9.' kept but cut -> still SPEC-CUT
+PASS Q04 (gate): t402u words labelled t403u -> WRONG-TNUM
+PASS Q04b: t402u words labelled t405u (another own row) -> WRONG-TNUM, cites t402u
+PASS Q04c: 'Maxwell said' with wrong t-number -> WRONG-TNUM
+PASS Q04 control: right t-number -> VERBATIM
+PASS Q06b (gate): Thai Gen 1:1 with ฟ้า -> ฝ้า -> SPEC-ALTERED
+PASS Q06b: altered Thai diff names the changed character
+PASS Q06b control: exact Thai Gen 1:1 -> SPEC-VERBATIM
+PASS short Thai run (6+ chars) not in PASTE -> SPEC-NOTFOUND
+PASS Thai under 6 characters -> not checked (NONE)
+PASS T6 (gate 0200): Thai whole value "ขนมปัง" whose FIRST match is inside a verse word -> SPEC-VERBATIM
+PASS T6b control: "ขนมปัน" (ง->น) still flagged SPEC-ALTERED
+PASS T6c control: Thai that only ever sits inside a longer verse word -> still SPEC-CUT
+PASS T6-ASCII: "Thai Review Queue" first mid-sentence (PASTE :246), later a whole value -> SPEC-VERBATIM
+PASS T6-ASCII-2: "Colors and Shapes" first inside the zone-tint row, later a whole value -> SPEC-VERBATIM
+PASS T6 control: rule 9 cut still SPEC-CUT after the every-match change
+PASS E3c: own row + paraphrase row on one t-number -> own words win (VERBATIM), as README says
+PASS A2 (gate 0207): two own rows on t911u, quote = the short row whole -> VERBATIM on every seed (6 seeds, identical)
+PASS A3 (gate 0207): one row with two quotes, quote = the short one whole -> VERBATIM on every seed (6 seeds, identical)
+PASS A3b: same two texts on two rows, short row listed FIRST -> VERBATIM on every seed (6 seeds, identical)
+PASS A1 control: one text, first match mid-sentence, later match whole -> VERBATIM (6 seeds, identical)
+PASS A2 control: cut of both t911u rows (no marker) -> still ALTERED, names the shortest row (6 seeds, identical)
+PASS A3 control: cut of both t912u texts -> still ALTERED on every seed (6 seeds, identical)
+PASS A4 control: word changed (gold -> green) on t911u -> ALTERED (6 seeds, identical)
+PASS A7 control: whole short text, no t-number -> VERBATIM (6 seeds, identical)
+PASS tool made its own scratch dir qm/runs/quote_check/ (os.makedirs)
+PASS source: scratch under qm/runs/, no /tmp
+PASS source (v4): row texts sorted; no early-return loop over own texts
+scratch kept at /workspace/v608build/council-tools-incoming/qm/runs/selftest/20261101-021909-540172-quote_check
+quote_check selftest: 64/64 passed

@@ -1,0 +1,116 @@
+[
+ {
+  "tag": "L lean: spec line",
+  "delta": 367,
+  "old": "and plays it once; 🔊 replays it. Same taps, reveal and grace.\n",
+  "new": "and plays it once; 🔊 replays it. Same taps, reveal and grace.\n- **Letter game (Phonics, once per run; Maxwell t430u):** one 3–5 letter `pic` word from the run is spelled: blanks on the card, 6 letter plates (its letters and 2 decoys); a right letter fills the next blank and the picture, small on the ground, grows a step; a wrong plate just greys, nothing lost. `uiText.spellIt`. Right = that card's usual reward; grace as 7.1.\n"
+ },
+ {
+  "tag": "L lean: uiText.spellIt",
+  "delta": 46,
+  "old": "\"listenFind\":{\"en\":\"Listen. Where is it?\",\"th\":\"ฟังแล้วหาดู\"},",
+  "new": "\"listenFind\":{\"en\":\"Listen. Where is it?\",\"th\":\"ฟังแล้วหาดู\"},\"spellIt\":{\"en\":\"Spell it.\",\"th\":\"สะกดคำนี้\"},"
+ },
+ {
+  "tag": "L lean: uiText count",
+  "delta": 0,
+  "old": "all 97 `uiText` entries",
+  "new": "all 98 `uiText` entries"
+ },
+ {
+  "tag": "ramp D2 B",
+  "delta": 38,
+  "old": "in each scene the 3rd target is spoken only:",
+  "new": "in each scene the 3rd target (from its zone's step 3, the 5th too) is spoken only:"
+ },
+ {
+  "tag": "t464u title button",
+  "delta": 9,
+  "old": "then the button `uiText.letsGo`.",
+  "new": "then one button, `uiText.letsGo` (t464u)."
+ },
+ {
+  "tag": "t464u button place",
+  "delta": -109,
+  "old": "wide and low, English and the Thai plate on one line (two lines only if it must wrap); 84% wide (88% at 320 × 568), 60 pt tall, 24 pt (16 pt at 320 × 568) plus the safe-area inset above the bottom;",
+  "new": "in 6.2's lowest button slot, clear of the sword, English and the Thai plate on one line;"
+ },
+ {
+  "tag": "t464u tap",
+  "delta": -5,
+  "old": "- **Tap** (button or sword):",
+  "new": "- **Tap** (the button):"
+ },
+ {
+  "tag": "t464u launch order",
+  "delta": -65,
+  "old": "sword tap → reconcile (11.3) → `rewardQueue` → run or main menu; the daily verse, if due, pops up over the main menu (first launch: her first menu visit after the Phonics run); the title never shows a pop-up.",
+  "new": "the daily verse, if due, pops up over the title (t464u); Got it shows the title; its tap → reconcile (11.3) → `rewardQueue` → run or main menu."
+ },
+ {
+  "tag": "t464u verse rule",
+  "delta": -21,
+  "old": "over the main menu (never the title, t404u)",
+  "new": "over the title (t464u)"
+ },
+ {
+  "tag": "t464u verse card",
+  "delta": -3,
+  "old": "over the main menu (Ink 50% scrim; menu inert)",
+  "new": "over the title (Ink 50% scrim; title inert)"
+ },
+ {
+  "tag": "t465u/t487u main menu",
+  "delta": 11,
+  "old": "Exactly two buttons, the hearth (a corner button) and one cue: a Gold arrow bobbing at the Map button's right end (transform only; still with reduced motion), a cue, not a button. No banner, HUD, counters, chip or art; Forest background: `uiText.titleMap` (opens the Map) over `uiText.character` (opens Character, 6.6). Each is a full-width iron button 96 pt tall, 8 pt apart, in the lower 60%. Back from the Map or Character returns here.",
+  "new": "In the Map's look (6.3 header logs, top bar, sky sheet; t465u), top to bottom (t487u): the hero select (6.3's band, moved here), `uiText.gear` (opens Character, 6.6), `uiText.pantry` (the Shop), `uiText.titleMap` (opens the Map); the hearth in its corner and one cue, a Gold arrow bobbing at the Map button's right end (transform only; still with reduced motion). Full-width iron buttons 60 pt tall, 8 pt apart, never over the art. Back returns here."
+ },
+ {
+  "tag": "t465u hero band",
+  "delta": 6,
+  "old": "the Map's hero band shows",
+  "new": "the main menu's hero band shows"
+ },
+ {
+  "tag": "t465u menu check",
+  "delta": 12,
+  "old": "The main menu shows exactly two buttons (Map, Character), the corner hearth and the arrow cue.",
+  "new": "The main menu shows the hero select, three buttons (Gear, Shop, Map), the corner hearth and the arrow cue."
+ },
+ {
+  "tag": "t465u rows at bottom",
+  "delta": 0,
+  "old": "Rows start in the lower 60%; on taller screens the spare height goes evenly between rows.",
+  "new": "Rows sit at the bottom, 16 pt above the safe area; spare height stays above them (t465u)."
+ },
+ {
+  "tag": "t466u taps",
+  "delta": -6,
+  "old": "a row opens its zone, or a chooser with one plate per zone (zone `name`/`nameTh`) when it holds two or three;",
+  "new": "a row opens its region at once (t466u): its scenes take its zones in turn, never two in a row from one;"
+ },
+ {
+  "tag": "t466u home lake",
+  "delta": -9,
+  "old": "(its row opens their chooser)",
+  "new": "(its row mixes them)"
+ },
+ {
+  "tag": "t466u hub",
+  "delta": -12,
+  "old": "the hub and choosers use",
+  "new": "the hub uses"
+ },
+ {
+  "tag": "t466u time of day",
+  "delta": -4,
+  "old": "set at run start from that zone's step",
+  "new": "set per scene from its zone's step"
+ },
+ {
+  "tag": "t466u boss",
+  "delta": 1,
+  "old": "a recap after scene 5 of a run in that zone",
+  "new": "a recap after scene 5 of a run in its region"
+ }
+]

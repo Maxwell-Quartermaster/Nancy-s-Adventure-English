@@ -1,0 +1,352 @@
+FAIL KIT-QA: expect FLAG:UNSOURCED got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL KIT-QB: expect FLAG:TRUNCATED got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL KIT-QC1: expect FLAG:RELAY got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL KIT-QC2: expect FLAG:RELAY got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL KIT-QC3: expect FLAG:RELAY got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL KIT-QD1: expect CLEAN got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL KIT-QD2: expect CLEAN got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q01-one-word-change: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q02-dropped-word: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q02b-dropped-word-t421u: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q03-curly-quotes-control: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q03b-curly-apostrophe-only: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q04-wrong-tnum-correct-text: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q04b-wrong-tnum-other-own-row: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q05-paraphrase-as-Maxwell: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q05b-paraphrase-no-tnum: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+ADVISORY-MISS Q05c-paraphrase-said-unquoted: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q06-thai-1char-long: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q06-control-thai-exact: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+ADVISORY-MISS Q06c-thai-fragment-edge-cut-markers: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q06b-thai-1char-short: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q07-relay-as-own-text: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q07b-relay-via-said: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL Q07c-relay-tnum-own-chat-label: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL T5-thai-5char-exact: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+ADVISORY-MISS T5b-thai-5char-1letter: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL T6-thai-6char-exact: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL T6b-thai-6char-1letter: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL TM1-mixed-exact: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL TM2-mixed-1letter: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL TM3-mixed-boss-1letter: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL TM4-mixed-short-thai: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E1-relay-no-text-t141u: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E2-t527u-unverified: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E3a-t900u-no-chat-own+relay: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E3b-t900u-QM-chat: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E3e-t902u-paraphrase-only: expect FLAG got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E3c-t901u-no-chat-own+paraphrase: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+FAIL E3d-t901u-unknown-chat: expect OK got exit 1 
+     Traceback (most recent call last):
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 418, in <module>
+         sys.exit(main())
+                  ~~~~^^
+       File "/workspace/v608build/council-tools-incoming/qm/quote_check.py", line 399, in main
+         pm = hashlib.md5(open(a.paste, "rb").read()).hexdigest()
+                          ~~~~^^^^^^^^^^^^^^^
+     FileNotFoundError: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/quote_check/data/nancys-adventure-english-v6-08-1B-v32-PASTE.md'
+TOTAL required 0/36; advisory 0/3

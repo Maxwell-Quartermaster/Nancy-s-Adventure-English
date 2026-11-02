@@ -1,0 +1,3 @@
+thai_diff.py 41de37a5b68643d6a7df6e12a0c1f23a | MANIFEST none | base 317e91ce86f073c961f8169183d2bbd3 | new 317e91ce86f073c961f8169183d2bbd3
+runs base 798 new 798
+NO THAI CHANGE

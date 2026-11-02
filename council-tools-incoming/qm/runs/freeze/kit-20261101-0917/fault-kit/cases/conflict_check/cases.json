@@ -1,0 +1,60 @@
+{
+ "tool": "conflict_check",
+ "status": "Chancellor's patch exists at /workspace/council-tools/incoming/chancellor-conflict-check/conflict_check.py (not live). Cases written from Auditor's brief, not from that tool's own selftest.",
+ "interface": "python3 conflict_check.py PASTE LINE_NO \"new line text\". Exit 0 = no other line hit, 1 = hits, 2 = usage. Each hit line in stdout contains ':<line_no> ' (Chancellor's README). If the shipped interface differs, change only run_kit's adapter, never the expected lines.",
+ "paste": "paste-317e91ce-excerpt.md: PASTE 317e91ce lines 32, 203, 249, 260, 388, 411 at their original line numbers; every other line blank",
+ "expect_values": "flag = lines that must be reported; not_flag = lines that must NOT be reported; exit = expected exit code",
+ "cases": [
+  {
+   "id": "C1",
+   "line": 32,
+   "new": "9. **Nothing alarming** anywhere.",
+   "exit": 1,
+   "flag": [
+    388
+   ],
+   "not_flag": [
+    203,
+    249,
+    411
+   ],
+   "required": true,
+   "why": "dropping 'red ... but boss bars' from rule 9 leaves :388 'No red fills but boss bars.' contradicting it; :203/:249/:411 are wrong-tap / silent 'no red' rules that still hold and must not be flagged",
+   "source": "real incident: rule 9 change nearly left :388 contradicting it (caught only by a hand search for 'red'), Council Nov 1; PASTE 317e91ce"
+  },
+  {
+   "id": "C2",
+   "line": 32,
+   "new": "9. **Nothing red or alarming** anywhere but boss bars.",
+   "exit": 0,
+   "flag": [],
+   "not_flag": [
+    203,
+    249,
+    260,
+    388,
+    411
+   ],
+   "required": true,
+   "why": "control: an unchanged line must report nothing",
+   "source": "control"
+  },
+  {
+   "id": "C3",
+   "line": 32,
+   "new": "9. **Nothing red or alarming** anywhere but boss bars, ever.",
+   "exit": 0,
+   "flag": [],
+   "not_flag": [
+    203,
+    249,
+    260,
+    388,
+    411
+   ],
+   "required": true,
+   "why": "control: a change that only adds an emphasis word removes no ruling",
+   "source": "control"
+  }
+ ]
+}

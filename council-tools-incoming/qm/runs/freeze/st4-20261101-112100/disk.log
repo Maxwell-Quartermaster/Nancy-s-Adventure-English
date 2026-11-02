@@ -1,0 +1,33 @@
+11:21:15 used=99819433984 pct=72.977 start cap=108057812459
+11:21:15 used=99819548672 pct=72.977 gate C control: ground_check logger (snapshot file) est=3000000
+11:21:19 used=99819974656 pct=72.977 done C control: ground_check logger (snapshot file) delta=425984
+11:21:19 used=99819974656 pct=72.977 gate 1-2 clean dry + real run est=155000000
+11:22:20 used=99983777792 pct=73.097 gate clean real run est=78000000
+11:22:51 used=100084494336 pct=73.171 done 1-2 clean dry + real run delta=264519680
+11:22:51 used=100084494336 pct=73.171 gate 5 sendguard-exit3 no-op dry run est=75000000
+11:23:00 used=100161265664 pct=73.227 done 5 sendguard-exit3 no-op dry run delta=76771328
+11:23:00 used=100161265664 pct=73.227 gate 5d no-sheets (live tools) dry run est=75000000
+11:23:01 used=100238721024 pct=73.284 done 5d no-sheets (live tools) dry run delta=77455360
+11:23:01 used=100238721024 pct=73.284 gate 14 step6 rollback est=75000000
+11:23:10 used=100315500544 pct=73.340 done 14 step6 rollback delta=76779520
+11:23:10 used=100315500544 pct=73.340 gate 15 rollback-fails est=75000000
+11:23:19 used=100392275968 pct=73.396 done 15 rollback-fails delta=76775424
+11:23:19 used=100392275968 pct=73.396 gate 13 handmove est=75000000
+11:23:29 used=100469055488 pct=73.452 done 13 handmove delta=76779520
+11:23:29 used=100469055488 pct=73.452 gate 9 paste-copy est=75000000
+11:23:38 used=100545961984 pct=73.508 done 9 paste-copy delta=76906496
+11:23:38 used=100545961984 pct=73.508 gate 10 enospc est=75000000
+11:23:48 used=100623097856 pct=73.565 done 10 enospc delta=77135872
+11:23:48 used=100623097856 pct=73.565 gate 12 plain-copy est=75000000
+11:23:57 used=100699860992 pct=73.621 done 12 plain-copy delta=76763136
+11:23:57 used=100699860992 pct=73.621 gate 16 hold-present est=75000000
+11:24:06 used=100776714240 pct=73.677 done 16 hold-present delta=76853248
+11:24:06 used=100776714240 pct=73.677 gate 17 crash + stale HOLD est=75000000
+11:24:15 used=100853506048 pct=73.733 done 17 crash + stale HOLD delta=76791808
+11:24:15 used=100853506048 pct=73.733 gate 18 lock est=75000000
+11:24:26 used=100930281472 pct=73.789 done 18 lock delta=76775424
+11:24:26 used=100930281472 pct=73.789 gate 21b override est=75000000
+11:24:36 used=101007052800 pct=73.845 done 21b override delta=76771328
+11:24:36 used=101007052800 pct=73.845 gate 22 patched hold-check diff est=78000000
+11:24:51 used=101084016640 pct=73.902 done 22 patched hold-check diff delta=76963840
+11:24:51 used=101084020736 pct=73.902 end peak=101084016640

@@ -1,0 +1,83 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "tuft_check",
+ "path": "/workspace/audit/fault-kit/stubs/tuft_check_stub_neverflag.py",
+ "md5": "6e3554692d0c6fe4cad60de2d3fb398f",
+ "exit": 1,
+ "required": [
+  3,
+  5
+ ],
+ "advisory": [
+  0,
+  0
+ ],
+ "rows": [
+  {
+   "id": "U01",
+   "required": true,
+   "recorded": false,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "control: approved tile 16 with its three-stroke tufts",
+   "source": "t441u approved look; W24-walk-B 3685711d"
+  },
+  {
+   "id": "U02",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "(a) old-look yellow circle dot (#FFE27A, r 3 pt) on open grass at (110,515) pt must be flagged",
+   "source": "Maxwell t527u: replace circle dots on grass with tufts (SETTLED-RULINGS A26); t545u"
+  },
+  {
+   "id": "U03",
+   "required": true,
+   "recorded": false,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "(b) grey pebble on a bare-dirt patch (#A47B4F) must be left alone",
+   "source": "Maxwell t545u: dots on dirt are left alone"
+  },
+  {
+   "id": "U04",
+   "required": true,
+   "recorded": false,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "(c) grey pebble on a sand/path strip (#EAD7A0) must be left alone",
+   "source": "Maxwell t545u: dots on path/sand are left alone"
+  },
+  {
+   "id": "U05",
+   "required": false,
+   "recorded": true,
+   "expect": "RECORD",
+   "got": "PASS",
+   "ok": null,
+   "detail": "",
+   "why": "(d) EDGE CASE: pebble centred on the grass/dirt boundary of the dirt patch; result recorded, never graded",
+   "source": "t545u scope boundary (Auditor brief Nov 1)"
+  },
+  {
+   "id": "U06",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "pebble on dirt (keep) AND a circle dot on grass in one image: the grass dot must still be flagged",
+   "source": "t545u: leaving pebbles alone must not hide a real grass dot"
+  }
+ ]
+}

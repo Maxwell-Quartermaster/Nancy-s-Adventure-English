@@ -1,0 +1,14 @@
+quote_check.py A1: 1 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x41
+quote_check.py A2: 1 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x41
+quote_check.py A3: 1 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x41
+quote_check.py A4: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.py A5: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.py A6: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.py A7: 1 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x41
+quote_check.v3.py A1: 1 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x41
+quote_check.v3.py A2: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.v3.py A3: 2 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x22; ('ALTERED',) exit 1 x19
+quote_check.v3.py A4: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.v3.py A5: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.v3.py A6: 1 distinct output(s) over seeds 0-40: ('ALTERED',) exit 1 x41
+quote_check.v3.py A7: 1 distinct output(s) over seeds 0-40: ('VERBATIM',) exit 0 x41

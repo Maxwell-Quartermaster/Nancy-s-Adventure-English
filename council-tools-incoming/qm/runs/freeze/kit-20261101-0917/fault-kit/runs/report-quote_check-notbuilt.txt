@@ -1,0 +1,2 @@
+ERROR quote_check: /workspace/council-tools/quote-check/quote_check.py not found (tool NOT BUILT or wrong path); 0 cases run
+EXIT 2

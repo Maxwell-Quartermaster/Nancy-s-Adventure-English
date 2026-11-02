@@ -1,0 +1,32 @@
+<!-- Auditor fault kit: excerpt of PASTE 317e91ce86f073c961f8169183d2bbd3 (/workspace/v608build/r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md). Only the needed lines are copied, at their ORIGINAL line numbers; every other line is blank. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. **Nothing red or alarming** anywhere but boss bars.

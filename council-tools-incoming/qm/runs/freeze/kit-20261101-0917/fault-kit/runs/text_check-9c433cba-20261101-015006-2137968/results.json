@@ -1,0 +1,347 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "text_check",
+ "path": "/workspace/council-tools/text-check/text_check.py",
+ "md5": "9c433cba77aa53292a0b6ad1964b8a2a",
+ "exit": 1,
+ "required": [
+  10,
+  28
+ ],
+ "advisory": [
+  1,
+  2
+ ],
+ "rows": [
+  {
+   "id": "T01",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "never-word '911' in a sheet .sources.txt caption line",
+   "source": "standing rule: never 911/Call Max/Show the Nurse in anything Maxwell sees; Auditor caption gate g3 N11"
+  },
+  {
+   "id": "T02",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "never-word 'Call Max' in a .sources.txt caption line",
+   "source": "g3 N11-callmax"
+  },
+  {
+   "id": "T03",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "never-word 'Show the Nurse' in a .sources.txt caption line",
+   "source": "g3 N11-nurse"
+  },
+  {
+   "id": "T04",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-911"
+  },
+  {
+   "id": "T05",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-callmax"
+  },
+  {
+   "id": "T06",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-nurse"
+  },
+  {
+   "id": "T07",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'911' in a data-* attribute",
+   "source": "g3 N08a (data-* was warn-only)"
+  },
+  {
+   "id": "T08",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'Call Max' in a data-* attribute",
+   "source": "g3 N08a variant"
+  },
+  {
+   "id": "T09",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'Show the Nurse' in a data-* attribute",
+   "source": "g3 N08a variant"
+  },
+  {
+   "id": "T10",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'911' in a script string",
+   "source": "g3 N08b variant"
+  },
+  {
+   "id": "T11",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'Call Max' in a script string",
+   "source": "g3 N08b variant"
+  },
+  {
+   "id": "T12",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'Show the Nurse' in a script string",
+   "source": "g3 N08b"
+  },
+  {
+   "id": "T13",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'911' in visible render text",
+   "source": "g1 T08a / g3 N06"
+  },
+  {
+   "id": "T14",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'Call Max' in visible render text, even though it equals a PASTE content string",
+   "source": "g3 N07a (allow path must not exempt never-words)"
+  },
+  {
+   "id": "T15",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "'Show the Nurse' in visible render text",
+   "source": "g3 N06-nurse"
+  },
+  {
+   "id": "T16",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   RETIRED R3-shop-en \"Golden Pantry\" in t16.png source showcase/t16.html [text]: \"Golden Pantry\" (t487u)",
+   "why": "retired 'Golden Pantry' wording (renamed Shop)",
+   "source": "Ara relay t487u: rename golden pantry to just shop (SETTLED-RULINGS M05)"
+  },
+  {
+   "id": "T17",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "",
+   "why": "retired wording hidden by nbsp + soft hyphen",
+   "source": "g1 T04c/T04d"
+  },
+  {
+   "id": "T18",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "retired wording in a .sources.txt caption line",
+   "source": "t487u; g3 N05b"
+  },
+  {
+   "id": "T19",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   RETIRED R3-shop-en \"golden pantry\" in code/mk_t19.py:3 [caption]: \"The golden pantry.\" (t487u)",
+   "why": "retired wording (lower case) in a builder caption",
+   "source": "g3 N05b"
+  },
+  {
+   "id": "T20",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "SKIP exit 0",
+   "ok": true,
+   "detail": "WARN    SKIP MANIFEST.md5: not an image, html or text doc (no user-visible text to check)",
+   "why": "real MANIFEST.md5 checksum list is not something Maxwell sees",
+   "source": "real incident: Auditor's 284885f0 false-BLOCKed MANIFEST.md5 (audit/stage-final-5ae35bf3-2026-11-01.md:12)"
+  },
+  {
+   "id": "T21",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "SKIP exit 0",
+   "ok": true,
+   "detail": "WARN    SKIP renders-MANIFEST.md5: not an image, html or text doc (no user-visible text to check)",
+   "why": "real renders-MANIFEST.md5 must not block",
+   "source": "same incident (284885f0)"
+  },
+  {
+   "id": "T22",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "SKIP exit 0",
+   "ok": true,
+   "detail": "WARN    SKIP chk1B-rerun.log: not an image, html or text doc (no user-visible text to check)",
+   "why": "real .log report must not block (council notes)",
+   "source": "same incident: reports/chk1B-rerun.log false-BLOCKed by 284885f0"
+  },
+  {
+   "id": "T23",
+   "required": true,
+   "recorded": false,
+   "expect": "WARN:CAPTIONS-UNCHECKED",
+   "got": "PASS exit 0",
+   "ok": false,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "sheet with 2 sources and no caption lines must warn that captions were not checked",
+   "source": "g3 N11c; r2h stage showcase sidecars"
+  },
+  {
+   "id": "T24",
+   "required": true,
+   "recorded": false,
+   "expect": "UNVERIFIED",
+   "got": "TEXT UNVERIFIED exit 1",
+   "ok": true,
+   "detail": "BLOCK   TEXT UNVERIFIED orphan.png: no sidecar .sources.txt, same-name .html, tour entry or builder script found in snap-t",
+   "why": "PNG with no sidecar, html or builder must read TEXT UNVERIFIED, never PASS",
+   "source": "provenance rule: an image whose text cannot be traced reads TEXT UNVERIFIED (README; r2h sidecars with no html hash, Council Nov 1)"
+  },
+  {
+   "id": "T25",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "",
+   "why": "control: live tapPrompt wording (t440u) must pass",
+   "source": "README not_retired tapPrompt"
+  },
+  {
+   "id": "T26",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "",
+   "why": "control: 'Maxwell', 'nursery', '9110' are not never-words",
+   "source": "g3 N05d"
+  },
+  {
+   "id": "T27",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "",
+   "why": "control: PASTE content card bh-24 is allowed",
+   "source": "README allow list"
+  },
+  {
+   "id": "T28",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "control: clean caption lines",
+   "source": "g3 N11b"
+  },
+  {
+   "id": "T29",
+   "required": false,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "WARN    DOC-MENTION RETIRED R3-shop-en \"Golden Pantry\" in notes.md:1 [line]: \"Rule: never \"Call Max\" or 911 in the app. Golden Pantry is retired.\" (t4",
+   "why": "council notes .md naming the rule warn only (policy)",
+   "source": "g3 N09"
+  },
+  {
+   "id": "T30",
+   "required": false,
+   "recorded": false,
+   "expect": "BLOCK|UNVERIFIED",
+   "got": "SKIP exit 0",
+   "ok": false,
+   "detail": "WARN    SKIP sheet.pdf: not an image, html or text doc (no user-visible text to check)",
+   "why": "a PDF sheet's text can't be read, so it must not pass silently",
+   "source": "g1 T11e"
+  }
+ ]
+}

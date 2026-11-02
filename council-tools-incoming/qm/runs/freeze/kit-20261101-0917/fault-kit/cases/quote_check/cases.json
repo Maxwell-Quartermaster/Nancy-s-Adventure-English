@@ -1,0 +1,17 @@
+{
+ "tool": "quote_check",
+ "status": "NOT BUILT YET (QM will build). These cases are data only; run_kit grades whatever tool path it is given against this ASSUMED interface.",
+ "interface": "ASSUMED: python3 quote_check.py POST LEDGER SPEC. Prints one line per problem: 'FLAG <KIND> <post_line>: <text>' with KIND in UNSOURCED (a **Maxwell...:** line whose words are not verbatim in a **Maxwell (tN...)** ledger row), TRUNCATED (a quote of a spec/ledger line that drops words from it), RELAY (third-person relay wording or an Ara (relay) row filed under a **Maxwell** label). Exit 0 = no FLAG, 1 = any FLAG, 2 = usage error. If QM ships a different interface, change only run_kit's quote_check adapter, never the expected verdicts.",
+ "ledger": "ledger-excerpt.md (rows copied verbatim from /workspace/v608build/SETTLED-RULINGS.md 8d8aeff5)",
+ "spec": "spec-317e91ce-excerpt.md (PASTE 317e91ce line 32 at its own line number)",
+ "expect_values": "FLAG:<KIND>[xN] = exit 1 and at least N FLAG lines of that KIND; CLEAN = exit 0 and no FLAG line",
+ "cases": [
+  {"id":"QA","post":"posts/QA-unsourced-0-85.md","expect":"FLAG:UNSOURCED","line":2,"required":true,"why":"'**Maxwell:** ... no 0/85 counter' has no Maxwell row in the ledger (T12: Ara relay says he doesn't remember it)","source":"real slip: Auditor credited Chancellor's 'no 0/85 counter' ruling (Chancellor record t322u) to Maxwell; SETTLED-RULINGS T12"},
+  {"id":"QB","post":"posts/QB-rule9-truncated.md","expect":"FLAG:TRUNCATED","line":1,"required":true,"why":"rule 9 quoted as 'Nothing red or alarming anywhere'; PASTE :32 is '9. **Nothing red or alarming** anywhere but boss bars.'","source":"real slip: Auditor's rule 9 quote missing 'but boss bars' (Council, Nov 1)"},
+  {"id":"QC1","post":"posts/QC1-relay-ask-directly.md","expect":"FLAG:RELAY","line":1,"required":true,"why":"third-person 'Maxwell wants you to...' filed as **Maxwell (t490u):**; ledger P16 has it as an Ara relay","source":"QM, Council Nov 1: three relays filed as Maxwell's own words; SETTLED-RULINGS P16"},
+  {"id":"QC2","post":"posts/QC2-relay-doesnt-remember.md","expect":"FLAG:RELAY","line":1,"required":true,"why":"'Maxwell doesn't remember...' filed as **Maxwell (t102u):**; ledger T12 says Ara relay","source":"same incident; SETTLED-RULINGS T12"},
+  {"id":"QC3","post":"posts/QC3-relay-is-asking.md","expect":"FLAG:RELAY","line":1,"required":true,"why":"'Maxwell is asking: ...' filed as **Maxwell (t476u):**; ledger A21 says Ara relay","source":"same incident; SETTLED-RULINGS A21"},
+  {"id":"QD1","post":"posts/QD1-clean-own-words.md","expect":"CLEAN","required":true,"why":"verbatim own words with the ledger's label (A02 t405u)","source":"SETTLED-RULINGS A02"},
+  {"id":"QD2","post":"posts/QD2-clean-relay-labelled.md","expect":"CLEAN","required":true,"why":"a relay labelled as Ara (relay) plus rule 9 quoted in full is correct","source":"SETTLED-RULINGS P16 + PASTE 317e91ce :32"}
+ ]
+}

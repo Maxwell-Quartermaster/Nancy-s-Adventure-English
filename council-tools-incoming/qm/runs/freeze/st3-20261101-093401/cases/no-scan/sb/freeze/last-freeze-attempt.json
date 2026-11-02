@@ -1,0 +1,21 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": true,
+ "sandbox": true,
+ "started": "2026-11-01 02:40 MST",
+ "steps": {
+  "1": "pointer f6dac2d0e7b391436a160eab1bbf17fe snap-r2h-0021MDT OK; old PASTE 317e91ce on disk; new PASTE 317e91ce 188,116 chars, bank 84; disk 78.9%",
+  "2": "verses nancys-adventure-english-v6-08-daily-verses.json = nancys-adventure-english-v6-07-daily-verses.json except version; \"if due\" present; no 911/Call Max/Show the Nurse; no phone/email/street; thai-diff exit 0 (no Thai change)"
+ },
+ "thai_diff": {
+  "exit": 0,
+  "lines": 3,
+  "head": [
+   "thai_diff.py 41de37a5b68643d6a7df6e12a0c1f23a | MANIFEST none | base 317e91ce86f073c961f8169183d2bbd3 | new 317e91ce86f073c961f8169183d2bbd3"
+  ],
+  "file": "/workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/no-scan/sb/freeze/work/thai-diff-snap-st-0100MDT.txt"
+ },
+ "result": "FAIL",
+ "reason": "REASON: step 3 render: /workspace/council-tools/sheets-scan/sheets_scan.py: sheets scan not installed: 2 sheets/showcase image(s) cannot be judged (they are never sent to ground_check)",
+ "pointer": "pointer not moved"
+}

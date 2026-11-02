@@ -1,0 +1,10 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": false,
+ "sandbox": true,
+ "started": "2026-11-01 02:40 MST",
+ "steps": {},
+ "result": "FAIL",
+ "reason": "REASON: step 1 preflight: /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/pointer-mismatch/sb/r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md: md5 6d525aa8d8cd842310f218a90269e638 != pointer paste_1b_md5 317e91ce86f073c961f8169183d2bbd3",
+ "pointer": "pointer not moved"
+}

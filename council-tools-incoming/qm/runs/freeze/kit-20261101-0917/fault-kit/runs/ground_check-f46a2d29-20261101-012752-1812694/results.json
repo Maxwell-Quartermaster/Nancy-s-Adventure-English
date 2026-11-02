@@ -1,0 +1,357 @@
+{
+ "kit": "fault-kit v1",
+ "tool": "ground_check",
+ "path": "/workspace/council-tools/ground-check/ground_check.py",
+ "md5": "f46a2d29056eb68d56f6fc2113522905",
+ "exit": 1,
+ "required": [
+  19,
+  30
+ ],
+ "advisory": [
+  1,
+  4
+ ],
+ "rows": [
+  {
+   "id": "G01",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean 320x568@2x render tile A (control)",
+   "source": "gc-cap-gate planted.py tile-A-clean"
+  },
+  {
+   "id": "G02",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot",
+   "why": "tree lifted 152 px off the grass (planted floating tree)",
+   "source": "Maxwell t467u/t476u floating tree on tiles 6/11/12/15; planted.py plant_float"
+  },
+  {
+   "id": "G03",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 2638 px (min 290) in box x44-638 y403-1135",
+   "why": "old scene path stroke painted on grass",
+   "source": "retired brush-stroke walkway (A19 t472u/t473u); planted.py plant_path"
+  },
+  {
+   "id": "G04",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean tile D (control)",
+   "source": "planted.py"
+  },
+  {
+   "id": "G05",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot",
+   "why": "floating tree, tile D",
+   "source": "planted.py plant_float"
+  },
+  {
+   "id": "G06",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 2979 px (min 290) in box x44-638 y403-1135",
+   "why": "path stroke, tile D",
+   "source": "planted.py plant_path"
+  },
+  {
+   "id": "G07",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean tile 6 (control)",
+   "source": "gc_cap.py selftest scratch"
+  },
+  {
+   "id": "G08",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot",
+   "why": "floating tree on tile 6",
+   "source": "Maxwell t467u: tile 6 tree back up in the air"
+  },
+  {
+   "id": "G09",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 5682 px (min 449) in box x292-530 y1151-1279",
+   "why": "path stroke on tile 6",
+   "source": "gc_cap.py selftest"
+  },
+  {
+   "id": "G10",
+   "required": true,
+   "expect": "PASS",
+   "got": "BLOCK",
+   "ok": false,
+   "detail": "path stroke: 3506 px (min 3005) in box x104-3438 y865-1566",
+   "why": "real clean 5-tile options sheet must not false-block",
+   "source": "real incident: ground_check f46a2d29 false-blocked screen26 5-tile sheet (cap fix, gc-cap-gate out-planted.txt)"
+  },
+  {
+   "id": "G11",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "real clean night-title sheet (control)",
+   "source": "council-images/picks-20261101 night-title sheet"
+  },
+  {
+   "id": "G12",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 7949 px (min 3005) in box x104-3438 y865-1597",
+   "why": "one-tile path stroke inside a 5-tile sheet (tile A)",
+   "source": "one bad tile hidden in a big sheet; planted.py onto_real"
+  },
+  {
+   "id": "G13",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 11319 px (min 3005) in box x104-3438 y865-1597",
+   "why": "one-tile path stroke inside a 5-tile sheet (middle tile)",
+   "source": "planted.py onto_real"
+  },
+  {
+   "id": "G14",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 3506 px (min 3005) in box x104-3438 y865-1566 ; floating tree: trunk x666-673 y777-791, no grass in the 5 px below its foot",
+   "why": "one floating tree inside a 5-tile sheet (tile A)",
+   "source": "planted.py onto_real"
+  },
+  {
+   "id": "G15",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 3506 px (min 3005) in box x104-3438 y865-1566 ; floating tree: trunk x3406-3413 y777-791, no grass in the 5 px below its foot",
+   "why": "one floating tree inside a 5-tile sheet (tile D)",
+   "source": "planted.py onto_real"
+  },
+  {
+   "id": "G16",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "5-tile sheet with a path in tile A, whole sheet dimmed x0.65",
+   "source": "pause-scrim blind spot (LESSONS.md: tile 25 under pause card read PASS)"
+  },
+  {
+   "id": "G17",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "path in tile A, only that tile dimmed x0.65 inside the sheet",
+   "source": "pause-scrim blind spot; planted.py tiledim65"
+  },
+  {
+   "id": "G18",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree in tile A, that tile dimmed x0.65 (dimmed floating tree)",
+   "source": "real incident: v2 missed a dimmed floating tree; planted.py tiledim65"
+  },
+  {
+   "id": "G19",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree in tile D, that tile dimmed x0.65",
+   "source": "real incident: v2 missed a dimmed floating tree"
+  },
+  {
+   "id": "G20",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean 5-tile sheet dimmed x0.65 must not false-block",
+   "source": "control for G16 (dim fix must not trade one bug for another)"
+  },
+  {
+   "id": "G21",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean sheet with one clean tile dimmed x0.65",
+   "source": "control for G17-G19"
+  },
+  {
+   "id": "G22",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean synthetic 3-tile sheet",
+   "source": "planted.py synth"
+  },
+  {
+   "id": "G23",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "BLOCK",
+   "ok": true,
+   "detail": "path stroke: 6443 px (min 1249) in box x104-1390 y865-1597",
+   "why": "2-tile crop with path in tile B",
+   "source": "planted.py crop2"
+  },
+  {
+   "id": "G24",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "real screen 48 under the pause card: its HTML draws the old stroke and a floating tree under a x0.6 scrim",
+   "source": "real incident: LESSONS.md, tile 25 = screen 48 read PASS on live ground_check"
+  },
+  {
+   "id": "G25",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree under a light scrim (~x0.8)",
+   "source": "dimrun.py"
+  },
+  {
+   "id": "G26",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree under a ~x0.65-0.7 scrim (dimmed floating tree)",
+   "source": "real incident: dimmed floating tree missed; dimrun.py"
+  },
+  {
+   "id": "G27",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "path under a ~x0.65 scrim",
+   "source": "dimrun.py"
+  },
+  {
+   "id": "G28",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree, uniform x0.85 dim",
+   "source": "dimrun.py ov15"
+  },
+  {
+   "id": "G29",
+   "required": true,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree, uniform x0.65 dim (pause-scrim strength)",
+   "source": "dimrun.py ov35"
+  },
+  {
+   "id": "G30",
+   "required": true,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean tile 6, uniform x0.65 dim (control)",
+   "source": "dimrun.py ov35"
+  },
+  {
+   "id": "G31",
+   "required": false,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree under a x0.5 scrim (stronger than the real pause card)",
+   "source": "dimrun.py"
+  },
+  {
+   "id": "G32",
+   "required": false,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree, x0.45 dim",
+   "source": "dimrun.py ov55"
+  },
+  {
+   "id": "G33",
+   "required": false,
+   "expect": "BLOCK",
+   "got": "PASS",
+   "ok": false,
+   "detail": "",
+   "why": "floating tree, x0.35 dim",
+   "source": "dimrun.py ov65"
+  },
+  {
+   "id": "G34",
+   "required": false,
+   "expect": "PASS",
+   "got": "PASS",
+   "ok": true,
+   "detail": "",
+   "why": "clean tile 6, x0.35 dim (control for G33)",
+   "source": "dimrun.py ov65"
+  }
+ ]
+}

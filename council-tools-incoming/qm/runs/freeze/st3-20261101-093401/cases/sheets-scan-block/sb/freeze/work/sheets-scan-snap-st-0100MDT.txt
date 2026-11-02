@@ -1,0 +1,6 @@
+BASE pointer 5982f4be (/workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/sheets-scan-block/sb/freeze/work/precheck-snap-st-0100MDT-1793526004-2635255/CURRENT-SNAP.txt); ground_check ae61b2a9
+PASS  /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/sheets-scan-block/stage/sheets/05-map-day1-390x844.png [whole]
+BLOCK /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/sheets-scan-block/stage/sheets/c03-sheet.png [5 panels]: 26D-path-dim65.png: path stroke: 2978 px (min 290) in box x44-638 y403-1135 [dimmed x0.65]
+BLOCK /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/sheets-scan-block/stage/sheets/c04-sheet.png [5 panels]: 26D-float-dim65.png: floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot [dimmed x0.65]
+PASS  /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/sheets-scan-block/stage/showcase/showcase-1-opening.png [whole]
+RESULT PASS=2 BLOCK=2 ERROR=0 SKIP=0 exit 1

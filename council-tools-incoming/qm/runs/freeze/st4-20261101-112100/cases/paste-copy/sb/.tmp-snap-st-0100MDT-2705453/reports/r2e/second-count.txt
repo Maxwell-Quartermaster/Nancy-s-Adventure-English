@@ -1,0 +1,11 @@
+QM second count of snap-r2d-2233MDT (Auditor's second), Oct 31, 2026, MDT. All reads from the frozen snapshot copy; live paths noted where a tool reads them.
+- MANIFEST e9a542d2: md5sum -c 389/389 OK. renders-MANIFEST 8f845686: 862/862 OK against live.
+- Checks (snap checks/checks_v608.py, mktree scratch trees /tmp/qmtmp/r2e/tree1A and tree1B on the snapshot PASTE/FINAL/spec/cards and snap round2.py; NAE_TRIM 1A/1B):
+  1A 337 live True / 0 live False / 80 SUPERSEDED, exit 0; 1B 337 / 0 / 80, exit 0. Trim-clip render check: 44 trimmed renders, True (reads LIVE round2/ceiling-cap, Auditor L1).
+- PASTE: 1A 106a066103da9713220a5e7d6c4285cf 187,797 chars, bank 403; 1B 2eebff944f7c30ac2e13fdc8e888d398 187,797, bank 403 (ceiling 188,200). Live staged copies identical.
+- council-tools/fit-table/fit_table.py 654ce9c8 (costs 837012ec): --selftest PASS; --help works; --paste 1A and --paste 1B both rc 0, same table (only the header line differs: paste md5);
+  refuses /workspace v6-08 PASTE 95a4d0fc (bank 992 vs costs 403), rc 1. Fit sets equal code/r2_fit_table.py for every option:
+  A 12/16, B 8/16, C' 2/16, D 8/16: MATCH (set-equal, incl. left values).
+- snap code/r2_fit_table.py --md reproduces sheets/r2-fit-table.md 6c5ea447 byte for byte.
+- r2_fit_table.py (r2e): bank now = 188,200 - PASTE length for every --paste (default both staged PASTEs); refuses (exit 2) if they differ from each other or from round_totals.STAGED. Tested: snapshot 1A+1B -> 403, rc 0, CHECK vs Chancellor f6fdf5c7 all four match; /workspace v6-08 PASTE -> REFUSED, rc 2.
+- Agreement with Auditor's r2d gate 0ea05c59: every count matches (337/0/80 both trims, 187,797 / 403, 12/8/2/8). One wording disagreement: L4 says INDEX:41 calls "the 26 sheet" tile 25 and :46 tile 26. Both lines are about screen 48 (Back after a pause); the numbering gives tile 25, so :46 was the typo. Screen 26 itself is tile 17 throughout.

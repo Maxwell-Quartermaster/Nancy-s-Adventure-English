@@ -1,0 +1,14 @@
+{
+ "tool": "tuft_check",
+ "interface": "python module exposing check(path) -> list of reasons (watchman/checker/tuft_check.py). Kit verdict: FLAG if any reason starts with 'rock' (rock/circle dot on grass); otherwise PASS (an 'ASK bare grass' / 'bare grass' note is printed as PASS (+note)).",
+ "scope": "Maxwell t545u (via QM, Nov 1 2026): tufts only on grass; flag a dot only when it sits on grass; dots/pebbles on dirt, path, sand or hill are left alone.",
+ "images": "built by tools/make_planted.py from a kit copy of /workspace/v608build/scenes/stage/png/W24-walk-B-390x844.png (3685711d, approved tile 16 look, t441u), the same base as Watchman's own selftest. Each plant uses a spot / colour different from that selftest.",
+ "cases": [
+  {"id":"U01","file":"U01-clean.png","expect":"PASS","required":true,"why":"control: approved tile 16 with its three-stroke tufts","source":"t441u approved look; W24-walk-B 3685711d"},
+  {"id":"U02","file":"U02-circle-dot-on-grass.png","expect":"FLAG","required":true,"why":"(a) old-look yellow circle dot (#FFE27A, r 3 pt) on open grass at (110,515) pt must be flagged","source":"Maxwell t527u: replace circle dots on grass with tufts (SETTLED-RULINGS A26); t545u"},
+  {"id":"U03","file":"U03-pebble-on-dirt.png","expect":"PASS","required":true,"why":"(b) grey pebble on a bare-dirt patch (#A47B4F) must be left alone","source":"Maxwell t545u: dots on dirt are left alone"},
+  {"id":"U04","file":"U04-pebble-on-sand-strip.png","expect":"PASS","required":true,"why":"(c) grey pebble on a sand/path strip (#EAD7A0) must be left alone","source":"Maxwell t545u: dots on path/sand are left alone"},
+  {"id":"U05","file":"U05-dot-on-grass-dirt-edge.png","expect":"RECORD","required":false,"why":"(d) EDGE CASE: pebble centred on the grass/dirt boundary of the dirt patch; result recorded, never graded","source":"t545u scope boundary (Auditor brief Nov 1)"},
+  {"id":"U06","file":"U06-pebble-on-dirt-plus-dot-on-grass.png","expect":"FLAG","required":true,"why":"pebble on dirt (keep) AND a circle dot on grass in one image: the grass dot must still be flagged","source":"t545u: leaving pebbles alone must not hide a real grass dot"}
+ ]
+}

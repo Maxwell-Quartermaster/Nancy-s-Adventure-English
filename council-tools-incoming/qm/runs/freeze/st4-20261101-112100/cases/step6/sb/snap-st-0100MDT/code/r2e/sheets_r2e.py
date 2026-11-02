@@ -1,0 +1,17 @@
+# r2e evidence sheets (not Maxwell picks): the C' chip line-break test and the D2 plate mock. Numbers from g26e/measure-c-chip.json and d2/d2-measure.json.
+import sys, json, os; sys.path.insert(0, '/workspace/v608build/round2/sheets'); from sheetkit import sheet
+E = '/workspace/v608build/round2/r2e/'; SN = os.environ.get('NAE_SNAP', '')
+C = json.load(open(E + 'g26e/measure-c-chip.json')); D = json.load(open(E + 'd2/d2-measure.json'))
+def cc(k): c = C[k]; return f"Opened verse covers {c['samCoveredPt']} pt of Sam's {c['samHeight']} pt ({c['samCoveredPct']}% of his box); Guardian {c['guardianCoveredPt']} pt. Chip {c['chip'][3] - c['chip'][1]} pt tall, scene scale {c['scale']}."
+tiles = [(f'{a}', f"{'As frozen (one line, \" · \")' if v == 'frozen' else 'Line break between English and Thai (0 chars)'} at {s.replace('x', ' x ')}. " + cc(f'{s}-{v}'), E + f'g26e/png/26-C-open-{v}-{s}.png', tuple(map(int, s.split('x'))))
+         for a, (s, v) in zip(('1A', '1B', '2A', '2B'), (('320x568', 'frozen'), ('320x568', 'br'), ('375x667', 'frozen'), ('375x667', 'br')))]
+sheet(E + 'sheets/c-chip-linebreak-test-320-375.png', "Screen 26 C' after the tap: chip as frozen vs a line break", 'Council test (11:00 PM MDT): does a line break in the chip cover more of Sam?', tiles,
+      "The line break covers more of Sam at both sizes (320: 51 vs 47 pt; 375 x 667: 24 vs 20 pt), because the taller chip shrinks the scene and pushes the verse down. So the chip stays exactly as frozen in r2d, ' ·' included. Render-only; 0 PASTE chars either way. Oct 31, 2026, MDT.", cols=4)   # sheetkit adds the 'Frozen in' line
+S = D['sizes']; M = D['sky']['meadow']
+def dd(s): x = S[s]; return f"Plate {x['pic']}, Guardian {x['guardian']} (helmet top y {x['gTop'][1]}): the plate sits on the Guardian's head. Full-width bubble {x['bubble']}: two Thai lines need {x['need2']:.0f} pt, cap {x['cap']} ({'fit' if x['fits2'] else 'short by %d pt' % round(x['need2'] - x['cap'])})."
+tiles = [(f'{i}', f'26 D2 at {s.replace("x", " x ")}. ' + dd(s), E + f'd2/png/26-D2-{s}.png', tuple(map(int, s.split('x')))) for i, s in zip(('1', '2', '3'), ('320x568', '375x667', '390x844'))]
+tiles += [(f'{i}', f'Word Meadow ask with the plate at the D2 spot, {s.replace("x", " x ")}: it covers the bus stop target {M[s]["hits"][0][1] if M[s]["hits"] else "(none)"}; kite clear (geometry only; this mock uses the pre-round-2 ask wording).', E + f'd2/png/zone-meadow-ask-D2plate-{s}.png', tuple(map(int, s.split('x')))) for i, s in zip(('4', '5', '6'), ('320x568', '375x667', '390x844'))]
+sheet(E + 'sheets/d2-plate-mock-not-added.png', f"D2 mock: the thinking plate moved down {D['drop']} design pt (top {D['top']}), bubble full width", 'Not added to the screen 26 sheet: the plate covers a head and a target.', tiles,
+      f"Drop = the smallest that puts the plate 8 pt under the full-width bubble at 320 x 568, 375 x 667 and 390 x 844. occl_qm.py (aa963b83): on 26 the plate covers the Guardian's helmet at all three sizes; in Word Meadow it covers the bus stop at all three; kite, owl and lantern are clear (Echo Forest: no target covered). "
+      "The full-width bubble still shows under 2 Thai lines at 320 and 375 x 667 (it now caps on the Guardian's helmet). PASTE cost if it were taken: +79 (:246 '(on the Jesus-word hint, under its bubble)' +43, and spec 1.12 ' A Jesus word scrolls in its bubble.' +36), 324 left; :246 also says 'never over or beside the hero'. Render-only mock; nothing applied. Oct 31, 2026, MDT.", cols=3)
+print('ok')

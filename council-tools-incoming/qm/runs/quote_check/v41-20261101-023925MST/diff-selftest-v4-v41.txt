@@ -1,0 +1,76 @@
+--- selftest_quote_check.v4.py	2026-11-01 09:18:32.847138582 +0000
++++ selftest_quote_check.py	2026-11-01 09:39:09.340931419 +0000
+@@ -181,10 +181,73 @@
+     outs = run_seeds(text)
+     rc, o = next(iter(outs))
+     t.ok(len(outs) == 1 and rc == want_rc and want in o, label + f" ({len(SEEDS)} seeds, identical)", "\n---\n".join(x[1] for x in outs))
++# --- v4.1: Auditor gate L1-0226 B1 (bare **Maxwell:** label; t-number elsewhere on the row or in the heading)
++syn41 = os.path.join(d, "SYN-RULINGS-v41.md")
++open(syn41, "w").write('## Z1 bare rows (t921u, Nov 1)\n'
++                       '**Maxwell:** "Watch the gate at night and call the council."\n'
++                       '**Maxwell:** (t920u, Nov 1, Z1 update) "Send the urgent email right away. Keep everything else the same"\n'
++                       '**Maxwell:** (t923u and t924u, merged) "Paint the shed green"\n'
++                       '| Z3 | t927u | **Maxwell:** "Keep the dog bowl full" | SETTLED |\n'
++                       '## Z2 notes with no t-number\n'
++                       '**Maxwell:** "Keep the lamp on tonight"\n'
++                       '**Maxwell:** "Do it the way t930u said"\n')
++QC4 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "quote_check.v4.py")
++def run41(post, tool="quote_check.py", seeds=("0", "1", "13", "40")):
++    outs = set()
++    for sd in seeds:
++        env = dict(os.environ, PYTHONHASHSEED=sd, PYTHONDONTWRITEBYTECODE="1")
++        p = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), tool),
++                            "--rulings", syn41, "--ledger", empty, post], capture_output=True, text=True, env=env)
++        outs.add((p.returncode, p.stdout + p.stderr))
++    return outs
++v41 = [
++    ("B1 (gate 0226): bare label, t-number after it on the row, correct cite -> VERBATIM",
++     '**Maxwell (t920u):** "Keep everything else the same"', 0, "VERBATIM"),
++    ("B1: bare label row, whole text with its row t-number -> VERBATIM, says where the t-number came from",
++     '**Maxwell (t920u):** "Send the urgent email right away. Keep everything else the same"', 0, "t-number read from the row"),
++    ("B1: bare label under a '## ... (t921u)' heading, correct cite -> VERBATIM",
++     '**Maxwell (t921u):** "Watch the gate at night and call the council."', 0, "t-number read from the heading"),
++    ("B1: bare-label row text cited under a WRONG t-number -> still WRONG-TNUM, names t920u",
++     '**Maxwell (t922u):** "Keep everything else the same"', 1, "cite t920u"),
++    ("B1: heading row text cited under the other row's t-number -> WRONG-TNUM, names t921u",
++     '**Maxwell (t920u):** "Watch the gate at night and call the council."', 1, "WRONG-TNUM"),
++    ("B1: two t-numbers on one bare row, cite the first -> VERBATIM",
++     '**Maxwell (t923u):** "Paint the shed green"', 0, "VERBATIM"),
++    ("B1: two t-numbers on one bare row, cite the second -> VERBATIM",
++     '**Maxwell (t924u):** "Paint the shed green"', 0, "VERBATIM"),
++    ("B1: two t-numbers on one bare row, cite neither -> WRONG-TNUM naming both",
++     '**Maxwell (t925u):** "Paint the shed green"', 1, "cite t923u, t924u"),
++    ("B1: bare label in a table, t-number in an unlabelled cell of the same row -> VERBATIM",
++     '**Maxwell (t927u):** "Keep the dog bowl full"', 0, "VERBATIM"),
++    ("B1: bare label, no t-number on the row or heading, no cite -> VERBATIM + t-number hint, as before",
++     '**Maxwell:** "Keep the lamp on tonight"', 0, "VERBATIM"),
++]
++for label, text, want_rc, want in v41:
++    outs = run41(text)
++    rc, o = next(iter(outs))
++    t.ok(len(outs) == 1 and rc == want_rc and want in o, label + " (4 seeds, identical)", "\n---\n".join(x[1] for x in outs))
++# bare label with no t-number anywhere: v4.1 output must equal v4's, byte for byte
++same = [
++    ("B1 control: bare label, no t-number anywhere, cited t926u -> same output as v4", '**Maxwell (t926u):** "Keep the lamp on tonight"'),
++    ("B1 control: bare label, no t-number anywhere, no cite -> same output as v4", '**Maxwell:** "Keep the lamp on tonight"'),
++    ("B1 control: a t-number INSIDE the quote is not the row's (heading reset by '## Z2') -> same output as v4", '**Maxwell (t930u):** "Do it the way t930u said"'),
++]
++for label, text in same:
++    a, b = run41(text), run41(text, QC4)
++    t.ok(len(a) == 1 and a == b, label, "v4.1:\n" + "\n".join(x[1] for x in a) + "\nv4:\n" + "\n".join(x[1] for x in b))
++# live SETTLED-RULINGS A27 rows (default ledger): the false WRONG-TNUM from gate 0226 is gone
++for label, text, want in [
++    ("B1 live A27 :168: **Maxwell (t561u):** 'Keep everything else the same' -> VERBATIM", '**Maxwell (t561u):** "Keep everything else the same"', "VERBATIM"),
++    ("B1 live A27 :166: **Maxwell (t560u):** whole row text -> VERBATIM",
++     '**Maxwell (t560u):** "if he finds anything crazy, urgent, or a big deal (breaking news, security threats, major opportunities, anything time-sensitive), he must immediately involve the council (Quartermaster, Chancellor, Instructor, Auditor) and make sure Maxwell gets his attention right away — do not wait for the next scheduled briefing or status line."', "VERBATIM"),
++    ("B1 live A27: t561u words cited as t560u -> WRONG-TNUM", '**Maxwell (t560u):** "Keep everything else the same"', "WRONG-TNUM")]:
++    rc, o = run("quote_check.py", text)
++    t.ok(rc == (0 if want == "VERBATIM" else 1) and want in o, label, o)
+ here = os.path.dirname(os.path.abspath(__file__))
+ t.ok(os.path.isdir(os.path.join(here, "runs", "quote_check")), "tool made its own scratch dir qm/runs/quote_check/ (os.makedirs)")
+ src = open(os.path.join(here, "quote_check.py")).read()
+ t.ok(not re.search(r"[\"']/tmp", src) and 'os.path.join(HERE, "runs", "quote_check")' in src, "source: scratch under qm/runs/, no /tmp")
+ t.ok("texts = sorted({" in src and "for t in own:" not in src, "source (v4): row texts sorted; no early-return loop over own texts")
++t.ok("def bare_row_tnums(" in src and 'if kind == OWN and not inside.strip():' in src, "source (v4.1): bare-label t-numbers only for OWN rows with an empty label bracket")
+ print("scratch kept at " + d)
+ sys.exit(t.done())

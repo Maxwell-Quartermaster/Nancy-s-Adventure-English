@@ -1,0 +1,11 @@
+fault-kit v1.1-nodelete (2026-11-01, gate L1-0207) | run_kit 222ef325263835441e55ce84804c29f3 | tool quote_check /workspace/v608build/council-tools-incoming/qm/quote_check.py md5 b7c6479e7134d304be68dad9ad8ea236 (run on copy /workspace/audit/fault-kit-v1.1/runs/quote_check-b7c6479e-20261101-022154-2573116/tool/quote_check.py)
+cases /workspace/audit/fault-kit-v1.1/cases/quote_check/cases.json md5 d0c118d218182f3979eb15726e6cdd37 | 7 cases | 2026-11-01 02:21 MST
+PASS | QA                                               | required | want FLAG:UNSOURCED | got exit 1 flags ['UNKNOWN'] | 1 checked, 1 flagged (records: 9, PASTE 0fa795ff)
+PASS | QB                                               | required | want FLAG:TRUNCATED | got exit 1 flags ['SPEC-CUT'] | 1 checked, 1 flagged (records: 9, PASTE 0fa795ff)
+PASS | QC1                                              | required | want FLAG:RELAY | got exit 1 flags ['RELAY'] | 1 checked, 1 flagged (records: 9, PASTE 0fa795ff)
+PASS | QC2                                              | required | want FLAG:RELAY | got exit 1 flags ['RELAY'] | 1 checked, 1 flagged (records: 9, PASTE 0fa795ff)
+PASS | QC3                                              | required | want FLAG:RELAY | got exit 1 flags ['RELAY'] | 1 checked, 1 flagged (records: 9, PASTE 0fa795ff)
+PASS | QD1                                              | required | want CLEAN | got exit 0 flags none | 1 checked, 0 flagged (records: 9, PASTE 0fa795ff)
+PASS | QD2                                              | required | want CLEAN | got exit 0 flags none | 1 checked, 0 flagged (records: 9, PASTE 0fa795ff)
+TOTAL quote_check b7c6479e: required 7/7 PASS, advisory 0/0 PASS, 0 recorded -> KIT PASS (exit 0); 0 s; live pointer unchanged
+results /workspace/audit/fault-kit-v1.1/runs/quote_check-b7c6479e-20261101-022154-2573116/results.json

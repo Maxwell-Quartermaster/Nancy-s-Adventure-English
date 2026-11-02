@@ -1,0 +1,3 @@
+REASON: step 3 render: /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/tools/council-tools/sheets-scan/sheets_scan.py: sheets scan exit 1 (BLOCK; only 0 passes): BLOCK /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/sheets-scan-block/stage/sheets/c03-sheet.png [5 panels]: 26D-path-dim65.png: path stroke: 2978 px (min 290) in box x44-638 y403-1135 [dimmed x0.65]
+HOLD kept: everyone stays stopped until QM fixes this and re-runs (--force-clear) or runs --release.
+At 2026-11-01 02:40 MST. Pointer now f6dac2d0e7b391436a160eab1bbf17fe.

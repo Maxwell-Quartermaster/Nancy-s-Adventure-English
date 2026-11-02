@@ -1,0 +1,10 @@
+{
+ "started": "2026-11-01 02:40 MST",
+ "started_epoch": 1793526048.8914945,
+ "snap": null,
+ "reason": "hold_check test",
+ "by": "Quartermaster",
+ "manual": true,
+ "pid": 2640160,
+ "pointer_md5_at_hold": "f6dac2d0e7b391436a160eab1bbf17fe"
+}

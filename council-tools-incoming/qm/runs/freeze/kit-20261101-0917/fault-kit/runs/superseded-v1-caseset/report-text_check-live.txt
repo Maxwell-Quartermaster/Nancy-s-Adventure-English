@@ -1,0 +1,37 @@
+fault-kit v1 | run_kit e0347e78dc2b418c2c599c91cc0ff6ac | tool text_check /workspace/council-tools/text-check/text_check.py md5 9c433cba77aa53292a0b6ad1964b8a2a (run on copy /workspace/audit/fault-kit/runs/text_check-9c433cba-20261101-012734-1812495/tool/text_check.py)
+cases /workspace/audit/fault-kit/cases/text_check/cases.json md5 a9cbe53badfcb397608a6336f283b9ee | 30 cases | 2026-11-01 01:27 MST
+sibling text_check_words.json md5 12ff29581ab5048d1938ac14f7c8596a
+FAIL | T01                                              | required | want BLOCK | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+FAIL | T02                                              | required | want BLOCK | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+FAIL | T03                                              | required | want BLOCK | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+FAIL | T04                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T05                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T06                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T07                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T08                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T09                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T10                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T11                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T12                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T13                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T14                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T15                                              | required | want BLOCK | got PASS exit 0 | 
+PASS | T16                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   RETIRED R3-shop-en "Golden Pantry" in t16.png source showcase/t16.html [text]: "Golden Pantry" (t487u)
+FAIL | T17                                              | required | want BLOCK | got PASS exit 0 | 
+FAIL | T18                                              | required | want BLOCK | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+PASS | T19                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   RETIRED R3-shop-en "golden pantry" in code/mk_t19.py:3 [caption]: "The golden pantry." (t487u)
+PASS | T20                                              | required | want NOT-BLOCK | got SKIP exit 0 | WARN    SKIP MANIFEST.md5: not an image, html or text doc (no user-visible text to check)
+PASS | T21                                              | required | want NOT-BLOCK | got SKIP exit 0 | WARN    SKIP renders-MANIFEST.md5: not an image, html or text doc (no user-visible text to check)
+PASS | T22                                              | required | want NOT-BLOCK | got SKIP exit 0 | WARN    SKIP chk1B-rerun.log: not an image, html or text doc (no user-visible text to check)
+FAIL | T23                                              | required | want WARN:CAPTIONS-UNCHECKED | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+PASS | T24                                              | required | want UNVERIFIED | got TEXT UNVERIFIED exit 1 | BLOCK   TEXT UNVERIFIED orphan.png: no sidecar .sources.txt, same-name .html, tour entry or builder script found in snap-t
+PASS | T25                                              | required | want NOT-BLOCK | got PASS exit 0 | 
+PASS | T26                                              | required | want NOT-BLOCK | got PASS exit 0 | 
+PASS | T27                                              | required | want NOT-BLOCK | got PASS exit 0 | 
+PASS | T28                                              | required | want NOT-BLOCK | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+PASS | T29                                              | advisory | want NOT-BLOCK | got PASS exit 0 | WARN    DOC-MENTION RETIRED R3-shop-en "Golden Pantry" in notes.md:1 [line]: "Rule: never "Call Max" or 911 in the app. Golden Pantry is retired." (t4
+FAIL | T30                                              | advisory | want BLOCK|UNVERIFIED | got SKIP exit 0 | WARN    SKIP sheet.pdf: not an image, html or text doc (no user-visible text to check)
+TOTAL text_check 9c433cba: required 10/28 PASS, advisory 1/2 PASS -> KIT FAIL (exit 1); 1 s; live pointer unchanged
+failed required: T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15, T17, T18, T23
+results /workspace/audit/fault-kit/runs/text_check-9c433cba-20261101-012734-1812495/results.json
+EXIT 1

@@ -1,0 +1,36 @@
+--- selftest3.st3-9f3ab34f.py	2026-11-01 09:39:47.440944520 +0000
++++ selftest4.py	2026-11-01 11:21:09.727230364 +0000
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""selftest3.py - run-folder copy of freeze-v3 selftest.py 7702a748 (Quartermaster), adapted for st3:
++"""selftest4.py (st4: control moved to its own case C, using a snapshot file) - run-folder copy of freeze-v3 selftest.py 7702a748 (Quartermaster), adapted for st3:
+  - REAL sheets scan: Chancellor's sheets_scan v1.1 (33ad034a) copied to <tools>/sheets-scan/sheets_scan.py (no stub);
+    ground_check = byte copy of candidate 944d543a at <tools>/ground-check/ground_check_real.py behind a logging wrapper
+    at <tools>/ground-check/ground_check.py (log line = calling program + path), so v1.1's same-tree default uses 944d543a.
+@@ -242,8 +242,15 @@
+         os.chmod(os.path.dirname(f), 0o755); os.chmod(f, 0o644); open(f, 'a').write('tampered\n')
+     sb, rc, out = planted('carry-corrupt', 3, prep=corrupt, copy=('QUEUE.md',))
+     ok('corrupted carried file: named, no new snap, pointer untouched', 'carried file md5' in out and 'QUEUE.md' in out and not os.path.exists(os.path.join(sb, 'snap-st-0100MDT')), out[-300:])
++@case('C control: ground_check logger (snapshot file)', SMALL, 1)
++def _():
++    # st4 fix: the st3 control sent a STAGE file that is not in the sandbox snapshot -> send_guard MISS, ground never ran.
++    # Use a file that IS in the seeded snapshot, under its own --only prefix, so send_guard reaches ground_check.
++    sb = sbx('control'); f = os.path.join(sb, SNAPN, 'renders/r2h/png/05-map-day1-390x844.png'); cl = os.path.join(ROOT, 'gc-control.log')
++    r = run_p([sys.executable, os.path.join(TOOLS_COPY, 'send-guard/send_guard.py'), '--only', 'renders/', f], env=dict(os.environ, GC_LOG=cl, CURRENT_SNAP=os.path.join(sb, 'CURRENT-SNAP.txt')))
++    ok('control: ground_check logger records a direct send_guard ground call', r.returncode == 0 and readlog(cl) == [f] and gclog(cl)[0][0] == 'send_guard.py', (r.stdout[-300:], gclog(cl)))
+ # ---- copy cases, priority order
+-@case('5c routing dry run (real scan, good sourced c07)', SNAPB, 8 + 2)
++@case('5c routing dry run (real scan, good sourced c07)', SNAPB, 8 + 1)
+ def _():
+     def nested(T):
+         for d in ('scene-fill-20261101/sheets', 'sheets/sub'): os.makedirs(os.path.join(T, d))
+@@ -262,9 +269,6 @@
+     ok('routing: send_guard ran --no-ground with nested --only prefixes, every sheets/showcase file OK in the candidate snapshot [st3: 6 files]', 'GROUND SKIPPED' in sg and 'GRND' not in sg and 'RESULT CLEAR: 6 files' in sg and 'OK ' in sg and 'S01-nested.png = MANIFEST.md5:./scene-fill-20261101/sheets/S01-nested.png' in sg, sg[-500:])
+     ok('routing: normal render (renders/r2x/) not given to send_guard or the sheets scan (unchanged from 91aa8a3e)', '/renders/' not in sg and not any('/renders/' in x for x in sc), sg[-300:])
+     ok('[st3] real scan: sourced c07 PASSes on its 4 good panels, the sheet itself is not ground-checked; RESULT PASS=5 exit 0', re.search(r'^PASS  \S*/showcase/c07-sheet\.png \[4 panels\]', so, re.M) and 'RESULT PASS=5 BLOCK=0 ERROR=0 SKIP=0 exit 0' in so and not any(p.endswith('/c07-sheet.png') for _, p in g) and sum('/cases/c07-' in p for _, p in g) == 4, so[-500:])
+-    cl = os.path.join(ROOT, 'gc-control.log')
+-    r = run_p([sys.executable, os.path.join(TOOLS_COPY, 'send-guard/send_guard.py'), '--only', 'sheets/', os.path.join(T, 'sheets/05-map-day1-390x844.png')], env=dict(os.environ, GC_LOG=cl, CURRENT_SNAP=os.path.join(sb, 'CURRENT-SNAP.txt')))
+-    ok('control: ground_check logger records a direct send_guard ground call', readlog(cl) == [os.path.join(T, 'sheets/05-map-day1-390x844.png')] and gclog(cl)[0][0] == 'send_guard.py', gclog(cl))
+ @case('1-2 clean dry + real run', 2 * SNAPB + 5 * 10**6, 20)
+ def _():
+     sb = sbx('clean'); T = stage('clean')

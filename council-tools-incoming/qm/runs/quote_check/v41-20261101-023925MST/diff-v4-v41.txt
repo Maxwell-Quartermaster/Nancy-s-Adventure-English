@@ -1,0 +1,80 @@
+--- quote_check.v4.py	2026-11-01 09:18:16.075149469 +0000
++++ quote_check.py	2026-11-01 09:38:30.948916867 +0000
+@@ -19,6 +19,9 @@
+ sentence edge (gate 0200 T6: "ขนมปัง" first appears inside a longer verse word, later as a whole value).
+ v4 (2026-11-01): gate L1-0207 A2/A3. Ledger rows: every own text is tried before ALTERED (A2), and each row's
+ texts are sorted so the verdict never depends on PYTHONHASHSEED (A3).
++v4.1 (2026-11-01): gate L1-0226 B1. A bare **Maxwell:** label (nothing in brackets) takes its t-number(s) from the
++same row: first the row text outside the quote and any unlabelled cells of that line, else the t-numbers in the
++section heading (## ...) it sits under. Several t-numbers are all allowed (never a guess). None found = as before.
+ """
+ import argparse, difflib, hashlib, os, re, sys
+ 
+@@ -53,12 +56,36 @@
+ 
+ 
+ # ---------------------------------------------------------------- records
++def outside_quote(s):
++    """Text with the quoted span (first to last straight double quote, as load_records reads texts) removed."""
++    a, b = s.find('"'), s.rfind('"')
++    return s[:a] + " " + s[b + 1:] if 0 <= a < b else s
++
++
++def bare_row_tnums(seg, cells, heading_tn):
++    """v4.1 (gate L1-0226 B1): t-numbers for a bare **Maxwell:** row. Same row first (this segment outside the
++    quote, plus any cell of the line with no label), else the section heading's. Returns (set, where)."""
++    tn = set(T_RE.findall(outside_quote(seg)))
++    for c in cells:
++        if not LABEL_RE.search(c):
++            tn |= set(T_RE.findall(outside_quote(c)))
++    if tn:
++        return tn, "row"
++    if heading_tn:
++        return set(heading_tn), "heading"
++    return set(), ""
++
++
+ def load_records(paths):
+     """Each labelled cell segment becomes a record: kind, tnums, chat, texts, src."""
+     recs = []
+     for path in paths:
++        heading_tn = set()
+         for ln, line in enumerate(open(path, encoding="utf-8"), 1):
+-            for cell in line.split(" | "):
++            if line.startswith("#"):
++                heading_tn = set(T_RE.findall(line))  # v4.1: each heading resets the section t-numbers
++            cells = line.split(" | ")
++            for cell in cells:
+                 labs = list(LABEL_RE.finditer(cell))
+                 for i, m in enumerate(labs):
+                     name, inside = m.group(1).strip(), (m.group(2) or "")
+@@ -75,6 +102,9 @@
+                     else:
+                         kind = BOT
+                     tn = set(T_RE.findall(inside))
++                    tfrom = ""
++                    if kind == OWN and not inside.strip():  # v4.1 B1: bare **Maxwell:** label
++                        tn, tfrom = bare_row_tnums(seg, cells, heading_tn)
+                     if kind == PARA:
+                         tn |= set(T_RE.findall(seg.split("NO VERBATIM")[0]))
+                     if kind == RELAY and not tn:
+@@ -92,7 +122,7 @@
+                                 q.append(seg[a + 1:b])
+                         texts = sorted({norm(x) for x in q} - {""})  # v4: sorted, so order never depends on PYTHONHASHSEED
+                     recs.append(dict(kind=kind, tnums=tn, chat=chat, texts=texts, who=name,
+-                                     unverified="UNVERIFIED" in line,
++                                     unverified="UNVERIFIED" in line, tfrom=tfrom,
+                                      src=f"{path.rsplit('/', 1)[-1]}:{ln}"))
+     return recs
+ 
+@@ -210,7 +240,9 @@
+                 held = [t for t in own if ps and contains_in_order(t, ps)]
+                 if any(len(ps) > 1 or at_sentence_edges(t, ps[0]) for t in held):
+                     unv = " (record itself marked UNVERIFIED on the box)" if any(r["unverified"] for r in byt) else ""
+-                    return "VERBATIM", f"{tl} matches a MAXWELL OWN row ({srcs}){unv}"
++                    tf = sorted({r.get("tfrom", "") for r in byt if r["kind"] == OWN} - {""})
++                    bare = f" (bare **Maxwell:** label; t-number read from the {'/'.join(tf)})" if tf else ""
++                    return "VERBATIM", f"{tl} matches a MAXWELL OWN row ({srcs}){unv}{bare}"
+                 if held:
+                     t = min(held, key=lambda x: (len(x), x))
+                     return "ALTERED", f"{tl}: quote is cut mid-sentence without a […cut…] marker. Record: \"{t}\""

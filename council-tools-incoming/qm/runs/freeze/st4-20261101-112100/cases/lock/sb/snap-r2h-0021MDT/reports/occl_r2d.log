@@ -1,0 +1,37 @@
+===== /workspace/v608build/round2/r2d/g26d/html/26-A-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -65, 319, 622], "cov": {"path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -65, 319, 622], "cov": {"card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 4, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [98, 263, 180, 446], "cov": {"div:\"Words of Jesus · John 15\"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 6}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [193, 252, 279, 446], "cov": {"div:\"Words of Jesus · John 15\"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 6}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [193, 246, 279, 310], "cov": {"div:\"Words of Jesus · John 15\"": 3}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [245, 336, 288, 380], "cov": {"div:\"As the Father has loved \"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 6}, "nc": 9, "off": 0}
+===== /workspace/v608build/round2/r2d/g26d/html/26-B-320x568.html 320 568
+   {"k": "text", "t": "🤔", "el": "div:\"🤔\"", "hid": false, "r": [225, 138, 288, 195], "cov": {"div:\"Words of Jesus · John 15\"": 5, "div:\"As the Father has loved \"": 4}, "nc": 9, "off": 0}
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 245, 136, 271], "cov": {"path": 3}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -65, 319, 622], "cov": {"path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -65, 319, 622], "cov": {"card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/v608build/round2/r2d/g26d/html/26-C-open-320x568.html 320 568
+   {"k": "text", "t": "🤔", "el": "div:\"🤔\"", "hid": false, "r": [215, 188, 268, 236], "cov": {"div:\"Words of Jesus · John 15\"": 3, "div:\"As the Father has loved \"": 6}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [26, 16, 294, 596], "cov": {"div:\"📜 Words of Jesus · ถ้อย\"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [26, 16, 294, 596], "cov": {"div:\"📜 Words of Jesus · ถ้อย\"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [108, 293, 177, 448], "cov": {"div:\"พระบิดาทรงรักเราอย่างไร \"": 3}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [188, 284, 261, 448], "cov": {"div:\"พระบิดาทรงรักเราอย่างไร \"": 3, "circle": 1}, "nc": 4, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [188, 279, 261, 333], "cov": {"div:\"พระบิดาทรงรักเราอย่างไร \"": 9}, "nc": 9, "off": 0}
+===== /workspace/v608build/round2/r2d/g26d/html/26-C-rest-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [26, 16, 294, 596], "cov": {"div:\"📜 Words of Jesus · ถ้อย\"": 3, "path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [26, 16, 294, 596], "cov": {"div:\"📜 Words of Jesus · ถ้อย\"": 3, "card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 7, "off": 0}
+===== /workspace/v608build/round2/r2d/g26d/html/26-D-320x568.html 320 568
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 216, 263, 242], "cov": {"path": 3}, "nc": 3, "off": 0}
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 245, 136, 271], "cov": {"path": 9}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -65, 319, 622], "cov": {"path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [0, -65, 319, 622], "cov": {"card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/v608build/round2/r2d/g26d/html/26-D-375x667.html 375 667
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 228, 310, 254], "cov": {"path": 3}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [30, -51, 344, 626], "cov": {"path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [30, -51, 344, 626], "cov": {"card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/v608build/round2/r2d/g26d/html/26-D-375x812.html 375 812
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -7, 375, 804], "cov": {"div:\"🤔 Words of Jesus · John\"": 3, "path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [0, -7, 375, 804], "cov": {"div:\"🤔 Words of Jesus · John\"": 3, "card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 7, "off": 0}
+===== /workspace/screens-v608/html/28-guardian-win-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [23, -72, 351, 636], "cov": {"stars:\"★ 64\"": 1, "path": 3, "card:\"The Word Guardian ผู้พิท\"": 3, "level:\"Level 3 เลเวล 3\"": 2}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [23, -72, 351, 636], "cov": {"stars:\"★ 64\"": 1, "card:\"The Word Guardian ผู้พิท\"": 3, "level:\"Level 3 เลเวล 3\"": 2}, "nc": 6, "off": 0}

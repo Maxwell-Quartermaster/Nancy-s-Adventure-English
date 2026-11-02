@@ -1,0 +1,11 @@
+fault-kit v1.1 | run_kit fe8edbe37d115fddf1cfdc330c0d9c7a | tool tuft_check /workspace/watchman/checker/tuft_check.b19579ac.py md5 b19579ac0921056cc8a2bc7f795cc59c (run on copy /workspace/audit/fault-kit/runs/tuft_check-b19579ac-20261101-013913-1963173/tool/tuft_check.b19579ac.py)
+cases /workspace/audit/fault-kit/cases/tuft_check/cases.json md5 37bcf6cd06337c0d617709b04c0e6dd0 | 6 cases | 2026-11-01 01:39 MST
+PASS | U01                                              | required | want PASS | got PASS | 
+PASS | U02                                              | required | want FLAG | got FLAG | rock dot: 1 round blob(s) on grass, e.g. (220,1030) 13px in band x0-776 y728-1688
+PASS | U03                                              | required | want PASS | got PASS | 
+PASS | U04                                              | required | want PASS | got PASS | 
+REC  | U05                                              | recorded | want RECORD | got PASS | 
+PASS | U06                                              | required | want FLAG | got FLAG | rock dot: 1 round blob(s) on grass, e.g. (220,1030) 13px in band x0-776 y728-1688
+TOTAL tuft_check b19579ac: required 5/5 PASS, advisory 0/0 PASS, 1 recorded -> KIT PASS (exit 0); 9 s; live pointer unchanged
+results /workspace/audit/fault-kit/runs/tuft_check-b19579ac-20261101-013913-1963173/results.json
+EXIT 0

@@ -1,0 +1,2 @@
+snap=snap-test-0000MDT
+paste_1b_md5=317e91ce86f073c961f8169183d2bbd3

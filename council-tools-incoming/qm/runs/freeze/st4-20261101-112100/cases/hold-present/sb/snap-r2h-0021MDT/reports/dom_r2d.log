@@ -1,0 +1,9 @@
+26-A-320x568.html HUD 119 card 288 ok | dc1 issues: []
+26-B-320x568.html HUD 259 card 456 ok | dc1 issues: [['thaiCut', 'พระบิดาทรงรักเราอย่างไร ']]
+26-C-open-320x568.html HUD 169 card 456 [('underHUD', '📜 Words of Jesus ·', 125, 169)] | dc1 issues: []
+26-C-rest-320x568.html HUD 169 card 456 [('underHUD', '📜 Words of Jesus ·', 125, 169)] | dc1 issues: []
+26-D-320x568.html HUD 234 card 456 ok | dc1 issues: [['thaiCut', 'พระบิดาทรงรักเราอย่างไร ']]
+26-D-375x667.html HUD 256 card 463 ok | dc1 issues: [['thaiCut', 'พระบิดาทรงรักเราอย่างไร ']]
+26-D-375x812.html HUD 268 card 608 ok | dc1 issues: []
+28-guardian-win-375x667.html HUD 212 card 479 ok | dc1 issues: []
+TOTAL {"hud": 2, "edge": 0, "card": 0, "targets": 2}

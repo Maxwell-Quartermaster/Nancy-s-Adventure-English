@@ -1,0 +1,5 @@
+> for _w, _v in [('verses.rest.' + k, PJ['verses']['rest'][k]) for k in ('ref', 'en', 'th', 'enSource', 'thSource')] + [('jesusWords[0].' + k, PJ['jesusWords'][0][k]) for k in ('ref', 'en', 'th')]:   # Watchman gate f778b0bf B1: a blank verse field fails loudly, never renders blank
+>     if not isinstance(_v, str) or not _v.strip(): raise SystemExit('PASTE ' + _w + ' is missing or blank')
+>     vs = [v for v in [PJ['verses']['rest']] + PJ['verses']['weekly'] if v['ref'] == ref]
+>     if len(vs) != 1: raise SystemExit('PASTE verse ' + repr(ref) + ' found ' + str(len(vs)) + ' times, need exactly 1')   # Watchman gate f778b0bf A4: SystemExit, not assert (python -O strips assert)
+>     return vs[0]

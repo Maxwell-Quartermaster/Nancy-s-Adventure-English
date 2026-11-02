@@ -1,0 +1,10 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": false,
+ "sandbox": true,
+ "started": "2026-11-01 02:40 MST",
+ "steps": {},
+ "result": "FAIL",
+ "reason": "REASON: step 1 preflight: /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/over-PASTE.md: 188,216 chars is over the 188,200 ceiling by 16",
+ "pointer": "pointer not moved"
+}

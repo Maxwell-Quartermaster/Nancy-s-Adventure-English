@@ -1,0 +1,9 @@
+fault-kit v1.1 | run_kit fe8edbe37d115fddf1cfdc330c0d9c7a | tool conflict_check /workspace/council-tools/incoming/chancellor-conflict-check/conflict_check.py md5 570c5e00c19a25749edda8fa1693d09a (run on copy /workspace/audit/fault-kit/runs/conflict_check-570c5e00-20261101-015010-2139799/tool/conflict_check.py)
+cases /workspace/audit/fault-kit/cases/conflict_check/cases.json md5 1ee2ed548b394cae015155a466a7df14 | 3 cases | 2026-11-01 01:50 MST
+FAIL | C1                                               | required | want exit 1 flag [388] not [203, 249, 411] | got exit 1 hits [203, 249, 260, 388, 411] | missed [] wrongly flagged [203, 249, 411]
+PASS | C2                                               | required | want exit 0 flag [] not [203, 249, 260, 388, 411] | got exit 0 hits [] | missed [] wrongly flagged []
+PASS | C3                                               | required | want exit 0 flag [] not [203, 249, 260, 388, 411] | got exit 0 hits [] | missed [] wrongly flagged []
+TOTAL conflict_check 570c5e00: required 2/3 PASS, advisory 0/0 PASS, 0 recorded -> KIT FAIL (exit 1); 0 s; live pointer unchanged
+failed required: C1
+results /workspace/audit/fault-kit/runs/conflict_check-570c5e00-20261101-015010-2139799/results.json
+EXIT 1

@@ -1,0 +1,145 @@
+PASS clean dry run: exit 0, DRY RUN CLEAN
+PASS clean dry run: checks_v608 ran (0 new live False)
+PASS clean dry run: no HOLD, pointer untouched, no snapshot dir
+PASS clean real run: exit 0
+PASS clean real run: sandbox pointer moved and verifies
+PASS clean real run: HOLD cleared, no HOLD.reason
+PASS clean real run: backup .pre-<snap> = old pointer
+PASS clean real run: pointer fields (snap, paste_1b_path in snap, chars, bank, updated MT)
+PASS clean real run: MANIFEST md5 = pointer, every listed md5 re-checks, renders-MANIFEST listed
+PASS clean real run: PASTE copy in trim-1B = source md5
+PASS clean real run (fault 9 pass case): copy2 kept every snapshot mtime = source mtime
+PASS carry default: every previous-snap file present in the new snap, md5-identical
+PASS carry default: carried files keep the previous snap mtimes (copy2)
+PASS carry default: DELTA lists carried/new/changed counts and per-file status
+PASS clean real run: HOLD, RESUME+SYNC and Watchman messages printed
+PASS clean real run: Watchman ping is exactly FREEZE <md5> <snap>, and is the last line before the sandbox note
+PASS clean real run: RESUME names pointer/snap/paste/chars/bank, Based-on sync proof, ack as backstop after release
+PASS clean real run: last-freeze.json FROZEN
+PASS verse-byte: exit 1, REASON names step 2
+PASS verse-byte: HOLD kept + HOLD.reason written
+PASS verse-byte: sandbox pointer unchanged
+PASS over-ceiling: exit 1, REASON names step 1
+PASS over-ceiling: HOLD kept + HOLD.reason written
+PASS over-ceiling: sandbox pointer unchanged
+PASS over-ceiling: reason says over the ceiling
+PASS v3 sendguard_exit3 fault is a no-op (sheets leg always --no-ground): dry run exit 0
+PASS sheets-scan BLOCK: exit 1, REASON names step 3
+PASS sheets-scan BLOCK: HOLD kept + HOLD.reason written
+PASS sheets-scan BLOCK: sandbox pointer unchanged
+PASS sheets-scan BLOCK: REASON names the sheets scan (exit 1), ground_check was never called
+PASS route(): showcase/, sheets/, nested scene-fill/sheets/ and sheets/sub/ -> sheets; normal render, sheets-ref/, a file named sheets.png -> single
+PASS routing dry run: exit 0, DRY RUN CLEAN, pointer untouched
+PASS routing: showcase/ file -> sheets scan only
+PASS routing: sheets/ file -> sheets scan only
+PASS routing: nested scene-fill-20261101/sheets/ and sheets/sub/ files -> sheets scan only
+PASS routing: sheets scan got exactly the 4 sheets/showcase images, not the normal render
+PASS routing: ground_check was called on NOTHING (no sheets/showcase path reached it)
+PASS routing: send_guard ran --no-ground with nested --only prefixes, every sheets/showcase file OK in the candidate snapshot
+PASS routing: normal render (renders/r2x/) not given to send_guard or the sheets scan (unchanged from 91aa8a3e)
+FAIL control: ground_check logger records a direct send_guard ground call
+PASS no sheets scan installed (live tools): exit 1, REASON step 3 names the missing scan
+PASS stage with no sheets/showcase (live tools): dry run exit 0, scan not needed
+PASS snap-exists: exit 1, REASON names step 1
+PASS snap-exists: HOLD kept + HOLD.reason written
+PASS snap-exists: sandbox pointer unchanged
+PASS existing snap dir: refuses to overwrite
+PASS pointer-mismatch: exit 1, REASON names step 1
+PASS pointer-mismatch: HOLD kept + HOLD.reason written
+PASS pointer-mismatch: sandbox pointer unchanged
+PASS pointer md5 mismatch named
+PASS fit-stale: exit 1, REASON names step 3
+PASS fit-stale: HOLD kept + HOLD.reason written
+PASS fit-stale: sandbox pointer unchanged
+PASS mid-way check fail: fit_sheet_check STALE stops the freeze
+PASS paste-copy: exit 1, REASON names step 4
+PASS paste-copy: HOLD kept + HOLD.reason written
+PASS paste-copy: sandbox pointer unchanged
+PASS paste copy mismatch: no snapshot at the final name
+PASS enospc: exit 1, REASON names step 4
+PASS enospc: HOLD kept + HOLD.reason written
+PASS enospc: sandbox pointer unchanged
+PASS ENOSPC: clean fail, no half-written snap at the final name, tmp named
+FAIL unwritable: exit 1, REASON names step 4  (n: snap-st-0100MDT, pointer 59968df4, PASTE 317e91ce." Backstop only, now that HOLD is released: run `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. Work toward this pointer only; anything based on f6dac2d0 is stale.
+
+SEND (agent message to Grok 1: Watchman):
+FREEZE 59968df4d0fad85ebb45d7cbfa1eb47d snap-st-0100MDT
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+FAIL unwritable: HOLD kept + HOLD.reason written
+FAIL unwritable: sandbox pointer unchanged
+FAIL unwritable dir: clean fail at step 4, no snap  ( `python3 /workspace/watchman/watcher/watcher.py --ack <you>`. Work toward this pointer only; anything based on f6dac2d0 is stale.
+
+SEND (agent message to Grok 1: Watchman):
+FREEZE 59968df4d0fad85ebb45d7cbfa1eb47d snap-st-0100MDT
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+PASS plain-copy: exit 1, REASON names step 4
+PASS plain-copy: HOLD kept + HOLD.reason written
+PASS plain-copy: sandbox pointer unchanged
+PASS fault 9: plain copy (mtimes lost) fails the freeze
+PASS hand-moved pointer: exit 1 at step 5, refuses to write
+PASS hand-moved pointer: the hand edit is left as-is (not overwritten), HOLD kept
+PASS step-6 failure: exit 1, REASON step 6
+PASS step-6 failure: pointer rolled back to the pre-freeze md5 automatically
+PASS step-6 failure: restored pointer names the old, complete snap (not the new one)
+PASS rollback fails: HOLD kept, reason says POINTER MOVED ... NOT ROLLED BACK + restore command
+PASS rollback fails: --release refuses while the pointer does not verify
+PASS HOLD present: exit 2, pointer unchanged
+FAIL HOLD present + --force-clear: freeze runs, old HOLD archived  (ndbox/st-20261101-021706/hold-present/sb/freeze/HOLD); reason in /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/hold-present/sb/freeze/HOLD.reason. Everyone stays stopped.
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+PASS crash: process died, HOLD left, no reason
+PASS stale HOLD: --status exit 1 shows age and STALE
+PASS stale HOLD: freeze refuses without --force-clear (exit 2)
+FAIL stale HOLD: --force-clear freezes cleanly
+PASS fault 8: --status exit 1 says POINTER MOVED since the HOLD
+PASS fault 8: hold_check exit 1 says POINTER MOVED since the HOLD
+PASS fault 8: --force-clear refuses (exit 2), pointer and HOLD left as they are
+PASS lock held: second freeze refused (exit 2), no HOLD written
+PASS lock held: --release refused (exit 2)
+FAIL two freezes at once: one runs (0), the other is refused (2)  (A=1 B=2)
+PASS --status with no HOLD: exit 0
+PASS --hold: exit 0, HOLD written, broadcast printed
+PASS --hold again: exit 2
+PASS --status with HOLD: exit 1, shows reason
+PASS --release: exit 0, HOLD archived, RESUME with Based-on sync
+PASS hold_check: exit 0 with no HOLD
+PASS hold_check: exit 1 + reason with HOLD
+PASS hold_check --hold-file on a missing file: exit 0
+PASS FREEZE_FAULT without --sandbox: exit 2, nothing done
+PASS --skip-checks-v608 without --sandbox: exit 2
+PASS --sandbox pointing at live v608build: exit 2
+FAIL stage overrides a carried file: exit 0, snap QUEUE.md = stage bytes, DELTA says stage-overrides  (91657/sandbox/st-20261101-021706/override/sb/freeze/HOLD); reason in /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/override/sb/freeze/HOLD.reason. Everyone stays stopped.
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+FAIL --no-carry: exit 0, snap = 4 stage files + PASTE + 3 manifests/DELTA only  (rc=1 files=0 ols-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/no-carry/sb/freeze/HOLD.reason. Everyone stays stopped.
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+FAIL carry-corrupt: exit 1, REASON names step 3  (< 80%)
+HOLD kept (/workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/carry-corrupt/sb/freeze/HOLD); reason in /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/carry-corrupt/sb/freeze/HOLD.reason. Everyone stays stopped.
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+FAIL carry-corrupt: HOLD kept + HOLD.reason written  (REASON: step 1 preflight: /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/carry-corrupt/sb: disk 80.4% used (must be < 80%)
+HOLD kept: everyone)
+PASS carry-corrupt: sandbox pointer unchanged
+FAIL corrupted carried file: named, no new snap, pointer untouched  (box/st-20261101-021706/carry-corrupt/sb/freeze/HOLD); reason in /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/carry-corrupt/sb/freeze/HOLD.reason. Everyone stays stopped.
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+PASS hold-check diff applies cleanly to a copy
+FAIL with the diff applied: a clean freeze still runs through its own HOLD (exit 0)  (ed (must be < 80%)
+HOLD kept (/workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/patched/sb/freeze/HOLD); reason in /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/patched/sb/freeze/HOLD.reason. Everyone stays stopped.
+live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)
+)
+PASS with the diff applied: send_guard BLOCKs (exit 1) during a HOLD
+PASS with the diff applied: current_snap.read raises HoldError during a HOLD
+FAIL with the diff applied: after --release send_guard is CLEAR (exit 0)  (DT
+MISS 2b14fcd0 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706/patched/stage/sheets/05-map-day1-390x844.png: in snapshot but not under --only sheets/ (MANIFEST.md5:./renders/r2h/png/05-map-day1-390x844.png)
+RESULT BLOCK: 1 files, 1 problems
+)
+PASS FREEZE_TOOLS without --sandbox: exit 2
+PASS live CURRENT-SNAP.txt md5 is still f6dac2d0e7b391436a160eab1bbf17fe
+PASS no live HOLD left
+
+SELFTEST 99/114 FAIL  (sandbox /workspace/v608build/council-tools-incoming/qm/runs/freeze/st-20261101-091657/sandbox/st-20261101-021706; live pointer f6dac2d0e7b391436a160eab1bbf17fe)
+exit 1

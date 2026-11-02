@@ -1,0 +1,347 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "text_check",
+ "path": "/workspace/audit/fault-kit/stubs/text_check_stub_alwaysblock.py",
+ "md5": "4f05a888545daf92cba51f75dac063f9",
+ "exit": 1,
+ "required": [
+  19,
+  28
+ ],
+ "advisory": [
+  1,
+  2
+ ],
+ "rows": [
+  {
+   "id": "T01",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "never-word '911' in a sheet .sources.txt caption line",
+   "source": "standing rule: never 911/Call Max/Show the Nurse in anything Maxwell sees; Auditor caption gate g3 N11"
+  },
+  {
+   "id": "T02",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "never-word 'Call Max' in a .sources.txt caption line",
+   "source": "g3 N11-callmax"
+  },
+  {
+   "id": "T03",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "never-word 'Show the Nurse' in a .sources.txt caption line",
+   "source": "g3 N11-nurse"
+  },
+  {
+   "id": "T04",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-911"
+  },
+  {
+   "id": "T05",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-callmax"
+  },
+  {
+   "id": "T06",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-nurse"
+  },
+  {
+   "id": "T07",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'911' in a data-* attribute",
+   "source": "g3 N08a (data-* was warn-only)"
+  },
+  {
+   "id": "T08",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'Call Max' in a data-* attribute",
+   "source": "g3 N08a variant"
+  },
+  {
+   "id": "T09",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'Show the Nurse' in a data-* attribute",
+   "source": "g3 N08a variant"
+  },
+  {
+   "id": "T10",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'911' in a script string",
+   "source": "g3 N08b variant"
+  },
+  {
+   "id": "T11",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'Call Max' in a script string",
+   "source": "g3 N08b variant"
+  },
+  {
+   "id": "T12",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'Show the Nurse' in a script string",
+   "source": "g3 N08b"
+  },
+  {
+   "id": "T13",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'911' in visible render text",
+   "source": "g1 T08a / g3 N06"
+  },
+  {
+   "id": "T14",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'Call Max' in visible render text, even though it equals a PASTE content string",
+   "source": "g3 N07a (allow path must not exempt never-words)"
+  },
+  {
+   "id": "T15",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "'Show the Nurse' in visible render text",
+   "source": "g3 N06-nurse"
+  },
+  {
+   "id": "T16",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "retired 'Golden Pantry' wording (renamed Shop)",
+   "source": "Ara relay t487u: rename golden pantry to just shop (SETTLED-RULINGS M05)"
+  },
+  {
+   "id": "T17",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "retired wording hidden by nbsp + soft hyphen",
+   "source": "g1 T04c/T04d"
+  },
+  {
+   "id": "T18",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "retired wording in a .sources.txt caption line",
+   "source": "t487u; g3 N05b"
+  },
+  {
+   "id": "T19",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "retired wording (lower case) in a builder caption",
+   "source": "g3 N05b"
+  },
+  {
+   "id": "T20",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "real MANIFEST.md5 checksum list is not something Maxwell sees",
+   "source": "real incident: Auditor's 284885f0 false-BLOCKed MANIFEST.md5 (audit/stage-final-5ae35bf3-2026-11-01.md:12)"
+  },
+  {
+   "id": "T21",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "real renders-MANIFEST.md5 must not block",
+   "source": "same incident (284885f0)"
+  },
+  {
+   "id": "T22",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "real .log report must not block (council notes)",
+   "source": "same incident: reports/chk1B-rerun.log false-BLOCKed by 284885f0"
+  },
+  {
+   "id": "T23",
+   "required": true,
+   "recorded": false,
+   "expect": "WARN:CAPTIONS-UNCHECKED",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "sheet with 2 sources and no caption lines must warn that captions were not checked",
+   "source": "g3 N11c; r2h stage showcase sidecars"
+  },
+  {
+   "id": "T24",
+   "required": true,
+   "recorded": false,
+   "expect": "UNVERIFIED",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "PNG with no sidecar, html or builder must read TEXT UNVERIFIED, never PASS",
+   "source": "provenance rule: an image whose text cannot be traced reads TEXT UNVERIFIED (README; r2h sidecars with no html hash, Council Nov 1)"
+  },
+  {
+   "id": "T25",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "control: live tapPrompt wording (t440u) must pass",
+   "source": "README not_retired tapPrompt"
+  },
+  {
+   "id": "T26",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "control: 'Maxwell', 'nursery', '9110' are not never-words",
+   "source": "g3 N05d"
+  },
+  {
+   "id": "T27",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "control: PASTE content card bh-24 is allowed",
+   "source": "README allow list"
+  },
+  {
+   "id": "T28",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "control: clean caption lines",
+   "source": "g3 N11b"
+  },
+  {
+   "id": "T29",
+   "required": false,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": false,
+   "detail": "BLOCK   stub blocks all",
+   "why": "council notes .md naming the rule warn only (policy)",
+   "source": "g3 N09"
+  },
+  {
+   "id": "T30",
+   "required": false,
+   "recorded": false,
+   "expect": "BLOCK|UNVERIFIED",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   stub blocks all",
+   "why": "a PDF sheet's text can't be read, so it must not pass silently",
+   "source": "g1 T11e"
+  }
+ ]
+}

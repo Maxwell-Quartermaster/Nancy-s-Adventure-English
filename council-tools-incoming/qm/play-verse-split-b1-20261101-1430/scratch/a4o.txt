@@ -1,0 +1,1 @@
+verse() returned dict assert stripped (-O)

@@ -1,0 +1,8 @@
+A 403 | letter game + ramp + night title B: 10 left; letter game + ramp + night title B + B1 B: 21 left; letter game no ramp + B1 B: 1 left; letter game no ramp + night title B: 50 left; letter game no ramp + night title B + B1 B: 61 left; state pairs + ramp + B1 B: 7 left; state pairs + ramp + night title B: 56 left; state pairs + ramp + night title B + B1 B: 67 left; state pairs no ramp: 36 left; state pairs no ramp + B1 B: 47 left; state pairs no ramp + night title B: 96 left; state pairs no ramp + night title B + B1 B: 107 left
+B 367 | letter game no ramp + night title B: 14 left; letter game no ramp + night title B + B1 B: 25 left; state pairs + ramp + night title B: 20 left; state pairs + ramp + night title B + B1 B: 31 left; state pairs no ramp: 0 left; state pairs no ramp + B1 B: 11 left; state pairs no ramp + night title B: 60 left; state pairs no ramp + night title B + B1 B: 71 left
+C' 321 | state pairs no ramp + night title B: 14 left; state pairs no ramp + night title B + B1 B: 25 left
+D 367 | letter game no ramp + night title B: 14 left; letter game no ramp + night title B + B1 B: 25 left; state pairs + ramp + night title B: 20 left; state pairs + ramp + night title B + B1 B: 31 left; state pairs no ramp: 0 left; state pairs no ramp + B1 B: 11 left; state pairs no ramp + night title B: 60 left; state pairs no ramp + night title B + B1 B: 71 left
+CHECK A: mine 12, theirs 12; only mine []; only theirs []
+CHECK B: mine 8, theirs 8; only mine []; only theirs []
+CHECK C': mine 2, theirs 2; only mine []; only theirs []
+CHECK D: mine 8, theirs 8; only mine []; only theirs []

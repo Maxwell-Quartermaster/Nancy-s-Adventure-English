@@ -1,0 +1,10 @@
+send-guard 80615576 current_snap ee1d3180 ground_check ae61b2a9 snap snap-st-0100MDT MANIFEST c373870e renders-MANIFEST e0191108
+pointer 57fddcb0 snap snap-st-0100MDT
+OK   bf88ff86 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/stage/scene-fill-20261101/sheets/S01-nested.png = MANIFEST.md5:./scene-fill-20261101/sheets/S01-nested.png
+OK   2b14fcd0 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/stage/sheets/05-map-day1-390x844.png = MANIFEST.md5:./sheets/05-map-day1-390x844.png
+OK   bf88ff86 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/stage/sheets/sub/sub-nested.png = MANIFEST.md5:./scene-fill-20261101/sheets/S01-nested.png
+OK   8fe1165e /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/stage/showcase/c07-sheet.png = MANIFEST.md5:./showcase/c07-sheet.png
+OK   519c3514 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/stage/showcase/c07-sheet.png.sources.txt = MANIFEST.md5:./showcase/c07-sheet.png.sources.txt
+OK   8dcce473 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/stage/showcase/showcase-1-opening.png = MANIFEST.md5:./showcase/showcase-1-opening.png
+RESULT CLEAR: 6 files, 0 problems
+GROUND SKIPPED (--no-ground): test only, NOT valid for a send to Maxwell

@@ -1,0 +1,127 @@
+--- 3 verse-byte
+PASS verse-byte: exit 1, REASON names step 2
+PASS verse-byte: HOLD kept + HOLD.reason written
+PASS verse-byte: sandbox pointer unchanged
+--- 4 over-ceiling
+PASS over-ceiling: exit 1, REASON names step 1
+PASS over-ceiling: HOLD kept + HOLD.reason written
+PASS over-ceiling: sandbox pointer unchanged
+PASS over-ceiling: reason says over the ceiling
+--- 5b sheets-scan-block (real scan, dim c03+c04)
+PASS sheets-scan BLOCK: exit 1, REASON names step 3
+PASS sheets-scan BLOCK: HOLD kept + HOLD.reason written
+PASS sheets-scan BLOCK: sandbox pointer unchanged
+PASS sheets-scan BLOCK: REASON names the sheets scan (exit 1), ground_check never called directly (only via sheets_scan.py)
+PASS [st3] real scan: c03 (dim x0.65 + path) BLOCKs on its bad panel 26D-path-dim65 [dimmed]
+PASS [st3] real scan: c04 (dim x0.65 + floating tree) BLOCKs on its bad panel 26D-float-dim65
+PASS [st3] real scan: good unsourced stage images PASS whole; BASE = candidate pointer, ground_check = tools-copy wrapper
+PASS [st3] sourced sheets themselves never reach ground_check; their 10 panels do (via sheets_scan.py)
+--- 5d no-scan (live tools, fail closed)
+PASS no sheets scan installed (live tools): exit 1, REASON step 3 names the missing scan
+--- 5c route() units
+PASS route(): showcase/, sheets/, nested scene-fill/sheets/ and sheets/sub/ -> sheets; normal render, sheets-ref/, a file named sheets.png -> single
+--- 6 snap-exists
+PASS snap-exists: exit 1, REASON names step 1
+PASS snap-exists: HOLD kept + HOLD.reason written
+PASS snap-exists: sandbox pointer unchanged
+PASS existing snap dir: refuses to overwrite
+--- 7 pointer-mismatch
+PASS pointer-mismatch: exit 1, REASON names step 1
+PASS pointer-mismatch: HOLD kept + HOLD.reason written
+PASS pointer-mismatch: sandbox pointer unchanged
+PASS pointer md5 mismatch named
+--- 8 fit-stale
+PASS fit-stale: exit 1, REASON names step 3
+PASS fit-stale: HOLD kept + HOLD.reason written
+PASS fit-stale: sandbox pointer unchanged
+PASS mid-way check fail: fit_sheet_check STALE stops the freeze
+--- 11 unwritable
+PASS unwritable: exit 1, REASON names step 4
+PASS unwritable: HOLD kept + HOLD.reason written
+PASS unwritable: sandbox pointer unchanged
+PASS unwritable dir: clean fail at step 4, no snap
+--- 17b hold-moved
+PASS fault 8: --status exit 1 says POINTER MOVED since the HOLD
+PASS fault 8: hold_check exit 1 says POINTER MOVED since the HOLD
+PASS fault 8: --force-clear refuses (exit 2), pointer and HOLD left as they are
+--- 19-20 manual + hold_check
+PASS --status with no HOLD: exit 0
+PASS --hold: exit 0, HOLD written, broadcast printed
+PASS --hold again: exit 2
+PASS --status with HOLD: exit 1, shows reason
+PASS --release: exit 0, HOLD archived, RESUME with Based-on sync
+PASS hold_check: exit 0 with no HOLD
+PASS hold_check: exit 1 + reason with HOLD
+PASS hold_check --hold-file on a missing file: exit 0
+--- 21 guards (live refused)
+PASS FREEZE_FAULT without --sandbox: exit 2, nothing done
+PASS --skip-checks-v608 without --sandbox: exit 2
+PASS --sandbox pointing at live v608build: exit 2
+--- 21c no-carry
+PASS --no-carry: exit 0, snap = 4 stage files + PASTE + 3 manifests/DELTA only
+--- 21d carry-corrupt
+PASS carry-corrupt: exit 1, REASON names step 3
+PASS carry-corrupt: HOLD kept + HOLD.reason written
+PASS carry-corrupt: sandbox pointer unchanged
+PASS corrupted carried file: named, no new snap, pointer untouched
+--- 5c routing dry run (real scan, good sourced c07)
+PASS routing dry run: exit 0, DRY RUN CLEAN, pointer untouched
+PASS routing: showcase/ file -> sheets scan only
+PASS routing: sheets/ file -> sheets scan only
+PASS routing: nested scene-fill-20261101/sheets/ and sheets/sub/ files -> sheets scan only
+PASS routing: sheets scan got exactly the 5 sheets/showcase images (4 + sourced c07), not the normal render [st3: was 4]
+PASS routing: ground_check never called directly (every call came from sheets_scan.py; none on a renders/ file) [st3: real scan]
+PASS routing: send_guard ran --no-ground with nested --only prefixes, every sheets/showcase file OK in the candidate snapshot [st3: 6 files]
+PASS routing: normal render (renders/r2x/) not given to send_guard or the sheets scan (unchanged from 91aa8a3e)
+PASS [st3] real scan: sourced c07 PASSes on its 4 good panels, the sheet itself is not ground-checked; RESULT PASS=5 exit 0
+FAIL control: ground_check logger records a direct send_guard ground call
+SKIP 1-2 clean dry + real run (20 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 5 sendguard-exit3 no-op dry run (1 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 5d no-sheets (live tools) dry run (1 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 14 step6 rollback (3 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 15 rollback-fails (2 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 13 handmove (2 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 9 paste-copy (4 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 10 enospc (4 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 12 plain-copy (4 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 16 hold-present (2 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 17 crash + stale HOLD (4 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 18 lock (3 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 21b override (1 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+SKIP 22 patched hold-check diff (6 checks): 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+PASS live CURRENT-SNAP.txt md5 is still f6dac2d0e7b391436a160eab1bbf17fe
+PASS no live HOLD left
+PASS [st3] live freeze/freeze.py still 91aa8a3e
+
+CASES:
+  RAN  3 verse-byte [3 checks]  disk delta +1.8 MB
+  RAN  4 over-ceiling [4 checks]  disk delta +2.0 MB
+  RAN  5b sheets-scan-block (real scan, dim c03+c04) [8 checks]  disk delta +6.3 MB
+  RAN  5d no-scan (live tools, fail closed) [1 checks]  disk delta +2.7 MB
+  RAN  5c route() units [1 checks]  disk delta +0.0 MB
+  RAN  6 snap-exists [4 checks]  disk delta +1.8 MB
+  RAN  7 pointer-mismatch [4 checks]  disk delta +1.8 MB
+  RAN  8 fit-stale [4 checks]  disk delta +2.8 MB
+  RAN  11 unwritable [4 checks]  disk delta +5.1 MB
+  RAN  17b hold-moved [3 checks]  disk delta +1.7 MB
+  RAN  19-20 manual + hold_check [8 checks]  disk delta +0.5 MB
+  RAN  21 guards (live refused) [3 checks]  disk delta +1.3 MB
+  RAN  21c no-carry [1 checks]  disk delta +4.2 MB
+  RAN  21d carry-corrupt [4 checks]  disk delta +2.3 MB
+  RAN  5c routing dry run (real scan, good sourced c07) [10 checks]  disk delta +82.0 MB
+  SKIP 1-2 clean dry + real run [20 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 5 sendguard-exit3 no-op dry run [1 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 5d no-sheets (live tools) dry run [1 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 14 step6 rollback [3 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 15 rollback-fails [2 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 13 handmove [2 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 9 paste-copy [4 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 10 enospc [4 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 12 plain-copy [4 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 16 hold-present [2 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 17 crash + stale HOLD [4 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 18 lock [3 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 21b override [1 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+  SKIP 22 patched hold-check diff [6 checks] 1-2 clean dry + real run: used 108,008,738,816 + est 155,000,000 + margin 40,000,000 would reach 79.11% (cap 79.0%)
+
+SELFTEST3 64/65 checks passed; skipped cases: 14 (57 checks)  (root /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases; live pointer f6dac2d0e7b391436a160eab1bbf17fe; peak used 108,008,738,816 = 78.964%)

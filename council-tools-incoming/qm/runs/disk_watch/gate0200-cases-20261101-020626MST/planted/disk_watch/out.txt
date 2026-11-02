@@ -1,0 +1,45 @@
+== sim 80
+WARN: / at 80.0% (99G used of 127G, 29G free), at or above 80% [SIMULATED 80.0%, real 77.3%]
+Top 1 dirs by size (depth 2, under /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root):
+   1.    56.0K  /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root/a
+Nothing was deleted. Suggest: ask Maxwell (1A/1B, ASKS-LEDGER row first) whether any of these can be archived or removed.
+rc=1
+== sim 80.0
+WARN: / at 80.0% (99G used of 127G, 29G free), at or above 80% [SIMULATED 80.0%, real 77.3%]
+Top 1 dirs by size (depth 2, under /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root):
+   1.    56.0K  /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root/a
+Nothing was deleted. Suggest: ask Maxwell (1A/1B, ASKS-LEDGER row first) whether any of these can be archived or removed.
+rc=1
+== sim 80.01
+WARN: / at 80.0% (99G used of 127G, 29G free), at or above 80% [SIMULATED 80.0%, real 77.3%]
+Top 1 dirs by size (depth 2, under /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root):
+   1.    56.0K  /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root/a
+Nothing was deleted. Suggest: ask Maxwell (1A/1B, ASKS-LEDGER row first) whether any of these can be archived or removed.
+rc=1
+== sim 79.9
+OK: / at 79.9% (99G used of 127G, 29G free), below 80% [SIMULATED 79.9%, real 77.3%]
+rc=0
+== sim 79.99
+OK: / at 79.9% (99G used of 127G, 29G free), below 80% [SIMULATED 79.9%, real 77.3%]
+rc=0
+== sim 79.95
+OK: / at 79.9% (99G used of 127G, 29G free), below 80% [SIMULATED 79.9%, real 77.3%]
+rc=0
+== real
+OK: / at 77.3% (99G used of 127G, 29G free), below 80%
+rc=0
+== bad mount
+ERROR: cannot read mount /no/such/mount: FileNotFoundError: [Errno 2] No such file or directory: '/no/such/mount'
+rc=2
+== /proc
+ERROR: mount /proc reports 0 total bytes (not a real disk?)
+rc=2
+== unreadable root
+WARN: / at 90.0% (99G used of 127G, 29G free), at or above 80% [SIMULATED 90.0%, real 77.3%]
+Top 2 dirs by size (depth 2, under /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/noread, /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root):
+   1.    56.0K  /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/root/a
+   2.     4.0K  /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/noread/sub
+  note: /workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/noread: du could not read 1 path(s) (sizes may be low): du: cannot read directory '/workspace/v608build/council-tools-incoming/qm/runs/disk_watch/gate0200-cases-20261101-020626MST/planted/disk_watch/noread/sub': Perm
+Nothing was deleted. Suggest: ask Maxwell (1A/1B, ASKS-LEDGER row first) whether any of these can be archived or removed.
+rc=1
+no file changed or deleted

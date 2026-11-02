@@ -1,0 +1,56 @@
+PASS KIT-QA: expect FLAG:UNSOURCED got exit 1 ['UNKNOWN']
+PASS KIT-QB: expect FLAG:TRUNCATED got exit 1 ['SPEC-CUT']
+PASS KIT-QC1: expect FLAG:RELAY got exit 1 ['RELAY']
+PASS KIT-QC2: expect FLAG:RELAY got exit 1 ['RELAY']
+PASS KIT-QC3: expect FLAG:RELAY got exit 1 ['RELAY']
+PASS KIT-QD1: expect CLEAN got exit 0 
+PASS KIT-QD2: expect CLEAN got exit 0 
+PASS Q01-one-word-change: expect FLAG got exit 1 ['ALTERED']
+PASS Q02-dropped-word: expect FLAG got exit 1 ['ALTERED']
+PASS Q02b-dropped-word-t421u: expect FLAG got exit 1 ['ALTERED']
+PASS Q03-curly-quotes-control: expect OK got exit 0 
+PASS Q03b-curly-apostrophe-only: expect OK got exit 0 
+PASS Q04-wrong-tnum-correct-text: expect FLAG got exit 1 ['WRONG-TNUM']
+PASS Q04b-wrong-tnum-other-own-row: expect FLAG got exit 1 ['WRONG-TNUM']
+PASS Q05-paraphrase-as-Maxwell: expect FLAG got exit 1 ['ALTERED']
+PASS Q05b-paraphrase-no-tnum: expect FLAG got exit 1 ['UNKNOWN']
+ADVISORY-MISS Q05c-paraphrase-said-unquoted: expect FLAG got exit 0 
+     NONE: no Maxwell quotes or quoted spec rules found
+PASS Q06-thai-1char-long: expect FLAG got exit 1 ['SPEC-ALTERED']
+PASS Q06-control-thai-exact: expect OK got exit 0 
+ADVISORY-MISS Q06c-thai-fragment-edge-cut-markers: expect OK got exit 1 ['SPEC-CUT']
+     FLAG line 1: SPEC-CUT: "[…Auditor cut…] ท่านมาหาข้าด้วยดาบ ด้วยหอกและด้วยหอกซัด แต่ข้ามาหาท่านในพระนามแห่งพระยาห์เวห์จอมทัพ […Auditor cut…]" - PASTE says "เล่นต่อหรือพักก่อนดี"},"needsMaxwell":["ms-04","ms-05","ms-06","bh-30","ms-28","ms-29","ms-30"],"zones":[{"key":"phonics","name":"Phonics","nameTh":"เสียงพื้นฐาน","order":1,"startZone":true,"boss":{"cards":["ph-15","ph-16","ph-17","ph-18","ph-19","ph-20","ph-21","ph-22","ph-23","ph-24"],"clip":"audio/maxwell-boss-phonics.m4a","scroll":{"ref":"Genesis 1:1","en":"In the beginning, God created the heavens and the earth.","th":"ในปฐมกาล พระเจ้าทรงเนรมิตสร้างฟ้าและแผ่นดิน","enSource":"ESV","thSource":"THSV11","status":"VERIFIED","enUrl":"https:
+PASS Q06b-thai-1char-short: expect FLAG got exit 1 ['SPEC-ALTERED']
+PASS Q07-relay-as-own-text: expect FLAG got exit 1 ['RELAY']
+PASS Q07b-relay-via-said: expect FLAG got exit 1 ['RELAY']
+PASS Q07c-relay-tnum-own-chat-label: expect FLAG got exit 1 ['RELAY']
+PASS T5-thai-5char-exact: expect OK got exit 0 
+PASS T5b-thai-5char-1letter: expect OK got exit 0 
+PASS T6-thai-6char-exact: expect OK got exit 0 
+PASS T6b-thai-6char-1letter: expect FLAG got exit 1 ['SPEC-ALTERED']
+PASS TM1-mixed-exact: expect OK got exit 0 
+PASS TM2-mixed-1letter: expect FLAG got exit 1 ['SPEC-NOTFOUND']
+PASS TM3-mixed-boss-1letter: expect FLAG got exit 1 ['SPEC-NOTFOUND']
+PASS TM4-mixed-short-thai: expect OK got exit 0 
+PASS E1-relay-no-text-t141u: expect FLAG got exit 1 ['RELAY']
+     FLAG line 1: RELAY: "anything at all here" - t141u is an Ara relay row (SETTLED-RULINGS.md:111); label it **Ara (relay, t141u, Watchman DM):**, not **Maxwell:**
+     1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+PASS E2-t527u-unverified: expect OK got exit 0 
+     ok   line 1: VERBATIM: "Remove the circles entirely." - t527u matches a MAXWELL OWN row (SETTLED-RULINGS.md:37) (record itself marked UNVERIFIED on the box)
+     1 checked, 0 flagged (records: 149, PASTE 317e91ce)
+PASS E3a-t900u-no-chat-own+relay: expect FLAG got exit 1 ['RELAY']
+     FLAG line 1: RELAY: "Make the map brighter please" - t900u is an Ara relay row (SYN-RULINGS.md:1, SYN-RULINGS.md:2); label it **Ara (relay, t900u, Watchman DM):**, not **Maxwell:**
+     1 checked, 1 flagged (records: 12, PASTE 317e91ce)
+PASS E3b-t900u-QM-chat: expect OK got exit 0 
+     ok   line 1: VERBATIM: "Make the map brighter please" - t900u matches a MAXWELL OWN row (SYN-RULINGS.md:1)
+     1 checked, 0 flagged (records: 12, PASTE 317e91ce)
+PASS E3e-t902u-paraphrase-only: expect FLAG got exit 1 ['PARAPHRASE']
+     FLAG line 1: PARAPHRASE: "Keep the shield round" - t902u is paraphrase-only (SYN-RULINGS.md:5, NO VERBATIM ON RECORD); label it **<Bot> (paraphrase):**
+     1 checked, 1 flagged (records: 12, PASTE 317e91ce)
+PASS E3c-t901u-no-chat-own+paraphrase: expect OK got exit 0 
+     ok   line 1: VERBATIM: "Keep the sword small" - t901u matches a MAXWELL OWN row (SYN-RULINGS.md:3, SYN-RULINGS.md:4)
+     1 checked, 0 flagged (records: 12, PASTE 317e91ce)
+PASS E3d-t901u-unknown-chat: expect OK got exit 0 
+     ok   line 1: VERBATIM: "Keep the sword small" - t901u matches a MAXWELL OWN row (SYN-RULINGS.md:3, SYN-RULINGS.md:4)
+     1 checked, 0 flagged (records: 12, PASTE 317e91ce)
+TOTAL required 36/36; advisory 1/3

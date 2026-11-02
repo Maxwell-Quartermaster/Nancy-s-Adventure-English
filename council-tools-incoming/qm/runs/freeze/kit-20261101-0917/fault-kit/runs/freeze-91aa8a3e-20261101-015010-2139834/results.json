@@ -1,0 +1,391 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "freeze",
+ "path": "/workspace/v608build/freeze/freeze.py",
+ "md5": "91aa8a3e12bc477ecee27222d97ba621",
+ "exit": 1,
+ "required": [
+  16,
+  34
+ ],
+ "advisory": [
+  0,
+  0
+ ],
+ "rows": [
+  {
+   "id": "F0a-clean-dry-run",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 0, DRY RUN CLEAN, pointer untouched, no HOLD",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line []",
+   "why": "control: a clean dry run must pass",
+   "source": "gate F0 / selftest case 1"
+  },
+  {
+   "id": "F9-pass-copy2-clean-run",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 0; every snapshot file md5 = MANIFEST and mtime = source",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line []; 0 MANIFEST lin",
+   "why": "control: clean real run (sandbox) keeps mtimes (copy2)",
+   "source": "gate F9 pass case"
+  },
+  {
+   "id": "F1a-fit-sheet-stale",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3, HOLD kept, pointer unchanged, no snap",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "mid-way check failure (stale fit sheet)",
+   "source": "gate fault 1"
+  },
+  {
+   "id": "F1b-sendguard-BLOCK-hook",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3 (send_guard exit 1 via hook)",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "send_guard BLOCK without FREEZE_FAULT",
+   "source": "gate fault 1"
+  },
+  {
+   "id": "F1c-sendguard-exit3",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3; send_guard exit 3 counts as FAIL",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "send_guard --no-text exit 3 must never pass a freeze",
+   "source": "selftest case 5"
+  },
+  {
+   "id": "F2a-handmove-FREEZE_FAULT",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 5 'moved by hand'; hand edit kept",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | hand_edit_kep",
+   "why": "pointer hand-moved during the freeze",
+   "source": "gate fault 2"
+  },
+  {
+   "id": "F2b-handmove-by-other-process-hook",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 5; hand edit kept",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | hand_edit_kep",
+   "why": "another process moves the pointer mid-freeze",
+   "source": "gate fault 2"
+  },
+  {
+   "id": "F3a-crash_after_hold-FREEZE_FAULT",
+   "required": true,
+   "recorded": false,
+   "expect": "crash leaves HOLD w/o reason; --status STALE; rerun 2; hold_check 1; --force-clear freezes",
+   "got": "FAIL exit 9",
+   "ok": false,
+   "detail": "crash exit 9, status=1 STALE=True rerun=2 hold_check=1; force-clear rerun exit 1",
+   "why": "stale HOLD after a crash",
+   "source": "gate fault 3"
+  },
+  {
+   "id": "F3b-SIGKILL-mid-step3-hook",
+   "required": true,
+   "recorded": false,
+   "expect": "same as F3a, via SIGKILL",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "crash exit 1, status=1 STALE=False rerun=2 hold_check=1; force-clear rerun exit 1",
+   "why": "real kill mid step 3",
+   "source": "gate fault 3"
+  },
+  {
+   "id": "F4a-paste_copy_corrupt-FREEZE_FAULT",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 4; no snap at final name",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "PASTE copy md5 wrong",
+   "source": "gate fault 4"
+  },
+  {
+   "id": "F4b-source-PASTE-changed-mid-freeze-hook",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 4; no snap",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "source PASTE changed after the gates",
+   "source": "gate fault 4"
+  },
+  {
+   "id": "F5a-ENOSPC-FREEZE_FAULT",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 4; tmp named; no snap",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "disk full",
+   "source": "gate fault 5"
+  },
+  {
+   "id": "F5b-unwritable-parent-EACCES",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 4; no snap",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "unwritable parent dir",
+   "source": "gate fault 5"
+  },
+  {
+   "id": "F6-lock-held",
+   "required": true,
+   "recorded": false,
+   "expect": "second freeze 2, --hold 2, --release 2, no HOLD written",
+   "got": "PASS exit 2",
+   "ok": true,
+   "detail": "freeze 2 hold 2 release 2 HOLD=False | live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)",
+   "why": "two freezes at once",
+   "source": "gate fault 6"
+  },
+  {
+   "id": "F7a-step6_bad_pointer-FREEZE_FAULT",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 6; pointer rolled back to pre-freeze md5; HOLD kept",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | ptr_restored=",
+   "why": "post-pointer failure must roll back",
+   "source": "gate fault 7"
+  },
+  {
+   "id": "F7b-step6-verify-fail-independent",
+   "required": true,
+   "recorded": false,
+   "expect": "same as F7a via a planted current_snap verify failure",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | ptr_restored=",
+   "why": "step-6 failure not from FREEZE_FAULT",
+   "source": "gate fault 7"
+  },
+  {
+   "id": "F7c-rollback-fails",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1; HOLD kept; NOT ROLLED BACK + cp restore; --status 1; --release 2",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=False st",
+   "why": "rollback itself fails",
+   "source": "gate fault 7"
+  },
+  {
+   "id": "F8a-manual-HOLD-then-freeze",
+   "required": true,
+   "recorded": false,
+   "expect": "freeze refused exit 2; pointer unchanged",
+   "got": "PASS exit 2",
+   "ok": true,
+   "detail": "REFUSED: HOLD already present (/workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-015010-2139834/sbx/F8a-manual-HOLD-then-freeze/sb/freeze/HOLD,",
+   "why": "HOLD left in place",
+   "source": "gate fault 8a"
+  },
+  {
+   "id": "F8b-failed-freeze-HOLD-then-pointer-moved",
+   "required": true,
+   "recorded": false,
+   "expect": "--status, hold_check and --force-clear all name the move; --force-clear refuses",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "first run exit 1; --status flags=True; hold_check flags=True; --force-clear exit 2 flags=True",
+   "why": "pointer moved under a failed-freeze HOLD",
+   "source": "gate fault 8b (Auditor's fault 8)"
+  },
+  {
+   "id": "F8c-manual-HOLD-pointer-moved-status-release",
+   "required": true,
+   "recorded": false,
+   "expect": "--status flags move; --release says MOVED",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "--status exit 1 flags=True; --release exit 0 MOVED=True",
+   "why": "fault 8 on --status/--release",
+   "source": "gate fault 8c"
+  },
+  {
+   "id": "F8d-manual-HOLD-moved-force-clear",
+   "required": true,
+   "recorded": false,
+   "expect": "hold_check 1 POINTER MOVED; --force-clear 2, pointer and HOLD left",
+   "got": "PASS exit 2",
+   "ok": true,
+   "detail": "hold_check 1; force-clear 2 | ptr_left=True HOLD=True",
+   "why": "fault 8 on --force-clear",
+   "source": "gate fault 8d"
+  },
+  {
+   "id": "F8e-pointer-restored-then-force-clear",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 0 frozen, HOLD released",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line []",
+   "why": "control: restoring the at-HOLD pointer unblocks",
+   "source": "gate fault 8e"
+  },
+  {
+   "id": "F8f-moved-then-release-then-freeze",
+   "required": true,
+   "recorded": false,
+   "expect": "--release 0 with MOVED, then freeze 0",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "release 0 MOVED=True; freeze 1 REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, n",
+   "why": "explicit acknowledgment path",
+   "source": "gate fault 8f"
+  },
+  {
+   "id": "F9a-plain_copy-FREEZE_FAULT",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 4 'mtime not preserved'; no snap",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "plain cp loses mtimes",
+   "source": "gate fault 9"
+  },
+  {
+   "id": "F10a-carried-QUEUE.md-appended",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3; no snap, no tmp",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "carried file edited",
+   "source": "gate fault 10"
+  },
+  {
+   "id": "F10b-carried-png-1bit-flip-mtime-restored",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "1-bit flip, same size and mtime",
+   "source": "gate fault 10"
+  },
+  {
+   "id": "F10c-carried-file-missing",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "carried file missing",
+   "source": "gate fault 10"
+  },
+  {
+   "id": "F10d-unlisted-file-in-prev-snap",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 3",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "file not in previous MANIFEST",
+   "source": "gate fault 10"
+  },
+  {
+   "id": "F10e-carried-file-corrupted-AFTER-carry-check-hook",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 4; pointer never moves",
+   "got": "FAIL exit 1",
+   "ok": false,
+   "detail": "REASON: step 3 render: /workspace/v608build/snap-r2h-0021MDT/checks/trim_clip_check.py: trim-clip (DOM) check exit 1, no TOTAL line [] | HOLD=True ptr",
+   "why": "corruption after the carry check",
+   "source": "gate fault 10"
+  },
+  {
+   "id": "F10f-file-and-prev-MANIFEST-both-edited",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 1 (pointer manifest_md5 != MANIFEST)",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-015010-2139834/sbx/F10f-file-and-prev-MANIFEST-both-edited/sb/CURRE",
+   "why": "file and MANIFEST both edited",
+   "source": "gate fault 10"
+  },
+  {
+   "id": "S1-verse-byte-changed",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 2",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 2 content: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-015010-2139834/sbx/S1-verse-byte-changed/stage/nancys-adventure-engli",
+   "why": "one verse byte changed",
+   "source": "selftest case 3"
+  },
+  {
+   "id": "S2-paste-over-188200-ceiling",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 1; says ceiling",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-015010-2139834/sbx/S2-paste-over-188200-ceiling/over-PASTE.md: 188,",
+   "why": "PASTE over the char ceiling",
+   "source": "selftest case 4"
+  },
+  {
+   "id": "S3-snap-dir-already-exists",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 1; 'already exists'",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-015010-2139834/sbx/S3-snap-dir-already-exists/sb/snap-fk-0100MDT: s",
+   "why": "never overwrite a snap",
+   "source": "selftest case 6"
+  },
+  {
+   "id": "S4-pointer-paste-md5-mismatch",
+   "required": true,
+   "recorded": false,
+   "expect": "exit 1 step 1; names paste_1b_md5",
+   "got": "PASS exit 1",
+   "ok": true,
+   "detail": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-015010-2139834/sbx/S4-pointer-paste-md5-mismatch/sb/r2h-build/nancy",
+   "why": "pointer's paste changed on disk",
+   "source": "selftest case 7"
+  }
+ ]
+}

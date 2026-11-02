@@ -1,0 +1,36 @@
+fault-kit v1 | run_kit e0347e78dc2b418c2c599c91cc0ff6ac | tool text_check /workspace/audit/text-check-g5/ct/text-check/text_check.py md5 14d216c99c43c1c025217b64dfbf7bc9 (run on copy /workspace/audit/fault-kit/runs/text_check-14d216c9-20261101-012735-1812533/tool/text_check.py)
+cases /workspace/audit/fault-kit/cases/text_check/cases.json md5 a9cbe53badfcb397608a6336f283b9ee | 30 cases | 2026-11-01 01:27 MST
+sibling text_check_words.json md5 74dfe95e571413ab7158395ed420bf5a
+PASS | T01                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-911 "911" in showcase/t01.png.sources.txt caption [caption]: "Call 911 for help." (never-word, standing council rule)
+PASS | T02                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-callmax "Call Max" in showcase/t02.png.sources.txt caption [caption]: "Call Max if lost." (never-word, standing council rule)
+PASS | T03                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-nurse "Show the Nurse" in showcase/t03.png.sources.txt caption [caption]: "Show the Nurse this card." (never-word, standing counc
+PASS | T04                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-911 "911" in code/mk_t04.py:3 [caption]: "Tile 3: Call 911" (never-word, standing council rule)
+PASS | T05                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-callmax "Call Max" in code/mk_t05.py:3 [caption]: "Tile 3: Call Max" (never-word, standing council rule)
+PASS | T06                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-nurse "Show the Nurse" in code/mk_t06.py:3 [caption]: "Tile 3: Show the Nurse" (never-word, standing council rule)
+PASS | T07                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-911 "911" in t07.png source showcase/t07.html [attr data-help (warn)]: "Call 911" (never-word, standing council rule)
+PASS | T08                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-callmax "Call Max" in t08.png source showcase/t08.html [attr data-label (warn)]: "Call Max" (never-word, standing council rule)
+PASS | T09                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-nurse "Show the Nurse" in t09.png source showcase/t09.html [attr data-hint (warn)]: "Show the Nurse" (never-word, standing counci
+PASS | T10                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-911 "911" in t10.png source showcase/t10.html [script string (warn)]: "Call 911" (never-word, standing council rule)
+PASS | T11                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-callmax "Call Max" in t11.png source showcase/t11.html [script string (warn)]: "Call Max" (never-word, standing council rule)
+PASS | T12                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-nurse "Show the Nurse" in t12.png source showcase/t12.html [script string (warn)]: "Show the Nurse" (never-word, standing council
+PASS | T13                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-911 "911" in t13.png source showcase/t13.html [text]: "Call 911" (never-word, standing council rule)
+PASS | T14                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-callmax "Call Max" in t14.png source showcase/t14.html [text]: "Call Max" (never-word, standing council rule)
+PASS | T15                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   NEVER-WORD F-nurse "Show the Nurse" in t15.png source showcase/t15.html [text]: "Show the Nurse" (never-word, standing council rule)
+PASS | T16                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   RETIRED R3-shop-en "Golden Pantry" in t16.png source showcase/t16.html [text]: "Golden Pantry" (t487u)
+PASS | T17                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   RETIRED R3-shop-en "Golden Pantry" in t17.png source showcase/t17.html [text]: "Golden Pantry" (t487u)
+PASS | T18                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   RETIRED R3-shop-en "Golden Pantry" in showcase/t18.png.sources.txt caption [caption]: "The Golden Pantry." (t487u)
+PASS | T19                                              | required | want BLOCK | got BLOCK exit 1 | BLOCK   RETIRED R3-shop-en "golden pantry" in code/mk_t19.py:3 [caption]: "The golden pantry." (t487u)
+PASS | T20                                              | required | want NOT-BLOCK | got SKIP exit 0 | WARN    SKIP MANIFEST.md5: checksum list, not something Maxwell sees
+PASS | T21                                              | required | want NOT-BLOCK | got SKIP exit 0 | WARN    SKIP renders-MANIFEST.md5: checksum list, not something Maxwell sees
+PASS | T22                                              | required | want NOT-BLOCK | got PASS exit 0 | WARN    DOC-MENTION FAIL-WORD F-locked "locked" in chk1B-rerun.log:22 [line]: "visible unlock/locked strings: []" (fail word)
+PASS | T23                                              | required | want WARN:CAPTIONS-UNCHECKED | got PASS exit 0 | WARN    CAPTIONS-UNCHECKED t23.png: sidecar showcase/t23.png.sources.txt lists 2 sources but no "caption" lines, so text the sheet builder drew (title
+PASS | T24                                              | required | want UNVERIFIED | got TEXT UNVERIFIED exit 1 | BLOCK   TEXT UNVERIFIED orphan.png: no sidecar .sources.txt, same-name .html, tour entry or builder script found in snap-t
+PASS | T25                                              | required | want NOT-BLOCK | got PASS exit 0 | 
+PASS | T26                                              | required | want NOT-BLOCK | got PASS exit 0 | 
+PASS | T27                                              | required | want NOT-BLOCK | got PASS exit 0 | 
+PASS | T28                                              | required | want NOT-BLOCK | got PASS exit 0 | WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on
+PASS | T29                                              | advisory | want NOT-BLOCK | got PASS exit 0 | WARN    DOC-MENTION RETIRED R3-shop-en "Golden Pantry" in notes.md:1 [line]: "Rule: never "Call Max" or 911 in the app. Golden Pantry is retired." (t4
+PASS | T30                                              | advisory | want BLOCK|UNVERIFIED | got TEXT UNVERIFIED exit 1 | BLOCK   TEXT UNVERIFIED sheet.pdf: file type not readable by text-check (not png/jpg/webp/gif, html, svg or a text doc)
+TOTAL text_check 14d216c9: required 28/28 PASS, advisory 2/2 PASS -> KIT PASS (exit 0); 2 s; live pointer unchanged
+results /workspace/audit/fault-kit/runs/text_check-14d216c9-20261101-012735-1812533/results.json
+EXIT 0

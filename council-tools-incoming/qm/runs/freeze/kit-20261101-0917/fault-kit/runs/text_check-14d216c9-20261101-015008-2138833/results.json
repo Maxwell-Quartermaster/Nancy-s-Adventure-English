@@ -1,0 +1,347 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "text_check",
+ "path": "/workspace/audit/text-check-g5/ct/text-check/text_check.py",
+ "md5": "14d216c99c43c1c025217b64dfbf7bc9",
+ "exit": 0,
+ "required": [
+  28,
+  28
+ ],
+ "advisory": [
+  2,
+  2
+ ],
+ "rows": [
+  {
+   "id": "T01",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-911 \"911\" in showcase/t01.png.sources.txt caption [caption]: \"Call 911 for help.\" (never-word, standing council rule)",
+   "why": "never-word '911' in a sheet .sources.txt caption line",
+   "source": "standing rule: never 911/Call Max/Show the Nurse in anything Maxwell sees; Auditor caption gate g3 N11"
+  },
+  {
+   "id": "T02",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-callmax \"Call Max\" in showcase/t02.png.sources.txt caption [caption]: \"Call Max if lost.\" (never-word, standing council rule)",
+   "why": "never-word 'Call Max' in a .sources.txt caption line",
+   "source": "g3 N11-callmax"
+  },
+  {
+   "id": "T03",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-nurse \"Show the Nurse\" in showcase/t03.png.sources.txt caption [caption]: \"Show the Nurse this card.\" (never-word, standing counc",
+   "why": "never-word 'Show the Nurse' in a .sources.txt caption line",
+   "source": "g3 N11-nurse"
+  },
+  {
+   "id": "T04",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-911 \"911\" in code/mk_t04.py:3 [caption]: \"Tile 3: Call 911\" (never-word, standing council rule)",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-911"
+  },
+  {
+   "id": "T05",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-callmax \"Call Max\" in code/mk_t05.py:3 [caption]: \"Tile 3: Call Max\" (never-word, standing council rule)",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-callmax"
+  },
+  {
+   "id": "T06",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-nurse \"Show the Nurse\" in code/mk_t06.py:3 [caption]: \"Tile 3: Show the Nurse\" (never-word, standing council rule)",
+   "why": "never-word in a builder-script caption",
+   "source": "g3 N02-nurse"
+  },
+  {
+   "id": "T07",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-911 \"911\" in t07.png source showcase/t07.html [attr data-help (warn)]: \"Call 911\" (never-word, standing council rule)",
+   "why": "'911' in a data-* attribute",
+   "source": "g3 N08a (data-* was warn-only)"
+  },
+  {
+   "id": "T08",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-callmax \"Call Max\" in t08.png source showcase/t08.html [attr data-label (warn)]: \"Call Max\" (never-word, standing council rule)",
+   "why": "'Call Max' in a data-* attribute",
+   "source": "g3 N08a variant"
+  },
+  {
+   "id": "T09",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-nurse \"Show the Nurse\" in t09.png source showcase/t09.html [attr data-hint (warn)]: \"Show the Nurse\" (never-word, standing counci",
+   "why": "'Show the Nurse' in a data-* attribute",
+   "source": "g3 N08a variant"
+  },
+  {
+   "id": "T10",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-911 \"911\" in t10.png source showcase/t10.html [script string (warn)]: \"Call 911\" (never-word, standing council rule)",
+   "why": "'911' in a script string",
+   "source": "g3 N08b variant"
+  },
+  {
+   "id": "T11",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-callmax \"Call Max\" in t11.png source showcase/t11.html [script string (warn)]: \"Call Max\" (never-word, standing council rule)",
+   "why": "'Call Max' in a script string",
+   "source": "g3 N08b variant"
+  },
+  {
+   "id": "T12",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-nurse \"Show the Nurse\" in t12.png source showcase/t12.html [script string (warn)]: \"Show the Nurse\" (never-word, standing council",
+   "why": "'Show the Nurse' in a script string",
+   "source": "g3 N08b"
+  },
+  {
+   "id": "T13",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-911 \"911\" in t13.png source showcase/t13.html [text]: \"Call 911\" (never-word, standing council rule)",
+   "why": "'911' in visible render text",
+   "source": "g1 T08a / g3 N06"
+  },
+  {
+   "id": "T14",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-callmax \"Call Max\" in t14.png source showcase/t14.html [text]: \"Call Max\" (never-word, standing council rule)",
+   "why": "'Call Max' in visible render text, even though it equals a PASTE content string",
+   "source": "g3 N07a (allow path must not exempt never-words)"
+  },
+  {
+   "id": "T15",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   NEVER-WORD F-nurse \"Show the Nurse\" in t15.png source showcase/t15.html [text]: \"Show the Nurse\" (never-word, standing council rule)",
+   "why": "'Show the Nurse' in visible render text",
+   "source": "g3 N06-nurse"
+  },
+  {
+   "id": "T16",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   RETIRED R3-shop-en \"Golden Pantry\" in t16.png source showcase/t16.html [text]: \"Golden Pantry\" (t487u)",
+   "why": "retired 'Golden Pantry' wording (renamed Shop)",
+   "source": "Ara relay t487u: rename golden pantry to just shop (SETTLED-RULINGS M05)"
+  },
+  {
+   "id": "T17",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   RETIRED R3-shop-en \"Golden Pantry\" in t17.png source showcase/t17.html [text]: \"Golden Pantry\" (t487u)",
+   "why": "retired wording hidden by nbsp + soft hyphen",
+   "source": "g1 T04c/T04d"
+  },
+  {
+   "id": "T18",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   RETIRED R3-shop-en \"Golden Pantry\" in showcase/t18.png.sources.txt caption [caption]: \"The Golden Pantry.\" (t487u)",
+   "why": "retired wording in a .sources.txt caption line",
+   "source": "t487u; g3 N05b"
+  },
+  {
+   "id": "T19",
+   "required": true,
+   "recorded": false,
+   "expect": "BLOCK",
+   "got": "BLOCK exit 1",
+   "ok": true,
+   "detail": "BLOCK   RETIRED R3-shop-en \"golden pantry\" in code/mk_t19.py:3 [caption]: \"The golden pantry.\" (t487u)",
+   "why": "retired wording (lower case) in a builder caption",
+   "source": "g3 N05b"
+  },
+  {
+   "id": "T20",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "SKIP exit 0",
+   "ok": true,
+   "detail": "WARN    SKIP MANIFEST.md5: checksum list, not something Maxwell sees",
+   "why": "real MANIFEST.md5 checksum list is not something Maxwell sees",
+   "source": "real incident: Auditor's 284885f0 false-BLOCKed MANIFEST.md5 (audit/stage-final-5ae35bf3-2026-11-01.md:12)"
+  },
+  {
+   "id": "T21",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "SKIP exit 0",
+   "ok": true,
+   "detail": "WARN    SKIP renders-MANIFEST.md5: checksum list, not something Maxwell sees",
+   "why": "real renders-MANIFEST.md5 must not block",
+   "source": "same incident (284885f0)"
+  },
+  {
+   "id": "T22",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "WARN    DOC-MENTION FAIL-WORD F-locked \"locked\" in chk1B-rerun.log:22 [line]: \"visible unlock/locked strings: []\" (fail word)",
+   "why": "real .log report must not block (council notes)",
+   "source": "same incident: reports/chk1B-rerun.log false-BLOCKed by 284885f0"
+  },
+  {
+   "id": "T23",
+   "required": true,
+   "recorded": false,
+   "expect": "WARN:CAPTIONS-UNCHECKED",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "WARN    CAPTIONS-UNCHECKED t23.png: sidecar showcase/t23.png.sources.txt lists 2 sources but no \"caption\" lines, so text the sheet builder drew (title",
+   "why": "sheet with 2 sources and no caption lines must warn that captions were not checked",
+   "source": "g3 N11c; r2h stage showcase sidecars"
+  },
+  {
+   "id": "T24",
+   "required": true,
+   "recorded": false,
+   "expect": "UNVERIFIED",
+   "got": "TEXT UNVERIFIED exit 1",
+   "ok": true,
+   "detail": "BLOCK   TEXT UNVERIFIED orphan.png: no sidecar .sources.txt, same-name .html, tour entry or builder script found in snap-t",
+   "why": "PNG with no sidecar, html or builder must read TEXT UNVERIFIED, never PASS",
+   "source": "provenance rule: an image whose text cannot be traced reads TEXT UNVERIFIED (README; r2h sidecars with no html hash, Council Nov 1)"
+  },
+  {
+   "id": "T25",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "",
+   "why": "control: live tapPrompt wording (t440u) must pass",
+   "source": "README not_retired tapPrompt"
+  },
+  {
+   "id": "T26",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "",
+   "why": "control: 'Maxwell', 'nursery', '9110' are not never-words",
+   "source": "g3 N05d"
+  },
+  {
+   "id": "T27",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "",
+   "why": "control: PASTE content card bh-24 is allowed",
+   "source": "README allow list"
+  },
+  {
+   "id": "T28",
+   "required": true,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "WARN    UNFROZEN-SOURCE 2 of 2 render sources are outside the snapshot (marked [outside snapshot] above); they are checked as they are now, guarded on",
+   "why": "control: clean caption lines",
+   "source": "g3 N11b"
+  },
+  {
+   "id": "T29",
+   "required": false,
+   "recorded": false,
+   "expect": "NOT-BLOCK",
+   "got": "PASS exit 0",
+   "ok": true,
+   "detail": "WARN    DOC-MENTION RETIRED R3-shop-en \"Golden Pantry\" in notes.md:1 [line]: \"Rule: never \"Call Max\" or 911 in the app. Golden Pantry is retired.\" (t4",
+   "why": "council notes .md naming the rule warn only (policy)",
+   "source": "g3 N09"
+  },
+  {
+   "id": "T30",
+   "required": false,
+   "recorded": false,
+   "expect": "BLOCK|UNVERIFIED",
+   "got": "TEXT UNVERIFIED exit 1",
+   "ok": true,
+   "detail": "BLOCK   TEXT UNVERIFIED sheet.pdf: file type not readable by text-check (not png/jpg/webp/gif, html, svg or a text doc)",
+   "why": "a PDF sheet's text can't be read, so it must not pass silently",
+   "source": "g1 T11e"
+  }
+ ]
+}

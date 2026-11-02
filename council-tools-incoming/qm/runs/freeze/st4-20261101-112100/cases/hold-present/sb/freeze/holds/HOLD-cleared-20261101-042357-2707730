@@ -1,0 +1,10 @@
+{
+ "started": "2026-11-01 04:23 MST",
+ "started_epoch": 1793532237.3838558,
+ "snap": null,
+ "reason": "planted hold",
+ "by": "Quartermaster",
+ "manual": true,
+ "pid": 2707728,
+ "pointer_md5_at_hold": "f6dac2d0e7b391436a160eab1bbf17fe"
+}

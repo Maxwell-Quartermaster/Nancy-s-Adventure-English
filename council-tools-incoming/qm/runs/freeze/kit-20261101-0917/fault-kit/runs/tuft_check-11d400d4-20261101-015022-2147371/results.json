@@ -1,0 +1,83 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "tuft_check",
+ "path": "/workspace/audit/fault-kit/stubs/tuft_check_stub_alwaysflag.py",
+ "md5": "11d400d4d07dd2b0a232a396799c1f5d",
+ "exit": 1,
+ "required": [
+  2,
+  5
+ ],
+ "advisory": [
+  0,
+  0
+ ],
+ "rows": [
+  {
+   "id": "U01",
+   "required": true,
+   "recorded": false,
+   "expect": "PASS",
+   "got": "FLAG",
+   "ok": false,
+   "detail": "rock dot: stub flags everything",
+   "why": "control: approved tile 16 with its three-stroke tufts",
+   "source": "t441u approved look; W24-walk-B 3685711d"
+  },
+  {
+   "id": "U02",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG",
+   "got": "FLAG",
+   "ok": true,
+   "detail": "rock dot: stub flags everything",
+   "why": "(a) old-look yellow circle dot (#FFE27A, r 3 pt) on open grass at (110,515) pt must be flagged",
+   "source": "Maxwell t527u: replace circle dots on grass with tufts (SETTLED-RULINGS A26); t545u"
+  },
+  {
+   "id": "U03",
+   "required": true,
+   "recorded": false,
+   "expect": "PASS",
+   "got": "FLAG",
+   "ok": false,
+   "detail": "rock dot: stub flags everything",
+   "why": "(b) grey pebble on a bare-dirt patch (#A47B4F) must be left alone",
+   "source": "Maxwell t545u: dots on dirt are left alone"
+  },
+  {
+   "id": "U04",
+   "required": true,
+   "recorded": false,
+   "expect": "PASS",
+   "got": "FLAG",
+   "ok": false,
+   "detail": "rock dot: stub flags everything",
+   "why": "(c) grey pebble on a sand/path strip (#EAD7A0) must be left alone",
+   "source": "Maxwell t545u: dots on path/sand are left alone"
+  },
+  {
+   "id": "U05",
+   "required": false,
+   "recorded": true,
+   "expect": "RECORD",
+   "got": "FLAG",
+   "ok": null,
+   "detail": "rock dot: stub flags everything",
+   "why": "(d) EDGE CASE: pebble centred on the grass/dirt boundary of the dirt patch; result recorded, never graded",
+   "source": "t545u scope boundary (Auditor brief Nov 1)"
+  },
+  {
+   "id": "U06",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG",
+   "got": "FLAG",
+   "ok": true,
+   "detail": "rock dot: stub flags everything",
+   "why": "pebble on dirt (keep) AND a circle dot on grass in one image: the grass dot must still be flagged",
+   "source": "t545u: leaving pebbles alone must not hide a real grass dot"
+  }
+ ]
+}

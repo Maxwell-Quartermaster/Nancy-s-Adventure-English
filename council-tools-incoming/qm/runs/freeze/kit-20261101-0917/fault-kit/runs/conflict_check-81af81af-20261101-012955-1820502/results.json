@@ -1,0 +1,47 @@
+{
+ "kit": "fault-kit v1",
+ "tool": "conflict_check",
+ "path": "/workspace/audit/fault-kit/stubs/conflict_check_stub_flagall.py",
+ "md5": "81af81afefa8ce7e157255ad1751af9e",
+ "exit": 1,
+ "required": [
+  0,
+  3
+ ],
+ "advisory": [
+  0,
+  0
+ ],
+ "rows": [
+  {
+   "id": "C1",
+   "required": true,
+   "expect": "exit 1 flag [388] not [203, 249, 411]",
+   "got": "exit 1 hits [1, 203, 249, 260, 388, 411]",
+   "ok": false,
+   "detail": "missed [] wrongly flagged [203, 249, 411]",
+   "why": "dropping 'red ... but boss bars' from rule 9 leaves :388 'No red fills but boss bars.' contradicting it; :203/:249/:411 are wrong-tap / silent 'no red' rules that still hold and must not be flagged",
+   "source": "real incident: rule 9 change nearly left :388 contradicting it (caught only by a hand search for 'red'), Council Nov 1; PASTE 317e91ce"
+  },
+  {
+   "id": "C2",
+   "required": true,
+   "expect": "exit 0 flag [] not [203, 249, 260, 388, 411]",
+   "got": "exit 1 hits [1, 203, 249, 260, 388, 411]",
+   "ok": false,
+   "detail": "missed [] wrongly flagged [203, 249, 260, 388, 411]",
+   "why": "control: an unchanged line must report nothing",
+   "source": "control"
+  },
+  {
+   "id": "C3",
+   "required": true,
+   "expect": "exit 0 flag [] not [203, 249, 260, 388, 411]",
+   "got": "exit 1 hits [1, 203, 249, 260, 388, 411]",
+   "ok": false,
+   "detail": "missed [] wrongly flagged [203, 249, 260, 388, 411]",
+   "why": "control: a change that only adds an emphasis word removes no ruling",
+   "source": "control"
+  }
+ ]
+}

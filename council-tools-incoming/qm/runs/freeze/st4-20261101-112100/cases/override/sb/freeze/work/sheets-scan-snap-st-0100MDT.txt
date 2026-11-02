@@ -1,0 +1,4 @@
+BASE pointer 43e34528 (/workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/override/sb/freeze/work/precheck-snap-st-0100MDT-1793532266-2709453/CURRENT-SNAP.txt); ground_check ae61b2a9
+PASS  /workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/override/stage/sheets/05-map-day1-390x844.png [whole]
+PASS  /workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/override/stage/showcase/showcase-1-opening.png [whole]
+RESULT PASS=2 BLOCK=0 ERROR=0 SKIP=0 exit 0

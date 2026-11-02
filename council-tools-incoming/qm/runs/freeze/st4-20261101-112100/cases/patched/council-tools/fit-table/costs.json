@@ -1,0 +1,21 @@
+{
+ "note": "Edit only from measured md5s. Bank = chars banked under 188,200 after the trim and bug fixes.",
+ "bank": 403,
+ "screen26": {
+  "A": 0,
+  "B": 36,
+  "C'": 82,
+  "D": 36
+ },
+ "asks": {
+  "letter game": 413,
+  "state pairs": 367
+ },
+ "ramp": 40,
+ "savings": {
+  "night title B": 60,
+  "B1 B": 11
+ },
+ "manifest": "3bee8d98 (snap-r2g-2326MDT)",
+ "ceiling": 188200
+}

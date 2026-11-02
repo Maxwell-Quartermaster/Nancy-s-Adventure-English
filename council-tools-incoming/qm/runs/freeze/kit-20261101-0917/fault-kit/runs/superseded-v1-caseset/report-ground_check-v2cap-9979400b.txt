@@ -1,0 +1,40 @@
+fault-kit v1 | run_kit e0347e78dc2b418c2c599c91cc0ff6ac | tool ground_check /workspace/watchman/gc-radius/v2cap/ground_check.py md5 9979400bd8731c019fdacebc5ead81ea (run on copy /workspace/audit/fault-kit/runs/ground_check-9979400b-20261101-013120-1821155/tool/ground_check.py)
+cases /workspace/audit/fault-kit/cases/ground_check/cases.json md5 ebbdf6d72b07cee0c8866c1e040ad256 | 34 cases | 2026-11-01 01:31 MST
+PASS | G01                                              | required | want PASS | got PASS | 
+PASS | G02                                              | required | want BLOCK | got BLOCK | floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot
+PASS | G03                                              | required | want BLOCK | got BLOCK | path stroke: 2638 px (min 290) in box x44-638 y403-1135
+PASS | G04                                              | required | want PASS | got PASS | 
+PASS | G05                                              | required | want BLOCK | got BLOCK | floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot
+PASS | G06                                              | required | want BLOCK | got BLOCK | path stroke: 2979 px (min 290) in box x44-638 y403-1135
+PASS | G07                                              | required | want PASS | got PASS | 
+PASS | G08                                              | required | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot
+PASS | G09                                              | required | want BLOCK | got BLOCK | path stroke: 5682 px (min 449) in box x292-530 y1151-1279
+PASS | G10                                              | required | want PASS | got PASS | 
+PASS | G11                                              | required | want PASS | got PASS | 
+PASS | G12                                              | required | want BLOCK | got BLOCK | path stroke: 4066 px (min 3005) in box x104-3438 y865-1597
+PASS | G13                                              | required | want BLOCK | got BLOCK | path stroke: 6964 px (min 3005) in box x104-3438 y865-1597
+PASS | G14                                              | required | want BLOCK | got BLOCK | floating tree: trunk x666-673 y777-791, no grass in the 5 px below its foot
+PASS | G15                                              | required | want BLOCK | got BLOCK | floating tree: trunk x3406-3413 y777-791, no grass in the 5 px below its foot
+PASS | G16                                              | required | want BLOCK | got BLOCK | path stroke: 3865 px (min 3005) in box x104-3438 y914-1597 [dimmed x0.6]
+FAIL | G17                                              | required | want BLOCK | got PASS | 
+FAIL | G18                                              | required | want BLOCK | got PASS | 
+FAIL | G19                                              | required | want BLOCK | got PASS | 
+FAIL | G20                                              | required | want PASS | got BLOCK | path stroke: 10766 px (min 3005) in box x104-3438 y863-1593 [dimmed x0.7]
+PASS | G21                                              | required | want PASS | got PASS | 
+PASS | G22                                              | required | want PASS | got PASS | 
+PASS | G23                                              | required | want BLOCK | got BLOCK | path stroke: 4253 px (min 1249) in box x104-1390 y865-1597
+PASS | G24                                              | required | want BLOCK | got BLOCK | path stroke: 9851 px (min 526) in box x120-545 y746-1447 [dimmed x0.6] ; floating tree: trunk x741-750 y582-599, no grass in the 6 px below its foot [dimmed x0.6]
+PASS | G25                                              | required | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot [dimmed x0.8]
+PASS | G26                                              | required | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot [dimmed x0.7]
+PASS | G27                                              | required | want BLOCK | got BLOCK | path stroke: 5687 px (min 449) in box x292-729 y1151-1309 [dimmed x0.65]
+PASS | G28                                              | required | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot [dimmed x0.8]
+PASS | G29                                              | required | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot [dimmed x0.65]
+PASS | G30                                              | required | want PASS | got PASS | 
+PASS | G31                                              | advisory | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot [dimmed x0.5]
+PASS | G32                                              | advisory | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot [dimmed x0.45]
+FAIL | G33                                              | advisory | want BLOCK | got PASS | 
+PASS | G34                                              | advisory | want PASS | got PASS | 
+TOTAL ground_check 9979400b: required 26/30 PASS, advisory 3/4 PASS -> KIT FAIL (exit 1); 224 s; live pointer unchanged
+failed required: G17, G18, G19, G20
+results /workspace/audit/fault-kit/runs/ground_check-9979400b-20261101-013120-1821155/results.json
+EXIT 1

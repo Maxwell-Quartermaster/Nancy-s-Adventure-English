@@ -1,0 +1,366 @@
+{
+ "tool": "ground_check",
+ "interface": "python module exposing check(path) -> list of problem strings; [] = PASS, non-empty = BLOCK (council-tools/ground-check/README.md)",
+ "source_dir": "images copied from /workspace/audit/gc-cap-gate/planted/ and /workspace/audit/gc-cap-gate/dimin/ (built by planted.py / gc_cap.py selftest / dimrun.py)",
+ "dim_rule": "required = scenes at or brighter than the real pause-card scrim (screen 48 = x0.6); stronger dims are advisory. Decided from the real scrim, not from any tool's result.",
+ "cases": [
+  {
+   "id": "G01",
+   "file": "tile-A-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean 320x568@2x render tile A (control)",
+   "source": "gc-cap-gate planted.py tile-A-clean"
+  },
+  {
+   "id": "G02",
+   "file": "tile-A-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "tree lifted 152 px off the grass (planted floating tree)",
+   "source": "Maxwell t467u/t476u floating tree on tiles 6/11/12/15; planted.py plant_float"
+  },
+  {
+   "id": "G03",
+   "file": "tile-A-path.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "old scene path stroke painted on grass",
+   "source": "retired brush-stroke walkway (A19 t472u/t473u); planted.py plant_path"
+  },
+  {
+   "id": "G04",
+   "file": "tile-D-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean tile D (control)",
+   "source": "planted.py"
+  },
+  {
+   "id": "G05",
+   "file": "tile-D-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree, tile D",
+   "source": "planted.py plant_float"
+  },
+  {
+   "id": "G06",
+   "file": "tile-D-path.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "path stroke, tile D",
+   "source": "planted.py plant_path"
+  },
+  {
+   "id": "G07",
+   "file": "tile6-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean tile 6 (control)",
+   "source": "gc_cap.py selftest scratch"
+  },
+  {
+   "id": "G08",
+   "file": "tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree on tile 6",
+   "source": "Maxwell t467u: tile 6 tree back up in the air"
+  },
+  {
+   "id": "G09",
+   "file": "tile6-planted-path.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "path stroke on tile 6",
+   "source": "gc_cap.py selftest"
+  },
+  {
+   "id": "G10",
+   "file": "sheet5-real-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "real clean 5-tile options sheet must not false-block",
+   "source": "real incident: ground_check f46a2d29 false-blocked screen26 5-tile sheet (cap fix, gc-cap-gate out-planted.txt)"
+  },
+  {
+   "id": "G11",
+   "file": "night-real-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "real clean night-title sheet (control)",
+   "source": "council-images/picks-20261101 night-title sheet"
+  },
+  {
+   "id": "G12",
+   "file": "sheet5-real-path-in-A.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "one-tile path stroke inside a 5-tile sheet (tile A)",
+   "source": "one bad tile hidden in a big sheet; planted.py onto_real"
+  },
+  {
+   "id": "G13",
+   "file": "sheet5-real-path-in-Crest.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "one-tile path stroke inside a 5-tile sheet (middle tile)",
+   "source": "planted.py onto_real"
+  },
+  {
+   "id": "G14",
+   "file": "sheet5-real-float-in-A.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "one floating tree inside a 5-tile sheet (tile A)",
+   "source": "planted.py onto_real"
+  },
+  {
+   "id": "G15",
+   "file": "sheet5-real-float-in-D.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "one floating tree inside a 5-tile sheet (tile D)",
+   "source": "planted.py onto_real"
+  },
+  {
+   "id": "G16",
+   "file": "sheet5-real-path-in-A-sheetdim65.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "5-tile sheet with a path in tile A, whole sheet dimmed x0.65",
+   "source": "pause-scrim blind spot (LESSONS.md: tile 25 under pause card read PASS)"
+  },
+  {
+   "id": "G17",
+   "file": "sheet5-real-path-in-A-tiledim65.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "path in tile A, only that tile dimmed x0.65 inside the sheet",
+   "source": "pause-scrim blind spot; planted.py tiledim65"
+  },
+  {
+   "id": "G18",
+   "file": "sheet5-real-float-in-A-tiledim65.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree in tile A, that tile dimmed x0.65 (dimmed floating tree)",
+   "source": "real incident: v2 missed a dimmed floating tree; planted.py tiledim65"
+  },
+  {
+   "id": "G19",
+   "file": "sheet5-real-float-in-D-tiledim65.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree in tile D, that tile dimmed x0.65",
+   "source": "real incident: v2 missed a dimmed floating tree"
+  },
+  {
+   "id": "G20",
+   "file": "sheet5-real-clean-sheetdim65.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean 5-tile sheet dimmed x0.65 must not false-block",
+   "source": "control for G16 (dim fix must not trade one bug for another)"
+  },
+  {
+   "id": "G21",
+   "file": "sheet5-real-clean-tileD-dim65.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean sheet with one clean tile dimmed x0.65",
+   "source": "control for G17-G19"
+  },
+  {
+   "id": "G22",
+   "file": "synth3-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean synthetic 3-tile sheet",
+   "source": "planted.py synth"
+  },
+  {
+   "id": "G23",
+   "file": "crop2-real-path-in-B.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "2-tile crop with path in tile B",
+   "source": "planted.py crop2"
+  },
+  {
+   "id": "G24",
+   "file": "screens-v608--48-continue-after-pause.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "real screen 48 under the pause card: its HTML draws the old stroke and a floating tree under a x0.6 scrim",
+   "source": "real incident: LESSONS.md, tile 25 = screen 48 read PASS on live ground_check"
+  },
+  {
+   "id": "G25",
+   "file": "dim15-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree under a light scrim (~x0.8)",
+   "source": "dimrun.py"
+  },
+  {
+   "id": "G26",
+   "file": "dim30-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree under a ~x0.65-0.7 scrim (dimmed floating tree)",
+   "source": "real incident: dimmed floating tree missed; dimrun.py"
+  },
+  {
+   "id": "G27",
+   "file": "dim30-tile6-planted-path.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "path under a ~x0.65 scrim",
+   "source": "dimrun.py"
+  },
+  {
+   "id": "G28",
+   "file": "ov15-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree, uniform x0.85 dim",
+   "source": "dimrun.py ov15"
+  },
+  {
+   "id": "G29",
+   "file": "ov35-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "floating tree, uniform x0.65 dim (pause-scrim strength)",
+   "source": "dimrun.py ov35"
+  },
+  {
+   "id": "G30",
+   "file": "ov35-tile6-clean.png",
+   "expect": "PASS",
+   "required": true,
+   "why": "clean tile 6, uniform x0.65 dim (control)",
+   "source": "dimrun.py ov35"
+  },
+  {
+   "id": "G31",
+   "file": "dim50-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": false,
+   "why": "floating tree under a x0.5 scrim (stronger than the real pause card)",
+   "source": "dimrun.py"
+  },
+  {
+   "id": "G32",
+   "file": "ov55-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": false,
+   "why": "floating tree, x0.45 dim",
+   "source": "dimrun.py ov55"
+  },
+  {
+   "id": "G33",
+   "file": "ov65-tile6-planted-float.png",
+   "expect": "BLOCK",
+   "required": false,
+   "why": "floating tree, x0.35 dim",
+   "source": "dimrun.py ov65"
+  },
+  {
+   "id": "G34",
+   "file": "ov65-tile6-clean.png",
+   "expect": "PASS",
+   "required": false,
+   "why": "clean tile 6, x0.35 dim (control for G33)",
+   "source": "dimrun.py ov65"
+  },
+  {
+   "id": "G35",
+   "path": "sheets/S01-park-390x844.png",
+   "mode": "panels",
+   "expect": "PASS",
+   "required": true,
+   "why": "real 4-panel S01 park sheet, judged per panel (kit splits at the cream gaps): the pale hill arc is not a path",
+   "source": "S01 04d39532 (scene-fill-20261101); watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G36",
+   "path": "sheets/S01-park-390x844.png",
+   "expect": "RECORD",
+   "required": false,
+   "why": "same S01 sheet judged whole: records whether the tool joins hill-arc pieces across panels into one 'path stroke'",
+   "source": "watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G37",
+   "path": "sheets/S03-pond-390x844.png",
+   "mode": "panels",
+   "expect": "PASS",
+   "required": true,
+   "why": "real 4-panel S03 pond sheet per panel: hill arc only, no path",
+   "source": "S03 ad02c96a; watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G38",
+   "path": "sheets/S03-pond-390x844.png",
+   "expect": "RECORD",
+   "required": false,
+   "why": "S03 judged whole (records the cross-panel join)",
+   "source": "watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G39",
+   "path": "sheets/S04-pond-320x568.png",
+   "mode": "panels",
+   "expect": "PASS",
+   "required": true,
+   "why": "real 4-panel S04 pond 320 sheet per panel: hill arc only",
+   "source": "S04 e10b9581; watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G40",
+   "path": "sheets/S04-pond-320x568.png",
+   "expect": "RECORD",
+   "required": false,
+   "why": "S04 judged whole",
+   "source": "watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G41",
+   "path": "sheets/S02-park-320x568.png",
+   "mode": "panels",
+   "expect": "PASS",
+   "required": false,
+   "why": "S02 park 320 per panel: hill arc plus the letterbox side bars (the known 320 ASK), so advisory",
+   "source": "S02 8fe1165e; watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G42",
+   "path": "sheets/S02-park-320x568.png",
+   "expect": "RECORD",
+   "required": false,
+   "why": "S02 judged whole",
+   "source": "watchman/s01-s04-eye/REPORT.md 279fac1b (Watchman: f46a2d29 read 4 BLOCK 'path stroke', eye verdict 4 false hits; hill-arc pieces in neighbouring panels join across the cream gaps)"
+  },
+  {
+   "id": "G43",
+   "path": "sheets/S01-path-in-panel1.png",
+   "mode": "panels",
+   "expect": "BLOCK",
+   "required": true,
+   "why": "true positive: old path stroke (26 pt, #E8D9A8 @ .85) painted on the grass of panel 1 only (2976 px); per-panel check must still BLOCK",
+   "source": "tools/make_planted.py on S01 04d39532; retired brush-stroke walkway (A19 t472u/t473u)"
+  },
+  {
+   "id": "G44",
+   "path": "sheets/S01-path-in-panel1.png",
+   "expect": "RECORD",
+   "required": false,
+   "why": "same true positive judged whole (recorded)",
+   "source": "tools/make_planted.py"
+  }
+ ],
+ "multi_panel": "mode=panels: run_kit splits the sheet with cases/ground_check/panels.py and runs check() on each panel crop; BLOCK if any panel blocks."
+}

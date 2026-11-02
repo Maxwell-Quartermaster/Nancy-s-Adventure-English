@@ -1,0 +1,213 @@
+{
+ "_about": "text-check word lists (Instructor lane, QM split 12:4x AM MDT Nov 1). Regexes are Python re, matched case-insensitively on user-visible text only (render-source text nodes and alt/aria-label/title/placeholder/value attributes; sheet captions; never the PASTE spec prose). Add an entry = add an object; every entry cites the decision it comes from.",
+ "retired": [
+  {
+   "id": "R1-ask-en",
+   "lang": "en",
+   "regex": "\\bWhere is the\\b",
+   "was": "uiText.tapPrompt.en 'Where is the {word}?' (snap-1748MDT PASTE 95a4d0fc)",
+   "now_path": "uiText.tapPrompt.en",
+   "now_must_not_match": true,
+   "decision": "Maxwell t440u (QM-relayed), round 2 P1: tapPrompt -> 'Can you find the {word}?'. P1 scope is narrow: sentence cards keep their own en/th asks (e.g. bh-24 'Where is the bathroom?'), so a hit inside a current PASTE card sentence is allowed."
+  },
+  {
+   "id": "R2-ask-th",
+   "lang": "th",
+   "regex": "อยู่ที่ไหน",
+   "was": "uiText.tapPrompt.th '{word} อยู่ที่ไหน' (snap-1748MDT PASTE 95a4d0fc)",
+   "now_path": "uiText.tapPrompt.th",
+   "now_must_not_match": true,
+   "decision": "Maxwell t440u (QM-relayed), round 2 P1: Thai ask -> 'หา {word} เจอไหม'. Sentence cards keep their Thai (bh-10 'ห้องคลอดอยู่ที่ไหนคะ', bh-24 'ห้องน้ำอยู่ที่ไหนคะ'): allowed only as the whole current card sentence."
+  },
+  {
+   "id": "R3-shop-en",
+   "lang": "en",
+   "regex": "golden\\s+pantry|\\bpantry\\b",
+   "was": "uiText.pantry.en 'Golden Pantry'",
+   "now_path": "uiText.pantry.en",
+   "now_must_not_match": true,
+   "decision": "t487u: Golden Pantry renamed to Shop (code/r2e/instructor-shop-rename.py; player-facing words only, code keys uiText.pantry / pantry.items / pantryOwned stay and are never scanned because only visible text is checked)."
+  },
+  {
+   "id": "R4-shop-th",
+   "lang": "th",
+   "regex": "ตู้กับข้าว",
+   "was": "uiText.pantry.th 'ตู้กับข้าวทองคำ'",
+   "now_path": "uiText.pantry.th",
+   "now_must_not_match": true,
+   "decision": "t487u: Thai Shop name ตู้กับข้าวทองคำ -> ร้านดาวทอง (instructor-shop-rename.py)."
+  }
+ ],
+ "not_retired": [
+  {
+   "id": "L1-ask-en",
+   "path": "uiText.tapPrompt.en",
+   "must_match": "^Can you find the \\{word\\}\\?$",
+   "note": "live ask (t440u); never flag 'Can you find'"
+  },
+  {
+   "id": "L2-ask-th",
+   "path": "uiText.tapPrompt.th",
+   "must_match": "^หา \\{word\\} เจอไหม$",
+   "note": "live Thai ask (t440u)"
+  },
+  {
+   "id": "L3-shop",
+   "path": "uiText.pantry.en",
+   "must_match": "^Shop$",
+   "note": "live Shop name (t487u)"
+  }
+ ],
+ "fail_words": {
+  "_decision": "Grace-based game: PASTE 1.9 'Nothing red or alarming anywhere but boss bars (t495u)'; Never list 'no countdowns or wait timers, energy or lives'; 7.1 'No timer, nothing lost'; wrongText is 'Now you know it' / 'ตอนนี้รู้แล้วนะ'. None of these words appears in any current uiText/encouragement/reward string (checked on paste_1b 155f86bb), so any hit in UI text is off-spec unless it is a current PASTE content string (card en/th/choices, verses, jesusWords, soundDuel pairs).",
+  "en": [
+   {
+    "id": "F-wrong",
+    "regex": "\\bwrong\\b"
+   },
+   {
+    "id": "F-fail",
+    "regex": "\\bfail(?:s|ed|ure|ing)?\\b"
+   },
+   {
+    "id": "F-gameover",
+    "regex": "\\bgame\\s*over\\b"
+   },
+   {
+    "id": "F-tryagain",
+    "regex": "\\btry\\s+again\\b"
+   },
+   {
+    "id": "F-lives",
+    "regex": "\\blives\\b|\\blife\\s+lost\\b|\\blives?\\s+left\\b"
+   },
+   {
+    "id": "F-timesup",
+    "regex": "\\btime[’']?s\\s+up\\b|\\bout\\s+of\\s+time\\b"
+   },
+   {
+    "id": "F-hurry",
+    "regex": "\\bhurry\\b"
+   },
+   {
+    "id": "F-incorrect",
+    "regex": "\\bincorrect\\b"
+   },
+   {
+    "id": "F-lowhealth",
+    "regex": "\\blow\\s+health\\b"
+   },
+   {
+    "id": "F-danger",
+    "regex": "\\bdanger(?:ous)?\\b"
+   },
+   {
+    "id": "F-youlose",
+    "regex": "\\byou\\s+lose\\b|\\byou\\s+lost\\b"
+   },
+   {
+    "id": "F-911",
+    "regex": "\\b911\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01. Never-word: BLOCKs wherever it can be seen, sheet captions and helper text included, and no PASTE content string or warn-only path exempts it (QM condition, 2026-11-01).",
+    "never": true
+   },
+   {
+    "id": "F-callmax",
+    "regex": "\\bcall\\s+max\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01. Never-word: BLOCKs wherever it can be seen, sheet captions and helper text included, and no PASTE content string or warn-only path exempts it (QM condition, 2026-11-01).",
+    "never": true
+   },
+   {
+    "id": "F-nurse",
+    "regex": "\\bshow\\s+the\\s+nurse\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01. Never-word: BLOCKs wherever it can be seen, sheet captions and helper text included, and no PASTE content string or warn-only path exempts it (QM condition, 2026-11-01).",
+    "never": true
+   },
+   {
+    "id": "F-locked",
+    "regex": "\\blocked\\b|\\bpadlock(?:s|ed)?\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01. Bare 'lock' is a vocabulary card word, so it is not listed."
+   },
+   {
+    "id": "F-lost",
+    "regex": "\\blost\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01."
+   },
+   {
+    "id": "F-timer",
+    "regex": "\\btimers?\\b|\\bcount\\s*down\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01. Note: trophyRules.unlockTypes.secret says 'no timer'; it is not a content key, so it would block if ever rendered."
+   },
+   {
+    "id": "F-energy",
+    "regex": "\\benergy\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01."
+   },
+   {
+    "id": "F-leaderboard",
+    "regex": "\\bleader\\s*-?\\s*boards?\\b",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01."
+   }
+  ],
+  "th": [
+   {
+    "id": "F-th-wrong",
+    "regex": "ผิด",
+    "gloss": "wrong"
+   },
+   {
+    "id": "F-th-lose",
+    "regex": "แพ้",
+    "gloss": "lose (also 'allergic' in fd-33 แพ้อาหารอะไรไหม: allowed only as that whole card sentence)"
+   },
+   {
+    "id": "F-th-timeup",
+    "regex": "หมดเวลา",
+    "gloss": "time's up"
+   },
+   {
+    "id": "F-th-danger",
+    "regex": "อันตราย",
+    "gloss": "danger"
+   },
+   {
+    "id": "F-th-fail",
+    "regex": "ล้มเหลว",
+    "gloss": "failed"
+   },
+   {
+    "id": "F-th-locked",
+    "regex": "ถูกล็อ[คก]|ล็อ[คก]ไว้",
+    "gloss": "locked",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01. Not แม่กุญแจ: it is the lock card's own Thai."
+   },
+   {
+    "id": "F-th-timer",
+    "regex": "จับเวลา",
+    "gloss": "timer",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01."
+   },
+   {
+    "id": "F-th-energy",
+    "regex": "พลังงาน",
+    "gloss": "energy",
+    "decision": "Standing council rules (Maxwell, owner DM): never '911', 'Call Max' or 'Show the Nurse'; grace wording only: no locked, padlock, failed or lost; no timers, energy or leaderboards. Auditor gate 2026-11-01."
+   }
+  ]
+ },
+ "allow": {
+  "_decision": "A hit is allowed only when it sits inside a current paste_1b content string: the whole text node equals that string, or the string is 12+ characters long and covers the hit. Content = cards (every string field), verses, jesusWords, jesusWordsFallback, soundDuel. UI-chrome keys (uiText, encouragement, rewardText, wrongText, welcomeBack, gotItText, restScreen) are not allow sources.",
+  "content_keys": [
+   "cards",
+   "verses",
+   "jesusWords",
+   "jesusWordsFallback",
+   "soundDuel"
+  ],
+  "min_cover_len": 12
+ },
+ "thai_size": {
+  "min_px": 17,
+  "decision": "PASTE :35 'Thai stays 17 px+'; :63 'Thai: ... 17 px+'; :388 'Thai 17 px+'. Measured as computed CSS font-size (the rule domcheck_r2 uses); a transform-scaled size under 17 is a warning."
+ }
+}

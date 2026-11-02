@@ -1,0 +1,2 @@
+> for _w, _v in [('verses.rest.' + k, PJ['verses']['rest'][k]) for k in ('ref', 'en', 'th', 'enSource', 'thSource')] + [('jesusWords[0].' + k, PJ['jesusWords'][0][k]) for k in ('ref', 'en', 'th')]:   # Watchman gate f778b0bf B1: a blank verse field fails loudly, never renders blank
+>     if not isinstance(_v, str) or not _v.strip(): raise SystemExit('PASTE ' + _w + ' is missing or blank')

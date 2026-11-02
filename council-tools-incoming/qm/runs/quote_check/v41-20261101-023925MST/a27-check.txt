@@ -1,0 +1,58 @@
+== quote_check.py: **Maxwell (t561u):** "Keep everything else the same"
+ok   line 1: VERBATIM: "Keep everything else the same" - t561u matches a MAXWELL OWN row (SETTLED-RULINGS.md:168) (bare **Maxwell:** label; t-number read from the row)
+1 checked, 0 flagged (records: 149, PASTE 317e91ce)
+exit 0
+== quote_check.py: **Maxwell (t561u):** “AND sends an email to Maxwell's email address with "urgent" in the s
+ok   line 1: VERBATIM: "AND sends an email to Maxwell's email address with" - t561u matches a MAXWELL OWN row (SETTLED-RULINGS.md:168) (bare **Maxwell:** label; t-number read from the row)
+ok   line 1: VERBATIM: "in the subject line. Keep everything else the same" - t561u matches a MAXWELL OWN row (SETTLED-RULINGS.md:168) (bare **Maxwell:** label; t-number read from the row)
+2 checked, 0 flagged (records: 149, PASTE 317e91ce)
+exit 0
+== quote_check.py: **Maxwell (t560u):** "if he finds anything crazy, urgent, or a big deal (breaking news, se
+ok   line 1: VERBATIM: "if he finds anything crazy, urgent, or a big deal (breaking news, security threats, major opportunities, anything time-s" - t560u matches a MAXWELL OWN row (SETTLED-RULINGS.md:166) (bare **Maxwell:** label; t-number read from the heading)
+1 checked, 0 flagged (records: 149, PASTE 317e91ce)
+exit 0
+== quote_check.py: **Maxwell (t560u):** "if he finds anything crazy, urgent, or a big deal"
+FLAG line 1: ALTERED: "if he finds anything crazy, urgent, or a big deal" - t560u: quote is cut mid-sentence without a […cut…] marker. Record: "if he finds anything crazy, urgent, or a big deal (breaking news, security threats, major opportunities, anything time-sensitive), he must immediately involve the council (Quartermaster, Chancellor, Instructor, Auditor) and make sure Maxwell gets his attention right away - do not wait for the next scheduled briefing or status line."
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.py: **Maxwell (t560u):** "Keep everything else the same"
+FLAG line 1: WRONG-TNUM: "Keep everything else the same" - text matches MAXWELL OWN t561u (SETTLED-RULINGS.md:168), but the post cites t560u; cite t561u
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.py: **Maxwell (t561u):** "if he finds anything crazy, urgent, or a big deal (breaking news, se
+FLAG line 1: WRONG-TNUM: "if he finds anything crazy, urgent, or a big deal (breaking news, security threats, major opportunities, anything time-s" - text matches MAXWELL OWN t560u (SETTLED-RULINGS.md:166), but the post cites t561u; cite t560u
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.py: **Maxwell:** "Keep everything else the same"
+ok   line 1: VERBATIM: "Keep everything else the same" - text matches MAXWELL OWN t561u (SETTLED-RULINGS.md:168); add the t-number t561u
+1 checked, 0 flagged (records: 149, PASTE 317e91ce)
+exit 0
+== quote_check.v4.py: **Maxwell (t561u):** "Keep everything else the same"
+FLAG line 1: WRONG-TNUM: "Keep everything else the same" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:168), but the post cites t561u; cite 
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.v4.py: **Maxwell (t561u):** “AND sends an email to Maxwell's email address with "urgent" in the s
+FLAG line 1: WRONG-TNUM: "AND sends an email to Maxwell's email address with" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:168), but the post cites t561u; cite 
+FLAG line 1: WRONG-TNUM: "in the subject line. Keep everything else the same" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:168), but the post cites t561u; cite 
+2 checked, 2 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.v4.py: **Maxwell (t560u):** "if he finds anything crazy, urgent, or a big deal (breaking news, se
+FLAG line 1: WRONG-TNUM: "if he finds anything crazy, urgent, or a big deal (breaking news, security threats, major opportunities, anything time-s" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:166), but the post cites t560u; cite 
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.v4.py: **Maxwell (t560u):** "if he finds anything crazy, urgent, or a big deal"
+FLAG line 1: ALTERED: "if he finds anything crazy, urgent, or a big deal" - near match 0.86 to MAXWELL OWN  (SETTLED-RULINGS.md:166). Diff record->post: -[(breaking news, security threats, major opportunities, anything time-sensitive), he must immediately involve the council (Quartermaster, Chancellor, Instructor, Auditor) and make sure Maxwell gets his attention right away - do not wait for the next scheduled briefing or status line.]
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.v4.py: **Maxwell (t560u):** "Keep everything else the same"
+FLAG line 1: WRONG-TNUM: "Keep everything else the same" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:168), but the post cites t560u; cite 
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.v4.py: **Maxwell (t561u):** "if he finds anything crazy, urgent, or a big deal (breaking news, se
+FLAG line 1: WRONG-TNUM: "if he finds anything crazy, urgent, or a big deal (breaking news, security threats, major opportunities, anything time-s" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:166), but the post cites t561u; cite 
+1 checked, 1 flagged (records: 149, PASTE 317e91ce)
+exit 1
+== quote_check.v4.py: **Maxwell:** "Keep everything else the same"
+ok   line 1: VERBATIM: "Keep everything else the same" - text matches MAXWELL OWN  (SETTLED-RULINGS.md:168); add the t-number 
+1 checked, 0 flagged (records: 149, PASTE 317e91ce)
+exit 0

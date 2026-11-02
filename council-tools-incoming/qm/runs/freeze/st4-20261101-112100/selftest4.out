@@ -1,0 +1,94 @@
+--- C control: ground_check logger (snapshot file)
+PASS control: ground_check logger records a direct send_guard ground call
+--- 1-2 clean dry + real run
+PASS clean dry run: exit 0, DRY RUN CLEAN
+PASS clean dry run: checks_v608 ran (0 new live False)
+PASS clean dry run: no HOLD, pointer untouched, no snapshot dir
+PASS clean real run: exit 0
+PASS clean real run: sandbox pointer moved and verifies
+PASS clean real run: HOLD cleared, no HOLD.reason
+PASS clean real run: backup .pre-<snap> = old pointer
+PASS clean real run: pointer fields (snap, paste_1b_path in snap, chars, bank, updated MT)
+PASS clean real run: MANIFEST md5 = pointer, every listed md5 re-checks, renders-MANIFEST listed
+PASS clean real run: PASTE copy in trim-1B = source md5
+PASS clean real run (fault 9 pass case): copy2 kept every snapshot mtime = source mtime
+PASS carry default: every previous-snap file present in the new snap, md5-identical
+PASS carry default: carried files keep the previous snap mtimes (copy2)
+PASS carry default: DELTA lists carried/new/changed counts and per-file status
+PASS clean real run: HOLD, RESUME+SYNC and Watchman messages printed
+PASS clean real run: Watchman ping is exactly FREEZE <md5> <snap>, and is the last line before the sandbox note
+PASS clean real run: RESUME names pointer/snap/paste/chars/bank, Based-on sync proof, ack as backstop after release
+PASS clean real run: last-freeze.json FROZEN
+PASS [st3] clean real run: real sheets scan PASS on the 2 stage sheets/showcase images, ground_check only via sheets_scan.py
+--- 5 sendguard-exit3 no-op dry run
+PASS v3 sendguard_exit3 fault is a no-op (sheets leg always --no-ground): dry run exit 0
+--- 5d no-sheets (live tools) dry run
+PASS stage with no sheets/showcase (live tools): dry run exit 0, scan not needed
+--- 14 step6 rollback
+PASS step-6 failure: exit 1, REASON step 6
+PASS step-6 failure: pointer rolled back to the pre-freeze md5 automatically
+PASS step-6 failure: restored pointer names the old, complete snap (not the new one)
+--- 15 rollback-fails
+PASS rollback fails: HOLD kept, reason says POINTER MOVED ... NOT ROLLED BACK + restore command
+PASS rollback fails: --release refuses while the pointer does not verify
+--- 13 handmove
+PASS hand-moved pointer: exit 1 at step 5, refuses to write
+PASS hand-moved pointer: the hand edit is left as-is (not overwritten), HOLD kept
+--- 9 paste-copy
+PASS paste-copy: exit 1, REASON names step 4
+PASS paste-copy: HOLD kept + HOLD.reason written
+PASS paste-copy: sandbox pointer unchanged
+PASS paste copy mismatch: no snapshot at the final name
+--- 10 enospc
+PASS enospc: exit 1, REASON names step 4
+PASS enospc: HOLD kept + HOLD.reason written
+PASS enospc: sandbox pointer unchanged
+PASS ENOSPC: clean fail, no half-written snap at the final name, tmp named
+--- 12 plain-copy
+PASS plain-copy: exit 1, REASON names step 4
+PASS plain-copy: HOLD kept + HOLD.reason written
+PASS plain-copy: sandbox pointer unchanged
+PASS fault 9: plain copy (mtimes lost) fails the freeze
+--- 16 hold-present
+PASS HOLD present: exit 2, pointer unchanged
+PASS HOLD present + --force-clear: freeze runs, old HOLD archived
+--- 17 crash + stale HOLD
+PASS crash: process died, HOLD left, no reason
+PASS stale HOLD: --status exit 1 shows age and STALE
+PASS stale HOLD: freeze refuses without --force-clear (exit 2)
+PASS stale HOLD: --force-clear freezes cleanly
+--- 18 lock
+PASS lock held: second freeze refused (exit 2), no HOLD written
+PASS lock held: --release refused (exit 2)
+PASS two freezes at once: one runs (0), the other is refused (2)
+--- 21b override
+PASS stage overrides a carried file: exit 0, snap QUEUE.md = stage bytes, DELTA says stage-overrides
+--- 22 patched hold-check diff
+PASS hold-check diff applies cleanly to a copy
+PASS with the diff applied: a clean freeze still runs through its own HOLD (exit 0)
+PASS with the diff applied: send_guard BLOCKs (exit 1) during a HOLD
+PASS with the diff applied: current_snap.read raises HoldError during a HOLD
+PASS with the diff applied: after --release send_guard is CLEAR (exit 0)
+PASS FREEZE_TOOLS without --sandbox: exit 2
+PASS live CURRENT-SNAP.txt md5 is still f6dac2d0e7b391436a160eab1bbf17fe
+PASS no live HOLD left
+PASS [st3] live freeze/freeze.py still 91aa8a3e
+
+CASES:
+  RAN  C control: ground_check logger (snapshot file) [1 checks]  disk delta +0.4 MB
+  RAN  1-2 clean dry + real run [19 checks]  disk delta +264.5 MB
+  RAN  5 sendguard-exit3 no-op dry run [1 checks]  disk delta +76.8 MB
+  RAN  5d no-sheets (live tools) dry run [1 checks]  disk delta +77.5 MB
+  RAN  14 step6 rollback [3 checks]  disk delta +76.8 MB
+  RAN  15 rollback-fails [2 checks]  disk delta +76.8 MB
+  RAN  13 handmove [2 checks]  disk delta +76.8 MB
+  RAN  9 paste-copy [4 checks]  disk delta +76.9 MB
+  RAN  10 enospc [4 checks]  disk delta +77.1 MB
+  RAN  12 plain-copy [4 checks]  disk delta +76.8 MB
+  RAN  16 hold-present [2 checks]  disk delta +76.9 MB
+  RAN  17 crash + stale HOLD [4 checks]  disk delta +76.8 MB
+  RAN  18 lock [3 checks]  disk delta +76.8 MB
+  RAN  21b override [1 checks]  disk delta +76.8 MB
+  RAN  22 patched hold-check diff [6 checks]  disk delta +77.0 MB
+
+SELFTEST3 60/60 checks passed; skipped cases: 0 (0 checks)  (root /workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases; live pointer f6dac2d0e7b391436a160eab1bbf17fe; peak used 101,084,016,640 = 73.902%)

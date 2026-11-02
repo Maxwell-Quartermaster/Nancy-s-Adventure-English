@@ -1,0 +1,5 @@
+send-guard 80615576 current_snap ee1d3180 ground_check ae61b2a9 snap snap-r2h-0021MDT MANIFEST 7b7c357f renders-MANIFEST 62e41535
+pointer f6dac2d0 snap snap-r2h-0021MDT
+OK   2b14fcd0 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/routing/sb/snap-r2h-0021MDT/renders/r2h/png/05-map-day1-390x844.png = MANIFEST.md5:./renders/r2h/png/05-map-day1-390x844.png
+RESULT CLEAR: 1 files, 0 problems
+rc=0

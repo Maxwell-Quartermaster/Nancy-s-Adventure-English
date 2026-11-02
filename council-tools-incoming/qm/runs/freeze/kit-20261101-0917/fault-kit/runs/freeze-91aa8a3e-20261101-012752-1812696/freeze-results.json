@@ -1,0 +1,244 @@
+{
+ "live_pointer_before": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "live_pointer_after": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "rows": [
+  {
+   "id": "F0a-clean-dry-run",
+   "exit": 0,
+   "actual": "DRY RUN CLEAN",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F9-pass-copy2-clean-run",
+   "exit": 0,
+   "actual": "frozen; 675 MANIFEST lines, md5 mismatches 0, mtime mismatches 0 []; pointer moved True; HOLD=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F1a-fit-sheet-stale",
+   "exit": 1,
+   "actual": "REASON: step 3 render: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/env/council-tools/fit-table/fit_sheet_check.py: fit_sheet_check exit 1 (only 0 passes): STALE /workspace/audit/fault-kit/runs/freeze-91 | HOLD=True ptr_same=True left=['freeze/work/precheck-snap-fk-0100MDT-1793521682-1813288'] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F1b-sendguard-BLOCK-hook",
+   "exit": 1,
+   "actual": "REASON: step 3 render: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/env/council-tools/send-guard/send_guard.py: send_guard exit 1 (BLOCK): GRND planted BLOCK (Auditor gate hook) | HOLD=True ptr_same=True left=['freeze/work/precheck-snap-fk-0100MDT-1793521685-1813565'] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F1c-sendguard-exit3",
+   "exit": 1,
+   "actual": "REASON: step 3 render: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/env/council-tools/send-guard/send_guard.py: send_guard exit 3 (ground skipped (3 is not valid for a send)): GROUND SKIPPED (--no-ground | HOLD=True ptr_same=True left=['freeze/work/precheck-snap-fk-0100MDT-1793521686-1813818'] ",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F2a-handmove-FREEZE_FAULT",
+   "exit": 1,
+   "actual": "REASON: step 5 pointer: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F2a-handmove-FREEZE_FAULT/sb/CURRENT-SNAP.txt: pointer was moved by hand during the HOLD (f6dac2d0e7b391436a160eab1bbf17fe -> e4b3 | hand_edit_kept=True left=['snap-fk-0100MDT', 'freeze/work/precheck-snap-fk-0100MDT-1793521687-1814075']",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F2b-handmove-by-other-process-hook",
+   "exit": 1,
+   "actual": "REASON: step 5 pointer: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F2b-handmove-by-other-process-hook/sb/CURRENT-SNAP.txt: pointer was moved by hand during the HOLD (f6dac2d0e7b391436a160eab1bbf17f | hand_edit_kept=True left=['snap-fk-0100MDT', 'freeze/work/precheck-snap-fk-0100MDT-1793521692-1814350']",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F3a-crash_after_hold-FREEZE_FAULT",
+   "exit": 9,
+   "actual": "crash exit 9, status=1 STALE=True rerun=2 hold_check=1; force-clear rerun exit 0",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F3b-SIGKILL-mid-step3-hook",
+   "exit": -9,
+   "actual": "crash exit -9, status=1 STALE=True rerun=2 hold_check=1; force-clear rerun exit 0",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F4a-paste_copy_corrupt-FREEZE_FAULT",
+   "exit": 1,
+   "actual": "REASON: step 4 snapshot: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F4a-paste_copy_corrupt-FREEZE_FAULT/sb/.tmp-snap-fk-0100MDT-1815521/trim-1B/nancys-adventure-english-v6-08-PASTE.md: PASTE copy m | HOLD=True ptr_same=True left=['.tmp-snap-fk-0100MDT-1815521', 'freeze/work/precheck-snap-fk-0100MDT-1793521706-1815521'] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F4b-source-PASTE-changed-mid-freeze-hook",
+   "exit": 1,
+   "actual": "REASON: step 4 snapshot: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F4b-source-PASTE-changed-mid-freeze-hook/sb/.tmp-snap-fk-0100MDT-1815806/trim-1B/nancys-adventure-english-v6-08-PASTE.md: PASTE c | HOLD=True ptr_same=True left=['.tmp-snap-fk-0100MDT-1815806', 'freeze/work/precheck-snap-fk-0100MDT-1793521709-1815806'] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F5a-ENOSPC-FREEZE_FAULT",
+   "exit": 1,
+   "actual": "REASON: step 4 snapshot: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F5a-ENOSPC-FREEZE_FAULT/sb/.tmp-snap-fk-0100MDT-1816084/MANIFEST.md5: write failed (No space left on device (planted)); nothing r | HOLD=True ptr_same=True left=['.tmp-snap-fk-0100MDT-1816084', 'freeze/work/precheck-snap-fk-0100MDT-1793521712-1816084'] tmp_named=True",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F5b-unwritable-parent-EACCES",
+   "exit": 1,
+   "actual": "REASON: step 4 snapshot: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F5b-unwritable-parent-EACCES/sb/.tmp-snap-fk-0100MDT-1816353: write failed (Permission denied); nothing renamed into /workspace/a | HOLD=True ptr_same=True left=['freeze/work/precheck-snap-fk-0100MDT-1793521715-1816353'] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F6-lock-held",
+   "exit": 2,
+   "actual": "freeze 2 hold 2 release 2 HOLD=False | live pointer f6dac2d0e7b391436a160eab1bbf17fe unchanged (sandbox run)",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F7a-step6_bad_pointer-FREEZE_FAULT",
+   "exit": 1,
+   "actual": "REASON: step 6 current_snap: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F7a-step6_bad_pointer-FREEZE_FAULT/sb/CURRENT-SNAP.txt: current_snap self-check failed on the new pointer: current_snap 01135 | ptr_restored=True prev_manifest_ok=True left=['snap-fk-0100MDT', 'freeze/work/precheck-snap-fk-0100MDT-1793521718-1816638']",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F7b-step6-verify-fail-independent",
+   "exit": 1,
+   "actual": "REASON: step 6 current_snap: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F7b-step6-verify-fail-independent/sb/CURRENT-SNAP.txt: current_snap self-check failed on the new pointer: current_snap eb5767 | ptr_restored=True prev_manifest_ok=True left=['snap-fk-0100MDT', 'freeze/work/precheck-snap-fk-0100MDT-1793521721-1816906']",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F7c-rollback-fails",
+   "exit": 1,
+   "actual": "REASON: step 6 current_snap: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F7c-rollback-fails/sb/CURRENT-SNAP.txt: current_snap self-check failed on the new pointer: current_snap 90fe792bfb5f4d4bd7b7a | HOLD=True status=1 moved=True release=2",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8a-manual-HOLD-then-freeze",
+   "exit": 2,
+   "actual": "REFUSED: HOLD already present (/workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F8a-manual-HOLD-then-freeze/sb/freeze/HOLD, 0 min old): manual hold (fault kit); fix it and r | ptr_same=True",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8b-failed-freeze-HOLD-then-pointer-moved",
+   "exit": 1,
+   "actual": "first run exit 1; --status flags=True; hold_check flags=True; --force-clear exit 2 flags=True",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8c-manual-HOLD-pointer-moved-status-release",
+   "exit": 1,
+   "actual": "--status exit 1 flags=True; --release exit 0 MOVED=True",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8d-manual-HOLD-moved-force-clear",
+   "exit": 2,
+   "actual": "hold_check 1; force-clear 2 | ptr_left=True HOLD=True",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8e-pointer-restored-then-force-clear",
+   "exit": 0,
+   "actual": "frozen",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8f-moved-then-release-then-freeze",
+   "exit": 0,
+   "actual": "release 0 MOVED=True; freeze 0 ",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F9a-plain_copy-FREEZE_FAULT",
+   "exit": 1,
+   "actual": "REASON: step 4 snapshot: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F9a-plain_copy-FREEZE_FAULT/sb/.tmp-snap-fk-0100MDT-1818312/COSTS-and-LEDGER.md: mtime not preserved (1793521739 != source 179350 | HOLD=True ptr_same=True left=['.tmp-snap-fk-0100MDT-1818312', 'freeze/work/precheck-snap-fk-0100MDT-1793521737-1818312'] ",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10a-carried-QUEUE.md-appended",
+   "exit": 1,
+   "actual": "REASON: step 3 carry: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F10a-carried-QUEUE.md-appended/sb/snap-r2h-0021MDT/QUEUE.md: carried file md5 d4febe6fe53ab598b3215d635c0db68a != previous MANIFEST  | HOLD=True ptr_same=True left=[] final_snap=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10b-carried-png-1bit-flip-mtime-restored",
+   "exit": 1,
+   "actual": "REASON: step 3 carry: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F10b-carried-png-1bit-flip-mtime-restored/sb/snap-r2h-0021MDT/pick-sheets-b2b/B1-reward-pacing.png: carried file md5 0310fe95ed660f2 | HOLD=True ptr_same=True left=[] final_snap=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10c-carried-file-missing",
+   "exit": 1,
+   "actual": "REASON: step 3 carry: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F10c-carried-file-missing/sb/snap-r2h-0021MDT/QUEUE.md: 1 file(s) in the MANIFEST missing from snap-r2h-0021MDT | HOLD=True ptr_same=True left=[] final_snap=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10d-unlisted-file-in-prev-snap",
+   "exit": 1,
+   "actual": "REASON: step 3 carry: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F10d-unlisted-file-in-prev-snap/sb/snap-r2h-0021MDT/EXTRA-unlisted.md: 1 file(s) in snap-r2h-0021MDT not in its MANIFEST | HOLD=True ptr_same=True left=[] final_snap=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10e-carried-file-corrupted-AFTER-carry-check-hook",
+   "exit": 1,
+   "actual": "REASON: step 4 snapshot: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F10e-carried-file-corrupted-AFTER-carry-check-hook/sb/.tmp-snap-fk-0100MDT-1819606/QUEUE.md: copy md5 c2e86e6f287b8e5311e721ee435 | HOLD=True ptr_same=True left=['.tmp-snap-fk-0100MDT-1819606', 'freeze/work/precheck-snap-fk-0100MDT-1793521743-1819606'] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10f-file-and-prev-MANIFEST-both-edited",
+   "exit": 1,
+   "actual": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/F10f-file-and-prev-MANIFEST-both-edited/sb/CURRENT-SNAP.txt: pointer disagrees with disk: MANIFEST 727debe9 != pointer 7b7c357f | HOLD=True ptr_same=True left=[] final_snap=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S1-verse-byte-changed",
+   "exit": 1,
+   "actual": "REASON: step 2 content: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/S1-verse-byte-changed/stage/nancys-adventure-english-v6-08-daily-verses.json: verses not byte-identical to nancys-adventure-englis | HOLD=True ptr_same=True left=[] final_snap_exists=False",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S2-paste-over-188200-ceiling",
+   "exit": 1,
+   "actual": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/S2-paste-over-188200-ceiling/over-PASTE.md: 188,216 chars is over the 188,200 ceiling by 16 | HOLD=True ptr_same=True left=[] ",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S3-snap-dir-already-exists",
+   "exit": 1,
+   "actual": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/S3-snap-dir-already-exists/sb/snap-fk-0100MDT: snapshot dir already exists (refusing to overwrite) | HOLD=True ptr_same=True left=['snap-fk-0100MDT'] ",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S4-pointer-paste-md5-mismatch",
+   "exit": 1,
+   "actual": "REASON: step 1 preflight: /workspace/audit/fault-kit/runs/freeze-91aa8a3e-20261101-012752-1812696/sbx/S4-pointer-paste-md5-mismatch/sb/r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md: md5 6d525aa8d8cd842310f218a90269e638  | HOLD=True ptr_same=True left=[] ",
+   "verdict": "PASS",
+   "live_pointer_unchanged": true
+  }
+ ]
+}

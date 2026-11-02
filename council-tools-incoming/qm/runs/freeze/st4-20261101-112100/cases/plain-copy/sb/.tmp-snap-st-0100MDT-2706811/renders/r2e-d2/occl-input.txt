@@ -1,0 +1,9 @@
+d2/html/26-D2-320x568.html 320 568
+d2/html/26-D2-375x667.html 375 667
+d2/html/26-D2-390x844.html 390 844
+d2/html/zone-forest-ask-D2plate-320x568.html 320 568
+d2/html/zone-forest-ask-D2plate-375x667.html 375 667
+d2/html/zone-forest-ask-D2plate-390x844.html 390 844
+d2/html/zone-meadow-ask-D2plate-320x568.html 320 568
+d2/html/zone-meadow-ask-D2plate-375x667.html 375 667
+d2/html/zone-meadow-ask-D2plate-390x844.html 390 844

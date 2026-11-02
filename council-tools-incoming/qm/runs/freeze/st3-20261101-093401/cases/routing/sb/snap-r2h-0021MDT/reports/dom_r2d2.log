@@ -1,0 +1,9 @@
+26-D-320x568.html HUD 234 card 456 ok | dc1 issues: [['thaiCut', 'พระบิดาทรงรักเราอย่างไร ']]
+26-D-375x667.html HUD 244 card 463 ok | dc1 issues: [['thaiCut', 'พระบิดาทรงรักเราอย่างไร ']]
+26-D-375x812.html HUD 314 card 608 ok | dc1 issues: []
+24-guardian-run-entry-375x667.html HUD 131 card 463 ok | dc1 issues: []
+25-guardian-hint-letters-375x667.html HUD 131 card 463 ok | dc1 issues: []
+26-guardian-hint-jesus-words-375x667.html HUD 131 card 463 ok | dc1 issues: []
+27-guardian-kneels-375x667.html HUD 131 card 459 ok | dc1 issues: []
+28-guardian-win-375x667.html HUD 212 card 479 ok | dc1 issues: []
+TOTAL {"hud": 0, "edge": 0, "card": 0, "targets": 0}

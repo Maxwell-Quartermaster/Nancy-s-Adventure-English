@@ -1,0 +1,21 @@
+PASS A1-ledger-same-text-later-whole: expect VERBATIM; v3 [('VERBATIM',)] exit [0]; (v2 [('VERBATIM',)] exit [0])
+PASS A2-ledger-first-row-longer-later-row-whole: expect VERBATIM; v3 [('VERBATIM',)] exit [0]; (v2 [('VERBATIM',)] exit [0])
+PASS A3-ledger-one-row-two-quotes-whole-second: expect VERBATIM; v3 [('VERBATIM',)] exit [0]; (v2 [('VERBATIM',)] exit [0])
+PASS A4-ledger-altered: expect ALTERED; v3 [('ALTERED',)] exit [1]; (v2 [('ALTERED',)] exit [1])
+PASS A5-ledger-cut: expect ALTERED; v3 [('ALTERED',)] exit [1]; (v2 [('ALTERED',)] exit [1])
+PASS A6-ledger-cut-no-tnum: expect FLAG; v3 [('ALTERED',)] exit [1]; (v2 [('ALTERED',)] exit [1])
+PASS A7-ledger-whole-no-tnum: expect VERBATIM; v3 [('VERBATIM',)] exit [0]; (v2 [('VERBATIM',)] exit [0])
+PASS B1-ascii-inside-word-start: expect SPEC-CUT; v3 [('SPEC-CUT',)] exit [1]; (v2 [('SPEC-CUT',)] exit [1])
+PASS B2-ascii-inside-word-end: expect SPEC-CUT; v3 [('SPEC-CUT',)] exit [1]; (v2 [('SPEC-CUT',)] exit [1])
+PASS B3-T6c-thai-inside-longer-word: expect SPEC-CUT; v3 [('SPEC-CUT',)] exit [1]; (v2 [('SPEC-CUT',)] exit [1])
+PASS B4-thai-mid-verse-run: expect SPEC-CUT; v3 [('SPEC-CUT',)] exit [1]; (v2 [('SPEC-CUT',)] exit [1])
+PASS B5-T6b-thai-altered: expect SPEC-ALTERED; v3 [('SPEC-ALTERED',)] exit [1]; (v2 [('SPEC-ALTERED',)] exit [1])
+PASS B6-T6-thai-whole: expect SPEC-VERBATIM; v3 [('SPEC-VERBATIM',)] exit [0]; (v2 [('SPEC-VERBATIM',)] exit [0])
+PASS C1-multi-line-whole-later-Baby: expect SPEC-VERBATIM; v3 [('SPEC-VERBATIM',)] exit [0]; (v2 [('SPEC-VERBATIM',)] exit [0])
+PASS C2-multi-line-whole-later-Gentle: expect SPEC-VERBATIM; v3 [('SPEC-VERBATIM',)] exit [0]; (v2 [('SPEC-VERBATIM',)] exit [0])
+PASS C3-multi-line-whole-later-Gold: expect SPEC-VERBATIM; v3 [('SPEC-VERBATIM',)] exit [0]; (v2 [('SPEC-VERBATIM',)] exit [0])
+PASS C4-multi-line-whole-later-Big: expect SPEC-VERBATIM; v3 [('SPEC-VERBATIM',)] exit [0]; (v2 [('SPEC-VERBATIM',)] exit [0])
+TOTAL new 17/17
+PERF single T6: 0.05s
+PERF single Thai not-found (thai_near full scan): 0.07s
+PERF big post 752 spec-quote lines (all PASTE en/th values): 6.87s, exit 0, 535 checked, flagged 0

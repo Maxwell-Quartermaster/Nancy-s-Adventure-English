@@ -1,0 +1,230 @@
+{
+ "live_pointer_before": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "live_pointer_after": "f6dac2d0e7b391436a160eab1bbf17fe",
+ "rows": [
+  {
+   "id": "F0-clean",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F1a-fit-sheet-stale",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F1b-sendguard-BLOCK-hook",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F1c-sendguard-exit3",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F2a-handmove-FREEZE_FAULT",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F2b-handmove-by-other-process-hook",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F3a-crash_after_hold-FREEZE_FAULT",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F3b-SIGKILL-mid-step3-hook",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F4a-paste_copy_corrupt-FREEZE_FAULT",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F4b-source-PASTE-changed-mid-freeze-hook",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F5a-ENOSPC-FREEZE_FAULT",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F5b-unwritable-parent-EACCES",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F6-lock-held",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F7a-step6_bad_pointer-FREEZE_FAULT",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F7b-step6-verify-fail-independent",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F7c-rollback-fails",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8a-manual-HOLD-then-freeze",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8b-failed-freeze-HOLD-then-pointer-moved",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8c-manual-HOLD-pointer-moved-status-release",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8d-manual-HOLD-moved-force-clear",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F8f-moved-then-release-then-freeze",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F9a-plain_copy-FREEZE_FAULT",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10a-carried-QUEUE.md-appended",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10b-carried-png-1bit-flip-mtime-restored",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10c-carried-file-missing",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10d-unlisted-file-in-prev-snap",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10e-carried-file-corrupted-AFTER-carry-check-hook",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "F10f-file-and-prev-MANIFEST-both-edited",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S1-verse-byte-changed",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S2-paste-over-188200-ceiling",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S3-snap-dir-already-exists",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  },
+  {
+   "id": "S4-pointer-paste-md5-mismatch",
+   "exit": null,
+   "actual": "HARNESS EXCEPTION (counts as FAIL): RuntimeError: tool did not seed its --sandbox (no CURRENT-SNAP.txt) |                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+   "verdict": "FAIL",
+   "live_pointer_unchanged": true
+  }
+ ]
+}

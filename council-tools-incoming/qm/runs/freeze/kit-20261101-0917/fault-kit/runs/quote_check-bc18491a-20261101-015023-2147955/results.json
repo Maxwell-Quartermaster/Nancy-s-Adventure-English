@@ -1,0 +1,94 @@
+{
+ "kit": "fault-kit v1.1",
+ "tool": "quote_check",
+ "path": "/workspace/audit/fault-kit/stubs/quote_check_stub_alwaysflag.py",
+ "md5": "bc18491a09a54a1a9dbcc31f98e9ca60",
+ "exit": 1,
+ "required": [
+  5,
+  7
+ ],
+ "advisory": [
+  0,
+  0
+ ],
+ "rows": [
+  {
+   "id": "QA",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG:UNSOURCED",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": true,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "'**Maxwell:** ... no 0/85 counter' has no Maxwell row in the ledger (T12: Ara relay says he doesn't remember it)",
+   "source": "real slip: Auditor credited Chancellor's 'no 0/85 counter' ruling (Chancellor record t322u) to Maxwell; SETTLED-RULINGS T12"
+  },
+  {
+   "id": "QB",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG:TRUNCATED",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": true,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "rule 9 quoted as 'Nothing red or alarming anywhere'; PASTE :32 is '9. **Nothing red or alarming** anywhere but boss bars.'",
+   "source": "real slip: Auditor's rule 9 quote missing 'but boss bars' (Council, Nov 1)"
+  },
+  {
+   "id": "QC1",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG:RELAY",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": true,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "third-person 'Maxwell wants you to...' filed as **Maxwell (t490u):**; ledger P16 has it as an Ara relay",
+   "source": "QM, Council Nov 1: three relays filed as Maxwell's own words; SETTLED-RULINGS P16"
+  },
+  {
+   "id": "QC2",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG:RELAY",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": true,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "'Maxwell doesn't remember...' filed as **Maxwell (t102u):**; ledger T12 says Ara relay",
+   "source": "same incident; SETTLED-RULINGS T12"
+  },
+  {
+   "id": "QC3",
+   "required": true,
+   "recorded": false,
+   "expect": "FLAG:RELAY",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": true,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "'Maxwell is asking: ...' filed as **Maxwell (t476u):**; ledger A21 says Ara relay",
+   "source": "same incident; SETTLED-RULINGS A21"
+  },
+  {
+   "id": "QD1",
+   "required": true,
+   "recorded": false,
+   "expect": "CLEAN",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": false,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "verbatim own words with the ledger's label (A02 t405u)",
+   "source": "SETTLED-RULINGS A02"
+  },
+  {
+   "id": "QD2",
+   "required": true,
+   "recorded": false,
+   "expect": "CLEAN",
+   "got": "exit 1 flags ['UNSOURCED', 'TRUNCATED', 'RELAY']",
+   "ok": false,
+   "detail": "FLAG RELAY 1: stub",
+   "why": "a relay labelled as Ara (relay) plus rule 9 quoted in full is correct",
+   "source": "SETTLED-RULINGS P16 + PASTE 317e91ce :32"
+  }
+ ]
+}

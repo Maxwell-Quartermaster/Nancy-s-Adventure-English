@@ -1,0 +1,6 @@
+send-guard 80615576 current_snap ee1d3180 ground_check ae61b2a9 snap snap-st-0100MDT MANIFEST efff066a renders-MANIFEST 963bc0e2
+pointer ca94a0bc snap snap-st-0100MDT
+OK   2b14fcd0 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/handmove/stage/sheets/05-map-day1-390x844.png = MANIFEST.md5:./sheets/05-map-day1-390x844.png
+OK   8dcce473 /workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/handmove/stage/showcase/showcase-1-opening.png = MANIFEST.md5:./showcase/showcase-1-opening.png
+RESULT CLEAR: 2 files, 0 problems
+GROUND SKIPPED (--no-ground): test only, NOT valid for a send to Maxwell

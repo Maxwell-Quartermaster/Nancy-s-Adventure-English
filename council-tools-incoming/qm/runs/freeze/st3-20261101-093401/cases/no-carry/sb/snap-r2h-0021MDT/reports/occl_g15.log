@@ -1,0 +1,53 @@
+===== /workspace/screens-v608/html/24-guardian-run-entry-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -65, 319, 622], "cov": {"path": 3, "card:\"เดิน sit walk eat work\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🚶\"", "el": "svg", "hid": false, "r": [0, -65, 319, 622], "cov": {"card:\"เดิน sit walk eat work\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/24-guardian-run-entry-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [30, -51, 344, 626], "cov": {"path": 3, "card:\"เดิน sit walk eat work\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🚶\"", "el": "svg", "hid": false, "r": [30, -51, 344, 626], "cov": {"card:\"เดิน sit walk eat work\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/24-guardian-run-entry-375x812.html 375 812
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -7, 375, 804], "cov": {"path": 3, "card:\"เดิน sit walk eat work\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🚶\"", "el": "svg", "hid": false, "r": [0, -7, 375, 804], "cov": {"card:\"เดิน sit walk eat work\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/25-guardian-hint-letters-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [1, -64, 318, 619], "cov": {"path": 3, "card:\"t____ /th/ ขึ้นต้นด้วยเส\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [1, -64, 318, 619], "cov": {"card:\"t____ /th/ ขึ้นต้นด้วยเส\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/25-guardian-hint-letters-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [30, -51, 344, 626], "cov": {"path": 3, "card:\"t____ /th/ ขึ้นต้นด้วยเส\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [30, -51, 344, 626], "cov": {"card:\"t____ /th/ ขึ้นต้นด้วยเส\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/25-guardian-hint-letters-375x812.html 375 812
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -8, 375, 802], "cov": {"path": 3, "card:\"t____ /th/ ขึ้นต้นด้วยเส\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -8, 375, 802], "cov": {"card:\"t____ /th/ ขึ้นต้นด้วยเส\"": 3, "path": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/26-guardian-hint-jesus-words-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -65, 319, 622], "cov": {"path": 3, "card:\"คิด eat sink three think\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -65, 319, 622], "cov": {"card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 4, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [98, 263, 180, 446], "cov": {"div:\"Words of Jesus · John 15\"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 6}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [193, 252, 279, 446], "cov": {"div:\"Words of Jesus · John 15\"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 6}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [193, 246, 279, 310], "cov": {"div:\"Words of Jesus · John 15\"": 3}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [245, 336, 288, 380], "cov": {"div:\"As the Father has loved \"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 6}, "nc": 9, "off": 0}
+===== /workspace/screens-v608/html/26-guardian-hint-jesus-words-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [30, -51, 344, 626], "cov": {"div:\"As the Father has loved \"": 2, "card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [30, -51, 344, 626], "cov": {"div:\"As the Father has loved \"": 2, "card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [127, 273, 207, 454], "cov": {"div:\"As the Father has loved \"": 3, "div:\"พระบิดาทรงรักเราอย่างไร \"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [220, 263, 305, 453], "cov": {"div:\"As the Father has loved \"": 1, "div:\"พระบิดาทรงรักเราอย่างไร \"": 1, "div:\"Words of Jesus · John 15\"": 2, "circle": 1}, "nc": 5, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [220, 256, 305, 320], "cov": {"div:\"Words of Jesus · John 15\"": 4, "div:\"As the Father has loved \"": 2}, "nc": 6, "off": 0}
+===== /workspace/screens-v608/html/26-guardian-hint-jesus-words-375x812.html 375 812
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -7, 375, 804], "cov": {"div:\"Words of Jesus · John 15\"": 2, "card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -7, 375, 804], "cov": {"div:\"Words of Jesus · John 15\"": 2, "card:\"คิด eat sink three think\"": 3, "path": 1}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [226, 360, 328, 436], "cov": {"div:\"พระบิดาทรงรักเราอย่างไร \"": 1, "div:\"Words of Jesus · John 15\"": 1}, "nc": 2, "off": 0}
+===== /workspace/screens-v608/html/27-guardian-kneels-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [16, -46, 303, 572], "cov": {"div:\"The Word Guardian ผู้พิท\"": 3, "path": 3, "card:\"THINK คิด Got it เข้าใจแ\"": 3}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [16, -46, 303, 572], "cov": {"div:\"The Word Guardian ผู้พิท\"": 3, "card:\"THINK คิด Got it เข้าใจแ\"": 3}, "nc": 6, "off": 0}
+===== /workspace/screens-v608/html/27-guardian-kneels-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [31, -50, 343, 625], "cov": {"path": 3, "card:\"THINK คิด Got it เข้าใจแ\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [31, -50, 343, 625], "cov": {"card:\"THINK คิด Got it เข้าใจแ\"": 3}, "nc": 3, "off": 0}
+===== /workspace/screens-v608/html/27-guardian-kneels-375x812.html 375 812
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -7, 375, 804], "cov": {"path": 3, "card:\"THINK คิด Got it เข้าใจแ\"": 3}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -7, 375, 804], "cov": {"card:\"THINK คิด Got it เข้าใจแ\"": 3}, "nc": 3, "off": 0}
+===== /workspace/screens-v608/html/28-guardian-win-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [18, -55, 301, 556], "cov": {"path": 3, "card:\"The Word Guardian ผู้พิท\"": 3, "level:\"Lv 3\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [18, -55, 301, 556], "cov": {"card:\"The Word Guardian ผู้พิท\"": 3, "level:\"Lv 3\"": 1}, "nc": 4, "off": 0}
+===== /workspace/screens-v608/html/28-guardian-win-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [23, -72, 351, 636], "cov": {"stars:\"★ 64\"": 1, "path": 3, "card:\"The Word Guardian ผู้พิท\"": 3, "level:\"Level 3 เลเวล 3\"": 2}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [23, -72, 351, 636], "cov": {"stars:\"★ 64\"": 1, "card:\"The Word Guardian ผู้พิท\"": 3, "level:\"Level 3 เลเวล 3\"": 2}, "nc": 6, "off": 0}
+===== /workspace/screens-v608/html/28-guardian-win-375x812.html 375 812
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -6, 375, 804], "cov": {"div:\"You earned this! เก่งมาก\"": 2, "path": 3, "card:\"The Word Guardian ผู้พิท\"": 3, "div:\"You earned this!\"": 1}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg", "hid": false, "r": [0, -6, 375, 804], "cov": {"div:\"You earned this! เก่งมาก\"": 2, "card:\"The Word Guardian ผู้พิท\"": 3, "div:\"You earned this!\"": 1}, "nc": 6, "off": 0}

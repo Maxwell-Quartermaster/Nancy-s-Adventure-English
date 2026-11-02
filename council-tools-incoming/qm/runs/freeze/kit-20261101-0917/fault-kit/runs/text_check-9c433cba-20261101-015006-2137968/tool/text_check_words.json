@@ -1,0 +1,55 @@
+{
+  "_about": "text-check word lists (Instructor lane, QM split 12:4x AM MDT Nov 1). Regexes are Python re, matched case-insensitively on user-visible text only (render-source text nodes and alt/aria-label/title/placeholder/value attributes; sheet captions; never the PASTE spec prose). Add an entry = add an object; every entry cites the decision it comes from.",
+  "retired": [
+    {"id": "R1-ask-en", "lang": "en", "regex": "\\bWhere is the\\b",
+     "was": "uiText.tapPrompt.en 'Where is the {word}?' (snap-1748MDT PASTE 95a4d0fc)",
+     "now_path": "uiText.tapPrompt.en", "now_must_not_match": true,
+     "decision": "Maxwell t440u (QM-relayed), round 2 P1: tapPrompt -> 'Can you find the {word}?'. P1 scope is narrow: sentence cards keep their own en/th asks (e.g. bh-24 'Where is the bathroom?'), so a hit inside a current PASTE card sentence is allowed."},
+    {"id": "R2-ask-th", "lang": "th", "regex": "อยู่ที่ไหน",
+     "was": "uiText.tapPrompt.th '{word} อยู่ที่ไหน' (snap-1748MDT PASTE 95a4d0fc)",
+     "now_path": "uiText.tapPrompt.th", "now_must_not_match": true,
+     "decision": "Maxwell t440u (QM-relayed), round 2 P1: Thai ask -> 'หา {word} เจอไหม'. Sentence cards keep their Thai (bh-10 'ห้องคลอดอยู่ที่ไหนคะ', bh-24 'ห้องน้ำอยู่ที่ไหนคะ'): allowed only as the whole current card sentence."},
+    {"id": "R3-shop-en", "lang": "en", "regex": "golden\\s+pantry|\\bpantry\\b",
+     "was": "uiText.pantry.en 'Golden Pantry'",
+     "now_path": "uiText.pantry.en", "now_must_not_match": true,
+     "decision": "t487u: Golden Pantry renamed to Shop (code/r2e/instructor-shop-rename.py; player-facing words only, code keys uiText.pantry / pantry.items / pantryOwned stay and are never scanned because only visible text is checked)."},
+    {"id": "R4-shop-th", "lang": "th", "regex": "ตู้กับข้าว",
+     "was": "uiText.pantry.th 'ตู้กับข้าวทองคำ'",
+     "now_path": "uiText.pantry.th", "now_must_not_match": true,
+     "decision": "t487u: Thai Shop name ตู้กับข้าวทองคำ -> ร้านดาวทอง (instructor-shop-rename.py)."}
+  ],
+  "not_retired": [
+    {"id": "L1-ask-en", "path": "uiText.tapPrompt.en", "must_match": "^Can you find the \\{word\\}\\?$", "note": "live ask (t440u); never flag 'Can you find'"},
+    {"id": "L2-ask-th", "path": "uiText.tapPrompt.th", "must_match": "^หา \\{word\\} เจอไหม$", "note": "live Thai ask (t440u)"},
+    {"id": "L3-shop", "path": "uiText.pantry.en", "must_match": "^Shop$", "note": "live Shop name (t487u)"}
+  ],
+  "fail_words": {
+    "_decision": "Grace-based game: PASTE 1.9 'Nothing red or alarming anywhere but boss bars (t495u)'; Never list 'no countdowns or wait timers, energy or lives'; 7.1 'No timer, nothing lost'; wrongText is 'Now you know it' / 'ตอนนี้รู้แล้วนะ'. None of these words appears in any current uiText/encouragement/reward string (checked on paste_1b 155f86bb), so any hit in UI text is off-spec unless it is a current PASTE content string (card en/th/choices, verses, jesusWords, soundDuel pairs).",
+    "en": [
+      {"id": "F-wrong", "regex": "\\bwrong\\b"},
+      {"id": "F-fail", "regex": "\\bfail(?:s|ed|ure|ing)?\\b"},
+      {"id": "F-gameover", "regex": "\\bgame\\s*over\\b"},
+      {"id": "F-tryagain", "regex": "\\btry\\s+again\\b"},
+      {"id": "F-lives", "regex": "\\blives\\b|\\blife\\s+lost\\b|\\blives?\\s+left\\b"},
+      {"id": "F-timesup", "regex": "\\btime[’']?s\\s+up\\b|\\bout\\s+of\\s+time\\b"},
+      {"id": "F-hurry", "regex": "\\bhurry\\b"},
+      {"id": "F-incorrect", "regex": "\\bincorrect\\b"},
+      {"id": "F-lowhealth", "regex": "\\blow\\s+health\\b"},
+      {"id": "F-danger", "regex": "\\bdanger(?:ous)?\\b"},
+      {"id": "F-youlose", "regex": "\\byou\\s+lose\\b|\\byou\\s+lost\\b"}
+    ],
+    "th": [
+      {"id": "F-th-wrong", "regex": "ผิด", "gloss": "wrong"},
+      {"id": "F-th-lose", "regex": "แพ้", "gloss": "lose (also 'allergic' in fd-33 แพ้อาหารอะไรไหม: allowed only as that whole card sentence)"},
+      {"id": "F-th-timeup", "regex": "หมดเวลา", "gloss": "time's up"},
+      {"id": "F-th-danger", "regex": "อันตราย", "gloss": "danger"},
+      {"id": "F-th-fail", "regex": "ล้มเหลว", "gloss": "failed"}
+    ]
+  },
+  "allow": {
+    "_decision": "A hit is allowed only when it sits inside a current paste_1b content string: the whole text node equals that string, or the string is 12+ characters long and covers the hit. Content = cards (every string field), verses, jesusWords, jesusWordsFallback, soundDuel. UI-chrome keys (uiText, encouragement, rewardText, wrongText, welcomeBack, gotItText, restScreen) are not allow sources.",
+    "content_keys": ["cards", "verses", "jesusWords", "jesusWordsFallback", "soundDuel"],
+    "min_cover_len": 12
+  },
+  "thai_size": {"min_px": 17, "decision": "PASTE :35 'Thai stays 17 px+'; :63 'Thai: ... 17 px+'; :388 'Thai 17 px+'. Measured as computed CSS font-size (the rule domcheck_r2 uses); a transform-scaled size under 17 is a warning."}
+}

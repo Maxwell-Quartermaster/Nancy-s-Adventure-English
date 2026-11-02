@@ -1,0 +1,30 @@
+{
+ "snap": "snap-st-0100MDT",
+ "dry_run": false,
+ "sandbox": true,
+ "started": "2026-11-01 04:23 MST",
+ "steps": {
+  "1": "pointer f6dac2d0e7b391436a160eab1bbf17fe snap-r2h-0021MDT OK; old PASTE 317e91ce on disk; new PASTE 317e91ce 188,116 chars, bank 84; disk 73.4%",
+  "2": "verses nancys-adventure-english-v6-08-daily-verses.json = nancys-adventure-english-v6-07-daily-verses.json except version; \"if due\" present; no 911/Call Max/Show the Nurse; no phone/email/street; thai-diff exit 0 (no Thai change)",
+  "3": "checks_v608 SKIPPED (sandbox test flag); trim-clip DOM check 1 html, 0 clipped; sheets/showcase: send_guard snapshot check CLEAR (--no-ground) on 2 files under sheets/,showcase/; sheets scan PASS on 2 image(s); none sent to ground_check; fit_sheet_check: no fit sheet in stage",
+  "4": "/workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/handmove/sb/snap-st-0100MDT (675 files: 668 carried, 3 new, 1 changed by the stage, 0 not carried; MANIFEST efff066a, renders-MANIFEST 963bc0e2 1103 lines), every md5 re-verified, read-only"
+ },
+ "thai_diff": {
+  "exit": 0,
+  "lines": 3,
+  "head": [
+   "thai_diff.py 41de37a5b68643d6a7df6e12a0c1f23a | MANIFEST none | base 317e91ce86f073c961f8169183d2bbd3 | new 317e91ce86f073c961f8169183d2bbd3"
+  ],
+  "file": "/workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/handmove/sb/freeze/work/thai-diff-snap-st-0100MDT.txt"
+ },
+ "carry": {
+  "carried": 668,
+  "stage-new": 3,
+  "stage-overrides": 1,
+  "stage-same": 1,
+  "not-carried": 0
+ },
+ "result": "FAIL",
+ "reason": "REASON: step 5 pointer: /workspace/v608build/council-tools-incoming/qm/runs/freeze/st4-20261101-112100/cases/handmove/sb/CURRENT-SNAP.txt: pointer was moved by hand during the HOLD (f6dac2d0e7b391436a160eab1bbf17fe -> e4b37da35cb6a543a3d275bd9e19dfdb); refusing to write over it",
+ "pointer": "pointer not moved"
+}

@@ -1,0 +1,87 @@
+{
+ "kit": "fault-kit v1",
+ "tool": "quote_check",
+ "path": "/workspace/audit/fault-kit/stubs/quote_check_stub_neverflag.py",
+ "md5": "24d03db819c5b1d143cd24dfd0320282",
+ "exit": 1,
+ "required": [
+  2,
+  7
+ ],
+ "advisory": [
+  0,
+  0
+ ],
+ "rows": [
+  {
+   "id": "QA",
+   "required": true,
+   "expect": "FLAG:UNSOURCED",
+   "got": "exit 0 flags none",
+   "ok": false,
+   "detail": "quote_check stub: 0 flags",
+   "why": "'**Maxwell:** ... no 0/85 counter' has no Maxwell row in the ledger (T12: Ara relay says he doesn't remember it)",
+   "source": "real slip: Auditor credited Chancellor's 'no 0/85 counter' ruling (Chancellor record t322u) to Maxwell; SETTLED-RULINGS T12"
+  },
+  {
+   "id": "QB",
+   "required": true,
+   "expect": "FLAG:TRUNCATED",
+   "got": "exit 0 flags none",
+   "ok": false,
+   "detail": "quote_check stub: 0 flags",
+   "why": "rule 9 quoted as 'Nothing red or alarming anywhere'; PASTE :32 is '9. **Nothing red or alarming** anywhere but boss bars.'",
+   "source": "real slip: Auditor's rule 9 quote missing 'but boss bars' (Council, Nov 1)"
+  },
+  {
+   "id": "QC1",
+   "required": true,
+   "expect": "FLAG:RELAY",
+   "got": "exit 0 flags none",
+   "ok": false,
+   "detail": "quote_check stub: 0 flags",
+   "why": "third-person 'Maxwell wants you to...' filed as **Maxwell (t490u):**; ledger P16 has it as an Ara relay",
+   "source": "QM, Council Nov 1: three relays filed as Maxwell's own words; SETTLED-RULINGS P16"
+  },
+  {
+   "id": "QC2",
+   "required": true,
+   "expect": "FLAG:RELAY",
+   "got": "exit 0 flags none",
+   "ok": false,
+   "detail": "quote_check stub: 0 flags",
+   "why": "'Maxwell doesn't remember...' filed as **Maxwell (t102u):**; ledger T12 says Ara relay",
+   "source": "same incident; SETTLED-RULINGS T12"
+  },
+  {
+   "id": "QC3",
+   "required": true,
+   "expect": "FLAG:RELAY",
+   "got": "exit 0 flags none",
+   "ok": false,
+   "detail": "quote_check stub: 0 flags",
+   "why": "'Maxwell is asking: ...' filed as **Maxwell (t476u):**; ledger A21 says Ara relay",
+   "source": "same incident; SETTLED-RULINGS A21"
+  },
+  {
+   "id": "QD1",
+   "required": true,
+   "expect": "CLEAN",
+   "got": "exit 0 flags none",
+   "ok": true,
+   "detail": "quote_check stub: 0 flags",
+   "why": "verbatim own words with the ledger's label (A02 t405u)",
+   "source": "SETTLED-RULINGS A02"
+  },
+  {
+   "id": "QD2",
+   "required": true,
+   "expect": "CLEAN",
+   "got": "exit 0 flags none",
+   "ok": true,
+   "detail": "quote_check stub: 0 flags",
+   "why": "a relay labelled as Ara (relay) plus rule 9 quoted in full is correct",
+   "source": "SETTLED-RULINGS P16 + PASTE 317e91ce :32"
+  }
+ ]
+}

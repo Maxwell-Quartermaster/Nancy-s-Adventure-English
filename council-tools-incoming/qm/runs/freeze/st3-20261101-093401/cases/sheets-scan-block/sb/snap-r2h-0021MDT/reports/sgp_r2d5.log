@@ -1,0 +1,28 @@
+24-guardian-run-entry-375x667 scale 0.803 ox 30.9 oy -51.1 scenery-top390 234 hud 131 card 463
+24-guardian-run-entry-375x812 scale 0.962 ox 0.0 oy -7.4 scenery-top390 234 hud 131 card 608
+24-guardian-run-entry-320x568 scale 0.816 ox 1.0 oy -65.9 scenery-top390 234 hud 119 card 456
+25-guardian-hint-letters-375x667 scale 0.803 ox 30.9 oy -51.1 scenery-top390 234 hud 131 card 463
+25-guardian-hint-letters-375x812 scale 0.962 ox 0.0 oy -8.6 scenery-top390 234 hud 131 card 576
+25-guardian-hint-letters-320x568 scale 0.810 ox 2.0 oy -64.8 scenery-top390 234 hud 119 card 428
+26-guardian-hint-jesus-words-375x667 scale 0.803 ox 30.9 oy -51.1 scenery-top390 234 hud 131 card 463
+26-guardian-hint-jesus-words-375x812 scale 0.962 ox 0.0 oy -7.4 scenery-top390 234 hud 131 card 608
+26-guardian-hint-jesus-words-320x568 scale 0.816 ox 1.0 oy -65.9 scenery-top390 234 hud 119 card 456
+27-guardian-kneels-375x667 scale 0.801 ox 31.3 oy -50.6 scenery-top390 234 hud 131 card 459
+27-guardian-kneels-375x812 scale 0.962 ox 0.0 oy -7.5 scenery-top390 234 hud 131 card 604
+27-guardian-kneels-320x568 scale 0.734 ox 16.8 oy -46.9 scenery-top390 234 hud 119 card 420
+28-guardian-win-375x667 scale 0.840 ox 23.7 oy -72.2 scenery-top390 249 hud 131 card 479
+28-guardian-win-375x812 scale 0.962 ox 0.0 oy -6.8 scenery-top390 249 hud 131 card 624
+28-guardian-win-320x568 scale 0.725 ox 18.7 oy -55.5 scenery-top390 249 hud 119 card 420
+26-A-320x568 scale 0.816
+26-B-320x568 scale 0.816
+26-C-rest-320x568 scale 0.687
+26-C-open-320x568 scale 0.687
+26-D 320x568: picture plate [215, 125, 299, 210]; a full-width bubble [16, 125, 304, 257] would overlap it by x 215-299, y 125-210
+26-D-320x568: visible 124 of 247; Thai starts at 95; 2 full Thai lines need 165 (+37 pt over the cap 128); does NOT fit above the heads
+26-D-320x568 scale 0.816 banner-bottom 119 bubble top 125 cap 128 right 207 (width 191) heads sam 263 guardian 244
+26-D 375x667: picture plate [241, 137, 325, 220]; a full-width bubble [16, 137, 359, 267] would overlap it by x 241-325, y 137-220
+26-D-375x667: visible 122 of 202; Thai starts at 78; 2 full Thai lines need 148 (+22 pt over the cap 126); does NOT fit above the heads
+26-D-375x667 scale 0.803 banner-bottom 131 bubble top 137 cap 126 right 233 (width 217) heads sam 273 guardian 254
+26-D 375x812: picture plate [252, 218, 352, 318]; a full-width bubble [16, 137, 359, 375] would overlap it by x 252-352, y 218-318
+26-D-375x812: visible 173 of 173; Thai starts at 78; 2 full Thai lines need 148 (+0 pt over the cap 234); fits
+26-D-375x812 scale 0.962 banner-bottom 131 bubble top 137 cap 234 right 244 (width 228) heads sam 381 guardian 358

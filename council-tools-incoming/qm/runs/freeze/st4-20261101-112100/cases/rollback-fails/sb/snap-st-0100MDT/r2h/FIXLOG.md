@@ -1,0 +1,129 @@
+# r2h render fixes
+- 10-word-meadow-scene-390x844: brush-stroke walkway removed (16/16S look)
+- 10-word-meadow-scene-390x844: 3 ground dots -> tufts
+- 10-word-meadow-scene-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 10-word-meadow-scene-320x568: brush-stroke walkway removed (16/16S look)
+- 10-word-meadow-scene-320x568: 3 ground dots -> tufts
+- 10-word-meadow-scene-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 11-word-meadow-scene-right-390x844: brush-stroke walkway removed (16/16S look)
+- 11-word-meadow-scene-right-390x844: 3 ground dots -> tufts
+- 11-word-meadow-scene-right-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 12-reveal-right-390x844: brush-stroke walkway removed (16/16S look)
+- 12-reveal-right-390x844: 3 ground dots -> tufts
+- 12-reveal-right-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 13-word-meadow-scene-retry-390x844: brush-stroke walkway removed (16/16S look)
+- 13-word-meadow-scene-retry-390x844: 3 ground dots -> tufts
+- 13-word-meadow-scene-retry-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 15-say-it-sight-words-390x844: brush-stroke walkway removed (16/16S look)
+- 15-say-it-sight-words-390x844: 3 ground dots -> tufts
+- 15-say-it-sight-words-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 23-level-up-reward-390x844: brush-stroke walkway removed (16/16S look)
+- 23-level-up-reward-390x844: 3 ground dots -> tufts
+- 23-level-up-reward-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 23-level-up-reward-320x568: brush-stroke walkway removed (16/16S look)
+- 23-level-up-reward-320x568: 3 ground dots -> tufts
+- 23-level-up-reward-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 24-guardian-run-entry-390x844: brush-stroke walkway removed (16/16S look)
+- 24-guardian-run-entry-390x844: 3 ground dots -> tufts
+- 24-guardian-run-entry-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 24-guardian-run-entry-320x568: brush-stroke walkway removed (16/16S look)
+- 24-guardian-run-entry-320x568: 3 ground dots -> tufts
+- 24-guardian-run-entry-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 24-guardian-run-entry-375x667: brush-stroke walkway removed (16/16S look)
+- 24-guardian-run-entry-375x667: 3 ground dots -> tufts
+- 24-guardian-run-entry-375x667: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 25-guardian-hint-letters-390x844: brush-stroke walkway removed (16/16S look)
+- 25-guardian-hint-letters-390x844: 3 ground dots -> tufts
+- 25-guardian-hint-letters-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 25-guardian-hint-letters-320x568: brush-stroke walkway removed (16/16S look)
+- 25-guardian-hint-letters-320x568: 3 ground dots -> tufts
+- 25-guardian-hint-letters-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 25-guardian-hint-letters-375x667: brush-stroke walkway removed (16/16S look)
+- 25-guardian-hint-letters-375x667: 3 ground dots -> tufts
+- 25-guardian-hint-letters-375x667: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 26-guardian-hint-jesus-words-390x844: brush-stroke walkway removed (16/16S look)
+- 26-guardian-hint-jesus-words-390x844: 3 ground dots -> tufts
+- 26-guardian-hint-jesus-words-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 26-guardian-hint-jesus-words-320x568: brush-stroke walkway removed (16/16S look)
+- 26-guardian-hint-jesus-words-320x568: 3 ground dots -> tufts
+- 26-guardian-hint-jesus-words-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 26-guardian-hint-jesus-words-375x667: brush-stroke walkway removed (16/16S look)
+- 26-guardian-hint-jesus-words-375x667: 3 ground dots -> tufts
+- 26-guardian-hint-jesus-words-375x667: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 27-guardian-kneels-390x844: brush-stroke walkway removed (16/16S look)
+- 27-guardian-kneels-390x844: 3 ground dots -> tufts
+- 27-guardian-kneels-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 27-guardian-kneels-320x568: brush-stroke walkway removed (16/16S look)
+- 27-guardian-kneels-320x568: 3 ground dots -> tufts
+- 27-guardian-kneels-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 27-guardian-kneels-375x667: brush-stroke walkway removed (16/16S look)
+- 27-guardian-kneels-375x667: 3 ground dots -> tufts
+- 27-guardian-kneels-375x667: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 28-guardian-win-390x844: brush-stroke walkway removed (16/16S look)
+- 28-guardian-win-390x844: 3 ground dots -> tufts
+- 28-guardian-win-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 28-guardian-win-320x568: brush-stroke walkway removed (16/16S look)
+- 28-guardian-win-320x568: 3 ground dots -> tufts
+- 28-guardian-win-320x568: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 28-guardian-win-375x667: brush-stroke walkway removed (16/16S look)
+- 28-guardian-win-375x667: 3 ground dots -> tufts
+- 28-guardian-win-375x667: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 29-verse-scroll-gift-390x844: brush-stroke walkway removed (16/16S look)
+- 29-verse-scroll-gift-390x844: 3 ground dots -> tufts
+- 29-verse-scroll-gift-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 30-new-weapon-gift-390x844: brush-stroke walkway removed (16/16S look)
+- 30-new-weapon-gift-390x844: 3 ground dots -> tufts
+- 30-new-weapon-gift-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 37-rest-screen-390x844: brush-stroke walkway removed (16/16S look)
+- 37-rest-screen-390x844: 3 ground dots -> tufts
+- 37-rest-screen-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 44-scroll-reopened-390x844: brush-stroke walkway removed (16/16S look)
+- 44-scroll-reopened-390x844: 3 ground dots -> tufts
+- 44-scroll-reopened-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 48-continue-after-pause-390x844: brush-stroke walkway removed (16/16S look)
+- 48-continue-after-pause-390x844: 3 ground dots -> tufts
+- 48-continue-after-pause-390x844: tree at x 372 base y 300 -> 376.3 (+76.3)
+- 14-reveal-gentle-retry-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 14-reveal-gentle-retry-390x844: tie x1 hangs straight from the peg
+- 14-reveal-gentle-retry-320x568: Home Lake colour x2 #D9663F -> #F05A00
+- 14-reveal-gentle-retry-320x568: tie x1 hangs straight from the peg
+- 16-say-it-maxwell-says-day1-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 16-say-it-maxwell-says-day1-390x844: tie x1 hangs straight from the peg
+- 17-two-answer-pray-high-five-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 17-two-answer-pray-high-five-390x844: tie x1 hangs straight from the peg
+- 18-two-answer-wrong-tap-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 18-two-answer-wrong-tap-390x844: tie x1 hangs straight from the peg
+- 19-two-answer-right-done-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 19-two-answer-right-done-390x844: tie x1 hangs straight from the peg
+- 21-kitchen-say-it-shown-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 21-kitchen-say-it-shown-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged
+- 21-kitchen-say-it-shown-390x844: tie x1 hangs straight from the peg
+- 21-kitchen-say-it-shown-320x568: Home Lake colour x2 #D9663F -> #F05A00
+- 21-kitchen-say-it-shown-320x568: wall top 372 -> 348.8 (design; ceiling 40 pt under the HUD from y 309); scale 0.80447 unchanged
+- 21-kitchen-say-it-shown-320x568: tie x1 hangs straight from the peg
+- 22-kitchen-server-talk-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 22-kitchen-server-talk-390x844: wall top 372 -> 163.0 (design; ceiling 40 pt under the HUD from y 123); scale 1.00000 unchanged
+- 22-kitchen-server-talk-390x844: tie x1 hangs straight from the peg
+- 22-kitchen-server-talk-320x568: Home Lake colour x2 #D9663F -> #F05A00
+- 22-kitchen-server-talk-320x568: wall top 372 -> 371.3 (design; ceiling 40 pt under the HUD from y 331); scale 0.82051 unchanged
+- 22-kitchen-server-talk-320x568: tie x1 hangs straight from the peg
+- 32-home-lake-scene-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 32-home-lake-scene-390x844: tie x1 hangs straight from the peg
+- 33-say-it-baby-hospital-reply-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 33-say-it-baby-hospital-reply-390x844: tie x1 hangs straight from the peg
+- 33-say-it-baby-hospital-reply-320x568: Home Lake colour x2 #D9663F -> #F05A00
+- 33-say-it-baby-hospital-reply-320x568: tie x1 hangs straight from the peg
+- 54-phrase-ask-card-390x844: Home Lake colour x2 #D9663F -> #F05A00
+- 54-phrase-ask-card-390x844: tie x1 hangs straight from the peg
+- 54-phrase-ask-card-390x844: crib +8 pt forward (1 tags)
+- 54-phrase-ask-card-320x568: Home Lake colour x2 #D9663F -> #F05A00
+- 54-phrase-ask-card-320x568: tie x1 hangs straight from the peg
+- 54-phrase-ask-card-320x568: crib +8 pt forward (2 tags)
+- zone-lake-ask-320x568: Home Lake colour x2 #D9663F -> #F05A00
+- zone-lake-ask-320x568: tie x1 hangs straight from the peg
+- zone-forest-ask-390x844: moon path x 262 -> 147 (drawn at about x 195, the sky centre)
+- zone-forest-ask-320x568: moon path x 262 -> 147 (drawn at about x 195, the sky centre)
+- zone-forest-ask-375x812: moon path x 262 -> 147 (drawn at about x 195, the sky centre)
+- 05-map-day1-390x844: Home Lake colour x1 #D9663F -> #F05A00
+- 08-map-home-lake-chooser-day1-390x844: Home Lake colour x1 #D9663F -> #F05A00
+- 09-map-later-390x844: Home Lake colour x1 #D9663F -> #F05A00

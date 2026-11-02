@@ -1,0 +1,10 @@
+{
+ "started": "2026-11-01 04:23 MST",
+ "started_epoch": 1793532228.4920747,
+ "snap": "snap-st-0100MDT",
+ "reason": "freeze in progress, stop work, do not edit build or post sends",
+ "by": "Quartermaster",
+ "manual": false,
+ "pid": 2706811,
+ "pointer_md5_at_hold": "f6dac2d0e7b391436a160eab1bbf17fe"
+}

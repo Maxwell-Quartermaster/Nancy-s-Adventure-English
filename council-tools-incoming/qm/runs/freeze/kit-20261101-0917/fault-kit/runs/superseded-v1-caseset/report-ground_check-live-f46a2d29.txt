@@ -1,0 +1,40 @@
+fault-kit v1 | run_kit e0347e78dc2b418c2c599c91cc0ff6ac | tool ground_check /workspace/council-tools/ground-check/ground_check.py md5 f46a2d29056eb68d56f6fc2113522905 (run on copy /workspace/audit/fault-kit/runs/ground_check-f46a2d29-20261101-012752-1812694/tool/ground_check.py)
+cases /workspace/audit/fault-kit/cases/ground_check/cases.json md5 ebbdf6d72b07cee0c8866c1e040ad256 | 34 cases | 2026-11-01 01:27 MST
+PASS | G01                                              | required | want PASS | got PASS | 
+PASS | G02                                              | required | want BLOCK | got BLOCK | floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot
+PASS | G03                                              | required | want BLOCK | got BLOCK | path stroke: 2638 px (min 290) in box x44-638 y403-1135
+PASS | G04                                              | required | want PASS | got PASS | 
+PASS | G05                                              | required | want BLOCK | got BLOCK | floating tree: trunk x606-613 y315-329, no grass in the 5 px below its foot
+PASS | G06                                              | required | want BLOCK | got BLOCK | path stroke: 2979 px (min 290) in box x44-638 y403-1135
+PASS | G07                                              | required | want PASS | got PASS | 
+PASS | G08                                              | required | want BLOCK | got BLOCK | floating tree: trunk x741-749 y583-599, no grass in the 6 px below its foot
+PASS | G09                                              | required | want BLOCK | got BLOCK | path stroke: 5682 px (min 449) in box x292-530 y1151-1279
+FAIL | G10                                              | required | want PASS | got BLOCK | path stroke: 3506 px (min 3005) in box x104-3438 y865-1566
+PASS | G11                                              | required | want PASS | got PASS | 
+PASS | G12                                              | required | want BLOCK | got BLOCK | path stroke: 7949 px (min 3005) in box x104-3438 y865-1597
+PASS | G13                                              | required | want BLOCK | got BLOCK | path stroke: 11319 px (min 3005) in box x104-3438 y865-1597
+PASS | G14                                              | required | want BLOCK | got BLOCK | path stroke: 3506 px (min 3005) in box x104-3438 y865-1566 ; floating tree: trunk x666-673 y777-791, no grass in the 5 px below its foot
+PASS | G15                                              | required | want BLOCK | got BLOCK | path stroke: 3506 px (min 3005) in box x104-3438 y865-1566 ; floating tree: trunk x3406-3413 y777-791, no grass in the 5 px below its foot
+FAIL | G16                                              | required | want BLOCK | got PASS | 
+FAIL | G17                                              | required | want BLOCK | got PASS | 
+FAIL | G18                                              | required | want BLOCK | got PASS | 
+FAIL | G19                                              | required | want BLOCK | got PASS | 
+PASS | G20                                              | required | want PASS | got PASS | 
+PASS | G21                                              | required | want PASS | got PASS | 
+PASS | G22                                              | required | want PASS | got PASS | 
+PASS | G23                                              | required | want BLOCK | got BLOCK | path stroke: 6443 px (min 1249) in box x104-1390 y865-1597
+FAIL | G24                                              | required | want BLOCK | got PASS | 
+FAIL | G25                                              | required | want BLOCK | got PASS | 
+FAIL | G26                                              | required | want BLOCK | got PASS | 
+FAIL | G27                                              | required | want BLOCK | got PASS | 
+FAIL | G28                                              | required | want BLOCK | got PASS | 
+FAIL | G29                                              | required | want BLOCK | got PASS | 
+PASS | G30                                              | required | want PASS | got PASS | 
+FAIL | G31                                              | advisory | want BLOCK | got PASS | 
+FAIL | G32                                              | advisory | want BLOCK | got PASS | 
+FAIL | G33                                              | advisory | want BLOCK | got PASS | 
+PASS | G34                                              | advisory | want PASS | got PASS | 
+TOTAL ground_check f46a2d29: required 19/30 PASS, advisory 1/4 PASS -> KIT FAIL (exit 1); 59 s; live pointer unchanged
+failed required: G10, G16, G17, G18, G19, G24, G25, G26, G27, G28, G29
+results /workspace/audit/fault-kit/runs/ground_check-f46a2d29-20261101-012752-1812694/results.json
+EXIT 1

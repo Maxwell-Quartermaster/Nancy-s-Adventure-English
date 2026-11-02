@@ -1,0 +1,16 @@
+snap=snap-r2h-0021MDT
+manifest_md5=7b7c357fea7bf6777df24650754b8be9
+renders_manifest_md5=62e41535fb1d86d3a05dec854c56f572
+paste_1a_md5=fca9ce69a1f1d5e556e8414efc524a18
+paste_1a_chars=187746
+paste_1a_note=1A dropped from r2h (t492u); file kept at snap-r2h-0021MDT/r2h/staged/1A/PASTE-shop.md
+paste_1b_md5=317e91ce86f073c961f8169183d2bbd3
+paste_1b_path=r2h-build/nancys-adventure-english-v6-08-1B-v32-PASTE.md
+paste_1b_chars=188116
+trim_pick=1B (Maxwell t492u)
+bank=84
+working=r2h frozen
+live_current=v5-37 PASTE acc534a51a922102ee37844e04d17955 (the live app, NOT this build base)
+owner=Quartermaster (build lead, Maxwell t482u); updated on every freeze
+updated=2026-11-01 00:42 MDT
+paste_1b_chain=155f86bb (chain: PASTE-shop 24934ef1 > L v2b > ramp > flow > zone-mix > boss aa778f86 > ground da077a81) > v3.2 fixes 1,2,3,:32,:403,:333 = 317e91ce (Auditor CLEAR 00:41)

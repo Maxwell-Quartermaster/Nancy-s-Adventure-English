@@ -1,0 +1,42 @@
+===== d2/html/26-D2-320x568.html 320 568
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 216, 263, 242], "cov": {"path": 3}, "nc": 3, "off": 0}
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 245, 136, 271], "cov": {"path": 9}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, -65, 319, 622], "cov": {"path": 2, "card:\"คิด eat sink three think\"": 3, "div:\"🤔\"": 1}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, -65, 319, 622], "cov": {"card:\"คิด eat sink three think\"": 3, "div:\"🤔\"": 1}, "nc": 4, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [193, 252, 279, 446], "cov": {"div:\"🤔\"": 2, "circle": 1}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [193, 246, 279, 310], "cov": {"div:\"🤔\"": 6}, "nc": 6, "off": 0}
+===== d2/html/26-D2-375x667.html 375 667
+   {"k": "text", "t": "พระบิดาทรงรักเราอย่างไร ", "el": "div:\"พระบิดาทรงรักเราอย่างไร \"", "hid": false, "r": [30, 228, 310, 254], "cov": {"path": 3}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [30, -51, 344, 626], "cov": {"path": 2, "card:\"คิด eat sink three think\"": 3, "div:\"🤔\"": 1}, "nc": 6, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [30, -51, 344, 626], "cov": {"card:\"คิด eat sink three think\"": 3, "div:\"🤔\"": 1}, "nc": 4, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [220, 263, 305, 453], "cov": {"div:\"🤔\"": 2, "circle": 1}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [220, 256, 305, 320], "cov": {"div:\"🤔\"": 6}, "nc": 6, "off": 0}
+===== d2/html/26-D2-390x844.html 390 844
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, 0, 390, 844], "cov": {"div:\"As the Father has loved \"": 3, "path": 2, "card:\"คิด eat sink three think\"": 3, "div:\"🤔\"": 1}, "nc": 9, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [0, 0, 390, 844], "cov": {"div:\"As the Father has loved \"": 3, "card:\"คิด eat sink three think\"": 3, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [236, 391, 342, 628], "cov": {"div:\"🤔\"": 2, "circle": 1}, "nc": 3, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [236, 383, 342, 462], "cov": {"div:\"🤔\"": 6}, "nc": 6, "off": 0}
+===== d2/html/zone-forest-ask-D2plate-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [46, 35, 273, 525], "cov": {"path": 6, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [46, 35, 273, 525], "cov": {"path": 1, "div:\"🤔\"": 1}, "nc": 2, "off": 0}
+===== d2/html/zone-forest-ask-D2plate-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [47, 28, 327, 632], "cov": {"path": 5, "circle": 1, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [47, 28, 327, 632], "cov": {"circle": 1, "div:\"🤔\"": 1}, "nc": 2, "off": 0}
+===== d2/html/zone-forest-ask-D2plate-390x844.html 390 844
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, 0, 390, 844], "cov": {"path": 5, "owl": 1, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"🤔 Back ★ 64 Level 3 เลเ\"", "el": "svg", "hid": false, "r": [0, 0, 390, 844], "cov": {"owl": 1, "div:\"🤔\"": 1}, "nc": 2, "off": 0}
+===== d2/html/zone-meadow-ask-D2plate-320x568.html 320 568
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [44, 28, 275, 526], "cov": {"path": 6, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [44, 28, 275, 526], "cov": {"path": 1, "div:\"🤔\"": 1}, "nc": 2, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [222, 240, 259, 317], "cov": {"div:\"🤔\"": 9}, "nc": 9, "off": 0}
+   {"k": "tap", "t": "div", "el": "div", "hid": false, "r": [222, 240, 259, 317], "cov": {"div:\"🤔\"": 9}, "nc": 9, "off": 0}
+===== d2/html/zone-meadow-ask-D2plate-375x667.html 375 667
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [45, 19, 329, 634], "cov": {"path": 6, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"🤔\"", "el": "svg", "hid": false, "r": [45, 19, 329, 634], "cov": {"path": 1, "div:\"🤔\"": 1}, "nc": 2, "off": 0}
+   {"k": "svg", "t": "div", "el": "svg", "hid": false, "r": [263, 281, 310, 376], "cov": {"div:\"🤔\"": 9}, "nc": 9, "off": 0}
+   {"k": "tap", "t": "div", "el": "div", "hid": false, "r": [263, 281, 310, 376], "cov": {"div:\"🤔\"": 9}, "nc": 9, "off": 0}
+===== d2/html/zone-meadow-ask-D2plate-390x844.html 390 844
+   {"k": "svg", "t": "div:\"[data-tod] .su{transform\"", "el": "svg:\".su,.st{transition:opaci\"", "hid": false, "r": [0, 0, 390, 844], "cov": {"path": 5, "kite": 1, "div:\"🤔\"": 1}, "nc": 7, "off": 0}
+   {"k": "svg", "t": "div:\"🤔 Back ★ 64 Level 3 เลเ\"", "el": "svg", "hid": false, "r": [0, 0, 390, 844], "cov": {"kite": 1, "div:\"🤔\"": 1}, "nc": 2, "off": 0}
+   {"k": "svg", "t": "div", "el": "bus stop", "hid": false, "r": [300, 360, 364, 490], "cov": {"div:\"🤔\"": 9}, "nc": 9, "off": 0}
+   {"k": "tap", "t": "bus stop", "el": "bus stop", "hid": false, "r": [300, 360, 364, 490], "cov": {"div:\"🤔\"": 9}, "nc": 9, "off": 0}

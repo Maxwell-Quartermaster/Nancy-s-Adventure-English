@@ -1,0 +1,33 @@
+09:40:03 used=107892490240 pct=78.879 start cap=108057812459
+09:40:03 used=107892604928 pct=78.879 gate 3 verse-byte est=3000000
+09:40:03 used=107894394880 pct=78.881 done 3 verse-byte delta=1789952
+09:40:03 used=107894394880 pct=78.881 gate 4 over-ceiling est=3000000
+09:40:03 used=107896365056 pct=78.882 done 4 over-ceiling delta=1970176
+09:40:03 used=107896365056 pct=78.882 gate 5b sheets-scan-block (real scan, dim c03+c04) est=3000000
+09:40:26 used=107902631936 pct=78.887 done 5b sheets-scan-block (real scan, dim c03+c04) delta=6266880
+09:40:26 used=107902631936 pct=78.887 gate 5d no-scan (live tools, fail closed) est=3000000
+09:40:27 used=107905347584 pct=78.889 done 5d no-scan (live tools, fail closed) delta=2715648
+09:40:27 used=107905347584 pct=78.889 gate 5c route() units est=0
+09:40:27 used=107905347584 pct=78.889 done 5c route() units delta=0
+09:40:27 used=107905347584 pct=78.889 gate 6 snap-exists est=3000000
+09:40:27 used=107907104768 pct=78.890 done 6 snap-exists delta=1757184
+09:40:27 used=107907104768 pct=78.890 gate 7 pointer-mismatch est=3000000
+09:40:27 used=107908857856 pct=78.891 done 7 pointer-mismatch delta=1753088
+09:40:27 used=107908857856 pct=78.891 gate 8 fit-stale est=3000000
+09:40:37 used=107911639040 pct=78.893 done 8 fit-stale delta=2781184
+09:40:37 used=107911639040 pct=78.893 gate 11 unwritable est=3000000
+09:40:48 used=107916738560 pct=78.897 done 11 unwritable delta=5099520
+09:40:48 used=107916738560 pct=78.897 gate 17b hold-moved est=3000000
+09:40:48 used=107918483456 pct=78.898 done 17b hold-moved delta=1744896
+09:40:48 used=107918483456 pct=78.898 gate 19-20 manual + hold_check est=3000000
+09:40:48 used=107918934016 pct=78.898 done 19-20 manual + hold_check delta=450560
+09:40:48 used=107918934016 pct=78.898 gate 21 guards (live refused) est=0
+09:40:49 used=107920240640 pct=78.899 done 21 guards (live refused) delta=1306624
+09:40:49 used=107920240640 pct=78.899 gate 21c no-carry est=4000000
+09:40:59 used=107924455424 pct=78.903 done 21c no-carry delta=4214784
+09:40:59 used=107924455424 pct=78.903 gate 21d carry-corrupt est=3000000
+09:41:00 used=107926777856 pct=78.904 done 21d carry-corrupt delta=2322432
+09:41:00 used=107926777856 pct=78.904 gate 5c routing dry run (real scan, good sourced c07) est=75000000
+09:41:17 used=108008738816 pct=78.964 done 5c routing dry run (real scan, good sourced c07) delta=81960960
+09:41:17 used=108008738816 pct=78.964 gate 1-2 clean dry + real run est=155000000
+09:41:17 used=108008738816 pct=78.964 end peak=108008738816

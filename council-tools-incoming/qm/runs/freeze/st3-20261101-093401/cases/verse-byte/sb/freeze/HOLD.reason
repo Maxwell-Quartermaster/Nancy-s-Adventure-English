@@ -1,0 +1,3 @@
+REASON: step 2 content: /workspace/v608build/council-tools-incoming/qm/runs/freeze/st3-20261101-093401/cases/verse-byte/stage/nancys-adventure-english-v6-08-daily-verses.json: verses not byte-identical to nancys-adventure-english-v6-07-daily-verses.json apart from version (first difference at byte ~2839)
+HOLD kept: everyone stays stopped until QM fixes this and re-runs (--force-clear) or runs --release.
+At 2026-11-01 02:40 MST. Pointer now f6dac2d0e7b391436a160eab1bbf17fe.

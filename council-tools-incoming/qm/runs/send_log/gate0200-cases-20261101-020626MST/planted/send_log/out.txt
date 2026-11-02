@@ -1,0 +1,40 @@
+img v1 53cec74f
+== S1 add
+LOGGED 53cec74f0fb38d0a9607c4a5f3a2fc6c /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/img.png
+1 row(s) appended to /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/SEND-LOG.md (snap snap-r2h-0021MDT, pointer f6dac2d0)
+rc=0
+img v2 01644112
+== S1 check changed path
+SENT AS OTHER VERSION: this version (md5 016441129fe17f2015411511081ff20a) has no row in /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/SEND-LOG.md; an earlier version of this path was sent
+PATH SENT AS OTHER VERSION: /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/img.png is now md5 016441129fe17f2015411511081ff20a, but this path was logged under 1 other md5(s); the file changed after it was sent:
+  | 2026-11-01 02:06:29 MST | Maxwell | /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/img.png | 53cec74f0fb38d0a9607c4a5f3a2fc6c | snap-r2h-0021MDT | f6dac2d0e7b391436a160eab1bbf17fe | tile 6 |
+rc=3
+== S1b check by bare md5 of v2
+NOT SENT: md5 016441129fe17f2015411511081ff20a has no row in /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/SEND-LOG.md
+rc=0
+== S2 duplicate send
+ALREADY SENT: /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/dup.png md5 53cec74f0fb38d0a9607c4a5f3a2fc6c was sent 2026-11-01 02:06:29 MST to Maxwell (1 earlier row(s)); logging this send too
+LOGGED 53cec74f0fb38d0a9607c4a5f3a2fc6c /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/dup.png
+1 row(s) appended to /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/SEND-LOG.md (snap snap-r2h-0021MDT, pointer f6dac2d0)
+rc=0
+SENT 2 time(s): md5 53cec74f0fb38d0a9607c4a5f3a2fc6c
+  2026-11-01 02:06:29 MST to Maxwell: /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/img.png (snap snap-r2h-0021MDT, pointer f6dac2d0) note: tile 6
+  2026-11-01 02:06:30 MST to Maxwell: /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/dup.png (snap snap-r2h-0021MDT, pointer f6dac2d0) note: 
+rc=1
+== S2b same file twice in one add
+LOGGED 8e683187a00e5d462a4aeee69e9d3d9c /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/two.png
+ALREADY SENT: /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/two.png md5 8e683187a00e5d462a4aeee69e9d3d9c was sent 2026-11-01 02:06:30 MST to Maxwell (1 earlier row(s)); logging this send too
+LOGGED 8e683187a00e5d462a4aeee69e9d3d9c /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/two.png
+2 row(s) appended to /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/SEND-LOG.md (snap snap-r2h-0021MDT, pointer f6dac2d0)
+rc=0
+== S3 missing
+ERROR: file not found: nope.png
+rc=2
+log unchanged
+== S3b check missing
+ERROR: not a file or md5: nope.png
+rc=2
+== S4 missing snap file
+ERROR: cannot read snap file /workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/nosnap.txt: [Errno 2] No such file or directory: '/workspace/v608build/council-tools-incoming/qm/runs/send_log/gate0200-cases-20261101-020626MST/planted/send_log/nosnap.txt'
+rc=2
+x.md not written
