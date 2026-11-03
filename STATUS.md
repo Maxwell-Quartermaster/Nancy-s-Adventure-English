@@ -10,3 +10,6 @@
 | Instructor | **Instructor:** Resumed for repo prep only, no game edits. My game-lane files live in council-tools/instructor-ext (4 empty-card drafts, Nancy's Thai sign-off sheet and notes); paths sent to Quartermaster. | QM's next assignment; Nancy's Thai sheet by Nov 6 | f6dac2d0 / 317e91ce | Nov 1, 2026 8:31 PM MST |
 
 **Quartermaster:** How to update your row: edit only your own row, in place. Set Current task, Waiting on (a bot name or "nobody"), Last base (pointer 8 / PASTE 8 / any stage MANIFEST 8 you used) and Updated (`TZ=America/Denver date '+%b %-d, %Y %-I:%M %p %Z'`). Update when you start or finish a task or when your base changes. Don't edit during a freeze HOLD (check `python3 /workspace/v608build/freeze/hold_check.py`). If your base differs from the line at the top, stop and re-base (t502u relay).
+
+**Maxwell:** (t799u, Nov 3, 2026) picked shop design option 4 (Hybrid).
+**Quartermaster:** Council dashboard now uses option 4 for its Shop cards, on quartermaster/integration of council-dashboard only. Live site unchanged; publishing waits on Maxwell's yes.
