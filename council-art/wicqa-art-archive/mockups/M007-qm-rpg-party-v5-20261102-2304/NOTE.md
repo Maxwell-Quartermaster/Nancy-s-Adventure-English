@@ -1,0 +1,4 @@
+**Maxwell:** (t774u, Nov 2, 2026) asked for: Auditor's hammer in position 4 (upside-down quick draw) with dual mini gavels; less detail, made-up squash-and-stretch cartoon beings (not robots, not humans, Minion-like in spirit); no belts; Watchman front center; Instructor reading as male. Side mockup only.
+**Quartermaster:** Generated image (AI), from text only. These are original creatures, with no Minions likeness, goggles or overalls.
+**Quartermaster:** Landed: simple cartoon creatures with mouths, Auditor with the upside-down hammer and two gavels, Instructor as a boy, Quartermaster's two-handed hammer, Chancellor's coin toss, Watchman as a hooded ranger with lantern and crossbow.
+**Quartermaster:** Still off: Auditor still has a belt with a buckle, Quartermaster has a small one, and Watchman is a little left of center. Watchman's and Auditor's pointed heads look similar.

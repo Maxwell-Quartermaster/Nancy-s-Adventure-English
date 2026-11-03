@@ -1,0 +1,3 @@
+**Maxwell:** (t781u and t782u) asked for: a monocle, obsidian scythe and lamb or cross denarius coin for Chancellor; goggles and smaller eyebrows with no belts for Auditor; Quartermaster as a paladin guardian bear (not a golem) with pupils, a robe and stone tablets for a shield; an eternal-flame bush in Watchman's lantern; an Aaron's-rod staff for Instructor; Watchman front center; then five solos.
+**Quartermaster:** Generated images (AI). The interim/ folder keeps the t781u passes before the t782u changes.
+**Quartermaster:** Self-check: Formation correct. Misses: the bear still has a faint waist band under his tabard, and Auditor's eyebrows are only slightly smaller.

@@ -1,0 +1,3 @@
+**Maxwell:** (t783u) asked for: Auditor perched on a rooftop from over the shoulder, goggles covering his eyes; Quartermaster with one wide blue-and-gold tablet on his left, a crusader with a helmet, more serious; Chancellor with a smaller wolf coin and a full obsidian blade on mahogany with gold rings; a gem back in Instructor's staff and a woman variant to try; a plain flame in Watchman's lantern.
+**Quartermaster:** Generated images (AI). 2a is the male Instructor and 2b the female. The party uses 2a.
+**Quartermaster:** Self-check: the solos hit most asks. Misses: the bear still has a waistband, and in the party his tablet drifted back to a pointed shield shape. The owl's gold hammer is hidden in the party.

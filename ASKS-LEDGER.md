@@ -20,3 +20,11 @@
 | Delete /tmp/qmtmp (15G, QM scratch) | CLOSED | **Maxwell (t160s541 card answer, to Watchman, relayed by Watchman):** "Yes, delete /tmp/qmtmp". **Quartermaster:** Watchman deleted it 1:48 AM MST; df 88% to 76% (31G free), verified by QM. Still open: audit/ (20G), /dev/shm/qm-fill, /workspace/audit/layout-export (630 MB), Chancellor freeze-perpanel-run and freeze-nested-run (awaiting Chancellor all-clear) | Watchman |
 | One cleanup ask: delete test copies (Chancellor freeze-perpanel-run/sandbox ~24G and freeze-nested-run 8.7G after his all-clear; Auditor audit/freeze-gate-e0d36b3b ~20G and audit/layout-export/runs 630 MB; /dev/shm/qm-fill) (Watchman LIST.md Tier 1 removed: 0 GB left on box, per Watchman 1:53 AM MST) | OPEN, not yet sent (not urgent: disk 77% after /tmp/qmtmp) | | QM |
 | What "(b) the 320px screen-size fix" (t581u) means: 1A checker viewport fix (Watchman A3 plus Instructor F5 finding 1, tool work, needs its own gate) or 1B a named game-screen fix at 320 (candidates: page 30 Thai, which is HELD, or the Echo Knight plate on screens 34-36) | CLOSED | **Maxwell (t584u, QM chat, Nov 1 7:20 PM MST):** "Maxwell chose option 1B for the 320px fix: fix a game screen at 320px width (not the checking tool)." **Quartermaster:** queued after the verse split; 1A deferred to after the freeze | QM |
+
+**Quartermaster:** FLAG (Nov 2, 2026): the game quotes THSV under V03. The game repo is private, but THSV permission may matter for any public build. Logged only, no change.
+**Quartermaster:** OPEN (HELD until t709u game-date answer), game THSV under V03: 52 THSV verses in total (22 in the paste plus 30 in daily-verses.json). Options:
+- A: written permission from the Thailand Bible Society
+- B: English only (bank 2,305)
+- D+B: ขจง for NT, English only for OT (bank 839)
+- ขจง for all 52 (over the bank as exact text; needs a trim or a zero-width-space stripping ruling)
+Sources: Chancellor THSV-COUNT.md 2abeeddf, Watchman TERMS.md 56422406, Auditor ขจง covers OT (0.80).

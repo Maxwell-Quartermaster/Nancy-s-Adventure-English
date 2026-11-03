@@ -1,0 +1,3 @@
+**Maxwell:** (t785u) asked for: Quartermaster as a dog crusader with a Jerusalem cross shield; Auditor as an owl whose wings replace his arms, with flip-down magnifier goggles hiding his eyes, serious but a little clumsy; gold details on Instructor's robe, keeping her bored reading look; Chancellor's scythe on his back with him pointing into the distance; no changes to Watchman.
+**Quartermaster:** Generated images (AI). Watchman is unchanged and reused from M015. interim/ holds the misses (the owl with arms, the big coin) plus the last v12 drafts.
+**Quartermaster:** Self-check: every ask landed. Misses: the dog still has a faint waistband, and the owl is drawn a bit more detailed and feathery than the others.

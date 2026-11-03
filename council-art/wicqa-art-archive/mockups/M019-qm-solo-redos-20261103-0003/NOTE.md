@@ -1,0 +1,3 @@
+**Maxwell:** (t790u) asked to redo 5D toward the wings-for-arms owl, a little more humanoid, keeping the spider-eye magnifiers set up more humanoid; and to make 4B ram and 4A badger a little less wide, matching Watchman, Chancellor and Instructor.
+**Quartermaster:** 5E: wings for arms, taller and upright, four opaque red-amber lenses with eyes hidden, warhammer on his back with head down. Still more feathery and detailed than the approved three, and the lens set reads more like a quad goggle than a spider cluster.
+**Quartermaster:** 4B2: slightly slimmer, belt and buckle removed. 4A2: slightly slimmer, waistband removed, tabard falls straight.

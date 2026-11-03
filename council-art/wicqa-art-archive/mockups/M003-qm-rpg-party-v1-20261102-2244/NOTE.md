@@ -1,0 +1,3 @@
+**Maxwell:** (t768u, Nov 2, 2026) asked to see the five bots in their RPG roles as a party. This is a side mockup only; it doesn't change the shirt designs.
+**Quartermaster:** Generated image (AI). It used the F1 crop from M002 as the style reference and the F006 mapping (front: Watchman tank; middle: Chancellor control; flank: Auditor DPS; back: Quartermaster support and Instructor healer).
+**Quartermaster:** Self-critique: (1) the blocky look comes close to Minecraft, so the next pass needs a more original block language; (2) the black eye bands still read as ninja masks, which goes against t765u; (3) a stray ruler appeared in Chancellor's hand; (4) the body silhouettes are too similar (D012 wants a distinct silhouette for each bot).

@@ -1,0 +1,3 @@
+**Maxwell:** (t780u) asked for v10 with these changes: Quartermaster a dark blue, white and silver bear with no green; Chancellor with a scythe sheathed on his back; Auditor's eyebrows dialed down; Watchman front center; no belt on Watchman.
+**Quartermaster:** Generated images (AI). The new solos are the bear Quartermaster and Chancellor with the scythe. The party was built from those plus the M011 solos.
+**Quartermaster:** Self-check: Formation fixed, with Watchman front center, Chancellor behind him, Auditor mid-right, the bear back left and the fox back right. Bear: no green, not robot-like. Misses: Auditor's eyebrows are only a little smaller and he still has a chest strap and belt. The star shield may read close to a famous comic hero's shield.

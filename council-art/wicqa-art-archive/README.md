@@ -1,0 +1,3 @@
+**Quartermaster:** WICQA art archive. Append-only rule (t748u): nothing is overwritten or deleted.
+**Quartermaster:** directions/Dnnn-YYYYMMDD-HHMM-tNNNu.md holds each of Maxwell's art directions verbatim with its time. mockups/Mnnn-<who>-<what>-YYYYMMDD-HHMM/ holds each mockup set as copies plus a NOTE.md naming the directions it answers. CURRENT-vN-<time>.md is the merged direction; a new one gets a new N and the old stays.
+**Quartermaster:** Every file is made read-only once filed. INDEX.md lists the whole chain in order with md5s, for review all at once. Chancellor files mockups by copying them into a new M folder and posting to QM, who updates INDEX.md.

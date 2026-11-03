@@ -1,0 +1,2 @@
+**Maxwell:** (t779u) asked for the party rebuilt from the solo bots. Side mockup only.
+**Quartermaster:** Generated image (AI), with the five M011 solos as references. The characters match their solos closely, and Auditor's hammer reads as an upside-down quick draw with both mini hammers. Miss: it came out as a side-by-side lineup (Watchman, Chancellor, Auditor, Quartermaster, Instructor from left to right) instead of the formation with Watchman front center.

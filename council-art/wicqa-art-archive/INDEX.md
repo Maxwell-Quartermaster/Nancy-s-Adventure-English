@@ -1,0 +1,68 @@
+**Quartermaster:** Full chain, oldest first (time MST, md5).
+- directions/D001-20261102-2151-t733u.md  ea290f94
+- directions/D002-20261102-2152-t734u.md  6f00b28e
+- directions/D003-20261102-2153-t735u-t742u.md  815c621a
+- directions/D004-20261102-2201-t743u.md  c97e91c0
+- directions/D005-20261102-2205-t744u.md  4e44ddfe
+- directions/D006-20261102-2206-t747u.md  d312646e
+- directions/D007-20261102-2207-t748u.md  f96d8f74
+- mockups/M001-qm-mascots-v2-20261102-2158/NOTE.md  7e631737
+- mockups/M001-qm-mascots-v2-20261102-2158/desks-crop-w1100.png  3cdf514c
+- mockups/M001-qm-mascots-v2-20261102-2158/mascot-sheet.png  1aeae6af
+- mockups/M001-qm-mascots-v2-20261102-2158/mascots.py  e738a6b7
+- mockups/M001-qm-mascots-v2-20261102-2158/nav-crop-w1100.png  eb82c6d5
+- CURRENT-v1-20261102-2207.md  0fd1c2d5
+- research/R001-collectible-sets-20261102.md  2e06f1f0  (written 10:14 PM MST)
+- directions/D008-20261102-2217-t751u.md  8058b7a5
+- CURRENT-v2-20261102-2217.md  fc4394e9
+- directions/D009-20261102-2219-t752u.md  754f5d3c
+- CURRENT-v3-20261102-2219.md  9d3ee0f6
+- directions/D010-20261102-2222-t753u.md  e871b654
+- CURRENT-v4-20261102-2222.md  a1ef577a
+- future/F001-20261102-2222-t754u-school-subjects.md  49232714  (future note, not in CURRENT)
+- future/F002-20261102-2226-t757u-subject-subtext.md  5a9dd01b  (future note, not in CURRENT)
+- future/F003-20261102-2228-t758u-back-name-title.md  41281e97  (future note, not in CURRENT)
+- future/F003a-20261102-2228-t758s2846-answer.md  f7fb61b9
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/MD5SUMS  39fd5eac
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/NOTE.md  d13f6d8a
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/THUMB-TEST.md  ea09bb8a
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/compare-v2.html  449fef8f
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/compare-v2.png  45dfd7ae
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/mascot-sheet-v2.html  235de585
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/mascot-sheet-v2.png  7a86c688
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/mascots_v2.py  66175523
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/palette-v2.txt  7367914c
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/shirts-back-v1.html  43ec9ce6
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/shirts-back-v1.png  e24929f4
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/shirts-front-v1.html  6960fbab
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/shirts-front-v1.png  13d274af
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/thumbs-back-v1.html  99aa0d12
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/thumbs-back-v1.png  4c842eae
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/thumbs-front-v1.html  e1825671
+- mockups/M002-chancellor-mascots-v2-shirts-v1-20261102-2228/thumbs-front-v1.png  bed3261a
+- directions/D011-20261102-2231-t760u.md  b7ccbaa5  (pending update, held until the references arrive)
+- future/F002a-20261102-2231-superseded-by-t760u.md  f3b9af8a
+- directions/D012-20261102-2232-t761u.md  8de64d1e  (pending update, held until the references arrive)
+- directions/D013-20261102-2234-t762u.md  a8384c8b  (pending update; replaces the shared front badge)
+- directions/D014-20261102-2235-t763u.md  4be0081c  (pending update; front static like F1, back action)
+- directions/D015-20261102-2236-t764u.md  a60fd13c  (pending update; props back but in the action, mecha edge; reverses D011 point 3)
+- directions/D016-20261102-2238-t765u.md  4b51a1bd  (pending update; five archetypes, no ninja or samurai theme)
+- future/F005-20261102-2238-t765u-rpg-roles.md  8dcf6906  (future, do not act yet)
+- future/F006-20261102-2239-t767u-rpg-side-mockup.md  2fb2d8b6  (side mockup only; archetype plus RPG role)
+- mockups/M003-qm-rpg-party-v1-20261102-2244/  (side mockup: RPG party v1, AI-generated, with self-critique in NOTE)
+- mockups/M004-qm-rpg-party-v2-20261102-2246/  (side mockup: RPG party v2, four fixes made, notes in NOTE)
+- mockups/M005-qm-rpg-party-v3-20261102-2256/  (side mockup: RPG party v3a crossbow and v3b gun, plus a rejected first try)
+- mockups/M006-qm-rpg-party-v4-20261102-2302/  (side mockup: party v4, more human, plus four Auditor hammer positions)
+- mockups/M007-qm-rpg-party-v5-20261102-2304/  (side mockup: party v5, cartoon creatures)
+- mockups/M008-qm-rpg-party-v6-20261102-2306/  (side mockup: party v6, serious tone)
+- mockups/M009-qm-rpg-party-v7-watchman-solo-20261102-2308/  (side mockup: party v7 plus Watchman solo v1)
+- mockups/M010-qm-rpg-party-v8-20261102-2312/  (side mockup: party v8, blaster merged; other items not landed)
+- mockups/M011-qm-solo-bots-v1-20261102-2316/  (solo bots v1, one per bot)
+- mockups/M012-qm-rpg-party-v9-20261102-2318/  (party v9 rebuilt from the solos; lineup, not formation)
+- mockups/M013-qm-rpg-party-v10-20261102-2325/  (party v10 + bear QM and scythe Chancellor solos)
+- mockups/M014-qm-rpg-party-v11-20261102-2335/  (party v11 + five solos v3)
+- mockups/M015-qm-rpg-party-v12-20261102-2345/  (party v12 + solos incl. female Instructor option)
+- mockups/M016-qm-rpg-party-v13-20261102-2355/  (party v13: dog crusader, winged owl, gold-trim Instructor)
+- mockups/M017-qm-solo-variations-v14-20261102-2359/  (solo variations v14: Chancellor 3A-3C, Quartermaster badger/ram/tortoise, Auditor round owl/raccoon/hedgehog)
+- mockups/M018-qm-auditor-edits-20261102-2359/  (Auditor 5B2 raccoon goggles down, 5D owl spider eyes)
+- mockups/M019-qm-solo-redos-20261103-0003/  (5E owl wings spider, 4B2 ram slimmer, 4A2 badger slimmer)

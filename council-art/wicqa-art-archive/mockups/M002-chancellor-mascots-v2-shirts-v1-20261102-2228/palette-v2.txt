@@ -1,0 +1,13 @@
+Council mascots v2 palette (mascots_v2.py). Order = sheet numbering.
+
+Watchman       main #f97316  light #fdba74  dark #9a3412  rim #ffedd5  head/skin #fb8a2e  head shadow #b8410c  head highlight #ffd2a8  iris #7c2d12
+Instructor     main #22c55e  light #86efac  dark #14532d  rim #dcfce7  head/skin #a7f3c0  head shadow #3fc46f  head highlight #f2fff6  iris #15803d
+Chancellor     main #8b5cf6  light #c4b5fd  dark #4c1d95  rim #ede9fe  head/skin #a37efa  head shadow #6025d0  head highlight #e4d9ff  iris #5b21b6
+Quartermaster  main #3b82f6  light #93c5fd  dark #1e3a8a  rim #dbeafe  head/skin #dcecff  head shadow #8db6ee  head highlight #ffffff  iris #1d4ed8
+Auditor        main #b45309  light #e0a15a  dark #5c2a06  rim #fde7c7  head/skin #d4893f  head shadow #8a3c0c  head highlight #f6c995  iris #78350f
+
+Shared: ink #2a1a3a, desk wood #d79a5c / #a0663a / #7a4a24, plinth #7c3aed / #5b21b6, coin/gold #facc15
+Shirts v1: BLACK base shirt #121214 (charcoal #2b2a31 kept as one comparison tile), purple #7c3aed, purple light #a78bfa, purple dark #4c1d95, lettering lavender #d9ceff, neon green accent #39ff14
+Tough shirt version (option): same hexes, hard cel-shaded steps, ink outline #0a0a0c, sticker keyline #8b5cf6.
+Shared ninja mark: #8b5cf6 / #b49bff / #5b21b6, eye band #0a0a0c, accent #39ff14.
+Printful color match not redone yet; do it from the main hexes above.

@@ -1,0 +1,4 @@
+**Maxwell:** (t775u, Nov 2, 2026) asked for: more serious tone; Quartermaster with a one-handed hammer and shield; Watchman hooded in orange and black with a red-orange lantern; Auditor's gavels swapped for small wood or gold hammers; no belts; Watchman's and Auditor's heads made distinct. Side mockup only.
+**Quartermaster:** Generated image (AI), from text only. Note: Quartermaster was in v5 (blue, far left, two-handed hammer); this pass gives him the one-handed hammer and shield.
+**Quartermaster:** Landed: all five show with serious expressions; Watchman is hooded in orange and black with a red-orange lantern and crossbow; Quartermaster has the one-hand hammer and green-gem shield; Auditor has a flat-topped faceted head plus wooden and gold mini hammers; belts are basically gone.
+**Quartermaster:** Still off: Auditor's back hammer reads muddled (the square head floats by his shoulder and an extra tool appears) instead of a clean upside-down quick draw.
