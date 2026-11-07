@@ -61,23 +61,28 @@ var DRAWN = {
   "sword-iron": wrap("<path d='M30 6h4v32h-4z' fill='#C5CDD4' stroke='" + INK + "' stroke-width='3'/><path d='M22 38h20' stroke='" + INK + "' stroke-width='4'/><rect x='29' y='40' width='6' height='14' fill='#6B4423' stroke='" + INK + "'/>"),
   "shield-sunrise": wrap("<circle cx='32' cy='32' r='20' fill='#3D7FD9' stroke='" + INK + "' stroke-width='3'/><path d='M32 20l3 8h8l-6 5 2 8-7-4-7 4 2-8-6-5h8z' fill='#FFCC33' stroke='" + INK + "' stroke-width='1'/>"),
   "sling-shepherd": wrap(
-    "<path d='M22 30C8 22 4 8 14 8c8 0 6 12 8 20' fill='none' stroke='#6B4423' stroke-width='3' stroke-linecap='round'/>" +
-    "<path d='M40 36c12 6 18 16 12 20-8 4-14-8-14-16' fill='none' stroke='#6B4423' stroke-width='3' stroke-linecap='round'/>" +
-    "<path d='M20 28h16c2 0 4 2 4 6 0 10-4 16-12 16S16 44 16 34c0-4 2-6 4-6z' fill='#A56B3C' stroke='" + INK + "' stroke-width='3'/>" +
-    "<path d='M22 32h12c0 6-2 10-6 10s-6-4-6-10z' fill='#6B4423' stroke='none'/>" +
-    "<circle cx='28' cy='34' r='4' fill='#C5CDD4' stroke='" + INK + "' stroke-width='2'/>"
+    "<path d='M22 34C8 40 6 54 16 56c8 1 6-10 6-16' fill='none' stroke='#6B4423' stroke-width='3' stroke-linecap='round'/>" +
+    "<path d='M42 36c14 8 16 20 6 20-8 0-10-10-8-16' fill='none' stroke='#6B4423' stroke-width='3' stroke-linecap='round'/>" +
+    "<path d='M24 16h16c2 0 4 2 4 6 0 10-4 16-12 16S20 32 20 22c0-4 2-6 4-6z' fill='#A56B3C' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M26 20h12c0 6-2 10-6 10s-6-4-6-10z' fill='#6B4423' stroke='none'/>" +
+    "<circle cx='32' cy='22' r='3.5' fill='#C5CDD4' stroke='" + INK + "' stroke-width='2'/>"
   ),
   "staff-shepherd": wrap(
-    "<path d='M42 56V30c0-16-24-18-24-2 0 10 10 12 14 6' fill='none' stroke='#8A5A32' stroke-width='8' stroke-linecap='round'/>" +
-    "<path d='M42 56V30c0-16-24-18-24-2 0 10 10 12 14 6' fill='none' stroke='" + INK + "' stroke-width='3' stroke-linecap='round'/>" +
-    "<path d='M38 34c2 8 2 16 0 22' fill='none' stroke='#5C3A22' stroke-width='3' stroke-linecap='round'/>"
+    "<path d='M38 58V18c0-10-18-12-18-1 0 7 7 8 10 4' fill='none' stroke='#8A5A32' stroke-width='7' stroke-linecap='round'/>" +
+    "<path d='M38 58V18c0-10-18-12-18-1 0 7 7 8 10 4' fill='none' stroke='" + INK + "' stroke-width='3' stroke-linecap='round'/>" +
+    "<path d='M35 24c1 12 1 22 0 32' fill='none' stroke='#5C3A22' stroke-width='2' stroke-linecap='round'/>"
   ),
   "tunic-rose": wrap(
     "<path d='M8 24l10-8h8l6 8 6-8h8l10 8-6 30H14z' fill='#F4A7B9' stroke='" + INK + "' stroke-width='3' stroke-linejoin='round'/>" +
     "<path d='M26 16c4 8 8 8 12 0' fill='#F6E9C8' stroke='" + INK + "' stroke-width='3'/>" +
     "<path d='M18 30l14 22 14-22' fill='#E07A92' stroke='none'/>" +
-    "<circle cx='32' cy='36' r='4' fill='#FFCC33' stroke='" + INK + "' stroke-width='2'/>" +
-    "<path d='M32 33l1 2h2.2l-1.8 1.3.7 2.2L32 37.2l-2.1 1.3.7-2.2L28.8 35H31z' fill='#C47A1A' stroke='none'/>"
+    "<circle cx='32' cy='36' r='5' fill='#F0B429' stroke='" + INK + "' stroke-width='1'/>" +
+    "<circle cx='32' cy='33.2' r='2.3' fill='#FFCC33' stroke='" + INK + "' stroke-width='1'/>" +
+    "<circle cx='34.6' cy='35' r='2.3' fill='#FFD45A' stroke='" + INK + "' stroke-width='1'/>" +
+    "<circle cx='33.6' cy='38.2' r='2.3' fill='#FFCC33' stroke='" + INK + "' stroke-width='1'/>" +
+    "<circle cx='30.4' cy='38.2' r='2.3' fill='#F0B429' stroke='" + INK + "' stroke-width='1'/>" +
+    "<circle cx='29.4' cy='35' r='2.3' fill='#FFD45A' stroke='" + INK + "' stroke-width='1'/>" +
+    "<circle cx='32' cy='36' r='1.3' fill='#C47A1A' stroke='none'/>"
   ),
   "hammer-builder": wrap(
     "<path d='M29 28h6v26h-6z' fill='#6B4423' stroke='" + INK + "' stroke-width='3'/>" +

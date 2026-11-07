@@ -547,6 +547,21 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
   line-height: 1.7;
   overflow: visible;
 }
+.char-grid .weapon-art,
+.char-grid .pic-svg {
+  width: 100%;
+  height: auto;
+  min-height: 44px;
+  flex: none;
+}
+.char-grid .weapon-art svg,
+.char-grid .pic-svg svg {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+}
+.keep-word { white-space: nowrap; }
 .char-weapons .weapon-track { align-items: start; }
 .char-weapons .weapon-card {
   height: auto;

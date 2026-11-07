@@ -736,12 +736,18 @@ function weaponArt(slot) {
   var index = Math.max(0, (slot.tier || 1) - 1);
   return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blades[index], shades[index]) + "</div>";
 }
+function keepWord(text, word) {
+  var raw = String(text || "");
+  var at = raw.indexOf(word);
+  if (at < 0) return escapeText(raw);
+  return escapeText(raw.slice(0, at)) + "<span class='keep-word'>" + escapeText(raw.slice(at, at + word.length)) + "</span>" + escapeText(raw.slice(at + word.length));
+}
 function bibleWeaponLine(id, owned) {
   if (!owned || !S || S.screen !== "gear") return "";
   if (id !== "sling-shepherd" && id !== "staff-shepherd" && id !== "hammer-builder") return "";
   var gift = ui("weaponGift");
   if (!gift || !gift.en) return "";
-  return "<div class='en' data-weapon-gift='1'>" + escapeText(gift.en) + "</div><div class='th' lang='th' data-weapon-gift='1'>" + escapeText(gift.th) + "</div>";
+  return "<div class='en' data-weapon-gift='1'>" + escapeText(gift.en) + "</div><div class='th' lang='th' data-weapon-gift='1'>" + keepWord(gift.th, "พระคัมภีร์") + "</div>";
 }
 function trophyArt(t) {
   if (t && (t.id === "hammer-builder" || t.id === "sling-shepherd" || t.id === "staff-shepherd" || t.id === "tunic-rose")) {
