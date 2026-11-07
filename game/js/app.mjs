@@ -638,6 +638,13 @@ function renderMap() {
     "<div class='rows'>" + rows + "</div>" + bubbleHtml() + "</div></div>";
 }
 
+function secretRevealBlock(trophy, play) {
+  var line = ui("secretReveal");
+  var art = play
+    ? "<div class='secret-reveal' data-secret-reveal='play'><div class='secret-from'>" + secretArt(trophy) + "</div><div class='secret-to'>" + trophyArt(trophy) + "</div><i class='spark' aria-hidden='true'></i></div>"
+    : "<div class='secret-reveal' data-secret-reveal='settled'>" + trophyArt(trophy) + "</div>";
+  return art + "<div class='en' data-secret-text='1'>" + escapeText(line.en) + "</div><div class='th' lang='th' data-secret-text='1'>" + escapeText(line.th) + "</div>";
+}
 function renderReward() {
   var item = (S.rewardQueue || [])[0];
   if (!item) { S.screen = "map"; return renderMap(); }
@@ -645,7 +652,17 @@ function renderReward() {
   var key = E.bannerKey(item);
   var title = key === "verseGift" ? ui("verseGift") : key === "regionOpen" ? ui("regionOpen") : D.rewardText;
   var body = "";
-  if (item.kind === "verse") {
+  if (item.id === "sword-sunforged") {
+    var trophy = null;
+    (D.trophies || []).some(function (t) { if (t.id === item.id) { trophy = t; return true; } return false; });
+    var play = !(S.ledger && S.ledger["reveal:sword-sunforged"]);
+    if (play) {
+      if (!S.ledger) S.ledger = {};
+      S.ledger["reveal:sword-sunforged"] = 1;
+      save();
+    }
+    body = secretRevealBlock(trophy || { id: item.id, wt: "sword1", en: item.en }, play && !reduced()) + bi(item.en || "", item.th || "");
+  } else if (item.kind === "verse") {
     var scroll = (S.scrolls || []).filter(function (s) { return s.id === item.scrollId; })[0];
     if (scroll) {
       body = verseBits(scroll, true);
@@ -734,7 +751,13 @@ function weaponArt(slot) {
   var blades = ["#B9C0C4", "#4A90D9", "#F2A23A"];
   var shades = ["#8A939C", "#2C5A8A", "#C47A1A"];
   var index = Math.max(0, (slot.tier || 1) - 1);
-  return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blades[index], shades[index]) + "</div>";
+  var blade = blades[index];
+  var shade = shades[index];
+  if (slot && slot.id === "sword-sunforged") {
+    blade = "#FFCC33";
+    shade = "#B7860B";
+  }
+  return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blade, shade) + "</div>";
 }
 function keepWord(text, word) {
   var raw = String(text || "");

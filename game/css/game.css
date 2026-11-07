@@ -324,8 +324,16 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 }
 .weapon-reveal { animation: weapon-pop .45s ease; }
 .weapon-reveal .spark { animation: sparkle .45s ease; }
+.secret-reveal { position: relative; width: 72px; height: 72px; margin: 8px auto; }
+.secret-reveal .secret-from,
+.secret-reveal .secret-to { position: absolute; left: 0; top: 0; width: 72px; height: 72px; }
+.secret-reveal[data-secret-reveal="play"] .secret-from { animation: secret-fade-out .9s linear forwards; }
+.secret-reveal[data-secret-reveal="play"] .secret-to { opacity: 0; animation: secret-fade-in .9s linear forwards; }
+.secret-reveal[data-secret-reveal="play"] .spark { animation: sparkle .7s linear .35s 1 both; }
 @keyframes weapon-pop { 0% { transform: scale(1); } 40% { transform: scale(1.08); } 100% { transform: scale(1); } }
 @keyframes sparkle { 0% { opacity: 0; transform: scale(.4); } 40% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: translateY(-10px) scale(.5); } }
+@keyframes secret-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes secret-fade-in { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
 .footer { position: relative; z-index: 4; }
 .pane { padding-bottom: 16px; }
 @media (max-width: 360px) {
@@ -698,7 +706,9 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 
 @media (prefers-reduced-motion: reduce) {
   .screen { animation-name: fade150 !important; animation-duration: 150ms !important; animation-timing-function: linear !important; }
-  .arrow-cue, .prop.wiggle, .confetti, .portrait.cheer, .portrait.nod, .pip-glow, .weapon-reveal, .weapon-reveal .spark { animation: none; }
+  .arrow-cue, .prop.wiggle, .confetti, .portrait.cheer, .portrait.nod, .pip-glow, .weapon-reveal, .weapon-reveal .spark, .secret-reveal .secret-from, .secret-reveal .secret-to, .secret-reveal .spark { animation: none; }
+  .secret-reveal .secret-from { opacity: 0; }
+  .secret-reveal .secret-to { opacity: 1; }
   .weapon-track { transition: none; }
   .metal:active, .title-go:active { transform: none; opacity: .86; }
 }
