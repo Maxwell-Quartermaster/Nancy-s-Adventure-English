@@ -109,15 +109,35 @@ function tree(x) {
 }
 export function guardianKneel(tint) {
   var color = tint || "#7FD38B";
-  return "<svg class='guardian' viewBox='0 0 120 140' aria-hidden='true'>" +
-    "<ellipse cx='60' cy='128' rx='36' ry='8' fill='#10170F' opacity='.28'/>" +
-    "<path d='M28 96h64v18H28z' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
-    "<path d='M36 78h48l8 20H28z' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
-    "<circle cx='60' cy='52' r='16' fill='#F2C1A0' stroke='#10170F' stroke-width='3'/>" +
-    "<path d='M44 46h32v8H44z' fill='#2C3F56' stroke='#10170F' stroke-width='3'/>" +
-    "<circle cx='96' cy='88' r='16' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
-    "<path d='M96 74v28M82 88h28' stroke='#FFCC33' stroke-width='3'/>" +
+  return "<svg class='guardian' viewBox='0 0 140 160' aria-hidden='true'>" +
+    "<ellipse cx='74' cy='148' rx='40' ry='8' fill='#10170F' opacity='.28'/>" +
+    "<path d='M46 118c-16 8-22 18-10 24 18 4 40-6 36-18z' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M58 86h36l6 28H50z' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M62 78h28l4 10H58z' fill='#2C3F56' stroke='#10170F' stroke-width='3'/>" +
+    "<circle cx='76' cy='58' r='16' fill='#F2C1A0' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M62 50h28v10c0 8-28 8-28 0z' fill='#2C3F56' stroke='#10170F' stroke-width='3'/>" +
+    "<circle cx='112' cy='96' r='18' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
+    "<circle cx='112' cy='96' r='8' fill='#FFCC33' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M40 108c-8 10-6 22 4 24' fill='none' stroke='#10170F' stroke-width='3'/>" +
     "</svg>";
+}
+
+var ZONE_MARK = {
+  phonics: "<path d='M18 40c8-16 20-16 28 0' fill='none' stroke='#10170F' stroke-width='3'/><path d='M24 40c4-8 12-8 16 0' fill='none' stroke='#10170F' stroke-width='3'/><circle cx='32' cy='44' r='4' fill='#7FD38B' stroke='#10170F' stroke-width='3'/>",
+  "sight-words": "<path d='M10 18h20v28H10zM34 18h20v28H34z' fill='#F6E9C8' stroke='#10170F' stroke-width='3'/><path d='M30 18v28' stroke='#10170F' stroke-width='3'/>",
+  "colors-shapes": "<circle cx='20' cy='34' r='10' fill='#F5A3C7' stroke='#10170F' stroke-width='3'/><rect x='34' y='24' width='18' height='18' fill='#7FB8F5' stroke='#10170F' stroke-width='3'/>",
+  numbers: "<path d='M18 16v32M28 16v32M38 16v32M14 26h32M14 38h32' fill='none' stroke='#10170F' stroke-width='3'/>",
+  "baby-hospital": "<path d='M12 28h40v16H12z' fill='#F2B8A0' stroke='#10170F' stroke-width='3'/><path d='M12 28c8-10 32-10 40 0' fill='none' stroke='#10170F' stroke-width='3'/>",
+  "maxwell-says": "<rect x='14' y='20' width='36' height='24' fill='#E7D3A1' stroke='#10170F' stroke-width='3'/><path d='M22 44h20' stroke='#10170F' stroke-width='3'/>",
+  soundDuel: "<path d='M16 44l12-20 12 20zM32 44l10-16 10 16z' fill='#6B5CA5' stroke='#10170F' stroke-width='3'/>"
+};
+
+export function zoneEmblem(zone) {
+  if (zone && zone.emblem && String(zone.emblem).indexOf("svg:") === 0) {
+    return "<div class='pic-svg'>" + drawnSvg(String(zone.emblem).slice(4)) + "</div>";
+  }
+  var mark = ZONE_MARK[(zone && zone.key) || ""] || ZONE_MARK.phonics;
+  return "<svg class='ico emblem-svg' viewBox='0 0 64 64' aria-hidden='true'>" + mark + "</svg>";
 }
 
 export function sceneSvg(kind, tod) {

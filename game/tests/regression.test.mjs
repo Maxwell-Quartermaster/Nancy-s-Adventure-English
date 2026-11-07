@@ -8,7 +8,7 @@ import {
   buyItem, equipItem, playClip, bannerKey, levelForXp, xpToReach, showsEnglishAnswer, missOutcome,
   gearBonuses, awardExtras, noteMiss, shopRows, beginKneel, thaiReviewQueue, endingPairs,
   endingDiscrepancy, buildDuelSchedule, speakEnglish, bonusWordsFor, spellStep, countPlates,
-  SETTLED_APPROVALS
+  SETTLED_APPROVALS, countPrompt, trophiesByTab, pendingMaxwell, fillBackupCompare
 } from "../js/engine.mjs";
 
 const raw = JSON.parse(fs.readFileSync(new URL("../data/cards.json", import.meta.url), "utf8"));
@@ -303,9 +303,10 @@ test("backup review order and sound duel schedule", function () {
   var pairs = model.soundDuel.pairs;
   var endings = endingPairs(pairs);
   var gap = endingDiscrepancy(pairs);
-  assert.equal(gap.resolved, false);
+  assert.equal(gap.resolved, true);
   assert.equal(gap.specCount, 6);
   assert.equal(gap.found.length, 8);
+  assert.equal(gap.resolution.indexOf("normal pool") >= 0, true);
   assert.equal(endings.some(function (p) { return p.a === "light" && p.b === "right"; }), true);
   assert.equal(spellStep("bed", "", "b").got, "b");
   assert.equal(spellStep("bed", "be", "d").done, true);
@@ -317,10 +318,13 @@ test("backup review order and sound duel schedule", function () {
   assert.equal(plan.rounds.length, 4);
   plan.rounds.forEach(function (round) { assert.equal(round.length, 8); });
   assert.equal(plan.recap.length, 10);
+  var pictureIds = ["three/tree", "bath/bat", "mouth/mouse", "ship/sheep", "card/car", "bread/bed"];
+  assert.deepEqual(plan.rounds[0].slice(0, 6).map(function (p) { return p.a + "/" + p.b; }), pictureIds);
+  assert.equal(plan.rounds[0].filter(function (p) { return p.pics; }).length, 6);
   var seen = {};
-  plan.rounds.forEach(function (round) { round.forEach(function (p) { seen[p.a + "/" + p.b] = 1; }); });
+  plan.rounds.concat([plan.recap]).forEach(function (round) { round.forEach(function (p) { seen[p.a + "/" + p.b] = 1; }); });
+  pictureIds.forEach(function (id) { assert.equal(seen[id], 1); });
   endings.forEach(function (p) { assert.equal(seen[p.a + "/" + p.b], 1); });
-  pairs.filter(function (p) { return p.pics; }).forEach(function (p) { assert.equal(seen[p.a + "/" + p.b], 1); });
   var state = freshState(model);
   state.pips = 4;
   state.goldStars = 3;
@@ -359,6 +363,21 @@ test("opener order and later runs reach starved cards", function () {
   assert.deepEqual(SETTLED_APPROVALS.needsMaxwell, model.raw.needsMaxwell);
   assert.equal(SETTLED_APPROVALS.choices, "t1315u all A");
   assert.equal(SETTLED_APPROVALS.thaiHold, "t1329u waived");
+  var prompt = countPrompt(model.byId["nm-10"], model.raw.uiText);
+  assert.equal(prompt.n, 3);
+  assert.equal(prompt.en.indexOf("{"), -1);
+  assert.equal(["cows", "baskets", "hats"].indexOf(prompt.thing) >= 0, true);
+  assert.deepEqual(pendingMaxwell(model.raw.needsMaxwell, SETTLED_APPROVALS.needsMaxwell), []);
+  var compared = fillBackupCompare(model.raw.uiText.backupCompare.en, 2, 3, 4, 5);
+  assert.equal(compared, "Backup: level 2, 3 days · Now: level 4, 5 days");
+  assert.equal(compared.indexOf("{"), -1);
+  var tabs = trophiesByTab(model);
+  var all = tabs.gems.concat(tabs.themes, tabs.titles, tabs.gear);
+  assert.equal(all.length, 42);
+  assert.equal(tabs.gems.length, 5);
+  assert.equal(tabs.themes.length, 14);
+  assert.equal(tabs.titles.length, 6);
+  assert.equal(tabs.gear.length, 17);
 });
 
 test("level curve matches the spec knots", function () {

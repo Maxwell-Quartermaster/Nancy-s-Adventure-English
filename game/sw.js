@@ -1,4 +1,4 @@
-var VERSION = "nae-foundation-2";
+var VERSION = "nae-foundation-4";
 var CORE = [
   "./",
   "./index.html",
@@ -21,6 +21,12 @@ self.addEventListener("install", function (event) {
     caches.open(VERSION).then(function (cache) {
       return cache.addAll(CORE);
     }).then(function () {
+      return self.clients.matchAll({ includeUncontrolled: true, type: "window" });
+    }).then(function (clients) {
+      if (clients && clients.length) {
+        clients.forEach(function (client) { client.postMessage({ type: "update" }); });
+        return;
+      }
       return self.skipWaiting();
     })
   );

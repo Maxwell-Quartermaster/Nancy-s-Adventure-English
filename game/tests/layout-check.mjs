@@ -217,6 +217,170 @@ try {
   chrome.kill();
   process.exit(1);
 }
+var modeReport = [];
+for (var mi = 0; mi < 2; mi++) {
+  var mlabel = mi === 0 ? "390x844" : "320x568";
+  await cdp.send("Emulation.setDeviceMetricsOverride", {
+    width: mi === 0 ? 390 : 320,
+    height: mi === 0 ? 844 : 568,
+    deviceScaleFactor: 1,
+    mobile: true
+  });
+  var modes = ["count", "letter", "size"];
+  var played = [];
+  var lastXp = "";
+  for (var mk = 0; mk < modes.length; mk++) {
+    var kind = modes[mk];
+    await evaluate(cdp, "window.__previewMode(" + JSON.stringify(kind) + ")");
+    await delay(250);
+    var before = await evaluate(cdp, "window.__modeFacts()");
+    var xp0 = before.xp;
+    if (kind === "count") {
+      var wrong = before.answer === "two" ? "three" : "two";
+      await click(cdp, "[data-act=count][data-arg=" + JSON.stringify(wrong) + "]");
+      var mid = await evaluate(cdp, "window.__modeFacts()");
+      await click(cdp, "[data-act=count][data-arg=" + JSON.stringify(before.answer) + "]");
+      var after = await evaluate(cdp, "window.__modeFacts()");
+      lastXp = String(after.xp);
+      await delay(450);
+      await click(cdp, "[data-act=got]");
+      var afterGot = await evaluate(cdp, "window.__modeFacts()");
+      played.push({ kind: kind, items: before.items, n: before.n, braced: before.braced, xp0: xp0, xpMiss: mid.xp, xpHit: after.xp, xpAfterGot: afterGot.xp, screen: after.screen, screenAfter: afterGot.screen });
+    } else if (kind === "letter") {
+      var word = before.answer;
+      var wrongLetter = "a";
+      var bi;
+      for (bi = 0; bi < (before.bank || []).length; bi++) {
+        if (before.bank[bi] !== word.charAt(0)) wrongLetter = before.bank[bi];
+      }
+      await click(cdp, "[data-act=letter][data-arg=" + JSON.stringify(wrongLetter) + "]");
+      var missed = await evaluate(cdp, "window.__modeFacts()");
+      var li;
+      for (li = 0; li < word.length; li++) {
+        await click(cdp, "[data-act=letter][data-arg=" + JSON.stringify(word.charAt(li)) + "]");
+      }
+      var done = await evaluate(cdp, "window.__modeFacts()");
+      await delay(450);
+      await click(cdp, "[data-act=got]");
+      var afterLetter = await evaluate(cdp, "window.__modeFacts()");
+      lastXp = String(done.xp);
+      played.push({ kind: kind, word: word, gotMiss: missed.got, xp0: xp0, xpMiss: missed.xp, xpHit: done.xp, xpAfterGot: afterLetter.xp, screen: done.screen, screenAfter: afterLetter.screen });
+    } else {
+      var other = before.answer === "big" ? "small" : "big";
+      await click(cdp, "[data-act=size][data-arg=" + JSON.stringify(other) + "]");
+      var missSize = await evaluate(cdp, "window.__modeFacts()");
+      await click(cdp, "[data-act=size][data-arg=" + JSON.stringify(before.answer) + "]");
+      var hitSize = await evaluate(cdp, "window.__modeFacts()");
+      await delay(450);
+      await click(cdp, "[data-act=got]");
+      var afterSize = await evaluate(cdp, "window.__modeFacts()");
+      lastXp = String(hitSize.xp);
+      played.push({ kind: kind, answer: before.answer, targets: before.targets, braced: before.braced, xp0: xp0, xpMiss: missSize.xp, xpHit: hitSize.xp, xpAfterGot: afterSize.xp, screen: hitSize.screen, screenAfter: afterSize.screen });
+    }
+  }
+  await cdp.send("Page.reload", { ignoreCache: true });
+  await waitScreen(cdp);
+  if (await evaluate(cdp, "document.querySelector('.screen') && document.querySelector('.screen').getAttribute('data-screen')==='continue'")) {
+    await click(cdp, "[data-act=resume]");
+  }
+  if (await evaluate(cdp, "!!document.querySelector('[data-act=versegot]')")) await click(cdp, "[data-act=versegot]");
+  var xpKeep = await evaluate(cdp, "window.__xp ? window.__xp() : ''");
+  var opened = await evaluate(cdp, "window.__openCharacter()");
+  console.log("opened", JSON.stringify(opened));
+  var trophies = [];
+  var tabs = ["gems", "themes", "titles", "gear"];
+  var ti;
+  for (ti = 0; ti < tabs.length; ti++) {
+    await click(cdp, "[data-act=tab][data-arg=" + JSON.stringify(tabs[ti]) + "]");
+    var ids = await evaluate(cdp, "window.__trophyIds()");
+    trophies = trophies.concat(ids || []);
+  }
+  var seenTrophy = {};
+  trophies.forEach(function (id) { if (id) seenTrophy[id] = 1; });
+  var listenOff = await evaluate(cdp, "window.__listenOff()");
+  var gearIds = ["cape-green", "cape-purple", "sparkle", "tunic-rose", "cape-sky", "splash-golden-sword"];
+  var gearSeen = gearIds.filter(function (id) { return seenTrophy[id]; }).length;
+  modeReport.push({ label: mlabel, played: played, xpBeforeReload: lastXp, xpAfterReload: xpKeep, trophies: Object.keys(seenTrophy).length, gear: gearSeen, listenOff: listenOff, opened: opened });
+}
+var story = { boss: [], duel: null, reply: null };
+await cdp.send("Emulation.setDeviceMetricsOverride", { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+var bossCount = await evaluate(cdp, "window.__startBoss()");
+var bossXp = await evaluate(cdp, "window.__bossFacts()");
+var bossStart = bossXp.xp;
+for (var bi2 = 0; bi2 < bossCount; bi2++) {
+  var fact = await evaluate(cdp, "window.__bossFacts()");
+  if (bi2 === 0) {
+    var wrongBoss = await evaluate(cdp, "(function(){var nodes=document.querySelectorAll('[data-act=boss]'); var i; for(i=0;i<nodes.length;i++){ if(nodes[i].getAttribute('data-arg')!==" + JSON.stringify(bossXp.answer) + ") return nodes[i].getAttribute('data-arg'); } return '';})()");
+    if (wrongBoss) await click(cdp, "[data-act=boss][data-arg=" + JSON.stringify(wrongBoss) + "]");
+    var missedBoss = await evaluate(cdp, "window.__bossFacts()");
+    story.boss.push({ miss: missedBoss.xp === bossStart, screen: missedBoss.screen });
+  }
+  await click(cdp, "[data-act=boss][data-arg=" + JSON.stringify(fact.answer) + "]");
+  var revealed = await evaluate(cdp, "window.__bossFacts()");
+  await delay(450);
+  await click(cdp, "[data-act=got]");
+  story.boss.push({ reveal: revealed.screen, answer: fact.answer });
+}
+var knelt = await evaluate(cdp, "window.__bossFacts()");
+story.kneel = knelt.screen;
+if (knelt.screen === "kneel") {
+  await delay(450);
+  await click(cdp, "[data-act=kneelgot]");
+}
+var rewards = [];
+var guard = 0;
+while (guard < 8) {
+  var now = await evaluate(cdp, "window.__bossFacts()");
+  rewards.push(now.screen);
+  if (now.screen !== "reward" && now.screen !== "rest") break;
+  await delay(450);
+  var nextAct = now.screen === "rest" ? "keep" : "got";
+  await click(cdp, "[data-act=" + nextAct + "]");
+  guard += 1;
+}
+var bossEnd = await evaluate(cdp, "window.__bossFacts()");
+story.rewards = rewards;
+story.bosses = bossEnd.bosses;
+story.bossXp = { start: bossStart, end: bossEnd.xp };
+await evaluate(cdp, "window.__openForest()");
+await click(cdp, "[data-act=region][data-arg=\"r4\"]");
+var duel0 = await evaluate(cdp, "window.__duelFacts()");
+var otherWord = await evaluate(cdp, "(function(){var nodes=document.querySelectorAll('[data-act=duel]'); var i; for(i=0;i<nodes.length;i++){ if(nodes[i].getAttribute('data-arg')!==" + JSON.stringify(duel0.heard) + ") return nodes[i].getAttribute('data-arg'); } return '';})()");
+if (otherWord) await click(cdp, "[data-act=duel][data-arg=" + JSON.stringify(otherWord) + "]");
+var duelMiss = await evaluate(cdp, "window.__duelFacts()");
+await click(cdp, "[data-act=duel][data-arg=" + JSON.stringify(duel0.heard) + "]");
+var duelHit = await evaluate(cdp, "window.__duelFacts()");
+await click(cdp, "[data-act=tomap]");
+var left = await evaluate(cdp, "window.__duelFacts()");
+await click(cdp, "[data-act=region][data-arg=\"r4\"]");
+var back = await evaluate(cdp, "window.__duelFacts()");
+await evaluate(cdp, "window.dispatchEvent(new Event('pagehide'))");
+var pausedDuel = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
+await click(cdp, "[data-act=resume]");
+var resumed = await evaluate(cdp, "window.__duelFacts()");
+var safety = 0;
+while (safety < 12) {
+  var cur = await evaluate(cdp, "window.__duelFacts()");
+  if (!cur.heard) break;
+  await click(cdp, "[data-act=duel][data-arg=" + JSON.stringify(cur.heard) + "]");
+  safety += 1;
+}
+var beforeMap = await evaluate(cdp, "window.__duelFacts()");
+await delay(450);
+await click(cdp, "[data-act=duelmap]");
+var afterMap = await evaluate(cdp, "window.__duelFacts()");
+await cdp.send("Page.reload", { ignoreCache: true });
+await waitScreen(cdp);
+if (await evaluate(cdp, "document.querySelector('.screen') && document.querySelector('.screen').getAttribute('data-screen')==='continue'")) await click(cdp, "[data-act=resume]");
+if (await evaluate(cdp, "!!document.querySelector('[data-act=versegot]')")) await click(cdp, "[data-act=versegot]");
+var duelKept = await evaluate(cdp, "window.__xp ? window.__xp() : ''");
+var reply = await evaluate(cdp, "window.__bhReply()");
+story.duel = {
+  startXp: duel0.xp, missXp: duelMiss.xp, hitIndex: duelHit.index, left: left.screen, backIndex: back.index,
+  paused: pausedDuel, resumed: resumed.screen, before: beforeMap.xp, after: afterMap.xp, afterScreen: afterMap.screen, kept: duelKept
+};
+story.reply = reply;
+reports.push({ modeReport: modeReport, story: story });
 writeFileSync(outDir + "/layout-report.json", JSON.stringify(reports, null, 2));
 console.log(JSON.stringify(reports, null, 2));
 var failed = reports.some(function (r) {
@@ -225,9 +389,38 @@ var failed = reports.some(function (r) {
   var flowBad = r.hit && r.hit.want && r.hit.want !== r.hit.hit;
   flowBad = flowBad || r.shopLiteral;
   flowBad = flowBad || (r.home && r.home.join(",") !== "ms-28,ms-29,ms-30");
-  flowBad = flowBad || (r.listen && (!r.listen.replay || !r.listen.spoken));
+  flowBad = flowBad || (r.listen && !r.listen.replay);
+  flowBad = flowBad || (r.listen && r.listen.spoken && !r.listen.hidden);
+  flowBad = flowBad || (r.listen && !r.listen.spoken && r.listen.hidden);
   flowBad = flowBad || (r.pausedProbe && r.pausedProbe.screen !== "continue");
-  return audits.some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || badNet || flowBad || String(r.xpAfterReload) !== String(r.xp) || (r.reduced && r.motion !== "fade150");
+  var modeBad = false;
+  if (r.modeReport) {
+    modeBad = r.modeReport.some(function (row) {
+      var playBad = (row.played || []).some(function (step) {
+        if (step.braced) return true;
+        if (step.kind === "count" && step.items !== step.n) return true;
+        if (step.kind === "size" && step.targets !== 2) return true;
+        if (String(step.xpMiss) !== String(step.xp0)) return true;
+        var gained = Number(step.xpHit) - Number(step.xp0);
+        if (row.label === "390x844" && gained !== 10) return true;
+        if (gained !== 0 && gained !== 10) return true;
+        if (step.xpAfterGot != null && String(step.xpAfterGot) !== String(step.xpHit)) return true;
+        if (step.screenAfter === "reveal") return true;
+        if (step.screen !== "reveal") return true;
+        return false;
+      });
+      return playBad || String(row.xpAfterReload) !== String(row.xpBeforeReload) || row.trophies !== 42 || row.gear !== 6 || !row.listenOff || !row.listenOff.shown;
+    });
+  }
+  var storyBad = false;
+  if (r.story) {
+    var d = r.story.duel || {};
+    storyBad = r.story.kneel !== "kneel" || (r.story.bosses || []).indexOf("phonics") < 0 || !(r.story.rewards || []).some(function (s) { return s === "reward"; });
+    storyBad = storyBad || !r.story.reply || !r.story.reply.shown;
+    storyBad = storyBad || d.left !== "map" || d.backIndex !== d.hitIndex || d.paused !== "continue" || d.resumed !== "duel";
+    storyBad = storyBad || Number(d.missXp) !== Number(d.startXp) || Number(d.after) !== Number(d.before) + 30 || String(d.kept) !== String(d.after);
+  }
+  return audits.some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || badNet || flowBad || (r.xp != null && String(r.xpAfterReload) !== String(r.xp)) || (r.reduced && r.motion !== "fade150") || modeBad || storyBad;
 });
 cdp.close();
 server.kill();

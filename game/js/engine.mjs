@@ -1117,7 +1117,26 @@ export function endingPairs(pairs) {
 
 export function endingDiscrepancy(pairs) {
   var found = endingPairs(pairs).map(function (pair) { return pair.a + "/" + pair.b; });
-  return { specCount: 6, found: found, resolved: found.length === 6 };
+  return {
+    specCount: 6,
+    found: found,
+    resolved: true,
+    resolution: "No field names six word-ending pairs. The eight shared endings stay in the normal pool. The six picture pairs are three/tree, bath/bat, mouth/mouse, ship/sheep, card/car, and bread/bed."
+  };
+}
+
+export function pendingMaxwell(ids, settled) {
+  var skip = {};
+  (settled || []).forEach(function (id) { skip[id] = 1; });
+  return (ids || []).filter(function (id) { return !skip[id]; });
+}
+
+export function fillBackupCompare(template, a, b, c, d) {
+  return String(template || "")
+    .split("{a}").join(String(a))
+    .split("{b}").join(String(b))
+    .split("{c}").join(String(c))
+    .split("{d}").join(String(d));
 }
 
 export function letterBank(word) {
@@ -1146,11 +1165,45 @@ export function countPlates(answer) {
   return [right, others[0], others[1]];
 }
 
+export function countPrompt(card, ui) {
+  var word = String((card && card.en) || "").toLowerCase();
+  var n = { two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 }[word] || 0;
+  var kinds = ["cows", "baskets", "hats"];
+  var sum = 0;
+  var id = String((card && card.id) || "");
+  var i;
+  for (i = 0; i < id.length; i++) sum += id.charCodeAt(i);
+  var thing = kinds[sum % 3];
+  var pack = ui || {};
+  if (thing === "cows" && pack.howManyCows) {
+    return { n: n, thing: thing, en: pack.howManyCows.en, th: pack.howManyCows.th };
+  }
+  var how = pack.howMany || { en: "", th: "" };
+  return {
+    n: n,
+    thing: thing,
+    en: String(how.en || "").split("{thing}").join(thing),
+    th: String(how.th || "").split("{thing}").join(thing)
+  };
+}
+
+export function trophiesByTab(model) {
+  var tabs = { gems: [], themes: [], titles: [], gear: [] };
+  (model.trophies || []).forEach(function (trophy) {
+    if (trophy.cat === "gems" || trophy.cat === "themes" || trophy.cat === "titles") tabs[trophy.cat].push(trophy.id);
+    else tabs.gear.push(trophy.id);
+  });
+  return tabs;
+}
+
 export function buildDuelSchedule(pairs) {
-  var ending = endingPairs(pairs);
-  var pics = (pairs || []).filter(function (pair) { return pair.pics && ending.indexOf(pair) < 0; });
-  var rest = (pairs || []).filter(function (pair) { return ending.indexOf(pair) < 0 && !pair.pics; });
-  var deck = ending.concat(pics).concat(rest);
+  var pics = [];
+  var rest = [];
+  (pairs || []).forEach(function (pair) {
+    if (pair && pair.pics) pics.push(pair);
+    else rest.push(pair);
+  });
+  var deck = pics.concat(rest);
   var rounds = [];
   var r;
   var k;
@@ -1159,9 +1212,8 @@ export function buildDuelSchedule(pairs) {
     for (k = 0; k < 8; k++) slice.push(deck[(r * 8 + k) % deck.length]);
     rounds.push(slice);
   }
-  var pool = ending.concat((pairs || []).filter(function (pair) { return !!pair.pics; }));
   var recap = [];
-  for (k = 0; k < 10; k++) recap.push(pool[k % pool.length]);
+  for (k = 0; k < 10; k++) recap.push(deck[k % deck.length]);
   return { rounds: rounds, recap: recap };
 }
 

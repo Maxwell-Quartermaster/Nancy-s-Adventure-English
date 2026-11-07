@@ -1,5 +1,5 @@
 import * as E from "./engine.mjs";
-import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel } from "./art.mjs";
+import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel, zoneEmblem } from "./art.mjs";
 
 window.__net = [];
 var nativeFetch = window.fetch ? window.fetch.bind(window) : null;
@@ -69,21 +69,30 @@ function heroSvg() {
   var pack = D.picPlan.uiInlineSvg || {};
   return S.hero === "nancy" ? (pack.nancy || "") : (pack.sam || "");
 }
+function resumeCtx(ctx) {
+  try {
+    if (!ctx || typeof ctx.resume !== "function") return;
+    if (ctx.state && ctx.state !== "suspended" && ctx.state !== "interrupted") return;
+    var pending = ctx.resume();
+    if (pending && typeof pending.catch === "function") pending.catch(function () {});
+  } catch (e) { /* a rejected resume must not surface */ }
+}
 function wake() {
   try {
     var AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) return;
     if (!window.__ac) window.__ac = new AC();
-    if (window.__ac.state === "suspended") window.__ac.resume();
+    resumeCtx(window.__ac);
     var buf = window.__ac.createBuffer(1, 1, 22050);
     var src = window.__ac.createBufferSource();
     src.buffer = buf;
     src.connect(window.__ac.destination);
     src.start();
-    if (window.speechSynthesis) {
-      var u = new SpeechSynthesisUtterance("");
-      window.speechSynthesis.speak(u);
-    }
+    try {
+      if (window.speechSynthesis && window.SpeechSynthesisUtterance) {
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+      }
+    } catch (speakErr) { /* empty wake utterance is optional */ }
   } catch (e) { /* audio is optional */ }
 }
 function thud() {
@@ -92,10 +101,7 @@ function thud() {
     if (!AC) return;
     if (!window.__ac) window.__ac = new AC();
     var ctx = window.__ac;
-    if (ctx.state === "suspended") {
-      var resumed = ctx.resume();
-      if (resumed && resumed.catch) resumed.catch(function () {});
-    }
+    resumeCtx(ctx);
     var o = ctx.createOscillator();
     var g = ctx.createGain();
     var t = ctx.currentTime;
@@ -110,24 +116,45 @@ function thud() {
     o.stop(t + 0.17);
   } catch (e) { /* missing audio never blocks */ }
 }
+function voiceReady() {
+  try {
+    if (window.__forceSilent) return false;
+    if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) return false;
+    if (typeof window.speechSynthesis.getVoices !== "function") return false;
+    var voices = window.speechSynthesis.getVoices() || [];
+    return voices.length > 0;
+  } catch (e) { return false; }
+}
 function speak(text, slow) {
-  if (text) {
-    if (!window.__spoken) window.__spoken = [];
-    window.__spoken.push(text);
-  }
   var bonus = D ? E.gearBonuses(S, D) : { slow: false };
   var rate = bonus.slow ? 0.5 : (S && S.settings && S.settings.slowMode ? 0.6 : 0.85);
   if (slow) rate = Math.min(rate, 0.6);
-  var synth = window.speechSynthesis ? {
-    cancel: function () { window.speechSynthesis.cancel(); },
-    speak: function (line) {
-      var u = new SpeechSynthesisUtterance(line);
-      u.lang = "en-US";
-      u.rate = rate;
-      window.speechSynthesis.speak(u);
+  var synth = null;
+  try {
+    if (voiceReady()) {
+      synth = {
+        cancel: function () { window.speechSynthesis.cancel(); },
+        speak: function (line) {
+          var u = new SpeechSynthesisUtterance(line);
+          u.lang = "en-US";
+          u.rate = rate;
+          u.onerror = function () {
+            if (S && S.run && S.run.heardIndex === S.run.index) {
+              S.run.listenFallback = true;
+              render();
+            }
+          };
+          window.speechSynthesis.speak(u);
+        }
+      };
     }
-  } : null;
-  return E.speakEnglish(text, synth);
+  } catch (e) { synth = null; }
+  var ok = E.speakEnglish(text, synth);
+  if (ok && text) {
+    if (!window.__spoken) window.__spoken = [];
+    window.__spoken.push(text);
+  }
+  return ok;
 }
 function playFile(rel) {
   E.playClip(rel, function (url) { return fetch(url); }).then(function (ok) {
@@ -136,12 +163,14 @@ function playFile(rel) {
       var AC = window.AudioContext || window.webkitAudioContext;
       if (!AC) return;
       if (!window.__ac) window.__ac = new AC();
+      resumeCtx(window.__ac);
       return window.__ac.decodeAudioData(buf).then(function (audio) {
+        resumeCtx(window.__ac);
         var src = window.__ac.createBufferSource();
         src.buffer = audio;
         src.connect(window.__ac.destination);
         src.start();
-      });
+      }).catch(function () { /* clip decode never blocks */ });
     });
   }).catch(function () { /* missing clip */ });
 }
@@ -208,11 +237,11 @@ function hud(scene) {
   var cheer = S.cheerUntil && Date.now() < S.cheerUntil ? " cheer" : "";
   var nod = S.nodUntil && Date.now() < S.nodUntil ? " nod" : "";
   return "<header class='hud' data-xp='" + S.xp + "' data-stars='" + S.goldStars + "' data-pips='" + S.pips + "' data-gems='" + gems + "'>" +
-    "<div class='hud-side'><div class='count'>◆ " + gems + "</div>" + coinRow(S.pips || 0) + "</div>" +
+    "<div class='hud-side'><div class='count nowrap'>" + icon("gem") + " " + gems + "</div>" + coinRow(S.pips || 0) + "</div>" +
     "<div class='portrait" + cheer + nod + "'>" + heroSvg() + "</div>" +
-    "<div class='hud-side' style='align-items:flex-end'><div class='level-label'>Level " + S.level + "</div>" +
+    "<div class='hud-side level-side' style='align-items:flex-end'><div class='level-label nowrap'>Level " + S.level + "</div>" +
     "<div class='xpbar" + (S.pipGlow ? " pip-glow" : "") + "'><span style='width:" + xpFrac(S.xp) + "%'></span></div>" +
-    "<div class='count'>" + S.goldStars + "</div></div></header>";
+    "<div class='count nowrap'>" + icon("star") + " " + S.goldStars + "</div></div></header>";
 }
 function banner(en, th) {
   return "<div class='banner'>" + bi(en, th) + "</div>";
@@ -222,6 +251,15 @@ function bubbleHtml() {
   return "<div class='bubble'><div class='en'>" + escapeText(S.bubble.en || "") + "</div><div class='th' lang='th'>" + escapeText(S.bubble.th || "") + "</div></div>";
 }
 
+function countProp(thing) {
+  if (thing === "cows") {
+    return "<svg class='drawn' viewBox='0 0 64 40' aria-hidden='true'><ellipse cx='30' cy='24' rx='16' ry='10' fill='#F6E9C8' stroke='#10170F' stroke-width='3'/><circle cx='46' cy='18' r='7' fill='#F6E9C8' stroke='#10170F' stroke-width='3'/><path d='M18 28v8M34 28v8' stroke='#10170F' stroke-width='3'/></svg>";
+  }
+  if (thing === "hats") {
+    return "<svg class='drawn' viewBox='0 0 64 40' aria-hidden='true'><path d='M8 28h48l-6 6H14z' fill='#C46B4A' stroke='#10170F' stroke-width='3'/><path d='M22 28c0-12 20-12 20 0' fill='#E8B84A' stroke='#10170F' stroke-width='3'/></svg>";
+  }
+  return "<svg class='drawn' viewBox='0 0 64 40' aria-hidden='true'><path d='M8 14h48l-4 8H12z' fill='#C8A26A' stroke='#10170F' stroke-width='3'/><path d='M14 22h36l-4 14H18z' fill='#E8B84A' stroke='#10170F' stroke-width='3'/><path d='M24 14c0-8 16-8 16 0' fill='none' stroke='#10170F' stroke-width='3'/></svg>";
+}
 function propButton(id, surface, left, correct, inner, act) {
   var cls = "prop on-" + surface;
     if (S.glowId === id) cls += " glow-gold";
@@ -240,22 +278,25 @@ function sceneSlots(step) {
     return "<div class='bench-seat' data-seat='1'><span class='grown' style='width:" + px + "px;height:" + px + "px'>" + pictureHtml(card && card.pic, inline) + "</span></div>";
   }
   if (step.kind === "count") {
-    var n = step.countN || 3;
-    var basket = "<svg class='drawn' viewBox='0 0 64 48' aria-hidden='true'><path d='M6 10h52l-8 32H14z' fill='#C46B4A' stroke='#10170F' stroke-width='3'/></svg>";
+    var counted = E.countPrompt(D.byId[step.id], D.ui);
+    var n = counted.n || step.countN || 0;
+    var prop = countProp(counted.thing);
     var html = "";
     var i;
     for (i = 0; i < n; i++) {
       var col = i % 5;
-      var row = i < 5 ? "4%" : "18%";
-      html += "<span class='count-item' data-prop data-surface='ground' style='left:" + (8 + col * 18) + "%;bottom:" + row + "'>" + basket + "<i class='shadow'></i></span>";
+      var cols = Math.min(n, 5);
+      var left = 30 + (cols === 1 ? 18 : col * (58 / cols));
+      var bottom = i < 5 ? "6%" : "16%";
+      html += "<span class='count-item' data-count-item='1' data-thing='" + escapeText(counted.thing) + "' style='left:" + left + "%;bottom:" + bottom + "'>" + prop + "<i class='shadow'></i></span>";
     }
     return html;
   }
   if (step.kind === "size") {
-    var big = D.byId["cs-23"];
-    var small = D.byId["cs-24"];
-    return propButton("big", "ground", "42%", false, "<span class='en'>" + escapeText(big ? big.en : "big") + "</span>", "size") +
-      propButton("small", "ground", "68%", false, "<span class='en'>" + escapeText(small ? small.en : "small") + "</span>", "size");
+    var which = String((D.byId[step.id] || {}).en || "").toLowerCase() === "small" ? "small" : "big";
+    var sort = (D.meta && D.meta.sizeSort && D.meta.sizeSort[which]) || [];
+    var held = D.byId[sort[0]] || D.byId[step.id];
+    return "<div class='bench-seat' data-seat='1'></div><span class='held-pic " + which + "' data-held='1'>" + pictureHtml(held && held.pic, inline) + "</span>";
   }
   var pos = [
     { left: "38%", surface: "ground" },
@@ -310,12 +351,16 @@ function renderPlay() {
   }
   if (step.listen && S.run.heardIndex !== S.run.index) {
     S.run.heardIndex = S.run.index;
-    speak(card.en);
+    S.run.listenFallback = !speak(card.en);
   }
-  var prompt = E.promptFor(card, D.ui, step.listen && step.kind === "scene");
+  var prompt = E.promptFor(card, D.ui, step.listen && step.kind === "scene" && !S.run.listenFallback);
+  if (step.listen && S.run.listenFallback) {
+    var find = ui("listenFind");
+    prompt = { en: (find.en ? find.en + " " : "") + card.en, th: (find.th ? find.th + " " : "") + (card.thDef || card.th) };
+  }
   var respellLine = bonuses.respell && card.respell ? "<div class='en' style='color:#8A6200'>" + escapeText(card.respell) + "</div>" : "";
   if (step.kind === "letter") prompt = { en: ui("spellIt").en, th: ui("spellIt").th };
-  if (step.kind === "count") prompt = { en: ui("howMany").en, th: ui("howMany").th };
+  if (step.kind === "count") prompt = E.countPrompt(card, D.ui);
   if (step.kind === "size") prompt = { en: ui("bigOrSmall").en, th: ui("bigOrSmall").th };
   var extra = "";
   if (step.kind === "letter") extra = letterPads(card);
@@ -326,9 +371,10 @@ function renderPlay() {
     "<div class='stage'><div class='scene-frame' data-tod='" + tod + "'>" + sceneSvg(kind, tod) +
     "<div class='hero-fig'>" + heroSvg() + "<i class='shadow'></i></div>" +
     sceneSlots(step) + "</div></div>" +
-    "<div class='qcard'><div class='prompt'>" + bi(prompt.en, prompt.th) + respellLine + bubbleHtml() + extra + "</div>" +
-    "<button class='hint-btn' data-tap data-act='replay' aria-label='" + escapeText(ui("replay").en) + "'>" + icon("replay") + "</button>" +
-    "<button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>" + icon("leaf") + "<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button></div></div>";
+    "<div class='qcard'><div class='prompt'>" + bi(prompt.en, prompt.th) + respellLine + bubbleHtml() + extra +
+    (step.listen && !S.run.listenFallback ? "<button class='choice' data-tap data-act='showword'>" + bi(ui("listenFind").en, ui("listenFind").th) + "</button>" : "") + "</div>" +
+    "<div class='row-actions'><button class='hint-btn' data-tap data-act='replay' aria-label='" + escapeText(ui("replay").en) + "'>" + icon("replay") + "</button>" +
+    "<button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>" + icon("leaf") + "<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button></div></div></div>";
 }
 function letterPads(card) {
   var word = String(card.en || "");
@@ -336,7 +382,7 @@ function letterPads(card) {
   var got = S.run.spell.got;
   var blanks = word.split("").map(function (ch, i) { return got.charAt(i) || "_"; }).join(" ");
   var cursor = 0;
-  return "<div class='letters'>" + escapeText(blanks) + "</div><div class='choices'>" + S.run.spell.bank.map(function (ch) {
+  return "<div class='letters'>" + escapeText(blanks) + "</div><div class='choices letter-choices'>" + S.run.spell.bank.map(function (ch) {
     var spent = got.charAt(cursor) === ch;
     if (spent) cursor += 1;
     return "<button class='choice" + (spent ? " spent" : "") + "' data-tap data-act='letter' data-arg='" + escapeText(ch) + "'" + (spent ? " disabled" : "") + ">" + escapeText(ch) + "</button>";
@@ -366,9 +412,10 @@ function renderAsk(step, card) {
       "<button class='metal back-slim' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button>" +
       "<div class='ask'><div class='pic-frame'>" + (card.pic ? pictureHtml(card.pic, inline) : "") + "</div>" +
       "<div class='prompt' style='text-align:center'>" + bi(card.en, card.th) +
-      "<div class='en' style='color:#8A6200'>" + escapeText(card.respell || "") + "</div></div>" +
+      "<div class='en' style='color:#8A6200'>" + escapeText(card.respell || "") + "</div>" +
+      (card.reply ? "<div class='reply'><div class='en'>" + escapeText(card.reply.en || "") + "</div><div class='th' lang='th'>" + escapeText(card.reply.th || "") + "</div></div>" : "") + "</div>" +
       bubbleHtml() +
-      "<div class='row-actions'><button class='hint-btn' data-tap data-act='hint'>🍃</button>" +
+      "<div class='row-actions'><button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>" + icon("leaf") + "</button>" +
       "<button class='gold-btn' data-tap data-act='sayit'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
   }
   if (card.type === "two-answer") {
@@ -406,7 +453,7 @@ function renderAsk(step, card) {
     if (S.moonChoice === en) cls += " glow-moon";
     return "<button class='" + cls + "' data-tap data-act='choice' data-arg='" + escapeText(en) + "'>" + escapeText(en) + "</button>";
   }).join("");
-  var pic = card.pic ? pictureHtml(card.pic, inline) : "<div class='emblem'>" + icon("emblem") + "</div><div class='th' lang='th'>" + escapeText(stemTh) + "</div>";
+  var pic = card.pic ? pictureHtml(card.pic, inline) : "<div class='emblem zone-emblem'>" + zoneEmblem(zone) + "<div class='th emblem-th' lang='th'>" + escapeText(stemTh) + "</div></div>";
   var serverLine = card.type === "server-talk" ? "<div class='prompt'>" + bi(card.en, card.th) + "</div>" : "";
   return "<div class='screen' data-screen='play'>" + banner(zone.name, zone.nameTh) + hud(false) +
     "<button class='metal back-slim' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button>" +
@@ -435,7 +482,7 @@ function renderReveal() {
     "<div class='prompt' style='text-align:center'><div class='en' style='font-size:36px;color:#10170F'>" + escapeText(card.en) + "</div>" +
     "<div class='en' style='color:#8A6200'>" + escapeText(card.respell || "") + "</div>" +
     "<div class='th' lang='th'>" + escapeText(card.th) + "</div>" + trap + say + "</div>" +
-    "<div class='row-actions'><button class='hint-btn' data-tap data-act='replay'>🔊<span class='hint-label th' lang='th'>" + escapeText(ui("replay").th) + "</span></button>" +
+    "<div class='row-actions'><button class='hint-btn' data-tap data-act='replay' aria-label='" + escapeText(ui("replay").en) + "'>" + icon("replay") + "<span class='hint-label th' lang='th'>" + escapeText(ui("replay").th) + "</span></button>" +
     "<button class='gold-btn' data-tap data-act='got'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
 }
 
@@ -464,7 +511,7 @@ function renderBoss() {
     "<div class='pic-frame'>" + pictureHtml(card && card.pic, inline) + "</div>" +
     "<div class='ask-thai th' lang='th'>" + escapeText((card && (card.thDef || card.th)) || "") + "</div>" +
     "<div class='choices'>" + choices + "</div>" + bubbleHtml() +
-    "<div class='row-actions'><button class='hint-btn' data-tap data-act='hint'>🍃</button>" +
+    "<div class='row-actions'><button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>" + icon("leaf") + "</button>" +
     "<button class='metal' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button></div></div></div>";
 }
 
@@ -491,7 +538,7 @@ function renderTitle() {
       banner(ui("verseOfDay").en, ui("verseOfDay").th) +
       "<div class='en'>" + escapeText(ui("verseGift").en) + "</div><div class='th' lang='th'>" + escapeText(ui("verseGift").th) + "</div>" +
       "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
-      "<div class='row-actions'><button class='hint-btn' data-tap data-act='replayverse'>🔊</button>" +
+      "<div class='row-actions'><button class='hint-btn' data-tap data-act='replayverse' aria-label='" + escapeText(ui("replay").en) + "'>" + icon("replay") + "</button>" +
       "<button class='title-go' data-tap data-act='versegot' style='position:static'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
   }
   return "<div class='screen title-screen' data-screen='title'><div class='ti' data-tod='" + titleTod() + "'>" + titleSvg + "</div><div class='fade-bottom'></div>" +
@@ -564,7 +611,7 @@ function renderMap() {
     var soft = r.id !== "r1" && !open[r.id];
     var cue = "";
     if (ribbon) cue = "<span class='ribbon en'>" + escapeText(ui("boss").en) + "</span>";
-    else if (arrow === r.id) cue = "<span class='arrow-cue'>➤</span>";
+    else if (arrow === r.id) cue = "<span class='arrow-cue'>" + icon("arrow") + "</span>";
     return "<button class='map-row" + (soft ? " soft" : "") + "' data-tap data-act='region' data-arg='" + r.id + "'>" +
       "<span class='dot' style='background:" + r.color + "'></span><span class='label'>" + bi(r.en, r.th) +
       (soft ? "<span class='th next' lang='th'>" + escapeText(ui("comingNext").th) + "</span>" : "") + "</span>" + cue + "</button>";
@@ -618,7 +665,7 @@ function renderRest() {
     S = got.state;
     save();
   }
-  return "<div class='screen' data-screen='rest'>" + banner(ui("verseGift").en, ui("verseGift").th) +
+  return "<div class='screen' data-screen='rest'>" + banner(D.restScreen.en, D.restScreen.th) +
     "<div class='ask'><div class='panel'>" + bi(D.restScreen.en, D.restScreen.th) +
     "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
     "<button class='gold-btn' data-tap data-act='keep'>" + plate(ui("keepGoing").en, ui("keepGoing").th) + "</button>" +
@@ -658,7 +705,7 @@ function renderShop() {
   }).join("");
   var gear = E.shopRows(S, D).map(function (row) {
     var slots = row.slots.map(function (slot) {
-      var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : ("★ " + slot.cost));
+      var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost));
       var cls = "trophy" + (slot.silhouette ? " sil" : "");
       var ask = ui("getFor");
       var label = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
@@ -670,7 +717,7 @@ function renderShop() {
     return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row' data-scroll-ok>" + slots + "</div>";
   }).join("");
   return "<div class='screen' data-screen='shop'>" + banner(ui("pantry").en, ui("pantry").th) +
-    "<div class='sheet'><div class='count'>★ " + icon("star") + " " + S.goldStars + "</div><div class='pane' data-scroll-ok><div class='grid3'>" + items + "</div>" + gear + "</div></div>" +
+    "<div class='sheet'><div class='count'>" + icon("star") + " " + S.goldStars + "</div><div class='pane' data-scroll-ok><div class='grid3'>" + items + "</div>" + gear + "</div></div>" +
     "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
@@ -693,7 +740,12 @@ function renderGear() {
     var label = ui(name === "pantry" ? "pantry" : name);
     return "<button class='metal" + (tab === name ? " on" : "") + "' data-tap data-act='tab' data-arg='" + name + "'>" + plate(label.en, label.th) + "</button>";
   }).join("");
-  var shelf = (S.owned || []).slice(-4).map(function (id) {
+  var shelfIds = [];
+  (D.trophies || []).forEach(function (item) {
+    if (item.cat === "gear" && (S.owned || []).indexOf(item.id) >= 0 && shelfIds.indexOf(item.id) < 0) shelfIds.push(item.id);
+  });
+  (S.owned || []).slice(-4).forEach(function (id) { if (shelfIds.indexOf(id) < 0) shelfIds.push(id); });
+  var shelf = shelfIds.map(function (id) {
     var t = null;
     (D.trophies || []).some(function (item) { if (item.id === id) { t = item; return true; } return false; });
     if (!t) return "";
@@ -701,27 +753,36 @@ function renderGear() {
   }).join("");
   var body = "";
   if (tab === "gear") {
-    body = E.shopRows(S, D).map(function (row) {
+    var gearCards = (D.trophies || []).filter(function (t) { return t.cat === "gear" || !t.cat; }).map(function (t) {
+      var owned = (S.owned || []).indexOf(t.id) >= 0;
+      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "'>" +
+        pictureHtml(t.pic || ("svg:" + t.id), inline) + bi(t.en, t.th || t.thGloss || "") +
+        (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
+    }).join("");
+    body = "<div class='grid3'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
       return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row'>" + row.slots.map(function (slot) {
         var ask = ui("getFor");
         var gname = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
         var gth = slot.silhouette ? String(ask.th || "").split("{n}").join(String(slot.cost)) : slot.th;
         return "<button class='trophy" + (slot.silhouette ? " sil" : "") + "' data-tap data-act='buy' data-arg='" + slot.id + "'>" +
           pictureHtml("svg:" + slot.id, inline) + bi(gname, gth) +
-          "<div class='en'>" + (slot.owned ? "✓" : (slot.tier === 1 ? "" : "★ " + slot.cost)) + "</div></button>";
+          "<div class='en'>" + (slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost))) + "</div></button>";
       }).join("") + "</div>";
     }).join("");
   } else if (tab === "scrolls") {
+    var credit = (D.verses && D.verses.attribution) || {};
     body = (S.scrolls || []).length ? (S.scrolls || []).map(function (scroll) {
-      return "<button class='trophy' data-tap data-act='readscroll' data-arg='" + escapeText(scroll.id) + "'>" + bi(scroll.ref, "") + "</button>";
+      var tag = scroll.enSource || scroll.thSource ? "<div class='tag'>" + escapeText(scroll.enSource || "") + " " + escapeText(scroll.thSource || "") + "</div>" : "";
+      return "<button class='trophy' data-tap data-act='readscroll' data-arg='" + escapeText(scroll.id) + "'>" + bi(scroll.ref, "") + tag + "</button>";
     }).join("") : "<div class='th' lang='th'>" + escapeText(ui("scrollsEmpty").th) + "</div>";
+    body += "<div class='tag' data-attribution='1'>" + escapeText(credit.esv || "") + "</div><div class='tag' data-attribution='1'>" + escapeText(credit.thsv11 || "") + "</div>";
   } else if (tab === "pantry") {
     body = "<button class='metal' data-tap data-act='shop'>" + plate(ui("pantry").en, ui("pantry").th) + "</button>";
   } else {
     var cat = tab === "titles" ? "titles" : tab === "themes" ? "themes" : "gems";
     body = "<div class='grid3'>" + (D.trophies || []).filter(function (t) { return t.cat === cat; }).map(function (t) {
       var owned = (S.owned || []).indexOf(t.id) >= 0;
-      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "'>" + pictureHtml(t.pic, inline) +
+      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "'>" + pictureHtml(t.pic, inline) +
         bi(t.en, t.th || t.thGloss || "") + (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("") + "</div>";
   }
@@ -739,9 +800,9 @@ function renderGear() {
 function renderBackup() {
   document.body.setAttribute("data-theme", "menu");
   var review = E.thaiReviewQueue(D);
-  var ids = review.needsMaxwell.map(function (id) {
-    var settled = E.SETTLED_APPROVALS.needsMaxwell.indexOf(id) >= 0;
-    return "<li class='th' data-settled='" + (settled ? "1" : "0") + "' lang='th'>" + escapeText(id) + "</li>";
+  var pending = E.pendingMaxwell(review.needsMaxwell, E.SETTLED_APPROVALS.needsMaxwell);
+  var ids = pending.map(function (id) {
+    return "<li class='th' data-settled='0' lang='th'>" + escapeText(id) + "</li>";
   }).join("");
   var queue = review.nurse.concat(review.thDef).map(function (id) {
     var mark = S.thaiMarks && S.thaiMarks[id] ? "✓" : "·";
@@ -755,7 +816,7 @@ function renderBackup() {
     "<button class='metal' data-tap data-act='readbak'>" + plate(ui("restore").en, ui("restore").th) + "</button>" +
     note +
     "<button class='gold-btn' data-tap data-act='usebak'>" + plate(ui("useBackup").en, ui("useBackup").th) + "</button>" +
-    "<div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><ul>" + ids + "</ul>" +
+    (pending.length ? "<div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><ul data-pending='1'>" + ids + "</ul>" : "") +
     "<div class='th' lang='th'>" + escapeText(ui("thaiReview").th || ui("thaiReview").en) + "</div><div class='grid3'>" + queue + "</div></div>" +
     "<button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
@@ -781,6 +842,7 @@ function renderDuel() {
   }
   var pics = pair.pics || [];
   return "<div class='screen' data-screen='duel'>" + banner(ui("soundDuel").en, ui("soundDuel").th) + hud(false) +
+    "<button class='metal back-slim' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button>" +
     "<div class='ask'><div class='prompt'>" + bi(ui("echoKnight").en, ui("echoKnight").th) + "</div>" +
     "<div class='choices'>" +
     "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.a) + "'>" + (pics[0] ? "<span class='emoji-pic'>" + escapeText(pics[0]) + "</span>" : "") + escapeText(pair.a) + "</button>" +
@@ -812,53 +874,7 @@ function render() {
   else html = renderMenu();
   document.getElementById("app").innerHTML = html;
   if (S.screen === "title") paintTitle();
-  seatInk();
   document.body.classList.toggle("short", window.innerHeight <= 600);
-}
-function seatInk() {
-  var nodes = document.querySelectorAll("[data-prop] .emoji-pic, .prop .emoji-pic");
-  var i;
-  for (i = 0; i < nodes.length; i++) trimEmoji(nodes[i]);
-}
-function trimEmoji(node) {
-  try {
-    var text = node.textContent || "";
-    if (!text || !document.createElement("canvas").getContext) return;
-    var size = 96;
-    var canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
-    var ctx = canvas.getContext("2d");
-    ctx.font = "72px sans-serif";
-    ctx.textBaseline = "top";
-    ctx.fillText(text, 0, 8);
-    var data = ctx.getImageData(0, 0, size, size).data;
-    var minY = size;
-    var maxY = 0;
-    var minX = size;
-    var maxX = 0;
-    var found = false;
-    var y;
-    var x;
-    for (y = 0; y < size; y++) {
-      for (x = 0; x < size; x++) {
-        if (data[(y * size + x) * 4 + 3] > 16) {
-          found = true;
-          if (y < minY) minY = y;
-          if (y > maxY) maxY = y;
-          if (x < minX) minX = x;
-          if (x > maxX) maxX = x;
-        }
-      }
-    }
-    if (!found) return;
-    var cut = document.createElement("canvas");
-    cut.width = Math.max(1, maxX - minX + 1);
-    cut.height = Math.max(1, maxY - minY + 1);
-    cut.className = "ink";
-    cut.getContext("2d").drawImage(canvas, minX, minY, cut.width, cut.height, 0, 0, cut.width, cut.height);
-    node.parentNode.replaceChild(cut, node);
-  } catch (e) { /* keep the glyph if the canvas cannot read it */ }
 }
 
 function enterMenu() {
@@ -962,6 +978,16 @@ function onCorrect(card, ledgerId, spoken) {
 function handle(act, arg) {
   if (!S || S.lock) return;
   if (paused && act !== "resume") return;
+  S.lock = true;
+  window.__lockDuring = true;
+  try {
+    dispatch(act, arg);
+  } finally {
+    var held = S;
+    requestAnimationFrame(function () { if (held) held.lock = false; });
+  }
+}
+function dispatch(act, arg) {
   if (act === "letsgo" || act === "resume" || act === "got" || act === "sayit" || act === "choice" || act === "prop" || act === "boss" || act === "region" || act === "map" || act === "gear" || act === "shop" || act === "back") thud();
   if (act === "letsgo") {
     wake();
@@ -1069,6 +1095,11 @@ function handle(act, arg) {
       if (!open.r4) {
         var boss = E.gateBossName(D, "r4");
         S.bubble = { en: ui("guardianLast").en + " " + (boss ? boss.en : ""), th: ui("guardianLast").th + " " + (boss ? boss.th : "") };
+        render();
+        return;
+      }
+      if (S.duel && S.duel.pairs) {
+        S.screen = "duel";
         render();
         return;
       }
@@ -1416,10 +1447,8 @@ function handle(act, arg) {
       var nowDays = S.streak && S.streak.n || 0;
       var bakLevel = check.ok ? check.state.level : "";
       var bakDays = check.ok && check.state.streak ? check.state.streak.n : "";
-      function fillCmp(s) {
-        return String(s || "").split("{a}").join(String(bakLevel)).split("{b}").join(String(bakDays)).split("{c}").join(String(nowLevel)).split("{d}").join(String(nowDays));
-      }
-      S.backupReason = check.ok ? fillCmp(cmp.en) + " / " + fillCmp(cmp.th) : check.reason;
+      var filled = check.ok ? E.fillBackupCompare(cmp.en, bakLevel, bakDays, nowLevel, nowDays) + " / " + E.fillBackupCompare(cmp.th, bakLevel, bakDays, nowLevel, nowDays) : check.reason;
+      S.backupReason = String(filled).indexOf("{") >= 0 ? "" : filled;
       render();
     };
     reader.readAsText(input.files[0]);
@@ -1457,6 +1486,11 @@ function handle(act, arg) {
       S.cheerUntil = Date.now() + 600;
     }
     save();
+    render();
+    return;
+  }
+  if (act === "showword") {
+    if (S.run) S.run.listenFallback = true;
     render();
     return;
   }
@@ -1565,13 +1599,125 @@ window.__layoutAudit = function () {
     if (screen.scrollHeight > screen.clientHeight + 6) out.scroll.push(screen.scrollHeight - screen.clientHeight);
   }
   out.errors = window.__errors.slice();
-  out.ok = !out.overlaps.length && !out.small.length && !out.thai.length && !out.floating.length && !out.scroll.length && !out.errors.length;
+  out.raw = (document.body.innerText.match(/\{[A-Za-z]+\}/g) || []);
+  var titleEn = document.querySelector(".banner .en");
+  var titleTh = document.querySelector(".banner .th");
+  out.titleOverlap = false;
+  if (titleEn && titleTh) {
+    var a = titleEn.getBoundingClientRect();
+    var b = titleTh.getBoundingClientRect();
+    out.titleOverlap = a.left < b.right - 1 && a.right > b.left + 1 && a.top < b.bottom - 1 && a.bottom > b.top + 1;
+  }
+  var level = document.querySelector(".level-label");
+  out.levelText = level ? level.textContent : "";
+  out.levelClipped = false;
+  if (level) {
+    var box = level.getBoundingClientRect();
+    out.levelClipped = level.scrollWidth > level.clientWidth + 2 || box.height > 28 || String(level.textContent || "").indexOf("Level") < 0;
+  }
+  out.ok = !out.overlaps.length && !out.small.length && !out.thai.length && !out.floating.length && !out.scroll.length && !out.errors.length && !out.raw.length && !out.titleOverlap && !out.levelClipped;
   return out;
 };
 
 window.__homeLake = function () {
   var run = E.buildRun(D, E.freshState(D), "maxwell-says", { rng: function () { return 0.2; } });
   return run.steps.slice(0, 3).map(function (step) { return step.id; });
+};
+window.__listenOff = function () {
+  window.__forceSilent = true;
+  var run = E.buildRun(D, E.freshState(D), "phonics", { rng: E.mulberry32(4) });
+  var i;
+  var found = false;
+  for (i = 0; i < run.steps.length; i++) if (run.steps[i].listen) { run.index = i; found = true; break; }
+  S.run = run;
+  S.screen = "play";
+  render();
+  var word = D.byId[run.steps[run.index].id].en;
+  var shown = document.body.innerText.indexOf(word) >= 0;
+  window.__forceSilent = false;
+  return { shown: shown, found: found };
+};
+window.__modeFacts = function () {
+  var step = S.run && S.run.steps[S.run.index];
+  var card = step && D.byId[step.id];
+  return {
+    kind: step && step.kind,
+    n: step && step.countN,
+    items: document.querySelectorAll("[data-count-item]").length,
+    answer: card ? card.en : "",
+    xp: S.xp,
+    stars: S.goldStars,
+    got: S.run && S.run.spell ? S.run.spell.got : "",
+    bank: S.run && S.run.spell ? S.run.spell.bank.slice() : [],
+    screen: document.querySelector(".screen") ? document.querySelector(".screen").getAttribute("data-screen") : "",
+    targets: document.querySelectorAll("[data-act='" + (step && step.kind || "") + "']").length,
+    braced: (document.body.innerText.match(/\{[A-Za-z]+\}/g) || []).length
+  };
+};
+window.__openCharacter = function () {
+  try {
+    paused = false;
+    S.screen = "gear";
+    S.charTab = "gems";
+    render();
+    return {
+      screen: document.querySelector(".screen") ? document.querySelector(".screen").getAttribute("data-screen") : "",
+      tabs: document.querySelectorAll("[data-act=tab]").length
+    };
+  } catch (e) {
+    return { error: String(e && e.message || e) };
+  }
+};
+window.__startBoss = function () {
+  var run = E.buildRun(D, S, "phonics", { rng: E.mulberry32(4) });
+  run.phase = "boss";
+  run.bossIndex = 0;
+  run.regionId = "r1";
+  S.run = run;
+  S.screen = "boss";
+  render();
+  return run.bossIds.length;
+};
+window.__bossFacts = function () {
+  var run = S.run;
+  var id = run && run.bossIds ? run.bossIds[run.bossIndex] : "";
+  var card = id ? D.byId[id] : null;
+  var screen = document.querySelector(".screen");
+  return {
+    screen: screen ? screen.getAttribute("data-screen") : "",
+    answer: card ? card.answer : "",
+    xp: S.xp,
+    bosses: (S.bossesWon || []).slice(),
+    title: document.querySelector(".banner .en") ? document.querySelector(".banner .en").textContent : ""
+  };
+};
+window.__openForest = function () {
+  if ((S.bossesWon || []).indexOf("baby-hospital") < 0) S.bossesWon.push("baby-hospital");
+  S.screen = "map";
+  render();
+};
+window.__xp = function () { return S ? S.xp : ""; };
+window.__duelFacts = function () {
+  var screen = document.querySelector(".screen");
+  return {
+    screen: screen ? screen.getAttribute("data-screen") : "",
+    heard: S.duel && S.duel.heard || "",
+    index: S.duel ? S.duel.index : -1,
+    left: S.duel && S.duel.pairs ? S.duel.pairs.length - S.duel.index : 0,
+    xp: S.xp,
+    rounds: S.duelRounds || 0
+  };
+};
+window.__bhReply = function () {
+  var card = D.byId["bh-11"];
+  S.run = { id: "reply-check", zone: "baby-hospital", index: 0, steps: [{ id: "bh-11", kind: "ask" }], phase: "play", retriesLeft: 0 };
+  S.screen = "play";
+  render();
+  var text = document.body.innerText;
+  return { shown: !!(card && card.reply && text.indexOf(card.reply.en) >= 0 && text.indexOf(card.reply.th) >= 0) };
+};
+window.__trophyIds = function () {
+  return Array.prototype.map.call(document.querySelectorAll("[data-trophy]"), function (el) { return el.getAttribute("data-trophy"); });
 };
 window.__listenProbe = function () {
   var run = E.buildRun(D, E.freshState(D), "phonics", { rng: E.mulberry32(4) });
@@ -1600,7 +1746,12 @@ window.__previewMode = function (kind) {
   var run = E.buildRun(D, S, zone, { rng: E.mulberry32(4) });
   var i;
   for (i = 0; i < run.steps.length; i++) {
-    if (run.steps[i].kind === kind) { run.index = i; break; }
+    if (run.steps[i].kind === kind && (kind !== "count" || run.steps[i].countN >= 3)) { run.index = i; break; }
+  }
+  if (kind === "count" && run.steps[run.index] && run.steps[run.index].kind !== "count") {
+    for (i = 0; i < run.steps.length; i++) {
+      if (run.steps[i].kind === "count") { run.index = i; break; }
+    }
   }
   S.run = run;
   S.screen = "play";
@@ -1648,7 +1799,11 @@ function boot() {
     try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) { /* ignore */ }
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js").catch(function () { /* offline shell is optional */ });
-      navigator.serviceWorker.addEventListener("message", function () { S.updateReady = true; if (S.screen === "map") render(); });
+      navigator.serviceWorker.addEventListener("message", function (event) {
+        if (!event.data || event.data.type !== "update") return;
+        S.updateReady = true;
+        if (S.screen === "map") render();
+      });
     }
   }).catch(function (err) {
     window.__errors.push(String(err && err.message || err));
