@@ -917,13 +917,18 @@ export function weaponCatalog(model) {
       });
       var id = named ? named.id : wt + "-t" + tier;
       if (wt === "sword1" && tier === 1) id = "sword-iron";
+      var typeName = types[ri] || wt;
+      var tierName = tiers[tier - 1] || ("Tier " + tier);
+      var composed = tierName + " " + typeName;
+      var label = named && named.en ? named.en : composed;
+      var thai = named && (named.thGloss || named.th) ? (named.thGloss || named.th) : composed;
       list.push({
         id: id,
         wt: wt,
         tier: tier,
-        row: types[ri] || wt,
-        name: named ? named.en : ((tiers[tier - 1] || ("Tier " + tier)) + " " + (types[ri] || wt)),
-        th: named ? (named.thGloss || named.th || "") : "",
+        row: typeName,
+        name: label,
+        th: thai,
         cost: costs[tier - 1] != null ? costs[tier - 1] : 0,
         named: !!named
       });
@@ -1078,6 +1083,7 @@ export function shopRows(state, model) {
         var stars = state.goldStars || 0;
         return {
           id: slot.id,
+          wt: slot.wt,
           name: slot.name,
           th: slot.th,
           tier: slot.tier,

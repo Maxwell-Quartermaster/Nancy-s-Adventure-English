@@ -62,6 +62,19 @@ var DRAWN = {
   "shield-sunrise": wrap("<circle cx='32' cy='32' r='20' fill='#3D7FD9' stroke='" + INK + "' stroke-width='3'/><path d='M32 20l3 8h8l-6 5 2 8-7-4-7 4 2-8-6-5h8z' fill='#FFCC33' stroke='" + INK + "' stroke-width='1'/>")
 };
 
+export function weaponSvg(note, blade, shade) {
+  var b = blade || "#B9C0C4";
+  var d = shade || "#8A939C";
+  var style = "--b:" + b + ";--d:" + d + ";--g:#FFCC33;--h:#6B4423";
+  var spec = String(note || "wb");
+  var inner = "<use href='#wb'/>";
+  if (spec.indexOf("wh+wx") >= 0) inner = "<use href='#wh'></use><use href='#wx'></use>";
+  else if (spec.indexOf("wh+wm") >= 0) inner = "<use href='#wh'></use><use href='#wm'></use>";
+  else if (spec.indexOf("1.4") >= 0) inner = "<use href='#wb' transform='translate(0,-8) scale(1.4)'></use>";
+  else inner = "<use href='#wb'></use>";
+  return "<svg class='drawn weapon-svg' viewBox='-28 -84 56 118' aria-hidden='true' style='" + style + "'>" + inner + "</svg>";
+}
+
 export function drawnSvg(id) {
   return DRAWN[id] || wrap("<rect x='12' y='12' width='40' height='40' rx='6' fill='#E9D9AE' stroke='" + INK + "' stroke-width='3'/>");
 }

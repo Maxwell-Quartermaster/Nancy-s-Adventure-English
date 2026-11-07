@@ -438,4 +438,10 @@ test("a newer mirror beats a stale indexed record and does not award twice", fun
   var openSword = shopRows(rich, model).filter(function (row) { return row.wt === "sword1"; })[0];
   assert.equal(openSword.slots[2].silhouette, false);
   assert.equal(openSword.slots[2].tierOpen, true);
+  assert.equal(sword.slots[2].th, "Star Sword");
+  assert.equal(sword.slots[2].name, "Star Sword");
+  lockedRows.forEach(function (row) {
+    assert.equal(row.slots.length, 3);
+    row.slots.forEach(function (slot) { assert.equal(!!slot.th, true); });
+  });
 });

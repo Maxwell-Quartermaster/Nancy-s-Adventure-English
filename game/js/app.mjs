@@ -1,5 +1,5 @@
 import * as E from "./engine.mjs";
-import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel, zoneEmblem } from "./art.mjs";
+import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel, zoneEmblem, weaponSvg } from "./art.mjs";
 
 window.__net = [];
 var nativeFetch = window.fetch ? window.fetch.bind(window) : null;
@@ -710,7 +710,7 @@ function renderShop() {
     function fill(s) { return String(s || "").split("{n}").join(String(item.stars)); }
     var art = String(item.pic || "").indexOf("svg:") === 0 ? pictureHtml(item.pic, inline) : "<div class='emoji-pic'>" + escapeText(item.pic || "") + "</div>";
     return "<button class='trophy' data-tap data-act='buy' data-arg='" + item.id + "'>" + art +
-      bi(item.en, item.th) + "<div class='en keep-line'>" + escapeText(owned ? label.en : fill(label.en)) + "</div><div class='th keep-line' lang='th'>" + escapeText(owned ? label.th : fill(label.th)) + "</div></button>";
+      bi(item.en, item.th) + "<div class='en price-line'>" + escapeText(owned ? label.en : fill(label.en)) + "</div><div class='th price-line' lang='th'>" + escapeText(owned ? label.th : fill(label.th)) + "</div></button>";
   }).join("");
   var gear = E.shopRows(S, D).map(function (row) {
     return "<div class='en row-name'>" + escapeText(row.row) + "</div>" + weaponTrack(row);
@@ -720,25 +720,41 @@ function renderShop() {
     "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
+function weaponArt(slot) {
+  var notes = { sword1: "wb", sword2: "wb x1.4, long grip", axe1: "wh+wx", mace1: "wh+wm" };
+  var blades = ["#B9C0C4", "#4A90D9", "#F2A23A"];
+  var shades = ["#8A939C", "#2C5A8A", "#C47A1A"];
+  var index = Math.max(0, (slot.tier || 1) - 1);
+  return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blades[index], shades[index]) + "</div>";
+}
 function weaponTrack(row) {
   var slots = row.slots.map(function (slot) { return weaponCard(slot); }).join("");
-  return "<div class='weapon-row' data-weapon-row='" + escapeText(row.wt) + "'><div class='weapon-viewport'><div class='weapon-track' data-track='" + escapeText(row.wt) + "'>" + slots + "</div></div></div>";
+  return "<div class='weapon-row' data-weapon-row='" + escapeText(row.wt) + "'>" +
+    "<button class='weapon-step' data-tap data-act='wstep' data-arg='" + escapeText(row.wt) + ":-1' aria-label='" + escapeText(row.row) + "'>" + icon("arrow") + "</button>" +
+    "<div class='weapon-viewport'><div class='weapon-track' data-track='" + escapeText(row.wt) + "'>" + slots + "</div></div>" +
+    "<button class='weapon-step' data-tap data-act='wstep' data-arg='" + escapeText(row.wt) + ":1' aria-label='" + escapeText(row.row) + "'>" + icon("arrow") + "</button></div>";
 }
 function weaponCard(slot) {
   var ask = ui("getFor");
   var locked = !!slot.silhouette;
-  var art = "<div class='weapon-art'>" + pictureHtml("svg:" + slot.id, inline) + "</div>";
+  var art = weaponArt(slot);
+  var reveal = "";
+  if (!locked && slot.tier === 3 && S && S.ledger && !S.ledger["shown:" + slot.id]) {
+    S.ledger["shown:" + slot.id] = 1;
+    reveal = " weapon-reveal";
+  }
+  var spark = reveal ? "<i class='spark' aria-hidden='true'></i>" : "";
   var body;
   if (locked) {
     body = art +
-      "<div class='en keep-line'>" + escapeText(String(ask.en || "").split("{n}").join(String(slot.cost))) + "</div>" +
-      "<div class='th keep-line' lang='th'>" + escapeText(String(ask.th || "").split("{n}").join(String(slot.cost))) + "</div>" +
+      "<div class='en price-line'>" + escapeText(String(ask.en || "").split("{n}").join(String(slot.cost))) + "</div>" +
+      "<div class='th price-line' lang='th'>" + escapeText(String(ask.th || "").split("{n}").join(String(slot.cost))) + "</div>" +
       "<div class='sil-star'>" + icon("star") + "</div>";
   } else {
     var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost));
-    body = art + bi(slot.name, slot.th || "") + "<div class='en keep-line'>" + price + "</div>" + bonusLine(slot.bonus);
+    body = art + bi(slot.name, slot.th || "") + "<div class='en price-line'>" + price + "</div>" + bonusLine(slot.bonus);
   }
-  return "<button class='trophy weapon-card" + (locked ? " sil" : "") + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-sil='" + (locked ? "1" : "0") + "' data-open='" + (slot.tierOpen ? "1" : "0") + "'>" + body + "</button>";
+  return "<button class='trophy weapon-card" + (locked ? " sil" : "") + reveal + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-sil='" + (locked ? "1" : "0") + "' data-open='" + (slot.tierOpen ? "1" : "0") + "'>" + spark + body + "</button>";
 }
 function goalLine(t) {
   var u = t.unlock || {};
@@ -820,17 +836,17 @@ function renderBackup() {
     var mark = S.thaiMarks && S.thaiMarks[id] ? "✓" : "·";
     return "<button class='trophy' data-tap data-act='thaiok' data-arg='" + escapeText(id) + "'><span class='en'>" + mark + " " + escapeText(id) + "</span></button>";
   }).join("");
-  var note = S.backupReason ? "<div class='th' lang='th'>" + escapeText(S.backupReason) + "</div>" : "";
+  var note = S.backupOk && S.backupReason ? "<div class='th' lang='th'>" + escapeText(S.backupReason) + "</div>" : "";
+  var use = S.backupOk ? "<button class='gold-btn' data-tap data-act='usebak'>" + plate(ui("useBackup").en, ui("useBackup").th) + "</button>" : "";
   return "<div class='screen' data-screen='backup'>" + banner(ui("backup").en, ui("backup").th) +
     "<div class='sheet'><div class='pane' data-scroll-ok>" +
     "<button class='metal' data-tap data-act='export'>" + plate(ui("backup").en, ui("backup").th) + "</button>" +
-    "<input id='bakefile' type='file' accept='application/json'>" +
-    "<button class='metal' data-tap data-act='readbak'>" + plate(ui("restore").en, ui("restore").th) + "</button>" +
-    note +
-    "<button class='gold-btn' data-tap data-act='usebak'>" + plate(ui("useBackup").en, ui("useBackup").th) + "</button>" +
+    "<label class='metal file-label' for='bakefile'>" + plate(ui("restore").en, ui("restore").th) + "</label>" +
+    "<input id='bakefile' class='file-native' type='file' accept='application/json'>" +
+    note + use +
     (pending.length ? "<div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><ul data-pending='1'>" + ids + "</ul>" : "") +
     "<div class='th' lang='th'>" + escapeText(ui("thaiReview").th || ui("thaiReview").en) + "</div><div class='grid3'>" + queue + "</div></div>" +
-    "<button class='metal' data-tap data-act='gear'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
+    "<div class='footer backup-foot'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
 function renderDuel() {
@@ -885,6 +901,8 @@ function render() {
   else if (S.screen === "duel") html = renderDuel();
   else html = renderMenu();
   document.getElementById("app").innerHTML = html;
+  var file = document.getElementById("bakefile");
+  if (file) file.addEventListener("change", function () { handle("readbak", ""); });
   if (S.screen === "title") paintTitle();
   document.body.classList.toggle("short", window.innerHeight <= 600);
 }
@@ -1501,6 +1519,14 @@ function dispatch(act, arg) {
     render();
     return;
   }
+  if (act === "wstep") {
+    var bits = String(arg || "").split(":");
+    var track = document.querySelector("[data-track='" + bits[0] + "']");
+    var card = track && track.querySelector(".weapon-card");
+    var width = card ? card.getBoundingClientRect().width + 8 : 160;
+    if (track) moveTrack(track, -Number(bits[1] || 1) * width);
+    return;
+  }
   if (act === "showword") {
     if (S.run) S.run.listenFallback = true;
     render();
@@ -1700,7 +1726,7 @@ window.__layoutAudit = function () {
       var visible = Math.min(box.right, viewBox.right) - Math.max(box.left, viewBox.left);
       if (visible < box.width * 0.8) return;
       if (box.height < 44 || box.width < 44) out.shopClip.push("small:" + el.getAttribute("data-arg"));
-      var lines = el.querySelectorAll(".keep-line");
+      var lines = el.querySelectorAll(".price-line");
       var n;
       for (n = 0; n < lines.length; n++) {
         if (lines[n].scrollWidth > lines[n].clientWidth + 2) out.shopClip.push("wrap:" + el.getAttribute("data-arg"));
@@ -1823,6 +1849,10 @@ window.__weaponFacts = function (wt) {
     sil: third ? third.getAttribute("data-sil") : "",
     thirdFull: !!(thirdBox && thirdBox.left >= viewBox.left - 1 && thirdBox.right <= viewBox.right + 1),
     thirdCut: !!(thirdBox && thirdBox.right > viewBox.right + 1),
+    parts: Array.prototype.map.call(row.querySelectorAll(".weapon-svg use"), function (node) { return node.getAttribute("href"); }).join(","),
+    blanks: row.querySelectorAll(".weapon-art rect").length,
+    reveal: !!row.querySelector(".weapon-reveal"),
+    steps: row.querySelectorAll(".weapon-step").length,
     motion: motion
   };
 };
