@@ -547,6 +547,17 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
   line-height: 1.7;
   overflow: visible;
 }
+.char-weapons .weapon-track { align-items: start; }
+.char-weapons .weapon-card {
+  height: auto;
+  overflow: visible;
+  align-self: start;
+  padding-bottom: 14px;
+}
+.char-weapons .weapon-card .th {
+  font-size: 17px;
+  line-height: 1.7;
+}
 .trophy {
   background: var(--cream);
   color: var(--ink);

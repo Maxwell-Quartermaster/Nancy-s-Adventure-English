@@ -809,9 +809,9 @@ function renderGear() {
         trophyArt(t) + bi(t.en, t.th || t.thGloss || "") +
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");
-    body = "<div class='grid3 char-grid'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
+    body = "<div class='grid3 char-grid'>" + gearCards + "</div><div class='char-weapons'>" + E.shopRows(S, D).map(function (row) {
       return "<div class='en row-name'>" + escapeText(row.row) + "</div>" + weaponTrack(row);
-    }).join("");
+    }).join("") + "</div>";
   } else if (tab === "scrolls") {
     var credit = (D.verses && D.verses.attribution) || {};
     body = (S.scrolls || []).length ? (S.scrolls || []).map(function (scroll) {
