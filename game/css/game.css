@@ -270,8 +270,8 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
   position: relative;
   overflow: hidden;
 }
-.weapon-card .weapon-art { min-height: 44px; height: 44px; display: flex; align-items: flex-end; justify-content: center; }
-.weapon-card .weapon-art svg { width: 44px; height: 44px; overflow: visible; }
+.weapon-card .weapon-art { min-height: 44px; height: 72px; display: flex; align-items: flex-end; justify-content: center; }
+.weapon-card .weapon-art svg { width: 72px; height: 72px; overflow: visible; }
 .weapon-card .en, .weapon-card .th, .trophy .en, .trophy .th {
   display: block;
   position: static;

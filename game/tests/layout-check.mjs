@@ -120,8 +120,8 @@ async function pass(cdp, label, reduce) {
   });
   var suffix = reduce ? "-reduced" : "";
   await cdp.send("Emulation.setDeviceMetricsOverride", {
-    width: label === "320x568" ? 320 : label === "393x852" ? 393 : 390,
-    height: label === "320x568" ? 568 : label === "393x852" ? 852 : 844,
+    width: label === "320x568" ? 320 : label === "393x852" ? 393 : label === "428x926" ? 428 : 390,
+    height: label === "320x568" ? 568 : label === "393x852" ? 852 : label === "428x926" ? 926 : 844,
     deviceScaleFactor: 1,
     mobile: true
   });
@@ -196,7 +196,9 @@ async function pass(cdp, label, reduce) {
   }
   var motion = await evaluate(cdp, "getComputedStyle(document.querySelector('.screen')).animationName");
   var net = await evaluate(cdp, "window.__net");
-  return { label: label, reduced: !!reduce, motion: motion, xp: xp, xpAfterReload: xp2, errors: errors, net: net, hit: hit, shopLiteral: shopLiteral, home: home, listen: listen, pausedProbe: pausedProbe, titleAudit: titleAudit, playAudit: playAudit, mapAudit: mapAudit, menuAudit: menuAudit, characterAudit: characterAudit, shopAudit: shopAudit, letterAudit: letterAudit, countAudit: countAudit, sizeAudit: sizeAudit, console: cdp.notes.slice() };
+  var row = { label: label, reduced: !!reduce, motion: motion, xp: xp, xpAfterReload: xp2, errors: errors, net: net, hit: hit, shopLiteral: shopLiteral, home: home, listen: listen, pausedProbe: pausedProbe, titleAudit: titleAudit, playAudit: playAudit, mapAudit: mapAudit, menuAudit: menuAudit, characterAudit: characterAudit, shopAudit: shopAudit, letterAudit: letterAudit, countAudit: countAudit, sizeAudit: sizeAudit, console: cdp.notes.slice() };
+  if (label === "428x926") row.viewport = "Chrome Emulation.setDeviceMetricsOverride 428x926 CSS pixels, mobile touch. iPhone 13 Pro Max point-size estimate. Not Safari. Not a real device.";
+  return row;
 }
 
 await waitPort();
@@ -211,6 +213,7 @@ try {
   reports.push(await pass(cdp, "390x844", false));
   reports.push(await pass(cdp, "320x568", false));
   reports.push(await pass(cdp, "393x852", false));
+  reports.push(await pass(cdp, "428x926", false));
   reports.push(await pass(cdp, "390x844", true));
   reports.push(await pass(cdp, "320x568", true));
 } catch (err) {
@@ -425,19 +428,19 @@ var indexedKept = await evaluate(cdp, "window.__xp()");
 var dup = await evaluate(cdp, "(function(){var before=window.__xp(); var state=JSON.parse(localStorage.getItem('naeState')); var again=state.ledger && state.ledger['round:race:1'] ? before : before+30; return {before:before, ledger:!!(state.ledger&&state.ledger['round:race:1']), again:again};})()");
 story.rest = { prior: "ce370c4", steps: 179, repeated: 1, note: "not re-run on this head" };
 var shopStates = {};
-var widths = [320, 390, 393];
+var widths = [320, 390, 393, 428];
 var wi;
 for (wi = 0; wi < widths.length; wi++) {
   var ww = widths[wi];
-  var hh = ww === 320 ? 568 : (ww === 393 ? 852 : 844);
+  var hh = ww === 320 ? 568 : ww === 393 ? 852 : ww === 428 ? 926 : 844;
   await cdp.send("Emulation.setDeviceMetricsOverride", { width: ww, height: hh, deviceScaleFactor: 1, mobile: true });
   await evaluate(cdp, "window.__showShop('locked')");
   await settle(cdp);
   var locked = await evaluate(cdp, "window.__weaponFacts('sword1')");
-  var allArt = await evaluate(cdp, "(function(){return ['sword1','sword2','axe1','mace1'].map(function(id){var row=document.querySelector('[data-weapon-row=\"'+id+'\"]'); var hrefs=[]; if(row){Array.prototype.forEach.call(row.querySelectorAll('.weapon-svg use'), function(n){hrefs.push(n.getAttribute('href'));});} return {id:id, uses:hrefs.length, hrefs:hrefs.join(','), blanks:row?row.querySelectorAll('.weapon-art rect').length:0, thai:(row&&row.querySelector('.weapon-card .th')||{}).textContent||''};});})()");
+  var allArt = await evaluate(cdp, "(function(){return ['sword1','sword2','axe1','mace1'].map(function(id){var row=document.querySelector('[data-weapon-row=\"'+id+'\"]'); var hrefs=[]; var head=0; if(row){var uses=row.querySelectorAll('.weapon-svg use'); Array.prototype.forEach.call(uses, function(n){hrefs.push(n.getAttribute('href'));}); var last=uses[uses.length-1]; if(last) head=last.getBoundingClientRect().height;} return {id:id, uses:hrefs.length, hrefs:hrefs.join(','), blanks:row?row.querySelectorAll('.weapon-art rect').length:0, thai:(row&&row.querySelector('.weapon-card .th')||{}).textContent||'', head:Math.round(head)};});})()");
+  var syncStep = null;
   if (ww === 320) {
-    await click(cdp, "[data-act=wstep][data-arg=\"sword1:1\"]");
-    await click(cdp, "[data-act=wstep][data-arg=\"sword1:1\"]");
+    syncStep = await evaluate(cdp, "(function(){var b=document.querySelector('[data-act=wstep][data-arg=\"sword1:1\"]'); b.click(); b.click(); var t=document.querySelector('[data-track=\"sword1\"]'); return {step:t.getAttribute('data-step'), x:t.style.transform};})()");
   }
   var shifted = await evaluate(cdp, "var row=document.querySelector('[data-weapon-row=\"sword1\"]'); if(row&&row.scrollIntoView) row.scrollIntoView({block:'center'}); window.__weaponFacts('sword1')");
   await shot(cdp, "shop-locked-" + ww + "x" + hh);
@@ -449,7 +452,17 @@ for (wi = 0; wi < widths.length; wi++) {
   if (ww === 390) {
     reach = await evaluate(cdp, "(function(){var pane=document.querySelector('.pane'); var row=document.querySelector('[data-weapon-row=\"sword1\"]'); var foot=document.querySelector('.footer').getBoundingClientRect(); var box=row.getBoundingClientRect(); if (box.bottom > foot.top - 8) pane.scrollTop += box.bottom - foot.top + 12; box=row.getBoundingClientRect(); var target=row.querySelector('.weapon-card'); var r=target.getBoundingClientRect(); var y=Math.min(r.bottom-8, foot.top-8); var hit=document.elementFromPoint(r.left+30, y); var owner=hit&&hit.closest?hit.closest('[data-act], .footer'):null; return {above: box.top >= pane.getBoundingClientRect().top-1 && box.bottom <= foot.top+1, hit: owner&&(owner.getAttribute('data-act')||owner.className), scrolled: pane.scrollTop};})()");
   }
-  shopStates[String(ww)] = { locked: locked, shifted: shifted, opened: opened, reach: reach, allArt: allArt };
+  var maceClear = null;
+  if (ww === 390) {
+    maceClear = await evaluate(cdp, "(function(){var pane=document.querySelector('.pane'); var row=document.querySelector('[data-weapon-row=\"mace1\"]'); var foot=document.querySelector('.footer').getBoundingClientRect(); var box=row.getBoundingClientRect(); pane.scrollTop += box.bottom - foot.top + 16; box=row.getBoundingClientRect(); var paneTop=pane.getBoundingClientRect().top; return {top:Math.round(box.top), bottom:Math.round(box.bottom), paneTop:Math.round(paneTop), foot:Math.round(foot.top), clear: box.top >= paneTop-1 && box.bottom <= foot.top-1};})()");
+  }
+  if (ww === 428) {
+    await evaluate(cdp, "(function(){var row=document.querySelector('[data-weapon-row=\"axe1\"]'); if(row&&row.scrollIntoView) row.scrollIntoView({block:'center'});})()");
+    await shot(cdp, "axe-row-428x926");
+    await evaluate(cdp, "(function(){var row=document.querySelector('[data-weapon-row=\"mace1\"]'); if(row&&row.scrollIntoView) row.scrollIntoView({block:'center'});})()");
+    await shot(cdp, "mace-row-428x926");
+  }
+  shopStates[String(ww)] = { locked: locked, shifted: shifted, opened: opened, reach: reach, allArt: allArt, syncStep: syncStep, maceClear: maceClear };
 }
 await cdp.send("Emulation.setDeviceMetricsOverride", { width: 320, height: 568, deviceScaleFactor: 1, mobile: true });
 await evaluate(cdp, "window.__openCharacter()");
@@ -483,6 +496,71 @@ story.extra = {
   useShown: useShown,
   fileEnglish: fileEnglish
 };
+await cdp.send("Page.navigate", { url: "http://127.0.0.1:" + port + "/index.html" });
+await waitScreen(cdp);
+await evaluate(cdp, "new Promise(function(resolve){try{localStorage.clear(); var req=indexedDB.deleteDatabase('nae'); req.onsuccess=function(){resolve(1);}; req.onerror=function(){resolve(0);}; setTimeout(function(){resolve(0);},1500);}catch(e){resolve(0);}})");
+await cdp.send("Page.reload", { ignoreCache: true });
+await waitScreen(cdp);
+var playLog = [];
+var seenShot = {};
+var guardKey = "";
+var guardCount = 0;
+var playSteps = 0;
+var playScreen = "";
+while (playSteps < 460 && playScreen !== "rest") {
+  playScreen = await evaluate(cdp, "document.querySelector('.screen') ? document.querySelector('.screen').getAttribute('data-screen') : ''");
+  var playSel = await evaluate(cdp, "window.__nextAct ? window.__nextAct() : ''");
+  var progress = await evaluate(cdp, "window.__playProgress()");
+  var key = progress.screen + "|" + playSel + "|" + progress.boss + "|" + progress.idx;
+  if (key === guardKey) guardCount += 1; else { guardKey = key; guardCount = 0; }
+  playLog.push({ n: playSteps, screen: progress.screen, sel: playSel, xp: progress.xp, boss: progress.boss, idx: progress.idx });
+  if (!seenShot[progress.screen] && (progress.screen === "kneel" || progress.screen === "reward" || progress.screen === "rest")) {
+    seenShot[progress.screen] = 1;
+    await shot(cdp, "natural-" + progress.screen);
+  }
+  if (!playSel || guardCount > 6) break;
+  if (/got|sayit|twodone|kneelgot|versegot/.test(playSel)) await delay(460);
+  try { await click(cdp, playSel); } catch (err) { playLog.push({ error: String(err.message || err), sel: playSel }); break; }
+  playSteps += 1;
+}
+var natural = { steps: playSteps, screen: playScreen, stuck: guardCount > 6, log: playLog.slice(-12) };
+writeFileSync(outDir + "/natural-run.json", JSON.stringify({ steps: playSteps, end: playScreen, stuck: natural.stuck, log: playLog }, null, 2));
+if (playScreen === "rest") {
+  await click(cdp, "[data-act=restnow]");
+  await click(cdp, "[data-act=back]");
+  await click(cdp, "[data-act=gear]");
+  await click(cdp, "[data-act=backup]");
+  var beforeBak = await evaluate(cdp, "window.__xp()");
+  var bak = await evaluate(cdp, "(function(){var s=JSON.parse(localStorage.getItem('naeState')); s.xp=64; s.level=2; s.goldStars=9; s.rev=99999; s.savedAt=Date.now(); return JSON.stringify(s);})()");
+  writeFileSync("/tmp/nae-backup.json", bak);
+  var doc = await cdp.send("DOM.getDocument", { depth: 1 });
+  var found = await cdp.send("DOM.querySelector", { nodeId: doc.result.root.nodeId, selector: "#bakefile" });
+  await cdp.send("DOM.setFileInputFiles", { nodeId: found.result.nodeId, files: ["/tmp/nae-backup.json"] });
+  await evaluate(cdp, "(function(){var el=document.getElementById('bakefile'); el.dispatchEvent(new Event('change')); return true;})()");
+  await delay(500);
+  var compared = await evaluate(cdp, "!!document.querySelector('[data-act=usebak]') && document.body.innerText.indexOf('{a}')<0");
+  await shot(cdp, "backup-compare-320");
+  await click(cdp, "[data-act=back]");
+  var menuFirst = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
+  await click(cdp, "[data-act=gear]");
+  await click(cdp, "[data-act=backup]");
+  doc = await cdp.send("DOM.getDocument", { depth: 1 });
+  found = await cdp.send("DOM.querySelector", { nodeId: doc.result.root.nodeId, selector: "#bakefile" });
+  await cdp.send("DOM.setFileInputFiles", { nodeId: found.result.nodeId, files: ["/tmp/nae-backup.json"] });
+  await evaluate(cdp, "(function(){var el=document.getElementById('bakefile'); el.dispatchEvent(new Event('change')); return true;})()");
+  await delay(500);
+  await click(cdp, "[data-act=usebak]");
+  var restored = await evaluate(cdp, "window.__xp()");
+  var menuAfterUse = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
+  await cdp.send("Page.reload", { ignoreCache: true });
+  await waitScreen(cdp);
+  if (await evaluate(cdp, "!!document.querySelector('[data-act=versegot]')")) await click(cdp, "[data-act=versegot]");
+  var kept = await evaluate(cdp, "window.__xp()");
+  if (await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')==='title'")) await click(cdp, "[data-act=letsgo]");
+  var menu = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
+  natural.backup = { before: beforeBak, compared: compared, menuFirst: menuFirst, restored: restored, menuAfterUse: menuAfterUse, kept: kept, menu: menu };
+}
+story.natural = natural;
 reports.push({ modeReport: modeReport, story: story });
 writeFileSync(outDir + "/layout-report.json", JSON.stringify(reports, null, 2));
 console.log(JSON.stringify(reports, null, 2));
@@ -529,26 +607,31 @@ var failed = reports.some(function (r) {
     storyBad = storyBad || Number(extra.raced) !== Number(extra.mirrorXp);
     storyBad = storyBad || Number(extra.indexedKept) !== 999 || !extra.dup || !extra.dup.ledger || Number(extra.dup.again) !== Number(extra.dup.before);
     var states = extra.shopStates || {};
-    ["320", "390", "393"].forEach(function (key) {
+    ["320", "390", "393", "428"].forEach(function (key) {
       var row = states[key];
       if (!row || !row.locked || !row.opened) { storyBad = true; return; }
       storyBad = storyBad || row.locked.count !== 3 || row.locked.sil !== "1" || row.locked.cardH < 44 || row.locked.cardW < 44;
       storyBad = storyBad || String(row.locked.parts || "").indexOf("#wb") < 0 || row.locked.blanks !== 0;
       storyBad = storyBad || !(row.allArt || []).length || (row.allArt || []).some(function (art) {
         if (!art.uses || art.blanks || !art.thai) return true;
-        if (art.id === "axe1" && art.hrefs.indexOf("#wx") < 0) return true;
-        if (art.id === "mace1" && art.hrefs.indexOf("#wm") < 0) return true;
+        if (art.id === "axe1" && (art.hrefs.indexOf("#wx") < 0 || art.head < 36)) return true;
+        if (art.id === "mace1" && (art.hrefs.indexOf("#wm") < 0 || art.head < 28)) return true;
         if (art.id === "sword2" && art.hrefs.indexOf("#wb") < 0) return true;
         return false;
       });
       storyBad = storyBad || row.locked.thirdText.indexOf("Get it for") < 0 || /hint|Gold Star/i.test(row.locked.thirdText);
       storyBad = storyBad || row.opened.sil !== "0" || row.opened.thirdText.indexOf("Star Sword") < 0 || row.opened.thirdText.indexOf("Get it for") >= 0;
-      if (key === "320") storyBad = storyBad || row.locked.thirdFull === true || !row.shifted || row.shifted.thirdFull !== true || row.locked.steps < 2;
+      if (key === "320") storyBad = storyBad || row.locked.thirdFull === true || !row.shifted || row.shifted.thirdFull !== true || !row.syncStep || String(row.syncStep.step) !== "2";
       else storyBad = storyBad || row.locked.thirdFull !== true;
-      if (key === "390") storyBad = storyBad || !row.reach || row.reach.above !== true || row.reach.hit === "back";
+      if (key === "390") {
+        storyBad = storyBad || !row.reach || row.reach.above !== true || row.reach.hit === "back";
+        storyBad = storyBad || !row.maceClear || row.maceClear.clear !== true;
+      }
     });
     storyBad = storyBad || !extra.backupHit || extra.backupHit.act !== "backup" || extra.backupScreen !== "backup" || extra.backScreen !== "menu";
     storyBad = storyBad || extra.useShown || extra.fileEnglish;
+    storyBad = storyBad || !r.story.natural || r.story.natural.screen !== "rest" || r.story.natural.stuck;
+    storyBad = storyBad || !r.story.natural.backup || !r.story.natural.backup.compared || r.story.natural.backup.menuFirst !== "menu" || Number(r.story.natural.backup.kept) !== 64 || r.story.natural.backup.menu !== "menu";
     storyBad = storyBad || !r.story.kneelRatio || r.story.kneelRatio.ratio < 1.15 || r.story.kneelRatio.ratio > 1.25;
     storyBad = storyBad || !r.story.rewardTitle || r.story.rewardTitle.overlap;
   }

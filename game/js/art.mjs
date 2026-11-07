@@ -67,12 +67,18 @@ export function weaponSvg(note, blade, shade) {
   var d = shade || "#8A939C";
   var style = "--b:" + b + ";--d:" + d + ";--g:#FFCC33;--h:#6B4423";
   var spec = String(note || "wb");
-  var inner = "<use href='#wb'/>";
-  if (spec.indexOf("wh+wx") >= 0) inner = "<use href='#wh'></use><use href='#wx'></use>";
-  else if (spec.indexOf("wh+wm") >= 0) inner = "<use href='#wh'></use><use href='#wm'></use>";
-  else if (spec.indexOf("1.4") >= 0) inner = "<use href='#wb' transform='translate(0,-8) scale(1.4)'></use>";
-  else inner = "<use href='#wb'></use>";
-  return "<svg class='drawn weapon-svg' viewBox='-28 -84 56 118' aria-hidden='true' style='" + style + "'>" + inner + "</svg>";
+  var view = "-28 -84 56 118";
+  var inner = "<use href='#wb'></use>";
+  if (spec.indexOf("wh+wx") >= 0) {
+    view = "0 -104 56 86";
+    inner = "<g transform='translate(8,0) scale(2.2)'><use href='#wh'></use><use href='#wx'></use></g>";
+  } else if (spec.indexOf("wh+wm") >= 0) {
+    view = "-32 -152 64 80";
+    inner = "<g transform='scale(3)'><use href='#wh'></use><use href='#wm'></use></g>";
+  } else if (spec.indexOf("1.4") >= 0) {
+    inner = "<use href='#wb' transform='translate(0,-8) scale(1.4)'></use>";
+  }
+  return "<svg class='drawn weapon-svg' viewBox='" + view + "' aria-hidden='true' style='" + style + "'>" + inner + "</svg>";
 }
 
 export function drawnSvg(id) {

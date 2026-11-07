@@ -752,7 +752,9 @@ function weaponCard(slot) {
       "<div class='sil-star'>" + icon("star") + "</div>";
   } else {
     var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost));
-    body = art + bi(slot.name, slot.th || "") + "<div class='en price-line'>" + price + "</div>" + bonusLine(slot.bonus);
+    var thai = slot.th && slot.th !== slot.name && /[\u0E00-\u0E7F]/.test(slot.th) ? slot.th : "";
+    var name = thai ? bi(slot.name, thai) : "<span class='en'>" + escapeText(slot.name) + "</span>";
+    body = art + name + "<div class='en price-line'>" + price + "</div>" + bonusLine(slot.bonus);
   }
   return "<button class='trophy weapon-card" + (locked ? " sil" : "") + reveal + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-sil='" + (locked ? "1" : "0") + "' data-open='" + (slot.tierOpen ? "1" : "0") + "'>" + spark + body + "</button>";
 }
@@ -1005,8 +1007,27 @@ function onCorrect(card, ledgerId, spoken) {
   return res;
 }
 
+function stepWeapon(arg) {
+  var bits = String(arg || "").split(":");
+  var track = document.querySelector("[data-track='" + bits[0] + "']");
+  if (!track) return 0;
+  var view = track.parentNode;
+  var card = track.querySelector(".weapon-card");
+  var step = (card ? card.offsetWidth : 160) + 8;
+  var max = Math.max(0, track.scrollWidth - view.clientWidth);
+  var limit = step > 0 ? Math.round(max / step) : 0;
+  var index = Number(track.getAttribute("data-step") || "0") + Number(bits[1] || 1);
+  if (index < 0) index = 0;
+  if (index > limit) index = limit;
+  track.setAttribute("data-step", String(index));
+  var x = Math.min(max, Math.round(index * step));
+  track.style.transform = "translateX(" + (-x) + "px)";
+  return x;
+}
 function handle(act, arg) {
-  if (!S || S.lock) return;
+  if (!S) return;
+  if (act === "wstep") { stepWeapon(arg); return; }
+  if (S.lock) return;
   if (paused && act !== "resume") return;
   S.lock = true;
   window.__lockDuring = true;
@@ -1519,14 +1540,6 @@ function dispatch(act, arg) {
     render();
     return;
   }
-  if (act === "wstep") {
-    var bits = String(arg || "").split(":");
-    var track = document.querySelector("[data-track='" + bits[0] + "']");
-    var card = track && track.querySelector(".weapon-card");
-    var width = card ? card.getBoundingClientRect().width + 8 : 160;
-    if (track) moveTrack(track, -Number(bits[1] || 1) * width);
-    return;
-  }
   if (act === "showword") {
     if (S.run) S.run.listenFallback = true;
     render();
@@ -1870,6 +1883,22 @@ window.__showShop = function (mode) {
   render();
 };
 window.__reflow = function () { render(); return window.__layoutAudit(); };
+window.__playProgress = function () {
+  var screen = document.querySelector(".screen");
+  var run = S && S.run;
+  var cleared = 0;
+  if (run && run.bossCleared) Object.keys(run.bossCleared).forEach(function (k) { if (run.bossCleared[k]) cleared += 1; });
+  return {
+    screen: screen ? screen.getAttribute("data-screen") : "",
+    xp: S ? S.xp : 0,
+    boss: run ? run.bossIndex : "",
+    idx: run ? run.index : "",
+    phase: run ? run.phase : "",
+    cleared: cleared,
+    bosses: run && run.bossIds ? run.bossIds.length : 0,
+    zone: run ? run.zone : ""
+  };
+};
 window.__nextAct = function () {
   var screen = document.querySelector(".screen");
   var name = screen ? screen.getAttribute("data-screen") : "";
@@ -1897,7 +1926,10 @@ window.__nextAct = function () {
   if (step && (step.kind === "count" || step.kind === "size") && card) {
     return "[data-act=" + step.kind + "][data-arg=" + JSON.stringify(card.en) + "]";
   }
-  if (name === "boss" && card) return "[data-act=boss][data-arg=" + JSON.stringify(card.answer || "") + "]";
+  if (name === "boss" && S.run && S.run.bossIds) {
+    var bossCard = D.byId[S.run.bossIds[S.run.bossIndex]];
+    if (bossCard) return "[data-act=boss][data-arg=" + JSON.stringify(bossCard.answer || "") + "]";
+  }
   if (card && card.answer && document.querySelector("[data-act=choice]")) {
     return "[data-act=choice][data-arg=" + JSON.stringify(card.answer) + "]";
   }
