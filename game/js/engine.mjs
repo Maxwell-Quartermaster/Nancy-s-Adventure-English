@@ -1158,6 +1158,10 @@ export function fillBackupCompare(template, a, b, c, d) {
     .split("{d}").join(String(d));
 }
 
+export function singularDayLabel(text) {
+  return String(text || "").replace(/\b1 days\b/g, "1 day");
+}
+
 export function letterBank(word) {
   var letters = String(word || "").split("");
   var extra = ["a", "e", "i", "o", "s", "t", "n", "r"];

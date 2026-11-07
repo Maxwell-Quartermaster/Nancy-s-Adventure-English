@@ -614,8 +614,8 @@ var failed = reports.some(function (r) {
       storyBad = storyBad || String(row.locked.parts || "").indexOf("#wb") < 0 || row.locked.blanks !== 0;
       storyBad = storyBad || !(row.allArt || []).length || (row.allArt || []).some(function (art) {
         if (!art.uses || art.blanks || !art.thai) return true;
-        if (art.id === "axe1" && (art.hrefs.indexOf("#wx") < 0 || art.head < 36)) return true;
-        if (art.id === "mace1" && (art.hrefs.indexOf("#wm") < 0 || art.head < 28)) return true;
+        if (art.id === "axe1" && (art.hrefs.indexOf("#wx") < 0 || art.head < 14)) return true;
+        if (art.id === "mace1" && (art.hrefs.indexOf("#wm") < 0 || art.head < 8)) return true;
         if (art.id === "sword2" && art.hrefs.indexOf("#wb") < 0) return true;
         return false;
       });

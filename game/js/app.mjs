@@ -524,15 +524,18 @@ function renderBoss() {
     "<button class='metal' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button></div></div></div>";
 }
 
-function verseBits(verse) {
+function verseBits(verse, withAsk) {
   var gloss = "";
   if (verse.enGloss) gloss += "<div class='tag'>" + escapeText(verse.enGloss) + "</div>";
   if (verse.thGloss) gloss += "<div class='tag th' lang='th'>" + escapeText(verse.thGloss) + "</div>";
+  var ask = "";
+  if (withAsk) {
+    ask = "<div class='en' data-askmax='1'>" + escapeText(ui("askMax").en) + "</div><div class='th' lang='th' data-askmax='1'>" + escapeText(ui("askMax").th) + "</div>";
+  }
   return "<div class='en'>" + escapeText(verse.ref || "") + "</div>" +
     "<div class='verse-en en'>" + escapeText(verse.en || "").split("\n").join("<br>") + "</div><div class='tag'>(ESV)</div>" +
     "<div class='th' lang='th'>" + escapeText(verse.th || "").split("\n").join("<br>") + "</div><div class='tag'>(THSV11)</div>" +
-    gloss +
-    "<div class='en'>" + escapeText(ui("askMax").en) + "</div><div class='th' lang='th'>" + escapeText(ui("askMax").th) + "</div>";
+    gloss + ask;
 }
 function renderTitle() {
   document.body.setAttribute("data-theme", "menu");
@@ -546,7 +549,7 @@ function renderTitle() {
     overlay = "<div class='scrim verse-pop'><div class='verse-card'>" +
       banner(ui("verseOfDay").en, ui("verseOfDay").th) +
       "<div class='en'>" + escapeText(ui("verseGift").en) + "</div><div class='th' lang='th'>" + escapeText(ui("verseGift").th) + "</div>" +
-      "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
+      "<div class='verse-body' data-scroll-ok>" + verseBits(verse, true) + "</div>" +
       "<div class='row-actions'><button class='hint-btn' data-tap data-act='replayverse' aria-label='" + escapeText(ui("replay").en) + "'>" + icon("replay") + "</button>" +
       "<button class='title-go' data-tap data-act='versegot' style='position:static'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
   }
@@ -586,7 +589,7 @@ function paintTitle() {
 function renderMenu() {
   document.body.setAttribute("data-theme", "menu");
   var pack = D.picPlan.uiInlineSvg || {};
-  var gift = S.showGift ? "<div class='gift-tag'><div class='en'>" + escapeText(ui("dailyGift").en) + "</div><div class='th' lang='th'>" + escapeText(ui("dailyGift").th) + "</div></div>" : "";
+  var gift = S.showGift ? "<div class='gift-tag' data-gift-gems='" + (S.giftGems || 0) + "'><div class='en'>" + escapeText(ui("dailyGift").en) + "</div><div class='th' lang='th'>" + escapeText(ui("dailyGift").th) + "</div>" + giftGemChip() + "</div>" : "";
   var home = window.matchMedia && window.matchMedia("(display-mode: standalone)").matches ? "" :
     "<div class='th' lang='th' style='text-align:center'>" + escapeText(ui("openFromHome").th) + "</div>";
   return "<div class='screen' data-screen='menu'><div class='menu'>" +
@@ -629,7 +632,7 @@ function renderMap() {
     banner(ui("titleMap").en, ui("titleMap").th) +
     "<div class='logs'></div>" +
     "<div class='hud' data-xp='" + S.xp + "' data-stars='" + S.goldStars + "'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button>" +
-    "<div class='count'>" + icon("gem") + E.gemCount(S, D) + " " + icon("star") + S.goldStars + " " + icon("flame") + (S.streak && S.streak.n || 0) + " Level " + S.level + "</div>" +
+    "<div class='count' data-gems='" + E.gemCount(S, D) + "' data-gift-gems='" + (S.giftGems || 0) + "'>" + icon("gem") + E.gemCount(S, D) + giftGemChip() + " " + icon("star") + S.goldStars + " " + icon("flame") + (S.streak && S.streak.n || 0) + " Level " + S.level + "</div>" +
     "<button class='hearth' data-tap data-act='hearth' aria-label='" + escapeText(ui("verseGift").en) + "'>" + icon("heart") + "</button></div>" +
     (S.updateReady ? "<button class='metal' data-tap data-act='update'>" + plate(ui("updateReady").en, ui("updateReady").th) + "</button>" : "") +
     "<div class='rows'>" + rows + "</div>" + bubbleHtml() + "</div></div>";
@@ -645,7 +648,7 @@ function renderReward() {
   if (item.kind === "verse") {
     var scroll = (S.scrolls || []).filter(function (s) { return s.id === item.scrollId; })[0];
     if (scroll) {
-      body = verseBits(scroll);
+      body = verseBits(scroll, true);
     }
   } else if (item.kind === "region") {
     var region = D.regions.filter(function (r) { return r.id === item.regionId; })[0];
@@ -676,7 +679,7 @@ function renderRest() {
   }
   return "<div class='screen' data-screen='rest'>" + banner(D.restScreen.en, D.restScreen.th) +
     "<div class='ask'><div class='panel'>" +
-    "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
+    "<div class='verse-body' data-scroll-ok>" + verseBits(verse, false) + "</div>" +
     "<button class='gold-btn' data-tap data-act='keep'>" + plate(ui("keepGoing").en, ui("keepGoing").th) + "</button>" +
     "<button class='metal' data-tap data-act='restnow'>" + plate(ui("restNow").en, ui("restNow").th) + "</button></div></div></div>";
 }
@@ -686,7 +689,7 @@ function renderScroll() {
   if (!scroll) { S.screen = "character"; return renderGear(); }
   document.body.setAttribute("data-theme", "menu");
   return "<div class='screen' data-screen='scroll'>" + banner(ui("scrolls").en, ui("scrolls").th) +
-    "<div class='ask'><div class='panel' data-scroll-ok>" + verseBits(scroll) +
+    "<div class='ask'><div class='panel' data-scroll-ok>" + verseBits(scroll, true) +
     "<button class='gold-btn' data-tap data-act='scrollback'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
 }
 function renderKneel() {
@@ -720,12 +723,22 @@ function renderShop() {
     "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
+function giftGemChip() {
+  var n = S && S.giftGems || 0;
+  if (!n) return "";
+  return "<span class='gift-gems' data-gift-gems='" + n + "'>" + icon("gem") + n + "</span>";
+}
 function weaponArt(slot) {
   var notes = { sword1: "wb", sword2: "wb x1.4, long grip", axe1: "wh+wx", mace1: "wh+wm" };
   var blades = ["#B9C0C4", "#4A90D9", "#F2A23A"];
   var shades = ["#8A939C", "#2C5A8A", "#C47A1A"];
   var index = Math.max(0, (slot.tier || 1) - 1);
   return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blades[index], shades[index]) + "</div>";
+}
+function trophyArt(t) {
+  var notes = { sword1: "wb", sword2: "wb x1.4, long grip", axe1: "wh+wx", mace1: "wh+wm" };
+  if (t && notes[t.wt]) return weaponArt({ wt: t.wt, tier: t.tier || 1 });
+  return pictureHtml((t && (t.pic || ("svg:" + t.id))) || "", inline);
 }
 function weaponTrack(row) {
   var slots = row.slots.map(function (slot) { return weaponCard(slot); }).join("");
@@ -786,14 +799,14 @@ function renderGear() {
     var t = null;
     (D.trophies || []).some(function (item) { if (item.id === id) { t = item; return true; } return false; });
     if (!t) return "";
-    return "<span class='trophy' data-prop='shelf'>" + pictureHtml(t.pic || ("svg:" + t.id), inline) + "</span>";
+    return "<span class='trophy' data-prop='shelf'>" + trophyArt(t) + "</span>";
   }).join("");
   var body = "";
   if (tab === "gear") {
     var gearCards = (D.trophies || []).filter(function (t) { return t.cat === "gear" || !t.cat; }).map(function (t) {
       var owned = (S.owned || []).indexOf(t.id) >= 0;
-      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "'>" +
-        pictureHtml(t.pic || ("svg:" + t.id), inline) + bi(t.en, t.th || t.thGloss || "") +
+      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "' data-wt='" + escapeText(t.wt || "") + "'>" +
+        trophyArt(t) + bi(t.en, t.th || t.thGloss || "") +
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");
     body = "<div class='grid3'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
@@ -820,7 +833,8 @@ function renderGear() {
     "<div class='sheet'><div class='portrait' style='margin:0 auto'>" + heroSvg() + "</div>" +
     "<div class='en'>" + escapeText(ui("earnedShelf").en) + "</div><div class='shop-row'>" + shelf + "</div>" +
     "<div class='grid3'>" + tabButtons + "</div>" +
-    "<div class='pane' data-scroll-ok>" + body +
+    "<div class='pane' data-scroll-ok>" + body + "</div>" +
+    "<div class='mode-row'>" +
     "<button class='metal' data-tap data-act='toggle' data-arg='slowMode' aria-pressed='" + (S.settings.slowMode ? "true" : "false") + "'>" + plate(ui("slowMode").en, ui("slowMode").th) + "</button>" +
     "<button class='metal' data-tap data-act='toggle' data-arg='restWeeks' aria-pressed='" + (S.settings.restWeeks ? "true" : "false") + "'>" + plate(ui("restWeeks").en, ui("restWeeks").th) + "</button></div></div>" +
     "<div class='footer char-foot'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button>" +
@@ -838,16 +852,22 @@ function renderBackup() {
     var mark = S.thaiMarks && S.thaiMarks[id] ? "✓" : "·";
     return "<button class='trophy' data-tap data-act='thaiok' data-arg='" + escapeText(id) + "'><span class='en'>" + mark + " " + escapeText(id) + "</span></button>";
   }).join("");
-  var note = S.backupOk && S.backupReason ? "<div class='th' lang='th'>" + escapeText(S.backupReason) + "</div>" : "";
+  var note = "";
+  if (S.backupOk && S.backupReason) {
+    var parts = String(S.backupReason).split(" / ");
+    note = "<div class='sheet-note' data-compare='1'><div class='en'>" + escapeText(parts[0] || "") + "</div>" +
+      (parts.length > 1 ? "<div class='th' lang='th'>" + escapeText(parts.slice(1).join(" / ")) + "</div>" : "") + "</div>";
+  }
   var use = S.backupOk ? "<button class='gold-btn' data-tap data-act='usebak'>" + plate(ui("useBackup").en, ui("useBackup").th) + "</button>" : "";
+  var reviewHead = ui("thaiReview");
   return "<div class='screen' data-screen='backup'>" + banner(ui("backup").en, ui("backup").th) +
     "<div class='sheet'><div class='pane' data-scroll-ok>" +
     "<button class='metal' data-tap data-act='export'>" + plate(ui("backup").en, ui("backup").th) + "</button>" +
     "<label class='metal file-label' for='bakefile'>" + plate(ui("restore").en, ui("restore").th) + "</label>" +
     "<input id='bakefile' class='file-native' type='file' accept='application/json'>" +
     note + use +
-    (pending.length ? "<div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><ul data-pending='1'>" + ids + "</ul>" : "") +
-    "<div class='th' lang='th'>" + escapeText(ui("thaiReview").th || ui("thaiReview").en) + "</div><div class='grid3'>" + queue + "</div></div>" +
+    (pending.length ? "<div class='sheet-note'><div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><div class='th' lang='th'>" + escapeText(ui("needsMaxwell").th) + "</div><ul data-pending='1'>" + ids + "</ul></div>" : "") +
+    "<div class='sheet-note' data-review-head='1'><div class='en'>" + escapeText(reviewHead.en) + "</div><div class='th' lang='th'>" + escapeText(reviewHead.th) + "</div></div><div class='grid3 review-list'>" + queue + "</div></div>" +
     "<div class='footer backup-foot'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
@@ -1498,7 +1518,7 @@ function dispatch(act, arg) {
       var nowDays = S.streak && S.streak.n || 0;
       var bakLevel = check.ok ? check.state.level : "";
       var bakDays = check.ok && check.state.streak ? check.state.streak.n : "";
-      var filled = check.ok ? E.fillBackupCompare(cmp.en, bakLevel, bakDays, nowLevel, nowDays) + " / " + E.fillBackupCompare(cmp.th, bakLevel, bakDays, nowLevel, nowDays) : check.reason;
+      var filled = check.ok ? E.singularDayLabel(E.fillBackupCompare(cmp.en, bakLevel, bakDays, nowLevel, nowDays)) + " / " + E.fillBackupCompare(cmp.th, bakLevel, bakDays, nowLevel, nowDays) : check.reason;
       S.backupReason = String(filled).indexOf("{") >= 0 ? "" : filled;
       render();
     };
@@ -1868,6 +1888,25 @@ window.__weaponFacts = function (wt) {
     steps: row.querySelectorAll(".weapon-step").length,
     motion: motion
   };
+};
+window.__showRest = function () {
+  S.screen = "rest";
+  render();
+  return document.body.innerText.indexOf("Don't know a word? Ask Max.") >= 0;
+};
+window.__showGift = function (n) {
+  S.giftGems = n;
+  S.showGift = true;
+  S.screen = "menu";
+  render();
+  var tag = document.querySelector(".gift-tag");
+  return { tag: tag ? tag.innerText : "", gifts: tag ? tag.getAttribute("data-gift-gems") : "", gems: E.gemCount(S, D) };
+};
+window.__mapGems = function () {
+  S.screen = "map";
+  render();
+  var hud = document.querySelector(".hud .count");
+  return { text: hud ? hud.innerText : "", gems: hud ? hud.getAttribute("data-gems") : "", gifts: hud ? hud.getAttribute("data-gift-gems") : "" };
 };
 window.__showShop = function (mode) {
   if (mode === "open") {

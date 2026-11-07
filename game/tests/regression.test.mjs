@@ -8,7 +8,7 @@ import {
   buyItem, equipItem, playClip, bannerKey, levelForXp, xpToReach, showsEnglishAnswer, missOutcome,
   gearBonuses, awardExtras, noteMiss, shopRows, beginKneel, thaiReviewQueue, endingPairs,
   endingDiscrepancy, buildDuelSchedule, speakEnglish, bonusWordsFor, spellStep, countPlates,
-  SETTLED_APPROVALS, countPrompt, trophiesByTab, pendingMaxwell, fillBackupCompare, pickNewerState
+  SETTLED_APPROVALS, countPrompt, trophiesByTab, pendingMaxwell, fillBackupCompare, singularDayLabel, rollDay, pickNewerState
 } from "../js/engine.mjs";
 
 const raw = JSON.parse(fs.readFileSync(new URL("../data/cards.json", import.meta.url), "utf8"));
@@ -378,6 +378,34 @@ test("opener order and later runs reach starved cards", function () {
   assert.equal(tabs.themes.length, 14);
   assert.equal(tabs.titles.length, 6);
   assert.equal(tabs.gear.length, 17);
+});
+
+test("one day stays singular and a missed day does not take rewards", function () {
+  var ui = model.raw.uiText;
+  assert.equal(singularDayLabel(fillBackupCompare(ui.backupCompare.en, 2, 1, 4, 1)), "Backup: level 2, 1 day · Now: level 4, 1 day");
+  assert.equal(singularDayLabel(fillBackupCompare(ui.backupCompare.en, 2, 3, 4, 5)), "Backup: level 2, 3 days · Now: level 4, 5 days");
+  assert.equal(fillBackupCompare(ui.backupCompare.th, 2, 1, 4, 1), "ข้อมูลสำรอง: เลเวล 2, 1 วัน · ตอนนี้: เลเวล 4, 1 วัน");
+  assert.equal(ui.askMax.en, "Don't know a word? Ask Max.");
+  assert.equal(ui.askMax.th, "ถ้าไม่เข้าใจความหมาย ถามแม็กซ์ได้นะ เขาช่วยได้");
+  ["backup", "restore", "useBackup", "needsMaxwell", "thaiReview"].forEach(function (key) {
+    assert.equal(typeof ui[key].th, "string");
+    assert.equal(ui[key].th.length > 0, true);
+  });
+  assert.equal(model.raw.picPlan.weaponParts.mace1, "wh+wm");
+  assert.equal(model.raw.picPlan.weaponParts.axe1, "wh+wx");
+  assert.equal(model.raw.picPlan.uiInlineSvg.tex.indexOf("id='wm'") >= 0, true);
+  assert.equal(model.raw.picPlan.uiInlineSvg.tex.indexOf("id='hammer'") >= 0, false);
+  var state = freshState(model);
+  state.xp = 40;
+  state.goldStars = 7;
+  state.pips = 2;
+  state.streak = { n: 3, last: "2026-11-01" };
+  var rolled = rollDay(state, "2026-11-05");
+  assert.equal(rolled.missed, true);
+  assert.equal(rolled.state.xp, 40);
+  assert.equal(rolled.state.goldStars, 7);
+  assert.equal(rolled.state.pips, 2);
+  assert.equal(rolled.state.streak.n, 4);
 });
 
 test("level curve matches the spec knots", function () {

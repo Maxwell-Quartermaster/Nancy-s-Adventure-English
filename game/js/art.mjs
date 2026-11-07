@@ -70,11 +70,9 @@ export function weaponSvg(note, blade, shade) {
   var view = "-28 -84 56 118";
   var inner = "<use href='#wb'></use>";
   if (spec.indexOf("wh+wx") >= 0) {
-    view = "0 -104 56 86";
-    inner = "<g transform='translate(8,0) scale(2.2)'><use href='#wh'></use><use href='#wx'></use></g>";
+    inner = "<g transform='translate(-8,0)'><use href='#wh'></use><use href='#wx'></use></g>";
   } else if (spec.indexOf("wh+wm") >= 0) {
-    view = "-32 -152 64 80";
-    inner = "<g transform='scale(3)'><use href='#wh'></use><use href='#wm'></use></g>";
+    inner = "<g><use href='#wh'></use><use href='#wm'></use></g>";
   } else if (spec.indexOf("1.4") >= 0) {
     inner = "<use href='#wb' transform='translate(0,-8) scale(1.4)'></use>";
   }
