@@ -103,7 +103,7 @@ async function size(cdp, w, h, mobile) {
   await cdp.send("Emulation.setDeviceMetricsOverride", { width: w, height: h, deviceScaleFactor: 1, mobile: !!mobile });
 }
 
-var overlapProbe = "(function(sel){var root=document.querySelector(sel); if(!root) return {missing:true}; var cards=[].slice.call(root.querySelectorAll('.weapon-card, [data-trophy]')); var bad=[]; cards.forEach(function(card){var art=card.querySelector('.weapon-art'); if(!art) return; var a=art.getBoundingClientRect(); [].slice.call(card.querySelectorAll('.en,.th,.price-line')).forEach(function(el){var r=el.getBoundingClientRect(); if(r.width<2||r.height<2) return; var hit=!(r.right<a.left+1||r.left>a.right-1||r.bottom<a.top+1||r.top>a.bottom-1); var x=Math.min(Math.max(r.left+4,0), window.innerWidth-1); var y=Math.min(Math.max(r.top+4,0), window.innerHeight-1); var top=document.elementFromPoint(x,y); var covered=!!(top&&art.contains(top)); if(hit||covered) bad.push((card.getAttribute('data-trophy')||card.getAttribute('data-arg')||'')+':'+el.textContent.slice(0,24)); }); }); var hrefs=[]; [].slice.call(root.querySelectorAll('.weapon-svg use')).forEach(function(n){hrefs.push(n.getAttribute('href'));}); var beige=root.querySelectorAll('rect[fill=\"#E9D9AE\"]').length; return {bad:bad, hrefs:hrefs.join(','), beige:beige};})";
+var overlapProbe = "(function(sel){var root=document.querySelector(sel); if(!root) return {missing:true}; var cards=[].slice.call(root.querySelectorAll('.weapon-card, [data-trophy]')); var bad=[]; cards.forEach(function(card){var art=card.querySelector('.weapon-art'); if(!art) return; var a=art.getBoundingClientRect(); [].slice.call(card.querySelectorAll('.en,.th,.price-line')).forEach(function(el){var r=el.getBoundingClientRect(); if(r.width<2||r.height<2) return; var hit=!(r.right<a.left+1||r.left>a.right-1||r.bottom<a.top+1||r.top>a.bottom-1); var x=Math.min(Math.max(r.left+4,0), window.innerWidth-1); var y=Math.min(Math.max(r.top+4,0), window.innerHeight-1); var top=document.elementFromPoint(x,y); var covered=!!(top&&art.contains(top)); if(hit||covered) bad.push((card.getAttribute('data-trophy')||card.getAttribute('data-arg')||'')+':'+el.textContent.slice(0,24)); }); }); var hrefs=[]; [].slice.call(root.querySelectorAll('.weapon-svg use')).forEach(function(n){hrefs.push(n.getAttribute('href'));}); var drawn=0; [].slice.call(root.querySelectorAll('.weapon-art svg.drawn')).forEach(function(svg){ if(svg.classList.contains('weapon-svg')) return; if(svg.querySelector('path,circle,rect,ellipse,polygon')) drawn+=1; }); var beige=root.querySelectorAll('rect[fill=\"#E9D9AE\"]').length; return {bad:bad, hrefs:hrefs.join(','), beige:beige, drawn:drawn};})";
 
 await waitPort();
 var list = await (await fetch("http://127.0.0.1:9222/json/list")).json();
@@ -130,10 +130,19 @@ async function boot() {
   }
 }
 
+var CUSTOM_DRAWN = { "hammer-builder": 1, "sling-shepherd": 1, "staff-shepherd": 1, "tunic-rose": 1 };
+
+function isCustomDrawn(label) {
+  if (label.indexOf("character-") !== 0 || label.indexOf("row-") >= 0) return false;
+  return !!CUSTOM_DRAWN[label.slice("character-".length)];
+}
+
 function record(label, facts) {
   if (!facts || facts.missing) problems.push(label + " missing");
   else if ((facts.bad || []).length || facts.beige) problems.push(label + " " + JSON.stringify(facts));
-  else if (label.indexOf("character-") === 0 && label.indexOf("row-") < 0 && !(facts.hrefs || "").length) problems.push(label + " no parts");
+  else if (isCustomDrawn(label)) {
+    if (!(facts.drawn > 0)) problems.push(label + " no drawn svg");
+  } else if (label.indexOf("character-") === 0 && label.indexOf("row-") < 0 && !(facts.hrefs || "").length) problems.push(label + " no parts");
   else if (label.indexOf("mace") >= 0 && String(facts.hrefs || "").indexOf("#wm") < 0) problems.push(label + " no mace part");
   else if (label.indexOf("axe") >= 0 && String(facts.hrefs || "").indexOf("#wx") < 0) problems.push(label + " no axe part");
   console.log(label, JSON.stringify(facts));
