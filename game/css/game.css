@@ -536,6 +536,17 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 .trophy .en, .trophy .th { display: block; }
 .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .grid3 > * { min-width: 0; max-width: 100%; }
+.char-grid { align-items: start; }
+.char-grid > .trophy {
+  height: auto;
+  overflow: visible;
+  align-self: start;
+}
+.char-grid > .trophy .th {
+  font-size: 17px;
+  line-height: 1.7;
+  overflow: visible;
+}
 .trophy {
   background: var(--cream);
   color: var(--ink);

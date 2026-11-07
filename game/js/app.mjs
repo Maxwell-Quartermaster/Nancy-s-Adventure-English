@@ -809,7 +809,7 @@ function renderGear() {
         trophyArt(t) + bi(t.en, t.th || t.thGloss || "") +
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");
-    body = "<div class='grid3'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
+    body = "<div class='grid3 char-grid'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
       return "<div class='en row-name'>" + escapeText(row.row) + "</div>" + weaponTrack(row);
     }).join("");
   } else if (tab === "scrolls") {
@@ -823,7 +823,7 @@ function renderGear() {
     body = "<button class='metal' data-tap data-act='shop'>" + plate(ui("pantry").en, ui("pantry").th) + "</button>";
   } else {
     var cat = tab === "titles" ? "titles" : tab === "themes" ? "themes" : "gems";
-    body = "<div class='grid3'>" + (D.trophies || []).filter(function (t) { return t.cat === cat; }).map(function (t) {
+    body = "<div class='grid3 char-grid'>" + (D.trophies || []).filter(function (t) { return t.cat === cat; }).map(function (t) {
       var owned = (S.owned || []).indexOf(t.id) >= 0;
       return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "'>" + pictureHtml(t.pic, inline) +
         bi(t.en, t.th || t.thGloss || "") + (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
