@@ -194,17 +194,31 @@ function persistable(state) {
   });
   return copy;
 }
+var saveChain = Promise.resolve();
 function save() {
+  S.rev = (Number(S.rev) || 0) + 1;
+  S.savedAt = Date.now();
   var copy = persistable(S);
+  var rev = copy.rev;
   try { localStorage.setItem("naeState", JSON.stringify(copy)); } catch (e) { /* mirror skipped */ }
-  idb().then(function (db) {
-    return new Promise(function (resolve, reject) {
-      var tx = db.transaction("kv", "readwrite");
-      tx.objectStore("kv").put(copy, "state");
-      tx.oncomplete = function () { resolve(); };
-      tx.onerror = function () { reject(tx.error); };
+  saveChain = saveChain.then(function () {
+    return idb().then(function (db) {
+      return new Promise(function (resolve, reject) {
+        var tx = db.transaction("kv", "readwrite");
+        var store = tx.objectStore("kv");
+        var rq = store.get("state");
+        rq.onsuccess = function () {
+          var current = rq.result;
+          if (!current || (Number(current.rev) || 0) <= rev) store.put(copy, "state");
+        };
+        tx.oncomplete = function () { resolve(); };
+        tx.onerror = function () { reject(tx.error); };
+      });
     });
-  }).catch(function () { /* write skipped */ });
+  }).catch(function () { /* a late write must not replace a newer one */ });
+}
+function readMirror() {
+  try { return JSON.parse(localStorage.getItem("naeState") || "null"); } catch (e) { return null; }
 }
 function loadState() {
   return idb().then(function (db) {
@@ -215,12 +229,7 @@ function loadState() {
       rq.onerror = function () { resolve(null); };
     });
   }).catch(function () { return null; }).then(function (rec) {
-    if (rec && rec.schema === 5020) return rec;
-    try {
-      var mirror = JSON.parse(localStorage.getItem("naeState") || "null");
-      if (mirror && mirror.schema === 5020) return mirror;
-    } catch (e) { /* unreadable mirror */ }
-    return null;
+    return E.pickNewerState(rec, readMirror());
   });
 }
 
@@ -244,7 +253,7 @@ function hud(scene) {
     "<div class='count nowrap'>" + icon("star") + " " + S.goldStars + "</div></div></header>";
 }
 function banner(en, th) {
-  return "<div class='banner'>" + bi(en, th) + "</div>";
+  return "<div class='banner'><div class='en banner-en'>" + escapeText(en || "") + "</div><div class='th banner-th' lang='th'>" + escapeText(th || "") + "</div></div>";
 }
 function bubbleHtml() {
   if (!S.bubble) return "";
@@ -666,7 +675,7 @@ function renderRest() {
     save();
   }
   return "<div class='screen' data-screen='rest'>" + banner(D.restScreen.en, D.restScreen.th) +
-    "<div class='ask'><div class='panel'>" + bi(D.restScreen.en, D.restScreen.th) +
+    "<div class='ask'><div class='panel'>" +
     "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
     "<button class='gold-btn' data-tap data-act='keep'>" + plate(ui("keepGoing").en, ui("keepGoing").th) + "</button>" +
     "<button class='metal' data-tap data-act='restnow'>" + plate(ui("restNow").en, ui("restNow").th) + "</button></div></div></div>";
@@ -688,7 +697,7 @@ function renderKneel() {
   return "<div class='screen' data-screen='kneel'>" + banner(name.en, name.th) +
     "<div class='stage'><div class='scene-frame'>" + sceneSvg(E.sceneKind(S.kneelZone, 0), "a") +
     "<div class='hero-fig' style='left:8%'>" + heroSvg() + "</div>" +
-    "<div style='position:absolute;left:46%;bottom:8%'>" + guardianKneel(tint) + "</div></div></div>" +
+    "<div class='kneel-fig'>" + guardianKneel(tint) + "</div></div></div>" +
     "<div class='qcard'><div class='prompt'>" + bi(name.en, name.th) + "</div>" +
     "<button class='gold-btn' data-tap data-act='kneelgot'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div>";
 }
@@ -714,10 +723,10 @@ function renderShop() {
         "<div class='en'>" + escapeText(label) + "</div><div class='th' lang='th'>" + escapeText(labelTh) + "</div>" +
         "<div class='en'>" + price + "</div>" + bonusLine(slot.bonus) + "</button>";
     }).join("");
-    return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row' data-scroll-ok>" + slots + "</div>";
+    return "<div class='en'>" + escapeText(row.row) + "</div><div class='weapon-row'>" + slots + "</div>";
   }).join("");
   return "<div class='screen' data-screen='shop'>" + banner(ui("pantry").en, ui("pantry").th) +
-    "<div class='sheet'><div class='count'>" + icon("star") + " " + S.goldStars + "</div><div class='pane' data-scroll-ok><div class='grid3'>" + items + "</div>" + gear + "</div></div>" +
+    "<div class='sheet'><div class='count star-count' data-star-count='" + S.goldStars + "'>" + icon("star") + "<span>" + S.goldStars + "</span></div><div class='pane' data-scroll-ok><div class='grid3'>" + items + "</div>" + gear + "</div></div>" +
     "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
@@ -760,7 +769,7 @@ function renderGear() {
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");
     body = "<div class='grid3'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
-      return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row'>" + row.slots.map(function (slot) {
+      return "<div class='en'>" + escapeText(row.row) + "</div><div class='weapon-row'>" + row.slots.map(function (slot) {
         var ask = ui("getFor");
         var gname = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
         var gth = slot.silhouette ? String(ask.th || "").split("{n}").join(String(slot.cost)) : slot.th;
@@ -1600,14 +1609,65 @@ window.__layoutAudit = function () {
   }
   out.errors = window.__errors.slice();
   out.raw = (document.body.innerText.match(/\{[A-Za-z]+\}/g) || []);
-  var titleEn = document.querySelector(".banner .en");
-  var titleTh = document.querySelector(".banner .th");
-  out.titleOverlap = false;
-  if (titleEn && titleTh) {
-    var a = titleEn.getBoundingClientRect();
-    var b = titleTh.getBoundingClientRect();
-    out.titleOverlap = a.left < b.right - 1 && a.right > b.left + 1 && a.top < b.bottom - 1 && a.bottom > b.top + 1;
+  function inkBox(el) {
+    if (!el) return null;
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var rects = range.getClientRects();
+    var box = { left: Infinity, top: Infinity, right: -Infinity, bottom: -Infinity };
+    var i;
+    if (!rects.length) {
+      var fallback = el.getBoundingClientRect();
+      box = { left: fallback.left, top: fallback.top, right: fallback.right, bottom: fallback.bottom };
+    } else {
+      for (i = 0; i < rects.length; i++) {
+        box.left = Math.min(box.left, rects[i].left);
+        box.top = Math.min(box.top, rects[i].top);
+        box.right = Math.max(box.right, rects[i].right);
+        box.bottom = Math.max(box.bottom, rects[i].bottom);
+      }
+    }
+    var stroke = parseFloat(window.getComputedStyle(el).webkitTextStrokeWidth || "0") || 0;
+    box.left -= stroke;
+    box.top -= stroke;
+    box.right += stroke;
+    box.bottom += stroke;
+    return box;
   }
+  var titleEn = document.querySelector(".banner .banner-en") || document.querySelector(".banner .en");
+  var titleTh = document.querySelector(".banner .banner-th") || document.querySelector(".banner .th");
+  out.titleOverlap = false;
+  out.titleGap = null;
+  if (titleEn && titleTh) {
+    var inkEn = inkBox(titleEn);
+    var inkTh = inkBox(titleTh);
+    out.titleGap = Math.round(inkTh.top - inkEn.bottom);
+    var sharesX = inkEn.left < inkTh.right - 1 && inkEn.right > inkTh.left + 1;
+    out.titleOverlap = sharesX && inkEn.bottom + 4 > inkTh.top;
+  }
+  out.shopClip = [];
+  var pane = document.querySelector(".pane");
+  if (pane) {
+    var paneBox = pane.getBoundingClientRect();
+    Array.prototype.slice.call(document.querySelectorAll(".weapon-row .trophy")).forEach(function (el) {
+      var box = el.getBoundingClientRect();
+      if (box.width < 8) return;
+      if (box.right > paneBox.right + 1 || box.left < paneBox.left - 1) out.shopClip.push("edge:" + (el.getAttribute("data-arg") || ""));
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var rects = range.getClientRects();
+      var r;
+      for (r = 0; r < rects.length; r++) {
+        if (rects[r].width < 1 || rects[r].height < 1) continue;
+        if (rects[r].right > box.right + 1 || rects[r].left < box.left - 1 || rects[r].bottom > box.bottom + 1 || rects[r].top < box.top - 1) {
+          out.shopClip.push("text:" + (el.getAttribute("data-arg") || ""));
+          break;
+        }
+      }
+    });
+  }
+  var starCount = document.querySelector("[data-star-count]");
+  out.starGlyph = !!(starCount && /[★☆]/.test(starCount.textContent || ""));
   var level = document.querySelector(".level-label");
   out.levelText = level ? level.textContent : "";
   out.levelClipped = false;
@@ -1615,7 +1675,7 @@ window.__layoutAudit = function () {
     var box = level.getBoundingClientRect();
     out.levelClipped = level.scrollWidth > level.clientWidth + 2 || box.height > 28 || String(level.textContent || "").indexOf("Level") < 0;
   }
-  out.ok = !out.overlaps.length && !out.small.length && !out.thai.length && !out.floating.length && !out.scroll.length && !out.errors.length && !out.raw.length && !out.titleOverlap && !out.levelClipped;
+  out.ok = !out.overlaps.length && !out.small.length && !out.thai.length && !out.floating.length && !out.scroll.length && !out.errors.length && !out.raw.length && !out.titleOverlap && !out.levelClipped && !out.shopClip.length && !out.starGlyph;
   return out;
 };
 
@@ -1697,6 +1757,40 @@ window.__openForest = function () {
   render();
 };
 window.__xp = function () { return S ? S.xp : ""; };
+window.__reflow = function () { render(); return window.__layoutAudit(); };
+window.__nextAct = function () {
+  var screen = document.querySelector(".screen");
+  var name = screen ? screen.getAttribute("data-screen") : "";
+  if (document.querySelector("[data-act=versegot]")) return "[data-act=versegot]";
+  if (document.querySelector("[data-act=welcome]")) return "[data-act=welcome]";
+  if (name === "title") return "[data-act=letsgo]";
+  if (name === "menu") return "[data-act=map]";
+  if (name === "continue") return "[data-act=resume]";
+  if (name === "rest") return "";
+  if (name === "map") return "[data-act=region][data-arg=\"r3\"]";
+  if (name === "reveal" || name === "reward") return "[data-act=got]";
+  if (name === "kneel") return "[data-act=kneelgot]";
+  if (document.querySelector("[data-act=twodone]")) return "[data-act=twodone]";
+  if (document.querySelector("[data-act=sayit]")) return "[data-act=sayit]";
+  if (document.querySelector("[data-act=two]") && S.run && S.run.two) {
+    return "[data-act=two][data-arg=" + JSON.stringify(S.run.two.answer || "") + "]";
+  }
+  if (document.querySelector("[data-correct='1']")) return "[data-correct='1']";
+  var step = S.run && S.run.steps && S.run.steps[S.run.index];
+  var card = step && D.byId[step.id];
+  if (step && step.kind === "letter" && card) {
+    var got = S.run.spell && S.run.spell.id === card.id ? S.run.spell.got : "";
+    return "[data-act=letter][data-arg=" + JSON.stringify(String(card.en || "").charAt(got.length)) + "]";
+  }
+  if (step && (step.kind === "count" || step.kind === "size") && card) {
+    return "[data-act=" + step.kind + "][data-arg=" + JSON.stringify(card.en) + "]";
+  }
+  if (name === "boss" && card) return "[data-act=boss][data-arg=" + JSON.stringify(card.answer || "") + "]";
+  if (card && card.answer && document.querySelector("[data-act=choice]")) {
+    return "[data-act=choice][data-arg=" + JSON.stringify(card.answer) + "]";
+  }
+  return "";
+};
 window.__duelFacts = function () {
   var screen = document.querySelector(".screen");
   return {

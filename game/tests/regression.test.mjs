@@ -8,7 +8,7 @@ import {
   buyItem, equipItem, playClip, bannerKey, levelForXp, xpToReach, showsEnglishAnswer, missOutcome,
   gearBonuses, awardExtras, noteMiss, shopRows, beginKneel, thaiReviewQueue, endingPairs,
   endingDiscrepancy, buildDuelSchedule, speakEnglish, bonusWordsFor, spellStep, countPlates,
-  SETTLED_APPROVALS, countPrompt, trophiesByTab, pendingMaxwell, fillBackupCompare
+  SETTLED_APPROVALS, countPrompt, trophiesByTab, pendingMaxwell, fillBackupCompare, pickNewerState
 } from "../js/engine.mjs";
 
 const raw = JSON.parse(fs.readFileSync(new URL("../data/cards.json", import.meta.url), "utf8"));
@@ -392,4 +392,39 @@ test("level curve matches the spec knots", function () {
   var turned = freshState(model);
   turned.lastZone = { r1: "phonics" };
   assert.equal(chooseZone(turned, model, "r1"), "sight-words");
+});
+
+test("a newer mirror beats a stale indexed record and does not award twice", function () {
+  var stale = freshState(model);
+  stale.schema = 5020;
+  stale.rev = 1;
+  stale.savedAt = 5000;
+  stale.xp = 150;
+  var fresh = freshState(model);
+  fresh.schema = 5020;
+  fresh.rev = 2;
+  fresh.savedAt = 1000;
+  fresh.xp = 180;
+  fresh.ledger["round:race:1"] = 1;
+  assert.equal(pickNewerState(stale, fresh).xp, 180);
+  assert.equal(pickNewerState(fresh, stale).xp, 180);
+  var awarded = applyXp(pickNewerState(stale, fresh), model, 30, "round:race:1");
+  assert.equal(awarded.state.xp, 180);
+  var olderMirror = freshState(model);
+  olderMirror.schema = 5020;
+  olderMirror.rev = 4;
+  olderMirror.xp = 111;
+  var newerIndex = freshState(model);
+  newerIndex.schema = 5020;
+  newerIndex.rev = 5;
+  newerIndex.xp = 999;
+  newerIndex.ledger["round:race:1"] = 1;
+  assert.equal(pickNewerState(newerIndex, olderMirror).xp, 999);
+  assert.equal(applyXp(pickNewerState(newerIndex, olderMirror), model, 30, "round:race:1").state.xp, 999);
+  var unstamped = freshState(model);
+  unstamped.schema = 5020;
+  unstamped.xp = 10;
+  assert.equal(pickNewerState(unstamped, fresh).xp, 180);
+  assert.equal(pickNewerState(null, fresh).xp, 180);
+  assert.equal(pickNewerState(stale, null).xp, 150);
 });

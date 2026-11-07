@@ -63,6 +63,7 @@ button, .tap {
   flex-direction: column;
   overflow: hidden;
   padding-top: var(--safe-t);
+  background: var(--cream);
   animation: screen-in .18s ease;
 }
 .en { font-family: "Lilita One", system-ui, sans-serif; font-weight: 400; }
@@ -121,9 +122,27 @@ button, .tap {
   align-items: center;
   gap: 2px;
 }
-.banner .en, .banner .th { display: block; position: static; max-width: 100%; }
-.banner .en { color: var(--hero); font-size: 26px; line-height: 1.25; padding-bottom: 4px; -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill; }
-.banner .th { color: var(--cream); font-size: 18px; line-height: 1.7; background: var(--plate); border-radius: 8px; padding: 0 8px; }
+.banner .banner-en, .banner .banner-th { display: block; position: relative; max-width: 100%; }
+.banner .banner-en {
+  color: var(--hero);
+  font-size: 26px;
+  line-height: 1.05;
+  padding: 0 6px;
+  z-index: 2;
+  -webkit-text-stroke: 0;
+  paint-order: normal;
+  text-shadow: 1px 0 0 var(--ink), -1px 0 0 var(--ink), 0 1px 0 var(--ink), 0 -1px 0 var(--ink);
+}
+.banner .banner-th {
+  color: var(--cream);
+  font-size: 18px;
+  line-height: 1.35;
+  margin-top: 12px;
+  background: var(--plate);
+  border-radius: 8px;
+  padding: 2px 8px;
+  z-index: 1;
+}
 
 .back-slim { margin: 4px 8px 0; min-height: 44px; }
 .back-slim .plate { flex-direction: row; gap: 8px; }
@@ -238,9 +257,38 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 .prop .pic-svg svg, .prop .drawn { width: 40px; height: 40px; display: block; }
 .shop-row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
 .shop-row .trophy { min-width: 120px; flex: 0 0 120px; }
+.weapon-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+.weapon-row .trophy {
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.weapon-row .en, .weapon-row .th {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 .trophy.sil { filter: none; }
 .trophy.sil .drawn, .trophy.sil svg { opacity: .35; }
 .guardian { width: 140px; height: auto; display: block; margin: 12px auto 0; }
+.kneel-fig {
+  position: absolute;
+  left: 38%;
+  bottom: 4%;
+  height: 50.4%;
+  max-height: 240px;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+}
+.kneel-fig .guardian { width: auto; height: 100%; margin: 0; }
 .prop.glow-gold { outline: 4px solid var(--gold); border-radius: 12px; }
 .prop.wiggle { animation: wiggle .35s ease; }
 .qcard {
@@ -489,7 +537,7 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 .boss-meter { height: 12px; background: #1A1F24; border: 2px solid var(--ink); border-radius: 8px; overflow: hidden; }
 .boss-meter span { display: block; height: 100%; background: #8E3B3E; }
 
-@keyframes screen-in { from { opacity: .55; } to { opacity: 1; } }
+@keyframes screen-in { from { transform: translateY(10px); } to { transform: none; } }
 @keyframes bob { from { transform: translateY(0); } 50% { transform: translateY(8px); } to { transform: translateY(0); } }
 @keyframes wiggle { 25% { transform: rotate(-4deg); } 75% { transform: rotate(4deg); } }
 @keyframes fall { to { transform: translateY(110vh) rotate(40deg); opacity: .2; } }
@@ -507,7 +555,7 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
   .choice { min-height: 44px; font-size: 16px; }
   .letter-choices { grid-template-columns: 1fr 1fr 1fr; }
   .stage { min-height: 96px; }
-  .banner .en { font-size: 22px; }
+  .banner .banner-en { font-size: 22px; }
   .hud { min-height: 52px; }
   .portrait { width: 48px; height: 48px; }
   .hero-card .mini, .hero-card .mini svg { height: 40px; }

@@ -84,7 +84,12 @@ async function evaluate(cdp, expression) {
   return msg.result && msg.result.result ? msg.result.result.value : undefined;
 }
 
+async function settle(cdp) {
+  await evaluate(cdp, "Promise.race([Promise.all((document.getAnimations ? document.getAnimations() : []).map(function (a) { return a.finished.catch(function () {}); })), new Promise(function (resolve) { setTimeout(resolve, 500); })]).then(function () { return 1; })");
+  await delay(30);
+}
 async function shot(cdp, name) {
+  await settle(cdp);
   var text = await evaluate(cdp, "document.body.innerText");
   var banned = ["kicking", "husband", "Check-out", "one hundred twenty", "Your room is ready"];
   banned.forEach(function (word) {
@@ -380,6 +385,67 @@ story.duel = {
   paused: pausedDuel, resumed: resumed.screen, before: beforeMap.xp, after: afterMap.xp, afterScreen: afterMap.screen, kept: duelKept
 };
 story.reply = reply;
+await cdp.send("Emulation.setDeviceMetricsOverride", { width: 320, height: 568, deviceScaleFactor: 1, mobile: true });
+await click(cdp, "[data-act=tomap]");
+await click(cdp, "[data-act=back]");
+await click(cdp, "[data-act=gear]");
+await click(cdp, "[data-act=backup]");
+var backupAudit = await evaluate(cdp, "window.__layoutAudit()");
+await shot(cdp, "backup-320x568");
+await cdp.send("Emulation.setDeviceMetricsOverride", { width: 844, height: 390, deviceScaleFactor: 1, mobile: true });
+await click(cdp, "[data-act=back]");
+await click(cdp, "[data-act=shop]");
+var shopLand = await evaluate(cdp, "window.__reflow()");
+await shot(cdp, "shop-844x390");
+await cdp.send("Emulation.setDeviceMetricsOverride", { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+await click(cdp, "[data-act=back]");
+await click(cdp, "[data-act=map]");
+var chipBefore = await evaluate(cdp, "!!document.querySelector('[data-act=update]')");
+await evaluate(cdp, "navigator.serviceWorker && navigator.serviceWorker.dispatchEvent(new MessageEvent('message', { data: { type: 'update' } }))");
+await delay(100);
+var chipAfter = await evaluate(cdp, "!!document.querySelector('[data-act=update]')");
+await shot(cdp, "map-update-390x844");
+await evaluate(cdp, "window.__previewMode('count')");
+var lockProbe = await evaluate(cdp, "(function(){var facts=window.__modeFacts(); var before=window.__xp(); var btn=document.querySelector('[data-act=count][data-arg='+JSON.stringify(facts.answer)+']'); if(!btn) return {missing:true, answer:facts.answer}; btn.click(); btn.click(); return {before:before, after:window.__xp(), locked:!!(window.__lockDuring), screen:document.querySelector('.screen').getAttribute('data-screen')};})()");
+var storedXp = await evaluate(cdp, "window.__xp()");
+var mirrorXp = await evaluate(cdp, "(function(){var mirror=JSON.parse(localStorage.getItem('naeState')); var next=storedXp+30; mirror.xp=next; mirror.rev=(Number(mirror.rev)||0)+4; mirror.savedAt=Date.now(); mirror.ledger['round:race:1']=1; localStorage.setItem('naeState', JSON.stringify(mirror)); return next;})()".replace("storedXp", String(storedXp)));
+await cdp.send("Page.reload", { ignoreCache: true });
+await waitScreen(cdp);
+var raced = await evaluate(cdp, "window.__xp()");
+var indexedNewer = await evaluate(cdp, "(function(){return new Promise(function(resolve){var done=false; function finish(v){ if(done) return; done=true; resolve(v); } setTimeout(function(){finish(0);}, 2000); var mirror=JSON.parse(localStorage.getItem('naeState')); mirror.rev=40; mirror.xp=111; localStorage.setItem('naeState', JSON.stringify(mirror)); var req=indexedDB.open('nae',1); req.onerror=function(){finish(0);}; req.onsuccess=function(){try{var tx=req.result.transaction('kv','readwrite'); var copy=JSON.parse(JSON.stringify(mirror)); copy.rev=50; copy.xp=999; copy.ledger['round:race:1']=1; tx.objectStore('kv').put(copy,'state'); tx.oncomplete=function(){finish(999);}; tx.onerror=function(){finish(0);};}catch(e){finish(0);}};});})()");
+await cdp.send("Page.reload", { ignoreCache: true });
+await waitScreen(cdp);
+var indexedKept = await evaluate(cdp, "window.__xp()");
+var dup = await evaluate(cdp, "(function(){var before=window.__xp(); var state=JSON.parse(localStorage.getItem('naeState')); var again=state.ledger && state.ledger['round:race:1'] ? before : before+30; return {before:before, ledger:!!(state.ledger&&state.ledger['round:race:1']), again:again};})()");
+var restSteps = 0;
+var restScreen = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
+while (restScreen !== "rest" && restSteps < 280) {
+  var sel = await evaluate(cdp, "window.__nextAct()");
+  if (!sel) break;
+  if (sel.indexOf("got") >= 0 || sel.indexOf("sayit") >= 0 || sel.indexOf("twodone") >= 0 || sel.indexOf("kneel") >= 0) await delay(430);
+  try { await click(cdp, sel); } catch (err) { story.restError = String(err.message || err) + " " + sel; break; }
+  restScreen = await evaluate(cdp, "document.querySelector('.screen') ? document.querySelector('.screen').getAttribute('data-screen') : ''");
+  restSteps += 1;
+}
+if (restScreen === "rest") {
+  var restText = await evaluate(cdp, "document.body.innerText");
+  var restAudit = await evaluate(cdp, "window.__layoutAudit()");
+  story.rest = { steps: restSteps, repeated: (restText.match(/Great work today/g) || []).length, audit: !!(restAudit && restAudit.ok), gap: restAudit && restAudit.titleGap };
+} else story.rest = { steps: restSteps, screen: restScreen };
+story.extra = {
+  backup: !!(backupAudit && backupAudit.ok && !backupAudit.titleOverlap),
+  backupGap: backupAudit && backupAudit.titleGap,
+  shopLand: !!(shopLand && shopLand.ok && !shopLand.shopClip.length && !shopLand.titleOverlap),
+  shopGap: shopLand && shopLand.titleGap,
+  chipBefore: chipBefore,
+  chipAfter: chipAfter,
+  lock: lockProbe,
+  mirrorXp: mirrorXp,
+  raced: raced,
+  indexedNewer: indexedNewer,
+  indexedKept: indexedKept,
+  dup: dup
+};
 reports.push({ modeReport: modeReport, story: story });
 writeFileSync(outDir + "/layout-report.json", JSON.stringify(reports, null, 2));
 console.log(JSON.stringify(reports, null, 2));
@@ -419,6 +485,13 @@ var failed = reports.some(function (r) {
     storyBad = storyBad || !r.story.reply || !r.story.reply.shown;
     storyBad = storyBad || d.left !== "map" || d.backIndex !== d.hitIndex || d.paused !== "continue" || d.resumed !== "duel";
     storyBad = storyBad || Number(d.missXp) !== Number(d.startXp) || Number(d.after) !== Number(d.before) + 30 || String(d.kept) !== String(d.after);
+    var extra = r.story.extra || {};
+    storyBad = storyBad || !extra.backup || !extra.shopLand || !extra.chipAfter;
+    var lockGain = extra.lock ? Number(extra.lock.after) - Number(extra.lock.before) : 99;
+    storyBad = storyBad || !extra.lock || extra.lock.missing || extra.lock.locked !== true || (lockGain !== 0 && lockGain !== 10);
+    storyBad = storyBad || Number(extra.raced) !== Number(extra.mirrorXp);
+    storyBad = storyBad || Number(extra.indexedKept) !== 999 || !extra.dup || !extra.dup.ledger || Number(extra.dup.again) !== Number(extra.dup.before);
+    storyBad = storyBad || !r.story.rest || r.story.rest.repeated !== 1;
   }
   return audits.some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || badNet || flowBad || (r.xp != null && String(r.xpAfterReload) !== String(r.xp)) || (r.reduced && r.motion !== "fade150") || modeBad || storyBad;
 });

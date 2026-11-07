@@ -186,6 +186,19 @@ export function levelForXp(xp) {
   return level;
 }
 
+export function pickNewerState(indexed, mirror) {
+  function usable(state) { return !!(state && state.schema === 5020 && !Array.isArray(state)); }
+  if (!usable(indexed)) return usable(mirror) ? mirror : null;
+  if (!usable(mirror)) return indexed;
+  var indexedRev = Number(indexed.rev) || 0;
+  var mirrorRev = Number(mirror.rev) || 0;
+  if (indexedRev !== mirrorRev) return indexedRev > mirrorRev ? indexed : mirror;
+  var indexedAt = Number(indexed.savedAt) || 0;
+  var mirrorAt = Number(mirror.savedAt) || 0;
+  if (indexedAt !== mirrorAt) return indexedAt > mirrorAt ? indexed : mirror;
+  return mirror;
+}
+
 export function freshState(model) {
   var owned = [];
   var ledger = {};
