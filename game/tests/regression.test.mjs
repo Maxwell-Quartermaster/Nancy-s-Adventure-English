@@ -427,4 +427,15 @@ test("a newer mirror beats a stale indexed record and does not award twice", fun
   assert.equal(pickNewerState(unstamped, fresh).xp, 180);
   assert.equal(pickNewerState(null, fresh).xp, 180);
   assert.equal(pickNewerState(stale, null).xp, 150);
+  var lockedRows = shopRows(freshState(model), model);
+  var sword = lockedRows.filter(function (row) { return row.wt === "sword1"; })[0];
+  assert.equal(sword.slots.length, 3);
+  assert.equal(sword.slots[2].silhouette, true);
+  assert.equal(sword.slots[2].tier, 3);
+  var rich = freshState(model);
+  rich.xp = xpToReach(10);
+  rich.goldStars = 200;
+  var openSword = shopRows(rich, model).filter(function (row) { return row.wt === "sword1"; })[0];
+  assert.equal(openSword.slots[2].silhouette, false);
+  assert.equal(openSword.slots[2].tierOpen, true);
 });

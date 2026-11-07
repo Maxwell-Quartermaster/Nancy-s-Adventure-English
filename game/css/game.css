@@ -257,23 +257,36 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 .prop .pic-svg svg, .prop .drawn { width: 40px; height: 40px; display: block; }
 .shop-row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
 .shop-row .trophy { min-width: 120px; flex: 0 0 120px; }
-.weapon-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  width: 100%;
-}
-.weapon-row .trophy {
-  min-width: 0;
-  width: 100%;
+.weapon-row { width: 100%; }
+.weapon-viewport { overflow: hidden; width: 100%; }
+.weapon-track { display: flex; gap: 8px; width: max-content; transform: translateX(0); transition: transform .2s ease; }
+.weapon-card {
+  flex: 0 0 220px;
+  width: 220px;
+  min-width: 44px;
+  min-height: 44px;
   height: auto;
-  overflow: visible;
+  padding: 8px 6px;
+  overflow: hidden;
 }
-.weapon-row .en, .weapon-row .th {
+.weapon-card .weapon-art { height: 44px; display: flex; align-items: flex-end; justify-content: center; }
+.weapon-card .weapon-art svg, .weapon-card .weapon-art .drawn { width: 44px; height: 44px; }
+.weapon-card .en, .weapon-card .th, .trophy .en, .trophy .th {
   display: block;
+  position: static;
   max-width: 100%;
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  line-height: 1.25;
+  margin: 0;
+}
+.trophy .th, .weapon-card .th { margin-top: 4px; }
+.keep-line { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sil-star { margin-top: 4px; }
+.char-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+@media (max-width: 360px) {
+  .pantry-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .weapon-track { transition: none; }
 }
 .trophy.sil { filter: none; }
 .trophy.sil .drawn, .trophy.sil svg { opacity: .35; }

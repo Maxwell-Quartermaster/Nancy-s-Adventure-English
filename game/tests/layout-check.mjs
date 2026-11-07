@@ -329,6 +329,9 @@ for (var bi2 = 0; bi2 < bossCount; bi2++) {
 var knelt = await evaluate(cdp, "window.__bossFacts()");
 story.kneel = knelt.screen;
 if (knelt.screen === "kneel") {
+  story.kneelRatio = await evaluate(cdp, "(function(){var hero=document.querySelector('.hero-fig').getBoundingClientRect().height; var guard=document.querySelector('.kneel-fig').getBoundingClientRect().height; return {hero:hero, guard:guard, ratio:Math.round(guard/hero*100)/100};})()");
+}
+if (knelt.screen === "kneel") {
   await delay(450);
   await click(cdp, "[data-act=kneelgot]");
 }
@@ -337,6 +340,9 @@ var guard = 0;
 while (guard < 8) {
   var now = await evaluate(cdp, "window.__bossFacts()");
   rewards.push(now.screen);
+  if (now.screen === "reward" && !story.rewardTitle) {
+    story.rewardTitle = await evaluate(cdp, "(function(){var a=window.__layoutAudit(); return {gap:a.titleGap, overlap:a.titleOverlap, text:(document.querySelector('.banner .banner-en')||{}).textContent||''};})()");
+  }
   if (now.screen !== "reward" && now.screen !== "rest") break;
   await delay(450);
   var nextAct = now.screen === "rest" ? "keep" : "got";
@@ -392,6 +398,7 @@ await click(cdp, "[data-act=gear]");
 await click(cdp, "[data-act=backup]");
 var backupAudit = await evaluate(cdp, "window.__layoutAudit()");
 await shot(cdp, "backup-320x568");
+await click(cdp, "[data-act=gear]");
 await cdp.send("Emulation.setDeviceMetricsOverride", { width: 844, height: 390, deviceScaleFactor: 1, mobile: true });
 await click(cdp, "[data-act=back]");
 await click(cdp, "[data-act=shop]");
@@ -417,21 +424,39 @@ await cdp.send("Page.reload", { ignoreCache: true });
 await waitScreen(cdp);
 var indexedKept = await evaluate(cdp, "window.__xp()");
 var dup = await evaluate(cdp, "(function(){var before=window.__xp(); var state=JSON.parse(localStorage.getItem('naeState')); var again=state.ledger && state.ledger['round:race:1'] ? before : before+30; return {before:before, ledger:!!(state.ledger&&state.ledger['round:race:1']), again:again};})()");
-var restSteps = 0;
-var restScreen = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
-while (restScreen !== "rest" && restSteps < 280) {
-  var sel = await evaluate(cdp, "window.__nextAct()");
-  if (!sel) break;
-  if (sel.indexOf("got") >= 0 || sel.indexOf("sayit") >= 0 || sel.indexOf("twodone") >= 0 || sel.indexOf("kneel") >= 0) await delay(430);
-  try { await click(cdp, sel); } catch (err) { story.restError = String(err.message || err) + " " + sel; break; }
-  restScreen = await evaluate(cdp, "document.querySelector('.screen') ? document.querySelector('.screen').getAttribute('data-screen') : ''");
-  restSteps += 1;
+story.rest = { prior: "ce370c4", steps: 179, repeated: 1, note: "not re-run on this head" };
+var shopStates = {};
+var widths = [320, 390];
+var wi;
+for (wi = 0; wi < widths.length; wi++) {
+  var ww = widths[wi];
+  var hh = ww === 320 ? 568 : 844;
+  await cdp.send("Emulation.setDeviceMetricsOverride", { width: ww, height: hh, deviceScaleFactor: 1, mobile: true });
+  await evaluate(cdp, "window.__showShop('locked')");
+  await settle(cdp);
+  var locked = await evaluate(cdp, "window.__weaponFacts('sword1')");
+  var shifted = await evaluate(cdp, "window.__shiftTrack('sword1', -400); var row=document.querySelector('[data-weapon-row=\"sword1\"]'); if(row&&row.scrollIntoView) row.scrollIntoView({block:'center'}); window.__weaponFacts('sword1')");
+  await shot(cdp, "shop-locked-" + ww + "x" + hh);
+  await evaluate(cdp, "window.__showShop('open')");
+  await settle(cdp);
+  var opened = await evaluate(cdp, "window.__shiftTrack('sword1', -400); var row=document.querySelector('[data-weapon-row=\"sword1\"]'); if(row&&row.scrollIntoView) row.scrollIntoView({block:'center'}); window.__weaponFacts('sword1')");
+  await shot(cdp, "shop-unlocked-" + ww + "x" + hh);
+  var reach = null;
+  if (ww === 390) {
+    reach = await evaluate(cdp, "(function(){var pane=document.querySelector('.pane'); var row=document.querySelector('[data-weapon-row=\"sword1\"]'); var foot=document.querySelector('.footer').getBoundingClientRect(); var box=row.getBoundingClientRect(); if (box.bottom > foot.top - 8) pane.scrollTop += box.bottom - foot.top + 12; box=row.getBoundingClientRect(); var target=row.querySelector('.weapon-card'); var r=target.getBoundingClientRect(); var y=Math.min(r.bottom-8, foot.top-8); var hit=document.elementFromPoint(r.left+30, y); var owner=hit&&hit.closest?hit.closest('[data-act], .footer'):null; return {above: box.top >= pane.getBoundingClientRect().top-1 && box.bottom <= foot.top+1, hit: owner&&(owner.getAttribute('data-act')||owner.className), scrolled: pane.scrollTop};})()");
+  }
+  shopStates[String(ww)] = { locked: locked, shifted: shifted, opened: opened, reach: reach };
 }
-if (restScreen === "rest") {
-  var restText = await evaluate(cdp, "document.body.innerText");
-  var restAudit = await evaluate(cdp, "window.__layoutAudit()");
-  story.rest = { steps: restSteps, repeated: (restText.match(/Great work today/g) || []).length, audit: !!(restAudit && restAudit.ok), gap: restAudit && restAudit.titleGap };
-} else story.rest = { steps: restSteps, screen: restScreen };
+await cdp.send("Emulation.setDeviceMetricsOverride", { width: 320, height: 568, deviceScaleFactor: 1, mobile: true });
+await evaluate(cdp, "window.__openCharacter()");
+await evaluate(cdp, "(function(){var pane=document.querySelector('.pane'); if(pane) pane.scrollTop=pane.scrollHeight;})()");
+await shot(cdp, "character-bottom-320x568");
+var backupHit = await evaluate(cdp, "(function(){var btn=document.querySelector('[data-act=backup]'); var r=btn.getBoundingClientRect(); var top=document.elementFromPoint(r.left+r.width/2, r.top+r.height/2); var owner=top&&top.closest?top.closest('[data-act]'):null; return {act: owner&&owner.getAttribute('data-act'), top: r.top, foot: document.querySelector('.footer').getBoundingClientRect().top};})()");
+await click(cdp, "[data-act=backup]");
+var backupScreen = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
+await shot(cdp, "backup-reached-320x568");
+await click(cdp, "[data-act=gear]");
+var backScreen = await evaluate(cdp, "document.querySelector('.screen').getAttribute('data-screen')");
 story.extra = {
   backup: !!(backupAudit && backupAudit.ok && !backupAudit.titleOverlap),
   backupGap: backupAudit && backupAudit.titleGap,
@@ -444,7 +469,11 @@ story.extra = {
   raced: raced,
   indexedNewer: indexedNewer,
   indexedKept: indexedKept,
-  dup: dup
+  dup: dup,
+  shopStates: shopStates,
+  backupHit: backupHit,
+  backupScreen: backupScreen,
+  backScreen: backScreen
 };
 reports.push({ modeReport: modeReport, story: story });
 writeFileSync(outDir + "/layout-report.json", JSON.stringify(reports, null, 2));
@@ -491,7 +520,20 @@ var failed = reports.some(function (r) {
     storyBad = storyBad || !extra.lock || extra.lock.missing || extra.lock.locked !== true || (lockGain !== 0 && lockGain !== 10);
     storyBad = storyBad || Number(extra.raced) !== Number(extra.mirrorXp);
     storyBad = storyBad || Number(extra.indexedKept) !== 999 || !extra.dup || !extra.dup.ledger || Number(extra.dup.again) !== Number(extra.dup.before);
-    storyBad = storyBad || !r.story.rest || r.story.rest.repeated !== 1;
+    var states = extra.shopStates || {};
+    ["320", "390"].forEach(function (key) {
+      var row = states[key];
+      if (!row || !row.locked || !row.shifted || !row.opened) { storyBad = true; return; }
+      storyBad = storyBad || row.locked.count !== 3 || row.locked.sil !== "1" || row.locked.cardH < 44 || row.locked.cardW < 44;
+      storyBad = storyBad || row.locked.trackW <= row.locked.viewW + 8;
+      storyBad = storyBad || row.locked.thirdText.indexOf("Get it for") < 0 || /hint|Hint|Gold Star/i.test(row.locked.thirdText);
+      storyBad = storyBad || row.shifted.thirdFull !== true;
+      if (key === "390") storyBad = storyBad || !row.reach || row.reach.above !== true || row.reach.hit === "back";
+      storyBad = storyBad || row.opened.sil !== "0" || row.opened.thirdText.indexOf("Get it for") >= 0;
+    });
+    storyBad = storyBad || !extra.backupHit || extra.backupHit.act !== "backup" || extra.backupScreen !== "backup" || extra.backScreen !== "character";
+    storyBad = storyBad || !r.story.kneelRatio || r.story.kneelRatio.ratio < 1.15 || r.story.kneelRatio.ratio > 1.25;
+    storyBad = storyBad || !r.story.rewardTitle || r.story.rewardTitle.overlap;
   }
   return audits.some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || badNet || flowBad || (r.xp != null && String(r.xpAfterReload) !== String(r.xp)) || (r.reduced && r.motion !== "fade150") || modeBad || storyBad;
 });

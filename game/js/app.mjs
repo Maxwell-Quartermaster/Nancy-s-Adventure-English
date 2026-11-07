@@ -710,26 +710,36 @@ function renderShop() {
     function fill(s) { return String(s || "").split("{n}").join(String(item.stars)); }
     var art = String(item.pic || "").indexOf("svg:") === 0 ? pictureHtml(item.pic, inline) : "<div class='emoji-pic'>" + escapeText(item.pic || "") + "</div>";
     return "<button class='trophy' data-tap data-act='buy' data-arg='" + item.id + "'>" + art +
-      bi(item.en, item.th) + "<div class='en'>" + escapeText(owned ? label.en : fill(label.en)) + "</div><div class='th' lang='th'>" + escapeText(owned ? label.th : fill(label.th)) + "</div></button>";
+      bi(item.en, item.th) + "<div class='en keep-line'>" + escapeText(owned ? label.en : fill(label.en)) + "</div><div class='th keep-line' lang='th'>" + escapeText(owned ? label.th : fill(label.th)) + "</div></button>";
   }).join("");
   var gear = E.shopRows(S, D).map(function (row) {
-    var slots = row.slots.map(function (slot) {
-      var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost));
-      var cls = "trophy" + (slot.silhouette ? " sil" : "");
-      var ask = ui("getFor");
-      var label = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
-      var labelTh = slot.silhouette ? String(ask.th || "").split("{n}").join(String(slot.cost)) : (slot.th || "");
-      return "<button class='" + cls + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-open='" + (slot.tierOpen && row.open ? "1" : "0") + "'>" +
-        "<div class='en'>" + escapeText(label) + "</div><div class='th' lang='th'>" + escapeText(labelTh) + "</div>" +
-        "<div class='en'>" + price + "</div>" + bonusLine(slot.bonus) + "</button>";
-    }).join("");
-    return "<div class='en'>" + escapeText(row.row) + "</div><div class='weapon-row'>" + slots + "</div>";
+    return "<div class='en row-name'>" + escapeText(row.row) + "</div>" + weaponTrack(row);
   }).join("");
   return "<div class='screen' data-screen='shop'>" + banner(ui("pantry").en, ui("pantry").th) +
-    "<div class='sheet'><div class='count star-count' data-star-count='" + S.goldStars + "'>" + icon("star") + "<span>" + S.goldStars + "</span></div><div class='pane' data-scroll-ok><div class='grid3'>" + items + "</div>" + gear + "</div></div>" +
+    "<div class='sheet'><div class='count star-count' data-star-count='" + S.goldStars + "'>" + icon("star") + "<span>" + S.goldStars + "</span></div><div class='pane' data-scroll-ok><div class='grid3 pantry-grid'>" + items + "</div>" + gear + "</div></div>" +
     "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
+function weaponTrack(row) {
+  var slots = row.slots.map(function (slot) { return weaponCard(slot); }).join("");
+  return "<div class='weapon-row' data-weapon-row='" + escapeText(row.wt) + "'><div class='weapon-viewport'><div class='weapon-track' data-track='" + escapeText(row.wt) + "'>" + slots + "</div></div></div>";
+}
+function weaponCard(slot) {
+  var ask = ui("getFor");
+  var locked = !!slot.silhouette;
+  var art = "<div class='weapon-art'>" + pictureHtml("svg:" + slot.id, inline) + "</div>";
+  var body;
+  if (locked) {
+    body = art +
+      "<div class='en keep-line'>" + escapeText(String(ask.en || "").split("{n}").join(String(slot.cost))) + "</div>" +
+      "<div class='th keep-line' lang='th'>" + escapeText(String(ask.th || "").split("{n}").join(String(slot.cost))) + "</div>" +
+      "<div class='sil-star'>" + icon("star") + "</div>";
+  } else {
+    var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost));
+    body = art + bi(slot.name, slot.th || "") + "<div class='en keep-line'>" + price + "</div>" + bonusLine(slot.bonus);
+  }
+  return "<button class='trophy weapon-card" + (locked ? " sil" : "") + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-sil='" + (locked ? "1" : "0") + "' data-open='" + (slot.tierOpen ? "1" : "0") + "'>" + body + "</button>";
+}
 function goalLine(t) {
   var u = t.unlock || {};
   var pack = null;
@@ -769,14 +779,7 @@ function renderGear() {
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");
     body = "<div class='grid3'>" + gearCards + "</div>" + E.shopRows(S, D).map(function (row) {
-      return "<div class='en'>" + escapeText(row.row) + "</div><div class='weapon-row'>" + row.slots.map(function (slot) {
-        var ask = ui("getFor");
-        var gname = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
-        var gth = slot.silhouette ? String(ask.th || "").split("{n}").join(String(slot.cost)) : slot.th;
-        return "<button class='trophy" + (slot.silhouette ? " sil" : "") + "' data-tap data-act='buy' data-arg='" + slot.id + "'>" +
-          pictureHtml("svg:" + slot.id, inline) + bi(gname, gth) +
-          "<div class='en'>" + (slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost))) + "</div></button>";
-      }).join("") + "</div>";
+      return "<div class='en row-name'>" + escapeText(row.row) + "</div>" + weaponTrack(row);
     }).join("");
   } else if (tab === "scrolls") {
     var credit = (D.verses && D.verses.attribution) || {};
@@ -800,10 +803,10 @@ function renderGear() {
     "<div class='en'>" + escapeText(ui("earnedShelf").en) + "</div><div class='shop-row'>" + shelf + "</div>" +
     "<div class='grid3'>" + tabButtons + "</div>" +
     "<div class='pane' data-scroll-ok>" + body +
-    "<button class='metal' data-tap data-act='backup'>" + plate(ui("backup").en, ui("backup").th) + "</button>" +
     "<button class='metal' data-tap data-act='toggle' data-arg='slowMode' aria-pressed='" + (S.settings.slowMode ? "true" : "false") + "'>" + plate(ui("slowMode").en, ui("slowMode").th) + "</button>" +
     "<button class='metal' data-tap data-act='toggle' data-arg='restWeeks' aria-pressed='" + (S.settings.restWeeks ? "true" : "false") + "'>" + plate(ui("restWeeks").en, ui("restWeeks").th) + "</button></div></div>" +
-    "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
+    "<div class='footer char-foot'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button>" +
+    "<button class='metal' data-tap data-act='backup'>" + plate(ui("backup").en, ui("backup").th) + "</button></div></div>";
 }
 
 function renderBackup() {
@@ -827,7 +830,7 @@ function renderBackup() {
     "<button class='gold-btn' data-tap data-act='usebak'>" + plate(ui("useBackup").en, ui("useBackup").th) + "</button>" +
     (pending.length ? "<div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><ul data-pending='1'>" + ids + "</ul>" : "") +
     "<div class='th' lang='th'>" + escapeText(ui("thaiReview").th || ui("thaiReview").en) + "</div><div class='grid3'>" + queue + "</div></div>" +
-    "<button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
+    "<button class='metal' data-tap data-act='gear'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
 function renderDuel() {
@@ -1522,7 +1525,38 @@ function dispatch(act, arg) {
   }
 }
 
+function trackX(track) {
+  var match = /translateX\((-?\d+(?:\.\d+)?)px\)/.exec(track.style.transform || "");
+  return match ? Number(match[1]) : 0;
+}
+function moveTrack(track, dx) {
+  var view = track.parentNode;
+  var max = Math.max(0, track.scrollWidth - view.clientWidth);
+  var next = Math.min(0, Math.max(-max, trackX(track) + dx));
+  track.style.transform = "translateX(" + next + "px)";
+  return -next;
+}
+var weaponDrag = null;
+var suppressWeaponClick = false;
+document.getElementById("app").addEventListener("pointerdown", function (event) {
+  var view = event.target.closest && event.target.closest(".weapon-viewport");
+  if (!view) return;
+  weaponDrag = { track: view.querySelector(".weapon-track"), x: event.clientX, moved: false };
+});
+document.getElementById("app").addEventListener("pointermove", function (event) {
+  if (!weaponDrag || !weaponDrag.track) return;
+  var dx = event.clientX - weaponDrag.x;
+  if (Math.abs(dx) < 6 && !weaponDrag.moved) return;
+  weaponDrag.moved = true;
+  weaponDrag.x = event.clientX;
+  moveTrack(weaponDrag.track, dx);
+});
+document.getElementById("app").addEventListener("pointerup", function () {
+  if (weaponDrag && weaponDrag.moved) suppressWeaponClick = true;
+  weaponDrag = null;
+});
 document.getElementById("app").addEventListener("click", function (event) {
+  if (suppressWeaponClick) { suppressWeaponClick = false; return; }
   var node = event.target;
   while (node && node !== event.currentTarget) {
     if (node.getAttribute && node.getAttribute("data-act")) {
@@ -1646,26 +1680,33 @@ window.__layoutAudit = function () {
     out.titleOverlap = sharesX && inkEn.bottom + 4 > inkTh.top;
   }
   out.shopClip = [];
-  var pane = document.querySelector(".pane");
-  if (pane) {
-    var paneBox = pane.getBoundingClientRect();
-    Array.prototype.slice.call(document.querySelectorAll(".weapon-row .trophy")).forEach(function (el) {
+  out.textHit = [];
+  function boxesHit(a, b) {
+    return a.left < b.right - 1 && a.right > b.left + 1 && a.top < b.bottom - 1 && a.bottom > b.top + 1;
+  }
+  Array.prototype.slice.call(document.querySelectorAll(".trophy, .weapon-card")).forEach(function (el) {
+    var en = el.querySelector(".en");
+    var th = el.querySelector(".th");
+    if (!en || !th) return;
+    var er = en.getBoundingClientRect();
+    var tr = th.getBoundingClientRect();
+    if (er.width < 4 || tr.width < 4) return;
+    if (boxesHit(er, tr)) out.textHit.push(el.getAttribute("data-arg") || "card");
+  });
+  Array.prototype.slice.call(document.querySelectorAll(".weapon-viewport")).forEach(function (view) {
+    var viewBox = view.getBoundingClientRect();
+    Array.prototype.slice.call(view.querySelectorAll(".weapon-card")).forEach(function (el) {
       var box = el.getBoundingClientRect();
-      if (box.width < 8) return;
-      if (box.right > paneBox.right + 1 || box.left < paneBox.left - 1) out.shopClip.push("edge:" + (el.getAttribute("data-arg") || ""));
-      var range = document.createRange();
-      range.selectNodeContents(el);
-      var rects = range.getClientRects();
-      var r;
-      for (r = 0; r < rects.length; r++) {
-        if (rects[r].width < 1 || rects[r].height < 1) continue;
-        if (rects[r].right > box.right + 1 || rects[r].left < box.left - 1 || rects[r].bottom > box.bottom + 1 || rects[r].top < box.top - 1) {
-          out.shopClip.push("text:" + (el.getAttribute("data-arg") || ""));
-          break;
-        }
+      var visible = Math.min(box.right, viewBox.right) - Math.max(box.left, viewBox.left);
+      if (visible < box.width * 0.8) return;
+      if (box.height < 44 || box.width < 44) out.shopClip.push("small:" + el.getAttribute("data-arg"));
+      var lines = el.querySelectorAll(".keep-line");
+      var n;
+      for (n = 0; n < lines.length; n++) {
+        if (lines[n].scrollWidth > lines[n].clientWidth + 2) out.shopClip.push("wrap:" + el.getAttribute("data-arg"));
       }
     });
-  }
+  });
   var starCount = document.querySelector("[data-star-count]");
   out.starGlyph = !!(starCount && /[★☆]/.test(starCount.textContent || ""));
   var level = document.querySelector(".level-label");
@@ -1675,7 +1716,7 @@ window.__layoutAudit = function () {
     var box = level.getBoundingClientRect();
     out.levelClipped = level.scrollWidth > level.clientWidth + 2 || box.height > 28 || String(level.textContent || "").indexOf("Level") < 0;
   }
-  out.ok = !out.overlaps.length && !out.small.length && !out.thai.length && !out.floating.length && !out.scroll.length && !out.errors.length && !out.raw.length && !out.titleOverlap && !out.levelClipped && !out.shopClip.length && !out.starGlyph;
+  out.ok = !out.overlaps.length && !out.small.length && !out.thai.length && !out.floating.length && !out.scroll.length && !out.errors.length && !out.raw.length && !out.titleOverlap && !out.levelClipped && !out.shopClip.length && !out.starGlyph && !out.textHit.length;
   return out;
 };
 
@@ -1757,6 +1798,47 @@ window.__openForest = function () {
   render();
 };
 window.__xp = function () { return S ? S.xp : ""; };
+window.__shiftTrack = function (wt, dx) {
+  var track = document.querySelector("[data-track='" + wt + "']");
+  if (!track) return 0;
+  return moveTrack(track, dx);
+};
+window.__weaponFacts = function (wt) {
+  var row = document.querySelector("[data-weapon-row='" + wt + "']");
+  if (!row) return null;
+  var view = row.querySelector(".weapon-viewport");
+  var track = row.querySelector(".weapon-track");
+  var cards = row.querySelectorAll(".weapon-card");
+  var third = cards[2];
+  var viewBox = view.getBoundingClientRect();
+  var thirdBox = third ? third.getBoundingClientRect() : null;
+  var motion = getComputedStyle(track).transitionDuration;
+  return {
+    count: cards.length,
+    cardW: cards[0] ? cards[0].getBoundingClientRect().width : 0,
+    cardH: cards[0] ? cards[0].getBoundingClientRect().height : 0,
+    trackW: track.scrollWidth,
+    viewW: view.clientWidth,
+    thirdText: third ? third.innerText : "",
+    sil: third ? third.getAttribute("data-sil") : "",
+    thirdFull: !!(thirdBox && thirdBox.left >= viewBox.left - 1 && thirdBox.right <= viewBox.right + 1),
+    thirdCut: !!(thirdBox && thirdBox.right > viewBox.right + 1),
+    motion: motion
+  };
+};
+window.__showShop = function (mode) {
+  if (mode === "open") {
+    S.xp = E.xpToReach(10);
+    S.level = 10;
+    S.goldStars = 200;
+  } else {
+    S.xp = 0;
+    S.level = 1;
+    S.goldStars = 0;
+  }
+  S.screen = "shop";
+  render();
+};
 window.__reflow = function () { render(); return window.__layoutAudit(); };
 window.__nextAct = function () {
   var screen = document.querySelector(".screen");
