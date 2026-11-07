@@ -736,6 +736,13 @@ function weaponArt(slot) {
   var index = Math.max(0, (slot.tier || 1) - 1);
   return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blades[index], shades[index]) + "</div>";
 }
+function bibleWeaponLine(id, owned) {
+  if (!owned || !S || S.screen !== "gear") return "";
+  if (id !== "sling-shepherd" && id !== "staff-shepherd" && id !== "hammer-builder") return "";
+  var gift = ui("weaponGift");
+  if (!gift || !gift.en) return "";
+  return "<div class='en' data-weapon-gift='1'>" + escapeText(gift.en) + "</div><div class='th' lang='th' data-weapon-gift='1'>" + escapeText(gift.th) + "</div>";
+}
 function trophyArt(t) {
   if (t && (t.id === "hammer-builder" || t.id === "sling-shepherd" || t.id === "staff-shepherd" || t.id === "tunic-rose")) {
     return "<div class='weapon-art'>" + drawnSvg(t.id) + "</div>";
@@ -771,7 +778,7 @@ function weaponCard(slot) {
     var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : (icon("star") + " " + slot.cost));
     var thai = slot.th && slot.th !== slot.name && /[\u0E00-\u0E7F]/.test(slot.th) ? slot.th : "";
     var name = thai ? bi(slot.name, thai) : "<span class='en'>" + escapeText(slot.name) + "</span>";
-    body = art + name + "<div class='en price-line'>" + price + "</div>" + bonusLine(slot.bonus);
+    body = art + name + bibleWeaponLine(slot.id, slot.owned) + "<div class='en price-line'>" + price + "</div>" + bonusLine(slot.bonus);
   }
   return "<button class='trophy weapon-card" + (locked ? " sil" : "") + reveal + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-sil='" + (locked ? "1" : "0") + "' data-open='" + (slot.tierOpen ? "1" : "0") + "'>" + spark + body + "</button>";
 }
@@ -811,6 +818,7 @@ function renderGear() {
       var owned = (S.owned || []).indexOf(t.id) >= 0;
       return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "' data-wt='" + escapeText(t.wt || "") + "'>" +
         trophyArt(t) + bi(t.en, t.th || t.thGloss || "") +
+        bibleWeaponLine(t.id, owned) +
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");
     body = "<div class='grid3 char-grid'>" + gearCards + "</div><div class='char-weapons'>" + E.shopRows(S, D).map(function (row) {
