@@ -59,7 +59,31 @@ var DRAWN = {
   "cape-sky": wrap("<path d='M32 10l18 8-6 36H20L14 18z' fill='#7FB8F5' stroke='" + INK + "' stroke-width='3'/><path d='M18 40h28' stroke='#F4F1EA' stroke-width='3'/>"),
   coin: wrap("<circle cx='32' cy='32' r='18' fill='#FFCC33' stroke='#B7860B' stroke-width='4'/><path d='M32 18l3 8h8l-6 5 2 8-7-5-7 5 2-8-6-5h8z' fill='#FFF8E1' stroke='" + INK + "' stroke-width='1'/>"),
   "sword-iron": wrap("<path d='M30 6h4v32h-4z' fill='#C5CDD4' stroke='" + INK + "' stroke-width='3'/><path d='M22 38h20' stroke='" + INK + "' stroke-width='4'/><rect x='29' y='40' width='6' height='14' fill='#6B4423' stroke='" + INK + "'/>"),
-  "shield-sunrise": wrap("<circle cx='32' cy='32' r='20' fill='#3D7FD9' stroke='" + INK + "' stroke-width='3'/><path d='M32 20l3 8h8l-6 5 2 8-7-4-7 4 2-8-6-5h8z' fill='#FFCC33' stroke='" + INK + "' stroke-width='1'/>")
+  "shield-sunrise": wrap("<circle cx='32' cy='32' r='20' fill='#3D7FD9' stroke='" + INK + "' stroke-width='3'/><path d='M32 20l3 8h8l-6 5 2 8-7-4-7 4 2-8-6-5h8z' fill='#FFCC33' stroke='" + INK + "' stroke-width='1'/>"),
+  "sling-shepherd": wrap(
+    "<path d='M16 16c12 8 8 18 0 24' fill='none' stroke='#6B4423' stroke-width='3' stroke-linecap='round'/>" +
+    "<path d='M48 16c-12 8-8 18 0 24' fill='none' stroke='#6B4423' stroke-width='3' stroke-linecap='round'/>" +
+    "<path d='M18 36c2-6 26-6 28 0 2 14-6 20-14 20S16 50 18 36z' fill='#A56B3C' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M22 40c1 8 18 8 20 0' fill='#6B4423' stroke='none'/>" +
+    "<circle cx='32' cy='43' r='5' fill='#C5CDD4' stroke='" + INK + "' stroke-width='2'/>"
+  ),
+  "staff-shepherd": wrap(
+    "<path d='M42 56V30c0-16-24-18-24-2 0 10 10 12 14 6' fill='none' stroke='#8A5A32' stroke-width='8' stroke-linecap='round'/>" +
+    "<path d='M42 56V30c0-16-24-18-24-2 0 10 10 12 14 6' fill='none' stroke='" + INK + "' stroke-width='3' stroke-linecap='round'/>" +
+    "<path d='M38 34c2 8 2 16 0 22' fill='none' stroke='#5C3A22' stroke-width='3' stroke-linecap='round'/>"
+  ),
+  "tunic-rose": wrap(
+    "<path d='M16 20h32l6 8v24H10V28z' fill='#F4A7B9' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M20 26h24l4 6v16H16V32z' fill='#E07A92' stroke='none'/>" +
+    "<circle cx='32' cy='38' r='5' fill='#FFCC33' stroke='" + INK + "' stroke-width='2'/>" +
+    "<path d='M32 34l1.4 2.6h2.8l-2.2 1.6.8 2.6L32 40l-2.8 1.4.8-2.6-2.2-1.6h2.8z' fill='#C47A1A' stroke='none'/>"
+  ),
+  "hammer-builder": wrap(
+    "<path d='M29 28h6v26h-6z' fill='#6B4423' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M10 12h40v14H10z' fill='#C5CDD4' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M10 16c-6 1-6 7 0 8z' fill='#8A939C' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M16 15h30v3H16z' fill='#F4F7F8' stroke='none'/>"
+  )
 };
 
 export function weaponSvg(note, blade, shade) {

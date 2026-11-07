@@ -1,5 +1,5 @@
 import * as E from "./engine.mjs";
-import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel, zoneEmblem, weaponSvg } from "./art.mjs";
+import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel, zoneEmblem, weaponSvg, drawnSvg } from "./art.mjs";
 
 window.__net = [];
 var nativeFetch = window.fetch ? window.fetch.bind(window) : null;
@@ -729,6 +729,7 @@ function giftGemChip() {
   return "<span class='gift-gems' data-gift-gems='" + n + "'>" + icon("gem") + n + "</span>";
 }
 function weaponArt(slot) {
+  if (slot && slot.id === "hammer-builder") return "<div class='weapon-art'>" + drawnSvg("hammer-builder") + "</div>";
   var notes = { sword1: "wb", sword2: "wb x1.4, long grip", axe1: "wh+wx", mace1: "wh+wm" };
   var blades = ["#B9C0C4", "#4A90D9", "#F2A23A"];
   var shades = ["#8A939C", "#2C5A8A", "#C47A1A"];
@@ -736,8 +737,11 @@ function weaponArt(slot) {
   return "<div class='weapon-art'>" + weaponSvg(notes[slot.wt] || "wb", blades[index], shades[index]) + "</div>";
 }
 function trophyArt(t) {
+  if (t && (t.id === "hammer-builder" || t.id === "sling-shepherd" || t.id === "staff-shepherd" || t.id === "tunic-rose")) {
+    return "<div class='weapon-art'>" + drawnSvg(t.id) + "</div>";
+  }
   var notes = { sword1: "wb", sword2: "wb x1.4, long grip", axe1: "wh+wx", mace1: "wh+wm" };
-  if (t && notes[t.wt]) return weaponArt({ wt: t.wt, tier: t.tier || 1 });
+  if (t && notes[t.wt]) return weaponArt({ wt: t.wt, tier: t.tier || 1, id: t.id });
   return pictureHtml((t && (t.pic || ("svg:" + t.id))) || "", inline);
 }
 function weaponTrack(row) {
