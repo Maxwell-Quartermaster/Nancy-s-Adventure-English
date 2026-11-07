@@ -7,7 +7,8 @@ import {
   buildRun, advanceAfterReveal, finishZoneRun, shouldRest, verseForDate, prepareRestore,
   buyItem, equipItem, playClip, bannerKey, levelForXp, xpToReach, showsEnglishAnswer, missOutcome,
   gearBonuses, awardExtras, noteMiss, shopRows, beginKneel, thaiReviewQueue, endingPairs,
-  buildDuelSchedule, speakEnglish, bonusWordsFor
+  endingDiscrepancy, buildDuelSchedule, speakEnglish, bonusWordsFor, spellStep, countPlates,
+  SETTLED_APPROVALS
 } from "../js/engine.mjs";
 
 const raw = JSON.parse(fs.readFileSync(new URL("../data/cards.json", import.meta.url), "utf8"));
@@ -159,8 +160,8 @@ test("personal openers and real inn cards keep their approved order", function (
   var bh = buildRun(model, freshState(model), "baby-hospital", { newVisit: false, rng: function () { return 0.3; } });
   var bhAsks = bh.steps.filter(function (s) { return s.kind === "ask"; }).map(function (s) { return s.id; });
   assert.equal(bhAsks[0], "bh-30");
-  var first = model.byId[bh.steps[0].id];
-  assert.equal(first.easy, true);
+  assert.equal(bh.steps[0].id, "bh-30");
+  assert.equal(bh.steps.some(function (s) { return model.byId[s.id].easy; }), true);
   assert.equal(showsEnglishAnswer(model.byId["ph-09"], "ask"), false);
 });
 
@@ -301,7 +302,16 @@ test("backup review order and sound duel schedule", function () {
   assert.equal(queue.thDef.indexOf("ph-01") >= 0, true);
   var pairs = model.soundDuel.pairs;
   var endings = endingPairs(pairs);
+  var gap = endingDiscrepancy(pairs);
+  assert.equal(gap.resolved, false);
+  assert.equal(gap.specCount, 6);
+  assert.equal(gap.found.length, 8);
   assert.equal(endings.some(function (p) { return p.a === "light" && p.b === "right"; }), true);
+  assert.equal(spellStep("bed", "", "b").got, "b");
+  assert.equal(spellStep("bed", "be", "d").done, true);
+  assert.equal(spellStep("bed", "", "x").correct, false);
+  assert.equal(countPlates("three").length, 3);
+  assert.equal(countPlates("three").indexOf("three") >= 0, true);
   assert.equal(pairs.filter(function (p) { return p.pics; }).length, 6);
   var plan = buildDuelSchedule(pairs);
   assert.equal(plan.rounds.length, 4);
@@ -324,6 +334,31 @@ test("backup review order and sound duel schedule", function () {
   assert.equal(round2.duplicate, true);
   assert.equal(speakEnglish("bed", null), false);
   assert.equal(speakEnglish("bed", { speak: function () { throw new Error("no voice"); } }), false);
+});
+
+test("opener order and later runs reach starved cards", function () {
+  var fresh = freshState(model);
+  var ms = buildRun(model, fresh, "maxwell-says", { rng: function () { return 0.2; } });
+  assert.deepEqual(ms.steps.slice(0, 3).map(function (s) { return s.id; }), ["ms-28", "ms-29", "ms-30"]);
+  function cover(zone, limit) {
+    var state = freshState(model);
+    var hit = {};
+    var n;
+    for (n = 0; n < limit; n++) {
+      var run = buildRun(model, state, zone, { rng: function () { return 0.25; } });
+      run.steps.forEach(function (step) {
+        hit[step.id] = 1;
+        if (state.seen.indexOf(step.id) < 0) state.seen.push(step.id);
+      });
+    }
+    return hit;
+  }
+  assert.equal(cover("maxwell-says", 6)["ms-31"], 1);
+  assert.equal(cover("baby-hospital", 6)["bh-11"], 1);
+  assert.equal(cover("kitchen", 8)["fd-38"], 1);
+  assert.deepEqual(SETTLED_APPROVALS.needsMaxwell, model.raw.needsMaxwell);
+  assert.equal(SETTLED_APPROVALS.choices, "t1315u all A");
+  assert.equal(SETTLED_APPROVALS.thaiHold, "t1329u waived");
 });
 
 test("level curve matches the spec knots", function () {

@@ -2,6 +2,11 @@
 
 export var SCHEMA = 5020;
 export var PRIORITY_IDS = ["bh-30", "ms-28", "ms-29", "ms-30"];
+export var SETTLED_APPROVALS = {
+  needsMaxwell: ["ms-04", "ms-05", "ms-06", "bh-30", "ms-28", "ms-29", "ms-30"],
+  choices: "t1315u all A",
+  thaiHold: "t1329u waived"
+};
 var DAY_ONE = { "maxwell-says": 1, kitchen: 1 };
 var REGION_GATE = { "sight-words": "r2", numbers: "r3", "baby-hospital": "r4" };
 var TAP_EXCLUDE = {
@@ -593,8 +598,34 @@ export function buildRun(model, state, zoneKey, opts) {
       }
     }
   }
+  var unseenFaith = pool.filter(function (c) { return c.faith && !used[c.id] && seenPos[c.id] == null; });
+  if (unseenFaith.length && faith >= 2) {
+    var swapAt = -1;
+    var fi;
+    for (fi = ordered.length - 1; fi >= 0; fi--) {
+      if (ordered[fi].faith && seenPos[ordered[fi].id] != null && priorityRank(ordered[fi].id) === 100) {
+        swapAt = fi;
+        break;
+      }
+    }
+    if (swapAt >= 0) {
+      var droppedFaith = ordered.splice(swapAt, 1)[0];
+      delete used[droppedFaith.id];
+      faith -= 1;
+      unseenFaith.sort(function (a, b) { return a.order - b.order; });
+      if (take(unseenFaith[0])) ordered.push(unseenFaith[0]);
+    }
+  }
   var pics = ordered.filter(function (c) { return !!c.pic; });
   var nopics = ordered.filter(function (c) { return !c.pic; });
+  nopics.sort(function (a, b) {
+    var aU = seenPos[a.id] == null ? 0 : 1;
+    var bU = seenPos[b.id] == null ? 0 : 1;
+    if (aU !== bU) return aU - bU;
+    var d = priorityRank(a.id) - priorityRank(b.id);
+    if (d) return d;
+    return a.order - b.order;
+  });
   var scenes = [[], [], [], [], []];
   var pi = 0;
   for (var sc = 0; sc < 5; sc++) {
@@ -625,6 +656,21 @@ export function buildRun(model, state, zoneKey, opts) {
   }
   var steps = [];
   var ni = 0;
+  var leadIds = {};
+  nopics.forEach(function (c) {
+    if (steps.length >= 3) return;
+    if (priorityRank(c.id) < 100 && seenPos[c.id] == null) {
+      leadIds[c.id] = 1;
+      steps.push({
+        id: c.id,
+        kind: "ask",
+        scene: null,
+        listen: false,
+        choices: shuffle((c.choices || []).map(function (ch) { return ch.en; }), rng)
+      });
+    }
+  });
+  var restNopics = nopics.filter(function (c) { return !leadIds[c.id]; });
   for (var sc3 = 0; sc3 < 5; sc3++) {
     scenes[sc3].forEach(function (c, idx) {
       var choices = shuffle(c.choices.map(function (ch) { return ch.en; }), rng);
@@ -636,8 +682,8 @@ export function buildRun(model, state, zoneKey, opts) {
         choices: choices
       });
     });
-    if (sc3 < 4 && ni < nopics.length) {
-      var ncard = nopics[ni++];
+    if (sc3 < 4 && ni < restNopics.length) {
+      var ncard = restNopics[ni++];
       steps.push({
         id: ncard.id,
         kind: "ask",
@@ -1067,6 +1113,37 @@ export function sharedEnding(a, b) {
 
 export function endingPairs(pairs) {
   return (pairs || []).filter(function (pair) { return sharedEnding(pair.a, pair.b) >= 3; });
+}
+
+export function endingDiscrepancy(pairs) {
+  var found = endingPairs(pairs).map(function (pair) { return pair.a + "/" + pair.b; });
+  return { specCount: 6, found: found, resolved: found.length === 6 };
+}
+
+export function letterBank(word) {
+  var letters = String(word || "").split("");
+  var extra = ["a", "e", "i", "o", "s", "t", "n", "r"];
+  var i = 0;
+  while (letters.length < 6 && i < extra.length) {
+    if (letters.indexOf(extra[i]) < 0) letters.push(extra[i]);
+    i += 1;
+  }
+  return letters.slice(0, 6);
+}
+
+export function spellStep(word, got, letter) {
+  var have = got || "";
+  var next = String(word || "").charAt(have.length);
+  if (letter !== next) return { got: have, correct: false, done: false, scale: have.length / Math.max(1, String(word || "").length) };
+  var grown = have + letter;
+  return { got: grown, correct: true, done: grown === word, scale: grown.length / Math.max(1, String(word || "").length) };
+}
+
+export function countPlates(answer) {
+  var words = ["two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+  var right = String(answer || "").toLowerCase();
+  var others = words.filter(function (word) { return word !== right; });
+  return [right, others[0], others[1]];
 }
 
 export function buildDuelSchedule(pairs) {

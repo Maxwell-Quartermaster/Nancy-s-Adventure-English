@@ -1,6 +1,14 @@
 import * as E from "./engine.mjs";
 import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel } from "./art.mjs";
 
+window.__net = [];
+var nativeFetch = window.fetch ? window.fetch.bind(window) : null;
+if (nativeFetch) {
+  window.fetch = function (url) {
+    window.__net.push(String(url));
+    return nativeFetch.apply(window, arguments);
+  };
+}
 var D = null;
 var S = null;
 var today = "";
@@ -29,6 +37,27 @@ function reduced() {
 }
 function bi(en, th, cls) {
   return "<span class='en'>" + escapeText(en || "") + "</span><span class='th" + (cls ? " " + cls : "") + "' lang='th'>" + escapeText(th || "") + "</span>";
+}
+function icon(name) {
+  var paths = {
+    leaf: "<path d='M32 8c12 8 16 20 12 32-10 2-20-2-24-12 8-2 14-6 12-20z' fill='#17633A'/><path d='M20 36c8 8 16 10 28 8' fill='none' stroke='#10170F' stroke-width='3'/>",
+    replay: "<path d='M18 32a14 14 0 1 0 4-10' fill='none' stroke='#10170F' stroke-width='3'/><path d='M16 14v10h10' fill='none' stroke='#10170F' stroke-width='3'/>",
+    emblem: "<circle cx='32' cy='32' r='18' fill='#FFCC33' stroke='#10170F' stroke-width='3'/>",
+    heart: "<path d='M32 50l-14-14a10 10 0 0 1 14-14 10 10 0 0 1 14 14z' fill='#FFCC33' stroke='#10170F' stroke-width='3'/>",
+    arrow: "<path d='M8 24h28l-8-8M36 24l-8 8' fill='none' stroke='#B7860B' stroke-width='4'/>",
+    gem: "<path d='M32 8l14 12-14 32L18 20z' fill='#3D7FD9' stroke='#10170F' stroke-width='3'/>",
+    star: "<path d='M32 8l5 14h14l-11 8 4 14-12-8-12 8 4-14-11-8h14z' fill='#FFCC33' stroke='#10170F' stroke-width='2'/>",
+    flame: "<path d='M32 6c8 10 4 16 8 24 6 10-2 24-8 26-10-2-16-12-12-22 4-2 6-8 4-14 4 4 6 6 8-14z' fill='#F08A5A' stroke='#10170F' stroke-width='3'/>",
+    gift: "<rect x='14' y='24' width='36' height='28' fill='#FFCC33' stroke='#10170F' stroke-width='3'/><path d='M32 24v28M14 34h36' stroke='#10170F' stroke-width='3'/>"
+  };
+  return "<svg class='ico' viewBox='0 0 64 64' aria-hidden='true'>" + (paths[name] || paths.emblem) + "</svg>";
+}
+function bonusLine(words) {
+  var map = { Hint: "bonusHint", Hint2: "bonusHint2", Retry: "bonusRetry", Retry2: "bonusRetry2", Star: "bonusStar", Star2: "bonusStar2", Streak: "bonusStreak", Streak2: "bonusStreak2", Slow: "bonusSlow", Respell: "bonusRespell" };
+  return String(words || "").split(/\s+/).filter(Boolean).map(function (word) {
+    var row = map[word] ? ui(map[word]) : { en: "", th: "" };
+    return "<div class='en'>" + escapeText(row.en) + "</div><div class='th' lang='th'>" + escapeText(row.th) + "</div>";
+  }).join("");
 }
 function plate(en, th) {
   return "<span class='plate'>" + bi(en, th) + "</span>";
@@ -63,7 +92,10 @@ function thud() {
     if (!AC) return;
     if (!window.__ac) window.__ac = new AC();
     var ctx = window.__ac;
-    if (ctx.state === "suspended") ctx.resume();
+    if (ctx.state === "suspended") {
+      var resumed = ctx.resume();
+      if (resumed && resumed.catch) resumed.catch(function () {});
+    }
     var o = ctx.createOscillator();
     var g = ctx.createGain();
     var t = ctx.currentTime;
@@ -79,6 +111,10 @@ function thud() {
   } catch (e) { /* missing audio never blocks */ }
 }
 function speak(text, slow) {
+  if (text) {
+    if (!window.__spoken) window.__spoken = [];
+    window.__spoken.push(text);
+  }
   var bonus = D ? E.gearBonuses(S, D) : { slow: false };
   var rate = bonus.slow ? 0.5 : (S && S.settings && S.settings.slowMode ? 0.6 : 0.85);
   if (slow) rate = Math.min(rate, 0.6);
@@ -186,7 +222,41 @@ function bubbleHtml() {
   return "<div class='bubble'><div class='en'>" + escapeText(S.bubble.en || "") + "</div><div class='th' lang='th'>" + escapeText(S.bubble.th || "") + "</div></div>";
 }
 
-function sceneSlots(ids) {
+function propButton(id, surface, left, correct, inner, act) {
+  var cls = "prop on-" + surface;
+    if (S.glowId === id) cls += " glow-gold";
+    if (S.moonChoice === id) cls += " glow-moon";
+    if (S.wiggleId === id) cls += " wiggle";
+  return "<button class='" + cls + "' data-tap data-prop data-surface='" + surface + "' data-act='" + (act || "prop") + "' data-arg='" + escapeText(id) + "' data-correct='" + (correct ? "1" : "0") + "' style='left:" + left + "'>" +
+    inner + "<i class='shadow'></i></button>";
+}
+function sceneSlots(step) {
+  var ids = sceneMates(step);
+  if (step.kind === "letter") {
+    var word = String((D.byId[step.id] || {}).en || "");
+    var gotN = S.run.spell && S.run.spell.id === step.id ? S.run.spell.got.length : 0;
+    var px = Math.max(28, Math.round(28 + 16 * (word ? gotN / word.length : 0)));
+    var card = D.byId[step.id];
+    return "<div class='bench-seat' data-seat='1'><span class='grown' style='width:" + px + "px;height:" + px + "px'>" + pictureHtml(card && card.pic, inline) + "</span></div>";
+  }
+  if (step.kind === "count") {
+    var n = step.countN || 3;
+    var basket = "<svg class='drawn' viewBox='0 0 64 48' aria-hidden='true'><path d='M6 10h52l-8 32H14z' fill='#C46B4A' stroke='#10170F' stroke-width='3'/></svg>";
+    var html = "";
+    var i;
+    for (i = 0; i < n; i++) {
+      var col = i % 5;
+      var row = i < 5 ? "4%" : "18%";
+      html += "<span class='count-item' data-prop data-surface='ground' style='left:" + (8 + col * 18) + "%;bottom:" + row + "'>" + basket + "<i class='shadow'></i></span>";
+    }
+    return html;
+  }
+  if (step.kind === "size") {
+    var big = D.byId["cs-23"];
+    var small = D.byId["cs-24"];
+    return propButton("big", "ground", "42%", false, "<span class='en'>" + escapeText(big ? big.en : "big") + "</span>", "size") +
+      propButton("small", "ground", "68%", false, "<span class='en'>" + escapeText(small ? small.en : "small") + "</span>", "size");
+  }
   var pos = [
     { left: "38%", surface: "ground" },
     { left: "54%", surface: "ground" },
@@ -194,14 +264,10 @@ function sceneSlots(ids) {
     { left: "50%", surface: "bench" },
     { left: "72%", surface: "bench" }
   ];
-  var props = ids.map(function (id, i) {
+  var props = ids.map(function (id, index) {
     var card = D.byId[id];
-    var p = pos[i] || pos[0];
-    var cls = "prop on-" + p.surface;
-    if (S.glowId === id) cls += " glow-gold";
-    if (S.wiggleId === id) cls += " wiggle";
-    return "<button class='" + cls + "' data-tap data-prop data-surface='" + p.surface + "' data-act='prop' data-arg='" + escapeText(id) + "' data-correct='" + (id === (currentStep() && currentStep().id) ? "1" : "0") + "' style='left:" + p.left + "'>" +
-      pictureHtml(card && card.pic, inline) + "<i class='shadow'></i></button>";
+    var p = pos[index] || pos[0];
+    return propButton(id, p.surface, p.left, id === step.id, pictureHtml(card && card.pic, inline), "prop");
   }).join("");
   return "<div class='bench-seat' data-seat='1'></div>" + props;
 }
@@ -242,6 +308,10 @@ function renderPlay() {
     S.run.autoHints[S.run.index] = 1;
     S.bubble = { en: (card.hint && card.hint.letters) || "", th: ui("itStartsWith").th };
   }
+  if (step.listen && S.run.heardIndex !== S.run.index) {
+    S.run.heardIndex = S.run.index;
+    speak(card.en);
+  }
   var prompt = E.promptFor(card, D.ui, step.listen && step.kind === "scene");
   var respellLine = bonuses.respell && card.respell ? "<div class='en' style='color:#8A6200'>" + escapeText(card.respell) + "</div>" : "";
   if (step.kind === "letter") prompt = { en: ui("spellIt").en, th: ui("spellIt").th };
@@ -255,26 +325,25 @@ function renderPlay() {
     "<button class='metal back-slim' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button>" +
     "<div class='stage'><div class='scene-frame' data-tod='" + tod + "'>" + sceneSvg(kind, tod) +
     "<div class='hero-fig'>" + heroSvg() + "<i class='shadow'></i></div>" +
-    sceneSlots(sceneMates(step)) + "</div></div>" +
+    sceneSlots(step) + "</div></div>" +
     "<div class='qcard'><div class='prompt'>" + bi(prompt.en, prompt.th) + respellLine + bubbleHtml() + extra + "</div>" +
-    "<button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>🍃<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button></div></div>";
+    "<button class='hint-btn' data-tap data-act='replay' aria-label='" + escapeText(ui("replay").en) + "'>" + icon("replay") + "</button>" +
+    "<button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>" + icon("leaf") + "<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button></div></div>";
 }
 function letterPads(card) {
   var word = String(card.en || "");
-  var got = (S.run.spell && S.run.spell.id === card.id) ? S.run.spell.got : "";
+  if (!S.run.spell || S.run.spell.id !== card.id) S.run.spell = { id: card.id, got: "", bank: E.letterBank(word) };
+  var got = S.run.spell.got;
   var blanks = word.split("").map(function (ch, i) { return got.charAt(i) || "_"; }).join(" ");
-  var letters = word.split("");
-  "aeiost".split("").forEach(function (ch) { if (letters.length < 6 && letters.indexOf(ch) < 0) letters.push(ch); });
-  letters = E.shuffle(letters, E.mulberry32(word.length + 3)).slice(0, 6);
-  return "<div class='letters'>" + escapeText(blanks) + "</div><div class='choices'>" + letters.map(function (ch) {
-    return "<button class='choice' data-tap data-act='letter' data-arg='" + escapeText(ch) + "'>" + escapeText(ch) + "</button>";
+  var cursor = 0;
+  return "<div class='letters'>" + escapeText(blanks) + "</div><div class='choices'>" + S.run.spell.bank.map(function (ch) {
+    var spent = got.charAt(cursor) === ch;
+    if (spent) cursor += 1;
+    return "<button class='choice" + (spent ? " spent" : "") + "' data-tap data-act='letter' data-arg='" + escapeText(ch) + "'" + (spent ? " disabled" : "") + ">" + escapeText(ch) + "</button>";
   }).join("") + "</div>";
 }
-function countPads(card, step) {
-  var right = card.en;
-  var opts = (step.choices || []).slice(0, 3);
-  if (opts.indexOf(right) < 0) opts[0] = right;
-  while (opts.length < 3) opts.push(["two", "four", "six"][opts.length]);
+function countPads(card) {
+  var opts = E.countPlates(card.en);
   return "<div class='choices'>" + opts.map(function (en) {
     return "<button class='choice" + (S.glowId === en ? " glow-gold" : "") + (S.moonChoice === en ? " glow-moon" : "") + "' data-tap data-act='count' data-arg='" + escapeText(en) + "'>" + escapeText(en) + "</button>";
   }).join("") + "</div>";
@@ -337,7 +406,7 @@ function renderAsk(step, card) {
     if (S.moonChoice === en) cls += " glow-moon";
     return "<button class='" + cls + "' data-tap data-act='choice' data-arg='" + escapeText(en) + "'>" + escapeText(en) + "</button>";
   }).join("");
-  var pic = card.pic ? pictureHtml(card.pic, inline) : "<div class='emoji-pic' style='opacity:.4'>📘</div><div class='th' lang='th'>" + escapeText(stemTh) + "</div>";
+  var pic = card.pic ? pictureHtml(card.pic, inline) : "<div class='emblem'>" + icon("emblem") + "</div><div class='th' lang='th'>" + escapeText(stemTh) + "</div>";
   var serverLine = card.type === "server-talk" ? "<div class='prompt'>" + bi(card.en, card.th) + "</div>" : "";
   return "<div class='screen' data-screen='play'>" + banner(zone.name, zone.nameTh) + hud(false) +
     "<button class='metal back-slim' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button>" +
@@ -345,18 +414,21 @@ function renderAsk(step, card) {
     (stemEn || card.type !== "server-talk" ? "<div class='ask-thai th' lang='th'>" + escapeText(card.type === "server-talk" ? stemTh : stemTh) + "</div>" : "") +
     serverLine +
     "<div class='choices'>" + choices + "</div>" + bubbleHtml() +
-    "<div class='row-actions'><button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>🍃<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button><div></div></div></div></div>";
+    "<div class='row-actions'><button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>" + icon("leaf") + "<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button><div></div></div></div></div>";
 }
 
 function renderReveal() {
-  var step = currentStep();
-  var card = currentCard();
+  var card = S.revealOverride ? D.byId[S.revealOverride] : currentCard();
   if (!card) { S.screen = "map"; return renderMap(); }
+  if (S.spokeReveal !== card.id + ":" + (S.revealOverride || (S.run && S.run.index))) {
+    S.spokeReveal = card.id + ":" + (S.revealOverride || (S.run && S.run.index));
+    speak(card.en);
+  }
   document.body.setAttribute("data-theme", "arena");
   var head = S.run && S.run.wasMiss ? D.wrongText : (D.encouragement[encI % D.encouragement.length] || D.rewardText);
   if (!S.run.wasMiss) encI += 1;
   var trap = S.run && S.run.wasMiss && card.trapNote ? "<div class='th' lang='th'>" + escapeText(card.trapNote) + "</div>" : "";
-  var say = (S.run && S.run.index < 10) ? "<div class='th' lang='th'>" + escapeText(ui("sayItOutLoud").th) + "</div><div class='en'>" + escapeText(ui("sayItOutLoud").en) + "</div>" : "";
+  var say = (S.run && !S.revealOverride && S.run.index < 10) ? "<div class='en'>" + escapeText(ui("sayItOutLoud").en) + "</div><div class='th' lang='th'>" + escapeText(ui("sayItOutLoud").th) + "</div>" : "";
   return "<div class='screen' data-screen='reveal'>" + banner(head.en, head.th) + hud(false) +
     "<button class='metal back-slim' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button>" +
     "<div class='ask'><div class='pic-frame'>" + pictureHtml(card.pic, inline) + "</div>" +
@@ -396,6 +468,16 @@ function renderBoss() {
     "<button class='metal' data-tap data-act='tomap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button></div></div></div>";
 }
 
+function verseBits(verse) {
+  var gloss = "";
+  if (verse.enGloss) gloss += "<div class='tag'>" + escapeText(verse.enGloss) + "</div>";
+  if (verse.thGloss) gloss += "<div class='tag th' lang='th'>" + escapeText(verse.thGloss) + "</div>";
+  return "<div class='en'>" + escapeText(verse.ref || "") + "</div>" +
+    "<div class='verse-en en'>" + escapeText(verse.en || "").split("\n").join("<br>") + "</div><div class='tag'>(ESV)</div>" +
+    "<div class='th' lang='th'>" + escapeText(verse.th || "").split("\n").join("<br>") + "</div><div class='tag'>(THSV11)</div>" +
+    gloss +
+    "<div class='en'>" + escapeText(ui("askMax").en) + "</div><div class='th' lang='th'>" + escapeText(ui("askMax").th) + "</div>";
+}
 function renderTitle() {
   document.body.setAttribute("data-theme", "menu");
   var g = ui(greetKey());
@@ -408,9 +490,7 @@ function renderTitle() {
     overlay = "<div class='scrim verse-pop'><div class='verse-card'>" +
       banner(ui("verseOfDay").en, ui("verseOfDay").th) +
       "<div class='en'>" + escapeText(ui("verseGift").en) + "</div><div class='th' lang='th'>" + escapeText(ui("verseGift").th) + "</div>" +
-      "<div class='verse-body' data-scroll-ok><div class='en'>" + escapeText(verse.ref) + "</div>" +
-      "<div class='verse-en en'>" + escapeText(verse.en).split("\n").join("<br>") + "</div><div class='tag'>(ESV)</div>" +
-      "<div class='th' lang='th'>" + escapeText(verse.th).split("\n").join("<br>") + "</div><div class='tag'>(THSV11)</div></div>" +
+      "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
       "<div class='row-actions'><button class='hint-btn' data-tap data-act='replayverse'>🔊</button>" +
       "<button class='title-go' data-tap data-act='versegot' style='position:static'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
   }
@@ -454,14 +534,14 @@ function renderMenu() {
   var home = window.matchMedia && window.matchMedia("(display-mode: standalone)").matches ? "" :
     "<div class='th' lang='th' style='text-align:center'>" + escapeText(ui("openFromHome").th) + "</div>";
   return "<div class='screen' data-screen='menu'><div class='menu'>" +
-    "<div class='top-tools'><button class='hearth' data-tap data-act='hearth' aria-label='" + escapeText(ui("verseGift").en) + "'>♥</button></div>" +
+    "<div class='top-tools'><button class='hearth' data-tap data-act='hearth' aria-label='" + escapeText(ui("verseGift").en) + "'>" + icon("heart") + "</button></div>" +
     "<div class='logs'></div>" + gift +
     "<div class='hero-band' aria-label='" + escapeText(ui("chooseHero").en) + "'>" +
     heroButton("sam", pack.sam, ui("heroName")) + heroButton("nancy", pack.nancy, ui("heroNancy")) + "</div>" +
     "<div class='stack'>" +
     "<button class='metal' data-tap data-act='gear'>" + plate(ui("gear").en, ui("gear").th) + "</button>" +
     "<button class='metal' data-tap data-act='shop'>" + plate(ui("pantry").en, ui("pantry").th) + "</button>" +
-    "<button class='metal' data-tap data-act='map'>" + plate(ui("titleMap").en, ui("titleMap").th) + "<span class='arrow-cue'>➤</span></button>" +
+    "<button class='metal' data-tap data-act='map'>" + plate(ui("titleMap").en, ui("titleMap").th) + "<span class='arrow-cue'>" + icon("arrow") + "</span></button>" +
     "</div>" + home + bubbleHtml() + "</div></div>";
 }
 function heroButton(id, svg, name) {
@@ -493,8 +573,9 @@ function renderMap() {
     banner(ui("titleMap").en, ui("titleMap").th) +
     "<div class='logs'></div>" +
     "<div class='hud' data-xp='" + S.xp + "' data-stars='" + S.goldStars + "'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button>" +
-    "<div class='count'>◆ " + E.gemCount(S, D) + " ★ " + S.goldStars + " Level " + S.level + "</div>" +
-    "<button class='hearth' data-tap data-act='hearth' aria-label='" + escapeText(ui("verseGift").en) + "'>♥</button></div>" +
+    "<div class='count'>" + icon("gem") + E.gemCount(S, D) + " " + icon("star") + S.goldStars + " " + icon("flame") + (S.streak && S.streak.n || 0) + " Level " + S.level + "</div>" +
+    "<button class='hearth' data-tap data-act='hearth' aria-label='" + escapeText(ui("verseGift").en) + "'>" + icon("heart") + "</button></div>" +
+    (S.updateReady ? "<button class='metal' data-tap data-act='update'>" + plate(ui("updateReady").en, ui("updateReady").th) + "</button>" : "") +
     "<div class='rows'>" + rows + "</div>" + bubbleHtml() + "</div></div>";
 }
 
@@ -508,9 +589,7 @@ function renderReward() {
   if (item.kind === "verse") {
     var scroll = (S.scrolls || []).filter(function (s) { return s.id === item.scrollId; })[0];
     if (scroll) {
-      body = "<div class='en'>" + escapeText(scroll.ref) + "</div><div class='verse-en en'>" + escapeText(scroll.en).split("\n").join("<br>") + "</div><div class='tag'>(ESV)</div>" +
-        "<div class='th' lang='th'>" + escapeText(scroll.th).split("\n").join("<br>") + "</div><div class='tag'>(THSV11)</div>" +
-        "<div class='th' lang='th'>" + escapeText(ui("askMax").th) + "</div>";
+      body = verseBits(scroll);
     }
   } else if (item.kind === "region") {
     var region = D.regions.filter(function (r) { return r.id === item.regionId; })[0];
@@ -541,21 +620,26 @@ function renderRest() {
   }
   return "<div class='screen' data-screen='rest'>" + banner(ui("verseGift").en, ui("verseGift").th) +
     "<div class='ask'><div class='panel'>" + bi(D.restScreen.en, D.restScreen.th) +
-    "<div class='verse-body' data-scroll-ok><div class='en'>" + escapeText(verse.ref) + "</div>" +
-    "<div class='verse-en en'>" + escapeText(verse.en).split("\n").join("<br>") + "</div><div class='tag'>(ESV)</div>" +
-    "<div class='th' lang='th'>" + escapeText(verse.th).split("\n").join("<br>") + "</div><div class='tag'>(THSV11)</div>" +
-    "<div class='th' lang='th'>" + escapeText(ui("askMax").th) + "</div></div>" +
+    "<div class='verse-body' data-scroll-ok>" + verseBits(verse) + "</div>" +
     "<button class='gold-btn' data-tap data-act='keep'>" + plate(ui("keepGoing").en, ui("keepGoing").th) + "</button>" +
     "<button class='metal' data-tap data-act='restnow'>" + plate(ui("restNow").en, ui("restNow").th) + "</button></div></div></div>";
 }
 
+function renderScroll() {
+  var scroll = S.openScroll;
+  if (!scroll) { S.screen = "character"; return renderGear(); }
+  document.body.setAttribute("data-theme", "menu");
+  return "<div class='screen' data-screen='scroll'>" + banner(ui("scrolls").en, ui("scrolls").th) +
+    "<div class='ask'><div class='panel' data-scroll-ok>" + verseBits(scroll) +
+    "<button class='gold-btn' data-tap data-act='scrollback'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div></div>";
+}
 function renderKneel() {
   var zone = D.zoneByKey[S.kneelZone] || {};
   var name = zone.boss && zone.boss.name ? zone.boss.name : { en: "", th: "" };
   var tint = { phonics: "#7FD38B", "colors-shapes": "#F5A3C7", numbers: "#7FB8F5", "sight-words": "#F5D06B", "baby-hospital": "#F2B8A0" }[S.kneelZone] || "#7FD38B";
   document.body.setAttribute("data-theme", "arena");
   return "<div class='screen' data-screen='kneel'>" + banner(name.en, name.th) +
-    "<div class='stage'><div class='scene-frame'>" + sceneSvg("park", "a") +
+    "<div class='stage'><div class='scene-frame'>" + sceneSvg(E.sceneKind(S.kneelZone, 0), "a") +
     "<div class='hero-fig' style='left:8%'>" + heroSvg() + "</div>" +
     "<div style='position:absolute;left:46%;bottom:8%'>" + guardianKneel(tint) + "</div></div></div>" +
     "<div class='qcard'><div class='prompt'>" + bi(name.en, name.th) + "</div>" +
@@ -567,47 +651,98 @@ function renderShop() {
   var items = (D.pantry.items || []).map(function (item) {
     var owned = (S.pantryOwned || []).indexOf(item.id) >= 0;
     var label = owned ? ui("wearIt") : ui("getFor");
-    return "<button class='trophy' data-tap data-act='buy' data-arg='" + item.id + "'>" +
-      "<div>" + (String(item.pic || "").indexOf("svg:") === 0 ? pictureHtml(item.pic, inline) : escapeText(item.pic || "")) + "</div>" +
-      bi(item.en, item.th) + "<div class='en'>" + (owned ? "✓" : ("★ " + item.stars)) + "</div><div class='th' lang='th'>" + escapeText(label.th) + "</div></button>";
+    function fill(s) { return String(s || "").split("{n}").join(String(item.stars)); }
+    var art = String(item.pic || "").indexOf("svg:") === 0 ? pictureHtml(item.pic, inline) : "<div class='emoji-pic'>" + escapeText(item.pic || "") + "</div>";
+    return "<button class='trophy' data-tap data-act='buy' data-arg='" + item.id + "'>" + art +
+      bi(item.en, item.th) + "<div class='en'>" + escapeText(owned ? label.en : fill(label.en)) + "</div><div class='th' lang='th'>" + escapeText(owned ? label.th : fill(label.th)) + "</div></button>";
   }).join("");
   var gear = E.shopRows(S, D).map(function (row) {
     var slots = row.slots.map(function (slot) {
       var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : ("★ " + slot.cost));
       var cls = "trophy" + (slot.silhouette ? " sil" : "");
-      var label = slot.silhouette ? ui("getFor").en : slot.name;
+      var ask = ui("getFor");
+      var label = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
+      var labelTh = slot.silhouette ? String(ask.th || "").split("{n}").join(String(slot.cost)) : (slot.th || "");
       return "<button class='" + cls + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-open='" + (slot.tierOpen && row.open ? "1" : "0") + "'>" +
-        "<div class='en'>" + escapeText(label) + "</div><div class='th' lang='th'>" + escapeText(slot.th || "") + "</div>" +
-        "<div class='en'>" + price + "</div><div class='th' lang='th'>" + escapeText(slot.bonus || "") + "</div></button>";
+        "<div class='en'>" + escapeText(label) + "</div><div class='th' lang='th'>" + escapeText(labelTh) + "</div>" +
+        "<div class='en'>" + price + "</div>" + bonusLine(slot.bonus) + "</button>";
     }).join("");
     return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row' data-scroll-ok>" + slots + "</div>";
   }).join("");
   return "<div class='screen' data-screen='shop'>" + banner(ui("pantry").en, ui("pantry").th) +
-    "<div class='sheet'><div class='count'>★ " + S.goldStars + "</div><div class='pane' data-scroll-ok><div class='grid3'>" + items + gear + "</div></div>" +
-    "<button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
+    "<div class='sheet'><div class='count'>★ " + icon("star") + " " + S.goldStars + "</div><div class='pane' data-scroll-ok><div class='grid3'>" + items + "</div>" + gear + "</div></div>" +
+    "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
+function goalLine(t) {
+  var u = t.unlock || {};
+  var pack = null;
+  if (u.type === "level") pack = ui("unlocksAtLevel");
+  else if (u.type === "pipFills") pack = ui("unlocksPips");
+  else if (u.type === "bossesWon") pack = ui("unlocksBosses");
+  else if (u.type === "zoneRight") pack = ui("unlocksZoneRight");
+  if (!pack) return "";
+  function fill(s) { return String(s || "").split("{n}").join(String(u.n || "")).split("{zone}").join(String(u.zone || "")); }
+  return "<div class='en'>" + escapeText(fill(pack.en)) + "</div><div class='th' lang='th'>" + escapeText(fill(pack.th)) + "</div>";
+}
 function renderGear() {
   document.body.setAttribute("data-theme", "menu");
-  var list = (D.trophies || []).slice(0, 18).map(function (t) {
-    var owned = (S.owned || []).indexOf(t.id) >= 0;
-    return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "'>" +
-      bi(t.en, t.th || t.thGloss || "") + "<div class='en'>" + (owned ? "✓" : "✦") + "</div></button>";
+  var tab = S.charTab || "gems";
+  var tabs = ["gems", "gear", "themes", "titles", "scrolls", "pantry"];
+  var tabButtons = tabs.map(function (name) {
+    var label = ui(name === "pantry" ? "pantry" : name);
+    return "<button class='metal" + (tab === name ? " on" : "") + "' data-tap data-act='tab' data-arg='" + name + "'>" + plate(label.en, label.th) + "</button>";
   }).join("");
-  return "<div class='screen' data-screen='gear'>" + banner(ui("character").en, ui("character").th) +
+  var shelf = (S.owned || []).slice(-4).map(function (id) {
+    var t = null;
+    (D.trophies || []).some(function (item) { if (item.id === id) { t = item; return true; } return false; });
+    if (!t) return "";
+    return "<span class='trophy' data-prop='shelf'>" + pictureHtml(t.pic || ("svg:" + t.id), inline) + "</span>";
+  }).join("");
+  var body = "";
+  if (tab === "gear") {
+    body = E.shopRows(S, D).map(function (row) {
+      return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row'>" + row.slots.map(function (slot) {
+        var ask = ui("getFor");
+        var gname = slot.silhouette ? String(ask.en || "").split("{n}").join(String(slot.cost)) : slot.name;
+        var gth = slot.silhouette ? String(ask.th || "").split("{n}").join(String(slot.cost)) : slot.th;
+        return "<button class='trophy" + (slot.silhouette ? " sil" : "") + "' data-tap data-act='buy' data-arg='" + slot.id + "'>" +
+          pictureHtml("svg:" + slot.id, inline) + bi(gname, gth) +
+          "<div class='en'>" + (slot.owned ? "✓" : (slot.tier === 1 ? "" : "★ " + slot.cost)) + "</div></button>";
+      }).join("") + "</div>";
+    }).join("");
+  } else if (tab === "scrolls") {
+    body = (S.scrolls || []).length ? (S.scrolls || []).map(function (scroll) {
+      return "<button class='trophy' data-tap data-act='readscroll' data-arg='" + escapeText(scroll.id) + "'>" + bi(scroll.ref, "") + "</button>";
+    }).join("") : "<div class='th' lang='th'>" + escapeText(ui("scrollsEmpty").th) + "</div>";
+  } else if (tab === "pantry") {
+    body = "<button class='metal' data-tap data-act='shop'>" + plate(ui("pantry").en, ui("pantry").th) + "</button>";
+  } else {
+    var cat = tab === "titles" ? "titles" : tab === "themes" ? "themes" : "gems";
+    body = "<div class='grid3'>" + (D.trophies || []).filter(function (t) { return t.cat === cat; }).map(function (t) {
+      var owned = (S.owned || []).indexOf(t.id) >= 0;
+      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "'>" + pictureHtml(t.pic, inline) +
+        bi(t.en, t.th || t.thGloss || "") + (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
+    }).join("") + "</div>";
+  }
+  return "<div class='screen' data-screen='character'>" + banner(ui("character").en, ui("character").th) +
     "<div class='sheet'><div class='portrait' style='margin:0 auto'>" + heroSvg() + "</div>" +
-    "<div class='pane' data-scroll-ok><div class='grid3'>" + list + "</div>" +
-    "<button class='metal' data-tap data-act='shop'>" + plate(ui("pantry").en, ui("pantry").th) + "</button>" +
+    "<div class='en'>" + escapeText(ui("earnedShelf").en) + "</div><div class='shop-row'>" + shelf + "</div>" +
+    "<div class='grid3'>" + tabButtons + "</div>" +
+    "<div class='pane' data-scroll-ok>" + body +
     "<button class='metal' data-tap data-act='backup'>" + plate(ui("backup").en, ui("backup").th) + "</button>" +
-    "<button class='metal' data-tap data-act='toggle' data-arg='slowMode'>" + plate(ui("slowMode").en, (S.settings.slowMode ? "on" : "off")) + "</button>" +
-    "<button class='metal' data-tap data-act='toggle' data-arg='restWeeks'>" + plate(ui("restWeeks").en, (S.settings.restWeeks ? "on" : "off")) + "</button></div>" +
-    "<button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
+    "<button class='metal' data-tap data-act='toggle' data-arg='slowMode' aria-pressed='" + (S.settings.slowMode ? "true" : "false") + "'>" + plate(ui("slowMode").en, ui("slowMode").th) + "</button>" +
+    "<button class='metal' data-tap data-act='toggle' data-arg='restWeeks' aria-pressed='" + (S.settings.restWeeks ? "true" : "false") + "'>" + plate(ui("restWeeks").en, ui("restWeeks").th) + "</button></div></div>" +
+    "<div class='footer'><button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
 function renderBackup() {
   document.body.setAttribute("data-theme", "menu");
   var review = E.thaiReviewQueue(D);
-  var ids = review.needsMaxwell.map(function (id) { return "<li class='th' lang='th'>" + escapeText(id) + "</li>"; }).join("");
+  var ids = review.needsMaxwell.map(function (id) {
+    var settled = E.SETTLED_APPROVALS.needsMaxwell.indexOf(id) >= 0;
+    return "<li class='th' data-settled='" + (settled ? "1" : "0") + "' lang='th'>" + escapeText(id) + "</li>";
+  }).join("");
   var queue = review.nurse.concat(review.thDef).map(function (id) {
     var mark = S.thaiMarks && S.thaiMarks[id] ? "✓" : "·";
     return "<button class='trophy' data-tap data-act='thaiok' data-arg='" + escapeText(id) + "'><span class='en'>" + mark + " " + escapeText(id) + "</span></button>";
@@ -638,7 +773,7 @@ function renderDuel() {
     return "<div class='screen' data-screen='duel'>" + banner(ui("roundDone").en, ui("roundDone").th) +
       "<div class='ask'><div class='en'>+30</div>" +
       "<button class='gold-btn' data-tap data-act='duelnext'>" + plate(D.gotItText.en, D.gotItText.th) + "</button>" +
-      "<button class='metal' data-tap data-act='map'>" + plate(ui("toMap").en, ui("toMap").th) + "</button></div></div>";
+      "<button class='metal' data-tap data-act='duelmap'>" + plate(ui("toMap").en, ui("toMap").th) + "</button></div></div>";
   }
   if (!S.duel.heard) {
     S.duel.heard = Math.random() < 0.5 ? pair.a : pair.b;
@@ -646,7 +781,7 @@ function renderDuel() {
   }
   var pics = pair.pics || [];
   return "<div class='screen' data-screen='duel'>" + banner(ui("soundDuel").en, ui("soundDuel").th) + hud(false) +
-    "<div class='ask'><div class='th' lang='th'>" + escapeText(S.duel.echo ? ui("echoKnight").en : ui("echoKnight").th) + "</div>" +
+    "<div class='ask'><div class='prompt'>" + bi(ui("echoKnight").en, ui("echoKnight").th) + "</div>" +
     "<div class='choices'>" +
     "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.a) + "'>" + (pics[0] ? "<span class='emoji-pic'>" + escapeText(pics[0]) + "</span>" : "") + escapeText(pair.a) + "</button>" +
     "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.b) + "'>" + (pics[1] ? "<span class='emoji-pic'>" + escapeText(pics[1]) + "</span>" : "") + escapeText(pair.b) + "</button></div>" +
@@ -671,12 +806,59 @@ function render() {
   else if (S.screen === "shop") html = renderShop();
   else if (S.screen === "gear") html = renderGear();
   else if (S.screen === "backup") html = renderBackup();
+  else if (S.screen === "scroll") html = renderScroll();
   else if (S.screen === "kneel") html = renderKneel();
   else if (S.screen === "duel") html = renderDuel();
   else html = renderMenu();
   document.getElementById("app").innerHTML = html;
   if (S.screen === "title") paintTitle();
+  seatInk();
   document.body.classList.toggle("short", window.innerHeight <= 600);
+}
+function seatInk() {
+  var nodes = document.querySelectorAll("[data-prop] .emoji-pic, .prop .emoji-pic");
+  var i;
+  for (i = 0; i < nodes.length; i++) trimEmoji(nodes[i]);
+}
+function trimEmoji(node) {
+  try {
+    var text = node.textContent || "";
+    if (!text || !document.createElement("canvas").getContext) return;
+    var size = 96;
+    var canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    var ctx = canvas.getContext("2d");
+    ctx.font = "72px sans-serif";
+    ctx.textBaseline = "top";
+    ctx.fillText(text, 0, 8);
+    var data = ctx.getImageData(0, 0, size, size).data;
+    var minY = size;
+    var maxY = 0;
+    var minX = size;
+    var maxX = 0;
+    var found = false;
+    var y;
+    var x;
+    for (y = 0; y < size; y++) {
+      for (x = 0; x < size; x++) {
+        if (data[(y * size + x) * 4 + 3] > 16) {
+          found = true;
+          if (y < minY) minY = y;
+          if (y > maxY) maxY = y;
+          if (x < minX) minX = x;
+          if (x > maxX) maxX = x;
+        }
+      }
+    }
+    if (!found) return;
+    var cut = document.createElement("canvas");
+    cut.width = Math.max(1, maxX - minX + 1);
+    cut.height = Math.max(1, maxY - minY + 1);
+    cut.className = "ink";
+    cut.getContext("2d").drawImage(canvas, minX, minY, cut.width, cut.height, 0, 0, cut.width, cut.height);
+    node.parentNode.replaceChild(cut, node);
+  } catch (e) { /* keep the glyph if the canvas cannot read it */ }
 }
 
 function enterMenu() {
@@ -779,6 +961,7 @@ function onCorrect(card, ledgerId, spoken) {
 
 function handle(act, arg) {
   if (!S || S.lock) return;
+  if (paused && act !== "resume") return;
   if (act === "letsgo" || act === "resume" || act === "got" || act === "sayit" || act === "choice" || act === "prop" || act === "boss" || act === "region" || act === "map" || act === "gear" || act === "shop" || act === "back") thud();
   if (act === "letsgo") {
     wake();
@@ -839,10 +1022,45 @@ function handle(act, arg) {
     return;
   }
   if (act === "hearth") {
-    var line = D.encouragement[encI % D.encouragement.length];
-    encI += 1;
-    S.bubble = { en: line.en, th: line.th };
+    S.hearthFlip = !S.hearthFlip;
+    if (S.hearthFlip && S.scrolls && S.scrolls.length) {
+      var verse = S.scrolls[0];
+      S.bubble = { en: verse.en, th: verse.th };
+    } else {
+      var line = D.encouragement[encI % D.encouragement.length];
+      encI += 1;
+      S.bubble = { en: line.en, th: line.th };
+    }
     render();
+    return;
+  }
+  if (act === "scrollback") {
+    var same = (S.xp + ":" + S.goldStars + ":" + S.giftGems) === S._counters;
+    S.openScroll = null;
+    S.screen = "character";
+    S.charTab = "scrolls";
+    if (!same) S.xp = S.xp;
+    render();
+    return;
+  }
+  if (act === "readscroll") {
+    var scroll = (S.scrolls || []).filter(function (item) { return item.id === arg; })[0];
+    if (!scroll) return;
+    var before = S.xp + ":" + S.goldStars + ":" + S.giftGems;
+    S.openScroll = scroll;
+    S.screen = "scroll";
+    S._counters = before;
+    render();
+    return;
+  }
+  if (act === "update") {
+    save();
+    if (navigator.serviceWorker && navigator.serviceWorker.getRegistration) {
+      navigator.serviceWorker.getRegistration().then(function (reg) {
+        if (reg && reg.waiting) reg.waiting.postMessage({ type: "skip" });
+        window.location.reload();
+      }).catch(function () { window.location.reload(); });
+    }
     return;
   }
   if (act === "region") {
@@ -892,11 +1110,14 @@ function handle(act, arg) {
     if (!step || !card) return;
     if (arg !== step.id) {
       E.applyMiss(S);
+      var grace = D.encouragement[encI % D.encouragement.length];
+      encI += 1;
       S.wiggleId = arg;
+      S.moonChoice = arg;
       S.glowId = step.id;
       S.nodUntil = Date.now() + 600;
       S.run.rightRow = 0;
-      S.bubble = { en: D.wrongText.en, th: D.wrongText.th };
+      S.bubble = { en: D.wrongText.en + " " + grace.en, th: D.wrongText.th + " " + grace.th };
       render();
       return;
     }
@@ -914,16 +1135,16 @@ function handle(act, arg) {
   if (act === "letter") {
     var lcard = currentCard();
     var word = String(lcard.en || "");
-    if (!S.run.spell || S.run.spell.id !== lcard.id) S.run.spell = { id: lcard.id, got: "" };
-    var nextCh = word.charAt(S.run.spell.got.length);
-    if (arg !== nextCh) {
+    if (!S.run.spell || S.run.spell.id !== lcard.id) S.run.spell = { id: lcard.id, got: "", bank: E.letterBank(word) };
+    var stepped = E.spellStep(word, S.run.spell.got, arg);
+    if (!stepped.correct) {
       S.wiggleId = lcard.id;
       S.bubble = { en: D.wrongText.en, th: D.wrongText.th };
       render();
       return;
     }
-    S.run.spell.got += arg;
-    if (S.run.spell.got === word) {
+    S.run.spell.got = stepped.got;
+    if (stepped.done) {
       onCorrect(lcard, "card:" + S.run.id + ":" + S.run.index, false);
       S.run.phase = "reveal";
       S.screen = "reveal";
@@ -1055,25 +1276,8 @@ function handle(act, arg) {
     S.moonChoice = "";
     S.glowId = "";
     S.bubble = null;
-    var all = S.run.bossIds.every(function (cid) { return S.run.bossCleared[cid]; });
-    if (!all) {
-      S.run.bossIndex += 1;
-      save();
-      render();
-      return;
-    }
-    var zoneKey = S.run.zone;
-    var snap = S.run;
-    var committed = E.beginKneel(S, D, zoneKey);
-    S = committed.state;
-    S.run = snap;
-    var fin = E.finishZoneRun(S, D, snap, today);
-    S = fin.state;
-    sessionRuns += 1;
-    S._rest = E.shouldRest(sessionRuns);
-    S.screen = "kneel";
-    S.kneelZone = zoneKey;
-    playFile("audio/maxwell-boss-" + zoneKey + ".m4a");
+    S.revealOverride = bid;
+    S.screen = "reveal";
     save();
     render();
     return;
@@ -1087,6 +1291,33 @@ function handle(act, arg) {
   }
   if (act === "got") {
     if (!advanceGate()) return;
+    if (S.revealOverride && S.run && S.run.bossIds) {
+      var finishedId = S.revealOverride;
+      S.revealOverride = "";
+      var allBoss = S.run.bossIds.every(function (cid) { return S.run.bossCleared[cid]; });
+      if (!allBoss) {
+        S.run.bossIndex += 1;
+        S.screen = "boss";
+        save();
+        render();
+        return;
+      }
+      var zoneKey = S.run.zone;
+      var snap = S.run;
+      var committed = E.beginKneel(S, D, zoneKey);
+      S = committed.state;
+      S.run = snap;
+      var finBoss = E.finishZoneRun(S, D, snap, today);
+      S = finBoss.state;
+      sessionRuns += 1;
+      S._rest = E.shouldRest(sessionRuns);
+      S.screen = "kneel";
+      S.kneelZone = zoneKey;
+      playFile("audio/maxwell-boss-" + zoneKey + ".m4a");
+      save();
+      render();
+      return;
+    }
     if (S.screen === "reveal" && S.run) {
       S.moonChoice = "";
       S.glowId = "";
@@ -1133,6 +1364,7 @@ function handle(act, arg) {
     return;
   }
   if (act === "restnow") { S.screen = "map"; render(); return; }
+  if (act === "tab") { S.charTab = arg; render(); return; }
   if (act === "thaiok") {
     if (!S.thaiMarks) S.thaiMarks = {};
     S.thaiMarks[arg] = 1;
@@ -1179,7 +1411,15 @@ function handle(act, arg) {
       S.backupText = String(reader.result || "");
       var check = E.validateBackup(S.backupText, S);
       S.backupOk = check.ok;
-      S.backupReason = check.ok ? ui("backupCompare").en : check.reason;
+      var cmp = ui("backupCompare");
+      var nowLevel = S.level;
+      var nowDays = S.streak && S.streak.n || 0;
+      var bakLevel = check.ok ? check.state.level : "";
+      var bakDays = check.ok && check.state.streak ? check.state.streak.n : "";
+      function fillCmp(s) {
+        return String(s || "").split("{a}").join(String(bakLevel)).split("{b}").join(String(bakDays)).split("{c}").join(String(nowLevel)).split("{d}").join(String(nowDays));
+      }
+      S.backupReason = check.ok ? fillCmp(cmp.en) + " / " + fillCmp(cmp.th) : check.reason;
       render();
     };
     reader.readAsText(input.files[0]);
@@ -1224,7 +1464,7 @@ function handle(act, arg) {
     if (S.duel && S.duel.heard) speak(S.duel.heard, true);
     return;
   }
-  if (act === "duelnext") {
+  if (act === "duelnext" || act === "duelmap") {
     if (!advanceGate()) return;
     var roundId = "round:" + today + ":" + (S.duelRounds || 0);
     if (!S.ledger[roundId]) {
@@ -1233,6 +1473,7 @@ function handle(act, arg) {
     }
     S.duelRounds = (S.duelRounds || 0) + 1;
     S.duel = null;
+    S.screen = act === "duelmap" ? "map" : "duel";
     save();
     render();
   }
@@ -1249,24 +1490,52 @@ document.getElementById("app").addEventListener("click", function (event) {
   }
 });
 
+function pauseRun() {
+  paused = true;
+  try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) { /* ignore */ }
+  try {
+    if (window.__ac && window.__ac.suspend) {
+      var pending = window.__ac.suspend();
+      if (pending && pending.catch) pending.catch(function () {});
+    }
+  } catch (e2) { /* ignore */ }
+  render();
+}
 document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "hidden") {
-    paused = true;
-    try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) { /* ignore */ }
-  }
+  if (document.visibilityState === "hidden") pauseRun();
 });
+window.addEventListener("pagehide", pauseRun);
 
 window.__layoutAudit = function () {
   var out = { overlaps: [], small: [], thai: [], floating: [], scroll: [], screen: "" };
   var screen = document.querySelector(".screen");
   out.screen = screen ? screen.getAttribute("data-screen") : "";
+  function clipToScroll(el, r) {
+    var box = { left: Math.max(0, r.left), top: Math.max(0, r.top), right: Math.min(window.innerWidth, r.right), bottom: Math.min(window.innerHeight, r.bottom) };
+    var parent = el.parentNode;
+    while (parent && parent !== document.body) {
+      var style = window.getComputedStyle(parent);
+      if (style.overflowY === "auto" || style.overflowY === "scroll" || style.overflowX === "auto" || style.overflow === "hidden") {
+        var p = parent.getBoundingClientRect();
+        box.left = Math.max(box.left, p.left);
+        box.top = Math.max(box.top, p.top);
+        box.right = Math.min(box.right, p.right);
+        box.bottom = Math.min(box.bottom, p.bottom);
+      }
+      parent = parent.parentNode;
+    }
+    box.width = Math.max(0, box.right - box.left);
+    box.height = Math.max(0, box.bottom - box.top);
+    return box;
+  }
   var taps = Array.prototype.slice.call(document.querySelectorAll("[data-tap]"));
   var rects = taps.map(function (el) {
-    var r = el.getBoundingClientRect();
-    return { r: r, act: el.getAttribute("data-act") || "" };
-  }).filter(function (x) { return x.r.width > 0 && x.r.height > 0; });
+    var raw = el.getBoundingClientRect();
+    var visible = clipToScroll(el, raw);
+    return { r: visible, raw: raw, act: el.getAttribute("data-act") || "" };
+  }).filter(function (x) { return x.r.width >= 8 && x.r.height >= 8 && x.r.height > x.raw.height * 0.7; });
   for (var i = 0; i < rects.length; i++) {
-    if (rects[i].r.width < 43.5 || rects[i].r.height < 43.5) out.small.push(rects[i].act);
+    if (rects[i].raw.width < 43.5 || rects[i].raw.height < 43.5) out.small.push(rects[i].act);
     for (var j = i + 1; j < rects.length; j++) {
       var a = rects[i].r;
       var b = rects[j].r;
@@ -1300,6 +1569,45 @@ window.__layoutAudit = function () {
   return out;
 };
 
+window.__homeLake = function () {
+  var run = E.buildRun(D, E.freshState(D), "maxwell-says", { rng: function () { return 0.2; } });
+  return run.steps.slice(0, 3).map(function (step) { return step.id; });
+};
+window.__listenProbe = function () {
+  var run = E.buildRun(D, E.freshState(D), "phonics", { rng: E.mulberry32(4) });
+  var i;
+  for (i = 0; i < run.steps.length; i++) if (run.steps[i].listen) { run.index = i; break; }
+  window.__spoken = [];
+  S.run = run;
+  S.screen = "play";
+  render();
+  var word = D.byId[run.steps[run.index].id].en;
+  return {
+    replay: !!document.querySelector("[data-act=replay]"),
+    spoken: (window.__spoken || []).indexOf(word) >= 0,
+    hidden: document.body.innerText.indexOf(word) < 0
+  };
+};
+window.__pauseProbe = function () {
+  var xp = document.querySelector("[data-xp]") ? document.querySelector("[data-xp]").getAttribute("data-xp") : "";
+  window.dispatchEvent(new Event("pagehide"));
+  var prop = document.querySelector("[data-act=prop]");
+  if (prop) prop.click();
+  return { screen: document.querySelector(".screen").getAttribute("data-screen"), xp: xp };
+};
+window.__previewMode = function (kind) {
+  var zone = kind === "count" ? "numbers" : kind === "size" ? "colors-shapes" : "phonics";
+  var run = E.buildRun(D, S, zone, { rng: E.mulberry32(4) });
+  var i;
+  for (i = 0; i < run.steps.length; i++) {
+    if (run.steps[i].kind === kind) { run.index = i; break; }
+  }
+  S.run = run;
+  S.screen = "play";
+  S.ledger.started = 1;
+  render();
+  return run.steps[run.index] && run.steps[run.index].kind;
+};
 window.__test = function () {
   var problems = [];
   if (!D || D.cards.length !== 211) problems.push("cards");
@@ -1340,6 +1648,7 @@ function boot() {
     try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) { /* ignore */ }
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js").catch(function () { /* offline shell is optional */ });
+      navigator.serviceWorker.addEventListener("message", function () { S.updateReady = true; if (S.screen === "map") render(); });
     }
   }).catch(function (err) {
     window.__errors.push(String(err && err.message || err));

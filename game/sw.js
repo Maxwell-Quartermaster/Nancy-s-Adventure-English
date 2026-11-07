@@ -1,4 +1,4 @@
-var VERSION = "nae-foundation-1";
+var VERSION = "nae-foundation-2";
 var CORE = [
   "./",
   "./index.html",
@@ -26,6 +26,9 @@ self.addEventListener("install", function (event) {
   );
 });
 
+self.addEventListener("message", function (event) {
+  if (event.data && event.data.type === "skip") self.skipWaiting();
+});
 self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {

@@ -115,8 +115,8 @@ async function pass(cdp, label, reduce) {
   });
   var suffix = reduce ? "-reduced" : "";
   await cdp.send("Emulation.setDeviceMetricsOverride", {
-    width: label === "320x568" ? 320 : 390,
-    height: label === "320x568" ? 568 : 844,
+    width: label === "320x568" ? 320 : label === "393x852" ? 393 : 390,
+    height: label === "320x568" ? 568 : label === "393x852" ? 852 : 844,
     deviceScaleFactor: 1,
     mobile: true
   });
@@ -137,6 +137,7 @@ async function pass(cdp, label, reduce) {
   if (screen !== "play") throw new Error(label + " expected play, got " + screen);
   await shot(cdp, "question-" + label + suffix);
   var playAudit = await evaluate(cdp, "window.__layoutAudit()");
+  var hit = await evaluate(cdp, "(function(){var correct=document.querySelector('[data-correct=\"1\"]'); if(!correct) return {missing:true}; var r=correct.getBoundingClientRect(); var top=document.elementFromPoint(r.left+r.width/2, r.top+r.height/2); var owner=top&&top.closest?top.closest('[data-prop]'):null; return {want:correct.getAttribute('data-arg'), hit:owner&&owner.getAttribute('data-arg')};})()");
   await click(cdp, "[data-correct='1']");
   screen = await waitScreen(cdp);
   if (screen !== "reveal") throw new Error(label + " expected reveal, got " + screen);
@@ -152,6 +153,27 @@ async function pass(cdp, label, reduce) {
   if (screen !== "menu") throw new Error(label + " expected menu, got " + screen);
   await shot(cdp, "menu-" + label + suffix);
   var menuAudit = await evaluate(cdp, "window.__layoutAudit()");
+  await click(cdp, "[data-act=gear]");
+  await shot(cdp, "character-" + label + suffix);
+  var characterAudit = await evaluate(cdp, "window.__layoutAudit()");
+  await click(cdp, "[data-act=back]");
+  await click(cdp, "[data-act=shop]");
+  await shot(cdp, "shop-" + label + suffix);
+  var shopAudit = await evaluate(cdp, "window.__layoutAudit()");
+  var shopText = await evaluate(cdp, "document.body.innerText");
+  var shopLiteral = String(shopText).indexOf("{n}") >= 0;
+  await evaluate(cdp, "window.__previewMode('letter')");
+  await delay(200);
+  await shot(cdp, "letter-" + label + suffix);
+  var letterAudit = await evaluate(cdp, "window.__layoutAudit()");
+  await evaluate(cdp, "window.__previewMode('count')");
+  await delay(200);
+  await shot(cdp, "count-" + label + suffix);
+  var countAudit = await evaluate(cdp, "window.__layoutAudit()");
+  await evaluate(cdp, "window.__previewMode('size')");
+  await delay(200);
+  await shot(cdp, "size-" + label + suffix);
+  var sizeAudit = await evaluate(cdp, "window.__layoutAudit()");
   await cdp.send("Page.reload", { ignoreCache: false });
   await delay(500);
   await waitScreen(cdp);
@@ -159,8 +181,17 @@ async function pass(cdp, label, reduce) {
   await click(cdp, "[data-act=letsgo]");
   var xp2 = await evaluate(cdp, "document.querySelector('[data-xp]') && document.querySelector('[data-xp]').getAttribute('data-xp')");
   var errors = await evaluate(cdp, "window.__errors");
+  var listen = null;
+  var pausedProbe = null;
+  var home = null;
+  if (!reduce) {
+    home = await evaluate(cdp, "window.__homeLake()");
+    listen = await evaluate(cdp, "window.__listenProbe()");
+    pausedProbe = await evaluate(cdp, "window.__pauseProbe()");
+  }
   var motion = await evaluate(cdp, "getComputedStyle(document.querySelector('.screen')).animationName");
-  return { label: label, reduced: !!reduce, motion: motion, xp: xp, xpAfterReload: xp2, errors: errors, titleAudit: titleAudit, playAudit: playAudit, mapAudit: mapAudit, menuAudit: menuAudit, console: cdp.notes.slice() };
+  var net = await evaluate(cdp, "window.__net");
+  return { label: label, reduced: !!reduce, motion: motion, xp: xp, xpAfterReload: xp2, errors: errors, net: net, hit: hit, shopLiteral: shopLiteral, home: home, listen: listen, pausedProbe: pausedProbe, titleAudit: titleAudit, playAudit: playAudit, mapAudit: mapAudit, menuAudit: menuAudit, characterAudit: characterAudit, shopAudit: shopAudit, letterAudit: letterAudit, countAudit: countAudit, sizeAudit: sizeAudit, console: cdp.notes.slice() };
 }
 
 await waitPort();
@@ -174,6 +205,7 @@ var reports = [];
 try {
   reports.push(await pass(cdp, "390x844", false));
   reports.push(await pass(cdp, "320x568", false));
+  reports.push(await pass(cdp, "393x852", false));
   reports.push(await pass(cdp, "390x844", true));
   reports.push(await pass(cdp, "320x568", true));
 } catch (err) {
@@ -188,7 +220,14 @@ try {
 writeFileSync(outDir + "/layout-report.json", JSON.stringify(reports, null, 2));
 console.log(JSON.stringify(reports, null, 2));
 var failed = reports.some(function (r) {
-  return ["titleAudit", "playAudit", "mapAudit", "menuAudit"].some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || String(r.xpAfterReload) !== String(r.xp) || (r.reduced && r.motion !== "none");
+  var audits = ["titleAudit", "playAudit", "mapAudit", "menuAudit", "characterAudit", "shopAudit", "letterAudit", "countAudit", "sizeAudit"];
+  var badNet = (r.net || []).some(function (url) { return /^https?:\/\//.test(url) && url.indexOf("127.0.0.1") !== 0 && url.indexOf("localhost") !== 0; });
+  var flowBad = r.hit && r.hit.want && r.hit.want !== r.hit.hit;
+  flowBad = flowBad || r.shopLiteral;
+  flowBad = flowBad || (r.home && r.home.join(",") !== "ms-28,ms-29,ms-30");
+  flowBad = flowBad || (r.listen && (!r.listen.replay || !r.listen.spoken));
+  flowBad = flowBad || (r.pausedProbe && r.pausedProbe.screen !== "continue");
+  return audits.some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || badNet || flowBad || String(r.xpAfterReload) !== String(r.xp) || (r.reduced && r.motion !== "fade150");
 });
 cdp.close();
 server.kill();
