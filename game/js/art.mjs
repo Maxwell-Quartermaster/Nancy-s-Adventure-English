@@ -70,8 +70,10 @@ export function weaponSvg(note, blade, shade) {
   var view = "-28 -84 56 118";
   var inner = "<use href='#wb'></use>";
   if (spec.indexOf("wh+wx") >= 0) {
-    inner = "<g transform='translate(-8,0)'><use href='#wh'></use><use href='#wx'></use></g>";
+    view = "-7 -45 29 72";
+    inner = "<g><use href='#wh'></use><use href='#wx'></use></g>";
   } else if (spec.indexOf("wh+wm") >= 0) {
+    view = "-12 -52 24 79";
     inner = "<g><use href='#wh'></use><use href='#wm'></use></g>";
   } else if (spec.indexOf("1.4") >= 0) {
     inner = "<use href='#wb' transform='translate(0,-8) scale(1.4)'></use>";
