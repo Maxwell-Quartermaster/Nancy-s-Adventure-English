@@ -120,7 +120,8 @@ export function loadModel(raw, daily) {
       personal: rawCard.personal != null ? !!rawCard.personal : !!defaults.personal,
       prompts: rawCard.prompts || null,
       reply: rawCard.reply || null,
-      syl: rawCard.syl || ""
+      syl: rawCard.syl || "",
+      nursePhrase: rawCard.nursePhrase != null ? !!rawCard.nursePhrase : !!defaults.nursePhrase
     };
     card.showExample = card.tag === "Example";
     card.playable = !(card.fill && !String(card.en || "").trim());
@@ -944,11 +945,28 @@ export function reviewOnRight(queue, cardId) {
   return (queue || []).filter(function (id) { return id !== cardId; });
 }
 
-export function gearBonuses(state, model) {
-  var bag = { hint: 0, retry: 0, star: 0, streakEvery: 0, slow: false, respell: false };
+export function bonusWordsFor(model, id) {
   var map = (model.meta && model.meta.weaponBonus) || {};
+  if (map[id]) return map[id];
+  var item = weaponCatalog(model).filter(function (w) { return w.id === id; })[0];
+  if (!item) return "";
+  var themes = String((model.trophyRules && model.trophyRules.theme) || "").split(/\s+/).filter(Boolean);
+  var rows = String((model.trophyRules && model.trophyRules.rows) || "").split(/\s+/).filter(Boolean);
+  var theme = themes[rows.indexOf(item.wt)] || "";
+  if (!theme) return "";
+  if (item.tier === 1) return theme;
+  var second = theme + "2";
+  if (item.tier === 2) return second;
+  if (second.indexOf("Star") >= 0) return second + " Hint";
+  return second + " Star";
+}
+
+export function gearBonuses(state, model) {
+  var bag = { hint: 0, retry: 0, star: 0, streakEvery: 0, slow: false, respell: false, words: [] };
   function add(words) {
-    String(words || "").split(/\s+/).forEach(function (w) {
+    if (!words) return;
+    bag.words.push(words);
+    String(words).split(/\s+/).forEach(function (w) {
       if (w === "Hint") bag.hint += 1;
       if (w === "Hint2") bag.hint += 2;
       if (w === "Retry") bag.retry += 1;
@@ -961,9 +979,124 @@ export function gearBonuses(state, model) {
       if (w === "Respell") bag.respell = true;
     });
   }
-  add(map[state.equipped && state.equipped.weapon]);
-  add(map[state.equipped && state.equipped.offHand]);
+  add(bonusWordsFor(model, state.equipped && state.equipped.weapon));
+  add(bonusWordsFor(model, state.equipped && state.equipped.offHand));
   return bag;
+}
+
+export function awardExtras(run, bonuses, spoken) {
+  var rightRow = (run.rightRow || 0) + 1;
+  var coinBonus = bonuses.streakEvery && rightRow % bonuses.streakEvery === 0 ? 1 : 0;
+  return { rightRow: rightRow, coinBonus: coinBonus, starBonus: spoken ? (bonuses.star || 0) : 0 };
+}
+
+export function noteMiss(run) {
+  var next = clone(run);
+  if ((next.retriesLeft || 0) > 0) {
+    next.retriesLeft -= 1;
+    return { run: next, retry: true };
+  }
+  next.wasMiss = true;
+  next.rightRow = 0;
+  return { run: next, retry: false };
+}
+
+export function shopRows(state, model) {
+  var level = levelForXp(state.xp || 0);
+  var grouped = {};
+  weaponCatalog(model).forEach(function (slot) {
+    if (!grouped[slot.wt]) grouped[slot.wt] = [];
+    grouped[slot.wt].push(slot);
+  });
+  return Object.keys(grouped).map(function (wt) {
+    return {
+      wt: wt,
+      row: grouped[wt][0].row,
+      open: rowOpen(state, wt),
+      slots: grouped[wt].map(function (slot) {
+        var tierOpen = level >= tierLevel(model, slot.tier);
+        var owned = ownsItem(state, slot.id);
+        var stars = state.goldStars || 0;
+        return {
+          id: slot.id,
+          name: slot.name,
+          th: slot.th,
+          tier: slot.tier,
+          cost: slot.cost,
+          tierOpen: tierOpen,
+          owned: owned,
+          silhouette: slot.tier === 3 && !owned && !(tierOpen && stars >= slot.cost),
+          equipped: (state.equipped && (state.equipped.weapon === slot.id || state.equipped.offHand === slot.id)) || false,
+          bonus: bonusWordsFor(model, slot.id)
+        };
+      })
+    };
+  });
+}
+
+export function beginKneel(state, model, zoneKey) {
+  var committed = commitBoss(state, model, zoneKey);
+  return { state: committed.state, duplicate: !!committed.duplicate, zone: zoneKey };
+}
+
+export function thaiReviewQueue(model) {
+  var nurse = [];
+  var hints = [];
+  model.cards.forEach(function (card) {
+    if (card.nursePhrase) nurse.push(card.id);
+    else if (card.thDef) hints.push(card.id);
+  });
+  return {
+    needsMaxwell: (model.raw.needsMaxwell || []).slice(),
+    nurse: nurse,
+    thDef: hints
+  };
+}
+
+export function sharedEnding(a, b) {
+  var n = 0;
+  var i = String(a || "").length - 1;
+  var j = String(b || "").length - 1;
+  while (i >= 0 && j >= 0 && a.charAt(i) === b.charAt(j)) {
+    n += 1;
+    i -= 1;
+    j -= 1;
+  }
+  return n;
+}
+
+export function endingPairs(pairs) {
+  return (pairs || []).filter(function (pair) { return sharedEnding(pair.a, pair.b) >= 3; });
+}
+
+export function buildDuelSchedule(pairs) {
+  var ending = endingPairs(pairs);
+  var pics = (pairs || []).filter(function (pair) { return pair.pics && ending.indexOf(pair) < 0; });
+  var rest = (pairs || []).filter(function (pair) { return ending.indexOf(pair) < 0 && !pair.pics; });
+  var deck = ending.concat(pics).concat(rest);
+  var rounds = [];
+  var r;
+  var k;
+  for (r = 0; r < 4; r++) {
+    var slice = [];
+    for (k = 0; k < 8; k++) slice.push(deck[(r * 8 + k) % deck.length]);
+    rounds.push(slice);
+  }
+  var pool = ending.concat((pairs || []).filter(function (pair) { return !!pair.pics; }));
+  var recap = [];
+  for (k = 0; k < 10; k++) recap.push(pool[k % pool.length]);
+  return { rounds: rounds, recap: recap };
+}
+
+export function speakEnglish(text, synth) {
+  try {
+    if (!synth || !text) return false;
+    if (synth.cancel) synth.cancel();
+    synth.speak(text);
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 export function popReward(state) {

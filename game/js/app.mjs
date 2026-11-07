@@ -1,5 +1,5 @@
 import * as E from "./engine.mjs";
-import { sceneSvg, pictureHtml, escapeText, coinRow } from "./art.mjs";
+import { sceneSvg, pictureHtml, escapeText, coinRow, guardianKneel } from "./art.mjs";
 
 var D = null;
 var S = null;
@@ -79,17 +79,19 @@ function thud() {
   } catch (e) { /* missing audio never blocks */ }
 }
 function speak(text, slow) {
-  try {
-    if (!window.speechSynthesis || !text) return;
-    window.speechSynthesis.cancel();
-    var u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    var bonus = E.gearBonuses(S, D);
-    var rate = bonus.slow ? 0.5 : (S.settings && S.settings.slowMode ? 0.6 : 0.85);
-    if (slow) rate = Math.min(rate, 0.6);
-    u.rate = rate;
-    window.speechSynthesis.speak(u);
-  } catch (e) { /* voice is optional */ }
+  var bonus = D ? E.gearBonuses(S, D) : { slow: false };
+  var rate = bonus.slow ? 0.5 : (S && S.settings && S.settings.slowMode ? 0.6 : 0.85);
+  if (slow) rate = Math.min(rate, 0.6);
+  var synth = window.speechSynthesis ? {
+    cancel: function () { window.speechSynthesis.cancel(); },
+    speak: function (line) {
+      var u = new SpeechSynthesisUtterance(line);
+      u.lang = "en-US";
+      u.rate = rate;
+      window.speechSynthesis.speak(u);
+    }
+  } : null;
+  return E.speakEnglish(text, synth);
 }
 function playFile(rel) {
   E.playClip(rel, function (url) { return fetch(url); }).then(function (ok) {
@@ -186,21 +188,22 @@ function bubbleHtml() {
 
 function sceneSlots(ids) {
   var pos = [
-    { left: "46%", bottom: "5%" },
-    { left: "63%", bottom: "5%" },
-    { left: "80%", bottom: "6%" },
-    { left: "52%", bottom: "24%" },
-    { left: "72%", bottom: "24%" }
+    { left: "38%", surface: "ground" },
+    { left: "54%", surface: "ground" },
+    { left: "70%", surface: "ground" },
+    { left: "50%", surface: "bench" },
+    { left: "72%", surface: "bench" }
   ];
-  return ids.map(function (id, i) {
+  var props = ids.map(function (id, i) {
     var card = D.byId[id];
     var p = pos[i] || pos[0];
-    var cls = "prop";
+    var cls = "prop on-" + p.surface;
     if (S.glowId === id) cls += " glow-gold";
     if (S.wiggleId === id) cls += " wiggle";
-    return "<button class='" + cls + "' data-tap data-prop data-ground='1' data-act='prop' data-arg='" + escapeText(id) + "' data-correct='" + (id === (currentStep() && currentStep().id) ? "1" : "0") + "' style='left:" + p.left + ";bottom:" + p.bottom + "'>" +
+    return "<button class='" + cls + "' data-tap data-prop data-surface='" + p.surface + "' data-act='prop' data-arg='" + escapeText(id) + "' data-correct='" + (id === (currentStep() && currentStep().id) ? "1" : "0") + "' style='left:" + p.left + "'>" +
       pictureHtml(card && card.pic, inline) + "<i class='shadow'></i></button>";
   }).join("");
+  return "<div class='bench-seat' data-seat='1'></div>" + props;
 }
 function currentStep() {
   if (!S.run || !S.run.steps) return null;
@@ -233,7 +236,14 @@ function renderPlay() {
   var zone = D.zoneByKey[S.run.zone];
   var kind = E.sceneKind(S.run.zone, (S.zoneRuns && S.zoneRuns[S.run.zone]) || 0);
   var tod = E.todName(S.run.tod || 1);
+  var bonuses = E.gearBonuses(S, D);
+  if (S.run.index < bonuses.hint && !(S.run.autoHints || {})[S.run.index]) {
+    if (!S.run.autoHints) S.run.autoHints = {};
+    S.run.autoHints[S.run.index] = 1;
+    S.bubble = { en: (card.hint && card.hint.letters) || "", th: ui("itStartsWith").th };
+  }
   var prompt = E.promptFor(card, D.ui, step.listen && step.kind === "scene");
+  var respellLine = bonuses.respell && card.respell ? "<div class='en' style='color:#8A6200'>" + escapeText(card.respell) + "</div>" : "";
   if (step.kind === "letter") prompt = { en: ui("spellIt").en, th: ui("spellIt").th };
   if (step.kind === "count") prompt = { en: ui("howMany").en, th: ui("howMany").th };
   if (step.kind === "size") prompt = { en: ui("bigOrSmall").en, th: ui("bigOrSmall").th };
@@ -246,7 +256,7 @@ function renderPlay() {
     "<div class='stage'><div class='scene-frame' data-tod='" + tod + "'>" + sceneSvg(kind, tod) +
     "<div class='hero-fig'>" + heroSvg() + "<i class='shadow'></i></div>" +
     sceneSlots(sceneMates(step)) + "</div></div>" +
-    "<div class='qcard'><div class='prompt'>" + bi(prompt.en, prompt.th) + bubbleHtml() + extra + "</div>" +
+    "<div class='qcard'><div class='prompt'>" + bi(prompt.en, prompt.th) + respellLine + bubbleHtml() + extra + "</div>" +
     "<button class='hint-btn' data-tap data-act='hint' aria-label='" + escapeText(ui("hintButton").en) + "'>🍃<span class='hint-label th' lang='th'>" + escapeText(ui("wordsForYou").th) + "</span></button></div></div>";
 }
 function letterPads(card) {
@@ -539,6 +549,19 @@ function renderRest() {
     "<button class='metal' data-tap data-act='restnow'>" + plate(ui("restNow").en, ui("restNow").th) + "</button></div></div></div>";
 }
 
+function renderKneel() {
+  var zone = D.zoneByKey[S.kneelZone] || {};
+  var name = zone.boss && zone.boss.name ? zone.boss.name : { en: "", th: "" };
+  var tint = { phonics: "#7FD38B", "colors-shapes": "#F5A3C7", numbers: "#7FB8F5", "sight-words": "#F5D06B", "baby-hospital": "#F2B8A0" }[S.kneelZone] || "#7FD38B";
+  document.body.setAttribute("data-theme", "arena");
+  return "<div class='screen' data-screen='kneel'>" + banner(name.en, name.th) +
+    "<div class='stage'><div class='scene-frame'>" + sceneSvg("park", "a") +
+    "<div class='hero-fig' style='left:8%'>" + heroSvg() + "</div>" +
+    "<div style='position:absolute;left:46%;bottom:8%'>" + guardianKneel(tint) + "</div></div></div>" +
+    "<div class='qcard'><div class='prompt'>" + bi(name.en, name.th) + "</div>" +
+    "<button class='gold-btn' data-tap data-act='kneelgot'>" + plate(D.gotItText.en, D.gotItText.th) + "</button></div></div>";
+}
+
 function renderShop() {
   document.body.setAttribute("data-theme", "menu");
   var items = (D.pantry.items || []).map(function (item) {
@@ -548,10 +571,16 @@ function renderShop() {
       "<div>" + (String(item.pic || "").indexOf("svg:") === 0 ? pictureHtml(item.pic, inline) : escapeText(item.pic || "")) + "</div>" +
       bi(item.en, item.th) + "<div class='en'>" + (owned ? "✓" : ("★ " + item.stars)) + "</div><div class='th' lang='th'>" + escapeText(label.th) + "</div></button>";
   }).join("");
-  var gear = E.weaponCatalog(D).filter(function (w) { return w.tier > 1; }).map(function (w) {
-    var owned = E.ownsItem(S, w.id);
-    return "<button class='trophy' data-tap data-act='buy' data-arg='" + w.id + "'>" + bi(w.name, w.th) +
-      "<div class='en'>" + (owned ? "✓" : ("★ " + w.cost)) + "</div></button>";
+  var gear = E.shopRows(S, D).map(function (row) {
+    var slots = row.slots.map(function (slot) {
+      var price = slot.owned ? "✓" : (slot.tier === 1 ? "" : ("★ " + slot.cost));
+      var cls = "trophy" + (slot.silhouette ? " sil" : "");
+      var label = slot.silhouette ? ui("getFor").en : slot.name;
+      return "<button class='" + cls + "' data-tap data-act='buy' data-arg='" + slot.id + "' data-open='" + (slot.tierOpen && row.open ? "1" : "0") + "'>" +
+        "<div class='en'>" + escapeText(label) + "</div><div class='th' lang='th'>" + escapeText(slot.th || "") + "</div>" +
+        "<div class='en'>" + price + "</div><div class='th' lang='th'>" + escapeText(slot.bonus || "") + "</div></button>";
+    }).join("");
+    return "<div class='en'>" + escapeText(row.row) + "</div><div class='shop-row' data-scroll-ok>" + slots + "</div>";
   }).join("");
   return "<div class='screen' data-screen='shop'>" + banner(ui("pantry").en, ui("pantry").th) +
     "<div class='sheet'><div class='count'>★ " + S.goldStars + "</div><div class='pane' data-scroll-ok><div class='grid3'>" + items + gear + "</div></div>" +
@@ -577,7 +606,12 @@ function renderGear() {
 
 function renderBackup() {
   document.body.setAttribute("data-theme", "menu");
-  var ids = (D.raw.needsMaxwell || []).map(function (id) { return "<li class='th' lang='th'>" + escapeText(id) + "</li>"; }).join("");
+  var review = E.thaiReviewQueue(D);
+  var ids = review.needsMaxwell.map(function (id) { return "<li class='th' lang='th'>" + escapeText(id) + "</li>"; }).join("");
+  var queue = review.nurse.concat(review.thDef).map(function (id) {
+    var mark = S.thaiMarks && S.thaiMarks[id] ? "✓" : "·";
+    return "<button class='trophy' data-tap data-act='thaiok' data-arg='" + escapeText(id) + "'><span class='en'>" + mark + " " + escapeText(id) + "</span></button>";
+  }).join("");
   var note = S.backupReason ? "<div class='th' lang='th'>" + escapeText(S.backupReason) + "</div>" : "";
   return "<div class='screen' data-screen='backup'>" + banner(ui("backup").en, ui("backup").th) +
     "<div class='sheet'><div class='pane' data-scroll-ok>" +
@@ -587,15 +621,17 @@ function renderBackup() {
     note +
     "<button class='gold-btn' data-tap data-act='usebak'>" + plate(ui("useBackup").en, ui("useBackup").th) + "</button>" +
     "<div class='en'>" + escapeText(ui("needsMaxwell").en) + "</div><ul>" + ids + "</ul>" +
-    "<div class='th' lang='th'>" + escapeText(ui("thaiReview").th || ui("thaiReview").en) + "</div></div>" +
+    "<div class='th' lang='th'>" + escapeText(ui("thaiReview").th || ui("thaiReview").en) + "</div><div class='grid3'>" + queue + "</div></div>" +
     "<button class='metal' data-tap data-act='back'>" + plate(ui("back").en, ui("back").th) + "</button></div></div>";
 }
 
 function renderDuel() {
   document.body.setAttribute("data-theme", "arena");
   if (!S.duel) {
-    S.duel = { index: 0, round: (S.duelRounds || 0), pairs: E.shuffle((D.soundDuel.pairs || []).slice(), E.mulberry32(7)).slice(0, 8), heard: "" };
-    if (S.duel.round >= 4) S.duel.pairs = E.shuffle((D.soundDuel.pairs || []).slice(), E.mulberry32(11)).slice(0, 10);
+    var plan = E.buildDuelSchedule(D.soundDuel.pairs || []);
+    var round = S.duelRounds || 0;
+    var echo = round >= 4;
+    S.duel = { index: 0, round: round, echo: echo, pairs: echo ? plan.recap : plan.rounds[round] || plan.rounds[0], heard: "" };
   }
   var pair = S.duel.pairs[S.duel.index];
   if (!pair) {
@@ -608,11 +644,12 @@ function renderDuel() {
     S.duel.heard = Math.random() < 0.5 ? pair.a : pair.b;
     speak(S.duel.heard);
   }
-  return "<div class='screen' data-screen='duel'>" + banner(ui("soundDuel").en, ui("soundDuel").th) + hud(true) +
-    "<div class='ask'><div class='th' lang='th'>" + escapeText(ui("echoKnight").th) + "</div>" +
+  var pics = pair.pics || [];
+  return "<div class='screen' data-screen='duel'>" + banner(ui("soundDuel").en, ui("soundDuel").th) + hud(false) +
+    "<div class='ask'><div class='th' lang='th'>" + escapeText(S.duel.echo ? ui("echoKnight").en : ui("echoKnight").th) + "</div>" +
     "<div class='choices'>" +
-    "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.a) + "'>" + escapeText(pair.a) + "</button>" +
-    "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.b) + "'>" + escapeText(pair.b) + "</button></div>" +
+    "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.a) + "'>" + (pics[0] ? "<span class='emoji-pic'>" + escapeText(pics[0]) + "</span>" : "") + escapeText(pair.a) + "</button>" +
+    "<button class='choice' data-tap data-act='duel' data-arg='" + escapeText(pair.b) + "'>" + (pics[1] ? "<span class='emoji-pic'>" + escapeText(pics[1]) + "</span>" : "") + escapeText(pair.b) + "</button></div>" +
     "<button class='hint-btn' data-tap data-act='hear'>" + plate(ui("hearItAgain").en, ui("hearItAgain").th) + "</button>" +
     bubbleHtml() + "</div></div>";
 }
@@ -634,6 +671,7 @@ function render() {
   else if (S.screen === "shop") html = renderShop();
   else if (S.screen === "gear") html = renderGear();
   else if (S.screen === "backup") html = renderBackup();
+  else if (S.screen === "kneel") html = renderKneel();
   else if (S.screen === "duel") html = renderDuel();
   else html = renderMenu();
   document.getElementById("app").innerHTML = html;
@@ -718,17 +756,16 @@ function nextBubble() {
 
 function onCorrect(card, ledgerId, spoken) {
   var bonus = E.gearBonuses(S, D);
-  var starBonus = spoken ? bonus.star : 0;
-  var coinBonus = 0;
-  S.run.rightRow = (S.run.rightRow || 0) + 1;
-  if (bonus.streakEvery && S.run.rightRow % bonus.streakEvery === 0) coinBonus = 1;
+  var track = S.run || { rightRow: 0 };
+  var extras = E.awardExtras(track, bonus, !!spoken);
+  if (S.run) S.run.rightRow = extras.rightRow;
   var res = E.commitCorrect(S, D, {
     ledgerId: ledgerId,
     zone: card.zone,
     cardId: card.id,
     spoken: !!spoken,
-    starBonus: starBonus,
-    coinBonus: coinBonus
+    starBonus: extras.starBonus,
+    coinBonus: extras.coinBonus
   });
   S = res.state;
   if (res.pipGlow) S.pipGlow = true;
@@ -919,8 +956,9 @@ function handle(act, arg) {
     var astep = currentStep();
     if (!acard) return;
     if (arg !== acard.answer) {
-      if ((S.run.retriesLeft || 0) > 0) {
-        S.run.retriesLeft -= 1;
+      var missed = E.noteMiss(S.run);
+      S.run = missed.run;
+      if (missed.retry) {
         S.moonChoice = arg;
         S.glowId = acard.answer;
         S.bubble = { en: D.wrongText.en, th: D.wrongText.th };
@@ -1026,14 +1064,23 @@ function handle(act, arg) {
     }
     var zoneKey = S.run.zone;
     var snap = S.run;
-    var committed = E.commitBoss(S, D, zoneKey);
+    var committed = E.beginKneel(S, D, zoneKey);
     S = committed.state;
     S.run = snap;
-    playFile("audio/maxwell-boss-" + zoneKey + ".m4a");
     var fin = E.finishZoneRun(S, D, snap, today);
     S = fin.state;
     sessionRuns += 1;
     S._rest = E.shouldRest(sessionRuns);
+    S.screen = "kneel";
+    S.kneelZone = zoneKey;
+    playFile("audio/maxwell-boss-" + zoneKey + ".m4a");
+    save();
+    render();
+    return;
+  }
+  if (act === "kneelgot") {
+    if (!advanceGate()) return;
+    S.kneelZone = "";
     save();
     afterRewards();
     return;
@@ -1086,6 +1133,13 @@ function handle(act, arg) {
     return;
   }
   if (act === "restnow") { S.screen = "map"; render(); return; }
+  if (act === "thaiok") {
+    if (!S.thaiMarks) S.thaiMarks = {};
+    S.thaiMarks[arg] = 1;
+    save();
+    render();
+    return;
+  }
   if (act === "buy") {
     var bought = E.buyItem(S, D, arg);
     S = bought.state;
@@ -1145,15 +1199,22 @@ function handle(act, arg) {
   }
   if (act === "duel") {
     if (!S.duel) return;
+    if (arg !== S.duel.heard) {
+      var duelMiss = E.applyMiss(S);
+      S.xp = duelMiss.state.xp;
+      S.pips = duelMiss.state.pips;
+      S.goldStars = duelMiss.state.goldStars;
+      S.bubble = { en: D.wrongText.en, th: D.wrongText.th };
+      S.nodUntil = Date.now() + 600;
+      save();
+      render();
+      return;
+    }
     if (arg === S.duel.heard) {
       onCorrect({ id: "duel", zone: "soundDuel", mode: "picture-recall", type: "picture" }, "duel:" + (S.duel.round || 0) + ":" + S.duel.index, false);
       S.duel.index += 1;
       S.duel.heard = "";
       S.cheerUntil = Date.now() + 600;
-    } else {
-      E.applyMiss(S);
-      S.bubble = { en: D.wrongText.en, th: D.wrongText.th };
-      S.nodUntil = Date.now() + 600;
     }
     save();
     render();
@@ -1220,10 +1281,15 @@ window.__layoutAudit = function () {
   var frame = document.querySelector(".scene-frame");
   if (frame) {
     var sb = frame.getBoundingClientRect();
+    var seat = document.querySelector("[data-seat]");
     Array.prototype.slice.call(document.querySelectorAll("[data-prop]")).forEach(function (el) {
       var r = el.getBoundingClientRect();
       var mid = (r.top + r.bottom) / 2;
       if (mid < sb.top + sb.height * 0.38) out.floating.push(el.getAttribute("data-arg"));
+      if (el.getAttribute("data-surface") === "bench" && seat) {
+        var gap = seat.getBoundingClientRect().top - r.bottom;
+        if (Math.abs(gap) > 6) out.floating.push("bench-gap:" + Math.round(gap));
+      }
     });
   }
   if (screen && !screen.querySelector("[data-scroll-ok]")) {

@@ -103,13 +103,21 @@ function ground(tod) {
 }
 
 function tree(x) {
-  return "<rect x='" + (x + 12) + "' y='308' width='18' height='90' fill='#4E3018' stroke='" + INK + "' stroke-width='3'/>" +
-    "<circle cx='" + (x + 21) + "' cy='292' r='36' fill='#17633A' stroke='" + INK + "' stroke-width='3'/>";
+  return "<rect x='" + (x + 10) + "' y='300' width='22' height='120' fill='#4E3018' stroke='" + INK + "' stroke-width='3'/>" +
+    "<circle cx='" + (x + 21) + "' cy='300' r='34' fill='#17633A' stroke='" + INK + "' stroke-width='3'/>" +
+    "<path d='M" + (x + 8) + " 400h26l-4 16h-18z' fill='#3E2612' stroke='" + INK + "' stroke-width='2'/>";
 }
-function bench(x) {
-  return "<rect x='" + x + "' y='400' width='120' height='12' fill='#6B4423' stroke='" + INK + "' stroke-width='3'/>" +
-    "<rect x='" + (x + 8) + "' y='412' width='10' height='48' fill='#6B4423' stroke='" + INK + "'/>" +
-    "<rect x='" + (x + 100) + "' y='412' width='10' height='48' fill='#6B4423' stroke='" + INK + "'/>";
+export function guardianKneel(tint) {
+  var color = tint || "#7FD38B";
+  return "<svg class='guardian' viewBox='0 0 120 140' aria-hidden='true'>" +
+    "<ellipse cx='60' cy='128' rx='36' ry='8' fill='#10170F' opacity='.28'/>" +
+    "<path d='M28 96h64v18H28z' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M36 78h48l8 20H28z' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
+    "<circle cx='60' cy='52' r='16' fill='#F2C1A0' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M44 46h32v8H44z' fill='#2C3F56' stroke='#10170F' stroke-width='3'/>" +
+    "<circle cx='96' cy='88' r='16' fill='" + color + "' stroke='#10170F' stroke-width='3'/>" +
+    "<path d='M96 74v28M82 88h28' stroke='#FFCC33' stroke-width='3'/>" +
+    "</svg>";
 }
 
 export function sceneSvg(kind, tod) {
@@ -120,7 +128,6 @@ export function sceneSvg(kind, tod) {
     parts.push(ground(t));
     parts.push(tree(8));
     parts.push(tree(300));
-    parts.push(bench(200));
   }
   if (kind === "pond") {
     parts.push("<ellipse cx='250' cy='430' rx='70' ry='22' fill='#4A9BE0' stroke='" + INK + "' stroke-width='3'/>");
@@ -135,7 +142,6 @@ export function sceneSvg(kind, tod) {
     parts.push("<rect y='180' width='390' height='340' fill='#F6E9C8' stroke='" + INK + "' stroke-width='3'/>");
     parts.push("<rect x='250' y='200' width='90' height='60' fill='#B9D7F2' stroke='" + INK + "' stroke-width='3'/>");
     parts.push("<rect y='360' width='390' height='160' fill='#C4A574' stroke='" + INK + "' stroke-width='3'/>");
-    parts.push(bench(200));
   }
   if (kind === "desk") {
     parts.push("<rect x='40' y='210' width='40' height='160' fill='#8A5A32' stroke='" + INK + "' stroke-width='3'/>");
@@ -153,7 +159,6 @@ export function sceneSvg(kind, tod) {
     parts.push(tree(80));
     parts.push(tree(280));
     parts.push("<path d='M150 300h130' stroke='#3E2612' stroke-width='8'/>");
-    parts.push(bench(190));
     parts.push("<path d='M40 430l24 40h-48z' fill='#C46B4A' stroke='" + INK + "' stroke-width='3'/>");
   }
   parts.push("<ellipse cx='90' cy='470' rx='28' ry='6' fill='#10170F' opacity='.25'/>");

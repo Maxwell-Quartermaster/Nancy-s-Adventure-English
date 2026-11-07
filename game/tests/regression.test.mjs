@@ -5,7 +5,9 @@ import {
   loadModel, freshState, applyXp, commitCorrect, applyMiss, commitBoss, commitVerseSeen,
   commitGift, commitRestVerse, gemCount, reconcile, regionOpenMap, zoneOpen, chooseZone,
   buildRun, advanceAfterReveal, finishZoneRun, shouldRest, verseForDate, prepareRestore,
-  buyItem, equipItem, playClip, bannerKey, levelForXp, xpToReach, showsEnglishAnswer, missOutcome
+  buyItem, equipItem, playClip, bannerKey, levelForXp, xpToReach, showsEnglishAnswer, missOutcome,
+  gearBonuses, awardExtras, noteMiss, shopRows, beginKneel, thaiReviewQueue, endingPairs,
+  buildDuelSchedule, speakEnglish, bonusWordsFor
 } from "../js/engine.mjs";
 
 const raw = JSON.parse(fs.readFileSync(new URL("../data/cards.json", import.meta.url), "utf8"));
@@ -224,6 +226,104 @@ test("missing audio does not throw", async function () {
   assert.equal(ok, false);
   var missing = await playClip("audio/nope.m4a", function () { return Promise.resolve({ ok: false }); });
   assert.equal(missing, false);
+});
+
+test("gear bonuses, weapon shop, and kneel follow the card file", function () {
+  var fresh = freshState(model);
+  assert.equal(bonusWordsFor(model, "sword-iron"), "Hint");
+  assert.equal(gearBonuses(fresh, model).hint, 1);
+  fresh.equipped.offHand = "shield-sunrise";
+  var both = gearBonuses(fresh, model);
+  assert.equal(both.hint, 1);
+  assert.equal(both.retry, 1);
+  var sun = freshState(model);
+  sun.equipped.weapon = "sword-sunforged";
+  var sunBag = gearBonuses(sun, model);
+  assert.equal(sunBag.hint, 1);
+  assert.equal(sunBag.retry, 1);
+  assert.equal(sunBag.star, 1);
+  var spoken = commitCorrect(sun, model, { ledgerId: "say:1", zone: "phonics", cardId: "ph-09", spoken: true, starBonus: sunBag.star });
+  assert.equal(spoken.state.goldStars, 2);
+  var sling = freshState(model);
+  sling.equipped.weapon = "sling-shepherd";
+  var streak = awardExtras({ rightRow: 2 }, gearBonuses(sling, model), false);
+  assert.equal(streak.coinBonus, 1);
+  var staff = freshState(model);
+  staff.equipped.weapon = "staff-shepherd";
+  var staffBag = gearBonuses(staff, model);
+  assert.equal(staffBag.slow, true);
+  assert.equal(staffBag.respell, true);
+  var retryRun = { retriesLeft: 1, wasMiss: false, rightRow: 2 };
+  var firstMiss = noteMiss(retryRun);
+  assert.equal(firstMiss.retry, true);
+  assert.equal(firstMiss.run.wasMiss, false);
+  assert.equal(firstMiss.run.retriesLeft, 0);
+  var secondMiss = noteMiss(firstMiss.run);
+  assert.equal(secondMiss.retry, false);
+  assert.equal(secondMiss.run.wasMiss, true);
+  var buyer = freshState(model);
+  buyer.xp = 910;
+  buyer.level = 6;
+  buyer.goldStars = 10;
+  var poor = buyItem(buyer, model, "sword-crystal");
+  assert.equal(poor.error, "stars");
+  assert.equal(poor.state.goldStars, 10);
+  buyer.goldStars = 45;
+  var bought = buyItem(buyer, model, "sword-crystal");
+  assert.equal(bought.ok, true);
+  assert.equal(bought.state.goldStars, 0);
+  assert.equal(bought.state.equipped.weapon, "sword-crystal");
+  var again = buyItem(bought.state, model, "sword-crystal");
+  assert.equal(again.duplicate, true);
+  assert.equal(again.state.goldStars, 0);
+  var closed = buyItem(buyer, model, "axe1-t2");
+  assert.equal(closed.error, "closed");
+  assert.equal(closed.state.goldStars, 45);
+  var rows = shopRows(freshState(model), model);
+  var sword = rows.filter(function (row) { return row.wt === "sword1"; })[0];
+  assert.equal(sword.slots[2].silhouette, true);
+  var knelt = beginKneel(freshState(model), model, "phonics");
+  assert.equal(knelt.state.bossesWon.indexOf("phonics") >= 0, true);
+  assert.equal(knelt.state.scrolls.filter(function (s) { return s.id === "scroll:phonics"; }).length, 1);
+  assert.equal(knelt.state.rewardQueue[0].kind, "bossWin");
+  assert.equal(knelt.state.rewardQueue[1].kind, "verse");
+  var kneltAgain = beginKneel(knelt.state, model, "phonics");
+  assert.equal(kneltAgain.duplicate, true);
+  assert.equal(kneltAgain.state.scrolls.length, knelt.state.scrolls.length);
+});
+
+test("backup review order and sound duel schedule", function () {
+  var queue = thaiReviewQueue(model);
+  assert.deepEqual(queue.needsMaxwell, ["ms-04", "ms-05", "ms-06", "bh-30", "ms-28", "ms-29", "ms-30"]);
+  assert.equal(queue.nurse[0], "bh-01");
+  assert.equal(queue.nurse.length, 10);
+  assert.equal(queue.thDef.indexOf("bh-01"), -1);
+  assert.equal(queue.thDef.indexOf("ph-01") >= 0, true);
+  var pairs = model.soundDuel.pairs;
+  var endings = endingPairs(pairs);
+  assert.equal(endings.some(function (p) { return p.a === "light" && p.b === "right"; }), true);
+  assert.equal(pairs.filter(function (p) { return p.pics; }).length, 6);
+  var plan = buildDuelSchedule(pairs);
+  assert.equal(plan.rounds.length, 4);
+  plan.rounds.forEach(function (round) { assert.equal(round.length, 8); });
+  assert.equal(plan.recap.length, 10);
+  var seen = {};
+  plan.rounds.forEach(function (round) { round.forEach(function (p) { seen[p.a + "/" + p.b] = 1; }); });
+  endings.forEach(function (p) { assert.equal(seen[p.a + "/" + p.b], 1); });
+  pairs.filter(function (p) { return p.pics; }).forEach(function (p) { assert.equal(seen[p.a + "/" + p.b], 1); });
+  var state = freshState(model);
+  state.pips = 4;
+  state.goldStars = 3;
+  var missed = applyMiss(state);
+  assert.equal(missed.red, false);
+  assert.equal(missed.state.pips, 4);
+  assert.equal(missed.state.goldStars, 3);
+  var round = applyXp(state, model, 30, "round:test");
+  var round2 = applyXp(round.state, model, 30, "round:test");
+  assert.equal(round.state.xp, 30);
+  assert.equal(round2.duplicate, true);
+  assert.equal(speakEnglish("bed", null), false);
+  assert.equal(speakEnglish("bed", { speak: function () { throw new Error("no voice"); } }), false);
 });
 
 test("level curve matches the spec knots", function () {

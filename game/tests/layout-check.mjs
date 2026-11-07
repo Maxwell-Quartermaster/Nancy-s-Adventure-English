@@ -109,7 +109,11 @@ async function click(cdp, selector) {
   await delay(200);
 }
 
-async function pass(cdp, label) {
+async function pass(cdp, label, reduce) {
+  await cdp.send("Emulation.setEmulatedMedia", {
+    features: [{ name: "prefers-reduced-motion", value: reduce ? "reduce" : "" }]
+  });
+  var suffix = reduce ? "-reduced" : "";
   await cdp.send("Emulation.setDeviceMetricsOverride", {
     width: label === "320x568" ? 320 : 390,
     height: label === "320x568" ? 568 : 844,
@@ -126,12 +130,12 @@ async function pass(cdp, label) {
   if (screen !== "title") throw new Error(label + " boot screen " + screen);
   if (await evaluate(cdp, "!!document.querySelector('[data-act=welcome]')")) await click(cdp, "[data-act=welcome]");
   if (await evaluate(cdp, "!!document.querySelector('[data-act=versegot]')")) await click(cdp, "[data-act=versegot]");
-  await shot(cdp, "title-" + label);
+  await shot(cdp, "title-" + label + suffix);
   var titleAudit = await evaluate(cdp, "window.__layoutAudit()");
   await click(cdp, "[data-act=letsgo]");
   screen = await waitScreen(cdp);
   if (screen !== "play") throw new Error(label + " expected play, got " + screen);
-  await shot(cdp, "question-" + label);
+  await shot(cdp, "question-" + label + suffix);
   var playAudit = await evaluate(cdp, "window.__layoutAudit()");
   await click(cdp, "[data-correct='1']");
   screen = await waitScreen(cdp);
@@ -141,12 +145,12 @@ async function pass(cdp, label) {
   await click(cdp, "[data-act=tomap]");
   screen = await waitScreen(cdp);
   if (screen !== "map") throw new Error(label + " expected map, got " + screen);
-  await shot(cdp, "map-" + label);
+  await shot(cdp, "map-" + label + suffix);
   var mapAudit = await evaluate(cdp, "window.__layoutAudit()");
   await click(cdp, "[data-act=back]");
   screen = await waitScreen(cdp);
   if (screen !== "menu") throw new Error(label + " expected menu, got " + screen);
-  await shot(cdp, "menu-" + label);
+  await shot(cdp, "menu-" + label + suffix);
   var menuAudit = await evaluate(cdp, "window.__layoutAudit()");
   await cdp.send("Page.reload", { ignoreCache: false });
   await delay(500);
@@ -155,7 +159,8 @@ async function pass(cdp, label) {
   await click(cdp, "[data-act=letsgo]");
   var xp2 = await evaluate(cdp, "document.querySelector('[data-xp]') && document.querySelector('[data-xp]').getAttribute('data-xp')");
   var errors = await evaluate(cdp, "window.__errors");
-  return { label: label, xp: xp, xpAfterReload: xp2, errors: errors, titleAudit: titleAudit, playAudit: playAudit, mapAudit: mapAudit, menuAudit: menuAudit, console: cdp.notes.slice() };
+  var motion = await evaluate(cdp, "getComputedStyle(document.querySelector('.screen')).animationName");
+  return { label: label, reduced: !!reduce, motion: motion, xp: xp, xpAfterReload: xp2, errors: errors, titleAudit: titleAudit, playAudit: playAudit, mapAudit: mapAudit, menuAudit: menuAudit, console: cdp.notes.slice() };
 }
 
 await waitPort();
@@ -167,8 +172,10 @@ await cdp.send("Runtime.enable");
 await cdp.send("Page.enable");
 var reports = [];
 try {
-  reports.push(await pass(cdp, "390x844"));
-  reports.push(await pass(cdp, "320x568"));
+  reports.push(await pass(cdp, "390x844", false));
+  reports.push(await pass(cdp, "320x568", false));
+  reports.push(await pass(cdp, "390x844", true));
+  reports.push(await pass(cdp, "320x568", true));
 } catch (err) {
   console.error(String(err && err.stack || err));
   try { reports.push({ fatal: String(err.message || err), notes: cdp.notes }); } catch (e) { /* ignore */ }
@@ -181,7 +188,7 @@ try {
 writeFileSync(outDir + "/layout-report.json", JSON.stringify(reports, null, 2));
 console.log(JSON.stringify(reports, null, 2));
 var failed = reports.some(function (r) {
-  return ["titleAudit", "playAudit", "mapAudit", "menuAudit"].some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || String(r.xpAfterReload) !== String(r.xp);
+  return ["titleAudit", "playAudit", "mapAudit", "menuAudit"].some(function (k) { return r[k] && r[k].ok === false; }) || (r.errors && r.errors.length) || String(r.xpAfterReload) !== String(r.xp) || (r.reduced && r.motion !== "none");
 });
 cdp.close();
 server.kill();

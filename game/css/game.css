@@ -182,6 +182,33 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
   background: rgba(16, 23, 15, .28);
   border-radius: 50%;
 }
+.bench-seat {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  left: 46%;
+  width: 48%;
+  height: 14px;
+  bottom: 20%;
+  background: #6B4423;
+  border: 3px solid var(--ink);
+}
+.bench-seat::before, .bench-seat::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 10px;
+  height: 36px;
+  background: #4E3018;
+  border: 2px solid var(--ink);
+}
+.bench-seat::before { left: 8px; }
+.bench-seat::after { right: 8px; }
+.prop.on-ground { bottom: 4%; }
+.prop.on-bench { bottom: calc(20% + 14px); }
+.prop.on-bench .emoji-pic,
+.prop.on-bench .pic-svg,
+.prop.on-bench .drawn { position: relative; top: 20px; }
 .prop {
   position: absolute;
   z-index: 3;
@@ -196,8 +223,13 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
   align-items: flex-end;
   justify-content: center;
 }
-.prop .emoji-pic { font-size: 40px; line-height: 1; }
-.prop .pic-svg svg, .prop .drawn { width: 52px; height: 52px; }
+.prop .emoji-pic { font-size: 34px; line-height: 1; display: block; }
+.prop .pic-svg svg, .prop .drawn { width: 40px; height: 40px; display: block; }
+.shop-row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
+.shop-row .trophy { min-width: 120px; flex: 0 0 120px; }
+.trophy.sil { filter: none; }
+.trophy.sil .drawn, .trophy.sil svg { opacity: .35; }
+.guardian { width: 140px; height: auto; display: block; margin: 12px auto 0; }
 .prop.glow-gold { outline: 4px solid var(--gold); border-radius: 12px; }
 .prop.wiggle { animation: wiggle .35s ease; }
 .qcard {
