@@ -749,6 +749,18 @@ function bibleWeaponLine(id, owned) {
   if (!gift || !gift.en) return "";
   return "<div class='en' data-weapon-gift='1'>" + escapeText(gift.en) + "</div><div class='th' lang='th' data-weapon-gift='1'>" + keepWord(gift.th, "พระคัมภีร์") + "</div>";
 }
+function secretArt(t) {
+  var art = trophyArt(t);
+  var gray = "--b:#5E6468;--d:#5E6468;--g:#5E6468;--h:#5E6468";
+  var painted = art.replace(/style='[^']*'/, "style='" + gray + "'");
+  var open = painted.indexOf("<svg ");
+  if (open < 0) return painted;
+  var tagEnd = painted.indexOf(">", open);
+  var close = painted.lastIndexOf("</svg>");
+  if (tagEnd < 0 || close < 0) return painted;
+  var filter = "<defs><filter id='flat-sil' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.368627 0 0 0 0 0.392157 0 0 0 0 0.407843 0 0 0 1 0'/></filter></defs>";
+  return painted.slice(0, tagEnd + 1) + filter + "<g filter='url(#flat-sil)'>" + painted.slice(tagEnd + 1, close) + "</g>" + painted.slice(close);
+}
 function trophyArt(t) {
   if (t && (t.id === "hammer-builder" || t.id === "sling-shepherd" || t.id === "staff-shepherd" || t.id === "tunic-rose")) {
     return "<div class='weapon-art'>" + drawnSvg(t.id) + "</div>";
@@ -795,6 +807,7 @@ function goalLine(t) {
   else if (u.type === "pipFills") pack = ui("unlocksPips");
   else if (u.type === "bossesWon") pack = ui("unlocksBosses");
   else if (u.type === "zoneRight") pack = ui("unlocksZoneRight");
+  else if (u.type === "secret") pack = ui("secretCaption");
   if (!pack) return "";
   function fill(s) { return String(s || "").split("{n}").join(String(u.n || "")).split("{zone}").join(String(u.zone || "")); }
   return "<div class='en'>" + escapeText(fill(pack.en)) + "</div><div class='th' lang='th'>" + escapeText(fill(pack.th)) + "</div>";
@@ -822,8 +835,9 @@ function renderGear() {
   if (tab === "gear") {
     var gearCards = (D.trophies || []).filter(function (t) { return t.cat === "gear" || !t.cat; }).map(function (t) {
       var owned = (S.owned || []).indexOf(t.id) >= 0;
-      return "<button class='trophy' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "' data-wt='" + escapeText(t.wt || "") + "'>" +
-        trophyArt(t) + bi(t.en, t.th || t.thGloss || "") +
+      var secret = !owned && t.unlock && t.unlock.type === "secret";
+      return "<button class='trophy" + (secret ? " sil" : "") + "' data-tap data-act='equip' data-arg='" + t.id + "' data-trophy='" + t.id + "' data-sil='" + (secret ? "1" : "0") + "' data-wt='" + escapeText(t.wt || "") + "'>" +
+        (secret ? secretArt(t) : trophyArt(t)) + bi(t.en, t.th || t.thGloss || "") +
         bibleWeaponLine(t.id, owned) +
         (owned ? "<div class='en'>✓</div>" : goalLine(t)) + "</button>";
     }).join("");

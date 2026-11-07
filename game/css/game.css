@@ -338,6 +338,24 @@ body[data-theme="arena"] .hud { background: #0F3B4A; }
 }
 .trophy.sil { filter: none; }
 .trophy.sil .drawn, .trophy.sil svg { opacity: .35; }
+.char-grid > .trophy.sil {
+  --b: #5E6468;
+  --d: #5E6468;
+  --g: #5E6468;
+  --h: #5E6468;
+}
+.char-grid > .trophy.sil .drawn,
+.char-grid > .trophy.sil svg {
+  opacity: 1;
+  --b: #5E6468 !important;
+  --d: #5E6468 !important;
+  --g: #5E6468 !important;
+  --h: #5E6468 !important;
+}
+.char-grid > .trophy.sil svg * {
+  fill: #5E6468;
+  stroke: #5E6468;
+}
 .guardian { width: 140px; height: auto; display: block; margin: 12px auto 0; }
 .kneel-fig {
   position: absolute;
