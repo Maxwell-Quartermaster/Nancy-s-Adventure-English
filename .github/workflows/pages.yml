@@ -32,6 +32,8 @@ jobs:
           test ! -f _site/README.md
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Upload playable page
         uses: actions/upload-pages-artifact@v3
         with:
