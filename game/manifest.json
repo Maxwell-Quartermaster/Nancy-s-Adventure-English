@@ -1,0 +1,17 @@
+{
+  "name": "Nancy's Adventure English",
+  "short_name": "Adventure English",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0E3B22",
+  "theme_color": "#0E3B22",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
